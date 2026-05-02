@@ -3,20 +3,26 @@ info:
   # Do not change the title, if the title changes, the import paths will be broken
   title: Api
   version: 0.1.0
-  description: API specification
+  description: Tujia Dictionary API
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
     description: Health operations
+  - name: languages
+    description: Language management
+  - name: entries
+    description: Dictionary entries
+  - name: translations
+    description: Translations for entries
+
 paths:
   /healthz:
     get:
       operationId: healthCheck
       tags: [health]
       summary: Health check
-      description: Returns server health status
       responses:
         "200":
           description: Healthy
@@ -24,6 +30,135 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+
+  /languages:
+    get:
+      operationId: listLanguages
+      tags: [languages]
+      summary: List all supported languages
+      responses:
+        "200":
+          description: List of languages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Language"
+
+  /entries:
+    get:
+      operationId: listEntries
+      tags: [entries]
+      summary: List and search dictionary entries
+      parameters:
+        - name: q
+          in: query
+          schema:
+            type: string
+          description: Search query across all languages
+        - name: language
+          in: query
+          schema:
+            type: string
+          description: Language code to search in (e.g. tujia, zh, en, ja)
+        - name: category
+          in: query
+          schema:
+            type: string
+          description: Filter by category
+        - name: page
+          in: query
+          schema:
+            type: integer
+            default: 1
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+      responses:
+        "200":
+          description: Paginated list of entries
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EntryListResponse"
+
+  /entries/stats:
+    get:
+      operationId: getDictionaryStats
+      tags: [entries]
+      summary: Get dictionary statistics
+      responses:
+        "200":
+          description: Dictionary statistics
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DictionaryStats"
+
+  /entries/categories:
+    get:
+      operationId: listCategories
+      tags: [entries]
+      summary: List all categories
+      responses:
+        "200":
+          description: List of categories with entry counts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/CategoryCount"
+
+  /entries/{id}:
+    get:
+      operationId: getEntry
+      tags: [entries]
+      summary: Get a single dictionary entry with all translations
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Entry with translations
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EntryDetail"
+        "404":
+          description: Entry not found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+
+  /entries/{id}/related:
+    get:
+      operationId: getRelatedEntries
+      tags: [entries]
+      summary: Get entries related to this one (same category)
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Related entries
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/EntrySummary"
+
 components:
   schemas:
     HealthStatus:
@@ -31,6 +166,172 @@ components:
       properties:
         status:
           type: string
-      required:
-        - status
+      required: [status]
 
+    Language:
+      type: object
+      properties:
+        id:
+          type: integer
+        code:
+          type: string
+          description: Language code (e.g. tujia, zh, en, ja)
+        name:
+          type: string
+          description: Display name in English
+        nativeName:
+          type: string
+          description: Display name in the language itself
+        flag:
+          type: string
+          description: Emoji flag or identifier
+        isBase:
+          type: boolean
+          description: Whether this is the source/base language (Tujia)
+        sortOrder:
+          type: integer
+      required: [id, code, name, nativeName, flag, isBase, sortOrder]
+
+    Translation:
+      type: object
+      properties:
+        id:
+          type: integer
+        languageCode:
+          type: string
+        languageName:
+          type: string
+        languageNativeName:
+          type: string
+        flag:
+          type: string
+        text:
+          type: string
+          description: The translated word or phrase
+        romanization:
+          type: string
+          nullable: true
+          description: Romanized pronunciation if applicable
+        notes:
+          type: string
+          nullable: true
+          description: Usage notes for this translation
+      required: [id, languageCode, languageName, languageNativeName, flag, text]
+
+    EntrySummary:
+      type: object
+      properties:
+        id:
+          type: integer
+        tujiaWord:
+          type: string
+          description: The Tujia word (base language)
+        toneMarks:
+          type: string
+          nullable: true
+          description: Tonal marking notation
+        partOfSpeech:
+          type: string
+          nullable: true
+          description: noun, verb, adjective, etc.
+        category:
+          type: string
+          nullable: true
+        primaryTranslations:
+          type: object
+          description: Key translations (zh, en, ja) for quick display
+          additionalProperties:
+            type: string
+      required: [id, tujiaWord, primaryTranslations]
+
+    EntryDetail:
+      type: object
+      properties:
+        id:
+          type: integer
+        tujiaWord:
+          type: string
+        toneMarks:
+          type: string
+          nullable: true
+        partOfSpeech:
+          type: string
+          nullable: true
+        category:
+          type: string
+          nullable: true
+        exampleSentence:
+          type: string
+          nullable: true
+          description: Example sentence in Tujia
+        exampleTranslation:
+          type: string
+          nullable: true
+          description: Example sentence translated to Chinese
+        culturalNote:
+          type: string
+          nullable: true
+          description: Cultural or linguistic note about this word
+        translations:
+          type: array
+          items:
+            $ref: "#/components/schemas/Translation"
+        createdAt:
+          type: string
+      required: [id, tujiaWord, translations, createdAt]
+
+    EntryListResponse:
+      type: object
+      properties:
+        entries:
+          type: array
+          items:
+            $ref: "#/components/schemas/EntrySummary"
+        total:
+          type: integer
+        page:
+          type: integer
+        limit:
+          type: integer
+        totalPages:
+          type: integer
+      required: [entries, total, page, limit, totalPages]
+
+    DictionaryStats:
+      type: object
+      properties:
+        totalEntries:
+          type: integer
+        totalLanguages:
+          type: integer
+        totalTranslations:
+          type: integer
+        totalCategories:
+          type: integer
+        languages:
+          type: array
+          items:
+            $ref: "#/components/schemas/Language"
+        recentEntries:
+          type: array
+          items:
+            $ref: "#/components/schemas/EntrySummary"
+      required: [totalEntries, totalLanguages, totalTranslations, totalCategories, languages, recentEntries]
+
+    CategoryCount:
+      type: object
+      properties:
+        category:
+          type: string
+        count:
+          type: integer
+      required: [category, count]
+
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: string
+        message:
+          type: string
+      required: [error, message]
