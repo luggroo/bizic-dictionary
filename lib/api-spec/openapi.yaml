@@ -158,6 +158,25 @@ paths:
               schema:
                 $ref: "#/components/schemas/ErrorResponse"
 
+  /entries/{id}/cognates:
+    get:
+      operationId: getEntryCognates
+      tags: [entries]
+      summary: Get cognate groups linked to this entry
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Cognate groups linked to the entry
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EntryCognatesResponse"
+
   /entries/{id}/related:
     get:
       operationId: getRelatedEntries
@@ -266,6 +285,33 @@ components:
           nullable: true
       required: [id, languageCode, languageName, languageNativeName, flag, text]
 
+    CognateGroup:
+      type: object
+      properties:
+        groupId:
+          type: integer
+        wiktionaryNo:
+          type: integer
+          nullable: true
+        protoForm:
+          type: string
+          nullable: true
+        glossEn:
+          type: string
+        glossZh:
+          type: string
+          nullable: true
+      required: [groupId, glossEn]
+
+    EntryCognatesResponse:
+      type: object
+      properties:
+        cognates:
+          type: array
+          items:
+            $ref: "#/components/schemas/CognateGroup"
+      required: [cognates]
+
     EntrySummary:
       type: object
       properties:
@@ -334,9 +380,13 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/Translation"
+        cognates:
+          type: array
+          items:
+            $ref: "#/components/schemas/CognateGroup"
         createdAt:
           type: string
-      required: [id, tujiaWord, variety, forms, translations, createdAt]
+      required: [id, tujiaWord, variety, forms, translations, cognates, createdAt]
 
     EntryListResponse:
       type: object
