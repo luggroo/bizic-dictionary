@@ -11,6 +11,21 @@ import { ChevronLeft, ChevronRight, SlidersHorizontal, X, Search as SearchIcon }
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n-context";
 
+const SOURCE_OPTIONS = [
+  "Brassett 04 Tujia",
+  "Brassett 06 Tujia",
+  "Brassett 04 Tujia / Brassett 06 Tujia",
+  "Brassett 06 Tujia / Brassett 04 Tujia",
+  "Chen 86 TuBQ",
+  "Chen 86 TuBQ / Tian 86",
+  "Tian 86",
+  "Huang and Dai 92 TBL",
+  "Huang and Dai 92 TBL / Sun H 91 ZMYY",
+  "Sun H 91 ZMYY",
+  "Chen 86 TuMQ",
+  "Chen 86 TuMQ / Tian 86",
+] as const;
+
 export default function Search() {
   const searchString = useSearch();
   const searchParams = new URLSearchParams(searchString);
@@ -22,13 +37,14 @@ export default function Search() {
   const [category, setCategory] = useState<string>(searchParams.get("category") || "");
   const [variety, setVariety] = useState<string>(searchParams.get("variety") || "");
   const [dialect, setDialect] = useState<string>(searchParams.get("dialect") || "");
+  const [source, setSource] = useState<string>(searchParams.get("source") || "");
   
   const [, setLocation] = useLocation();
 
   // Reset page when filters change
   useEffect(() => {
     setPage(1);
-  }, [q, searchMode, category, variety, dialect]);
+  }, [q, searchMode, category, variety, dialect, source]);
 
   const { data: categories } = useListCategories();
   const { data: dialectsList } = useListDialects();
@@ -44,6 +60,7 @@ export default function Search() {
     category: category || undefined,
     variety: variety || undefined,
     dialect: dialect || undefined,
+    source: source || undefined,
     page,
     limit: 12,
   });
@@ -68,6 +85,7 @@ export default function Search() {
     if (key === "category") setCategory(value === "all" ? "" : value);
     if (key === "variety") setVariety(value === "all" ? "" : value);
     if (key === "dialect") setDialect(value === "all" ? "" : value);
+    if (key === "source") setSource(value === "all" ? "" : value);
   };
 
   const clearFilters = () => {
@@ -75,9 +93,12 @@ export default function Search() {
     setCategory("");
     setVariety("");
     setDialect("");
+    setSource("");
   };
 
-  const hasActiveFilters = q || searchMode !== "tujia-to-gloss" || category || variety || dialect;
+  const sourceOptions = SOURCE_OPTIONS;
+
+  const hasActiveFilters = q || searchMode !== "tujia-to-gloss" || category || variety || dialect || source;
 
   return (
     <Layout>
@@ -134,6 +155,20 @@ export default function Search() {
                   </SelectContent>
                 </Select>
               )}
+
+              <Select value={source || "all"} onValueChange={(v) => handleFilterChange("source", v)}>
+                <SelectTrigger className="w-[220px] bg-background">
+                  <SelectValue placeholder={t.allSources} />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">{t.allSources}</SelectItem>
+                  {sourceOptions.map((s) => (
+                    <SelectItem key={s} value={s}>
+                      {s}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             {hasActiveFilters && (
@@ -180,6 +215,7 @@ export default function Search() {
                   {category && <Badge variant="secondary">Cat: {category}</Badge>}
                   {variety && <Badge variant="secondary">{variety === "northern" ? t.northern : t.southern}</Badge>}
                   {dialect && <Badge variant="secondary">{dialect}</Badge>}
+                  {source && <Badge variant="secondary">{source}</Badge>}
                 </div>
               )}
             </div>

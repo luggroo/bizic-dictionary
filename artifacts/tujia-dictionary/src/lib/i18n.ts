@@ -48,6 +48,7 @@ export interface Strings {
   searchModeGlossToTujia: string;
   allCategories: string;
   allVarieties: string;
+  allSources: string;
   filters: string;
   clear: string;
   showing: string;
@@ -118,6 +119,7 @@ const strings: Record<UILang, Strings> = {
     searchModeGlossToTujia: "Search Chinese/English → Tujia",
     allCategories: "All Categories",
     allVarieties: "All Varieties",
+    allSources: "All Sources",
     filters: "Filters",
     clear: "Clear",
     showing: "Showing",
@@ -187,6 +189,7 @@ const strings: Record<UILang, Strings> = {
     searchModeGlossToTujia: "用汉语英语啰土话",
     allCategories: "全部类别",
     allVarieties: "全部方言",
+    allSources: "全部来源",
     filters: "筛选",
     clear: "清除",
     showing: "显示",
