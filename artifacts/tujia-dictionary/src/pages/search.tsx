@@ -12,18 +12,12 @@ import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n-context";
 
 const SOURCE_OPTIONS = [
-  "Brassett 04 Tujia",
-  "Brassett 06 Tujia",
-  "Brassett 04 Tujia / Brassett 06 Tujia",
-  "Brassett 06 Tujia / Brassett 04 Tujia",
-  "Chen 86 TuBQ",
-  "Chen 86 TuBQ / Tian 86",
-  "Tian 86",
-  "Huang and Dai 92 TBL",
-  "Huang and Dai 92 TBL / Sun H 91 ZMYY",
-  "Sun H 91 ZMYY",
-  "Chen 86 TuMQ",
-  "Chen 86 TuMQ / Tian 86",
+  { key: "brassett", label: "Brassett" },
+  { key: "tian-86", label: "Tian 86" },
+  { key: "sun-h-91-zmyy", label: "Sun H 91 ZMYY" },
+  { key: "huang-and-dai-92-tbl", label: "Huang and Dai 92 TBL" },
+  { key: "chen-86-tubq", label: "Chen 86 TuBQ" },
+  { key: "chen-86-tumq", label: "Chen 86 TuMQ" },
 ] as const;
 
 export default function Search() {
@@ -113,6 +107,7 @@ export default function Search() {
   };
 
   const sourceOptions = SOURCE_OPTIONS;
+  const sourceLabel = sourceOptions.find((s) => s.key === source)?.label ?? source;
 
   const hasActiveFilters = q || searchMode !== "tujia-to-gloss" || category || variety || dialect || source;
 
@@ -179,8 +174,8 @@ export default function Search() {
                 <SelectContent>
                   <SelectItem value="all">{t.allSources}</SelectItem>
                   {sourceOptions.map((s) => (
-                    <SelectItem key={s} value={s}>
-                      {s}
+                    <SelectItem key={s.key} value={s.key}>
+                      {s.label}
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -231,7 +226,7 @@ export default function Search() {
                   {category && <Badge variant="secondary">Cat: {category}</Badge>}
                   {variety && <Badge variant="secondary">{variety === "northern" ? t.northern : t.southern}</Badge>}
                   {dialect && <Badge variant="secondary">{dialect}</Badge>}
-                  {source && <Badge variant="secondary">{source}</Badge>}
+                  {source && <Badge variant="secondary">{sourceLabel}</Badge>}
                 </div>
               )}
             </div>

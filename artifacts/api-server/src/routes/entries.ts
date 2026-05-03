@@ -18,6 +18,14 @@ function normalizePartOfSpeech(value: string | null | undefined): string {
   return (value ?? "").trim().toLowerCase();
 }
 
+function normalizeSourceKey(value: string | null | undefined): string {
+  const source = (value ?? "").trim().toLowerCase();
+  if (!source) return "";
+  if (source.includes("brassett 04 tujia")) return "brassett";
+  if (source.includes("brassett 06 tujia")) return "brassett";
+  return source;
+}
+
 function normalizeChineseTranslation(entryId: number, languageCode: string, text: string): string {
   if (languageCode !== "zh") return text;
   const fixes: Record<number, string> = {
@@ -277,6 +285,7 @@ router.get("/entries", async (req, res): Promise<void> => {
     return;
   }
   const { q, category, variety, dialect, source, page, limit } = parsed.data as typeof parsed.data & { source?: string | null };
+  const sourceKey = normalizeSourceKey(source);
   const offset = ((page ?? 1) - 1) * (limit ?? 20);
   const pageSize = limit ?? 20;
   let rankedIds: number[] | null = null;
@@ -291,7 +300,8 @@ router.get("/entries", async (req, res): Promise<void> => {
   if (category) extraConditions.push(eq(entriesTable.category, category));
   if (variety) extraConditions.push(eq(entriesTable.variety, variety));
   if (dialect) extraConditions.push(eq(entriesTable.dialect, dialect));
-  if (source) extraConditions.push(eq(entriesTable.source, source));
+  if (sourceKey === "brassett") extraConditions.push(sql`lower(${entriesTable.source}) like '%brassett 04 tujia%' or lower(${entriesTable.source}) like '%brassett 06 tujia%'`);
+  else if (source) extraConditions.push(eq(entriesTable.source, source));
   let rawEntries: (typeof entriesTable.$inferSelect)[];
   let total: number;
   if (rankedIds && rankedIds.length > 0) {
