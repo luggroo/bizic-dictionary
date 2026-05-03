@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator";
 import { ArrowLeft, BookMarked, BookOpen, Globe2, Quote } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
 import { varietyBgClass, varietyColor } from "@/lib/variety-colors";
+import { detectNotation, NOTATION_LABEL } from "@/lib/notation";
 
 interface Translation {
   id: number;
@@ -59,6 +60,8 @@ export default function EntryDetail() {
   const { data: entry, isLoading, error } = useGetEntry(entryId, {
     query: { enabled: !!entryId, queryKey: getGetEntryQueryKey(entryId) },
   });
+
+  const notation = entry ? detectNotation(entry.tujiaWord) : null;
 
   const { data: relatedEntries, isLoading: isRelatedLoading } = useGetRelatedEntries(entryId, {
     query: { enabled: !!entryId && !!entry?.category, queryKey: getGetRelatedEntriesQueryKey(entryId) },
@@ -316,6 +319,19 @@ export default function EntryDetail() {
                   <dt className="text-muted-foreground">Total {t.senses}</dt>
                   <dd className="font-medium text-foreground">{entry.translations.length}</dd>
                 </div>
+                {notation && (
+                  <div className="flex justify-between items-center">
+                    <dt className="text-muted-foreground">{t.notation}</dt>
+                    <dd>
+                      <span
+                        className={notation === "ipa" ? "notation-ipa" : "notation-pinyin"}
+                        title={NOTATION_LABEL[notation].title}
+                      >
+                        {NOTATION_LABEL[notation].short}
+                      </span>
+                    </dd>
+                  </div>
+                )}
               </dl>
 
               {entry.source && (

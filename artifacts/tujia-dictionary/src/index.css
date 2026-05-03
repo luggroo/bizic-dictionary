@@ -51,69 +51,72 @@
 
 @layer base {
   :root {
-    --background: 38 46% 96%; /* #fcf9f2 */
-    --foreground: 25 15% 15%; /* #2b2724 */
+    --background: 38 46% 96%;
+    --foreground: 25 15% 15%;
     --border: 35 25% 85%;
     --input: 35 25% 85%;
     --ring: 12 50% 36%;
-    
-    --card: 38 46% 98%; 
+
+    --card: 38 46% 98%;
     --card-foreground: 25 15% 15%;
     --card-border: 35 25% 88%;
-    
+
     --popover: 38 46% 98%;
     --popover-foreground: 25 15% 15%;
     --popover-border: 35 25% 88%;
-    
-    --primary: 12 50% 36%; /* #8c3b2e */
+
+    --primary: 12 50% 36%;         /* terracotta #8c3b2e */
     --primary-foreground: 38 46% 96%;
-    
-    --secondary: 30 15% 35%; 
+
+    --secondary: 30 15% 35%;
     --secondary-foreground: 38 46% 96%;
-    
+
     --muted: 38 30% 90%;
     --muted-foreground: 25 10% 40%;
-    
+
     --accent: 38 30% 90%;
     --accent-foreground: 25 15% 15%;
-    
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
+
     --radius: 0.5rem;
 
     --color-southern: #0d9488;
+    --color-gold: #b5782a;          /* Xilankapu gold */
   }
 
   .dark {
-    --background: 25 15% 12%; /* #23201d */
-    --foreground: 38 30% 90%; /* #ede8df */
+    --background: 25 15% 12%;
+    --foreground: 38 30% 90%;
     --border: 25 10% 25%;
     --input: 25 10% 25%;
     --ring: 12 40% 46%;
-    
+
     --card: 25 15% 14%;
     --card-foreground: 38 30% 90%;
     --card-border: 25 10% 22%;
-    
+
     --popover: 25 15% 14%;
     --popover-foreground: 38 30% 90%;
     --popover-border: 25 10% 22%;
-    
-    --primary: 12 45% 46%; /* #a84b3d */
+
+    --primary: 12 45% 46%;
     --primary-foreground: 38 46% 96%;
-    
+
     --secondary: 35 15% 25%;
     --secondary-foreground: 38 30% 90%;
-    
+
     --muted: 25 15% 20%;
     --muted-foreground: 38 15% 65%;
-    
+
     --accent: 25 15% 20%;
     --accent-foreground: 38 30% 90%;
-    
+
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
+
+    --color-gold: #c9860a;
   }
 }
 
@@ -130,12 +133,11 @@
 }
 
 @layer utilities {
+  /* Noise texture overlay */
   .noise-bg {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
     pointer-events: none;
     z-index: 50;
     opacity: 0.03;
@@ -143,5 +145,49 @@
   }
   .dark .noise-bg {
     opacity: 0.02;
+  }
+
+  /*
+   * Xilankapu (西兰卡普) decorative border strip.
+   *
+   * Xilankapu is the traditional hand-woven brocade of the Tujia people,
+   * characterised by repeating geometric diamond motifs in deep red, gold,
+   * and black. This strip recreates that rhythm as a thin SVG tile.
+   *
+   * Tile: 48 × 14 px
+   *   – dark maroon ground  (#110200)
+   *   – gold edge lines     (#c9860a)
+   *   – red diamond body    (#872220)
+   *   – gold diamond centre (#c9860a)
+   */
+  .xilankapu-strip {
+    height: 14px;
+    width: 100%;
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='14'><rect width='48' height='14' fill='%23110200'/><rect width='48' height='1.2' fill='%23c9860a'/><rect y='12.8' width='48' height='1.2' fill='%23c9860a'/><polygon points='24,2 47,7 24,12 1,7' fill='%23872220' stroke='%23c9860a' stroke-width='1'/><polygon points='24,5 37,7 24,9 11,7' fill='%23c9860a'/></svg>");
+    background-repeat: repeat-x;
+    background-size: 48px 14px;
+  }
+
+  /* Notation type badges */
+  .notation-ipa {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+    background-color: color-mix(in srgb, var(--color-gold) 12%, transparent);
+    color: var(--color-gold);
+    border: 1px solid color-mix(in srgb, var(--color-gold) 30%, transparent);
+    letter-spacing: 0.04em;
+  }
+  .notation-pinyin {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.25rem;
+    background-color: color-mix(in srgb, hsl(var(--secondary)) 12%, transparent);
+    color: hsl(var(--secondary));
+    border: 1px solid color-mix(in srgb, hsl(var(--secondary)) 30%, transparent);
+    letter-spacing: 0.04em;
   }
 }

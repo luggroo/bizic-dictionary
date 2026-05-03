@@ -1,16 +1,12 @@
 /**
  * UI language strings for the Tujia Dictionary interface.
  *
- * Three UI languages:
- *   en    — English
- *   zh    — Chinese (Simplified, 简体中文)
- *   tujia — Northern Tujia (Bifzivkar orthography, Longshan dialect)
- *
- * Tujia UI strings are based on attested vocabulary from linguistics literature.
- * Words marked [approx] are phonologically approximate adaptations.
+ * Two UI languages:
+ *   en — English
+ *   zh — Chinese (Simplified, 简体中文)
  */
 
-export type UILang = "en" | "zh" | "tujia";
+export type UILang = "en" | "zh";
 
 export interface Strings {
   siteName: string;
@@ -21,14 +17,12 @@ export interface Strings {
   searchPlaceholder: string;
   browse: string;
   about: string;
-  // Stats
   totalEntries: string;
   translations: string;
   languages: string;
   categories: string;
   northernTujia: string;
   southernTujia: string;
-  // Entry detail
   translationsHeading: string;
   culturalNote: string;
   exampleSentence: string;
@@ -41,13 +35,11 @@ export interface Strings {
   added: string;
   wordId: string;
   senses: string;
-  // Forms
   formsHeading: string;
   formSpelling: string;
   formToned: string;
   formIpa: string;
   formSwMandarin: string;
-  // Search page
   searchTitle: string;
   allLanguages: string;
   allCategories: string;
@@ -63,24 +55,20 @@ export interface Strings {
   previous: string;
   next: string;
   page: string;
-  // Browse page
   browseTitle: string;
   browseSubtitle: string;
-  // About page
   aboutTitle: string;
-  // Dialect / variety labels
   northern: string;
   southern: string;
   dialect: string;
   variety: string;
-  // Footer
   footerTagline: string;
   footerDesc: string;
   recentlyPreserved: string;
   viewAllEntries: string;
-  // Misc
   aboutEntry: string;
   noRelated: string;
+  notation: string;
 }
 
 const strings: Record<UILang, Strings> = {
@@ -147,13 +135,14 @@ const strings: Record<UILang, Strings> = {
     viewAllEntries: "View all entries →",
     aboutEntry: "About this entry",
     noRelated: "No related words found.",
+    notation: "Notation",
   },
 
   zh: {
     siteName: "土家语词典",
     tagline: "词语是",
     taglineHighlight: "记忆。",
-    heroSubtitle: "探索土家族的词汇。一个涵盖中文、英文和日文翻译的学术档案库。",
+    heroSubtitle: "探索土家族的词汇。一个涵盖中文、英文翻译的学术档案库。",
     search: "搜索",
     searchPlaceholder: "搜索土家语、中文、英文……",
     browse: "浏览",
@@ -209,71 +198,7 @@ const strings: Record<UILang, Strings> = {
     viewAllEntries: "查看全部词条 →",
     aboutEntry: "关于此词条",
     noRelated: "未找到相关词汇。",
-  },
-
-  tujia: {
-    // Northern Tujia (Longshan dialect, Bifzivkar orthography)
-    // Attested words from linguistics literature; UI adaptations marked [approx]
-    siteName: "Bizika Gapko",
-    tagline: "Gapko meka",
-    taglineHighlight: "nggoku.",
-    heroSubtitle:
-      "Bizika nggoku dzi ko. Zhongwen, Yingwen, Riwen gapko meka.",
-    search: "Gapko",       // attested: 'search / look for'
-    searchPlaceholder: "Gapko bizika, zhongwen…",
-    browse: "Tukei",       // [approx] 'browse / look through'
-    about: "Meka",         // [approx] 'about / information'
-    totalEntries: "Gapko dzi",
-    translations: "Bieyu gapko",
-    languages: "Yu meka",
-    categories: "Leibie",
-    northernTujia: "Beibu Bizika",
-    southernTujia: "Nanbu Bizika",
-    translationsHeading: "Bieyu gapko",
-    culturalNote: "Wenhua meka",
-    exampleSentence: "Lizi",
-    relatedWords: "Xiangsi gapko",
-    viewAll: "Du ka",
-    backToDictionary: "Gapko ko",
-    entryNotFound: "Gapko bu meka",
-    entryNotFoundDesc: "Nge gapko meka bu ka.",
-    returnToSearch: "Gapko ko",
-    added: "Jiaru riqi",
-    wordId: "Gapko hao",
-    senses: "yisi",
-    formsHeading: "Bizika gapko xingshi",
-    formSpelling: "Bifzivkar",
-    formToned: "Diaohao",
-    formIpa: "Guoji yinbiao",
-    formSwMandarin: "Xinan guanhua",
-    searchTitle: "Gapko dzi",
-    allLanguages: "Du yu",
-    allCategories: "Du leibie",
-    allVarieties: "Du fangyan",
-    filters: "Shaixuan",
-    clear: "Qingchu",
-    showing: "Xianshi",
-    of: "/",
-    entries: "gapko",
-    noResults: "Bu meka",
-    noResultsDesc: "Nge gapko bu meka. Qing shiyong butong guanjianzi.",
-    clearAllFilters: "Qingchu shaixuan",
-    previous: "Shangyiye",
-    next: "Xiayiye",
-    page: "Di",
-    browseTitle: "Leibie gapko",
-    browseSubtitle: "Bizika gapko leibie.",
-    aboutTitle: "Meka",
-    northern: "Beibu",
-    southern: "Nanbu",
-    dialect: "Fangyan",
-    variety: "Yuxi",
-    footerTagline: "Baohu Bizika",
-    footerDesc: "Bizika nggoku dzi — Zhongguo zhongbu tujia meka.",
-    recentlyPreserved: "Zuixin gapko",
-    viewAllEntries: "Du gapko →",
-    aboutEntry: "Gapko meka",
-    noRelated: "Bu xiangsi gapko.",
+    notation: "标注方式",
   },
 };
 
