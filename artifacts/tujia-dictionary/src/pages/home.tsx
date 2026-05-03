@@ -20,10 +20,6 @@ export default function Home() {
         <section className="pt-24 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
             <h1 className="text-5xl md:text-7xl font-serif text-foreground tracking-tight">{t.siteName}</h1>
-            <div className="max-w-2xl mx-auto rounded-2xl border bg-card px-6 py-5 text-left shadow-sm">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary mb-2">{t.guideTitle}</p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">{t.guideBody}</p>
-            </div>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {t.heroSubtitle}
             </p>

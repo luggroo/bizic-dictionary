@@ -147,7 +147,7 @@ const strings: Record<UILang, Strings> = {
     taglineHighlight: "",
     guideTitle: "使用说明",
     guideBody: "可按土家语、汉语或英文检索；也可用方言、语系和类别筛选词条。",
-    heroSubtitle: "收录土家族词汇与释义，便于检索、对照与整理。",
+    heroSubtitle: "",
     search: "搜索",
     searchPlaceholder: "搜索土家语、汉语、英文……",
     browse: "浏览",
