@@ -89,7 +89,7 @@ export default function EntryDetail() {
   const notation = entry ? detectNotation(entry.ipa ?? entry.tujiaWord) : null;
   const isBrassett = /Brassett 04 Tujia|Brassett 06 Tujia/.test(entry?.source ?? "");
   const displayNotation = isBrassett ? "pinyin" : notation;
-  const notationLabel = displayNotation === "pinyin" ? "拼音" : "国际音标";
+  const notationLabel = isBrassett ? "拼音" : "国际音标";
   const cognates = ((entry as typeof entry & { cognates?: CognateGroup[] })?.cognates ?? []) as CognateGroup[];
   const hasAudio = entry ? hasAudioAsset(entry.id, entry.tujiaWord) : false;
 
