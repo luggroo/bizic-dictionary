@@ -64,7 +64,7 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
           <div className="space-y-3 mt-6">
             {chineseTranslations.length > 0 && (
               <div className="space-y-1.5">
-                <p className="text-sm text-muted-foreground">汉语：{chineseTranslations.join("；")}</p>
+                <p className="text-sm text-muted-foreground">汉：{chineseTranslations.join("；")}</p>
               </div>
             )}
             {translations.length > 0 ? (
