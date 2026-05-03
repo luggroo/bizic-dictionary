@@ -7,7 +7,7 @@ import type { UILang } from "@/lib/i18n";
 
 const LANG_OPTIONS: { value: UILang; label: string }[] = [
   { value: "en", label: "EN" },
-  { value: "zh", label: "中文" },
+  { value: "zh", label: "汉语" },
 ];
 
 function LangSwitcher() {

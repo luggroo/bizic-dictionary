@@ -3,7 +3,7 @@
  *
  * Two UI languages:
  *   en — English
- *   zh — Chinese (Simplified, 简体中文)
+ *   zh — 汉语（简体）
  */
 
 export type UILang = "en" | "zh";
@@ -146,10 +146,10 @@ const strings: Record<UILang, Strings> = {
     tagline: "",
     taglineHighlight: "",
     guideTitle: "使用说明",
-    guideBody: "可按土家语、中文或英文检索；也可用方言、语系和类别筛选词条。",
+    guideBody: "可按土家语、汉语或英文检索；也可用方言、语系和类别筛选词条。",
     heroSubtitle: "收录土家族词汇与释义，便于检索、对照与整理。",
     search: "搜索",
-    searchPlaceholder: "搜索土家语、中文、英文……",
+    searchPlaceholder: "搜索土家语、汉语、英文……",
     browse: "浏览",
     about: "关于",
     totalEntries: "词条总数",
