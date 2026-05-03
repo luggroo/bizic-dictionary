@@ -18,7 +18,7 @@ export default function Search() {
   const { t } = useI18n();
 
   const [page, setPage] = useState(parseInt(searchParams.get("page") || "1", 10));
-  const [searchMode, setSearchMode] = useState<string>(searchParams.get("mode") || "tujia-to-gloss");
+  const [searchMode] = useState<string>(searchParams.get("mode") || "tujia-to-gloss");
   const [category, setCategory] = useState<string>(searchParams.get("category") || "");
   const [variety, setVariety] = useState<string>(searchParams.get("variety") || "");
   const [dialect, setDialect] = useState<string>(searchParams.get("dialect") || "");
@@ -40,7 +40,7 @@ export default function Search() {
 
   const { data, isLoading } = useListEntries({
     q: q || undefined,
-    language: searchMode === "tujia-to-gloss" ? undefined : "zh",
+    language: searchMode.includes("gloss-to-tujia") ? "zh" : undefined,
     category: category || undefined,
     variety: variety || undefined,
     dialect: dialect || undefined,
@@ -65,7 +65,6 @@ export default function Search() {
     params.delete("page"); // Reset to page 1
     setLocation(`/search?${params.toString()}`);
     
-    if (key === "mode") setSearchMode(value === "all" ? "tujia-to-gloss" : value);
     if (key === "category") setCategory(value === "all" ? "" : value);
     if (key === "variety") setVariety(value === "all" ? "" : value);
     if (key === "dialect") setDialect(value === "all" ? "" : value);
@@ -73,7 +72,6 @@ export default function Search() {
 
   const clearFilters = () => {
     setLocation("/search");
-    setSearchMode("tujia-to-gloss");
     setCategory("");
     setVariety("");
     setDialect("");
@@ -95,16 +93,6 @@ export default function Search() {
               <div className="flex items-center text-sm font-medium text-muted-foreground mr-2">
                 <SlidersHorizontal className="w-4 h-4 mr-2" /> {t.searchTitle}
               </div>
-
-              <Select value={searchMode} onValueChange={(v) => handleFilterChange("mode", v)}>
-                <SelectTrigger className="w-[160px] bg-background">
-                  <SelectValue placeholder={t.searchModeTujiaToGloss} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="tujia-to-gloss">{t.searchModeTujiaToGloss}</SelectItem>
-                  <SelectItem value="gloss-to-tujia">{t.searchModeGlossToTujia}</SelectItem>
-                </SelectContent>
-              </Select>
 
               <Select value={category || "all"} onValueChange={(v) => handleFilterChange("category", v)}>
                 <SelectTrigger className="w-[180px] bg-background">

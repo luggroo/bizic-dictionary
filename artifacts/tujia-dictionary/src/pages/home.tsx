@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "wouter";
 import { useGetDictionaryStats } from "@workspace/api-client-react";
 import { Layout } from "@/components/layout";
@@ -6,15 +6,30 @@ import { SearchBar } from "@/components/search-bar";
 import { EntryCard } from "@/components/entry-card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent } from "@/components/ui/card";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { BookA, Globe, Languages, Library } from "lucide-react";
+import { BookA, Globe, Languages, Library, Check } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
-import { useState } from "react";
+import { Button } from "@/components/ui/button";
+
+const MODE_OPTIONS = [
+  { value: "gloss-to-tujia", label: "汉语啰土话" },
+  { value: "english-to-tujia", label: "英语啰土话" },
+  { value: "tujia-to-gloss", label: "土话啰汉英" },
+];
 
 export default function Home() {
   const { data: stats, isLoading } = useGetDictionaryStats();
   const { t } = useI18n();
-  const [mode, setMode] = useState("tujia-to-gloss");
+  const [modes, setModes] = useState<string[]>(["tujia-to-gloss"]);
+
+  const toggleMode = (value: string) => {
+    setModes((current) => {
+      if (current.includes(value)) {
+        const next = current.filter((item) => item !== value);
+        return next.length > 0 ? next : ["tujia-to-gloss"];
+      }
+      return [...current, value];
+    });
+  };
 
   return (
     <Layout>
@@ -27,16 +42,26 @@ export default function Home() {
               {t.heroSubtitle}
             </p>
             <div className="max-w-2xl mx-auto mt-12 space-y-4">
-              <Select value={mode} onValueChange={setMode}>
-                <SelectTrigger className="w-full bg-background">
-                  <SelectValue placeholder={mode === "tujia-to-gloss" ? t.searchModeTujiaToGloss : t.searchModeGlossToTujia} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="tujia-to-gloss">{t.searchModeTujiaToGloss}</SelectItem>
-                  <SelectItem value="gloss-to-tujia">{t.searchModeGlossToTujia}</SelectItem>
-                </SelectContent>
-              </Select>
-              <SearchBar size="lg" mode={mode} />
+              <div className="flex flex-wrap gap-3 justify-center">
+                {MODE_OPTIONS.map((option) => {
+                  const active = modes.includes(option.value);
+                  return (
+                    <Button
+                      key={option.value}
+                      type="button"
+                      variant={active ? "default" : "outline"}
+                      onClick={() => toggleMode(option.value)}
+                      className="rounded-full px-4"
+                    >
+                      <span className={`mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full border ${active ? "bg-primary-foreground text-primary" : "text-transparent"}`}>
+                        <Check className="h-3 w-3" />
+                      </span>
+                      {option.label}
+                    </Button>
+                  );
+                })}
+              </div>
+              <SearchBar size="lg" mode={modes} />
             </div>
             <div className="max-w-2xl mx-auto rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
               汉语译文在部分词条中可能仍有不准确之处。
