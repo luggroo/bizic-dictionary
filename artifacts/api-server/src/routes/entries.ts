@@ -244,19 +244,30 @@ router.get("/entries/stats", async (req, res): Promise<void> => {
   const [northernRow] = await db.select({ count: sql<number>`count(*)::int` }).from(entriesTable).where(eq(entriesTable.variety, "northern"));
   const [southernRow] = await db.select({ count: sql<number>`count(*)::int` }).from(entriesTable).where(eq(entriesTable.variety, "southern"));
   const languages = await db.select().from(languagesTable).orderBy(asc(languagesTable.sortOrder));
-  const recentRaw = await db
+  const randomRaw = await db
     .select()
     .from(entriesTable)
     .where(sql`exists (select 1 from translations zh where zh.entry_id = ${entriesTable.id} and zh.language_code = 'zh')`)
-    .orderBy(desc(entriesTable.createdAt))
+    .orderBy(sql`random()`)
     .limit(6);
-  const recentEntries = await Promise.all(recentRaw.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id, e.partOfSpeech))));
-  res.json(GetDictionaryStatsResponse.parse({ totalEntries: totalEntries.count, totalLanguages: totalLanguages.count, totalTranslations: totalTranslations.count, totalCategories: categoriesResult.length, northernCount: northernRow?.count ?? 0, southernCount: southernRow?.count ?? 0, languages, recentEntries }));
+  const randomEntries = await Promise.all(randomRaw.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id, e.partOfSpeech))));
+  res.json(GetDictionaryStatsResponse.parse({ totalEntries: totalEntries.count, totalLanguages: totalLanguages.count, totalTranslations: totalTranslations.count, totalCategories: categoriesResult.length, northernCount: northernRow?.count ?? 0, southernCount: southernRow?.count ?? 0, languages, recentEntries: randomEntries }));
 });
 
 router.get("/entries/categories", async (req, res): Promise<void> => {
   const rows = await db.select({ category: entriesTable.category, count: sql<number>`count(*)::int` }).from(entriesTable).where(sql`${entriesTable.category} is not null`).groupBy(entriesTable.category).orderBy(desc(sql`count(*)`));
   res.json(ListCategoriesResponse.parse(rows.filter((r) => r.category != null).map((r) => ({ category: r.category!, count: r.count }))));
+});
+
+router.get("/entries/random", async (_req, res): Promise<void> => {
+  const rows = await db
+    .select()
+    .from(entriesTable)
+    .where(sql`exists (select 1 from translations zh where zh.entry_id = ${entriesTable.id} and zh.language_code = 'zh')`)
+    .orderBy(sql`random()`)
+    .limit(6);
+  const entries = await Promise.all(rows.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id, e.partOfSpeech))));
+  res.json({ entries });
 });
 
 router.get("/entries", async (req, res): Promise<void> => {

@@ -9,6 +9,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { BookA, Globe, Languages, Library, Check } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
 import { Button } from "@/components/ui/button";
+import { useQuery } from "@tanstack/react-query";
+
+async function fetchRandomEntries() {
+  const res = await fetch(`${import.meta.env.BASE_URL}api/entries/random`);
+  if (!res.ok) throw new Error("Failed to load random entries");
+  return res.json() as Promise<{ entries: Array<{ id: number }> }>;
+}
 
 const MODE_OPTIONS = [
   { value: "gloss-to-tujia", label: "汉语啰土话" },
@@ -18,6 +25,10 @@ const MODE_OPTIONS = [
 
 export default function Home() {
   const { data: stats, isLoading } = useGetDictionaryStats();
+  const { data: randomData, isLoading: randomLoading } = useQuery({
+    queryKey: ["random-entries"],
+    queryFn: fetchRandomEntries,
+  });
   const { t } = useI18n();
   const [modes, setModes] = useState<string[]>(["gloss-to-tujia", "english-to-tujia"]);
 
@@ -89,15 +100,15 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Recently Added */}
+        {/* Random Entries */}
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-5xl">
             <div className="flex items-center justify-between mb-10">
-              <h2 className="text-3xl font-serif text-foreground">{t.recentlyPreserved}</h2>
+              <h2 className="text-3xl font-serif text-foreground">{t.randomEntries}</h2>
               <Link href="/search" className="text-secondary hover:underline text-sm font-medium">{t.viewAllEntries}</Link>
             </div>
             
-            {isLoading || !stats ? (
+            {isLoading || randomLoading || !randomData ? (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[1, 2, 3, 4].map((i) => (
                   <Skeleton key={i} className="h-48 w-full rounded-xl" />
@@ -105,7 +116,7 @@ export default function Home() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {stats.recentEntries.map((entry, index) => (
+                {randomData.entries.map((entry, index) => (
                   <div key={entry.id} className="animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: `${index * 100}ms`, animationFillMode: 'both' }}>
                     <EntryCard entry={entry} />
                   </div>

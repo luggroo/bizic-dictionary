@@ -68,6 +68,7 @@ export interface Strings {
   footerTagline: string;
   footerDesc: string;
   recentlyPreserved: string;
+  randomEntries: string;
   viewAllEntries: string;
   aboutEntry: string;
   noRelated: string;
@@ -138,6 +139,7 @@ const strings: Record<UILang, Strings> = {
     footerDesc:
       "A respectful, scholarly digital preservation project for the Tujia language — an endangered Sino-Tibetan language spoken by the Tujia people of central China.",
     recentlyPreserved: "Recently Preserved",
+    randomEntries: "Random Tujia Words",
     viewAllEntries: "View all entries →",
     aboutEntry: "About this entry",
     noRelated: "No related words found.",
@@ -203,6 +205,7 @@ const strings: Record<UILang, Strings> = {
     footerTagline: "留住土家语的声音",
     footerDesc: "一个记录、整理与传递土家语言文化的数字词典。",
     recentlyPreserved: "最新收录",
+    randomEntries: "随机土家词条",
     viewAllEntries: "查看全部词条 →",
     aboutEntry: "关于此词条",
     noRelated: "未找到相关词汇。",
