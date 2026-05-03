@@ -53,16 +53,16 @@ function markNucleus(vowels, tone) {
 }
 
 /**
- * Normalize tone markers from the original IPA/reflex form (digits or superscripts)
+ * Normalize tone markers from the original pinyin/reflex form (digits or superscripts)
  * to diacritic form, with correct syllable-boundary apostrophes.
  *
  * Strategy: tokenize by tone-digit boundaries FIRST (so we know exactly
  * where each syllable starts), then apply diacritics, then join with
  * apostrophes before non-initial syllables whose first letter is a, e, or o.
  */
-function normalizeTones(originalIpa) {
+function normalizeTones(originalPinyin) {
   // Step 1: convert superscripts to ASCII digits
-  const s = originalIpa.replace(/[¹²³⁴]/g, (m) => SUPER[m]);
+  const s = originalPinyin.replace(/[¹²³⁴]/g, (m) => SUPER[m]);
 
   // Step 2: split into syllable tokens at tone-digit boundaries.
   // A token is every character up to and including one digit [1-4].
@@ -127,7 +127,7 @@ let normalized = 0;
 let unchanged = 0;
 
 for (const row of brassett) {
-  // Use ipa (original form) as the source of truth; fall back to tujia_word if ipa is missing
+  // Use ipa (original raw form) as the source of truth; fall back to tujia_word if ipa is missing
   const source = row.ipa && /[1-4¹²³⁴]/.test(row.ipa) ? row.ipa : row.tujia_word;
   const newWord = normalizeTones(source);
   if (newWord !== row.tujia_word) {
