@@ -22,10 +22,10 @@ export default function Search() {
   
   const [, setLocation] = useLocation();
 
-  // Reset page when filters change
   useEffect(() => {
-    setPage(1);
-  }, [q, variety, dialect]);
+    const nextPage = parseInt(searchParams.get("page") || "1", 10);
+    setPage(Number.isNaN(nextPage) ? 1 : nextPage);
+  }, [searchString]);
 
   const { data: dialectsList } = useListDialects();
   
@@ -48,7 +48,7 @@ export default function Search() {
         if (dialect) params.set("dialect", dialect);
         params.set("page", String(page));
         params.set("limit", "12");
-        const response = await fetch(`/api/entries?${params.toString()}`, { signal: controller.signal });
+        const response = await fetch(`${import.meta.env.BASE_URL}api/entries?${params.toString()}`, { signal: controller.signal });
         setData(await response.json());
       } finally {
         setIsLoading(false);
@@ -157,6 +157,7 @@ export default function Search() {
             <p className="text-muted-foreground max-w-md mx-auto">
               {t.noResultsDesc}
             </p>
+            <p className="mt-3 text-sm text-muted-foreground">{t.translationWarning}</p>
             {hasActiveFilters && (
               <Button variant="outline" className="mt-6" onClick={clearFilters}>
                 {t.clearAllFilters}
