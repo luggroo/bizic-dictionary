@@ -52,11 +52,6 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
                   {entry.partOfSpeech}
                 </Badge>
               )}
-              {entry.category && (
-                <Badge variant="secondary" className="bg-secondary/10 text-secondary-foreground text-xs font-normal">
-                  {entry.category}
-                </Badge>
-              )}
             </div>
           </div>
 

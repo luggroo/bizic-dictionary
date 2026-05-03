@@ -169,7 +169,6 @@ export default function EntryDetail() {
                   </Badge>
                 )}
                 {entry.partOfSpeech && <Badge variant="secondary">{entry.partOfSpeech}</Badge>}
-                {entry.category && <Badge variant="outline">{entry.category}</Badge>}
                 {displayNotation && <span className={displayNotation === "ipa" ? "notation-ipa" : "notation-pinyin"}>{notationLabel}</span>}
               </div>
               {chineseTranslations.length > 0 && (
