@@ -44,11 +44,8 @@ export interface Strings {
   formSwMandarin: string;
   partOfSpeech: string;
   searchTitle: string;
-  searchModeTujiaToGloss: string;
-  searchModeGlossToTujia: string;
   searchingIn: string;
   searchLanguageTujiaGloss: string;
-  searchLanguageGlossTujia: string;
   allCategories: string;
   allVarieties: string;
   allSources: string;
@@ -118,11 +115,8 @@ const strings: Record<UILang, Strings> = {
     formSwMandarin: "SW Mandarin",
     partOfSpeech: "Part of speech",
     searchTitle: "Dictionary Search",
-    searchModeTujiaToGloss: "Search Tujia → Chinese/English",
-    searchModeGlossToTujia: "Search Chinese/English → Tujia",
     searchingIn: "Searching in",
     searchLanguageTujiaGloss: "Tujia → Chinese/English",
-    searchLanguageGlossTujia: "Chinese/English → Tujia",
     allCategories: "All Categories",
     allVarieties: "All Varieties",
     allSources: "All Sources",
@@ -191,11 +185,8 @@ const strings: Record<UILang, Strings> = {
     formSwMandarin: "西南官话近似音",
     partOfSpeech: "词性",
     searchTitle: "词典搜索",
-    searchModeTujiaToGloss: "用土话啰汉语英语",
-    searchModeGlossToTujia: "用汉语英语啰土话",
     searchingIn: "检索语言",
     searchLanguageTujiaGloss: "土家语 → 汉语/英语",
-    searchLanguageGlossTujia: "汉语/英语 → 土家语",
     allCategories: "全部类别",
     allVarieties: "全部方言",
     allSources: "全部来源",
