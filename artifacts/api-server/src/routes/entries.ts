@@ -51,7 +51,16 @@ function selectChineseTranslations(translations: Array<{ languageCode: string; t
     if (pos.includes("verb")) return notes.includes("verb") || notes.includes("v.");
     return false;
   });
-  return (preferred.length > 0 ? preferred : zhTranslations).map((t) => t.text);
+  const source = preferred.length > 0 ? preferred : zhTranslations;
+  const seen = new Set<string>();
+  const result: string[] = [];
+  for (const t of source) {
+    const text = t.text.trim();
+    if (!text || seen.has(text)) continue;
+    seen.add(text);
+    result.push(text);
+  }
+  return result;
 }
 
 async function buildPrimaryTranslations(entryId: number, partOfSpeech?: string | null): Promise<Record<string, string>> {
