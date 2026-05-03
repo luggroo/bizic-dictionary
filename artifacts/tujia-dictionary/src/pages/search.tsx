@@ -18,7 +18,7 @@ export default function Search() {
   const { t } = useI18n();
 
   const [page, setPage] = useState(parseInt(searchParams.get("page") || "1", 10));
-  const [searchMode, setSearchMode] = useState<string>(searchParams.get("mode") || "tujia-to-gloss");
+  const searchMode = searchParams.get("mode") || "tujia-to-gloss";
   const [variety, setVariety] = useState<string>(searchParams.get("variety") || "");
   const [dialect, setDialect] = useState<string>(searchParams.get("dialect") || "");
   
@@ -28,11 +28,6 @@ export default function Search() {
   useEffect(() => {
     setPage(1);
   }, [q, searchMode, variety, dialect]);
-
-  useEffect(() => {
-    const nextMode = searchParams.get("mode") || "tujia-to-gloss";
-    setSearchMode(nextMode);
-  }, [searchParams]);
 
   const { data: dialectsList } = useListDialects();
   
@@ -92,7 +87,6 @@ export default function Search() {
     params.set("mode", value);
     params.delete("page");
     setLocation(`/search?${params.toString()}`);
-    setSearchMode(value);
   };
 
   const clearFilters = () => {
