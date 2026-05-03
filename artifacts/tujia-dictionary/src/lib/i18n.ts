@@ -177,7 +177,7 @@ const strings: Record<UILang, Strings> = {
     formsHeading: "土家语的表示形式",
     formSpelling: "Bifzivkar 拼写",
     formToned: "带调拼写",
-    formIpa: "国际音标",
+    formIpa: "国际音标 / 拼音",
     formSwMandarin: "西南官话近似音",
     searchTitle: "词典搜索",
     searchModeTujiaToGloss: "用土话啰汉语英语",
