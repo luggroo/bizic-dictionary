@@ -5,7 +5,12 @@
   "type": "module",
   "scripts": {
     "hello": "tsx ./src/hello.ts",
+    "seed-zhou": "node ./src/seed-zhou.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "node-html-parser": "^6.1.13",
+    "postgres": "^3.4.5"
   },
   "devDependencies": {
     "@types/node": "catalog:",

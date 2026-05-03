@@ -117,26 +117,42 @@ async function getCognateSummaries(entryId: number) {
 }
 
 async function getZhou2020Rows() {
-  const rows = await db
-    .select({
-      groupId: cognateGroupsTable.id,
-      wiktionaryNo: cognateGroupsTable.wiktionaryNo,
-      protoForm: cognateGroupsTable.protoForm,
-      glossEn: cognateGroupsTable.glossEn,
-      glossZh: cognateGroupsTable.glossZh,
-      entryId: entriesTable.id,
-      tujiaWord: entriesTable.tujiaWord,
-      variety: entriesTable.variety,
-      dialect: entriesTable.dialect,
-      source: entriesTable.source,
-    })
-    .from(cognateGroupsTable)
-    .leftJoin(entryCognateGroupsTable, eq(cognateGroupsTable.id, entryCognateGroupsTable.cognateGroupId))
-    .leftJoin(entriesTable, eq(entryCognateGroupsTable.entryId, entriesTable.id))
-    .where(sql`${cognateGroupsTable.protoForm} is not null and ${cognateGroupsTable.protoForm} <> ''`)
-    .orderBy(asc(cognateGroupsTable.wiktionaryNo), asc(cognateGroupsTable.protoForm));
-
-  return rows;
+  const rows = await db.execute(sql`
+    SELECT
+      cg.id AS group_id,
+      cg.wiktionary_no,
+      cg.wiktionary_no_str,
+      cg.proto_form,
+      cg.gloss_en,
+      cg.gloss_zh,
+      cg.reflexes,
+      json_agg(
+        json_build_object(
+          'entryId', e.id,
+          'tujiaWord', e.tujia_word,
+          'variety', e.variety,
+          'dialect', e.dialect,
+          'source', e.source
+        )
+      ) FILTER (WHERE e.id IS NOT NULL) AS linked_entries
+    FROM cognate_groups cg
+    LEFT JOIN entry_cognate_groups ecg ON ecg.cognate_group_id = cg.id
+    LEFT JOIN entries e ON e.id = ecg.entry_id
+    GROUP BY cg.id, cg.wiktionary_no, cg.wiktionary_no_str, cg.proto_form, cg.gloss_en, cg.gloss_zh, cg.reflexes
+    ORDER BY
+      CASE WHEN cg.wiktionary_no >= 0 THEN cg.wiktionary_no ELSE 999999 END,
+      cg.proto_form
+  `);
+  return rows.rows as unknown as Array<{
+    group_id: number;
+    wiktionary_no: number | null;
+    wiktionary_no_str: string | null;
+    proto_form: string | null;
+    gloss_en: string;
+    gloss_zh: string | null;
+    reflexes: Record<string, string | null> | null;
+    linked_entries: Array<{ entryId: number; tujiaWord: string; variety: string; dialect: string; source: string }> | null;
+  }>;
 }
 
 async function rankedSearch(q: string): Promise<number[]> {
@@ -208,16 +224,14 @@ router.get("/zhou-2020", async (_req, res): Promise<void> => {
   const rows = await getZhou2020Rows();
   res.json({
     rows: rows.map((row) => ({
-      groupId: row.groupId,
-      wiktionaryNo: row.wiktionaryNo,
-      protoForm: row.protoForm,
-      glossEn: row.glossEn,
-      glossZh: row.glossZh,
-      entryId: row.entryId,
-      tujiaWord: row.tujiaWord,
-      variety: row.variety,
-      dialect: row.dialect,
-      source: row.source,
+      groupId: row.group_id,
+      wiktionaryNo: row.wiktionary_no,
+      wiktionaryNoStr: row.wiktionary_no_str,
+      protoForm: row.proto_form,
+      glossEn: row.gloss_en,
+      glossZh: row.gloss_zh,
+      reflexes: row.reflexes ?? {},
+      linkedEntries: row.linked_entries ?? [],
     })),
   });
 });
