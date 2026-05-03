@@ -10,6 +10,8 @@ import { BookA, Globe, Languages, Library, Check } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
 import { Button } from "@/components/ui/button";
 import { useQuery } from "@tanstack/react-query";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
 
 async function fetchRandomEntries() {
   const res = await fetch(`${import.meta.env.BASE_URL}api/entries/random`);
@@ -30,6 +32,7 @@ export default function Home() {
     queryFn: fetchRandomEntries,
   });
   const { t } = useI18n();
+  const [mode, setMode] = useState("tujia-to-gloss");
   return (
     <Layout>
       <div className="w-full flex-1">
@@ -41,20 +44,17 @@ export default function Home() {
               {t.heroSubtitle}
             </p>
             <div className="max-w-2xl mx-auto mt-12 space-y-4">
-              <div className="flex flex-wrap gap-3 justify-center">
-                {MODE_OPTIONS.map((option) => {
-                  return (
-                    <Link
-                      key={option.value}
-                      href={`/search?mode=${encodeURIComponent(option.value)}`}
-                      className="inline-flex items-center justify-center rounded-full border px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
-                    >
+              <RadioGroup value={mode} onValueChange={setMode} className="flex flex-wrap gap-3 justify-center">
+                {MODE_OPTIONS.map((option) => (
+                  <div key={option.value} className="flex items-center space-x-2 rounded-full border px-4 py-2">
+                    <RadioGroupItem value={option.value} id={option.value} />
+                    <Label htmlFor={option.value} className="text-sm font-medium cursor-pointer">
                       {option.label}
-                    </Link>
-                  );
-                })}
-              </div>
-              <SearchBar size="lg" mode="tujia-to-gloss" />
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
+              <SearchBar size="lg" mode={mode} />
             </div>
             <div className="max-w-2xl mx-auto rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
               汉语译文在部分词条中可能仍有不准确之处。
