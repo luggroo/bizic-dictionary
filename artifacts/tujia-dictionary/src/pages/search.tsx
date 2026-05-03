@@ -58,7 +58,7 @@ export default function Search() {
     };
     load();
     return () => controller.abort();
-  }, [q, searchMode, variety, dialect, page]);
+  }, [q, mode, variety, dialect, page]);
 
   const handleFilterChange = (key: string, value: string) => {
     const params = new URLSearchParams(searchString);
