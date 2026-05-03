@@ -26,6 +26,9 @@ export default function Home() {
             <div className="max-w-2xl mx-auto mt-12">
               <SearchBar size="lg" />
             </div>
+            <div className="max-w-2xl mx-auto rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
+              Chinese translations may still be inaccurate in some entries.
+            </div>
           </div>
         </section>
 
