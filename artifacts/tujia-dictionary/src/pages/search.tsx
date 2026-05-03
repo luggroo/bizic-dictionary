@@ -12,12 +12,12 @@ import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n-context";
 
 const SOURCE_OPTIONS = [
-  { key: "brassett", label: "Brassett" },
-  { key: "tian-86", label: "Tian 86" },
-  { key: "sun-h-91-zmyy", label: "Sun H 91 ZMYY" },
-  { key: "huang-and-dai-92-tbl", label: "Huang and Dai 92 TBL" },
-  { key: "chen-86-tubq", label: "Chen 86 TuBQ" },
-  { key: "chen-86-tumq", label: "Chen 86 TuMQ" },
+  { key: "Brassett 04 Tujia", label: "Brassett 04 Tujia" },
+  { key: "Brassett 06 Tujia", label: "Brassett 06 Tujia" },
+  { key: "Sun H 91 ZMYY", label: "Sun H 91 ZMYY" },
+  { key: "Huang and Dai 92 TBL", label: "Huang and Dai 92 TBL" },
+  { key: "Chen 86 TuBQ", label: "Chen 86 TuBQ" },
+  { key: "Chen 86 TuMQ", label: "Chen 86 TuMQ" },
 ] as const;
 
 export default function Search() {

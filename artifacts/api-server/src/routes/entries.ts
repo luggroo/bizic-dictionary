@@ -1,7 +1,6 @@
 import { Router, type IRouter } from "express";
 import { db, entriesTable, translationsTable, languagesTable, cognateGroupsTable, entryCognateGroupsTable } from "@workspace/db";
-import { eq, ilike, sql, desc, asc, and, inArray, or } from "drizzle-orm";
-import { sourceSqlPatterns } from "../lib/source-filter.js";
+import { eq, sql, desc, asc, and, inArray } from "drizzle-orm";
 import {
   ListEntriesQueryParams,
   GetEntryParams,
@@ -293,12 +292,7 @@ router.get("/entries", async (req, res): Promise<void> => {
   if (category) extraConditions.push(eq(entriesTable.category, category));
   if (variety) extraConditions.push(eq(entriesTable.variety, variety));
   if (dialect) extraConditions.push(eq(entriesTable.dialect, dialect));
-  if (source) {
-    const patterns = sourceSqlPatterns(source);
-    if (patterns.length > 0) {
-      extraConditions.push(or(...patterns.map((p) => ilike(entriesTable.source, p)))!);
-    }
-  }
+  if (source) extraConditions.push(eq(entriesTable.source, source));
   let rawEntries: (typeof entriesTable.$inferSelect)[];
   let total: number;
   if (rankedIds && rankedIds.length > 0) {
