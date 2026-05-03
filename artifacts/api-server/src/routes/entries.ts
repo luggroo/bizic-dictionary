@@ -161,18 +161,6 @@ async function rankedSearch(q: string): Promise<number[]> {
   if (!term) return [];
   const normalized = term.toLowerCase();
   const stem = normalized.replace(/(?:ing|ed|es|s)$/u, "");
-  if (term.length < 3) {
-    const rows = await db.execute(sql`
-      SELECT DISTINCT e.id
-      FROM entries e
-      LEFT JOIN translations t ON t.entry_id = e.id
-      WHERE e.tujia_word ILIKE ${term + '%'}
-        OR e.ipa ILIKE ${term + '%'}
-        OR t.text ILIKE ${term + '%'}
-      LIMIT 200
-    `);
-    return (rows.rows as unknown as { id: number }[]).map((r) => r.id);
-  }
   const rows = await db.execute(sql`
     WITH
     exact_hits AS (
@@ -199,6 +187,26 @@ async function rankedSearch(q: string): Promise<number[]> {
              AND lower(t.text) LIKE ${stem + '%'}
          )
     ),
+    word_prefix_hits AS (
+      SELECT e.id AS entry_id, 70.0::float AS score
+      FROM entries e
+      WHERE lower(e.tujia_word) LIKE ${normalized + '%'}
+    ),
+    ipa_prefix_hits AS (
+      SELECT e.id AS entry_id, 60.0::float AS score
+      FROM entries e
+      WHERE lower(coalesce(e.ipa, '')) LIKE ${normalized + '%'}
+    ),
+    translation_prefix_hits AS (
+      SELECT e.id AS entry_id, 50.0::float AS score
+      FROM entries e
+      WHERE EXISTS (
+        SELECT 1
+        FROM translations t
+        WHERE t.entry_id = e.id
+          AND lower(t.text) LIKE ${normalized + '%'}
+      )
+    ),
     fts AS (
       SELECT t.entry_id, MAX(ts_rank_cd(to_tsvector('english', t.text), websearch_to_tsquery('english', ${term}))) AS fts_rank
       FROM translations t
@@ -222,6 +230,12 @@ async function rankedSearch(q: string): Promise<number[]> {
       SELECT entry_id, score FROM exact_hits
       UNION ALL
       SELECT entry_id, score FROM stem_hits
+      UNION ALL
+      SELECT entry_id, score FROM word_prefix_hits
+      UNION ALL
+      SELECT entry_id, score FROM ipa_prefix_hits
+      UNION ALL
+      SELECT entry_id, score FROM translation_prefix_hits
       UNION ALL
       SELECT entry_id, COALESCE(fts_rank, 0.0) * 3.0 AS score FROM fts
       UNION ALL
