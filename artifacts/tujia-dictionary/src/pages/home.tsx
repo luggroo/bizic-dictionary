@@ -27,7 +27,7 @@ export default function Home() {
               <SearchBar size="lg" />
             </div>
             <div className="max-w-2xl mx-auto rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
-              Chinese translations may still be inaccurate in some entries.
+              汉语译文在部分词条中可能仍有不准确之处。
             </div>
           </div>
         </section>
