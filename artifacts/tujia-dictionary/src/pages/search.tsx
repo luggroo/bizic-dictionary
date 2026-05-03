@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useLocation, useSearch } from "wouter";
 import { type EntrySummary, useListDialects } from "@workspace/api-client-react";
 import { Layout } from "@/components/layout";
-import { SearchBar } from "@/components/search-bar";
 import { EntryCard } from "@/components/entry-card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
@@ -15,10 +14,10 @@ export default function Search() {
   const searchString = useSearch();
   const searchParams = useMemo(() => new URLSearchParams(searchString), [searchString]);
   const q = searchParams.get("q") || "";
+  const mode = searchParams.get("mode") || "tujia-to-gloss";
   const { t } = useI18n();
 
   const [page, setPage] = useState(parseInt(searchParams.get("page") || "1", 10));
-  const searchMode = searchParams.get("mode") || "tujia-to-gloss";
   const [variety, setVariety] = useState<string>(searchParams.get("variety") || "");
   const [dialect, setDialect] = useState<string>(searchParams.get("dialect") || "");
   
@@ -27,7 +26,7 @@ export default function Search() {
   // Reset page when filters change
   useEffect(() => {
     setPage(1);
-  }, [q, searchMode, variety, dialect]);
+  }, [q, mode, variety, dialect]);
 
   const { data: dialectsList } = useListDialects();
   
@@ -82,20 +81,14 @@ export default function Search() {
     if (key === "dialect") setDialect(value === "all" ? "" : value);
   };
 
-  const handleModeChange = (value: string) => {
-    const params = new URLSearchParams(searchString);
-    params.set("mode", value);
-    params.delete("page");
-    setLocation(`/search?${params.toString()}`);
-  };
-
   const clearFilters = () => {
     setLocation("/search");
     setVariety("");
     setDialect("");
   };
 
-  const hasActiveFilters = q || searchMode !== "tujia-to-gloss" || variety || dialect;
+  const hasActiveFilters = q || variety || dialect;
+  const searchLanguages = mode === "gloss-to-tujia" ? t.searchLanguageZhEn : t.searchLanguageTujiaEn;
 
   return (
     <Layout>
@@ -103,22 +96,15 @@ export default function Search() {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="mb-6">
             <h1 className="text-3xl font-serif text-foreground mb-4">{t.searchTitle}</h1>
-            <SearchBar size="lg" initialQuery={q} />
+            <div className="rounded-lg border bg-background px-4 py-3 text-sm text-muted-foreground">
+              {t.searchingIn}: <span className="font-medium text-foreground">{searchLanguages}</span>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
             <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
               <div className="flex items-center text-sm font-medium text-muted-foreground mr-2">
                 <SlidersHorizontal className="w-4 h-4 mr-2" /> {t.searchTitle}
-              </div>
-
-              <div className="flex items-center gap-2">
-                <Button type="button" variant={searchMode === "tujia-to-gloss" ? "default" : "outline"} size="sm" onClick={() => handleModeChange("tujia-to-gloss")}>
-                  {t.searchModeTujiaToGloss}
-                </Button>
-                <Button type="button" variant={searchMode === "gloss-to-tujia" ? "default" : "outline"} size="sm" onClick={() => handleModeChange("gloss-to-tujia")}>
-                  {t.searchModeGlossToTujia}
-                </Button>
               </div>
 
               <Select value={variety || "all"} onValueChange={(v) => handleFilterChange("variety", v)}>
@@ -188,7 +174,7 @@ export default function Search() {
                 <div className="flex flex-wrap gap-2">
                   {q && <Badge variant="secondary">"{q}"</Badge>}
                   <Badge variant="secondary">
-                    {searchMode === "tujia-to-gloss" ? t.searchModeTujiaToGloss : t.searchModeGlossToTujia}
+                    {searchLanguages}
                   </Badge>
                   {variety && <Badge variant="secondary">{variety === "northern" ? t.northern : t.southern}</Badge>}
                   {dialect && <Badge variant="secondary">{dialect}</Badge>}
