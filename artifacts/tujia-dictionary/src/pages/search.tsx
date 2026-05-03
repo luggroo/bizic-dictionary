@@ -87,6 +87,15 @@ export default function Search() {
   };
 
   const hasActiveFilters = q || variety || dialect;
+  const searchLanguageLabel = mode === "gloss-to-tujia" ? t.searchLanguageGlossTujia : t.searchLanguageTujiaGloss;
+  const searchLanguageParam = mode === "gloss-to-tujia" ? "zh" : undefined;
+
+  const handleModeChange = (value: string) => {
+    const params = new URLSearchParams(searchString);
+    params.set("mode", value);
+    params.delete("page");
+    setLocation(`/search?${params.toString()}`);
+  };
 
   return (
     <Layout>
@@ -95,7 +104,7 @@ export default function Search() {
           <div className="mb-6">
             <h1 className="text-3xl font-serif text-foreground mb-4">{t.searchTitle}</h1>
             <div className="rounded-lg border bg-background px-4 py-3 text-sm text-muted-foreground">
-              {t.searchingIn}: <span className="font-medium text-foreground">{t.searchLanguageAll}</span>
+              {t.searchingIn}: <span className="font-medium text-foreground">{searchLanguageLabel}</span>
             </div>
           </div>
 
@@ -103,6 +112,15 @@ export default function Search() {
             <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
               <div className="flex items-center text-sm font-medium text-muted-foreground mr-2">
                 <SlidersHorizontal className="w-4 h-4 mr-2" /> {t.searchTitle}
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Button type="button" variant={mode === "tujia-to-gloss" ? "default" : "outline"} size="sm" onClick={() => handleModeChange("tujia-to-gloss")}>
+                  {t.searchModeTujiaToGloss}
+                </Button>
+                <Button type="button" variant={mode === "gloss-to-tujia" ? "default" : "outline"} size="sm" onClick={() => handleModeChange("gloss-to-tujia")}>
+                  {t.searchModeGlossToTujia}
+                </Button>
               </div>
 
               <Select value={variety || "all"} onValueChange={(v) => handleFilterChange("variety", v)}>
@@ -171,7 +189,7 @@ export default function Search() {
               {hasActiveFilters && (
                 <div className="flex flex-wrap gap-2">
                   {q && <Badge variant="secondary">"{q}"</Badge>}
-                  <Badge variant="secondary">{t.searchLanguageAll}</Badge>
+                  <Badge variant="secondary">{searchLanguageLabel}</Badge>
                   {variety && <Badge variant="secondary">{variety === "northern" ? t.northern : t.southern}</Badge>}
                   {dialect && <Badge variant="secondary">{dialect}</Badge>}
                 </div>

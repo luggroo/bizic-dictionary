@@ -47,7 +47,8 @@ export interface Strings {
   searchModeTujiaToGloss: string;
   searchModeGlossToTujia: string;
   searchingIn: string;
-  searchLanguageAll: string;
+  searchLanguageTujiaGloss: string;
+  searchLanguageGlossTujia: string;
   allCategories: string;
   allVarieties: string;
   allSources: string;
@@ -120,7 +121,8 @@ const strings: Record<UILang, Strings> = {
     searchModeTujiaToGloss: "Search Tujia → Chinese/English",
     searchModeGlossToTujia: "Search Chinese/English → Tujia",
     searchingIn: "Searching in",
-    searchLanguageAll: "Tujia, Chinese, and English",
+    searchLanguageTujiaGloss: "Tujia → Chinese/English",
+    searchLanguageGlossTujia: "Chinese/English → Tujia",
     allCategories: "All Categories",
     allVarieties: "All Varieties",
     allSources: "All Sources",
@@ -192,7 +194,8 @@ const strings: Record<UILang, Strings> = {
     searchModeTujiaToGloss: "用土话啰汉语英语",
     searchModeGlossToTujia: "用汉语英语啰土话",
     searchingIn: "检索语言",
-    searchLanguageAll: "土家语、汉语和英语",
+    searchLanguageTujiaGloss: "土家语 → 汉语/英语",
+    searchLanguageGlossTujia: "汉语/英语 → 土家语",
     allCategories: "全部类别",
     allVarieties: "全部方言",
     allSources: "全部来源",
