@@ -23,17 +23,20 @@ interface Translation {
   notes?: string | null;
 }
 
-function pickChineseTranslation(translations: Translation[], partOfSpeech?: string | null) {
+function getChineseTranslations(translations: Translation[], partOfSpeech?: string | null) {
   const zh = translations.filter((t) => t.languageCode === "zh");
-  if (zh.length === 0) return null;
+  if (zh.length === 0) return [];
   const pos = (partOfSpeech ?? "").trim().toLowerCase();
-  if (pos.includes("adj")) {
-    return zh.find((t) => t.text === "瘦" || (t.notes ?? "").toLowerCase().includes("adj")) ?? zh[0];
-  }
-  if (pos.includes("noun")) {
-    return zh.find((t) => t.text !== "瘦肉") ?? zh[0];
-  }
-  return zh[0];
+  if (!pos) return zh;
+  const preferred = zh.filter((t) => {
+    const text = t.text.trim();
+    const notes = (t.notes ?? "").trim().toLowerCase();
+    if (pos.includes("adj")) return text === "瘦" || notes.includes("adj");
+    if (pos.includes("noun")) return text !== "瘦肉";
+    if (pos.includes("verb")) return notes.includes("verb") || notes.includes("v.");
+    return false;
+  });
+  return preferred.length > 0 ? preferred : zh;
 }
 
 interface CognateGroup {
@@ -130,7 +133,7 @@ export default function EntryDetail() {
   }
 
   const languageGroups = groupByLanguage(entry.translations);
-  const chineseTranslation = pickChineseTranslation(entry.translations, entry.partOfSpeech);
+  const chineseTranslations = getChineseTranslations(entry.translations, entry.partOfSpeech);
   const hasForms = entry.forms && (entry.forms.spelling || entry.forms.toned || entry.forms.ipa || entry.forms.swMandarin);
 
   return (
@@ -166,10 +169,12 @@ export default function EntryDetail() {
                 {entry.category && <Badge variant="outline">{entry.category}</Badge>}
                 {notation && <span className={notation === "ipa" ? "notation-ipa" : "notation-pinyin"}>{NOTATION_LABEL[notation].short}</span>}
               </div>
-              {chineseTranslation && (
-                <p className="text-base sm:text-lg text-muted-foreground mb-6">
-                  汉语：{chineseTranslation.text}
-                </p>
+              {chineseTranslations.length > 0 && (
+                <div className="space-y-2 text-base sm:text-lg text-muted-foreground mb-6">
+                  {chineseTranslations.map((translation, index) => (
+                    <p key={`${translation.id}-${index}`}>汉语{chineseTranslations.length > 1 ? ` ${index + 1}` : ""}：{translation.text}</p>
+                  ))}
+                </div>
               )}
             </div>
 

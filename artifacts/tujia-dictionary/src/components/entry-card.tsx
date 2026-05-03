@@ -11,6 +11,7 @@ import { detectNotation, NOTATION_LABEL } from "@/lib/notation";
 export function EntryCard({ entry }: { entry: EntrySummary }) {
   const { t } = useI18n();
   const translations = Object.entries(entry.primaryTranslations);
+  const chineseTranslations = entry.primaryTranslations.zh ? entry.primaryTranslations.zh.split(" | ") : [];
   const notation = detectNotation(entry.tujiaWord);
 
   return (
@@ -61,8 +62,17 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
 
           {/* Translations */}
           <div className="space-y-3 mt-6">
+            {chineseTranslations.length > 0 && (
+              <div className="space-y-1.5">
+                {chineseTranslations.map((text, index) => (
+                  <p key={`${text}-${index}`} className="text-sm text-muted-foreground">
+                    汉语{chineseTranslations.length > 1 ? ` ${index + 1}` : ""}：{text}
+                  </p>
+                ))}
+              </div>
+            )}
             {translations.length > 0 ? (
-              translations.slice(0, 3).map(([lang, text]) => (
+              translations.filter(([lang]) => lang !== "zh").slice(0, 3).map(([lang, text]) => (
                 <div key={lang} className="flex items-start gap-3">
                   <span className="text-xs font-mono text-muted-foreground uppercase w-8 pt-0.5">
                     {lang}
@@ -73,9 +83,9 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
             ) : (
               <p className="text-sm text-muted-foreground italic">No translations available</p>
             )}
-            {translations.length > 3 && (
+            {translations.filter(([lang]) => lang !== "zh").length > 3 && (
               <p className="text-xs text-muted-foreground pt-2">
-                +{translations.length - 3} more translations
+                +{translations.filter(([lang]) => lang !== "zh").length - 3} more translations
               </p>
             )}
           </div>
