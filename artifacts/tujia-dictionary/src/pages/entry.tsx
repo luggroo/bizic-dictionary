@@ -182,9 +182,6 @@ export default function EntryDetail() {
 
             {hasForms && (
               <div className="animate-in fade-in slide-in-from-bottom-4" style={{ animationDelay: "50ms", animationFillMode: "both" }}>
-                <h2 className="text-xl font-serif text-foreground flex items-center border-b pb-2 mb-6">
-                  <Globe2 className="w-5 h-5 mr-3 text-muted-foreground" /> {t.formsHeading}
-                </h2>
                 <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
                   {entry.forms.spelling && (
                     <div className="bg-card rounded-xl p-4 border shadow-sm">
@@ -200,7 +197,6 @@ export default function EntryDetail() {
                   )}
                   {entry.forms.ipa && (
                     <div className="bg-card rounded-xl p-4 border shadow-sm">
-                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">{t.formIpa}</p>
                       <p className="text-lg font-mono text-foreground/90">{entry.forms.ipa}</p>
                     </div>
                   )}
