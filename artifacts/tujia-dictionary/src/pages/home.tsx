@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "wouter";
-import { useGetDictionaryStats } from "@workspace/api-client-react";
+import { type EntrySummary, useGetDictionaryStats } from "@workspace/api-client-react";
 import { Layout } from "@/components/layout";
 import { SearchBar } from "@/components/search-bar";
 import { EntryCard } from "@/components/entry-card";
@@ -14,14 +14,14 @@ import { useQuery } from "@tanstack/react-query";
 async function fetchRandomEntries() {
   const res = await fetch(`${import.meta.env.BASE_URL}api/entries/random`);
   if (!res.ok) throw new Error("Failed to load random entries");
-  return res.json() as Promise<{ entries: Array<{ id: number }> }>;
+  return res.json() as Promise<{ entries: EntrySummary[] }>;
 }
 
 const MODE_OPTIONS = [
+  { value: "tujia-to-gloss", label: "土话啰汉英" },
   { value: "gloss-to-tujia", label: "汉语啰土话" },
   { value: "english-to-tujia", label: "英语啰土话" },
-  { value: "tujia-to-gloss", label: "土话啰汉英" },
-];
+] as const;
 
 export default function Home() {
   const { data: stats, isLoading } = useGetDictionaryStats();
@@ -30,18 +30,6 @@ export default function Home() {
     queryFn: fetchRandomEntries,
   });
   const { t } = useI18n();
-  const [modes, setModes] = useState<string[]>(["gloss-to-tujia", "english-to-tujia"]);
-
-  const toggleMode = (value: string) => {
-    setModes((current) => {
-      if (current.includes(value)) {
-        const next = current.filter((item) => item !== value);
-        return next.length > 0 ? next : ["gloss-to-tujia", "english-to-tujia"];
-      }
-      return [...current, value];
-    });
-  };
-
   return (
     <Layout>
       <div className="w-full flex-1">
@@ -55,24 +43,18 @@ export default function Home() {
             <div className="max-w-2xl mx-auto mt-12 space-y-4">
               <div className="flex flex-wrap gap-3 justify-center">
                 {MODE_OPTIONS.map((option) => {
-                  const active = modes.includes(option.value);
                   return (
-                    <Button
+                    <Link
                       key={option.value}
-                      type="button"
-                      variant={active ? "default" : "outline"}
-                      onClick={() => toggleMode(option.value)}
-                      className="rounded-full px-4"
+                      href={`/search?mode=${encodeURIComponent(option.value)}`}
+                      className="inline-flex items-center justify-center rounded-full border px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
                     >
-                      <span className={`mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full border ${active ? "bg-primary-foreground text-primary" : "text-transparent"}`}>
-                        <Check className="h-3 w-3" />
-                      </span>
                       {option.label}
-                    </Button>
+                    </Link>
                   );
                 })}
               </div>
-              <SearchBar size="lg" mode={modes} />
+              <SearchBar size="lg" mode="tujia-to-gloss" />
             </div>
             <div className="max-w-2xl mx-auto rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
               汉语译文在部分词条中可能仍有不准确之处。
