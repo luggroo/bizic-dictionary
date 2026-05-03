@@ -16,9 +16,9 @@ export default function Search() {
   const searchParams = new URLSearchParams(searchString);
   const q = searchParams.get("q") || "";
   const { t } = useI18n();
-  
+
   const [page, setPage] = useState(parseInt(searchParams.get("page") || "1", 10));
-  const [language, setLanguage] = useState<string>(searchParams.get("language") || "");
+  const [searchMode, setSearchMode] = useState<string>(searchParams.get("mode") || "tujia-to-gloss");
   const [category, setCategory] = useState<string>(searchParams.get("category") || "");
   const [variety, setVariety] = useState<string>(searchParams.get("variety") || "");
   const [dialect, setDialect] = useState<string>(searchParams.get("dialect") || "");
@@ -28,9 +28,8 @@ export default function Search() {
   // Reset page when filters change
   useEffect(() => {
     setPage(1);
-  }, [q, language, category, variety, dialect]);
+  }, [q, searchMode, category, variety, dialect]);
 
-  const { data: languages } = useListLanguages();
   const { data: categories } = useListCategories();
   const { data: dialectsList } = useListDialects();
   
@@ -41,7 +40,7 @@ export default function Search() {
 
   const { data, isLoading } = useListEntries({
     q: q || undefined,
-    language: language || undefined,
+    language: searchMode === "tujia-to-gloss" ? undefined : "zh",
     category: category || undefined,
     variety: variety || undefined,
     dialect: dialect || undefined,
@@ -66,7 +65,7 @@ export default function Search() {
     params.delete("page"); // Reset to page 1
     setLocation(`/search?${params.toString()}`);
     
-    if (key === "language") setLanguage(value === "all" ? "" : value);
+    if (key === "mode") setSearchMode(value === "all" ? "tujia-to-gloss" : value);
     if (key === "category") setCategory(value === "all" ? "" : value);
     if (key === "variety") setVariety(value === "all" ? "" : value);
     if (key === "dialect") setDialect(value === "all" ? "" : value);
@@ -74,13 +73,13 @@ export default function Search() {
 
   const clearFilters = () => {
     setLocation("/search");
-    setLanguage("");
+    setSearchMode("tujia-to-gloss");
     setCategory("");
     setVariety("");
     setDialect("");
   };
 
-  const hasActiveFilters = q || language || category || variety || dialect;
+  const hasActiveFilters = q || searchMode !== "tujia-to-gloss" || category || variety || dialect;
 
   return (
     <Layout>
@@ -94,20 +93,16 @@ export default function Search() {
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
             <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
               <div className="flex items-center text-sm font-medium text-muted-foreground mr-2">
-                <SlidersHorizontal className="w-4 h-4 mr-2" /> {t.filters}
+                <SlidersHorizontal className="w-4 h-4 mr-2" /> {t.searchTitle}
               </div>
-              
-              <Select value={language || "all"} onValueChange={(v) => handleFilterChange("language", v)}>
+
+              <Select value={searchMode} onValueChange={(v) => handleFilterChange("mode", v)}>
                 <SelectTrigger className="w-[160px] bg-background">
-                  <SelectValue placeholder={t.allLanguages} />
+                  <SelectValue placeholder={t.searchModeTujiaToGloss} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">{t.allLanguages}</SelectItem>
-                  {languages?.filter(l => !l.isBase).map(l => (
-                    <SelectItem key={l.code} value={l.code}>
-                      <span className="mr-2">{l.flag}</span> {l.name}
-                    </SelectItem>
-                  ))}
+                  <SelectItem value="tujia-to-gloss">{t.searchModeTujiaToGloss}</SelectItem>
+                  <SelectItem value="gloss-to-tujia">{t.searchModeGlossToTujia}</SelectItem>
                 </SelectContent>
               </Select>
 
@@ -191,7 +186,9 @@ export default function Search() {
               {hasActiveFilters && (
                 <div className="flex flex-wrap gap-2">
                   {q && <Badge variant="secondary">"{q}"</Badge>}
-                  {language && <Badge variant="secondary">Lang: {language}</Badge>}
+                  <Badge variant="secondary">
+                    {searchMode === "tujia-to-gloss" ? t.searchModeTujiaToGloss : t.searchModeGlossToTujia}
+                  </Badge>
                   {category && <Badge variant="secondary">Cat: {category}</Badge>}
                   {variety && <Badge variant="secondary">{variety === "northern" ? t.northern : t.southern}</Badge>}
                   {dialect && <Badge variant="secondary">{dialect}</Badge>}

@@ -43,7 +43,8 @@ export interface Strings {
   formIpa: string;
   formSwMandarin: string;
   searchTitle: string;
-  allLanguages: string;
+  searchModeTujiaToGloss: string;
+  searchModeGlossToTujia: string;
   allCategories: string;
   allVarieties: string;
   filters: string;
@@ -110,7 +111,8 @@ const strings: Record<UILang, Strings> = {
     formIpa: "IPA",
     formSwMandarin: "SW Mandarin",
     searchTitle: "Dictionary Search",
-    allLanguages: "All Languages",
+    searchModeTujiaToGloss: "Search Tujia → Chinese/English",
+    searchModeGlossToTujia: "Search Chinese/English → Tujia",
     allCategories: "All Categories",
     allVarieties: "All Varieties",
     filters: "Filters",
@@ -176,7 +178,8 @@ const strings: Record<UILang, Strings> = {
     formIpa: "国际音标",
     formSwMandarin: "西南官话近似音",
     searchTitle: "词典搜索",
-    allLanguages: "全部语言",
+    searchModeTujiaToGloss: "用土话查找汉英",
+    searchModeGlossToTujia: "用汉英/土话查找",
     allCategories: "全部类别",
     allVarieties: "全部方言",
     filters: "筛选",
