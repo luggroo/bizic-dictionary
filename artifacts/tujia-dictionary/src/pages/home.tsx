@@ -63,6 +63,11 @@ export default function Home() {
               </div>
               <SearchBar size="lg" mode={modes} />
             </div>
+            <div className="flex justify-center">
+              <Link href="/zhou-2020" className="text-sm font-medium text-secondary hover:underline">
+                Zhou (2020) / Proto Bizic
+              </Link>
+            </div>
             <div className="max-w-2xl mx-auto rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
               汉语译文在部分词条中可能仍有不准确之处。
             </div>

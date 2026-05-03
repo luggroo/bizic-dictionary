@@ -116,6 +116,29 @@ async function getCognateSummaries(entryId: number) {
   return rows;
 }
 
+async function getZhou2020Rows() {
+  const rows = await db
+    .select({
+      groupId: cognateGroupsTable.id,
+      wiktionaryNo: cognateGroupsTable.wiktionaryNo,
+      protoForm: cognateGroupsTable.protoForm,
+      glossEn: cognateGroupsTable.glossEn,
+      glossZh: cognateGroupsTable.glossZh,
+      entryId: entriesTable.id,
+      tujiaWord: entriesTable.tujiaWord,
+      variety: entriesTable.variety,
+      dialect: entriesTable.dialect,
+      source: entriesTable.source,
+    })
+    .from(cognateGroupsTable)
+    .leftJoin(entryCognateGroupsTable, eq(cognateGroupsTable.id, entryCognateGroupsTable.cognateGroupId))
+    .leftJoin(entriesTable, eq(entryCognateGroupsTable.entryId, entriesTable.id))
+    .where(sql`${cognateGroupsTable.protoForm} is not null and ${cognateGroupsTable.protoForm} <> ''`)
+    .orderBy(asc(cognateGroupsTable.wiktionaryNo), asc(cognateGroupsTable.protoForm));
+
+  return rows;
+}
+
 async function rankedSearch(q: string): Promise<number[]> {
   const term = q.trim();
   if (!term) return [];
@@ -179,6 +202,24 @@ router.get("/entries/:id/cognates", async (req, res): Promise<void> => {
   }
   const cognates = await getCognateSummaries(parsed.data.id);
   res.json({ cognates });
+});
+
+router.get("/zhou-2020", async (_req, res): Promise<void> => {
+  const rows = await getZhou2020Rows();
+  res.json({
+    rows: rows.map((row) => ({
+      groupId: row.groupId,
+      wiktionaryNo: row.wiktionaryNo,
+      protoForm: row.protoForm,
+      glossEn: row.glossEn,
+      glossZh: row.glossZh,
+      entryId: row.entryId,
+      tujiaWord: row.tujiaWord,
+      variety: row.variety,
+      dialect: row.dialect,
+      source: row.source,
+    })),
+  });
 });
 
 router.get("/entries/stats", async (req, res): Promise<void> => {

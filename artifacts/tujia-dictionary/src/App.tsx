@@ -10,6 +10,7 @@ import Search from "@/pages/search";
 import EntryDetail from "@/pages/entry";
 import Browse from "@/pages/browse";
 import About from "@/pages/about";
+import Zhou2020 from "@/pages/zhou-2020";
 import NotFound from "@/pages/not-found";
 
 const queryClient = new QueryClient({
@@ -29,6 +30,7 @@ function Router() {
       <Route path="/entry/:id" component={EntryDetail} />
       <Route path="/browse" component={Browse} />
       <Route path="/about" component={About} />
+      <Route path="/zhou-2020" component={Zhou2020} />
       <Route component={NotFound} />
     </Switch>
   );
