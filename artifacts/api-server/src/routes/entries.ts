@@ -188,9 +188,14 @@ async function rankedSearch(q: string): Promise<number[]> {
          )
     ),
     word_prefix_hits AS (
-      SELECT e.id AS entry_id, 70.0::float AS score
+      SELECT e.id AS entry_id, 90.0::float AS score
       FROM entries e
       WHERE lower(e.tujia_word) LIKE ${normalized + '%'}
+    ),
+    word_contains_hits AS (
+      SELECT e.id AS entry_id, 70.0::float AS score
+      FROM entries e
+      WHERE lower(e.tujia_word) LIKE ${'%' + normalized + '%'}
     ),
     ipa_prefix_hits AS (
       SELECT e.id AS entry_id, 60.0::float AS score
@@ -221,17 +226,17 @@ async function rankedSearch(q: string): Promise<number[]> {
     ilike_hits AS (
       SELECT DISTINCT e.id AS entry_id, 0.3::float AS ilike_score
       FROM entries e
-      LEFT JOIN translations t ON t.entry_id = e.id
       WHERE e.tujia_word ILIKE ${'%' + term + '%'}
         OR e.ipa ILIKE ${'%' + term + '%'}
-        OR t.text ILIKE ${'%' + term + '%'}
     ),
     all_hits AS (
       SELECT entry_id, score FROM exact_hits
       UNION ALL
-      SELECT entry_id, score FROM stem_hits
-      UNION ALL
       SELECT entry_id, score FROM word_prefix_hits
+      UNION ALL
+      SELECT entry_id, score FROM word_contains_hits
+      UNION ALL
+      SELECT entry_id, score FROM stem_hits
       UNION ALL
       SELECT entry_id, score FROM ipa_prefix_hits
       UNION ALL
