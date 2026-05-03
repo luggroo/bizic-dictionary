@@ -87,7 +87,9 @@ export default function EntryDetail() {
   });
 
   const notation = entry ? detectNotation(entry.ipa ?? entry.tujiaWord) : null;
-  const displayNotation = entry && /Brassett 04 Tujia|Brassett 06 Tujia/.test(entry.source ?? "") ? "pinyin" : notation;
+  const isBrassett = /Brassett 04 Tujia|Brassett 06 Tujia/.test(entry?.source ?? "");
+  const displayNotation = isBrassett ? "pinyin" : notation;
+  const notationLabel = displayNotation === "pinyin" ? "拼音" : "国际音标";
   const cognates = ((entry as typeof entry & { cognates?: CognateGroup[] })?.cognates ?? []) as CognateGroup[];
   const hasAudio = entry ? hasAudioAsset(entry.id, entry.tujiaWord) : false;
 
@@ -168,7 +170,7 @@ export default function EntryDetail() {
                 )}
                 {entry.partOfSpeech && <Badge variant="secondary">{entry.partOfSpeech}</Badge>}
                 {entry.category && <Badge variant="outline">{entry.category}</Badge>}
-                {displayNotation && <span className={displayNotation === "ipa" ? "notation-ipa" : "notation-pinyin"}>{NOTATION_LABEL[displayNotation].short}</span>}
+                {displayNotation && <span className={displayNotation === "ipa" ? "notation-ipa" : "notation-pinyin"}>{notationLabel}</span>}
               </div>
               {chineseTranslations.length > 0 && (
                 <div className="grid grid-cols-[2rem_1fr] gap-x-2 items-start text-base sm:text-lg text-muted-foreground mb-6">
@@ -274,7 +276,7 @@ export default function EntryDetail() {
                 <div className="flex justify-between"><dt className="text-muted-foreground">{t.wordId}</dt><dd className="font-mono text-xs text-muted-foreground">{entry.id}</dd></div>
                 <div className="flex justify-between"><dt className="text-muted-foreground">{t.languages}</dt><dd className="font-medium text-foreground">{languageGroups.length}</dd></div>
                 <div className="flex justify-between"><dt className="text-muted-foreground">Total {t.senses}</dt><dd className="font-medium text-foreground">{entry.translations.length}</dd></div>
-                {displayNotation && <div className="flex justify-between items-center"><dt className="text-muted-foreground">{t.notation}</dt><dd><span className={displayNotation === "ipa" ? "notation-ipa" : "notation-pinyin"} title={NOTATION_LABEL[displayNotation].title}>{NOTATION_LABEL[displayNotation].short}</span></dd></div>}
+                {displayNotation && <div className="flex justify-between items-center"><dt className="text-muted-foreground">{t.notation}</dt><dd><span className={displayNotation === "ipa" ? "notation-ipa" : "notation-pinyin"} title={displayNotation === "pinyin" ? "拼音" : "国际音标"}>{notationLabel}</span></dd></div>}
               </dl>
               {entry.source && (
                 <div className="mt-5 pt-4 border-t border-border/40">
