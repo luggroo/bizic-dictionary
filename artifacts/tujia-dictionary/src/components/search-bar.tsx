@@ -8,9 +8,10 @@ import { useI18n } from "@/lib/i18n-context";
 interface SearchBarProps {
   size?: "default" | "lg";
   initialQuery?: string;
+  mode?: string;
 }
 
-export function SearchBar({ size = "default", initialQuery = "" }: SearchBarProps) {
+export function SearchBar({ size = "default", initialQuery = "", mode = "tujia-to-gloss" }: SearchBarProps) {
   const [, setLocation] = useLocation();
   const [query, setQuery] = useState(initialQuery);
   const { t } = useI18n();
@@ -18,9 +19,9 @@ export function SearchBar({ size = "default", initialQuery = "" }: SearchBarProp
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
-      setLocation(`/search?q=${encodeURIComponent(query.trim())}`);
+      setLocation(`/search?q=${encodeURIComponent(query.trim())}&mode=${encodeURIComponent(mode)}`);
     } else {
-      setLocation('/search');
+      setLocation(`/search?mode=${encodeURIComponent(mode)}`);
     }
   };
 

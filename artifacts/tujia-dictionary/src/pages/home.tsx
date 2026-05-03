@@ -6,12 +6,15 @@ import { SearchBar } from "@/components/search-bar";
 import { EntryCard } from "@/components/entry-card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { BookA, Globe, Languages, Library } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
+import { useState } from "react";
 
 export default function Home() {
   const { data: stats, isLoading } = useGetDictionaryStats();
   const { t } = useI18n();
+  const [mode, setMode] = useState("tujia-to-gloss");
 
   return (
     <Layout>
@@ -23,8 +26,17 @@ export default function Home() {
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {t.heroSubtitle}
             </p>
-            <div className="max-w-2xl mx-auto mt-12">
-              <SearchBar size="lg" />
+            <div className="max-w-2xl mx-auto mt-12 space-y-4">
+              <Select value={mode} onValueChange={setMode}>
+                <SelectTrigger className="w-full bg-background">
+                  <SelectValue placeholder={mode === "tujia-to-gloss" ? t.searchModeTujiaToGloss : t.searchModeGlossToTujia} />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="tujia-to-gloss">{t.searchModeTujiaToGloss}</SelectItem>
+                  <SelectItem value="gloss-to-tujia">{t.searchModeGlossToTujia}</SelectItem>
+                </SelectContent>
+              </Select>
+              <SearchBar size="lg" mode={mode} />
             </div>
             <div className="max-w-2xl mx-auto rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900">
               汉语译文在部分词条中可能仍有不准确之处。
