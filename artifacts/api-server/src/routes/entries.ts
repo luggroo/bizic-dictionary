@@ -14,28 +14,65 @@ import {
 
 const router: IRouter = Router();
 
+// ─── helpers ────────────────────────────────────────────────────────────────
+
+async function buildPrimaryTranslations(entryId: number): Promise<Record<string, string>> {
+  const translations = await db
+    .select({ languageCode: translationsTable.languageCode, text: translationsTable.text })
+    .from(translationsTable)
+    .where(eq(translationsTable.entryId, entryId));
+  const map: Record<string, string> = {};
+  for (const t of translations) {
+    if (!map[t.languageCode]) map[t.languageCode] = t.text;
+  }
+  return map;
+}
+
+function toForms(entry: { tujiaSpelling: string | null; tujiaToned: string | null; ipa: string | null; swMandarin: string | null }) {
+  return {
+    spelling: entry.tujiaSpelling,
+    toned: entry.tujiaToned,
+    ipa: entry.ipa,
+    swMandarin: entry.swMandarin,
+  };
+}
+
+function toSummary(entry: typeof entriesTable.$inferSelect, primaryTranslations: Record<string, string>) {
+  return {
+    id: entry.id,
+    tujiaWord: entry.tujiaWord,
+    variety: entry.variety,
+    dialect: entry.dialect,
+    forms: toForms(entry),
+    partOfSpeech: entry.partOfSpeech,
+    category: entry.category,
+    primaryTranslations,
+  };
+}
+
+// ─── stats ──────────────────────────────────────────────────────────────────
+
 router.get("/entries/stats", async (req, res): Promise<void> => {
-  const [totalEntries] = await db
-    .select({ count: sql<number>`count(*)::int` })
-    .from(entriesTable);
-
-  const [totalLanguages] = await db
-    .select({ count: sql<number>`count(*)::int` })
-    .from(languagesTable);
-
-  const [totalTranslations] = await db
-    .select({ count: sql<number>`count(*)::int` })
-    .from(translationsTable);
+  const [totalEntries] = await db.select({ count: sql<number>`count(*)::int` }).from(entriesTable);
+  const [totalLanguages] = await db.select({ count: sql<number>`count(*)::int` }).from(languagesTable);
+  const [totalTranslations] = await db.select({ count: sql<number>`count(*)::int` }).from(translationsTable);
 
   const categoriesResult = await db
     .selectDistinct({ category: entriesTable.category })
     .from(entriesTable)
     .where(sql`${entriesTable.category} is not null`);
 
-  const languages = await db
-    .select()
-    .from(languagesTable)
-    .orderBy(asc(languagesTable.sortOrder));
+  const [northernRow] = await db
+    .select({ count: sql<number>`count(*)::int` })
+    .from(entriesTable)
+    .where(eq(entriesTable.variety, "northern"));
+
+  const [southernRow] = await db
+    .select({ count: sql<number>`count(*)::int` })
+    .from(entriesTable)
+    .where(eq(entriesTable.variety, "southern"));
+
+  const languages = await db.select().from(languagesTable).orderBy(asc(languagesTable.sortOrder));
 
   const recentRaw = await db
     .select()
@@ -44,31 +81,7 @@ router.get("/entries/stats", async (req, res): Promise<void> => {
     .limit(6);
 
   const recentEntries = await Promise.all(
-    recentRaw.map(async (entry) => {
-      const translations = await db
-        .select({
-          languageCode: translationsTable.languageCode,
-          text: translationsTable.text,
-        })
-        .from(translationsTable)
-        .where(eq(translationsTable.entryId, entry.id));
-
-      const primaryTranslations: Record<string, string> = {};
-      for (const t of translations) {
-        if (!primaryTranslations[t.languageCode]) {
-          primaryTranslations[t.languageCode] = t.text;
-        }
-      }
-
-      return {
-        id: entry.id,
-        tujiaWord: entry.tujiaWord,
-        toneMarks: entry.toneMarks,
-        partOfSpeech: entry.partOfSpeech,
-        category: entry.category,
-        primaryTranslations,
-      };
-    })
+    recentRaw.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id)))
   );
 
   res.json(
@@ -77,18 +90,19 @@ router.get("/entries/stats", async (req, res): Promise<void> => {
       totalLanguages: totalLanguages.count,
       totalTranslations: totalTranslations.count,
       totalCategories: categoriesResult.length,
+      northernCount: northernRow?.count ?? 0,
+      southernCount: southernRow?.count ?? 0,
       languages,
       recentEntries,
     })
   );
 });
 
+// ─── categories ─────────────────────────────────────────────────────────────
+
 router.get("/entries/categories", async (req, res): Promise<void> => {
   const rows = await db
-    .select({
-      category: entriesTable.category,
-      count: sql<number>`count(*)::int`,
-    })
+    .select({ category: entriesTable.category, count: sql<number>`count(*)::int` })
     .from(entriesTable)
     .where(sql`${entriesTable.category} is not null`)
     .groupBy(entriesTable.category)
@@ -96,12 +110,12 @@ router.get("/entries/categories", async (req, res): Promise<void> => {
 
   res.json(
     ListCategoriesResponse.parse(
-      rows
-        .filter((r) => r.category != null)
-        .map((r) => ({ category: r.category!, count: r.count }))
+      rows.filter((r) => r.category != null).map((r) => ({ category: r.category!, count: r.count }))
     )
   );
 });
+
+// ─── list / search ───────────────────────────────────────────────────────────
 
 router.get("/entries", async (req, res): Promise<void> => {
   const parsed = ListEntriesQueryParams.safeParse(req.query);
@@ -110,53 +124,51 @@ router.get("/entries", async (req, res): Promise<void> => {
     return;
   }
 
-  const { q, language, category, page, limit } = parsed.data;
+  const { q, language, category, variety, dialect, page, limit } = parsed.data;
   const offset = ((page ?? 1) - 1) * (limit ?? 20);
   const pageSize = limit ?? 20;
 
+  // Full-text / substring search across Tujia forms + translations
   let matchingEntryIds: number[] | null = null;
 
   if (q) {
-    const searchTerm = `%${q}%`;
+    const term = `%${q}%`;
 
+    const tujiaMatches = await db
+      .select({ id: entriesTable.id })
+      .from(entriesTable)
+      .where(
+        or(
+          ilike(entriesTable.tujiaWord, term),
+          ilike(entriesTable.tujiaSpelling, term),
+          ilike(entriesTable.tujiaToned, term),
+          ilike(entriesTable.swMandarin, term),
+          ilike(entriesTable.ipa, term)
+        )
+      );
+
+    let translationMatches: { entryId: number }[] = [];
     if (language) {
-      const rows = await db
+      translationMatches = await db
         .select({ entryId: translationsTable.entryId })
         .from(translationsTable)
-        .where(
-          and(
-            eq(translationsTable.languageCode, language),
-            ilike(translationsTable.text, searchTerm)
-          )
-        );
-      matchingEntryIds = rows.map((r) => r.entryId);
+        .where(and(eq(translationsTable.languageCode, language), ilike(translationsTable.text, term)));
     } else {
-      const tujiaMatches = await db
-        .select({ id: entriesTable.id })
-        .from(entriesTable)
-        .where(ilike(entriesTable.tujiaWord, searchTerm));
-
-      const translationMatches = await db
+      translationMatches = await db
         .select({ entryId: translationsTable.entryId })
         .from(translationsTable)
-        .where(ilike(translationsTable.text, searchTerm));
-
-      const ids = new Set([
-        ...tujiaMatches.map((r) => r.id),
-        ...translationMatches.map((r) => r.entryId),
-      ]);
-      matchingEntryIds = Array.from(ids);
+        .where(ilike(translationsTable.text, term));
     }
+
+    const ids = new Set([
+      ...tujiaMatches.map((r) => r.id),
+      ...translationMatches.map((r) => r.entryId),
+    ]);
+    matchingEntryIds = Array.from(ids);
 
     if (matchingEntryIds.length === 0) {
       res.json(
-        ListEntriesResponse.parse({
-          entries: [],
-          total: 0,
-          page: page ?? 1,
-          limit: pageSize,
-          totalPages: 0,
-        })
+        ListEntriesResponse.parse({ entries: [], total: 0, page: page ?? 1, limit: pageSize, totalPages: 0 })
       );
       return;
     }
@@ -164,11 +176,11 @@ router.get("/entries", async (req, res): Promise<void> => {
 
   const conditions = [];
   if (matchingEntryIds !== null) {
-    conditions.push(sql`${entriesTable.id} = ANY(${sql.raw(`ARRAY[${matchingEntryIds.join(",")}]::int[]`)})`)
+    conditions.push(sql`${entriesTable.id} = ANY(${sql.raw(`ARRAY[${matchingEntryIds.join(",")}]::int[]`)})`);
   }
-  if (category) {
-    conditions.push(eq(entriesTable.category, category));
-  }
+  if (category) conditions.push(eq(entriesTable.category, category));
+  if (variety)  conditions.push(eq(entriesTable.variety, variety));
+  if (dialect)  conditions.push(eq(entriesTable.dialect, dialect));
 
   const whereClause = conditions.length > 0 ? and(...conditions) : undefined;
 
@@ -186,43 +198,15 @@ router.get("/entries", async (req, res): Promise<void> => {
     .offset(offset);
 
   const entries = await Promise.all(
-    rawEntries.map(async (entry) => {
-      const translations = await db
-        .select({
-          languageCode: translationsTable.languageCode,
-          text: translationsTable.text,
-        })
-        .from(translationsTable)
-        .where(eq(translationsTable.entryId, entry.id));
-
-      const primaryTranslations: Record<string, string> = {};
-      for (const t of translations) {
-        if (!primaryTranslations[t.languageCode]) {
-          primaryTranslations[t.languageCode] = t.text;
-        }
-      }
-
-      return {
-        id: entry.id,
-        tujiaWord: entry.tujiaWord,
-        toneMarks: entry.toneMarks,
-        partOfSpeech: entry.partOfSpeech,
-        category: entry.category,
-        primaryTranslations,
-      };
-    })
+    rawEntries.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id)))
   );
 
   res.json(
-    ListEntriesResponse.parse({
-      entries,
-      total,
-      page: page ?? 1,
-      limit: pageSize,
-      totalPages: Math.ceil(total / pageSize),
-    })
+    ListEntriesResponse.parse({ entries, total, page: page ?? 1, limit: pageSize, totalPages: Math.ceil(total / pageSize) })
   );
 });
+
+// ─── entry detail ────────────────────────────────────────────────────────────
 
 router.get("/entries/:id", async (req, res): Promise<void> => {
   const raw = Array.isArray(req.params.id) ? req.params.id[0] : req.params.id;
@@ -232,11 +216,7 @@ router.get("/entries/:id", async (req, res): Promise<void> => {
     return;
   }
 
-  const [entry] = await db
-    .select()
-    .from(entriesTable)
-    .where(eq(entriesTable.id, params.data.id));
-
+  const [entry] = await db.select().from(entriesTable).where(eq(entriesTable.id, params.data.id));
   if (!entry) {
     res.status(404).json({ error: "Not found", message: "Entry not found" });
     return;
@@ -260,12 +240,23 @@ router.get("/entries/:id", async (req, res): Promise<void> => {
 
   res.json(
     GetEntryResponse.parse({
-      ...entry,
+      id: entry.id,
+      tujiaWord: entry.tujiaWord,
+      variety: entry.variety,
+      dialect: entry.dialect,
+      forms: toForms(entry),
+      partOfSpeech: entry.partOfSpeech,
+      category: entry.category,
+      exampleSentence: entry.exampleSentence,
+      exampleTranslation: entry.exampleTranslation,
+      culturalNote: entry.culturalNote,
       createdAt: entry.createdAt.toISOString(),
       translations: rawTranslations,
     })
   );
 });
+
+// ─── related entries ─────────────────────────────────────────────────────────
 
 router.get("/entries/:id/related", async (req, res): Promise<void> => {
   const raw = Array.isArray(req.params.id) ? req.params.id[0] : req.params.id;
@@ -288,37 +279,11 @@ router.get("/entries/:id/related", async (req, res): Promise<void> => {
   const rawRelated = await db
     .select()
     .from(entriesTable)
-    .where(
-      and(
-        eq(entriesTable.category, entry.category),
-        sql`${entriesTable.id} != ${params.data.id}`
-      )
-    )
+    .where(and(eq(entriesTable.category, entry.category), sql`${entriesTable.id} != ${params.data.id}`))
     .limit(6);
 
   const related = await Promise.all(
-    rawRelated.map(async (e) => {
-      const translations = await db
-        .select({ languageCode: translationsTable.languageCode, text: translationsTable.text })
-        .from(translationsTable)
-        .where(eq(translationsTable.entryId, e.id));
-
-      const primaryTranslations: Record<string, string> = {};
-      for (const t of translations) {
-        if (!primaryTranslations[t.languageCode]) {
-          primaryTranslations[t.languageCode] = t.text;
-        }
-      }
-
-      return {
-        id: e.id,
-        tujiaWord: e.tujiaWord,
-        toneMarks: e.toneMarks,
-        partOfSpeech: e.partOfSpeech,
-        category: e.category,
-        primaryTranslations,
-      };
-    })
+    rawRelated.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id)))
   );
 
   res.json(GetRelatedEntriesResponse.parse(related));

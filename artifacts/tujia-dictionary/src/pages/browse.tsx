@@ -5,17 +5,19 @@ import { Layout } from "@/components/layout";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent } from "@/components/ui/card";
 import { FolderTree, ChevronRight } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
 
 export default function Browse() {
   const { data: categories, isLoading } = useListCategories();
+  const { t } = useI18n();
 
   return (
     <Layout>
       <div className="bg-muted/30 border-b border-border/40 py-12">
         <div className="container mx-auto px-4 max-w-5xl text-center">
-          <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-4">Browse Vocabulary</h1>
+          <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-4">{t.browseTitle}</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Explore the Tujia language thematically. Words are grouped by their domain and cultural context.
+            {t.browseSubtitle}
           </p>
         </div>
       </div>
@@ -46,7 +48,7 @@ export default function Browse() {
                           {cat.category}
                         </h3>
                         <p className="text-sm text-muted-foreground mt-1">
-                          {cat.count} {cat.count === 1 ? 'entry' : 'entries'}
+                          {cat.count} {t.entries}
                         </p>
                       </div>
                     </div>

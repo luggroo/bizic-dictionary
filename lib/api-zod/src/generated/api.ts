@@ -3,7 +3,7 @@
  * Do not edit manually.
  * Api
  * Tujia Dictionary API
- * OpenAPI spec version: 0.1.0
+ * OpenAPI spec version: 0.2.0
  */
 import * as zod from "zod";
 
@@ -15,20 +15,28 @@ export const HealthCheckResponse = zod.object({
 });
 
 /**
- * @summary List all supported languages
+ * @summary List all supported translation languages
  */
 export const ListLanguagesResponseItem = zod.object({
   id: zod.number(),
-  code: zod.string().describe("Language code (e.g. tujia, zh, en, ja)"),
-  name: zod.string().describe("Display name in English"),
-  nativeName: zod.string().describe("Display name in the language itself"),
-  flag: zod.string().describe("Emoji flag or identifier"),
-  isBase: zod
-    .boolean()
-    .describe("Whether this is the source\/base language (Tujia)"),
+  code: zod.string(),
+  name: zod.string(),
+  nativeName: zod.string(),
+  flag: zod.string(),
+  isBase: zod.boolean(),
   sortOrder: zod.number(),
 });
 export const ListLanguagesResponse = zod.array(ListLanguagesResponseItem);
+
+/**
+ * @summary List all Tujia varieties and dialects
+ */
+export const ListDialectsResponseItem = zod.object({
+  variety: zod.string().describe("northern or southern"),
+  dialect: zod.string().describe("Dialect name (e.g. Longshan, Laifeng)"),
+  count: zod.number().describe("Number of entries in this dialect"),
+});
+export const ListDialectsResponse = zod.array(ListDialectsResponseItem);
 
 /**
  * @summary List and search dictionary entries
@@ -40,12 +48,23 @@ export const ListEntriesQueryParams = zod.object({
   q: zod.coerce
     .string()
     .optional()
-    .describe("Search query across all languages"),
+    .describe("Search query across Tujia forms and all translation languages"),
   language: zod.coerce
     .string()
     .optional()
-    .describe("Language code to search in (e.g. tujia, zh, en, ja)"),
-  category: zod.coerce.string().optional().describe("Filter by category"),
+    .describe("Language code to restrict search to (e.g. zh, en, ja)"),
+  category: zod.coerce
+    .string()
+    .optional()
+    .describe("Filter by semantic category"),
+  variety: zod.coerce
+    .string()
+    .optional()
+    .describe("Filter by Tujia variety — 'northern' or 'southern'"),
+  dialect: zod.coerce
+    .string()
+    .optional()
+    .describe("Filter by dialect name (e.g. Longshan, Laifeng)"),
   page: zod.coerce.number().default(listEntriesQueryPageDefault),
   limit: zod.coerce.number().default(listEntriesQueryLimitDefault),
 });
@@ -54,16 +73,38 @@ export const ListEntriesResponse = zod.object({
   entries: zod.array(
     zod.object({
       id: zod.number(),
-      tujiaWord: zod.string().describe("The Tujia word (base language)"),
-      toneMarks: zod.string().nullish().describe("Tonal marking notation"),
-      partOfSpeech: zod
-        .string()
-        .nullish()
-        .describe("noun, verb, adjective, etc."),
+      tujiaWord: zod.string(),
+      variety: zod.string().describe("northern or southern"),
+      dialect: zod.string().nullish(),
+      forms: zod
+        .object({
+          spelling: zod
+            .string()
+            .nullish()
+            .describe("Bifzivkar romanization without tones (e.g. bifzivkar)"),
+          toned: zod
+            .string()
+            .nullish()
+            .describe(
+              "Bifzivkar with pinyin-style tone diacritics (e.g. bízìkǎ)",
+            ),
+          ipa: zod
+            .string()
+            .nullish()
+            .describe("International Phonetic Alphabet (e.g. pi²zi³ka³)"),
+          swMandarin: zod
+            .string()
+            .nullish()
+            .describe(
+              "Southwest Mandarin sound-alikes in Chinese characters (e.g. 币子卡)",
+            ),
+        })
+        .describe(
+          "The four orthographic\/phonetic representations of a Tujia word",
+        ),
+      partOfSpeech: zod.string().nullish(),
       category: zod.string().nullish(),
-      primaryTranslations: zod
-        .record(zod.string(), zod.string())
-        .describe("Key translations (zh, en, ja) for quick display"),
+      primaryTranslations: zod.record(zod.string(), zod.string()),
     }),
   ),
   total: zod.number(),
@@ -80,32 +121,54 @@ export const GetDictionaryStatsResponse = zod.object({
   totalLanguages: zod.number(),
   totalTranslations: zod.number(),
   totalCategories: zod.number(),
+  northernCount: zod.number(),
+  southernCount: zod.number(),
   languages: zod.array(
     zod.object({
       id: zod.number(),
-      code: zod.string().describe("Language code (e.g. tujia, zh, en, ja)"),
-      name: zod.string().describe("Display name in English"),
-      nativeName: zod.string().describe("Display name in the language itself"),
-      flag: zod.string().describe("Emoji flag or identifier"),
-      isBase: zod
-        .boolean()
-        .describe("Whether this is the source\/base language (Tujia)"),
+      code: zod.string(),
+      name: zod.string(),
+      nativeName: zod.string(),
+      flag: zod.string(),
+      isBase: zod.boolean(),
       sortOrder: zod.number(),
     }),
   ),
   recentEntries: zod.array(
     zod.object({
       id: zod.number(),
-      tujiaWord: zod.string().describe("The Tujia word (base language)"),
-      toneMarks: zod.string().nullish().describe("Tonal marking notation"),
-      partOfSpeech: zod
-        .string()
-        .nullish()
-        .describe("noun, verb, adjective, etc."),
+      tujiaWord: zod.string(),
+      variety: zod.string().describe("northern or southern"),
+      dialect: zod.string().nullish(),
+      forms: zod
+        .object({
+          spelling: zod
+            .string()
+            .nullish()
+            .describe("Bifzivkar romanization without tones (e.g. bifzivkar)"),
+          toned: zod
+            .string()
+            .nullish()
+            .describe(
+              "Bifzivkar with pinyin-style tone diacritics (e.g. bízìkǎ)",
+            ),
+          ipa: zod
+            .string()
+            .nullish()
+            .describe("International Phonetic Alphabet (e.g. pi²zi³ka³)"),
+          swMandarin: zod
+            .string()
+            .nullish()
+            .describe(
+              "Southwest Mandarin sound-alikes in Chinese characters (e.g. 币子卡)",
+            ),
+        })
+        .describe(
+          "The four orthographic\/phonetic representations of a Tujia word",
+        ),
+      partOfSpeech: zod.string().nullish(),
       category: zod.string().nullish(),
-      primaryTranslations: zod
-        .record(zod.string(), zod.string())
-        .describe("Key translations (zh, en, ja) for quick display"),
+      primaryTranslations: zod.record(zod.string(), zod.string()),
     }),
   ),
 });
@@ -129,18 +192,37 @@ export const GetEntryParams = zod.object({
 export const GetEntryResponse = zod.object({
   id: zod.number(),
   tujiaWord: zod.string(),
-  toneMarks: zod.string().nullish(),
+  variety: zod.string(),
+  dialect: zod.string().nullish(),
+  forms: zod
+    .object({
+      spelling: zod
+        .string()
+        .nullish()
+        .describe("Bifzivkar romanization without tones (e.g. bifzivkar)"),
+      toned: zod
+        .string()
+        .nullish()
+        .describe("Bifzivkar with pinyin-style tone diacritics (e.g. bízìkǎ)"),
+      ipa: zod
+        .string()
+        .nullish()
+        .describe("International Phonetic Alphabet (e.g. pi²zi³ka³)"),
+      swMandarin: zod
+        .string()
+        .nullish()
+        .describe(
+          "Southwest Mandarin sound-alikes in Chinese characters (e.g. 币子卡)",
+        ),
+    })
+    .describe(
+      "The four orthographic\/phonetic representations of a Tujia word",
+    ),
   partOfSpeech: zod.string().nullish(),
   category: zod.string().nullish(),
-  exampleSentence: zod.string().nullish().describe("Example sentence in Tujia"),
-  exampleTranslation: zod
-    .string()
-    .nullish()
-    .describe("Example sentence translated to Chinese"),
-  culturalNote: zod
-    .string()
-    .nullish()
-    .describe("Cultural or linguistic note about this word"),
+  exampleSentence: zod.string().nullish(),
+  exampleTranslation: zod.string().nullish(),
+  culturalNote: zod.string().nullish(),
   translations: zod.array(
     zod.object({
       id: zod.number(),
@@ -148,15 +230,9 @@ export const GetEntryResponse = zod.object({
       languageName: zod.string(),
       languageNativeName: zod.string(),
       flag: zod.string(),
-      text: zod.string().describe("The translated word or phrase"),
-      romanization: zod
-        .string()
-        .nullish()
-        .describe("Romanized pronunciation if applicable"),
-      notes: zod
-        .string()
-        .nullish()
-        .describe("Usage notes for this translation"),
+      text: zod.string(),
+      romanization: zod.string().nullish(),
+      notes: zod.string().nullish(),
     }),
   ),
   createdAt: zod.string(),
@@ -171,13 +247,36 @@ export const GetRelatedEntriesParams = zod.object({
 
 export const GetRelatedEntriesResponseItem = zod.object({
   id: zod.number(),
-  tujiaWord: zod.string().describe("The Tujia word (base language)"),
-  toneMarks: zod.string().nullish().describe("Tonal marking notation"),
-  partOfSpeech: zod.string().nullish().describe("noun, verb, adjective, etc."),
+  tujiaWord: zod.string(),
+  variety: zod.string().describe("northern or southern"),
+  dialect: zod.string().nullish(),
+  forms: zod
+    .object({
+      spelling: zod
+        .string()
+        .nullish()
+        .describe("Bifzivkar romanization without tones (e.g. bifzivkar)"),
+      toned: zod
+        .string()
+        .nullish()
+        .describe("Bifzivkar with pinyin-style tone diacritics (e.g. bízìkǎ)"),
+      ipa: zod
+        .string()
+        .nullish()
+        .describe("International Phonetic Alphabet (e.g. pi²zi³ka³)"),
+      swMandarin: zod
+        .string()
+        .nullish()
+        .describe(
+          "Southwest Mandarin sound-alikes in Chinese characters (e.g. 币子卡)",
+        ),
+    })
+    .describe(
+      "The four orthographic\/phonetic representations of a Tujia word",
+    ),
+  partOfSpeech: zod.string().nullish(),
   category: zod.string().nullish(),
-  primaryTranslations: zod
-    .record(zod.string(), zod.string())
-    .describe("Key translations (zh, en, ja) for quick display"),
+  primaryTranslations: zod.record(zod.string(), zod.string()),
 });
 export const GetRelatedEntriesResponse = zod.array(
   GetRelatedEntriesResponseItem,

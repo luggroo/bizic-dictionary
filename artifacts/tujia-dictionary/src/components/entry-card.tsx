@@ -3,8 +3,11 @@ import { Link } from "wouter";
 import { type EntrySummary } from "@workspace/api-client-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { varietyBgClass, varietyDotClass } from "@/lib/variety-colors";
+import { useI18n } from "@/lib/i18n-context";
 
 export function EntryCard({ entry }: { entry: EntrySummary }) {
+  const { t } = useI18n();
   const translations = Object.entries(entry.primaryTranslations);
 
   return (
@@ -20,8 +23,20 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
               {entry.toneMarks && (
                 <p className="text-sm text-muted-foreground mt-1">{entry.toneMarks}</p>
               )}
+              {entry.forms?.toned && (
+                <p className="text-sm text-muted-foreground mt-1 opacity-70">
+                  {entry.forms.toned}
+                </p>
+              )}
             </div>
             <div className="flex flex-col gap-2 items-end">
+              {entry.variety && (
+                <Badge variant="outline" className={`text-xs font-normal flex items-center gap-1.5 ${varietyBgClass(entry.variety)}`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${varietyDotClass(entry.variety)}`} />
+                  {entry.variety === "southern" ? t.southern : t.northern}
+                  {entry.dialect ? ` · ${entry.dialect}` : ""}
+                </Badge>
+              )}
               {entry.partOfSpeech && (
                 <Badge variant="outline" className="bg-muted/50 text-xs font-normal capitalize">
                   {entry.partOfSpeech}

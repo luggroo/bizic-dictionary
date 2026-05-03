@@ -3,10 +3,11 @@
  * Do not edit manually.
  * Api
  * Tujia Dictionary API
- * OpenAPI spec version: 0.1.0
+ * OpenAPI spec version: 0.2.0
  */
 
 export * from "./categoryCount";
+export * from "./dialectInfo";
 export * from "./dictionaryStats";
 export * from "./entryDetail";
 export * from "./entryListResponse";
@@ -17,3 +18,4 @@ export * from "./healthStatus";
 export * from "./language";
 export * from "./listEntriesParams";
 export * from "./translation";
+export * from "./tujiaForms";

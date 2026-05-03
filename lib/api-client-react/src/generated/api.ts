@@ -3,7 +3,7 @@
  * Do not edit manually.
  * Api
  * Tujia Dictionary API
- * OpenAPI spec version: 0.1.0
+ * OpenAPI spec version: 0.2.0
  */
 import { useQuery } from "@tanstack/react-query";
 import type {
@@ -15,6 +15,7 @@ import type {
 
 import type {
   CategoryCount,
+  DialectInfo,
   DictionaryStats,
   EntryDetail,
   EntryListResponse,
@@ -110,7 +111,7 @@ export function useHealthCheck<
 }
 
 /**
- * @summary List all supported languages
+ * @summary List all supported translation languages
  */
 export const getListLanguagesUrl = () => {
   return `/api/languages`;
@@ -161,7 +162,7 @@ export type ListLanguagesQueryResult = NonNullable<
 export type ListLanguagesQueryError = ErrorType<unknown>;
 
 /**
- * @summary List all supported languages
+ * @summary List all supported translation languages
  */
 
 export function useListLanguages<
@@ -176,6 +177,81 @@ export function useListLanguages<
   request?: SecondParameter<typeof customFetch>;
 }): UseQueryResult<TData, TError> & { queryKey: QueryKey } {
   const queryOptions = getListLanguagesQueryOptions(options);
+
+  const query = useQuery(queryOptions) as UseQueryResult<TData, TError> & {
+    queryKey: QueryKey;
+  };
+
+  return { ...query, queryKey: queryOptions.queryKey };
+}
+
+/**
+ * @summary List all Tujia varieties and dialects
+ */
+export const getListDialectsUrl = () => {
+  return `/api/dialects`;
+};
+
+export const listDialects = async (
+  options?: RequestInit,
+): Promise<DialectInfo[]> => {
+  return customFetch<DialectInfo[]>(getListDialectsUrl(), {
+    ...options,
+    method: "GET",
+  });
+};
+
+export const getListDialectsQueryKey = () => {
+  return [`/api/dialects`] as const;
+};
+
+export const getListDialectsQueryOptions = <
+  TData = Awaited<ReturnType<typeof listDialects>>,
+  TError = ErrorType<unknown>,
+>(options?: {
+  query?: UseQueryOptions<
+    Awaited<ReturnType<typeof listDialects>>,
+    TError,
+    TData
+  >;
+  request?: SecondParameter<typeof customFetch>;
+}) => {
+  const { query: queryOptions, request: requestOptions } = options ?? {};
+
+  const queryKey = queryOptions?.queryKey ?? getListDialectsQueryKey();
+
+  const queryFn: QueryFunction<Awaited<ReturnType<typeof listDialects>>> = ({
+    signal,
+  }) => listDialects({ signal, ...requestOptions });
+
+  return { queryKey, queryFn, ...queryOptions } as UseQueryOptions<
+    Awaited<ReturnType<typeof listDialects>>,
+    TError,
+    TData
+  > & { queryKey: QueryKey };
+};
+
+export type ListDialectsQueryResult = NonNullable<
+  Awaited<ReturnType<typeof listDialects>>
+>;
+export type ListDialectsQueryError = ErrorType<unknown>;
+
+/**
+ * @summary List all Tujia varieties and dialects
+ */
+
+export function useListDialects<
+  TData = Awaited<ReturnType<typeof listDialects>>,
+  TError = ErrorType<unknown>,
+>(options?: {
+  query?: UseQueryOptions<
+    Awaited<ReturnType<typeof listDialects>>,
+    TError,
+    TData
+  >;
+  request?: SecondParameter<typeof customFetch>;
+}): UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+  const queryOptions = getListDialectsQueryOptions(options);
 
   const query = useQuery(queryOptions) as UseQueryResult<TData, TError> & {
     queryKey: QueryKey;

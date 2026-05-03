@@ -1,16 +1,18 @@
 import React from "react";
 import { Layout } from "@/components/layout";
 import { BookOpen, Globe2, Languages, Shield } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
 
 export default function About() {
+  const { t } = useI18n();
   return (
     <Layout>
       <div className="container mx-auto px-4 py-16 max-w-4xl flex-1 animate-in fade-in slide-in-from-bottom-8 duration-700">
         
         <header className="mb-16 text-center">
-          <h1 className="text-5xl md:text-6xl font-serif text-foreground mb-6">About the Project</h1>
+          <h1 className="text-5xl md:text-6xl font-serif text-foreground mb-6">{t.aboutTitle}</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            A digital sanctuary dedicated to the preservation and documentation of the Tujia language.
+            {t.footerDesc}
           </p>
         </header>
 

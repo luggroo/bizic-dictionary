@@ -7,9 +7,11 @@ import { EntryCard } from "@/components/entry-card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent } from "@/components/ui/card";
 import { BookA, Globe, Languages, Library } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
 
 export default function Home() {
   const { data: stats, isLoading } = useGetDictionaryStats();
+  const { t } = useI18n();
 
   return (
     <Layout>
@@ -18,10 +20,10 @@ export default function Home() {
         <section className="pt-24 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
             <h1 className="text-5xl md:text-7xl font-serif text-foreground tracking-tight">
-              Words are <span className="text-primary italic">memory.</span>
+              {t.tagline} <span className="text-primary italic">{t.taglineHighlight}</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Explore the vocabulary of the Tujia people. A scholarly archive spanning Chinese, English, and Japanese translations.
+              {t.heroSubtitle}
             </p>
             <div className="max-w-2xl mx-auto mt-12">
               <SearchBar size="lg" />
@@ -40,10 +42,10 @@ export default function Home() {
               </div>
             ) : (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <StatCard icon={<BookA />} label="Total Entries" value={stats.totalEntries.toLocaleString()} />
-                <StatCard icon={<Languages />} label="Translations" value={stats.totalTranslations.toLocaleString()} />
-                <StatCard icon={<Globe />} label="Languages" value={stats.totalLanguages.toLocaleString()} />
-                <StatCard icon={<Library />} label="Categories" value={stats.totalCategories.toLocaleString()} />
+                <StatCard icon={<BookA />} label={t.totalEntries} value={stats.totalEntries.toLocaleString()} />
+                <StatCard icon={<Languages />} label={t.translations} value={stats.totalTranslations.toLocaleString()} />
+                <StatCard icon={<Globe />} label={t.languages} value={stats.totalLanguages.toLocaleString()} />
+                <StatCard icon={<Library />} label={t.categories} value={stats.totalCategories.toLocaleString()} />
               </div>
             )}
           </div>
@@ -53,8 +55,8 @@ export default function Home() {
         <section className="py-20 px-4">
           <div className="container mx-auto max-w-5xl">
             <div className="flex items-center justify-between mb-10">
-              <h2 className="text-3xl font-serif text-foreground">Recently Preserved</h2>
-              <Link href="/search" className="text-primary hover:underline text-sm font-medium">View all entries →</Link>
+              <h2 className="text-3xl font-serif text-foreground">{t.recentlyPreserved}</h2>
+              <Link href="/search" className="text-primary hover:underline text-sm font-medium">{t.viewAllEntries}</Link>
             </div>
             
             {isLoading || !stats ? (

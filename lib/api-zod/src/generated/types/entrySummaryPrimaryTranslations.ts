@@ -3,10 +3,7 @@
  * Do not edit manually.
  * Api
  * Tujia Dictionary API
- * OpenAPI spec version: 0.1.0
+ * OpenAPI spec version: 0.2.0
  */
 
-/**
- * Key translations (zh, en, ja) for quick display
- */
 export type EntrySummaryPrimaryTranslations = { [key: string]: string };

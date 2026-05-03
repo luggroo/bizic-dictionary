@@ -3,7 +3,7 @@
  * Do not edit manually.
  * Api
  * Tujia Dictionary API
- * OpenAPI spec version: 0.1.0
+ * OpenAPI spec version: 0.2.0
  */
 import type { EntrySummary } from "./entrySummary";
 import type { Language } from "./language";
@@ -13,6 +13,8 @@ export interface DictionaryStats {
   totalLanguages: number;
   totalTranslations: number;
   totalCategories: number;
+  northernCount: number;
+  southernCount: number;
   languages: Language[];
   recentEntries: EntrySummary[];
 }

@@ -3,21 +3,21 @@
  * Do not edit manually.
  * Api
  * Tujia Dictionary API
- * OpenAPI spec version: 0.1.0
+ * OpenAPI spec version: 0.2.0
  */
 import type { Translation } from "./translation";
+import type { TujiaForms } from "./tujiaForms";
 
 export interface EntryDetail {
   id: number;
   tujiaWord: string;
-  toneMarks?: string | null;
+  variety: string;
+  dialect?: string | null;
+  forms: TujiaForms;
   partOfSpeech?: string | null;
   category?: string | null;
-  /** Example sentence in Tujia */
   exampleSentence?: string | null;
-  /** Example sentence translated to Chinese */
   exampleTranslation?: string | null;
-  /** Cultural or linguistic note about this word */
   culturalNote?: string | null;
   translations: Translation[];
   createdAt: string;

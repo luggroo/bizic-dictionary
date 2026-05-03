@@ -2,20 +2,15 @@ openapi: 3.1.0
 info:
   # Do not change the title, if the title changes, the import paths will be broken
   title: Api
-  version: 0.1.0
+  version: 0.2.0
   description: Tujia Dictionary API
 servers:
   - url: /api
     description: Base API path
 tags:
   - name: health
-    description: Health operations
   - name: languages
-    description: Language management
   - name: entries
-    description: Dictionary entries
-  - name: translations
-    description: Translations for entries
 
 paths:
   /healthz:
@@ -35,7 +30,7 @@ paths:
     get:
       operationId: listLanguages
       tags: [languages]
-      summary: List all supported languages
+      summary: List all supported translation languages
       responses:
         "200":
           description: List of languages
@@ -45,6 +40,21 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Language"
+
+  /dialects:
+    get:
+      operationId: listDialects
+      tags: [entries]
+      summary: List all Tujia varieties and dialects
+      responses:
+        "200":
+          description: Varieties and dialects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/DialectInfo"
 
   /entries:
     get:
@@ -56,17 +66,27 @@ paths:
           in: query
           schema:
             type: string
-          description: Search query across all languages
+          description: Search query across Tujia forms and all translation languages
         - name: language
           in: query
           schema:
             type: string
-          description: Language code to search in (e.g. tujia, zh, en, ja)
+          description: Language code to restrict search to (e.g. zh, en, ja)
         - name: category
           in: query
           schema:
             type: string
-          description: Filter by category
+          description: Filter by semantic category
+        - name: variety
+          in: query
+          schema:
+            type: string
+          description: Filter by Tujia variety — 'northern' or 'southern'
+        - name: dialect
+          in: query
+          schema:
+            type: string
+          description: Filter by dialect name (e.g. Longshan, Laifeng)
         - name: page
           in: query
           schema:
@@ -175,22 +195,53 @@ components:
           type: integer
         code:
           type: string
-          description: Language code (e.g. tujia, zh, en, ja)
         name:
           type: string
-          description: Display name in English
         nativeName:
           type: string
-          description: Display name in the language itself
         flag:
           type: string
-          description: Emoji flag or identifier
         isBase:
           type: boolean
-          description: Whether this is the source/base language (Tujia)
         sortOrder:
           type: integer
       required: [id, code, name, nativeName, flag, isBase, sortOrder]
+
+    DialectInfo:
+      type: object
+      properties:
+        variety:
+          type: string
+          description: "northern or southern"
+        dialect:
+          type: string
+          description: Dialect name (e.g. Longshan, Laifeng)
+        count:
+          type: integer
+          description: Number of entries in this dialect
+      required: [variety, dialect, count]
+
+    TujiaForms:
+      type: object
+      description: The four orthographic/phonetic representations of a Tujia word
+      properties:
+        spelling:
+          type: string
+          nullable: true
+          description: "Bifzivkar romanization without tones (e.g. bifzivkar)"
+        toned:
+          type: string
+          nullable: true
+          description: "Bifzivkar with pinyin-style tone diacritics (e.g. bízìkǎ)"
+        ipa:
+          type: string
+          nullable: true
+          description: "International Phonetic Alphabet (e.g. pi²zi³ka³)"
+        swMandarin:
+          type: string
+          nullable: true
+          description: "Southwest Mandarin sound-alikes in Chinese characters (e.g. 币子卡)"
+      required: []
 
     Translation:
       type: object
@@ -207,15 +258,12 @@ components:
           type: string
         text:
           type: string
-          description: The translated word or phrase
         romanization:
           type: string
           nullable: true
-          description: Romanized pronunciation if applicable
         notes:
           type: string
           nullable: true
-          description: Usage notes for this translation
       required: [id, languageCode, languageName, languageNativeName, flag, text]
 
     EntrySummary:
@@ -225,24 +273,25 @@ components:
           type: integer
         tujiaWord:
           type: string
-          description: The Tujia word (base language)
-        toneMarks:
+        variety:
+          type: string
+          description: "northern or southern"
+        dialect:
           type: string
           nullable: true
-          description: Tonal marking notation
+        forms:
+          $ref: "#/components/schemas/TujiaForms"
         partOfSpeech:
           type: string
           nullable: true
-          description: noun, verb, adjective, etc.
         category:
           type: string
           nullable: true
         primaryTranslations:
           type: object
-          description: Key translations (zh, en, ja) for quick display
           additionalProperties:
             type: string
-      required: [id, tujiaWord, primaryTranslations]
+      required: [id, tujiaWord, variety, forms, primaryTranslations]
 
     EntryDetail:
       type: object
@@ -251,9 +300,13 @@ components:
           type: integer
         tujiaWord:
           type: string
-        toneMarks:
+        variety:
+          type: string
+        dialect:
           type: string
           nullable: true
+        forms:
+          $ref: "#/components/schemas/TujiaForms"
         partOfSpeech:
           type: string
           nullable: true
@@ -263,22 +316,19 @@ components:
         exampleSentence:
           type: string
           nullable: true
-          description: Example sentence in Tujia
         exampleTranslation:
           type: string
           nullable: true
-          description: Example sentence translated to Chinese
         culturalNote:
           type: string
           nullable: true
-          description: Cultural or linguistic note about this word
         translations:
           type: array
           items:
             $ref: "#/components/schemas/Translation"
         createdAt:
           type: string
-      required: [id, tujiaWord, translations, createdAt]
+      required: [id, tujiaWord, variety, forms, translations, createdAt]
 
     EntryListResponse:
       type: object
@@ -308,6 +358,10 @@ components:
           type: integer
         totalCategories:
           type: integer
+        northernCount:
+          type: integer
+        southernCount:
+          type: integer
         languages:
           type: array
           items:
@@ -316,7 +370,7 @@ components:
           type: array
           items:
             $ref: "#/components/schemas/EntrySummary"
-      required: [totalEntries, totalLanguages, totalTranslations, totalCategories, languages, recentEntries]
+      required: [totalEntries, totalLanguages, totalTranslations, totalCategories, northernCount, southernCount, languages, recentEntries]
 
     CategoryCount:
       type: object

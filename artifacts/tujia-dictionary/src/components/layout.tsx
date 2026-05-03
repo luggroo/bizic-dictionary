@@ -2,16 +2,47 @@ import React, { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
+import { useI18n } from "@/lib/i18n-context";
+import type { UILang } from "@/lib/i18n";
 
-const navLinks = [
-  { href: "/search", label: "Search" },
-  { href: "/browse", label: "Browse" },
-  { href: "/about", label: "About" },
+const LANG_OPTIONS: { value: UILang; short: string; long: string }[] = [
+  { value: "en", short: "EN", long: "EN" },
+  { value: "zh", short: "中", long: "中文" },
+  { value: "tujia", short: "土", long: "土家" },
 ];
+
+function LangSwitcher({ compact = false }: { compact?: boolean }) {
+  const { lang, setLang } = useI18n();
+  return (
+    <div className="flex items-center rounded-lg border border-border/60 overflow-hidden text-xs font-medium">
+      {LANG_OPTIONS.map(({ value, short, long }) => (
+        <button
+          key={value}
+          onClick={() => setLang(value)}
+          className={`px-2 py-1 transition-colors ${
+            lang === value
+              ? "bg-primary text-primary-foreground"
+              : "text-muted-foreground hover:bg-muted/50 hover:text-foreground"
+          }`}
+          aria-label={long}
+        >
+          {compact ? short : long}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { t } = useI18n();
+
+  const navLinks = [
+    { href: "/search", label: t.search },
+    { href: "/browse", label: t.browse },
+    { href: "/about", label: t.about },
+  ];
 
   return (
     <div className="min-h-[100dvh] flex flex-col relative">
@@ -19,32 +50,37 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-            <span className="font-serif text-xl font-semibold text-primary">Tujia Dictionary</span>
+            <span className="font-serif text-xl font-semibold text-primary">{t.siteName}</span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden sm:flex items-center gap-6 text-sm font-medium">
-            {navLinks.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`transition-colors hover:text-primary ${location === href ? "text-primary" : "text-muted-foreground"}`}
-              >
-                {label}
-              </Link>
-            ))}
-          </nav>
+          <div className="hidden sm:flex items-center gap-6 text-sm font-medium">
+            <nav className="flex items-center gap-6">
+              {navLinks.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className={`transition-colors hover:text-primary ${location === href ? "text-primary" : "text-muted-foreground"}`}
+                >
+                  {label}
+                </Link>
+              ))}
+            </nav>
+            <LangSwitcher />
+          </div>
 
-          {/* Mobile hamburger */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="sm:hidden"
-            aria-label="Toggle menu"
-            onClick={() => setMobileOpen((o) => !o)}
-          >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </Button>
+          {/* Mobile controls */}
+          <div className="flex items-center gap-2 sm:hidden">
+            <LangSwitcher compact />
+            <Button
+              variant="ghost"
+              size="icon"
+              aria-label="Toggle menu"
+              onClick={() => setMobileOpen((o) => !o)}
+            >
+              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile menu drawer */}
@@ -70,9 +106,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       <footer className="border-t py-12 mt-20 bg-muted/30">
         <div className="container mx-auto px-4 text-center">
-          <p className="font-serif text-lg text-primary mb-4">Preserving the Tujia Language</p>
+          <p className="font-serif text-lg text-primary mb-4">{t.footerTagline}</p>
           <p className="text-sm text-muted-foreground max-w-md mx-auto">
-            A respectful, scholarly digital preservation project for the Tujia language — an endangered Sino-Tibetan language spoken by the Tujia people of central China.
+            {t.footerDesc}
           </p>
         </div>
       </footer>

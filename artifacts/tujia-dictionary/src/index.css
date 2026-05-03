@@ -81,6 +81,8 @@
     --destructive-foreground: 0 0% 100%;
     
     --radius: 0.5rem;
+
+    --color-southern: #0d9488;
   }
 
   .dark {

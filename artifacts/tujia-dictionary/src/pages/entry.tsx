@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ArrowLeft, BookOpen, Globe2, Quote } from "lucide-react";
+import { useI18n } from "@/lib/i18n-context";
+import { varietyBgClass, varietyColor } from "@/lib/variety-colors";
 
 interface Translation {
   id: number;
@@ -52,6 +54,7 @@ function groupByLanguage(translations: Translation[]): LanguageGroup[] {
 export default function EntryDetail() {
   const { id } = useParams();
   const entryId = parseInt(id || "0", 10);
+  const { t } = useI18n();
 
   const { data: entry, isLoading, error } = useGetEntry(entryId, {
     query: { enabled: !!entryId, queryKey: getGetEntryQueryKey(entryId) },
@@ -89,10 +92,10 @@ export default function EntryDetail() {
     return (
       <Layout>
         <div className="container mx-auto px-4 py-20 max-w-4xl text-center">
-          <h2 className="text-2xl font-serif text-destructive mb-4">Entry not found</h2>
-          <p className="text-muted-foreground mb-8">The word you are looking for does not exist or has been removed.</p>
+          <h2 className="text-2xl font-serif text-destructive mb-4">{t.entryNotFound}</h2>
+          <p className="text-muted-foreground mb-8">{t.entryNotFoundDesc}</p>
           <Link href="/search">
-            <Button>Return to Search</Button>
+            <Button>{t.returnToSearch}</Button>
           </Link>
         </div>
       </Layout>
@@ -100,6 +103,7 @@ export default function EntryDetail() {
   }
 
   const languageGroups = groupByLanguage(entry.translations);
+  const hasForms = entry.forms && (entry.forms.spelling || entry.forms.toned || entry.forms.ipa || entry.forms.swMandarin);
 
   return (
     <Layout>
@@ -108,7 +112,7 @@ export default function EntryDetail() {
           href="/search"
           className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-10 group"
         >
-          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" /> Back to dictionary
+          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" /> {t.backToDictionary}
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
@@ -119,6 +123,23 @@ export default function EntryDetail() {
               <h1 className="text-5xl sm:text-6xl md:text-8xl font-serif font-bold text-foreground mb-4 tracking-tight break-words">
                 {entry.tujiaWord}
               </h1>
+              
+              {entry.variety && (
+                <div className="mb-6 flex flex-wrap items-center gap-2">
+                  <Badge 
+                    className="text-sm px-3 py-1 bg-transparent border shadow-none"
+                    style={{ color: varietyColor(entry.variety), borderColor: varietyColor(entry.variety) }}
+                  >
+                    {entry.variety === "southern" ? t.southernTujia : t.northernTujia}
+                  </Badge>
+                  {entry.dialect && (
+                    <span className="text-muted-foreground text-sm font-medium">
+                      · {entry.dialect} {t.dialect.toLowerCase()}
+                    </span>
+                  )}
+                </div>
+              )}
+              
               {entry.toneMarks && (
                 <p className="text-xl sm:text-2xl text-muted-foreground font-serif italic mb-6">
                   {entry.toneMarks}
@@ -140,13 +161,51 @@ export default function EntryDetail() {
               </div>
             </div>
 
+            {/* Forms Panel */}
+            {hasForms && (
+              <div
+                className="space-y-4 animate-in fade-in slide-in-from-bottom-4"
+                style={{ animationDelay: "50ms", animationFillMode: "both" }}
+              >
+                <h2 className="text-xl font-serif text-foreground flex items-center border-b pb-2">
+                  {t.formsHeading}
+                </h2>
+                <div className="flex overflow-x-auto pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:grid sm:grid-cols-2 gap-4 snap-x">
+                  {entry.forms.spelling && (
+                    <div className="snap-start shrink-0 w-64 sm:w-auto bg-card rounded-xl p-4 border shadow-sm">
+                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">{t.formSpelling}</p>
+                      <p className="text-lg font-medium">{entry.forms.spelling}</p>
+                    </div>
+                  )}
+                  {entry.forms.toned && (
+                    <div className="snap-start shrink-0 w-64 sm:w-auto bg-card rounded-xl p-4 border shadow-sm">
+                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">{t.formToned}</p>
+                      <p className="text-lg font-medium">{entry.forms.toned}</p>
+                    </div>
+                  )}
+                  {entry.forms.ipa && (
+                    <div className="snap-start shrink-0 w-64 sm:w-auto bg-card rounded-xl p-4 border shadow-sm">
+                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">{t.formIpa}</p>
+                      <p className="text-lg font-mono text-foreground/90">{entry.forms.ipa}</p>
+                    </div>
+                  )}
+                  {entry.forms.swMandarin && (
+                    <div className="snap-start shrink-0 w-64 sm:w-auto bg-card rounded-xl p-4 border shadow-sm">
+                      <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-2">{t.formSwMandarin}</p>
+                      <p className="text-xl font-medium">{entry.forms.swMandarin}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
             {/* Translations — grouped by language */}
             <div
               className="space-y-5 animate-in fade-in slide-in-from-bottom-4"
               style={{ animationDelay: "100ms", animationFillMode: "both" }}
             >
               <h2 className="text-xl font-serif text-foreground flex items-center border-b pb-2">
-                <Globe2 className="w-5 h-5 mr-3 text-muted-foreground" /> Translations
+                <Globe2 className="w-5 h-5 mr-3 text-muted-foreground" /> {t.translationsHeading}
               </h2>
 
               <div className="grid gap-4">
@@ -164,7 +223,7 @@ export default function EntryDetail() {
                       </div>
                       {group.senses.length > 1 && (
                         <span className="ml-auto text-xs text-muted-foreground bg-muted px-2 py-0.5 rounded-full">
-                          {group.senses.length} senses
+                          {group.senses.length} {t.senses}
                         </span>
                       )}
                     </div>
@@ -226,7 +285,7 @@ export default function EntryDetail() {
                 style={{ animationDelay: "300ms", animationFillMode: "both" }}
               >
                 <h2 className="text-xl font-serif text-foreground flex items-center border-b pb-2 mb-4">
-                  <BookOpen className="w-5 h-5 mr-3 text-muted-foreground" /> Cultural Note
+                  <BookOpen className="w-5 h-5 mr-3 text-muted-foreground" /> {t.culturalNote}
                 </h2>
                 <p className="text-foreground leading-relaxed whitespace-pre-wrap">{entry.culturalNote}</p>
               </div>
@@ -239,22 +298,22 @@ export default function EntryDetail() {
             style={{ animationDelay: "400ms", animationFillMode: "both" }}
           >
             <div className="bg-muted/20 rounded-xl p-5 border">
-              <h3 className="font-serif text-lg text-foreground mb-4">About this entry</h3>
+              <h3 className="font-serif text-lg text-foreground mb-4">{t.aboutEntry}</h3>
               <dl className="space-y-3 text-sm">
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Added</dt>
+                  <dt className="text-muted-foreground">{t.added}</dt>
                   <dd className="font-medium text-foreground">{new Date(entry.createdAt).toLocaleDateString()}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Word ID</dt>
+                  <dt className="text-muted-foreground">{t.wordId}</dt>
                   <dd className="font-mono text-xs text-muted-foreground">{entry.id}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Languages</dt>
+                  <dt className="text-muted-foreground">{t.languages}</dt>
                   <dd className="font-medium text-foreground">{languageGroups.length}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-muted-foreground">Total senses</dt>
+                  <dt className="text-muted-foreground">Total {t.senses}</dt>
                   <dd className="font-medium text-foreground">{entry.translations.length}</dd>
                 </div>
               </dl>
@@ -264,12 +323,12 @@ export default function EntryDetail() {
             {entry.category && (
               <div>
                 <h3 className="font-serif text-lg text-foreground mb-4 flex items-center justify-between">
-                  Related Words
+                  {t.relatedWords}
                   <Link
                     href={`/search?category=${encodeURIComponent(entry.category)}`}
                     className="text-xs text-primary hover:underline font-sans"
                   >
-                    View all
+                    {t.viewAll}
                   </Link>
                 </h3>
                 {isRelatedLoading ? (
@@ -303,7 +362,7 @@ export default function EntryDetail() {
                       ))}
                   </div>
                 ) : (
-                  <p className="text-sm text-muted-foreground italic">No related words found.</p>
+                  <p className="text-sm text-muted-foreground italic">{t.noRelated}</p>
                 )}
               </div>
             )}

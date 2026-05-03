@@ -3,7 +3,7 @@
  * Do not edit manually.
  * Api
  * Tujia Dictionary API
- * OpenAPI spec version: 0.1.0
+ * OpenAPI spec version: 0.2.0
  */
 
 export interface Translation {
@@ -12,10 +12,7 @@ export interface Translation {
   languageName: string;
   languageNativeName: string;
   flag: string;
-  /** The translated word or phrase */
   text: string;
-  /** Romanized pronunciation if applicable */
   romanization?: string | null;
-  /** Usage notes for this translation */
   notes?: string | null;
 }

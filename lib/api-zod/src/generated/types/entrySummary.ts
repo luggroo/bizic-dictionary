@@ -3,19 +3,19 @@
  * Do not edit manually.
  * Api
  * Tujia Dictionary API
- * OpenAPI spec version: 0.1.0
+ * OpenAPI spec version: 0.2.0
  */
 import type { EntrySummaryPrimaryTranslations } from "./entrySummaryPrimaryTranslations";
+import type { TujiaForms } from "./tujiaForms";
 
 export interface EntrySummary {
   id: number;
-  /** The Tujia word (base language) */
   tujiaWord: string;
-  /** Tonal marking notation */
-  toneMarks?: string | null;
-  /** noun, verb, adjective, etc. */
+  /** northern or southern */
+  variety: string;
+  dialect?: string | null;
+  forms: TujiaForms;
   partOfSpeech?: string | null;
   category?: string | null;
-  /** Key translations (zh, en, ja) for quick display */
   primaryTranslations: EntrySummaryPrimaryTranslations;
 }

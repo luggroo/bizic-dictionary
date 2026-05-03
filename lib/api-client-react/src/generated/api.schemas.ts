@@ -3,7 +3,7 @@
  * Do not edit manually.
  * Api
  * Tujia Dictionary API
- * OpenAPI spec version: 0.1.0
+ * OpenAPI spec version: 0.2.0
  */
 export interface HealthStatus {
   status: string;
@@ -11,17 +11,35 @@ export interface HealthStatus {
 
 export interface Language {
   id: number;
-  /** Language code (e.g. tujia, zh, en, ja) */
   code: string;
-  /** Display name in English */
   name: string;
-  /** Display name in the language itself */
   nativeName: string;
-  /** Emoji flag or identifier */
   flag: string;
-  /** Whether this is the source/base language (Tujia) */
   isBase: boolean;
   sortOrder: number;
+}
+
+export interface DialectInfo {
+  /** northern or southern */
+  variety: string;
+  /** Dialect name (e.g. Longshan, Laifeng) */
+  dialect: string;
+  /** Number of entries in this dialect */
+  count: number;
+}
+
+/**
+ * The four orthographic/phonetic representations of a Tujia word
+ */
+export interface TujiaForms {
+  /** Bifzivkar romanization without tones (e.g. bifzivkar) */
+  spelling?: string | null;
+  /** Bifzivkar with pinyin-style tone diacritics (e.g. bízìkǎ) */
+  toned?: string | null;
+  /** International Phonetic Alphabet (e.g. pi²zi³ka³) */
+  ipa?: string | null;
+  /** Southwest Mandarin sound-alikes in Chinese characters (e.g. 币子卡) */
+  swMandarin?: string | null;
 }
 
 export interface Translation {
@@ -30,43 +48,35 @@ export interface Translation {
   languageName: string;
   languageNativeName: string;
   flag: string;
-  /** The translated word or phrase */
   text: string;
-  /** Romanized pronunciation if applicable */
   romanization?: string | null;
-  /** Usage notes for this translation */
   notes?: string | null;
 }
 
-/**
- * Key translations (zh, en, ja) for quick display
- */
 export type EntrySummaryPrimaryTranslations = { [key: string]: string };
 
 export interface EntrySummary {
   id: number;
-  /** The Tujia word (base language) */
   tujiaWord: string;
-  /** Tonal marking notation */
-  toneMarks?: string | null;
-  /** noun, verb, adjective, etc. */
+  /** northern or southern */
+  variety: string;
+  dialect?: string | null;
+  forms: TujiaForms;
   partOfSpeech?: string | null;
   category?: string | null;
-  /** Key translations (zh, en, ja) for quick display */
   primaryTranslations: EntrySummaryPrimaryTranslations;
 }
 
 export interface EntryDetail {
   id: number;
   tujiaWord: string;
-  toneMarks?: string | null;
+  variety: string;
+  dialect?: string | null;
+  forms: TujiaForms;
   partOfSpeech?: string | null;
   category?: string | null;
-  /** Example sentence in Tujia */
   exampleSentence?: string | null;
-  /** Example sentence translated to Chinese */
   exampleTranslation?: string | null;
-  /** Cultural or linguistic note about this word */
   culturalNote?: string | null;
   translations: Translation[];
   createdAt: string;
@@ -85,6 +95,8 @@ export interface DictionaryStats {
   totalLanguages: number;
   totalTranslations: number;
   totalCategories: number;
+  northernCount: number;
+  southernCount: number;
   languages: Language[];
   recentEntries: EntrySummary[];
 }
@@ -101,17 +113,25 @@ export interface ErrorResponse {
 
 export type ListEntriesParams = {
   /**
-   * Search query across all languages
+   * Search query across Tujia forms and all translation languages
    */
   q?: string;
   /**
-   * Language code to search in (e.g. tujia, zh, en, ja)
+   * Language code to restrict search to (e.g. zh, en, ja)
    */
   language?: string;
   /**
-   * Filter by category
+   * Filter by semantic category
    */
   category?: string;
+  /**
+   * Filter by Tujia variety — 'northern' or 'southern'
+   */
+  variety?: string;
+  /**
+   * Filter by dialect name (e.g. Longshan, Laifeng)
+   */
+  dialect?: string;
   page?: number;
   limit?: number;
 };

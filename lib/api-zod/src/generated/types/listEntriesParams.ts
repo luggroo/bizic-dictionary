@@ -3,22 +3,30 @@
  * Do not edit manually.
  * Api
  * Tujia Dictionary API
- * OpenAPI spec version: 0.1.0
+ * OpenAPI spec version: 0.2.0
  */
 
 export type ListEntriesParams = {
   /**
-   * Search query across all languages
+   * Search query across Tujia forms and all translation languages
    */
   q?: string;
   /**
-   * Language code to search in (e.g. tujia, zh, en, ja)
+   * Language code to restrict search to (e.g. zh, en, ja)
    */
   language?: string;
   /**
-   * Filter by category
+   * Filter by semantic category
    */
   category?: string;
+  /**
+   * Filter by Tujia variety — 'northern' or 'southern'
+   */
+  variety?: string;
+  /**
+   * Filter by dialect name (e.g. Longshan, Laifeng)
+   */
+  dialect?: string;
   page?: number;
   limit?: number;
 };
