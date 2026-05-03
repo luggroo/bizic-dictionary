@@ -277,7 +277,7 @@ router.get("/entries", async (req, res): Promise<void> => {
     res.status(400).json({ error: "Invalid query parameters", message: parsed.error.message });
     return;
   }
-  const { q, category, variety, dialect, source, page, limit } = parsed.data as typeof parsed.data & { source?: string | null };
+  const { q, category, variety, dialect, page, limit } = parsed.data;
   const offset = ((page ?? 1) - 1) * (limit ?? 20);
   const pageSize = limit ?? 20;
   let rankedIds: number[] | null = null;
@@ -292,7 +292,6 @@ router.get("/entries", async (req, res): Promise<void> => {
   if (category) extraConditions.push(eq(entriesTable.category, category));
   if (variety) extraConditions.push(eq(entriesTable.variety, variety));
   if (dialect) extraConditions.push(eq(entriesTable.dialect, dialect));
-  if (source) extraConditions.push(eq(entriesTable.source, source));
   let rawEntries: (typeof entriesTable.$inferSelect)[];
   let total: number;
   if (rankedIds && rankedIds.length > 0) {

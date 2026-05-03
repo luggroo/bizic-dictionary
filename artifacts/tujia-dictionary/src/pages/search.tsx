@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useLocation, useSearch } from "wouter";
-import { type EntrySummary, useListLanguages, useListCategories, useListDialects } from "@workspace/api-client-react";
+import { type EntrySummary, useListDialects } from "@workspace/api-client-react";
 import { Layout } from "@/components/layout";
 import { SearchBar } from "@/components/search-bar";
 import { EntryCard } from "@/components/entry-card";
@@ -11,15 +11,6 @@ import { ChevronLeft, ChevronRight, SlidersHorizontal, X, Search as SearchIcon }
 import { Badge } from "@/components/ui/badge";
 import { useI18n } from "@/lib/i18n-context";
 
-const SOURCE_OPTIONS = [
-  { key: "Brassett 04 Tujia", label: "Brassett 04 Tujia" },
-  { key: "Brassett 06 Tujia", label: "Brassett 06 Tujia" },
-  { key: "Sun H 91 ZMYY", label: "Sun H 91 ZMYY" },
-  { key: "Huang and Dai 92 TBL", label: "Huang and Dai 92 TBL" },
-  { key: "Chen 86 TuBQ", label: "Chen 86 TuBQ" },
-  { key: "Chen 86 TuMQ", label: "Chen 86 TuMQ" },
-] as const;
-
 export default function Search() {
   const searchString = useSearch();
   const searchParams = useMemo(() => new URLSearchParams(searchString), [searchString]);
@@ -28,19 +19,16 @@ export default function Search() {
 
   const [page, setPage] = useState(parseInt(searchParams.get("page") || "1", 10));
   const [searchMode] = useState<string>(searchParams.get("mode") || "tujia-to-gloss");
-  const [category, setCategory] = useState<string>(searchParams.get("category") || "");
   const [variety, setVariety] = useState<string>(searchParams.get("variety") || "");
   const [dialect, setDialect] = useState<string>(searchParams.get("dialect") || "");
-  const source = searchParams.get("source") || "";
   
   const [, setLocation] = useLocation();
 
   // Reset page when filters change
   useEffect(() => {
     setPage(1);
-  }, [q, searchMode, category, variety, dialect, source]);
+  }, [q, searchMode, variety, dialect]);
 
-  const { data: categories } = useListCategories();
   const { data: dialectsList } = useListDialects();
   
   const availableDialects = useMemo(() => {
@@ -59,10 +47,8 @@ export default function Search() {
         const params = new URLSearchParams();
         if (q) params.set("q", q);
         if (searchMode.includes("gloss-to-tujia")) params.set("language", "zh");
-        if (category) params.set("category", category);
         if (variety) params.set("variety", variety);
         if (dialect) params.set("dialect", dialect);
-        if (source) params.set("source", source);
         params.set("page", String(page));
         params.set("limit", "12");
         const response = await fetch(`/api/entries?${params.toString()}`, { signal: controller.signal });
@@ -73,7 +59,7 @@ export default function Search() {
     };
     load();
     return () => controller.abort();
-  }, [q, searchMode, category, variety, dialect, source, page]);
+  }, [q, searchMode, variety, dialect, page]);
 
   const handleFilterChange = (key: string, value: string) => {
     const params = new URLSearchParams(searchString);
@@ -92,22 +78,17 @@ export default function Search() {
     params.delete("page"); // Reset to page 1
     setLocation(`/search?${params.toString()}`);
     
-    if (key === "category") setCategory(value === "all" ? "" : value);
     if (key === "variety") setVariety(value === "all" ? "" : value);
     if (key === "dialect") setDialect(value === "all" ? "" : value);
   };
 
   const clearFilters = () => {
     setLocation("/search");
-    setCategory("");
     setVariety("");
     setDialect("");
   };
 
-  const sourceOptions = SOURCE_OPTIONS;
-  const sourceLabel = sourceOptions.find((s) => s.key === source)?.label ?? source;
-
-  const hasActiveFilters = q || searchMode !== "tujia-to-gloss" || category || variety || dialect || source;
+  const hasActiveFilters = q || searchMode !== "tujia-to-gloss" || variety || dialect;
 
   return (
     <Layout>
@@ -123,20 +104,6 @@ export default function Search() {
               <div className="flex items-center text-sm font-medium text-muted-foreground mr-2">
                 <SlidersHorizontal className="w-4 h-4 mr-2" /> {t.searchTitle}
               </div>
-
-              <Select value={category || "all"} onValueChange={(v) => handleFilterChange("category", v)}>
-                <SelectTrigger className="w-[180px] bg-background">
-                  <SelectValue placeholder={t.allCategories} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">{t.allCategories}</SelectItem>
-                  {categories?.map(c => (
-                    <SelectItem key={c.category} value={c.category}>
-                      {c.category} ({c.count})
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
 
               <Select value={variety || "all"} onValueChange={(v) => handleFilterChange("variety", v)}>
                 <SelectTrigger className="w-[160px] bg-background">
@@ -164,20 +131,6 @@ export default function Search() {
                   </SelectContent>
                 </Select>
               )}
-
-              <Select value={source || "all"} onValueChange={(v) => handleFilterChange("source", v)}>
-                <SelectTrigger className="w-[220px] bg-background">
-                  <SelectValue placeholder={t.allSources} />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">{t.allSources}</SelectItem>
-                  {sourceOptions.map((s) => (
-                    <SelectItem key={s.key} value={s.key}>
-                      {s.label}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
             </div>
 
             {hasActiveFilters && (
@@ -221,10 +174,8 @@ export default function Search() {
                   <Badge variant="secondary">
                     {searchMode === "tujia-to-gloss" ? t.searchModeTujiaToGloss : t.searchModeGlossToTujia}
                   </Badge>
-                  {category && <Badge variant="secondary">Cat: {category}</Badge>}
                   {variety && <Badge variant="secondary">{variety === "northern" ? t.northern : t.southern}</Badge>}
                   {dialect && <Badge variant="secondary">{dialect}</Badge>}
-                  {source && <Badge variant="secondary">{sourceLabel}</Badge>}
                 </div>
               )}
             </div>
