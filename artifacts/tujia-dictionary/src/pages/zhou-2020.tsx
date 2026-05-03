@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Layout } from "@/components/layout";
 import { useI18n } from "@/lib/i18n-context";
-import { ExternalLink, BookOpen, Map, FileText, AlertCircle, Search, X } from "lucide-react";
+import { ExternalLink, BookOpen, Map, FileText, AlertCircle, Search, X, Image as ImageIcon } from "lucide-react";
 
 type LinkedEntry = {
   entryId: number;
@@ -88,6 +88,41 @@ function ReflexCell({ value }: { value: string | null | undefined }) {
   );
 }
 
+function FigureCard({
+  href,
+  title,
+  titleZh,
+  desc,
+  descZh,
+}: {
+  href: string;
+  title: string;
+  titleZh: string;
+  desc: string;
+  descZh: string;
+}) {
+  const { lang } = useI18n();
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group rounded-xl border border-border/60 bg-card overflow-hidden hover:bg-muted/30 transition-colors"
+    >
+      <div className="aspect-[16/10] bg-gradient-to-br from-muted via-background to-muted/70 flex items-center justify-center">
+        <ImageIcon className="w-10 h-10 text-primary/60" />
+      </div>
+      <div className="p-4">
+        <div className="font-medium text-foreground group-hover:text-primary transition-colors flex items-center gap-1.5">
+          {lang === "zh" ? titleZh : title}
+          <ExternalLink className="w-3.5 h-3.5 opacity-50" />
+        </div>
+        <div className="text-xs text-muted-foreground mt-1">{lang === "zh" ? descZh : desc}</div>
+      </div>
+    </a>
+  );
+}
+
 export default function Zhou2020Page() {
   const { lang } = useI18n();
   const [search, setSearch] = useState("");
@@ -129,6 +164,28 @@ export default function Zhou2020Page() {
               ? "周煜楼（Yulou Zhou）：《原始毕兹语：土家语历史音韵学研究》，斯坦福大学荣誉学士论文，2020年。"
               : "Yulou Zhou. \"Proto-Bizic: A Study of Tujia Historical Phonology.\" Stanford University Honors Thesis, 2020."}
           </p>
+        </div>
+
+        <div className="mb-8 rounded-xl border border-border/60 bg-card p-5">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+            {isZh ? "论文地图" : "Paper maps"}
+          </h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <FigureCard
+              href="https://drive.google.com/drive/u/0/folders/1XSzB1leCy34pw92nJ_a_NJ2HO9ZHoFE3"
+              title="Dialect maps"
+              titleZh="方言地图"
+              desc="Open the paper's map folder"
+              descZh="打开论文地图文件夹"
+            />
+            <FigureCard
+              href="https://drive.google.com/file/d/1zjB6Hq_PHqqsid3Mw3guLfXJKDykEYom/view?usp=sharing"
+              title="Official thesis PDF"
+              titleZh="正式提交版本"
+              desc="Reference copy of the paper"
+              descZh="论文参考副本"
+            />
+          </div>
         </div>
 
         {/* ── Metadata grid ── */}
