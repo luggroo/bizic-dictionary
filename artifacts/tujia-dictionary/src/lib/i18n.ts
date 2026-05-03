@@ -12,6 +12,8 @@ export interface Strings {
   siteName: string;
   tagline: string;
   taglineHighlight: string;
+  guideTitle: string;
+  guideBody: string;
   heroSubtitle: string;
   search: string;
   searchPlaceholder: string;
@@ -74,8 +76,10 @@ export interface Strings {
 const strings: Record<UILang, Strings> = {
   en: {
     siteName: "Tujia Dictionary",
-    tagline: "Words are",
-    taglineHighlight: "memory.",
+    tagline: "",
+    taglineHighlight: "",
+    guideTitle: "How to use",
+    guideBody: "Search by Tujia words, Chinese, or English. Use filters to narrow by variety, dialect, or category.",
     heroSubtitle:
       "Explore the vocabulary of the Tujia people. A scholarly archive spanning Chinese, English, and Japanese translations.",
     search: "Search",
@@ -139,9 +143,11 @@ const strings: Record<UILang, Strings> = {
   },
   zh: {
     siteName: "土家语词典",
-    tagline: "把土家语",
-    taglineHighlight: "留住。",
-    heroSubtitle: "整理土家族词汇，记录它们在口耳之间的样子。",
+    tagline: "",
+    taglineHighlight: "",
+    guideTitle: "使用说明",
+    guideBody: "可按土家语、中文或英文检索；也可用方言、语系和类别筛选词条。",
+    heroSubtitle: "收录土家族词汇与释义，便于检索、对照与整理。",
     search: "搜索",
     searchPlaceholder: "搜索土家语、中文、英文……",
     browse: "浏览",
