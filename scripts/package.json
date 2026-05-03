@@ -6,6 +6,7 @@
   "scripts": {
     "hello": "tsx ./src/hello.ts",
     "seed-zhou": "node ./src/seed-zhou.mjs",
+    "normalize-brassett": "node ./src/normalize-brassett.mjs",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
