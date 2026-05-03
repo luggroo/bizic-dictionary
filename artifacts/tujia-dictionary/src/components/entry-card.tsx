@@ -11,7 +11,7 @@ import { detectNotation, NOTATION_LABEL } from "@/lib/notation";
 export function EntryCard({ entry }: { entry: EntrySummary }) {
   const { t } = useI18n();
   const translations = Object.entries(entry.primaryTranslations);
-  const chineseTranslations = entry.primaryTranslations.zh ? entry.primaryTranslations.zh.split(" | ") : [];
+  const chineseTranslations = entry.primaryTranslations.zh ? entry.primaryTranslations.zh.split("; ").map((text) => text.trim()).filter(Boolean) : [];
   const notation = detectNotation(entry.tujiaWord);
 
   return (
@@ -64,11 +64,7 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
           <div className="space-y-3 mt-6">
             {chineseTranslations.length > 0 && (
               <div className="space-y-1.5">
-                {chineseTranslations.map((text, index) => (
-                  <p key={`${text}-${index}`} className="text-sm text-muted-foreground">
-                    汉语{chineseTranslations.length > 1 ? ` ${index + 1}` : ""}：{text}
-                  </p>
-                ))}
+                <p className="text-sm text-muted-foreground">汉语：{chineseTranslations.join("；")}</p>
               </div>
             )}
             {translations.length > 0 ? (

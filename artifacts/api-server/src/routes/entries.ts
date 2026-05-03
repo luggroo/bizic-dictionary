@@ -70,7 +70,7 @@ async function buildPrimaryTranslations(entryId: number, partOfSpeech?: string |
     .where(eq(translationsTable.entryId, entryId));
   const map: Record<string, string> = {};
   const zh = selectChineseTranslations(translations, partOfSpeech);
-  if (zh.length > 0) map.zh = zh.map((text) => normalizeChineseTranslation(entryId, "zh", text)).join(" | ");
+  if (zh.length > 0) map.zh = zh.map((text) => normalizeChineseTranslation(entryId, "zh", text)).join("; ");
   for (const t of translations) {
     if (t.languageCode === "zh") continue;
     if (!map[t.languageCode]) map[t.languageCode] = t.text;

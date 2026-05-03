@@ -171,9 +171,7 @@ export default function EntryDetail() {
               </div>
               {chineseTranslations.length > 0 && (
                 <div className="space-y-2 text-base sm:text-lg text-muted-foreground mb-6">
-                  {chineseTranslations.map((translation, index) => (
-                    <p key={`${translation.id}-${index}`}>汉语{chineseTranslations.length > 1 ? ` ${index + 1}` : ""}：{translation.text}</p>
-                  ))}
+                  <p>汉语：{chineseTranslations.map((translation) => translation.text).join("；")}</p>
                 </div>
               )}
             </div>
