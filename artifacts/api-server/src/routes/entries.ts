@@ -18,21 +18,22 @@ function normalizePartOfSpeech(value: string | null | undefined): string {
   return (value ?? "").trim().toLowerCase();
 }
 
-function selectChineseTranslation(translations: Array<{ languageCode: string; text: string; notes?: string | null }>, partOfSpeech: string | null | undefined): string | null {
+function selectChineseTranslations(translations: Array<{ languageCode: string; text: string; notes?: string | null }>, partOfSpeech: string | null | undefined): string[] {
   const zhTranslations = translations.filter((t) => t.languageCode === "zh");
-  if (zhTranslations.length === 0) return null;
+  if (zhTranslations.length === 0) return [];
 
   const pos = normalizePartOfSpeech(partOfSpeech);
-  const exact = zhTranslations.find((t) => {
+  if (!pos) return zhTranslations.map((t) => t.text);
+
+  const preferred = zhTranslations.filter((t) => {
     const text = t.text.trim();
     const notes = (t.notes ?? "").trim().toLowerCase();
-    if (!pos) return false;
     if (pos.includes("adj")) return text === "瘦" || notes.includes("adjective") || notes.includes("adj");
     if (pos.includes("noun")) return text !== "瘦肉";
     if (pos.includes("verb")) return notes.includes("verb") || notes.includes("v.");
     return false;
   });
-  return exact?.text ?? zhTranslations[0].text;
+  return (preferred.length > 0 ? preferred : zhTranslations).map((t) => t.text);
 }
 
 async function buildPrimaryTranslations(entryId: number, partOfSpeech?: string | null): Promise<Record<string, string>> {
@@ -41,8 +42,8 @@ async function buildPrimaryTranslations(entryId: number, partOfSpeech?: string |
     .from(translationsTable)
     .where(eq(translationsTable.entryId, entryId));
   const map: Record<string, string> = {};
-  const zh = selectChineseTranslation(translations, partOfSpeech);
-  if (zh) map.zh = zh;
+  const zh = selectChineseTranslations(translations, partOfSpeech);
+  if (zh.length > 0) map.zh = zh.join(" | ");
   for (const t of translations) {
     if (t.languageCode === "zh") continue;
     if (!map[t.languageCode]) map[t.languageCode] = t.text;
