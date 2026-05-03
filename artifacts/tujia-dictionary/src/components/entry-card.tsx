@@ -11,17 +11,57 @@ import { detectNotation, NOTATION_LABEL } from "@/lib/notation";
 function getChinesePartOfSpeech(partOfSpeech?: string | null) {
   const pos = (partOfSpeech ?? "").trim().toLowerCase();
   if (!pos) return "";
-  if (pos.includes("noun")) return "名词";
-  if (pos.includes("verb")) return "动词";
-  if (pos.includes("adj")) return "形容词";
-  if (pos.includes("adv")) return "副词";
-  if (pos.includes("pron")) return "代词";
-  if (pos.includes("prep")) return "介词";
-  if (pos.includes("conj")) return "连词";
-  if (pos.includes("intj")) return "感叹词";
-  if (pos.includes("num")) return "数词";
-  if (pos.includes("part")) return "助词";
-  return partOfSpeech ?? "";
+  const map: Record<string, string> = {
+    noun: "名词",
+    n: "名词",
+    nbp: "名词",
+    nanim: "名词",
+    nveg: "名词",
+    nrel: "名词",
+    "n+vt.": "名动词",
+    "n/adv": "名词/副词",
+    verb: "动词",
+    v: "动词",
+    "v.i.": "不及物动词",
+    "v.t.": "及物动词",
+    vi: "不及物动词",
+    "vi.": "不及物动词",
+    vt: "及物动词",
+    "vt.": "及物动词",
+    "itr.v.": "不及物动词",
+    "be": "系词",
+    "be v.": "系词",
+    va: "动词",
+    "va.": "动词",
+    vc: "动词",
+    "vc.": "动词",
+    adj: "形容词",
+    adv: "副词",
+    "advd.": "程度副词",
+    "advl.": "位置副词",
+    "advm.": "方式副词",
+    "advt.": "时间副词",
+    pron: "代词",
+    pronoun: "代词",
+    prep: "介词",
+    conjunction: "连词",
+    conj: "连词",
+    dem: "指示词",
+    "intg": "疑问词",
+    "expr.": "短语",
+    "cl.": "量词",
+    clf: "量词",
+    num: "数词",
+    numeral: "数词",
+    "num+cl.": "数词+量词",
+    particle: "助词",
+    "neg.": "否定词",
+    "nominal suffix": "名词后缀",
+    "verbal suffix": "动词后缀",
+    onom: "拟声词",
+    "onom.": "拟声词",
+  };
+  return map[pos] ?? partOfSpeech ?? "";
 }
 
 export function EntryCard({ entry }: { entry: EntrySummary }) {
