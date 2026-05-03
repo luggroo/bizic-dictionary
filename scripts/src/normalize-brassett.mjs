@@ -26,11 +26,11 @@ await db.connect();
 // ── Tone normalization ──────────────────────────────────────────────────────
 
 const TONE_MAP = {
-  a: ["ā", "ǎ", "á", "à"],
-  e: ["ē", "ě", "é", "è"],
-  i: ["ī", "ǐ", "í", "ì"],
-  o: ["ō", "ǒ", "ó", "ò"],
-  u: ["ū", "ǔ", "ú", "ù"],
+  a: ["ā", "á", "ǎ", "à"],
+  e: ["ē", "é", "ě", "è"],
+  i: ["ī", "í", "ǐ", "ì"],
+  o: ["ō", "ó", "ǒ", "ò"],
+  u: ["ū", "ú", "ǔ", "ù"],
 };
 
 const SUPER = { "¹": "1", "²": "2", "³": "3", "⁴": "4" };
@@ -53,39 +53,64 @@ function markNucleus(vowels, tone) {
 }
 
 /**
- * Normalize all numeric tone markers (ASCII digits or Unicode superscripts)
- * in a word string to diacritic form.
+ * Normalize tone markers from the original IPA/reflex form (digits or superscripts)
+ * to diacritic form, with correct syllable-boundary apostrophes.
+ *
+ * Strategy: tokenize by tone-digit boundaries FIRST (so we know exactly
+ * where each syllable starts), then apply diacritics, then join with
+ * apostrophes before non-initial syllables whose first letter is a, e, or o.
  */
-function normalizeTones(word) {
+function normalizeTones(originalIpa) {
   // Step 1: convert superscripts to ASCII digits
-  let s = word.replace(/[¹²³⁴]/g, (m) => SUPER[m]);
+  const s = originalIpa.replace(/[¹²³⁴]/g, (m) => SUPER[m]);
 
-  // Step 2: for each syllable pattern [vowels][coda][tone-digit], apply diacritic
-  // The regex captures: vowel run, optional consonant coda, tone digit
-  s = s.replace(/([aeiou]+)([^aeiou1-4]*)([1-4])/g, (_, vowels, coda, toneStr) => {
-    const tone = parseInt(toneStr, 10);
-    return markNucleus(vowels, tone) + coda;
-  });
-  const chars = [...s];
-  let out = "";
-  let atSyllableStart = true;
-  for (let i = 0; i < chars.length; i++) {
-    const ch = chars[i];
-    const isVowel = /[aeiouāáǎàēéěèīíǐìōóǒòūúǔù]/.test(ch);
-    const needsSeparator = !atSyllableStart && (ch === "ā" || ch === "ǎ" || ch === "á" || ch === "à" || ch === "ē" || ch === "é" || ch === "ě" || ch === "è" || ch === "ō" || ch === "ó" || ch === "ǒ" || ch === "ò");
-    if (needsSeparator) out += "'";
-    out += ch;
-    atSyllableStart = !isVowel;
+  // Step 2: split into syllable tokens at tone-digit boundaries.
+  // A token is every character up to and including one digit [1-4].
+  // Any trailing characters without a digit form an untoned tail.
+  const tokens = [];
+  let pos = 0;
+  while (pos < s.length) {
+    let digitPos = -1;
+    for (let j = pos; j < s.length; j++) {
+      if ("1234".includes(s[j])) { digitPos = j; break; }
+    }
+    if (digitPos === -1) {
+      if (pos < s.length) tokens.push({ raw: s.slice(pos), toned: false });
+      break;
+    }
+    tokens.push({ raw: s.slice(pos, digitPos + 1), toned: true });
+    pos = digitPos + 1;
   }
 
-  return out;
+  if (tokens.length === 0) return s;
+
+  // Step 3: apply diacritics to each toned token
+  const normed = tokens.map((t) => {
+    if (!t.toned) return t.raw;
+    return t.raw.replace(/([aeiou]+)([^aeiou1-4]*)([1-4])$/, (_, vowels, coda, toneStr) => {
+      return markNucleus(vowels, parseInt(toneStr, 10)) + coda;
+    });
+  });
+
+  // Step 4: join, inserting apostrophe before non-initial syllables whose
+  // first letter (ignoring a leading non-letter prefix like '-') is a, e, or o.
+  let result = normed[0] ?? "";
+  for (let i = 1; i < tokens.length; i++) {
+    const firstLetter = tokens[i].raw.match(/[a-z]/)?.[0];
+    if (firstLetter === "a" || firstLetter === "e" || firstLetter === "o") {
+      result += "'";
+    }
+    result += normed[i];
+  }
+
+  return result;
 }
 
 // ── Fetch Brassett entries ─────────────────────────────────────────────────
 
 console.log("Fetching Brassett entries…");
 const { rows: brassett } = await db.query(`
-  SELECT id, tujia_word, source, variety
+  SELECT id, tujia_word, ipa, source, variety
   FROM entries
   WHERE source LIKE '%Brassett 04 Tujia%'
      OR source LIKE '%Brassett 06 Tujia%'
@@ -94,21 +119,25 @@ const { rows: brassett } = await db.query(`
 console.log(`  Found ${brassett.length} Brassett entries`);
 
 // ── Step 1: Normalize tone markers on all Brassett entries ─────────────────
+// Re-derive tujia_word from the original ipa column (which still has raw digits/superscripts),
+// so any previous bad apostrophe passes are fully undone and correctly re-applied.
 
 console.log("\nStep 1: Normalizing tone markers…");
 let normalized = 0;
 let unchanged = 0;
 
 for (const row of brassett) {
-  const newWord = normalizeTones(row.tujia_word);
+  // Use ipa (original form) as the source of truth; fall back to tujia_word if ipa is missing
+  const source = row.ipa && /[1-4¹²³⁴]/.test(row.ipa) ? row.ipa : row.tujia_word;
+  const newWord = normalizeTones(source);
   if (newWord !== row.tujia_word) {
     await db.query(
       `UPDATE entries SET tujia_word = $1, updated_at = NOW() WHERE id = $2`,
       [newWord, row.id]
     );
     normalized++;
-    if (normalized <= 5) {
-      console.log(`  ${row.tujia_word} → ${newWord}`);
+    if (normalized <= 10) {
+      console.log(`  ipa:${source}  ${row.tujia_word} → ${newWord}`);
     }
   } else {
     unchanged++;
