@@ -14,13 +14,37 @@ import {
 
 const router: IRouter = Router();
 
-async function buildPrimaryTranslations(entryId: number): Promise<Record<string, string>> {
+function normalizePartOfSpeech(value: string | null | undefined): string {
+  return (value ?? "").trim().toLowerCase();
+}
+
+function selectChineseTranslation(translations: Array<{ languageCode: string; text: string; notes?: string | null }>, partOfSpeech: string | null | undefined): string | null {
+  const zhTranslations = translations.filter((t) => t.languageCode === "zh");
+  if (zhTranslations.length === 0) return null;
+
+  const pos = normalizePartOfSpeech(partOfSpeech);
+  const exact = zhTranslations.find((t) => {
+    const text = t.text.trim();
+    const notes = (t.notes ?? "").trim().toLowerCase();
+    if (!pos) return false;
+    if (pos.includes("adj")) return text === "瘦" || notes.includes("adjective") || notes.includes("adj");
+    if (pos.includes("noun")) return text !== "瘦肉";
+    if (pos.includes("verb")) return notes.includes("verb") || notes.includes("v.");
+    return false;
+  });
+  return exact?.text ?? zhTranslations[0].text;
+}
+
+async function buildPrimaryTranslations(entryId: number, partOfSpeech?: string | null): Promise<Record<string, string>> {
   const translations = await db
-    .select({ languageCode: translationsTable.languageCode, text: translationsTable.text })
+    .select({ languageCode: translationsTable.languageCode, text: translationsTable.text, notes: translationsTable.notes })
     .from(translationsTable)
     .where(eq(translationsTable.entryId, entryId));
   const map: Record<string, string> = {};
+  const zh = selectChineseTranslation(translations, partOfSpeech);
+  if (zh) map.zh = zh;
   for (const t of translations) {
+    if (t.languageCode === "zh") continue;
     if (!map[t.languageCode]) map[t.languageCode] = t.text;
   }
   return map;
@@ -138,7 +162,7 @@ router.get("/entries/stats", async (req, res): Promise<void> => {
   const [southernRow] = await db.select({ count: sql<number>`count(*)::int` }).from(entriesTable).where(eq(entriesTable.variety, "southern"));
   const languages = await db.select().from(languagesTable).orderBy(asc(languagesTable.sortOrder));
   const recentRaw = await db.select().from(entriesTable).orderBy(desc(entriesTable.createdAt)).limit(6);
-  const recentEntries = await Promise.all(recentRaw.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id))));
+  const recentEntries = await Promise.all(recentRaw.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id, e.partOfSpeech))));
   res.json(GetDictionaryStatsResponse.parse({ totalEntries: totalEntries.count, totalLanguages: totalLanguages.count, totalTranslations: totalTranslations.count, totalCategories: categoriesResult.length, northernCount: northernRow?.count ?? 0, southernCount: southernRow?.count ?? 0, languages, recentEntries }));
 });
 
@@ -191,7 +215,7 @@ router.get("/entries", async (req, res): Promise<void> => {
     total = countRow.total;
     rawEntries = await db.select().from(entriesTable).where(whereClause).orderBy(asc(entriesTable.tujiaWord)).limit(pageSize).offset(offset);
   }
-  const entries = await Promise.all(rawEntries.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id))));
+  const entries = await Promise.all(rawEntries.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id, e.partOfSpeech))));
   res.json(ListEntriesResponse.parse({ entries, total, page: page ?? 1, limit: pageSize, totalPages: Math.ceil(total / pageSize) }));
 });
 
@@ -225,7 +249,7 @@ router.get("/entries/:id/related", async (req, res): Promise<void> => {
     return;
   }
   const rawRelated = await db.select().from(entriesTable).where(and(eq(entriesTable.category, entry.category), sql`${entriesTable.id} != ${params.data.id}`)).limit(6);
-  const related = await Promise.all(rawRelated.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id))));
+  const related = await Promise.all(rawRelated.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id, e.partOfSpeech))));
   res.json(GetRelatedEntriesResponse.parse(related));
 });
 
