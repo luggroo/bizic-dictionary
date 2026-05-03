@@ -31,7 +31,7 @@ export default function Search() {
   const [category, setCategory] = useState<string>(searchParams.get("category") || "");
   const [variety, setVariety] = useState<string>(searchParams.get("variety") || "");
   const [dialect, setDialect] = useState<string>(searchParams.get("dialect") || "");
-  const [source, setSource] = useState<string>(searchParams.get("source") || "");
+  const source = searchParams.get("source") || "";
   
   const [, setLocation] = useLocation();
 
@@ -95,7 +95,6 @@ export default function Search() {
     if (key === "category") setCategory(value === "all" ? "" : value);
     if (key === "variety") setVariety(value === "all" ? "" : value);
     if (key === "dialect") setDialect(value === "all" ? "" : value);
-    if (key === "source") setSource(value === "all" ? "" : value);
   };
 
   const clearFilters = () => {
@@ -103,7 +102,6 @@ export default function Search() {
     setCategory("");
     setVariety("");
     setDialect("");
-    setSource("");
   };
 
   const sourceOptions = SOURCE_OPTIONS;
