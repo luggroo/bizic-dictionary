@@ -63,17 +63,18 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
           {/* Translations */}
           <div className="space-y-3 mt-6">
             {chineseTranslations.length > 0 && (
-              <div className="space-y-1.5">
-                <p className="text-sm font-mono text-muted-foreground leading-relaxed">汉 {chineseTranslations.join("；")}</p>
+              <div className="grid grid-cols-[2rem_1fr] gap-x-2 items-start">
+                <span className="text-sm font-mono text-muted-foreground leading-relaxed">汉</span>
+                <p className="text-sm font-mono text-foreground leading-relaxed">{chineseTranslations.join("；")}</p>
               </div>
             )}
             {translations.length > 0 ? (
               translations.filter(([lang]) => lang !== "zh").slice(0, 3).map(([lang, text]) => (
-                <div key={lang} className="flex items-start gap-3">
-                  <span className="text-xs font-mono text-muted-foreground uppercase w-8 pt-0.5">
+                <div key={lang} className="grid grid-cols-[2rem_1fr] gap-x-2 items-start">
+                  <span className="text-sm font-mono text-muted-foreground uppercase leading-relaxed">
                     {lang}
                   </span>
-                  <span className="text-foreground flex-1 font-mono leading-relaxed">{text}</span>
+                  <span className="text-sm font-mono text-foreground leading-relaxed">{text}</span>
                 </div>
               ))
             ) : (

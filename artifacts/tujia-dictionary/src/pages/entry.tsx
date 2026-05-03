@@ -170,8 +170,9 @@ export default function EntryDetail() {
                 {notation && <span className={notation === "ipa" ? "notation-ipa" : "notation-pinyin"}>{NOTATION_LABEL[notation].short}</span>}
               </div>
               {chineseTranslations.length > 0 && (
-                <div className="space-y-2 text-base sm:text-lg text-muted-foreground mb-6">
-                  <p className="font-mono leading-relaxed">汉 {chineseTranslations.map((translation) => translation.text).join("；")}</p>
+                <div className="grid grid-cols-[2rem_1fr] gap-x-2 items-start text-base sm:text-lg text-muted-foreground mb-6">
+                  <span className="font-mono leading-relaxed">汉</span>
+                  <p className="font-mono text-foreground leading-relaxed">{chineseTranslations.map((translation) => translation.text).join("；")}</p>
                 </div>
               )}
             </div>
