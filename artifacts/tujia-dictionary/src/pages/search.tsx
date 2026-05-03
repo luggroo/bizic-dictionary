@@ -18,7 +18,7 @@ export default function Search() {
   const { t } = useI18n();
 
   const [page, setPage] = useState(parseInt(searchParams.get("page") || "1", 10));
-  const [searchMode] = useState<string>(searchParams.get("mode") || "tujia-to-gloss");
+  const [searchMode, setSearchMode] = useState<string>(searchParams.get("mode") || "tujia-to-gloss");
   const [variety, setVariety] = useState<string>(searchParams.get("variety") || "");
   const [dialect, setDialect] = useState<string>(searchParams.get("dialect") || "");
   
@@ -28,6 +28,11 @@ export default function Search() {
   useEffect(() => {
     setPage(1);
   }, [q, searchMode, variety, dialect]);
+
+  useEffect(() => {
+    const nextMode = searchParams.get("mode") || "tujia-to-gloss";
+    setSearchMode(nextMode);
+  }, [searchParams]);
 
   const { data: dialectsList } = useListDialects();
   
@@ -82,6 +87,14 @@ export default function Search() {
     if (key === "dialect") setDialect(value === "all" ? "" : value);
   };
 
+  const handleModeChange = (value: string) => {
+    const params = new URLSearchParams(searchString);
+    params.set("mode", value);
+    params.delete("page");
+    setLocation(`/search?${params.toString()}`);
+    setSearchMode(value);
+  };
+
   const clearFilters = () => {
     setLocation("/search");
     setVariety("");
@@ -103,6 +116,15 @@ export default function Search() {
             <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto">
               <div className="flex items-center text-sm font-medium text-muted-foreground mr-2">
                 <SlidersHorizontal className="w-4 h-4 mr-2" /> {t.searchTitle}
+              </div>
+
+              <div className="flex items-center gap-2">
+                <Button type="button" variant={searchMode === "tujia-to-gloss" ? "default" : "outline"} size="sm" onClick={() => handleModeChange("tujia-to-gloss")}>
+                  {t.searchModeTujiaToGloss}
+                </Button>
+                <Button type="button" variant={searchMode === "gloss-to-tujia" ? "default" : "outline"} size="sm" onClick={() => handleModeChange("gloss-to-tujia")}>
+                  {t.searchModeGlossToTujia}
+                </Button>
               </div>
 
               <Select value={variety || "all"} onValueChange={(v) => handleFilterChange("variety", v)}>
