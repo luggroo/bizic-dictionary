@@ -39,14 +39,14 @@ async function fetchZhou2020(): Promise<{ rows: ZhouRow[] }> {
 
 const NORTHERN_DIALECTS = [
   { key: "tasha", label: "Tasha", labelZh: "他砂" },
-  { key: "laxidong", label: "Laxidong", labelZh: "拉斯洞" },
+  { key: "laxidong", label: "Laxidong", labelZh: "拉西峒" },
   { key: "xianren", label: "Xianren", labelZh: "仙仁" },
   { key: "xiaolongre", label: "Xiaolongre", labelZh: "小龙热" },
 ] as const;
 
 const SOUTHERN_DIALECTS = [
-  { key: "cebu", label: "Cebu", labelZh: "册不" },
-  { key: "caji_adi", label: "Caji-adi", labelZh: "沙刀" },
+  { key: "cebu", label: "Cebu", labelZh: "下都" },
+  { key: "caji_adi", label: "Caji-adi", labelZh: "下且己" },
 ] as const;
 
 const ALL_DIALECTS = [...NORTHERN_DIALECTS, ...SOUTHERN_DIALECTS];
@@ -122,11 +122,11 @@ export default function Zhou2020Page() {
         {/* ── Header ── */}
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-serif text-foreground mb-2">
-            {isZh ? "周 (2020)：原始比兹语研究" : "Zhou (2020): Proto-Bizic"}
+            {isZh ? "周煜楼 (2020)：原始比兹语研究" : "Zhou (2020): Proto-Bizic"}
           </h1>
           <p className="text-muted-foreground text-sm max-w-3xl">
             {isZh
-              ? "周玉楼（Yulou Zhou）：《原始比兹语：土家语历史音韵学研究》，斯坦福大学荣誉学士论文，2020年。"
+              ? "周煜楼（Yulou Zhou）：《原始比兹语：土家语历史音韵学研究》，斯坦福大学荣誉学士论文，2020年。"
               : "Yulou Zhou. \"Proto-Bizic: A Study of Tujia Historical Phonology.\" Stanford University Honors Thesis, 2020."}
           </p>
         </div>
@@ -317,12 +317,12 @@ export default function Zhou2020Page() {
                   <th />
                   {NORTHERN_DIALECTS.map((d) => (
                     <th key={d.key} className="px-2 py-1.5 font-medium text-blue-700 dark:text-blue-400 text-center border-l border-blue-100 dark:border-blue-900/30 first:border-l-0">
-                      {d.label}
+                      {d.label}{isZh ? `（${d.labelZh}）` : ""}
                     </th>
                   ))}
                   {SOUTHERN_DIALECTS.map((d) => (
                     <th key={d.key} className="px-2 py-1.5 font-medium text-red-700 dark:text-red-400 text-center border-l border-red-100 dark:border-red-900/30 first:border-l-[2px] first:border-l-red-200 dark:first:border-l-red-900">
-                      {d.label}
+                      {d.label}{isZh ? `（${d.labelZh}）` : ""}
                     </th>
                   ))}
                   <th />
@@ -364,7 +364,7 @@ export default function Zhou2020Page() {
                       {/* Chinese gloss */}
                       <td className="px-3 py-2 text-sm text-muted-foreground">{row.glossZh ?? "—"}</td>
                       {/* Northern reflexes */}
-                      {NORTHERN_DIALECTS.map((d, i) => (
+                  {NORTHERN_DIALECTS.map((d) => (
                         <ReflexCell key={d.key} value={row.reflexes?.[d.key]} />
                       ))}
                       {/* Southern reflexes */}
