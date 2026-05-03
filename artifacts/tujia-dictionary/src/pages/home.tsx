@@ -1,4 +1,4 @@
-import React from "react";
+import React, { cloneElement, type ReactElement } from "react";
 import { Link } from "wouter";
 import { useGetDictionaryStats } from "@workspace/api-client-react";
 import { Layout } from "@/components/layout";
@@ -20,7 +20,7 @@ export default function Home() {
         <section className="pt-24 pb-16 px-4">
           <div className="container mx-auto max-w-4xl text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
             <h1 className="text-5xl md:text-7xl font-serif text-foreground tracking-tight">
-              {t.tagline} <span className="text-primary italic">{t.taglineHighlight}</span>
+              {t.tagline} <span className="text-secondary italic">{t.taglineHighlight}</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               {t.heroSubtitle}
@@ -56,7 +56,7 @@ export default function Home() {
           <div className="container mx-auto max-w-5xl">
             <div className="flex items-center justify-between mb-10">
               <h2 className="text-3xl font-serif text-foreground">{t.recentlyPreserved}</h2>
-              <Link href="/search" className="text-primary hover:underline text-sm font-medium">{t.viewAllEntries}</Link>
+              <Link href="/search" className="text-secondary hover:underline text-sm font-medium">{t.viewAllEntries}</Link>
             </div>
             
             {isLoading || !stats ? (
@@ -85,8 +85,8 @@ function StatCard({ icon, label, value }: { icon: React.ReactNode; label: string
   return (
     <Card className="bg-background border-border/50 shadow-sm hover:border-primary/20 transition-colors">
       <CardContent className="p-6 flex flex-col items-center text-center space-y-2">
-        <div className="text-primary/80 mb-2">
-          {React.cloneElement(icon as React.ReactElement, { size: 28, strokeWidth: 1.5 })}
+        <div className="text-secondary/80 mb-2">
+          {cloneElement(icon as ReactElement, { size: 28, strokeWidth: 1.5 })}
         </div>
         <div className="text-3xl font-serif text-foreground">{value}</div>
         <div className="text-sm text-muted-foreground uppercase tracking-wider font-medium">{label}</div>

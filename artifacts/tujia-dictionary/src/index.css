@@ -51,72 +51,72 @@
 
 @layer base {
   :root {
-    --background: 38 46% 96%;
-    --foreground: 25 15% 15%;
-    --border: 35 25% 85%;
-    --input: 35 25% 85%;
-    --ring: 12 50% 36%;
+    --background: 42 35% 97%;
+    --foreground: 220 18% 16%;
+    --border: 40 18% 86%;
+    --input: 40 18% 86%;
+    --ring: 188 48% 34%;
 
-    --card: 38 46% 98%;
-    --card-foreground: 25 15% 15%;
-    --card-border: 35 25% 88%;
+    --card: 42 35% 99%;
+    --card-foreground: 220 18% 16%;
+    --card-border: 40 18% 89%;
 
-    --popover: 38 46% 98%;
-    --popover-foreground: 25 15% 15%;
-    --popover-border: 35 25% 88%;
+    --popover: 42 35% 99%;
+    --popover-foreground: 220 18% 16%;
+    --popover-border: 40 18% 89%;
 
-    --primary: 12 50% 36%;         /* terracotta #8c3b2e */
-    --primary-foreground: 38 46% 96%;
+    --primary: 188 48% 34%;
+    --primary-foreground: 42 35% 97%;
 
-    --secondary: 30 15% 35%;
-    --secondary-foreground: 38 46% 96%;
+    --secondary: 223 28% 29%;
+    --secondary-foreground: 42 35% 97%;
 
-    --muted: 38 30% 90%;
-    --muted-foreground: 25 10% 40%;
+    --muted: 42 20% 91%;
+    --muted-foreground: 220 10% 42%;
 
-    --accent: 38 30% 90%;
-    --accent-foreground: 25 15% 15%;
+    --accent: 198 38% 90%;
+    --accent-foreground: 220 18% 16%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --radius: 0.5rem;
 
-    --color-southern: #0d9488;
-    --color-gold: #b5782a;          /* Xilankapu gold */
+    --color-southern: #0f766e;
+    --color-gold: #b58a2a;
   }
 
   .dark {
-    --background: 25 15% 12%;
-    --foreground: 38 30% 90%;
-    --border: 25 10% 25%;
-    --input: 25 10% 25%;
-    --ring: 12 40% 46%;
+    --background: 222 22% 10%;
+    --foreground: 42 28% 92%;
+    --border: 223 14% 22%;
+    --input: 223 14% 22%;
+    --ring: 188 45% 42%;
 
-    --card: 25 15% 14%;
-    --card-foreground: 38 30% 90%;
-    --card-border: 25 10% 22%;
+    --card: 222 20% 13%;
+    --card-foreground: 42 28% 92%;
+    --card-border: 223 14% 20%;
 
-    --popover: 25 15% 14%;
-    --popover-foreground: 38 30% 90%;
-    --popover-border: 25 10% 22%;
+    --popover: 222 20% 13%;
+    --popover-foreground: 42 28% 92%;
+    --popover-border: 223 14% 20%;
 
-    --primary: 12 45% 46%;
-    --primary-foreground: 38 46% 96%;
+    --primary: 188 45% 42%;
+    --primary-foreground: 222 22% 10%;
 
-    --secondary: 35 15% 25%;
-    --secondary-foreground: 38 30% 90%;
+    --secondary: 223 22% 24%;
+    --secondary-foreground: 42 28% 92%;
 
-    --muted: 25 15% 20%;
-    --muted-foreground: 38 15% 65%;
+    --muted: 223 18% 17%;
+    --muted-foreground: 42 12% 68%;
 
-    --accent: 25 15% 20%;
-    --accent-foreground: 38 30% 90%;
+    --accent: 198 25% 18%;
+    --accent-foreground: 42 28% 92%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
 
-    --color-gold: #c9860a;
+    --color-gold: #d2a23a;
   }
 }
 
@@ -155,16 +155,16 @@
    * and black. This strip recreates that rhythm as a thin SVG tile.
    *
    * Tile: 48 × 14 px
-   *   – dark maroon ground  (#110200)
-   *   – gold edge lines     (#c9860a)
-   *   – red diamond body    (#872220)
-   *   – gold diamond centre (#c9860a)
+   *   – deep indigo ground  (#11202a)
+   *   – gold edge lines     (#d2a23a)
+   *   – cyan diamond body   (#1a5f6b)
+   *   – gold diamond centre (#d2a23a)
    */
   .xilankapu-strip {
     height: 14px;
     width: 100%;
     flex-shrink: 0;
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='14'><rect width='48' height='14' fill='%23110200'/><rect width='48' height='1.2' fill='%23c9860a'/><rect y='12.8' width='48' height='1.2' fill='%23c9860a'/><polygon points='24,2 47,7 24,12 1,7' fill='%23872220' stroke='%23c9860a' stroke-width='1'/><polygon points='24,5 37,7 24,9 11,7' fill='%23c9860a'/></svg>");
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='14'><rect width='48' height='14' fill='%2311202a'/><rect width='48' height='1.2' fill='%23d2a23a'/><rect y='12.8' width='48' height='1.2' fill='%23d2a23a'/><polygon points='24,2 47,7 24,12 1,7' fill='%231a5f6b' stroke='%23d2a23a' stroke-width='1'/><polygon points='24,5 37,7 24,9 11,7' fill='%23d2a23a'/></svg>");
     background-repeat: repeat-x;
     background-size: 48px 14px;
   }

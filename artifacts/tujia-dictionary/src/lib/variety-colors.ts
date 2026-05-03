@@ -4,10 +4,10 @@ export function varietyColor(variety: string): string {
 
 export function varietyBgClass(variety: string): string {
   return variety === "southern"
-    ? "bg-teal-50 text-teal-800 border-teal-200 dark:bg-teal-950 dark:text-teal-200 dark:border-teal-800"
+    ? "bg-cyan-50 text-cyan-800 border-cyan-200 dark:bg-cyan-950 dark:text-cyan-200 dark:border-cyan-800"
     : "bg-primary/10 text-primary border-primary/20";
 }
 
 export function varietyDotClass(variety: string): string {
-  return variety === "southern" ? "bg-teal-500" : "bg-primary";
+  return variety === "southern" ? "bg-cyan-500" : "bg-primary";
 }

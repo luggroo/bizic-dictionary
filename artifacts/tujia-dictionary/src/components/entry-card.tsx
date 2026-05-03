@@ -16,7 +16,7 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
   return (
     <Link href={`/entry/${entry.id}`}>
       <Card className="h-full cursor-pointer hover:border-primary/30 hover:shadow-md transition-all duration-300 group overflow-hidden relative">
-        {/* Left accent bar — terracotta for Northern, teal for Southern */}
+        {/* Left accent bar — deep blue for Northern, cyan for Southern */}
         <div className="absolute top-0 left-0 w-1 h-full bg-primary/0 group-hover:bg-primary transition-colors" />
         <CardContent className="p-6">
           {/* Header row */}
