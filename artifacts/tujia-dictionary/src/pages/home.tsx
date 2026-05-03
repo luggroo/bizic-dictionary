@@ -19,13 +19,13 @@ const MODE_OPTIONS = [
 export default function Home() {
   const { data: stats, isLoading } = useGetDictionaryStats();
   const { t } = useI18n();
-  const [modes, setModes] = useState<string[]>(["tujia-to-gloss"]);
+  const [modes, setModes] = useState<string[]>(["gloss-to-tujia", "english-to-tujia"]);
 
   const toggleMode = (value: string) => {
     setModes((current) => {
       if (current.includes(value)) {
         const next = current.filter((item) => item !== value);
-        return next.length > 0 ? next : ["tujia-to-gloss"];
+        return next.length > 0 ? next : ["gloss-to-tujia", "english-to-tujia"];
       }
       return [...current, value];
     });
