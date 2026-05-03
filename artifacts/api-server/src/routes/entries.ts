@@ -189,7 +189,12 @@ router.get("/entries/stats", async (req, res): Promise<void> => {
   const [northernRow] = await db.select({ count: sql<number>`count(*)::int` }).from(entriesTable).where(eq(entriesTable.variety, "northern"));
   const [southernRow] = await db.select({ count: sql<number>`count(*)::int` }).from(entriesTable).where(eq(entriesTable.variety, "southern"));
   const languages = await db.select().from(languagesTable).orderBy(asc(languagesTable.sortOrder));
-  const recentRaw = await db.select().from(entriesTable).orderBy(desc(entriesTable.createdAt)).limit(6);
+  const recentRaw = await db
+    .select()
+    .from(entriesTable)
+    .where(sql`exists (select 1 from translations zh where zh.entry_id = ${entriesTable.id} and zh.language_code = 'zh')`)
+    .orderBy(desc(entriesTable.createdAt))
+    .limit(6);
   const recentEntries = await Promise.all(recentRaw.map(async (e) => toSummary(e, await buildPrimaryTranslations(e.id, e.partOfSpeech))));
   res.json(GetDictionaryStatsResponse.parse({ totalEntries: totalEntries.count, totalLanguages: totalLanguages.count, totalTranslations: totalTranslations.count, totalCategories: categoriesResult.length, northernCount: northernRow?.count ?? 0, southernCount: southernRow?.count ?? 0, languages, recentEntries }));
 });
