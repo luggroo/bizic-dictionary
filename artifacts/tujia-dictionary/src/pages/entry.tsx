@@ -6,7 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { ArrowLeft, BookOpen, Globe2, Quote } from "lucide-react";
+import { ArrowLeft, BookMarked, BookOpen, Globe2, Quote } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
 import { varietyBgClass, varietyColor } from "@/lib/variety-colors";
 
@@ -317,6 +317,24 @@ export default function EntryDetail() {
                   <dd className="font-medium text-foreground">{entry.translations.length}</dd>
                 </div>
               </dl>
+
+              {entry.source && (
+                <div className="mt-5 pt-4 border-t border-border/40">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2 flex items-center gap-1.5">
+                    <BookMarked className="w-3.5 h-3.5" /> Source
+                  </p>
+                  <p className="text-xs text-muted-foreground leading-relaxed italic">
+                    {entry.source.split(" / ").map((src, i) => (
+                      <span key={i} className="block">
+                        {entry.source!.split(" / ").length > 1 && (
+                          <span className="not-italic text-muted-foreground/60 mr-1">·</span>
+                        )}
+                        {src}
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              )}
             </div>
 
             {/* Related Entries */}

@@ -17,5 +17,7 @@ export interface EntrySummary {
   forms: TujiaForms;
   partOfSpeech?: string | null;
   category?: string | null;
+  /** Academic source citation(s), e.g. 'Tian 86' or 'Sun H 91 ZMYY / Brassett 04 Tujia' */
+  source?: string | null;
   primaryTranslations: EntrySummaryPrimaryTranslations;
 }

@@ -287,6 +287,10 @@ components:
         category:
           type: string
           nullable: true
+        source:
+          type: string
+          nullable: true
+          description: "Academic source citation(s), e.g. 'Tian 86' or 'Sun H 91 ZMYY / Brassett 04 Tujia'"
         primaryTranslations:
           type: object
           additionalProperties:
@@ -313,6 +317,10 @@ components:
         category:
           type: string
           nullable: true
+        source:
+          type: string
+          nullable: true
+          description: "Academic source citation(s), e.g. 'Tian 86' or 'Sun H 91 ZMYY / Brassett 04 Tujia'"
         exampleSentence:
           type: string
           nullable: true

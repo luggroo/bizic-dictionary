@@ -104,6 +104,12 @@ export const ListEntriesResponse = zod.object({
         ),
       partOfSpeech: zod.string().nullish(),
       category: zod.string().nullish(),
+      source: zod
+        .string()
+        .nullish()
+        .describe(
+          "Academic source citation(s), e.g. 'Tian 86' or 'Sun H 91 ZMYY \/ Brassett 04 Tujia'",
+        ),
       primaryTranslations: zod.record(zod.string(), zod.string()),
     }),
   ),
@@ -168,6 +174,12 @@ export const GetDictionaryStatsResponse = zod.object({
         ),
       partOfSpeech: zod.string().nullish(),
       category: zod.string().nullish(),
+      source: zod
+        .string()
+        .nullish()
+        .describe(
+          "Academic source citation(s), e.g. 'Tian 86' or 'Sun H 91 ZMYY \/ Brassett 04 Tujia'",
+        ),
       primaryTranslations: zod.record(zod.string(), zod.string()),
     }),
   ),
@@ -220,6 +232,12 @@ export const GetEntryResponse = zod.object({
     ),
   partOfSpeech: zod.string().nullish(),
   category: zod.string().nullish(),
+  source: zod
+    .string()
+    .nullish()
+    .describe(
+      "Academic source citation(s), e.g. 'Tian 86' or 'Sun H 91 ZMYY \/ Brassett 04 Tujia'",
+    ),
   exampleSentence: zod.string().nullish(),
   exampleTranslation: zod.string().nullish(),
   culturalNote: zod.string().nullish(),
@@ -276,6 +294,12 @@ export const GetRelatedEntriesResponseItem = zod.object({
     ),
   partOfSpeech: zod.string().nullish(),
   category: zod.string().nullish(),
+  source: zod
+    .string()
+    .nullish()
+    .describe(
+      "Academic source citation(s), e.g. 'Tian 86' or 'Sun H 91 ZMYY \/ Brassett 04 Tujia'",
+    ),
   primaryTranslations: zod.record(zod.string(), zod.string()),
 });
 export const GetRelatedEntriesResponse = zod.array(

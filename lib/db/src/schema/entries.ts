@@ -38,6 +38,8 @@ export const entriesTable = pgTable("entries", {
   exampleSentence: text("example_sentence"),
   exampleTranslation: text("example_translation"),
   culturalNote: text("cultural_note"),
+  // Academic source citation(s) from STEDT or other datasets
+  source: text("source"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   updatedAt: timestamp("updated_at", { withTimezone: true }).notNull().defaultNow().$onUpdate(() => new Date()),
 });

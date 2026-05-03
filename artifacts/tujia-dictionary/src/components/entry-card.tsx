@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { varietyBgClass, varietyDotClass } from "@/lib/variety-colors";
 import { useI18n } from "@/lib/i18n-context";
+import { BookMarked } from "lucide-react";
 
 export function EntryCard({ entry }: { entry: EntrySummary }) {
   const { t } = useI18n();
@@ -69,6 +70,13 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
               </p>
             )}
           </div>
+
+          {entry.source && (
+            <div className="mt-5 pt-4 border-t border-border/40 flex items-center gap-1.5 text-xs text-muted-foreground/70">
+              <BookMarked className="w-3 h-3 shrink-0" />
+              <span className="truncate italic">{entry.source}</span>
+            </div>
+          )}
         </CardContent>
       </Card>
     </Link>
