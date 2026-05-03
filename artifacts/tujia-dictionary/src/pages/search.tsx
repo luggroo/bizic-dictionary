@@ -22,7 +22,7 @@ const SOURCE_OPTIONS = [
 
 export default function Search() {
   const searchString = useSearch();
-  const searchParams = new URLSearchParams(searchString);
+  const searchParams = useMemo(() => new URLSearchParams(searchString), [searchString]);
   const q = searchParams.get("q") || "";
   const { t } = useI18n();
 
