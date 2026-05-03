@@ -159,6 +159,8 @@ async function getZhou2020Rows() {
 async function rankedSearch(q: string): Promise<number[]> {
   const term = q.trim();
   if (!term) return [];
+  const normalized = term.toLowerCase();
+  const stem = normalized.replace(/(?:ing|ed|es|s)$/u, "");
   if (term.length < 3) {
     const rows = await db.execute(sql`
       SELECT DISTINCT e.id
@@ -173,6 +175,30 @@ async function rankedSearch(q: string): Promise<number[]> {
   }
   const rows = await db.execute(sql`
     WITH
+    exact_hits AS (
+      SELECT e.id AS entry_id, 100.0::float AS score
+      FROM entries e
+      WHERE lower(e.tujia_word) = ${normalized}
+         OR lower(coalesce(e.ipa, '')) = ${normalized}
+         OR EXISTS (
+           SELECT 1
+           FROM translations t
+           WHERE t.entry_id = e.id
+             AND lower(t.text) = ${normalized}
+         )
+    ),
+    stem_hits AS (
+      SELECT e.id AS entry_id, 80.0::float AS score
+      FROM entries e
+      WHERE lower(e.tujia_word) LIKE ${stem + '%'}
+         OR lower(coalesce(e.ipa, '')) LIKE ${stem + '%'}
+         OR EXISTS (
+           SELECT 1
+           FROM translations t
+           WHERE t.entry_id = e.id
+             AND lower(t.text) LIKE ${stem + '%'}
+         )
+    ),
     fts AS (
       SELECT t.entry_id, MAX(ts_rank_cd(to_tsvector('english', t.text), websearch_to_tsquery('english', ${term}))) AS fts_rank
       FROM translations t
@@ -193,17 +219,20 @@ async function rankedSearch(q: string): Promise<number[]> {
         OR t.text ILIKE ${'%' + term + '%'}
     ),
     all_hits AS (
-      SELECT entry_id FROM fts
-      UNION SELECT entry_id FROM trgm
-      UNION SELECT entry_id FROM ilike_hits
+      SELECT entry_id, score FROM exact_hits
+      UNION ALL
+      SELECT entry_id, score FROM stem_hits
+      UNION ALL
+      SELECT entry_id, COALESCE(fts_rank, 0.0) * 3.0 AS score FROM fts
+      UNION ALL
+      SELECT entry_id, COALESCE(trgm_score, 0.0) * 2.0 AS score FROM trgm
+      UNION ALL
+      SELECT entry_id, COALESCE(ilike_score, 0.0) AS score FROM ilike_hits
     ),
     scored AS (
-      SELECT h.entry_id,
-        COALESCE(f.fts_rank, 0.0) * 3.0 + COALESCE(t.trgm_score, 0.0) * 2.0 + COALESCE(i.ilike_score, 0.0) AS score
-      FROM all_hits h
-      LEFT JOIN fts f ON f.entry_id = h.entry_id
-      LEFT JOIN trgm t ON t.entry_id = h.entry_id
-      LEFT JOIN ilike_hits i ON i.entry_id = h.entry_id
+      SELECT entry_id, MAX(score) AS score
+      FROM all_hits
+      GROUP BY entry_id
     )
     SELECT entry_id, score FROM scored ORDER BY score DESC LIMIT 2000
   `);
