@@ -18,6 +18,24 @@ function normalizePartOfSpeech(value: string | null | undefined): string {
   return (value ?? "").trim().toLowerCase();
 }
 
+function normalizeChineseTranslation(entryId: number, languageCode: string, text: string): string {
+  if (languageCode !== "zh") return text;
+  const fixes: Record<number, string> = {
+    9345: "阴天",
+    10767: "天",
+    10808: "天",
+    11030: "天",
+    7425: "句末助词",
+    7422: "否定动词后缀",
+    7409: "男性性别后缀",
+    7410: "小称后缀",
+    7413: "复数后缀",
+    7414: "处所后缀",
+    7420: "相关名词后缀",
+  };
+  return fixes[entryId] ?? text;
+}
+
 function selectChineseTranslations(translations: Array<{ languageCode: string; text: string; notes?: string | null }>, partOfSpeech: string | null | undefined): string[] {
   const zhTranslations = translations.filter((t) => t.languageCode === "zh");
   if (zhTranslations.length === 0) return [];
@@ -43,7 +61,7 @@ async function buildPrimaryTranslations(entryId: number, partOfSpeech?: string |
     .where(eq(translationsTable.entryId, entryId));
   const map: Record<string, string> = {};
   const zh = selectChineseTranslations(translations, partOfSpeech);
-  if (zh.length > 0) map.zh = zh.join(" | ");
+  if (zh.length > 0) map.zh = zh.map((text) => normalizeChineseTranslation(entryId, "zh", text)).join(" | ");
   for (const t of translations) {
     if (t.languageCode === "zh") continue;
     if (!map[t.languageCode]) map[t.languageCode] = t.text;
