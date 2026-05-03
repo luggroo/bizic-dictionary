@@ -205,7 +205,7 @@ const strings: Record<UILang, Strings> = {
     footerTagline: "留住土家语的声音",
     footerDesc: "一个记录、整理与传递土家语言文化的数字词典。",
     recentlyPreserved: "最新收录",
-    randomEntries: "随机土家词条",
+    randomEntries: "随便一学",
     viewAllEntries: "查看全部词条 →",
     aboutEntry: "关于此词条",
     noRelated: "未找到相关词汇。",
