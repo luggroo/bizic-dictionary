@@ -39,6 +39,22 @@ function getChineseTranslations(translations: Translation[], partOfSpeech?: stri
   return preferred.length > 0 ? preferred : zh;
 }
 
+function getChinesePartOfSpeech(partOfSpeech?: string | null) {
+  const pos = (partOfSpeech ?? "").trim().toLowerCase();
+  if (!pos) return "";
+  if (pos.includes("noun")) return "名词";
+  if (pos.includes("verb")) return "动词";
+  if (pos.includes("adj")) return "形容词";
+  if (pos.includes("adv")) return "副词";
+  if (pos.includes("pron")) return "代词";
+  if (pos.includes("prep")) return "介词";
+  if (pos.includes("conj")) return "连词";
+  if (pos.includes("intj")) return "感叹词";
+  if (pos.includes("num")) return "数词";
+  if (pos.includes("part")) return "助词";
+  return partOfSpeech ?? "";
+}
+
 interface CognateGroup {
   groupId: number;
   wiktionaryNo?: number | null;
@@ -90,6 +106,8 @@ export default function EntryDetail() {
   const isBrassett = /Brassett 04 Tujia|Brassett 06 Tujia/.test(entry?.source ?? "");
   const displayNotation = isBrassett ? "pinyin" : notation;
   const notationLabel = isBrassett ? "拼音" : "国际音标";
+  const partOfSpeech = entry?.partOfSpeech ?? "";
+  const partOfSpeechZh = getChinesePartOfSpeech(partOfSpeech);
   const cognates = ((entry as typeof entry & { cognates?: CognateGroup[] })?.cognates ?? []) as CognateGroup[];
   const hasAudio = entry ? hasAudioAsset(entry.id, entry.tujiaWord) : false;
 
@@ -168,7 +186,7 @@ export default function EntryDetail() {
                     {entry.dialect ? ` · ${entry.dialect}` : ""}
                   </Badge>
                 )}
-                {entry.partOfSpeech && <Badge variant="secondary">{entry.partOfSpeech}</Badge>}
+                {partOfSpeech && <Badge variant="secondary">{partOfSpeechZh ? `词性：${partOfSpeechZh} · ${partOfSpeech}` : `词性：${partOfSpeech}`}</Badge>}
                 {displayNotation && <span className={displayNotation === "ipa" ? "notation-ipa" : "notation-pinyin"}>{notationLabel}</span>}
               </div>
               {chineseTranslations.length > 0 && (

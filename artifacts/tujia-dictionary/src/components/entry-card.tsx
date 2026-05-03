@@ -8,11 +8,28 @@ import { useI18n } from "@/lib/i18n-context";
 import { BookMarked } from "lucide-react";
 import { detectNotation, NOTATION_LABEL } from "@/lib/notation";
 
+function getChinesePartOfSpeech(partOfSpeech?: string | null) {
+  const pos = (partOfSpeech ?? "").trim().toLowerCase();
+  if (!pos) return "";
+  if (pos.includes("noun")) return "名词";
+  if (pos.includes("verb")) return "动词";
+  if (pos.includes("adj")) return "形容词";
+  if (pos.includes("adv")) return "副词";
+  if (pos.includes("pron")) return "代词";
+  if (pos.includes("prep")) return "介词";
+  if (pos.includes("conj")) return "连词";
+  if (pos.includes("intj")) return "感叹词";
+  if (pos.includes("num")) return "数词";
+  if (pos.includes("part")) return "助词";
+  return partOfSpeech ?? "";
+}
+
 export function EntryCard({ entry }: { entry: EntrySummary }) {
   const { t } = useI18n();
   const translations = Object.entries(entry.primaryTranslations);
   const chineseTranslations = entry.primaryTranslations.zh ? entry.primaryTranslations.zh.split("; ").map((text) => text.trim()).filter(Boolean) : [];
   const notation = detectNotation(entry.tujiaWord);
+  const partOfSpeechZh = getChinesePartOfSpeech(entry.partOfSpeech);
 
   return (
     <Link href={`/entry/${entry.id}`}>
@@ -49,7 +66,7 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
               )}
               {entry.partOfSpeech && (
                 <Badge variant="outline" className="bg-muted/50 text-xs font-normal capitalize">
-                  {entry.partOfSpeech}
+                  {partOfSpeechZh ? `词性：${partOfSpeechZh} · ${entry.partOfSpeech}` : `词性：${entry.partOfSpeech}`}
                 </Badge>
               )}
             </div>
