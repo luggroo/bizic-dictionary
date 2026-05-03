@@ -122,11 +122,11 @@ export default function Zhou2020Page() {
         {/* ── Header ── */}
         <div className="mb-8">
           <h1 className="text-3xl md:text-4xl font-serif text-foreground mb-2">
-            {isZh ? "周煜楼 (2020)：原始比兹语研究" : "Zhou (2020): Proto-Bizic"}
+            {isZh ? "周煜楼 (2020)：原始毕兹语研究" : "Zhou (2020): Proto-Bizic"}
           </h1>
           <p className="text-muted-foreground text-sm max-w-3xl">
             {isZh
-              ? "周煜楼（Yulou Zhou）：《原始比兹语：土家语历史音韵学研究》，斯坦福大学荣誉学士论文，2020年。"
+              ? "周煜楼（Yulou Zhou）：《原始毕兹语：土家语历史音韵学研究》，斯坦福大学荣誉学士论文，2020年。"
               : "Yulou Zhou. \"Proto-Bizic: A Study of Tujia Historical Phonology.\" Stanford University Honors Thesis, 2020."}
           </p>
         </div>
@@ -142,7 +142,7 @@ export default function Zhou2020Page() {
             </h2>
             <p className="text-sm text-foreground/85 leading-relaxed">
               {isZh
-                ? "本研究重构了原始比兹语（Bizic/土家语）的音韵系统，该语系属于藏缅语系，主要分布于湘西地区。研究使用北部土家语四个方言点和南部土家语两个方言点，重构了28个声母、15个韵母和6个声调，形成包含350个词条的词汇表。本文还讨论了比兹语在藏缅语系中的系统归属。"
+                ? "本研究重构了原始毕兹语（Bizic/土家语）的音韵系统，该语系属于藏缅语系，主要分布于湘西地区。研究使用北部土家语四个方言点和南部土家语两个方言点，重构了28个声母、15个韵母和6个声调，形成包含350个词条的词汇表。本文还讨论了毕兹语在藏缅语系中的系统归属。"
                 : "This study reconstructs the phonology of Proto-Bizic, the lowest ancestor language of the Bizic (Tujia) languages, a branch of the Tibetan-Burman languages spoken mainly in Western Hunan. This reconstruction uses four data points of Northern Tujia (tji) and two data points of Southern Tujia (tjs). 28 initials, 15 finals, 6 tones are reconstructed in a lexicon of 350 items. This study also discusses Bizic's placement under Tibeto-Burman."}
             </p>
             <div className="mt-3 pt-3 border-t border-border/40 text-xs text-muted-foreground space-y-1">
