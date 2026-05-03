@@ -226,7 +226,7 @@ export default function EntryDetail() {
                     {entry.dialect ? ` · ${entry.dialect}` : ""}
                   </Badge>
                 )}
-                {partOfSpeech && <Badge variant="secondary">{partOfSpeechZh ? `词性：${partOfSpeechZh} · ${partOfSpeech}` : `词性：${partOfSpeech}`}</Badge>}
+                {partOfSpeech && <Badge variant="secondary">{partOfSpeechZh ? `${partOfSpeechZh} · ${partOfSpeech}` : partOfSpeech}</Badge>}
                 {displayNotation && <span className={displayNotation === "ipa" ? "notation-ipa" : "notation-pinyin"}>{notationLabel}</span>}
               </div>
               {chineseTranslations.length > 0 && (

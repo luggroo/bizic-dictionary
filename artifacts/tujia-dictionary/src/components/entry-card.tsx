@@ -106,7 +106,7 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
               )}
               {entry.partOfSpeech && (
                 <Badge variant="outline" className="bg-muted/50 text-xs font-normal capitalize">
-                  {partOfSpeechZh ? `词性：${partOfSpeechZh} · ${entry.partOfSpeech}` : `词性：${entry.partOfSpeech}`}
+                  {partOfSpeechZh ? `${partOfSpeechZh} · ${entry.partOfSpeech}` : entry.partOfSpeech}
                 </Badge>
               )}
             </div>
