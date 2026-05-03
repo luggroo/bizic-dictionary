@@ -94,7 +94,7 @@ export default function Search() {
           <div className="mb-6">
             <h1 className="text-3xl font-serif text-foreground mb-4">{t.searchTitle}</h1>
             <div className="rounded-lg border bg-background px-4 py-3 text-sm text-muted-foreground">
-              {t.searchingIn}: <span className="font-medium text-foreground">Tujia → English/Chinese</span>
+              {t.searchingIn}
             </div>
           </div>
 
@@ -170,7 +170,6 @@ export default function Search() {
               {hasActiveFilters && (
                 <div className="flex flex-wrap gap-2">
                   {q && <Badge variant="secondary">"{q}"</Badge>}
-                  <Badge variant="secondary">Tujia → English/Chinese</Badge>
                   {variety && <Badge variant="secondary">{variety === "northern" ? t.northern : t.southern}</Badge>}
                   {dialect && <Badge variant="secondary">{dialect}</Badge>}
                 </div>

@@ -116,7 +116,7 @@ const strings: Record<UILang, Strings> = {
     partOfSpeech: "Part of speech",
     searchTitle: "Dictionary Search",
     searchingIn: "Searching in",
-    searchLanguageTujiaGloss: "Tujia → Chinese/English",
+    searchLanguageTujiaGloss: "",
     allCategories: "All Categories",
     allVarieties: "All Varieties",
     allSources: "All Sources",
