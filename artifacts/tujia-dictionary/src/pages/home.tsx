@@ -1,4 +1,4 @@
-import React, { cloneElement, type ReactElement } from "react";
+import React from "react";
 import { Link } from "wouter";
 import { useGetDictionaryStats } from "@workspace/api-client-react";
 import { Layout } from "@/components/layout";
@@ -86,7 +86,7 @@ function StatCard({ icon, label, value }: { icon: React.ReactNode; label: string
     <Card className="bg-background border-border/50 shadow-sm hover:border-primary/20 transition-colors">
       <CardContent className="p-6 flex flex-col items-center text-center space-y-2">
         <div className="text-secondary/80 mb-2">
-          {cloneElement(icon as ReactElement, { size: 28, strokeWidth: 1.5 })}
+          {icon}
         </div>
         <div className="text-3xl font-serif text-foreground">{value}</div>
         <div className="text-sm text-muted-foreground uppercase tracking-wider font-medium">{label}</div>

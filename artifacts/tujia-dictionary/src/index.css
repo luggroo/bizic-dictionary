@@ -51,67 +51,67 @@
 
 @layer base {
   :root {
-    --background: 42 35% 97%;
-    --foreground: 220 18% 16%;
-    --border: 40 18% 86%;
-    --input: 40 18% 86%;
-    --ring: 188 48% 34%;
+    --background: 36 40% 98%;
+    --foreground: 18 18% 16%;
+    --border: 18 18% 88%;
+    --input: 18 18% 88%;
+    --ring: 356 56% 38%;
 
-    --card: 42 35% 99%;
-    --card-foreground: 220 18% 16%;
-    --card-border: 40 18% 89%;
+    --card: 36 40% 99%;
+    --card-foreground: 18 18% 16%;
+    --card-border: 18 18% 91%;
 
-    --popover: 42 35% 99%;
-    --popover-foreground: 220 18% 16%;
-    --popover-border: 40 18% 89%;
+    --popover: 36 40% 99%;
+    --popover-foreground: 18 18% 16%;
+    --popover-border: 18 18% 91%;
 
-    --primary: 188 48% 34%;
-    --primary-foreground: 42 35% 97%;
+    --primary: 356 56% 38%;
+    --primary-foreground: 36 40% 98%;
 
-    --secondary: 223 28% 29%;
-    --secondary-foreground: 42 35% 97%;
+    --secondary: 18 22% 26%;
+    --secondary-foreground: 36 40% 98%;
 
-    --muted: 42 20% 91%;
-    --muted-foreground: 220 10% 42%;
+    --muted: 36 18% 94%;
+    --muted-foreground: 18 10% 42%;
 
-    --accent: 198 38% 90%;
-    --accent-foreground: 220 18% 16%;
+    --accent: 356 35% 93%;
+    --accent-foreground: 18 18% 16%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --radius: 0.5rem;
 
-    --color-southern: #0f766e;
+    --color-southern: #8b1e3f;
     --color-gold: #b58a2a;
   }
 
   .dark {
-    --background: 222 22% 10%;
-    --foreground: 42 28% 92%;
-    --border: 223 14% 22%;
-    --input: 223 14% 22%;
-    --ring: 188 45% 42%;
+    --background: 18 14% 10%;
+    --foreground: 36 34% 94%;
+    --border: 18 10% 22%;
+    --input: 18 10% 22%;
+    --ring: 356 50% 48%;
 
-    --card: 222 20% 13%;
-    --card-foreground: 42 28% 92%;
-    --card-border: 223 14% 20%;
+    --card: 18 14% 13%;
+    --card-foreground: 36 34% 94%;
+    --card-border: 18 10% 20%;
 
-    --popover: 222 20% 13%;
-    --popover-foreground: 42 28% 92%;
-    --popover-border: 223 14% 20%;
+    --popover: 18 14% 13%;
+    --popover-foreground: 36 34% 94%;
+    --popover-border: 18 10% 20%;
 
-    --primary: 188 45% 42%;
-    --primary-foreground: 222 22% 10%;
+    --primary: 356 50% 48%;
+    --primary-foreground: 36 40% 98%;
 
-    --secondary: 223 22% 24%;
-    --secondary-foreground: 42 28% 92%;
+    --secondary: 18 14% 24%;
+    --secondary-foreground: 36 34% 94%;
 
-    --muted: 223 18% 17%;
-    --muted-foreground: 42 12% 68%;
+    --muted: 18 14% 18%;
+    --muted-foreground: 36 14% 68%;
 
-    --accent: 198 25% 18%;
-    --accent-foreground: 42 28% 92%;
+    --accent: 356 22% 18%;
+    --accent-foreground: 36 34% 94%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 100%;
@@ -133,43 +133,28 @@
 }
 
 @layer utilities {
-  /* Noise texture overlay */
   .noise-bg {
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
     pointer-events: none;
     z-index: 50;
-    opacity: 0.03;
+    opacity: 0.02;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
   }
   .dark .noise-bg {
     opacity: 0.02;
   }
 
-  /*
-   * Xilankapu (西兰卡普) decorative border strip.
-   *
-   * Xilankapu is the traditional hand-woven brocade of the Tujia people,
-   * characterised by repeating geometric diamond motifs in deep red, gold,
-   * and black. This strip recreates that rhythm as a thin SVG tile.
-   *
-   * Tile: 48 × 14 px
-   *   – deep indigo ground  (#11202a)
-   *   – gold edge lines     (#d2a23a)
-   *   – cyan diamond body   (#1a5f6b)
-   *   – gold diamond centre (#d2a23a)
-   */
   .xilankapu-strip {
     height: 14px;
     width: 100%;
     flex-shrink: 0;
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='14'><rect width='48' height='14' fill='%2311202a'/><rect width='48' height='1.2' fill='%23d2a23a'/><rect y='12.8' width='48' height='1.2' fill='%23d2a23a'/><polygon points='24,2 47,7 24,12 1,7' fill='%231a5f6b' stroke='%23d2a23a' stroke-width='1'/><polygon points='24,5 37,7 24,9 11,7' fill='%23d2a23a'/></svg>");
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='14'><rect width='48' height='14' fill='%23f7f4ef'/><rect width='48' height='1.2' fill='%23b58a2a'/><rect y='12.8' width='48' height='1.2' fill='%23b58a2a'/><polygon points='24,2 47,7 24,12 1,7' fill='%238b1e3f' stroke='%23b58a2a' stroke-width='1'/><polygon points='24,5 37,7 24,9 11,7' fill='%23b58a2a'/></svg>");
     background-repeat: repeat-x;
     background-size: 48px 14px;
   }
 
-  /* Notation type badges */
   .notation-ipa {
     font-family: var(--font-mono);
     font-size: 0.65rem;
