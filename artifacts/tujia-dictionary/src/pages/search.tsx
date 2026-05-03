@@ -45,7 +45,7 @@ export default function Search() {
       try {
         const params = new URLSearchParams();
         if (q) params.set("q", q);
-        if (searchMode.includes("gloss-to-tujia")) params.set("language", "zh");
+        if (mode.includes("gloss-to-tujia")) params.set("language", "zh");
         if (variety) params.set("variety", variety);
         if (dialect) params.set("dialect", dialect);
         params.set("page", String(page));
