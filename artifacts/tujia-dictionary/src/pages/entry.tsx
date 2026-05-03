@@ -171,7 +171,7 @@ export default function EntryDetail() {
               </div>
               {chineseTranslations.length > 0 && (
                 <div className="space-y-2 text-base sm:text-lg text-muted-foreground mb-6">
-                  <p>汉：{chineseTranslations.map((translation) => translation.text).join("；")}</p>
+                  <p className="font-mono leading-relaxed">汉 {chineseTranslations.map((translation) => translation.text).join("；")}</p>
                 </div>
               )}
             </div>

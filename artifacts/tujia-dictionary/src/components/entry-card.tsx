@@ -64,7 +64,7 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
           <div className="space-y-3 mt-6">
             {chineseTranslations.length > 0 && (
               <div className="space-y-1.5">
-                <p className="text-sm text-muted-foreground">汉：{chineseTranslations.join("；")}</p>
+                <p className="text-sm font-mono text-muted-foreground leading-relaxed">汉 {chineseTranslations.join("；")}</p>
               </div>
             )}
             {translations.length > 0 ? (
@@ -73,7 +73,7 @@ export function EntryCard({ entry }: { entry: EntrySummary }) {
                   <span className="text-xs font-mono text-muted-foreground uppercase w-8 pt-0.5">
                     {lang}
                   </span>
-                  <span className="text-foreground flex-1">{text}</span>
+                  <span className="text-foreground flex-1 font-mono leading-relaxed">{text}</span>
                 </div>
               ))
             ) : (
