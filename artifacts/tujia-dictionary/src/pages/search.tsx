@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useLocation, useSearch } from "wouter";
-import { useListEntries, useListLanguages, useListCategories, useListDialects } from "@workspace/api-client-react";
+import { type EntrySummary, useListLanguages, useListCategories, useListDialects } from "@workspace/api-client-react";
 import { Layout } from "@/components/layout";
 import { SearchBar } from "@/components/search-bar";
 import { EntryCard } from "@/components/entry-card";
@@ -54,16 +54,32 @@ export default function Search() {
     return dialectsList.filter(d => d.variety === variety && d.dialect).map(d => d.dialect) as string[];
   }, [dialectsList, variety]);
 
-  const { data, isLoading } = useListEntries({
-    q: q || undefined,
-    language: searchMode.includes("gloss-to-tujia") ? "zh" : undefined,
-    category: category || undefined,
-    variety: variety || undefined,
-    dialect: dialect || undefined,
-    source: source || undefined,
-    page,
-    limit: 12,
-  });
+  const [data, setData] = useState<{ entries: EntrySummary[]; total: number; page: number; limit: number; totalPages: number } | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    const load = async () => {
+      setIsLoading(true);
+      try {
+        const params = new URLSearchParams();
+        if (q) params.set("q", q);
+        if (searchMode.includes("gloss-to-tujia")) params.set("language", "zh");
+        if (category) params.set("category", category);
+        if (variety) params.set("variety", variety);
+        if (dialect) params.set("dialect", dialect);
+        if (source) params.set("source", source);
+        params.set("page", String(page));
+        params.set("limit", "12");
+        const response = await fetch(`/api/entries?${params.toString()}`, { signal: controller.signal });
+        setData(await response.json());
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    load();
+    return () => controller.abort();
+  }, [q, searchMode, category, variety, dialect, source, page]);
 
   const handleFilterChange = (key: string, value: string) => {
     const params = new URLSearchParams(searchString);
