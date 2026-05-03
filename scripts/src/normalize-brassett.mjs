@@ -66,8 +66,19 @@ function normalizeTones(word) {
     const tone = parseInt(toneStr, 10);
     return markNucleus(vowels, tone) + coda;
   });
+  const chars = [...s];
+  let out = "";
+  let atSyllableStart = true;
+  for (let i = 0; i < chars.length; i++) {
+    const ch = chars[i];
+    const isVowel = /[aeiouāáǎàēéěèīíǐìōóǒòūúǔù]/.test(ch);
+    const needsSeparator = !atSyllableStart && (ch === "ā" || ch === "ǎ" || ch === "á" || ch === "à" || ch === "ē" || ch === "é" || ch === "ě" || ch === "è" || ch === "ō" || ch === "ó" || ch === "ǒ" || ch === "ò");
+    if (needsSeparator) out += "'";
+    out += ch;
+    atSyllableStart = !isVowel;
+  }
 
-  return s;
+  return out;
 }
 
 // ── Fetch Brassett entries ─────────────────────────────────────────────────
