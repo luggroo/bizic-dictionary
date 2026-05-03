@@ -6,10 +6,11 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { ArrowLeft, BookMarked, BookOpen, Globe2, Quote } from "lucide-react";
+import { ArrowLeft, BookMarked, BookOpen, Globe2, Quote, Volume2 } from "lucide-react";
 import { useI18n } from "@/lib/i18n-context";
 import { varietyBgClass, varietyColor } from "@/lib/variety-colors";
 import { detectNotation, NOTATION_LABEL } from "@/lib/notation";
+import { hasAudioAsset } from "@/lib/audio";
 
 interface Translation {
   id: number;
@@ -71,6 +72,7 @@ export default function EntryDetail() {
 
   const notation = entry ? detectNotation(entry.tujiaWord) : null;
   const cognates = ((entry as typeof entry & { cognates?: CognateGroup[] })?.cognates ?? []) as CognateGroup[];
+  const hasAudio = entry ? hasAudioAsset(entry.id, entry.tujiaWord) : false;
 
   const { data: relatedEntries, isLoading: isRelatedLoading } = useGetRelatedEntries(entryId, {
     query: { enabled: !!entryId && !!entry?.category, queryKey: getGetRelatedEntriesQueryKey(entryId) },
@@ -120,19 +122,23 @@ export default function EntryDetail() {
   return (
     <Layout>
       <div className="container mx-auto px-4 py-8 max-w-5xl">
-        <Link
-          href="/search"
-          className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-10 group"
-        >
+        <Link href="/search" className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-10 group">
           <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" /> {t.backToDictionary}
         </Link>
 
         <div className="grid lg:grid-cols-4 gap-12">
           <div className="lg:col-span-3 space-y-8">
             <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight mb-4">
-                {entry.tujiaWord}
-              </h1>
+              <div className="flex items-start gap-3 mb-4">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight">
+                  {entry.tujiaWord}
+                </h1>
+                {hasAudio && (
+                  <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full border bg-card text-primary shadow-sm" title="Audio available" aria-label="Audio available">
+                    <Volume2 className="h-4 w-4" />
+                  </span>
+                )}
+              </div>
 
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 {entry.variety && (
