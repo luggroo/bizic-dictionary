@@ -86,7 +86,11 @@ export default function EntryDetail() {
     query: { enabled: !!entryId, queryKey: getGetEntryQueryKey(entryId) },
   });
 
-  const notation = entry ? detectNotation(entry.ipa ?? entry.tujiaWord) : null;
+  const notation = entry
+    ? /Brassett 04 Tujia|Brassett 06 Tujia/.test(entry.source ?? "")
+      ? "pinyin"
+      : detectNotation(entry.ipa ?? entry.tujiaWord)
+    : null;
   const cognates = ((entry as typeof entry & { cognates?: CognateGroup[] })?.cognates ?? []) as CognateGroup[];
   const hasAudio = entry ? hasAudioAsset(entry.id, entry.tujiaWord) : false;
 
