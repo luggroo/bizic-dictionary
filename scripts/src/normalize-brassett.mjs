@@ -41,8 +41,8 @@ function markNucleus(vowels, tone) {
     idx = vowels.indexOf("a");
   } else if (vowels.includes("e")) {
     idx = vowels.indexOf("e");
-  } else if (vowels.length >= 2 && vowels.slice(-2) === "ou") {
-    idx = vowels.length - 2; // ou → mark on o
+  } else if (vowels.length >= 2 && (vowels.slice(-2) === "ou" || vowels.slice(-2) === "uo")) {
+    idx = vowels.length - 1; // ou/uo → mark on o
   } else {
     idx = vowels.length - 1; // mark on last vowel
   }
