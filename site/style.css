@@ -19,3 +19,15 @@
 
 /* Reading controls */
 .spelling-selector{display:flex;align-items:center;gap:8px;font-size:13px;white-space:nowrap}.spelling-selector select{padding:7px 10px;min-width:116px}.notation-form{font-size:17px;line-height:1.6}.notation-compact:empty{display:none}#main>details,#detail-body>details{margin:18px 0;padding:12px 0;border-top:1px solid var(--line,#ddd)}#main>details>summary,#detail-body>details>summary{cursor:pointer;font-weight:600}footer{min-height:40px}.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:600px){header{gap:10px;flex-wrap:wrap}.spelling-selector select{min-width:104px}.metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.metric b{font-size:26px}}
+
+/* Optional media and readable examples without an audio file. */
+[hidden]{display:none!important}
+.media-switch{display:inline-flex;align-items:center;gap:6px;font-size:12px;white-space:nowrap;cursor:pointer}
+.media-switch input{accent-color:#164d45;width:17px;height:17px}
+.shell>header{flex-wrap:wrap;gap:10px}
+.text-only #lyric-follow,.text-only #lyric-speed,.text-only .lyric-toolbar label:has(#lyric-speed),.text-only .lyric-status,.text-only .lyric-anchor,.text-only .lyric-calibration,.text-only [data-lyric-time]{display:none}
+.text-only .lyric-line{cursor:text;pointer-events:none}
+.text-only .lyric-window{max-height:none;overflow:visible}
+.text-only .lyric-row{grid-template-columns:1fr}
+.text-only .lyric-row.is-current{background:transparent}
+@media(max-width:600px){.media-switch{margin-left:auto}.shell>header{height:auto;min-height:56px;padding-top:10px;padding-bottom:10px}}
