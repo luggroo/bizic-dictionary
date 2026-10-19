@@ -47,3 +47,5 @@
 .word-card-actions input{width:17px;height:17px;accent-color:var(--green)}
 .word-card-actions button{min-height:44px;font-size:12px}
 @media(orientation:portrait),(max-width:600px){.word-grid{grid-template-columns:minmax(0,1fr)}}
+
+.comparison-question{padding:16px 0;border-bottom:1px solid var(--line);margin-bottom:12px}.comparison-question p{margin:8px 0;overflow-wrap:anywhere}.comparison-question input{display:block;max-width:100%;width:100%;padding:8px;margin-top:8px}
