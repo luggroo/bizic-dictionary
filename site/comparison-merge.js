@@ -1,7 +1,9 @@
 'use strict';
-const comparisonNorm=v=>String(v??'').normalize('NFC').replace(/\s+/g,'').trim();
+const comparisonNorm=v=>String(v??'').normalize('NFC').replaceAll('／','/').replace(/\s+/g,'').trim();
 function mergeComparisons(data){
- const raw=data.reconstructions;data.reconstructionOriginals=raw;
+ data.reconstructionOriginals=data.reconstructions;
+ // User-reviewed: ? denotes unknown tone; retain it when removing the @ prefix.
+ const raw=data.reconstructions.map(r=>({...r,proto:String(r.proto||'').replace(/@\s*\?/g,'?')}));
  const byId=Object.fromEntries(raw.map(r=>[r.id,r])),joined=raw.filter(r=>r.joinedFrom),components=new Set(joined.flatMap(r=>r.joinedFrom.map(id=>byId[id]?.no).filter(Boolean)));
  const groups=[];for(const r of joined){const g=groups.find(g=>g.base.no===r.no);if(g)g.versions.push(r);else groups.push({base:r,versions:[r]});}
  for(const g of groups){
