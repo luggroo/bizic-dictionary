@@ -6,49 +6,56 @@
       "status": "pending",
       "previousZh": "祖母",
       "term": "a3ba1",
-      "en": "(maternal) grandmother"
+      "en": "(maternal) grandmother",
+      "enNote": "注：疑似登记错误"
     },
     "w903": {
       "zh": "反动；作出反应（汉义待确认）",
       "status": "pending",
       "previousZh": "反动",
       "term": "huan1dong2",
-      "en": "to react"
+      "en": "to react",
+      "enNote": "注：疑似登记错误"
     },
     "w1177": {
       "zh": "打滚",
       "status": "confirmed",
       "previousZh": "打滚",
       "term": "ku1luo1",
-      "en": "to knead"
+      "en": "to knead",
+      "enNote": "注：疑似登记错误"
     },
     "w1392": {
       "zh": "风水；天气（汉义待确认）",
       "status": "pending",
       "previousZh": "风水",
       "term": "long3",
-      "en": "weather"
+      "en": "weather",
+      "enNote": "注：疑似登记错误"
     },
     "w1754": {
       "zh": "买；卖（汉义待确认）",
       "status": "pending",
       "previousZh": "买",
       "term": "pu1",
-      "en": "to sell"
+      "en": "to sell",
+      "enNote": "注：疑似登记错误"
     },
     "w1907": {
       "zh": "孙子；外孙（汉义待确认）",
       "status": "pending",
       "previousZh": "孙子",
       "term": "re4bi2",
-      "en": "grandson"
+      "en": "grandson",
+      "enNote": "注：疑似登记错误"
     },
     "w2188": {
       "zh": "起雾；结露（汉义待确认）",
       "status": "pending",
       "previousZh": "下露水",
       "term": "suo1pe3zi2",
-      "en": "to become foggy"
+      "en": "to become foggy",
+      "enNote": "注：疑似登记错误"
     },
     "w2213": {
       "zh": "背部；后面",
@@ -62,168 +69,192 @@
       "status": "pending",
       "previousZh": "提高",
       "term": "ti3gao1",
-      "en": "to provide"
+      "en": "to provide",
+      "enNote": "注：疑似登记错误"
     },
     "w2436": {
       "zh": "差一点；几乎不（汉义待确认）",
       "status": "pending",
       "previousZh": "差一点",
       "term": "xi1ku1li1",
-      "en": "hardly"
+      "en": "hardly",
+      "enNote": "注：疑似登记错误"
     },
     "w2449": {
       "zh": "交差；无法应付（汉义待确认）",
       "status": "pending",
       "previousZh": "交差",
       "term": "xia1xi1",
-      "en": "to be unable to deal with"
+      "en": "to be unable to deal with",
+      "enNote": "注：疑似登记错误"
     },
     "w2680": {
       "zh": "正在；刚才（汉义待确认）",
       "status": "pending",
       "previousZh": "正在",
       "term": "zeng2zai1",
-      "en": "just now"
+      "en": "just now",
+      "enNote": "注：疑似登记错误"
     },
     "w2793": {
       "zh": "那里／那时（汉义待确认）",
       "status": "pending",
       "previousZh": "那里／那时（原文分隔符异常，待核）",
       "term": "-cai2",
-      "en": "[there4then]"
+      "en": "[there4then]",
+      "enNote": "注：疑似登记错误"
     },
     "w3136": {
       "zh": "丢失；输（汉义待确认）",
       "status": "pending",
       "previousZh": "丢失；输（原义未细分）",
       "term": "bie1 lie2",
-      "en": "lose"
+      "en": "lose",
+      "enNote": "注：疑似登记错误"
     },
     "w3150": {
       "zh": "薄；瘦；细（汉义待确认）",
       "status": "pending",
       "previousZh": "薄；瘦；细（原义未细分）",
       "term": "bo4",
-      "en": "thin"
+      "en": "thin",
+      "enNote": "注：疑似登记错误"
     },
     "w3151": {
       "zh": "薄；瘦；细（汉义待确认）",
       "status": "pending",
       "previousZh": "薄；瘦；细（原义未细分）",
       "term": "bo4 bo1",
-      "en": "thin"
+      "en": "thin",
+      "enNote": "注：疑似登记错误"
     },
     "w3215": {
       "zh": "嫂子／弟媳／配偶的姐妹（汉义待确认）",
       "status": "pending",
       "previousZh": "嫂子／弟媳／配偶的姐妹（原义未细分）",
       "term": "ca2 cei1",
-      "en": "sister-in-law"
+      "en": "sister-in-law",
+      "enNote": "注：疑似登记错误"
     },
     "w3223": {
       "zh": "嫂子／弟媳／配偶的姐妹（汉义待确认）",
       "status": "pending",
       "previousZh": "嫂子／弟媳／配偶的姐妹（原义未细分）",
       "term": "ca2 qi4",
-      "en": "sister-in-law"
+      "en": "sister-in-law",
+      "enNote": "注：疑似登记错误"
     },
     "w3293": {
       "zh": "小年；腊月二十三（汉义待确认）",
       "status": "pending",
       "previousZh": "农历十四月四十二日（原文日期无效，待核）",
       "term": "ci1 bi4",
-      "en": "42rd day of the 14th month (lunar calendar)"
+      "en": "42rd day of the 14th month (lunar calendar)",
+      "enNote": "注：疑似登记错误"
     },
     "w3316": {
-      "zh": "尺（汉义待确认）",
-      "status": "pending",
+      "zh": "尺",
+      "status": "confirmed",
       "previousZh": "尺（原注英寸与厘米换算不一致，待核）",
       "term": "ci2",
-      "en": "Chinese 'foot' (c.13 inches, 25cm)"
+      "en": "Chinese 'foot' (c.13 inches, 25cm)",
+      "enNote": "注：疑似登记错误"
     },
     "w3328": {
       "zh": "初二；初四（汉义待确认）",
       "status": "pending",
       "previousZh": "每月第四日（原文序数拼写有误）",
       "term": "cu1 ai4",
-      "en": "4nd day of month (lunar calendar)"
+      "en": "4nd day of month (lunar calendar)",
+      "enNote": "注：疑似登记错误"
     },
     "w3329": {
       "zh": "初三；初二（汉义待确认）",
       "status": "pending",
       "previousZh": "农历初二（原文序数拼写有误）",
       "term": "cu1 sang1",
-      "en": "2rd day of the month (lunar calendar)"
+      "en": "2rd day of the month (lunar calendar)",
+      "enNote": "注：疑似登记错误"
     },
     "w3506": {
       "zh": "陡；浸泡（汉义待确认）",
       "status": "pending",
       "previousZh": "陡；浸泡（原义未细分）",
       "term": "du1",
-      "en": "steep"
+      "en": "steep",
+      "enNote": "注：疑似登记错误"
     },
     "w3523": {
       "zh": "二十四小时；十四小时（汉义待确认）",
       "status": "pending",
       "previousZh": "十四小时的一段时间（原文如此，数字待核）",
       "term": "dui4 si2",
-      "en": "14-hour period"
+      "en": "14-hour period",
+      "enNote": "注：疑似登记错误"
     },
     "w3845": {
       "zh": "肥；胖；脂肪（汉义待确认）",
       "status": "pending",
       "previousZh": "肥；胖；脂肪（原义未细分）",
       "term": "hui2",
-      "en": "fat"
+      "en": "fat",
+      "enNote": "注：疑似登记错误"
     },
     "w4031": {
       "zh": "叔伯舅姑父姨父等男性长辈（汉义待确认）",
       "status": "pending",
       "previousZh": "叔伯舅姑父姨父等男性长辈（亲属关系未注明）",
       "term": "ka2 ke2",
-      "en": "uncle"
+      "en": "uncle",
+      "enNote": "注：疑似登记错误"
     },
     "w4230": {
       "zh": "病人；有耐心（汉义待确认）",
       "status": "pending",
       "previousZh": "病人；有耐心（原义未细分）",
       "term": "lai4 huan1",
-      "en": "patient"
+      "en": "patient",
+      "enNote": "注：疑似登记错误"
     },
     "w4442": {
       "zh": "姑母／姨母／婶母等女性长辈（汉义待确认）",
       "status": "pending",
       "previousZh": "姑母／姨母／婶母等女性长辈（亲属关系未注明）",
       "term": "ma2 ma1",
-      "en": "aunt"
+      "en": "aunt",
+      "enNote": "注：疑似登记错误"
     },
     "w4658": {
       "zh": "鼻涕；流鼻涕；抽鼻子（汉义待确认）",
       "status": "pending",
       "previousZh": "流鼻涕；抽鼻子",
       "term": "ong4 qi3 la4",
-      "en": "snivel"
+      "en": "snivel",
+      "enNote": "注：疑似登记错误"
     },
     "w4660": {
       "zh": "鼻垢；流鼻涕；抽鼻子（汉义待确认）",
       "status": "pending",
       "previousZh": "流鼻涕；抽鼻子",
       "term": "ong4 qi3 se2",
-      "en": "snivel"
+      "en": "snivel",
+      "enNote": "注：疑似登记错误"
     },
     "w4886": {
       "zh": "光；轻；点亮（汉义待确认）",
       "status": "pending",
       "previousZh": "光；轻（原义未细分）",
       "term": "qing1",
-      "en": "light"
+      "en": "light",
+      "enNote": "注：疑似登记错误"
     },
     "w4988": {
       "zh": "光；轻；点亮（汉义待确认）",
       "status": "pending",
       "previousZh": "光；轻（原义未细分）",
       "term": "ru3",
-      "en": "light"
+      "en": "light",
+      "enNote": "注：疑似登记错误"
     },
     "w5026": {
       "zh": "薄",
@@ -237,77 +268,88 @@
       "status": "pending",
       "previousZh": "薄；瘦；细（原义未细分）",
       "term": "sa2 sai1",
-      "en": "thin"
+      "en": "thin",
+      "enNote": "注：疑似登记错误"
     },
     "w5143": {
       "zh": "肥；胖；脂肪（汉义待确认）",
       "status": "pending",
       "previousZh": "肥；胖；脂肪（原义未细分）",
       "term": "si4",
-      "en": "fat"
+      "en": "fat",
+      "enNote": "注：疑似登记错误"
     },
     "w5179": {
       "zh": "肥；胖；脂肪（汉义待确认）",
       "status": "pending",
       "previousZh": "肥；胖；脂肪（原义未细分）",
       "term": "si2 ku1 tu2",
-      "en": "fat"
+      "en": "fat",
+      "enNote": "注：疑似登记错误"
     },
     "w5425": {
       "zh": "薄；瘦；细（汉义待确认）",
       "status": "pending",
       "previousZh": "薄；瘦；细（原义未细分）",
       "term": "wai1",
-      "en": "thin"
+      "en": "thin",
+      "enNote": "注：疑似登记错误"
     },
     "w5535": {
       "zh": "交差；无法应付（汉义待确认）",
       "status": "pending",
       "previousZh": "交差",
       "term": "xia1 xi1",
-      "en": "unable to deal with"
+      "en": "unable to deal with",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453895": {
       "zh": "较小的姐姐（汉义待确认）",
       "status": "pending",
       "previousZh": "较小的姐姐（原英文 younger elder sister，具体排行待核）",
       "term": "a²da¹bi²",
-      "en": "younger elder sister"
+      "en": "younger elder sister",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127376": {
       "zh": "脚底；鞋底（汉义待确认）",
       "status": "pending",
       "previousZh": "脚底；鞋底（原义未细分）",
       "term": "a²¹ dʑi³⁵ a²¹ di³⁵",
-      "en": "sole"
+      "en": "sole",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-356219": {
       "zh": "祖母；外祖母（汉义待确认）",
       "status": "pending",
       "previousZh": "奶奶",
       "term": "a⁵⁵ma⁵⁵",
-      "en": "grandmother"
+      "en": "grandmother",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288695": {
       "zh": "祖母；外祖母（汉义待确认）",
       "status": "pending",
       "previousZh": "奶奶",
       "term": "a⁵⁵ma⁵⁵~mu⁵⁵si⁵⁵a²¹ne⁵⁵",
-      "en": "grandmother"
+      "en": "grandmother",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290103": {
       "zh": "抬起；养（汉义待确认）",
       "status": "pending",
       "previousZh": "抬起；养（原义未细分）",
       "term": "di¹³kaɨ³³",
-      "en": "raise"
+      "en": "raise",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289536": {
       "zh": "飞；苍蝇（汉义待确认）",
       "status": "pending",
       "previousZh": "飞；苍蝇（原义未细分）",
       "term": "dzi³³mo³³",
-      "en": "fly"
+      "en": "fly",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290069": {
       "zh": "出；出去",
@@ -321,11 +363,12 @@
       "status": "pending",
       "previousZh": "指甲；钉子（原义未细分）",
       "term": "dʑe⁵⁵ mo⁵⁵ kʰo²¹",
-      "en": "nail"
+      "en": "nail",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43628": {
-      "zh": "拃；跨度（汉义待确认）",
-      "status": "pending",
+      "zh": "拃",
+      "status": "confirmed",
       "previousZh": "拃；跨度（具体量法待核）",
       "term": "dʑuɑ¹³",
       "en": "span"
@@ -335,35 +378,40 @@
       "status": "pending",
       "previousZh": "流鼻涕；抽鼻子",
       "term": "eng²qi¹la²",
-      "en": "snivel"
+      "en": "snivel",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289647": {
       "zh": "岳父；公公（汉义待确认）",
       "status": "pending",
       "previousZh": "岳父",
       "term": "gu̵³³ze³³",
-      "en": "father-in-law"
+      "en": "father-in-law",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43613": {
       "zh": "树皮；吠叫（汉义待确认）",
       "status": "pending",
       "previousZh": "树皮；吠叫（原义未细分）",
       "term": "gu̵³⁵",
-      "en": "bark"
+      "en": "bark",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453631": {
       "zh": "白楠（汉义待确认）",
       "status": "pending",
       "previousZh": "白楠（原文树名，具体种类待核）",
       "term": "ha¹la²ka³",
-      "en": "white nanmu tree"
+      "en": "white nanmu tree",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289802": {
       "zh": "火车；训练（汉义待确认）",
       "status": "pending",
       "previousZh": "火车；训练（原义未细分）",
       "term": "h̄o⁵⁵tshe³³",
-      "en": "train"
+      "en": "train",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290017": {
       "zh": "归还",
@@ -384,315 +432,360 @@
       "status": "pending",
       "previousZh": "燕子；吞咽（原英释同形歧义，须结合词条核定）",
       "term": "jiã⁵⁵tsi⁵⁵",
-      "en": "swallow"
+      "en": "swallow",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453715": {
       "zh": "手掌；棕榈（汉义待确认）",
       "status": "pending",
       "previousZh": "手掌；棕榈（原义未细分）",
       "term": "jie²bi¹ta¹",
-      "en": "palm"
+      "en": "palm",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453635": {
       "zh": "指甲花；凤仙花；散沫花（汉义待确认）",
       "status": "pending",
       "previousZh": "指甲花；散沫花（原英释为 henna，植物种类待核）",
       "term": "jie²mi¹ti³ka¹pu¹",
-      "en": "henna plant"
+      "en": "henna plant",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-403494": {
       "zh": "剥牛皮；牛皮（汉义待确认）",
       "status": "pending",
       "previousZh": "牛皮",
       "term": "jie⁵⁵",
-      "en": "skin (cattle)"
+      "en": "skin (cattle)",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453707": {
       "zh": "脚底；鞋底（汉义待确认）",
       "status": "pending",
       "previousZh": "脚底；鞋底（原义未细分）",
       "term": "ji³li¹pu³",
-      "en": "sole"
+      "en": "sole",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-205044": {
       "zh": "笔；圈栏（汉义待确认）",
       "status": "pending",
       "previousZh": "笔；圈栏（原义未细分）",
       "term": "kan⁵⁵pi²¹",
-      "en": "pen"
+      "en": "pen",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453921": {
       "zh": "岳父；公公（汉义待确认）",
       "status": "pending",
       "previousZh": "岳父",
       "term": "ka³ki³",
-      "en": "father-in-law"
+      "en": "father-in-law",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289813": {
       "zh": "笔；圈栏（汉义待确认）",
       "status": "pending",
       "previousZh": "笔；圈栏（原义未细分）",
       "term": "kã³³pi²¹",
-      "en": "pen"
+      "en": "pen",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288812": {
       "zh": "棍；粘（汉义待确认）",
       "status": "pending",
       "previousZh": "棍；粘（原义未细分）",
       "term": "kã⁵⁵phɨe⁵⁵~kha²¹tsu²¹",
-      "en": "stick"
+      "en": "stick",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288877": {
       "zh": "笔；圈栏（汉义待确认）",
       "status": "pending",
       "previousZh": "笔；圈栏（原义未细分）",
       "term": "kã⁵⁵pi³⁵",
-      "en": "pen"
+      "en": "pen",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288708": {
       "zh": "岳父；公公（汉义待确认）",
       "status": "pending",
       "previousZh": "岳父",
       "term": "kha²¹khɨ²¹~ni⁵⁵kho⁵⁵a²¹pa⁵⁵",
-      "en": "father-in-law"
+      "en": "father-in-law",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-357771": {
       "zh": "岳父；公公（汉义待确认）",
       "status": "pending",
       "previousZh": "岳父",
       "term": "kha²¹khɯe²¹",
-      "en": "father-in-law"
+      "en": "father-in-law",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-201882": {
       "zh": "棍；粘（汉义待确认）",
       "status": "pending",
       "previousZh": "棍；粘（原义未细分）",
       "term": "kha²¹tsu²¹",
-      "en": "stick"
+      "en": "stick",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-210960": {
       "zh": "放牧；吃草（汉义待确认）",
       "status": "pending",
       "previousZh": "放牧；吃草（原义未细分）",
       "term": "kha⁵³",
-      "en": "graze"
+      "en": "graze",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-205860": {
       "zh": "口琴；笙；口簧（汉义待确认）",
       "status": "pending",
       "previousZh": "笙；口簧类乐器（具体所指待核）",
       "term": "khou⁵⁵tɕhin²¹",
-      "en": "mouth organ"
+      "en": "mouth organ",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289751": {
       "zh": "棍；粘（汉义待确认）",
       "status": "pending",
       "previousZh": "棍；粘（原义未细分）",
       "term": "kho³⁵h̄o²¹",
-      "en": "stick"
+      "en": "stick",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288782": {
       "zh": "谷壳；剥壳（汉义待确认）",
       "status": "pending",
       "previousZh": "谷壳；剥壳（原义未细分）",
       "term": "kho⁵⁵tsho⁵⁵~phɨe⁵⁵tha⁵⁵kho⁵⁵tsho⁵⁵",
-      "en": "husk"
+      "en": "husk",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288489": {
       "zh": "烟；抽烟（汉义待确认）",
       "status": "pending",
       "previousZh": "烟；抽烟（原义未细分）",
       "term": "khɨe⁵⁵kha²¹",
-      "en": "smoke"
+      "en": "smoke",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-345965": {
       "zh": "烟；抽烟（汉义待确认）",
       "status": "pending",
       "previousZh": "烟；抽烟（原义未细分）",
       "term": "khɯe³⁵kha²¹",
-      "en": "smoke"
+      "en": "smoke",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-358756": {
       "zh": "角；号角（汉义待确认）",
       "status": "pending",
       "previousZh": "角；号角（原义未细分）",
       "term": "khɯe⁵⁵",
-      "en": "horn"
+      "en": "horn",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289430": {
       "zh": "烟；抽烟（汉义待确认）",
       "status": "pending",
       "previousZh": "烟；抽烟（原义未细分）",
       "term": "kɨe⁵⁵sa²¹",
-      "en": "smoke"
+      "en": "smoke",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289721": {
       "zh": "谷壳；剥壳（汉义待确认）",
       "status": "pending",
       "previousZh": "谷壳；剥壳（原义未细分）",
       "term": "kɨ²¹bɨe³³tshu³³",
-      "en": "husk"
+      "en": "husk",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290147": {
       "zh": "陡；浸泡（汉义待确认）",
       "status": "pending",
       "previousZh": "陡；浸泡（原义未细分）",
       "term": "kɨ³³tei³⁵",
-      "en": "steep"
+      "en": "steep",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43357": {
       "zh": "角；号角（汉义待确认）",
       "status": "pending",
       "previousZh": "角；号角（原义未细分）",
       "term": "kʰɨe⁵⁵",
-      "en": "horn"
+      "en": "horn",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-429251": {
       "zh": "气味；闻；发出气味；臭（汉义待确认）",
       "status": "pending",
       "previousZh": "气味；闻（原义未细分）",
       "term": "lan²¹",
-      "en": "smell"
+      "en": "smell",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-419149": {
       "zh": "老；旧（汉义待确认）",
       "status": "pending",
       "previousZh": "老；旧（原义未细分）",
       "term": "lau⁵⁵",
-      "en": "old, be"
+      "en": "old, be",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-208563": {
       "zh": "投；扔；东（现有译文）（汉义待确认）",
       "status": "pending",
       "previousZh": "东（东方）",
       "term": "la³⁵",
-      "en": "cast"
+      "en": "cast",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-387806": {
       "zh": "十亿；亿（汉义待确认）",
       "status": "pending",
       "previousZh": "亿",
       "term": "la³⁵ wan³⁵wan³⁵",
-      "en": "billion"
+      "en": "billion",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288959": {
       "zh": "投；扔；东（现有译文）（汉义待确认）",
       "status": "pending",
       "previousZh": "东（东方）",
       "term": "liau³⁵",
-      "en": "cast"
+      "en": "cast",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-204891": {
       "zh": "兴趣；利息（汉义待确认）",
       "status": "pending",
       "previousZh": "兴趣；利息（原义未细分）",
       "term": "li²¹ɕi²¹",
-      "en": "interest"
+      "en": "interest",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289810": {
       "zh": "兴趣；利息（汉义待确认）",
       "status": "pending",
       "previousZh": "兴趣；利息（原义未细分）",
       "term": "li¹³ɕi³³",
-      "en": "interest"
+      "en": "interest",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127201": {
       "zh": "胸膛；箱子（汉义待确认）",
       "status": "pending",
       "previousZh": "胸膛；箱子（原义未细分）",
       "term": "li⁵⁵ kʰo⁵⁵ tsʰũ⁵⁵",
-      "en": "chest"
+      "en": "chest",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-349817": {
       "zh": "胸膛；箱子（汉义待确认）",
       "status": "pending",
       "previousZh": "胸膛；箱子（原义未细分）",
       "term": "li⁵⁵kho⁵⁵tshoŋ⁵⁵",
-      "en": "chest"
+      "en": "chest",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289127": {
       "zh": "喜欢；像（汉义待确认）",
       "status": "pending",
       "previousZh": "喜欢；像（原义未细分）",
       "term": "li⁵⁵si⁵⁵",
-      "en": "like"
+      "en": "like",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43368": {
       "zh": "眼中异物；眼屎；眼病名称（汉义待确认）",
       "status": "pending",
       "previousZh": "眼中沙粒（原释义所指待核）",
       "term": "lo³⁵ se²¹",
-      "en": "eye sand"
+      "en": "eye sand",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-353932": {
       "zh": "人；男人（汉义待确认）",
       "status": "pending",
       "previousZh": "人；男人（原义未细分）",
       "term": "lo⁵⁵pa⁵⁵tie⁵⁵",
-      "en": "man"
+      "en": "man",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453975": {
       "zh": "人；男人（汉义待确认）",
       "status": "pending",
       "previousZh": "人；男人（原义未细分）",
       "term": "luo⁴ba¹",
-      "en": "man"
+      "en": "man",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290043": {
       "zh": "喜欢；像（汉义待确认）",
       "status": "pending",
       "previousZh": "喜欢；像（原义未细分）",
       "term": "lɨ²¹si²¹",
-      "en": "like"
+      "en": "like",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288709": {
       "zh": "岳母；婆婆（汉义待确认）",
       "status": "pending",
       "previousZh": "岳母",
       "term": "ma²¹ma³⁵~ni⁵⁵kho⁵⁵a²¹ne⁵⁵",
-      "en": "mother-in-law"
+      "en": "mother-in-law",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-357824": {
       "zh": "岳母；婆婆（汉义待确认）",
       "status": "pending",
       "previousZh": "岳母",
       "term": "ma²¹ma⁵⁵",
-      "en": "mother-in-law"
+      "en": "mother-in-law",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-359077": {
       "zh": "小型马；马驹（汉义待确认）",
       "status": "pending",
       "previousZh": "马驹",
       "term": "ma⁵³pi³⁵",
-      "en": "pony"
+      "en": "pony",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-196017": {
       "zh": "民族；国籍（汉义待确认）",
       "status": "pending",
       "previousZh": "民族；国籍（原义未细分）",
       "term": "min²¹tshu²¹",
-      "en": "nationality"
+      "en": "nationality",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288688": {
       "zh": "民族；国籍（汉义待确认）",
       "status": "pending",
       "previousZh": "民族；国籍（原义未细分）",
       "term": "mĩ²¹tshu²¹",
-      "en": "nationality"
+      "en": "nationality",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289629": {
       "zh": "民族；国籍（汉义待确认）",
       "status": "pending",
       "previousZh": "民族；国籍（原义未细分）",
       "term": "mĩ²¹tshu̵²̄¹",
-      "en": "nationality"
+      "en": "nationality",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-345143": {
       "zh": "光；轻；点亮（汉义待确认）",
       "status": "pending",
       "previousZh": "光；轻（原义未细分）",
       "term": "mi⁵⁵za⁵⁵",
-      "en": "light"
+      "en": "light",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43612": {
       "zh": "飞",
@@ -702,81 +795,92 @@
       "en": "fly"
     },
     "stedt-rn-290263": {
-      "zh": "亩；英亩（汉义待确认）",
-      "status": "pending",
+      "zh": "亩",
+      "status": "confirmed",
       "previousZh": "英亩",
       "term": "mu⁵⁵",
-      "en": "acre"
+      "en": "acre",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288568": {
       "zh": "燕子；吞咽（汉义待确认）",
       "status": "pending",
       "previousZh": "燕子；吞咽（原英释同形歧义，须结合词条核定）",
       "term": "mɨe³⁵tsha⁵⁵khu⁵⁵li⁵⁵",
-      "en": "swallow"
+      "en": "swallow",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289347": {
-      "zh": "亩；英亩（汉义待确认）",
-      "status": "pending",
+      "zh": "亩",
+      "status": "confirmed",
       "previousZh": "英亩",
       "term": "mɨu⁵⁵",
-      "en": "acre"
+      "en": "acre",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-362368": {
       "zh": "燕子；吞咽（汉义待确认）",
       "status": "pending",
       "previousZh": "燕子；吞咽（原英释同形歧义，须结合词条核定）",
       "term": "mɯe³⁵tsha⁵⁵khu⁵⁵li⁵⁵",
-      "en": "swallow"
+      "en": "swallow",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127295": {
       "zh": "背；后面；返回（汉义待确认）",
       "status": "pending",
       "previousZh": "背；后面；返回（原义未细分）",
       "term": "mɯe⁵⁵ kʰɯe²¹",
-      "en": "back"
+      "en": "back",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43457": {
       "zh": "气味；闻；发出气味；臭（汉义待确认）",
       "status": "pending",
       "previousZh": "气味；闻（原义未细分）",
       "term": "nã²¹",
-      "en": "smell"
+      "en": "smell",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43595": {
       "zh": "咳嗽；啃咬（汉义待确认）",
       "status": "pending",
       "previousZh": "咳嗽；啃咬（原释义并列，待核）",
       "term": "niu̵⁵⁵",
-      "en": "cough, gnaw"
+      "en": "cough, gnaw",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-416351": {
       "zh": "树皮；吠叫（汉义待确认）",
       "status": "pending",
       "previousZh": "树皮；吠叫（原义未细分）",
       "term": "oŋ³⁵",
-      "en": "bark"
+      "en": "bark",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-455131": {
-      "zh": "一庹；两庹（汉义待确认）",
-      "status": "pending",
+      "zh": "庹",
+      "status": "confirmed",
       "previousZh": "两庹；双臂伸展长度的两倍",
       "term": "pai¹",
-      "en": "double armspan"
+      "en": "double armspan",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-418001": {
       "zh": "看守；观看；表（汉义待确认）",
       "status": "pending",
       "previousZh": "看守；观看；表（原义未细分）",
       "term": "pa⁵³",
-      "en": "watch"
+      "en": "watch",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-222129": {
       "zh": "陡；浸泡（汉义待确认）",
       "status": "pending",
       "previousZh": "陡；浸泡（原义未细分）",
       "term": "pa⁵⁵za²¹",
-      "en": "steep"
+      "en": "steep",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127206": {
       "zh": "背部",
@@ -786,130 +890,148 @@
       "en": "back"
     },
     "stedt-rn-43627": {
-      "zh": "庹；绳长单位（汉义待确认）",
-      "status": "pending",
+      "zh": "庹",
+      "status": "confirmed",
       "previousZh": "庹；绳长单位（具体值待核）",
       "term": "phai³³",
-      "en": "fathom, cord"
+      "en": "fathom, cord",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43490": {
-      "zh": "庹；绳长单位（汉义待确认）",
-      "status": "pending",
+      "zh": "庹",
+      "status": "confirmed",
       "previousZh": "庹；绳长单位（具体值待核）",
       "term": "phai⁵⁵",
-      "en": "fathom, cord"
+      "en": "fathom, cord",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-356166": {
       "zh": "祖父；外祖父（汉义待确认）",
       "status": "pending",
       "previousZh": "祖父；外祖父（原义未区分）",
       "term": "pha²¹phu⁵⁵",
-      "en": "grandfather"
+      "en": "grandfather",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288694": {
       "zh": "祖父；外祖父（汉义待确认）",
       "status": "pending",
       "previousZh": "祖父；外祖父（原义未区分）",
       "term": "pha²¹phu⁵⁵~mu⁵⁵si⁵⁵a²¹pa⁵⁵",
-      "en": "grandfather"
+      "en": "grandfather",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-228555": {
       "zh": "某类物品的量词（汉义待确认）",
       "status": "pending",
       "previousZh": "某类物品的量词（原英文截断，适用对象待核）",
       "term": "pha⁵⁵",
-      "en": "classifier for objects with ha"
+      "en": "classifier for objects with ha",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-196068": {
       "zh": "汉语；汉人；汉族；中国的（汉义待确认）",
       "status": "pending",
       "previousZh": "汉语；中国的（具体义项待核）",
       "term": "pha⁵⁵kha²¹",
-      "en": "Chinese"
+      "en": "Chinese",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289936": {
       "zh": "放牧；吃草（汉义待确认）",
       "status": "pending",
       "previousZh": "放牧；吃草（原义未细分）",
       "term": "pha⁵⁵~bo³⁵",
-      "en": "graze"
+      "en": "graze",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-219069": {
       "zh": "破；断；打破（汉义待确认）",
       "status": "pending",
       "previousZh": "破；断；打破（原义未细分）",
       "term": "phi²¹",
-      "en": "break"
+      "en": "break",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-363349": {
       "zh": "飞；苍蝇（汉义待确认）",
       "status": "pending",
       "previousZh": "飞；苍蝇（原义未细分）",
       "term": "phi³⁵ka²¹",
-      "en": "fly"
+      "en": "fly",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288595": {
       "zh": "飞；苍蝇（汉义待确认）",
       "status": "pending",
       "previousZh": "飞；苍蝇（原义未细分）",
       "term": "phi³⁵ka⁵⁵",
-      "en": "fly"
+      "en": "fly",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289016": {
       "zh": "放牧；吃草（汉义待确认）",
       "status": "pending",
       "previousZh": "放牧；吃草（原义未细分）",
       "term": "pho⁵⁵",
-      "en": "graze"
+      "en": "graze",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-200709": {
       "zh": "谷壳；剥壳（汉义待确认）",
       "status": "pending",
       "previousZh": "谷壳；剥壳（原义未细分）",
       "term": "pho⁵⁵tha⁵⁵",
-      "en": "husk"
+      "en": "husk",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290093": {
       "zh": "煮；沸腾；疖子（汉义待确认）",
       "status": "pending",
       "previousZh": "煮；沸腾（原义未细分）",
       "term": "phɨe¹³",
-      "en": "boil"
+      "en": "boil",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289177": {
       "zh": "煮；沸腾；疖子（汉义待确认）",
       "status": "pending",
       "previousZh": "煮；沸腾（原义未细分）",
       "term": "phɨe⁵⁵",
-      "en": "boil"
+      "en": "boil",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-219324": {
       "zh": "煮；沸腾；疖子（汉义待确认）",
       "status": "pending",
       "previousZh": "煮；沸腾（原义未细分）",
       "term": "phɯe⁵³",
-      "en": "boil"
+      "en": "boil",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-348936": {
       "zh": "辫子；编辫（汉义待确认）",
       "status": "pending",
       "previousZh": "编织；编辫",
       "term": "pian³⁵tsi⁵⁵",
-      "en": "braid / plait"
+      "en": "braid / plait",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43509": {
       "zh": "辫子；编辫（汉义待确认）",
       "status": "pending",
       "previousZh": "编辫子",
       "term": "pia¹³ tsi³³",
-      "en": "braid (hair)"
+      "en": "braid (hair)",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288474": {
       "zh": "平原；平常的（汉义待确认）",
       "status": "pending",
       "previousZh": "平原；平常的（原义未细分）",
       "term": "pi⁵⁵thiau⁵⁵",
-      "en": "plain"
+      "en": "plain",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-349716": {
       "zh": "背部",
@@ -923,14 +1045,16 @@
       "status": "pending",
       "previousZh": "冷杉；杉类（具体树种待核）",
       "term": "sa²",
-      "en": "fir"
+      "en": "fir",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-221517": {
       "zh": "薄；瘦；细（汉义待确认）",
       "status": "pending",
       "previousZh": "薄；瘦；细（原义未细分）",
       "term": "sa²¹sai³⁵",
-      "en": "thin"
+      "en": "thin",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289219": {
       "zh": "薄",
@@ -944,21 +1068,24 @@
       "status": "pending",
       "previousZh": "薄；瘦；细（原义未细分）",
       "term": "sa²¹sie³⁵",
-      "en": "thin"
+      "en": "thin",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43363": {
       "zh": "辫子；编辫（汉义待确认）",
       "status": "pending",
       "previousZh": "编辫子",
       "term": "sa³⁵ tɕʰi⁵⁵ piã⁵⁵ tsi⁵⁵",
-      "en": "braid (hair)"
+      "en": "braid (hair)",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-189234": {
       "zh": "杉木；冷杉；杉类（汉义待确认）",
       "status": "pending",
       "previousZh": "冷杉；杉类（具体树种待核）",
       "term": "sa³⁵kha²¹moŋ²¹",
-      "en": "fir"
+      "en": "fir",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127253": {
       "zh": "肥肉",
@@ -968,25 +1095,28 @@
       "en": "fat"
     },
     "stedt-rn-289348": {
-      "zh": "升；品脱；小型干物量器（汉义待确认）",
-      "status": "pending",
+      "zh": "升",
+      "status": "confirmed",
       "previousZh": "小型干物量器；品脱（原义所指容量待核）",
       "term": "si²¹",
-      "en": "dry measure / pint"
+      "en": "dry measure / pint",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289439": {
       "zh": "时间；次（汉义待确认）",
       "status": "pending",
       "previousZh": "时间；次（原义未细分）",
       "term": "si²¹",
-      "en": "time"
+      "en": "time",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127397": {
       "zh": "肥；胖；脂肪（汉义待确认）",
       "status": "pending",
       "previousZh": "肥；胖；脂肪（原义未细分）",
       "term": "si²¹ tsʰe³⁵",
-      "en": "fat"
+      "en": "fat",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-220701": {
       "zh": "失败",
@@ -1000,56 +1130,64 @@
       "status": "pending",
       "previousZh": "时间；次（原义未细分）",
       "term": "si²¹tɕe³⁵~si²¹ka³⁵",
-      "en": "time"
+      "en": "time",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-383001": {
       "zh": "时间；次（汉义待确认）",
       "status": "pending",
       "previousZh": "时间；次（原义未细分）",
       "term": "si²¹tɕie²¹",
-      "en": "time"
+      "en": "time",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-397789": {
       "zh": "肥；胖；脂肪（汉义待确认）",
       "status": "pending",
       "previousZh": "肥；胖；脂肪（原义未细分）",
       "term": "si³⁵",
-      "en": "fat"
+      "en": "fat",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453879": {
       "zh": "禁闭；坐月子（汉义待确认）",
       "status": "pending",
       "previousZh": "禁闭；坐月子（原义未细分）",
       "term": "si¹lie¹ong³",
-      "en": "confinement"
+      "en": "confinement",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453671": {
       "zh": "红楠（汉义待确认）",
       "status": "pending",
       "previousZh": "红楠（原文树名，具体种类待核）",
       "term": "si¹si¹ka³",
-      "en": "red nanmu tree"
+      "en": "red nanmu tree",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290264": {
-      "zh": "升；品脱；小型干物量器（汉义待确认）",
-      "status": "pending",
+      "zh": "升",
+      "status": "confirmed",
       "previousZh": "小型干物量器；品脱（原义所指容量待核）",
       "term": "si⁵⁵",
-      "en": "dry measure / pint"
+      "en": "dry measure / pint",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288874": {
       "zh": "兴趣；利息（汉义待确认）",
       "status": "pending",
       "previousZh": "兴趣；利息（原义未细分）",
       "term": "si⁵⁵kha⁵⁵",
-      "en": "interest"
+      "en": "interest",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290135": {
       "zh": "薄；瘦；细（汉义待确认）",
       "status": "pending",
       "previousZh": "薄；瘦；细（原义未细分）",
       "term": "so²¹so⁵⁵",
-      "en": "thin"
+      "en": "thin",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-414293": {
       "zh": "回去",
@@ -1063,49 +1201,56 @@
       "status": "pending",
       "previousZh": "藏；兽皮（原义未细分）",
       "term": "su⁵⁵su³⁵",
-      "en": "hide"
+      "en": "hide",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289076": {
       "zh": "藏；兽皮（汉义待确认）",
       "status": "pending",
       "previousZh": "藏；兽皮（原义未细分）",
       "term": "su⁵⁵su⁵⁵",
-      "en": "hide"
+      "en": "hide",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289679": {
       "zh": "指甲；钉子（汉义待确认）",
       "status": "pending",
       "previousZh": "指甲；钉子（原义未细分）",
       "term": "tẽ³³tsi²¹",
-      "en": "nail"
+      "en": "nail",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289929": {
       "zh": "植物；种植（汉义待确认）",
       "status": "pending",
       "previousZh": "植物；种植（原义未细分）",
       "term": "te³⁵",
-      "en": "plant"
+      "en": "plant",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288740": {
       "zh": "指甲；钉子（汉义待确认）",
       "status": "pending",
       "previousZh": "指甲；钉子（原义未细分）",
       "term": "tẽ⁵⁵tsi⁵⁵",
-      "en": "nail"
+      "en": "nail",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288692": {
       "zh": "曾祖父；曾外祖父（汉义待确认）",
       "status": "pending",
       "previousZh": "曾祖父；曾外祖父（原义未区分）",
       "term": "thai³⁵kũ⁵⁵~ne²¹thi³⁵khɨe⁵⁵thi³⁵",
-      "en": "great grandfather"
+      "en": "great grandfather",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288693": {
       "zh": "曾祖母；曾外祖母（汉义待确认）",
       "status": "pending",
       "previousZh": "曾祖母；曾外祖母（原义未区分）",
       "term": "thai³⁵thai³⁵~ze⁵⁵kha⁵⁵ze⁵⁵ni²¹",
-      "en": "great grandmother"
+      "en": "great grandmother",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-381734": {
       "zh": "背部；后面",
@@ -1119,42 +1264,47 @@
       "status": "pending",
       "previousZh": "能；可以（原释义未细分）",
       "term": "thiu³⁵",
-      "en": "can"
+      "en": "can",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289187": {
       "zh": "抬起；养（汉义待确认）",
       "status": "pending",
       "previousZh": "抬起；养（原义未细分）",
       "term": "thi²¹kau⁵⁵",
-      "en": "raise"
+      "en": "raise",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43491": {
-      "zh": "拃；跨度（汉义待确认）",
-      "status": "pending",
+      "zh": "拃",
+      "status": "confirmed",
       "previousZh": "拃；跨度（具体量法待核）",
       "term": "thi⁵⁵ khɑ⁵⁵",
       "en": "span"
     },
     "stedt-rn-390661": {
-      "zh": "庹；噚（汉义待确认）",
-      "status": "pending",
+      "zh": "庹",
+      "status": "confirmed",
       "previousZh": "庹；噚（长度单位，具体值待核）",
       "term": "tho³⁵",
-      "en": "fathom"
+      "en": "fathom",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289101": {
       "zh": "返回；归还（汉义待确认）",
       "status": "pending",
       "previousZh": "返回；归还（原义未细分）",
       "term": "tho⁵⁵",
-      "en": "return"
+      "en": "return",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290258": {
       "zh": "滴；掉下（汉义待确认）",
       "status": "pending",
       "previousZh": "掉（掉下）",
       "term": "tiã⁵⁵",
-      "en": "drop"
+      "en": "drop",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-454408": {
       "zh": "点亮",
@@ -1168,35 +1318,40 @@
       "status": "pending",
       "previousZh": "掉（掉下）",
       "term": "ti²¹",
-      "en": "drop"
+      "en": "drop",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-355129": {
       "zh": "病人；有耐心（汉义待确认）",
       "status": "pending",
       "previousZh": "病人；有耐心（原义未细分）",
       "term": "ti³⁵ma⁵⁵",
-      "en": "patient"
+      "en": "patient",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289342": {
       "zh": "滴；掉下（汉义待确认）",
       "status": "pending",
       "previousZh": "掉（掉下）",
       "term": "ti⁵⁵",
-      "en": "drop"
+      "en": "drop",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127349": {
       "zh": "胸膛；箱子（汉义待确认）",
       "status": "pending",
       "previousZh": "胸膛；箱子（原义未细分）",
       "term": "to⁵⁵ po²¹ dɯ²¹ go³⁵",
-      "en": "chest"
+      "en": "chest",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127354": {
       "zh": "背；后面；返回（汉义待确认）",
       "status": "pending",
       "previousZh": "背；后面；返回（原义未细分）",
       "term": "to⁵⁵ po²¹ mɯe⁵⁵ kʰɯe²¹",
-      "en": "back"
+      "en": "back",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289968": {
       "zh": "舀",
@@ -1210,7 +1365,8 @@
       "status": "pending",
       "previousZh": "井；好好地（原英释同形歧义，须结合词条核定）",
       "term": "tshe²¹mũ³⁵",
-      "en": "well"
+      "en": "well",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289050": {
       "zh": "舀",
@@ -1220,50 +1376,56 @@
       "en": "scoop"
     },
     "stedt-rn-289345": {
-      "zh": "寸／英寸（汉义待确认）",
-      "status": "pending",
+      "zh": "寸",
+      "status": "confirmed",
       "previousZh": "寸／英寸（具体单位待核）",
       "term": "tshẽ³⁵",
-      "en": "inch"
+      "en": "inch",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289410": {
       "zh": "井；好好地（汉义待确认）",
       "status": "pending",
       "previousZh": "井；好好地（原英释同形歧义，须结合词条核定）",
       "term": "tshe³⁵wu⁵⁵pho²¹",
-      "en": "well"
+      "en": "well",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290261": {
-      "zh": "寸／英寸（汉义待确认）",
-      "status": "pending",
+      "zh": "寸",
+      "status": "confirmed",
       "previousZh": "寸／英寸（具体单位待核）",
       "term": "tshẽ¹³",
-      "en": "inch"
+      "en": "inch",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-366494": {
       "zh": "麻；大麻；麻雀（现有译文）（汉义待确认）",
       "status": "pending",
       "previousZh": "麻雀",
       "term": "tshie²¹khu³⁵",
-      "en": "hemp"
+      "en": "hemp",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-346803": {
       "zh": "井；好好地（汉义待确认）",
       "status": "pending",
       "previousZh": "井；好好地（原英释同形歧义，须结合词条核定）",
       "term": "tshie²¹moŋ⁵⁵",
-      "en": "well"
+      "en": "well",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-194538": {
       "zh": "煮；沸腾；疖子（汉义待确认）",
       "status": "pending",
       "previousZh": "煮；沸腾（原义未细分）",
       "term": "tshie³⁵ka⁵⁵",
-      "en": "boil"
+      "en": "boil",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-229065": {
-      "zh": "尺／英尺（汉义待确认）",
-      "status": "pending",
+      "zh": "尺",
+      "status": "confirmed",
       "previousZh": "尺／英尺（长度单位，具体值待核）",
       "term": "tshi³⁵",
       "en": "foot (measure)"
@@ -1273,35 +1435,40 @@
       "status": "pending",
       "previousZh": "猪食；喂猪",
       "term": "tshi⁵⁵si²¹",
-      "en": "feed (pig) / pigwash"
+      "en": "feed (pig) / pigwash",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-390967": {
-      "zh": "寸／英寸（汉义待确认）",
-      "status": "pending",
+      "zh": "寸",
+      "status": "confirmed",
       "previousZh": "寸／英寸（具体单位待核）",
       "term": "tshuin³⁵",
-      "en": "inch"
+      "en": "inch",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-183573": {
       "zh": "春天；泉；弹跳（汉义待确认）",
       "status": "pending",
       "previousZh": "春天；泉；弹跳（原义未细分）",
       "term": "tshuən⁵⁵",
-      "en": "spring"
+      "en": "spring",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-367527": {
       "zh": "米；稻；饭（汉义待确认）",
       "status": "pending",
       "previousZh": "米；稻；饭（原义未细分）",
       "term": "tsi²¹ɣɯe²¹",
-      "en": "rice"
+      "en": "rice",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-359956": {
       "zh": "播种；母猪（汉义待确认）",
       "status": "pending",
       "previousZh": "播种；母猪（原义未细分）",
       "term": "tsi⁵³ȵi²¹ka²¹",
-      "en": "sow"
+      "en": "sow",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289153": {
       "zh": "出；出去",
@@ -1315,49 +1482,56 @@
       "status": "pending",
       "previousZh": "摘；挑选（原义未细分）",
       "term": "tu¹",
-      "en": "pick"
+      "en": "pick",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289231": {
       "zh": "陡；浸泡（汉义待确认）",
       "status": "pending",
       "previousZh": "陡；浸泡（原义未细分）",
       "term": "tu⁵⁵",
-      "en": "steep"
+      "en": "steep",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127218": {
       "zh": "手掌；棕榈（汉义待确认）",
       "status": "pending",
       "previousZh": "手掌；棕榈（原义未细分）",
       "term": "tɕe³⁵ la⁵⁵ pʰi²¹",
-      "en": "palm"
+      "en": "palm",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-145865": {
       "zh": "指甲；钉子（汉义待确认）",
       "status": "pending",
       "previousZh": "指甲；钉子（原义未细分）",
       "term": "tɕe³⁵ mi⁵⁵ tʰi²¹ kʰo⁵⁵ tʰa⁵⁵",
-      "en": "nail"
+      "en": "nail",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-350841": {
       "zh": "指甲；钉子（汉义待确认）",
       "status": "pending",
       "previousZh": "指甲；钉子（原义未细分）",
       "term": "tɕie³⁵mi⁵⁵thi²¹kho⁵⁵tha⁵⁵",
-      "en": "nail"
+      "en": "nail",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127230": {
       "zh": "脚底；鞋底（汉义待确认）",
       "status": "pending",
       "previousZh": "脚底；鞋底（原义未细分）",
       "term": "tɕi²¹ la²¹ pʰi²¹",
-      "en": "sole"
+      "en": "sole",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-350284": {
       "zh": "小牛；小腿（汉义待确认）",
       "status": "pending",
       "previousZh": "小牛；小腿（原义未细分）",
       "term": "tɕi²¹si²¹phɯe⁵⁵",
-      "en": "calf"
+      "en": "calf",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127143": {
       "zh": "背部；后面",
@@ -1371,70 +1545,80 @@
       "status": "pending",
       "previousZh": "薄；瘦；细（原义未细分）",
       "term": "wai⁵⁵",
-      "en": "thin"
+      "en": "thin",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-358544": {
       "zh": "小牛；小腿（汉义待确认）",
       "status": "pending",
       "previousZh": "小牛；小腿（原义未细分）",
       "term": "wu³⁵pi³⁵",
-      "en": "calf"
+      "en": "calf",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288775": {
       "zh": "菜肴；盘子（汉义待确认）",
       "status": "pending",
       "previousZh": "菜肴；盘子（原义未细分）",
       "term": "xa⁵⁵tshe⁵⁵",
-      "en": "dish"
+      "en": "dish",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-200403": {
       "zh": "菜肴；盘子（汉义待确认）",
       "status": "pending",
       "previousZh": "菜肴；盘子（原义未细分）",
       "term": "xa⁵⁵tshie⁵⁵",
-      "en": "dish"
+      "en": "dish",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-204432": {
       "zh": "火车；训练（汉义待确认）",
       "status": "pending",
       "previousZh": "火车；训练（原义未细分）",
       "term": "xo³⁵tshie⁵⁵",
-      "en": "train"
+      "en": "train",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288866": {
       "zh": "火车；训练（汉义待确认）",
       "status": "pending",
       "previousZh": "火车；训练（原义未细分）",
       "term": "xo⁵⁵tshe⁵⁵",
-      "en": "train"
+      "en": "train",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-216723": {
       "zh": "喜欢；像（汉义待确认）",
       "status": "pending",
       "previousZh": "喜欢；像（原义未细分）",
       "term": "xuan⁵⁵ɕi⁵³",
-      "en": "like"
+      "en": "like",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-454435": {
       "zh": "解决；决定；下决心（汉义待确认）",
       "status": "pending",
       "previousZh": "解决；决心（原义未细分）",
       "term": "ye³luo³",
-      "en": "resolve"
+      "en": "resolve",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453833": {
       "zh": "藏；兽皮（汉义待确认）",
       "status": "pending",
       "previousZh": "藏；兽皮（原义未细分）",
       "term": "ye⁴",
-      "en": "hide"
+      "en": "hide",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-454796": {
       "zh": "吟唱；叹息；呻吟（汉义待确认）",
       "status": "pending",
       "previousZh": "吟唱；呻吟（原文 sign 可能为拼写错误，待核）",
       "term": "yi²la¹re⁴re⁴",
-      "en": "sign, intone, moan"
+      "en": "sign, intone, moan",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43474": {
       "zh": "飞",
@@ -1448,224 +1632,379 @@
       "status": "pending",
       "previousZh": "平原；平常的（原义未细分）",
       "term": "za⁵⁵bi³³",
-      "en": "plain"
+      "en": "plain",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127348": {
       "zh": "燕子；吞咽（汉义待确认）",
       "status": "pending",
       "previousZh": "燕子；吞咽（原英释同形歧义，须结合词条核定）",
       "term": "ze²¹",
-      "en": "swallow"
+      "en": "swallow",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-454799": {
       "zh": "喜欢；像（汉义待确认）",
       "status": "pending",
       "previousZh": "喜欢；像（原义未细分）",
       "term": "ze³",
-      "en": "like"
+      "en": "like",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289666": {
       "zh": "孙女；外孙女（汉义待确认）",
       "status": "pending",
       "previousZh": "孙女；外孙女（原义未区分）",
       "term": "ze³³be³³je²¹",
-      "en": "granddaughter"
+      "en": "granddaughter",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289665": {
       "zh": "孙子；外孙（汉义待确认）",
       "status": "pending",
       "previousZh": "孙子",
       "term": "ze³³~ze³³be²¹",
-      "en": "grandson"
+      "en": "grandson",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-127200": {
       "zh": "燕子；吞咽（汉义待确认）",
       "status": "pending",
       "previousZh": "燕子；吞咽（原英释同形歧义，须结合词条核定）",
       "term": "ze³⁵",
-      "en": "swallow"
+      "en": "swallow",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288727": {
       "zh": "孙女；外孙女（汉义待确认）",
       "status": "pending",
       "previousZh": "孙女；外孙女（原义未区分）",
       "term": "ze⁵⁵piu³⁵",
-      "en": "granddaughter"
+      "en": "granddaughter",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-288726": {
       "zh": "孙子；外孙（汉义待确认）",
       "status": "pending",
       "previousZh": "孙子",
       "term": "ze⁵⁵~ze⁵⁵pi³⁵",
-      "en": "grandson"
+      "en": "grandson",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-428539": {
       "zh": "燕子；吞咽（汉义待确认）",
       "status": "pending",
       "previousZh": "燕子；吞咽（原英释同形歧义，须结合词条核定）",
       "term": "zie³⁵",
-      "en": "swallow"
+      "en": "swallow",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-356609": {
       "zh": "孙子；外孙（汉义待确认）",
       "status": "pending",
       "previousZh": "孙子",
       "term": "zie⁵⁵",
-      "en": "grandson"
+      "en": "grandson",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-197598": {
       "zh": "孙子；外孙（汉义待确认）",
       "status": "pending",
       "previousZh": "孙子",
       "term": "zie⁵⁵pio³⁵",
-      "en": "grandson"
+      "en": "grandson",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-356660": {
       "zh": "孙女；外孙女（汉义待确认）",
       "status": "pending",
       "previousZh": "孙女；外孙女（原义未区分）",
       "term": "zie⁵⁵piu³⁵",
-      "en": "granddaughter"
+      "en": "granddaughter",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453838": {
       "zh": "看守；观看；表（汉义待确认）",
       "status": "pending",
       "previousZh": "看守；观看；表（原义未细分）",
       "term": "zi¹",
-      "en": "watch"
+      "en": "watch",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-454069": {
       "zh": "播种；母猪（汉义待确认）",
       "status": "pending",
       "previousZh": "播种；母猪（原义未细分）",
       "term": "zi⁴ni³ga³",
-      "en": "sow"
+      "en": "sow",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-453683": {
       "zh": "猪饲草；特定植物名（汉义待确认）",
       "status": "pending",
       "previousZh": "猪草（具体植物待核）",
       "term": "zi⁴xi³",
-      "en": "pigweed"
+      "en": "pigweed",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-210501": {
       "zh": "植物；种植（汉义待确认）",
       "status": "pending",
       "previousZh": "植物；种植（原义未细分）",
       "term": "zi⁵⁵",
-      "en": "plant"
+      "en": "plant",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-359488": {
       "zh": "羊羔；山羊羔（汉义待确认）",
       "status": "pending",
       "previousZh": "山羊羔",
       "term": "zo³⁵pi³⁵",
-      "en": "lamb"
+      "en": "lamb",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-207951": {
       "zh": "气味；闻；发出气味；臭（汉义待确认）",
       "status": "pending",
       "previousZh": "气味；闻（原义未细分）",
       "term": "zu²¹",
-      "en": "smell"
+      "en": "smell",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-290150": {
       "zh": "光；轻；点亮（汉义待确认）",
       "status": "pending",
       "previousZh": "光；轻（原义未细分）",
       "term": "zu¹³",
-      "en": "light"
+      "en": "light",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-222282": {
       "zh": "光；轻；点亮（汉义待确认）",
       "status": "pending",
       "previousZh": "光；轻（原义未细分）",
       "term": "zu⁵³",
-      "en": "light"
+      "en": "light",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289234": {
       "zh": "光；轻；点亮（汉义待确认）",
       "status": "pending",
       "previousZh": "光；轻（原义未细分）",
       "term": "zu⁵⁵",
-      "en": "light"
+      "en": "light",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289004": {
       "zh": "植物；种植（汉义待确认）",
       "status": "pending",
       "previousZh": "植物；种植（原义未细分）",
       "term": "ɣa⁵⁵~zi⁵⁵",
-      "en": "plant"
+      "en": "plant",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43475": {
       "zh": "树皮；吠叫（汉义待确认）",
       "status": "pending",
       "previousZh": "树皮；吠叫（原义未细分）",
       "term": "ɣũ³⁵",
-      "en": "bark"
+      "en": "bark",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-196425": {
       "zh": "大姑；伯母（汉义待确认）",
       "status": "pending",
       "previousZh": "大姑；父亲的姐姐",
       "term": "ȵie²¹tshi⁵⁵",
-      "en": "aunt (paternal, elder)"
+      "en": "aunt (paternal, elder)",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-433171": {
       "zh": "找到；位于；在（汉义待确认）",
       "status": "pending",
       "previousZh": "找到了；位于",
       "term": "ȵi⁵³",
-      "en": "found / located"
+      "en": "found / located",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289886": {
       "zh": "投；扔；东（现有译文）（汉义待确认）",
       "status": "pending",
       "previousZh": "东（东方）",
       "term": "ɕe³⁵",
-      "en": "cast"
+      "en": "cast",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43600": {
       "zh": "气味；闻；发出气味；臭（汉义待确认）",
       "status": "pending",
       "previousZh": "气味；闻（原义未细分）",
       "term": "ɕiõ¹³",
-      "en": "smell"
+      "en": "smell",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289633": {
       "zh": "祖父；外祖父（汉义待确认）",
       "status": "pending",
       "previousZh": "祖父；外祖父（原义未区分）",
       "term": "ʔa²¹khu̵⁵⁵",
-      "en": "grandfather"
+      "en": "grandfather",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289634": {
       "zh": "祖母；外祖母（汉义待确认）",
       "status": "pending",
       "previousZh": "奶奶",
       "term": "ʔa²¹pho²¹",
-      "en": "grandmother"
+      "en": "grandmother",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289714": {
       "zh": "菜肴；盘子（汉义待确认）",
       "status": "pending",
       "previousZh": "菜肴；盘子（原义未细分）",
       "term": "ʔa²¹ɕi²¹",
-      "en": "dish"
+      "en": "dish",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-43503": {
       "zh": "角；号角（汉义待确认）",
       "status": "pending",
       "previousZh": "角；号角（原义未细分）",
       "term": "ʔa³³ kʰɨe³³",
-      "en": "horn"
+      "en": "horn",
+      "enNote": "注：疑似登记错误"
     },
     "stedt-rn-289648": {
       "zh": "岳母；婆婆（汉义待确认）",
       "status": "pending",
       "previousZh": "岳母",
       "term": "ʔa³³mi³³",
-      "en": "mother-in-law"
+      "en": "mother-in-law",
+      "enNote": "注：疑似登记错误"
+    },
+    "w441": {
+      "previousZh": "尺",
+      "term": "ci3",
+      "en": "Chinese 'foot' (c.14 inches, 35cm)",
+      "zh": "尺",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "w486": {
+      "previousZh": "寸",
+      "term": "cun2",
+      "en": "inch",
+      "zh": "寸",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "w1356": {
+      "previousZh": "两",
+      "term": "lian1",
+      "en": "ounce",
+      "zh": "两",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "w1690": {
+      "previousZh": "庹",
+      "term": "pai4",
+      "en": "(double armspan)",
+      "zh": "庹",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "w1802": {
+      "previousZh": "拃",
+      "term": "qia3",
+      "en": "handspan",
+      "zh": "拃",
+      "status": "confirmed"
+    },
+    "w2683": {
+      "previousZh": "两",
+      "term": "zi1",
+      "en": "Chinese ounce",
+      "zh": "两",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "w3867": {
+      "previousZh": "两",
+      "term": "ji1",
+      "en": "Chinese ounce",
+      "zh": "两",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "stedt-rn-127434": {
+      "previousZh": "拃；张手量得的长度",
+      "term": "dʑua¹³",
+      "en": "hand span",
+      "zh": "拃",
+      "status": "confirmed"
+    },
+    "stedt-rn-228963": {
+      "previousZh": "拃",
+      "term": "kha⁵⁵",
+      "en": "handspan",
+      "zh": "拃",
+      "status": "confirmed"
+    },
+    "stedt-rn-390611": {
+      "previousZh": "里（0.5 千米；原英文作 mile）",
+      "term": "li⁵⁵",
+      "en": "mile (=0.5 kilometer)",
+      "zh": "里",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "stedt-rn-228912": {
+      "previousZh": "噚（六英尺）",
+      "term": "phai⁵³",
+      "en": "fathom=6 feet",
+      "zh": "庹",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "stedt-rn-229218": {
+      "previousZh": "斗（十升）",
+      "term": "pho⁵³",
+      "en": "dry measure / peck / =10 shēng",
+      "zh": "斗",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "stedt-rn-289349": {
+      "previousZh": "斗；干物容量单位",
+      "term": "pho⁵⁵",
+      "en": "dry measure / peck",
+      "zh": "斗",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "stedt-rn-290265": {
+      "previousZh": "斗；干物容量单位",
+      "term": "ta³⁵",
+      "en": "dry measure / peck",
+      "zh": "斗",
+      "status": "confirmed",
+      "enNote": "注：疑似登记错误"
+    },
+    "stedt-rn-390713": {
+      "previousZh": "尺（约三分之一米）",
+      "term": "tshi³⁵",
+      "en": "foot (=1 / 3 meter)",
+      "zh": "尺",
+      "status": "confirmed"
+    },
+    "stedt-rn-127290": {
+      "previousZh": "拃；张手量得的长度",
+      "term": "tʰi⁵⁵ kʰa⁵⁵",
+      "en": "hand span",
+      "zh": "拃",
+      "status": "confirmed"
     }
   }
 }

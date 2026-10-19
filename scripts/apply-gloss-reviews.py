@@ -11,16 +11,24 @@ def apply_reviews(data, reviews):
         raise ValueError(f'Review refers to missing entries: {sorted(missing)}')
     for word_id, review in reviews.items():
         word = words[word_id]
-        if word['term'] != review['term'] or word.get('en', '') != review['en']:
+        if word['term'] != review['term'] or word.get('enBeforeReview', word.get('en', '')) != review['en']:
             raise ValueError(f'Review identity mismatch: {word_id}')
         word.setdefault('zhBeforeReview', word.get('zh', ''))
         word['zh'] = review['zh']
         word['zhVariants'] = [review['zh']]
         word['zhReviewStatus'] = review['status']
+        if review.get('enNote'):
+            word.setdefault('enBeforeReview', word.get('en', ''))
+            word.setdefault('glossesBeforeReview', word.get('glosses', []))
+            word['en'] = word['enBeforeReview'] + '（' + review['enNote'] + '）'
+            word['glosses'] = [word['en']]
         for attestation in word.get('attestations', []):
             attestation.setdefault('zhBeforeReview', attestation.get('zh', ''))
             attestation['zh'] = review['zh']
             attestation['zhReviewStatus'] = review['status']
+            if review.get('enNote'):
+                attestation.setdefault('enBeforeReview', attestation.get('en', ''))
+                attestation['en'] = attestation['enBeforeReview'] + '（' + review['enNote'] + '）'
     return data
 
 
