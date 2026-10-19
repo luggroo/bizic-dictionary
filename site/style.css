@@ -33,3 +33,17 @@
 @media(max-width:600px){.media-switch{margin-left:auto}.shell>header{height:auto;min-height:56px;padding-top:10px;padding-bottom:10px}}
 
 .word-ipa{font-size:13px;line-height:1.6;color:var(--muted,#626b68);font-family:"Charis SIL","Doulos SIL",Georgia,serif;overflow-wrap:anywhere;margin:3px 0 8px}
+
+.word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;align-items:stretch}
+.word-card{min-width:0;display:flex;flex-direction:column;background:white;border:1px solid var(--line);border-radius:9px;padding:20px;overflow-wrap:anywhere}
+.word-card-heading{display:flex;align-items:flex-start;gap:12px}
+.word-card .word-card-title{flex:1;min-width:0;text-align:left;font-size:25px;line-height:1.4;padding:0;background:none;border:0;overflow-wrap:anywhere}
+.word-card-heading>button:last-child:not(.word-card-title){flex-shrink:0;min-width:44px;min-height:44px}
+.word-card-meaning{font-size:18px;margin:12px 0}
+.word-card-meaning .tiny{font-size:13px;margin-top:4px}
+.word-card-dialect{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.word-card-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding-top:10px;border-top:1px solid var(--line)}
+.word-card-actions label{display:inline-flex;align-items:center;gap:7px;min-height:44px;font-size:12px;cursor:pointer}
+.word-card-actions input{width:17px;height:17px;accent-color:var(--green)}
+.word-card-actions button{min-height:44px;font-size:12px}
+@media(orientation:portrait),(max-width:600px){.word-grid{grid-template-columns:minmax(0,1fr)}}
