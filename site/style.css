@@ -31,3 +31,5 @@
 .text-only .lyric-row{grid-template-columns:1fr}
 .text-only .lyric-row.is-current{background:transparent}
 @media(max-width:600px){.media-switch{margin-left:auto}.shell>header{height:auto;min-height:56px;padding-top:10px;padding-bottom:10px}}
+
+.word-ipa{font-size:13px;line-height:1.6;color:var(--muted,#626b68);font-family:"Charis SIL","Doulos SIL",Georgia,serif;overflow-wrap:anywhere;margin:3px 0 8px}
