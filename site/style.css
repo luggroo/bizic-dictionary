@@ -63,3 +63,6 @@
 .word-card-meaning .tiny{display:inline;margin-left:8px;font-size:12px}
 .word-card-dialect{margin:0;gap:7px;line-height:1.4}
 .word-card-dialect .pill{padding:1px 6px}
+
+/* Reference grammar: readable inventories on phones and larger screens. */
+.grammar-inventory{max-width:100%;overflow-x:auto;margin:12px 0 24px}.grammar-inventory table{width:100%;border-collapse:collapse;font-size:15px}.grammar-inventory th,.grammar-inventory td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}.grammar-inventory th{background:#edf2ec}.grammar-inventory td{line-height:1.6;min-width:5em}.grammar-reference{margin:12px 0;color:var(--muted);font-size:13px}.grammar-reference summary{cursor:pointer}.brassett-rule h3{margin-top:22px}.grammar-inventory:focus-visible{outline:2px solid var(--green)}@media(max-width:600px){.grammar-inventory th,.grammar-inventory td{padding:8px;font-size:14px}.grammar-inventory table{min-width:360px}}
