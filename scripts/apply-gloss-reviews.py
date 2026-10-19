@@ -20,7 +20,7 @@ def apply_reviews(data, reviews):
         if review.get('enNote'):
             word.setdefault('enBeforeReview', word.get('en', ''))
             word.setdefault('glossesBeforeReview', word.get('glosses', []))
-            word['en'] = word['enBeforeReview'] + '（' + review['enNote'] + '）'
+            word['en'] = word['enBeforeReview'] + ' (' + review['enNote'] + ')'
             word['glosses'] = [word['en']]
         for attestation in word.get('attestations', []):
             attestation.setdefault('zhBeforeReview', attestation.get('zh', ''))
@@ -28,7 +28,7 @@ def apply_reviews(data, reviews):
             attestation['zhReviewStatus'] = review['status']
             if review.get('enNote'):
                 attestation.setdefault('enBeforeReview', attestation.get('en', ''))
-                attestation['en'] = attestation['enBeforeReview'] + '（' + review['enNote'] + '）'
+                attestation['en'] = attestation['enBeforeReview'] + ' (' + review['enNote'] + ')'
     return data
 
 
