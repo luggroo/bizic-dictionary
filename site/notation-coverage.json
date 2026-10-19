@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "profiles": {
+    "stedt-7fd6565400": {
+      "total": 1004,
+      "candidateConverted": 1001,
+      "ambiguous": 63,
+      "partialCount": 1,
+      "unresolvedCount": 3,
+      "unresolved": [
+        {
+          "id": "stedt-rn-224883",
+          "term": "goŋ⁵⁵",
+          "zh": "松；松弛",
+          "en": "loose / lax",
+          "reason": "来源 STEDT · Sun H 91 ZMYY 中的 goŋ⁵⁵ 尚无已核映射（音值／韵母或i的条件分布）。原形保持不变。",
+          "partial": false
+        },
+        {
+          "id": "stedt-rn-228249",
+          "term": "ti³¹pa⁵⁵",
+          "zh": "第八",
+          "en": "eighth",
+          "reason": "ti³¹: 来源 STEDT · Sun H 91 ZMYY 中的 ti³¹ 尚无已核映射（调值）。原形保持不变。",
+          "partial": true
+        },
+        {
+          "id": "stedt-rn-197496",
+          "term": "tsi³¹tsi³¹",
+          "zh": "侄子",
+          "en": "nephew",
+          "reason": "来源 STEDT · Sun H 91 ZMYY 中的 tsi³¹ 尚无已核映射（调值）。原形保持不变。",
+          "partial": false
+        }
+      ]
+    },
+    "stedt-610ab69a37": {
+      "total": 1246,
+      "candidateConverted": 1236,
+      "ambiguous": 66,
+      "partialCount": 7,
+      "unresolvedCount": 10,
+      "unresolved": [
+        {
+          "id": "stedt-rn-431565",
+          "term": "kho̱³³",
+          "zh": "靠；倚靠",
+          "en": "rely / lean on",
+          "reason": "来源 STEDT · Huang and Dai 92 TBL 中的 kʰo̱³³ 尚无已核映射（调值）。原形保持不变。",
+          "partial": false
+        },
+        {
+          "id": "stedt-rn-386736",
+          "term": "la³⁵xm⁵⁵zie⁵⁵",
+          "zh": "十四",
+          "en": "fourteen",
+          "reason": "xm⁵⁵: 来源 STEDT · Huang and Dai 92 TBL 中的 xm⁵⁵ 尚无已核映射（音值／韵母或i的条件分布）。原形保持不变。",
+          "partial": true
+        },
+        {
+          "id": "stedt-rn-355437",
+          "term": "lo³³tsi⁵⁵",
+          "zh": "瞎子",
+          "en": "blind person",
+          "reason": "lo³³: 来源 STEDT · Huang and Dai 92 TBL 中的 lo³³ 尚无已核映射（调值）。原形保持不变。",
+          "partial": true
+        },
+        {
+          "id": "stedt-rn-372742",
+          "term": "mi⁵⁵pha⁵",
+          "zh": "火把",
+          "en": "torch",
+          "reason": "pha⁵: 来源 STEDT · Huang and Dai 92 TBL 中的 pʰa⁵ 尚无已核映射（调值）。原形保持不变。",
+          "partial": true
+        },
+        {
+          "id": "stedt-rn-431232",
+          "term": "noŋ⁵⁵",
+          "zh": "养鸡",
+          "en": "raise (chickens)",
+          "reason": "来源 STEDT · Huang and Dai 92 TBL 中的 noŋ⁵⁵ 尚无已核映射（音值／韵母或i的条件分布）。原形保持不变。",
+          "partial": false
+        },
+        {
+          "id": "stedt-rn-346488",
+          "term": "toŋ²¹ka³³",
+          "zh": "洞；洞穴",
+          "en": "cave / hole",
+          "reason": "ka³³: 来源 STEDT · Huang and Dai 92 TBL 中的 ka³³ 尚无已核映射（调值）。原形保持不变。",
+          "partial": true
+        },
+        {
+          "id": "stedt-rn-373783",
+          "term": "tshie³¹tsha²¹tsoŋ²¹",
+          "zh": "缸；坛",
+          "en": "vat / jar",
+          "reason": "tshie³¹: 来源 STEDT · Huang and Dai 92 TBL 中的 tsʰie³¹ 尚无已核映射（调值）。原形保持不变。",
+          "partial": true
+        },
+        {
+          "id": "stedt-rn-414569",
+          "term": "ɣme⁵³",
+          "zh": "会（会写）",
+          "en": "know (to write)",
+          "reason": "来源 STEDT · Huang and Dai 92 TBL 中的 ɣme⁵³ 尚无已核映射（音值／韵母或i的条件分布）。原形保持不变。",
+          "partial": false
+        },
+        {
+          "id": "stedt-rn-352839",
+          "term": "ɤɯe⁵⁵tshie⁵⁵",
+          "zh": "尿",
+          "en": "urine",
+          "reason": "ɤɯe⁵⁵: 来源 STEDT · Huang and Dai 92 TBL 中的 ɤɯe⁵⁵ 尚无已核映射（音值／韵母或i的条件分布）。原形保持不变。",
+          "partial": true
+        },
+        {
+          "id": "stedt-rn-355028",
+          "term": "ʑie²¹ɣɯe³⁵ma⁵⁵",
+          "zh": "贼",
+          "en": "thief",
+          "reason": "ʑie²¹: 来源 STEDT · Huang and Dai 92 TBL 中的 ʑie²¹ 尚无已核映射（音值／韵母或i的条件分布）。原形保持不变。",
+          "partial": true
+        }
+      ]
+    },
+    "stedt-24cc5bbb03": {
+      "total": 151,
+      "candidateConverted": 149,
+      "ambiguous": 33,
+      "partialCount": 2,
+      "unresolvedCount": 2,
+      "unresolved": [
+        {
+          "id": "stedt-rn-127242",
+          "term": "tɕe³⁵ mi⁵⁵ tʰi²¹ kʰo⁵⁵ tʰ",
+          "zh": "指甲",
+          "en": "fingernail",
+          "reason": " tʰ: 无调、残缺或未解析片段",
+          "partial": true
+        },
+        {
+          "id": "stedt-rn-127243",
+          "term": "tɕi³⁵ mi⁵⁵ tʰi²¹ kʰo⁵⁵ tʰ",
+          "zh": "脚趾甲",
+          "en": "toenail",
+          "reason": " tʰ: 无调、残缺或未解析片段",
+          "partial": true
+        }
+      ]
+    }
+  }
+}
