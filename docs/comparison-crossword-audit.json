@@ -1,0 +1,655 @@
+{
+  "basis": "Zhou 2020 Appendix II numbered word components; reject adjacent components belonging to different words",
+  "excludedRows": [
+    {
+      "id": "pbz-bi-11",
+      "meaning": "冷",
+      "wrongComponents": [
+        "2014",
+        "2015"
+      ],
+      "componentWords": [
+        "冷",
+        "夢"
+      ],
+      "correctEntry": "pbz-word-2013"
+    },
+    {
+      "id": "pbz-bi-13",
+      "meaning": "夢",
+      "wrongComponents": [
+        "2016",
+        "2017"
+      ],
+      "componentWords": [
+        "夢",
+        "簸箕"
+      ],
+      "correctEntry": "pbz-word-2015"
+    },
+    {
+      "id": "pbz-bi-15",
+      "meaning": "簸箕",
+      "wrongComponents": [
+        "2018",
+        "2019"
+      ],
+      "componentWords": [
+        "簸箕",
+        "老鷹"
+      ],
+      "correctEntry": "pbz-word-2017"
+    },
+    {
+      "id": "pbz-bi-17",
+      "meaning": "老鷹",
+      "wrongComponents": [
+        "2020",
+        "2021"
+      ],
+      "componentWords": [
+        "老鷹",
+        "穗子"
+      ],
+      "correctEntry": "pbz-word-2019"
+    },
+    {
+      "id": "pbz-bi-19",
+      "meaning": "穗子",
+      "wrongComponents": [
+        "2022",
+        "2023"
+      ],
+      "componentWords": [
+        "穗子",
+        "親家"
+      ],
+      "correctEntry": "pbz-word-2021"
+    },
+    {
+      "id": "pbz-bi-21",
+      "meaning": "親家",
+      "wrongComponents": [
+        "2024",
+        "2025"
+      ],
+      "componentWords": [
+        "親家",
+        "田地"
+      ],
+      "correctEntry": "pbz-word-2023"
+    },
+    {
+      "id": "pbz-bi-23",
+      "meaning": "田地",
+      "wrongComponents": [
+        "2026",
+        "2027"
+      ],
+      "componentWords": [
+        "田地",
+        "魚"
+      ],
+      "correctEntry": "pbz-word-2025"
+    },
+    {
+      "id": "pbz-bi-25",
+      "meaning": "魚",
+      "wrongComponents": [
+        "2028",
+        "2029"
+      ],
+      "componentWords": [
+        "魚",
+        "前面"
+      ],
+      "correctEntry": "pbz-word-2027"
+    },
+    {
+      "id": "pbz-bi-27",
+      "meaning": "前面",
+      "wrongComponents": [
+        "2030",
+        "2031"
+      ],
+      "componentWords": [
+        "前面",
+        "神、鬼"
+      ],
+      "correctEntry": "pbz-word-2029"
+    },
+    {
+      "id": "pbz-bi-29",
+      "meaning": "神、鬼",
+      "wrongComponents": [
+        "2032",
+        "2033"
+      ],
+      "componentWords": [
+        "神、鬼",
+        "倉庫"
+      ],
+      "correctEntry": "pbz-word-2031"
+    },
+    {
+      "id": "pbz-bi-31",
+      "meaning": "倉庫",
+      "wrongComponents": [
+        "2034",
+        "2035"
+      ],
+      "componentWords": [
+        "倉庫",
+        "腸子"
+      ],
+      "correctEntry": "pbz-word-2033"
+    },
+    {
+      "id": "pbz-bi-33",
+      "meaning": "腸子",
+      "wrongComponents": [
+        "2036",
+        "2037"
+      ],
+      "componentWords": [
+        "腸子",
+        "葛"
+      ],
+      "correctEntry": "pbz-word-2035"
+    },
+    {
+      "id": "pbz-bi-39",
+      "meaning": "錢",
+      "wrongComponents": [
+        "2042",
+        "2043"
+      ],
+      "componentWords": [
+        "錢",
+        "新"
+      ],
+      "correctEntry": "pbz-word-2041"
+    },
+    {
+      "id": "pbz-bi-41",
+      "meaning": "新",
+      "wrongComponents": [
+        "2044",
+        "2045"
+      ],
+      "componentWords": [
+        "新",
+        "蘿蔔"
+      ],
+      "correctEntry": "pbz-word-2043"
+    },
+    {
+      "id": "pbz-bi-43",
+      "meaning": "蘿蔔",
+      "wrongComponents": [
+        "2046",
+        "2047"
+      ],
+      "componentWords": [
+        "蘿蔔",
+        "生"
+      ],
+      "correctEntry": "pbz-word-2045"
+    },
+    {
+      "id": "pbz-bi-45",
+      "meaning": "生",
+      "wrongComponents": [
+        "2048",
+        "2049"
+      ],
+      "componentWords": [
+        "生",
+        "穀子"
+      ],
+      "correctEntry": "pbz-word-2047"
+    },
+    {
+      "id": "pbz-bi-47",
+      "meaning": "穀子",
+      "wrongComponents": [
+        "2050",
+        "2051"
+      ],
+      "componentWords": [
+        "穀子",
+        "高粱"
+      ],
+      "correctEntry": "pbz-word-2049"
+    },
+    {
+      "id": "pbz-bi-49",
+      "meaning": "高粱",
+      "wrongComponents": [
+        "2052",
+        "2053"
+      ],
+      "componentWords": [
+        "高粱",
+        "薄"
+      ],
+      "correctEntry": "pbz-word-2051"
+    },
+    {
+      "id": "pbz-bi-51",
+      "meaning": "薄",
+      "wrongComponents": [
+        "2054",
+        "2055"
+      ],
+      "componentWords": [
+        "薄",
+        "綫"
+      ],
+      "correctEntry": "pbz-word-2053"
+    },
+    {
+      "id": "pbz-bi-53",
+      "meaning": "綫",
+      "wrongComponents": [
+        "2056",
+        "2057"
+      ],
+      "componentWords": [
+        "綫",
+        "連接"
+      ],
+      "correctEntry": "pbz-word-2055"
+    },
+    {
+      "id": "pbz-bi-55",
+      "meaning": "連接",
+      "wrongComponents": [
+        "2058",
+        "2059"
+      ],
+      "componentWords": [
+        "連接",
+        "趕"
+      ],
+      "correctEntry": "pbz-word-2057"
+    },
+    {
+      "id": "pbz-bi-57",
+      "meaning": "趕",
+      "wrongComponents": [
+        "2060",
+        "2061"
+      ],
+      "componentWords": [
+        "趕",
+        "交換"
+      ],
+      "correctEntry": "pbz-word-2059"
+    },
+    {
+      "id": "pbz-bi-59",
+      "meaning": "交換",
+      "wrongComponents": [
+        "2062",
+        "2063"
+      ],
+      "componentWords": [
+        "交換",
+        "翻過來"
+      ],
+      "correctEntry": "pbz-word-2061"
+    },
+    {
+      "id": "pbz-bi-61",
+      "meaning": "翻過來",
+      "wrongComponents": [
+        "2064",
+        "2065"
+      ],
+      "componentWords": [
+        "翻過來",
+        "忘記"
+      ],
+      "correctEntry": "pbz-word-2063"
+    },
+    {
+      "id": "pbz-bi-63",
+      "meaning": "忘記",
+      "wrongComponents": [
+        "2066",
+        "2067"
+      ],
+      "componentWords": [
+        "忘記",
+        "癢"
+      ],
+      "correctEntry": "pbz-word-2065"
+    },
+    {
+      "id": "pbz-bi-65",
+      "meaning": "癢",
+      "wrongComponents": [
+        "2068",
+        "2069"
+      ],
+      "componentWords": [
+        "癢",
+        "學"
+      ],
+      "correctEntry": "pbz-word-2067"
+    },
+    {
+      "id": "pbz-bi-67",
+      "meaning": "學",
+      "wrongComponents": [
+        "2070",
+        "2071"
+      ],
+      "componentWords": [
+        "學",
+        "愛"
+      ],
+      "correctEntry": "pbz-word-2069"
+    },
+    {
+      "id": "pbz-bi-69",
+      "meaning": "愛",
+      "wrongComponents": [
+        "2072",
+        "2073"
+      ],
+      "componentWords": [
+        "愛",
+        "烤"
+      ],
+      "correctEntry": "pbz-word-2071"
+    },
+    {
+      "id": "pbz-bi-71",
+      "meaning": "烤",
+      "wrongComponents": [
+        "2074",
+        "2075"
+      ],
+      "componentWords": [
+        "烤",
+        "滾"
+      ],
+      "correctEntry": "pbz-word-2073"
+    },
+    {
+      "id": "pbz-bi-73",
+      "meaning": "滾",
+      "wrongComponents": [
+        "2076",
+        "2077"
+      ],
+      "componentWords": [
+        "滾",
+        "蹲"
+      ],
+      "correctEntry": "pbz-word-2075"
+    },
+    {
+      "id": "pbz-bi-75",
+      "meaning": "蹲",
+      "wrongComponents": [
+        "2078",
+        "2079"
+      ],
+      "componentWords": [
+        "蹲",
+        "貼"
+      ],
+      "correctEntry": "pbz-word-2077"
+    },
+    {
+      "id": "pbz-bi-77",
+      "meaning": "貼",
+      "wrongComponents": [
+        "2080",
+        "2081"
+      ],
+      "componentWords": [
+        "貼",
+        "臭"
+      ],
+      "correctEntry": "pbz-word-2079"
+    },
+    {
+      "id": "pbz-bi-79",
+      "meaning": "臭",
+      "wrongComponents": [
+        "2082",
+        "2083"
+      ],
+      "componentWords": [
+        "臭",
+        "扔"
+      ],
+      "correctEntry": "pbz-word-2081"
+    },
+    {
+      "id": "pbz-bi-85",
+      "meaning": "舌頭",
+      "wrongComponents": [
+        "2088",
+        "2089"
+      ],
+      "componentWords": [
+        "舌頭",
+        "蔬菜"
+      ],
+      "correctEntry": "pbz-word-2087"
+    },
+    {
+      "id": "pbz-bi-87",
+      "meaning": "蔬菜",
+      "wrongComponents": [
+        "2090",
+        "2091"
+      ],
+      "componentWords": [
+        "蔬菜",
+        "咱們"
+      ],
+      "correctEntry": "pbz-word-2089"
+    },
+    {
+      "id": "pbz-bi-89",
+      "meaning": "咱們",
+      "wrongComponents": [
+        "2092",
+        "2093"
+      ],
+      "componentWords": [
+        "咱們",
+        "誰"
+      ],
+      "correctEntry": "pbz-word-2091"
+    },
+    {
+      "id": "pbz-bi-91",
+      "meaning": "誰",
+      "wrongComponents": [
+        "2094",
+        "2095"
+      ],
+      "componentWords": [
+        "誰",
+        "野貓"
+      ],
+      "correctEntry": "pbz-word-2093"
+    },
+    {
+      "id": "pbz-bi-93",
+      "meaning": "野貓",
+      "wrongComponents": [
+        "2096",
+        "2097"
+      ],
+      "componentWords": [
+        "野貓",
+        "鍋"
+      ],
+      "correctEntry": "pbz-word-2095"
+    },
+    {
+      "id": "pbz-bi-95",
+      "meaning": "鍋",
+      "wrongComponents": [
+        "2098",
+        "2099"
+      ],
+      "componentWords": [
+        "鍋",
+        "昨天"
+      ],
+      "correctEntry": "pbz-word-2097"
+    },
+    {
+      "id": "pbz-bi-97",
+      "meaning": "昨天",
+      "wrongComponents": [
+        "2100",
+        "2101"
+      ],
+      "componentWords": [
+        "昨天",
+        "弟弟"
+      ],
+      "correctEntry": "pbz-word-2099"
+    },
+    {
+      "id": "pbz-bi-99",
+      "meaning": "弟弟",
+      "wrongComponents": [
+        "2102",
+        "2103"
+      ],
+      "componentWords": [
+        "弟弟",
+        "指頭"
+      ],
+      "correctEntry": "pbz-word-2101"
+    },
+    {
+      "id": "pbz-bi-101",
+      "meaning": "指頭",
+      "wrongComponents": [
+        "2104",
+        "2105"
+      ],
+      "componentWords": [
+        "指頭",
+        "筷子"
+      ],
+      "correctEntry": "pbz-word-2103"
+    },
+    {
+      "id": "pbz-bi-103",
+      "meaning": "筷子",
+      "wrongComponents": [
+        "2106",
+        "2107"
+      ],
+      "componentWords": [
+        "筷子",
+        "蜘蛛"
+      ],
+      "correctEntry": "pbz-word-2105"
+    },
+    {
+      "id": "pbz-bi-105",
+      "meaning": "蜘蛛",
+      "wrongComponents": [
+        "2108",
+        "2109"
+      ],
+      "componentWords": [
+        "蜘蛛",
+        "客人"
+      ],
+      "correctEntry": "pbz-word-2107"
+    },
+    {
+      "id": "pbz-bi-107",
+      "meaning": "客人",
+      "wrongComponents": [
+        "2110",
+        "2111"
+      ],
+      "componentWords": [
+        "客人",
+        "竹蓆"
+      ],
+      "correctEntry": "pbz-word-2109"
+    },
+    {
+      "id": "pbz-bi-109",
+      "meaning": "竹蓆",
+      "wrongComponents": [
+        "2112",
+        "2113"
+      ],
+      "componentWords": [
+        "竹蓆",
+        "土家"
+      ],
+      "correctEntry": "pbz-word-2111"
+    },
+    {
+      "id": "pbz-bi-111",
+      "meaning": "土家",
+      "wrongComponents": [
+        "2114",
+        "2115"
+      ],
+      "componentWords": [
+        "土家",
+        "雪"
+      ],
+      "correctEntry": "pbz-word-2113"
+    },
+    {
+      "id": "pbz-bi-113",
+      "meaning": "雪",
+      "wrongComponents": [
+        "2116",
+        "2117"
+      ],
+      "componentWords": [
+        "雪",
+        "餓"
+      ],
+      "correctEntry": "pbz-word-2115"
+    },
+    {
+      "id": "pbz-bi-115",
+      "meaning": "餓",
+      "wrongComponents": [
+        "2118",
+        "2119"
+      ],
+      "componentWords": [
+        "餓",
+        "蛋"
+      ],
+      "correctEntry": "pbz-word-2117"
+    },
+    {
+      "id": "pbz-bi-117",
+      "meaning": "蛋",
+      "wrongComponents": [
+        "2120",
+        "2121"
+      ],
+      "componentWords": [
+        "蛋",
+        "蓋上"
+      ],
+      "correctEntry": "pbz-word-2119"
+    }
+  ]
+}

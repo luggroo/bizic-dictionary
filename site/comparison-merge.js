@@ -3,7 +3,8 @@ const comparisonNorm=v=>String(v??'').normalize('NFC').replaceAll('／','/').rep
 function mergeComparisons(data){
  data.reconstructionOriginals=data.reconstructions;
  // User-reviewed: ? denotes unknown tone; retain it when removing the @ prefix.
- const raw=data.reconstructions.map(r=>({...r,proto:String(r.proto||'').replaceAll('@','')}));
+ const excludedCrossWordRows=new Set(["pbz-bi-11", "pbz-bi-13", "pbz-bi-15", "pbz-bi-17", "pbz-bi-19", "pbz-bi-21", "pbz-bi-23", "pbz-bi-25", "pbz-bi-27", "pbz-bi-29", "pbz-bi-31", "pbz-bi-33", "pbz-bi-39", "pbz-bi-41", "pbz-bi-43", "pbz-bi-45", "pbz-bi-47", "pbz-bi-49", "pbz-bi-51", "pbz-bi-53", "pbz-bi-55", "pbz-bi-57", "pbz-bi-59", "pbz-bi-61", "pbz-bi-63", "pbz-bi-65", "pbz-bi-67", "pbz-bi-69", "pbz-bi-71", "pbz-bi-73", "pbz-bi-75", "pbz-bi-77", "pbz-bi-79", "pbz-bi-85", "pbz-bi-87", "pbz-bi-89", "pbz-bi-91", "pbz-bi-93", "pbz-bi-95", "pbz-bi-97", "pbz-bi-99", "pbz-bi-101", "pbz-bi-103", "pbz-bi-105", "pbz-bi-107", "pbz-bi-109", "pbz-bi-111", "pbz-bi-113", "pbz-bi-115", "pbz-bi-117"]);
+ const raw=data.reconstructions.filter(r=>!excludedCrossWordRows.has(r.id)).map(r=>({...r,proto:String(r.proto||'').replaceAll('@','')}));
  const byId=Object.fromEntries(raw.map(r=>[r.id,r])),joined=raw.filter(r=>r.joinedFrom),components=new Set(joined.flatMap(r=>r.joinedFrom.map(id=>byId[id]?.no).filter(Boolean)));
  const groups=[];for(const r of joined){const g=groups.find(g=>g.base.no===r.no);if(g)g.versions.push(r);else groups.push({base:r,versions:[r]});}
  for(const g of groups){
