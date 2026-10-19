@@ -124,11 +124,11 @@ const BRASSETT_GRAMMAR={
             "倒"
           ],
           [
-            "l",
-            "l",
-            "longx",
-            "年"
-          ],
+          "l",
+          "l",
+          "laf",
+          "厚"
+        ],
           [
             "n",
             "n",
