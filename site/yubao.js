@@ -5,7 +5,7 @@ function surveyIPA(raw,point){
 }
 function dialectSelector(includeComparison=false){
  const option=(value,label)=>`<option value="${E(value)}" ${state.dialect===value?'selected':''}>${E(label)}</option>`;
- return `<select data-filter="dialect" aria-label="方言">${option('','全部方言')}<optgroup label="北部">${option('北部','北部（全部）')}${option('龙山','　龙山')}${option('保靖碗米坡','　保靖碗米坡')}${option('保靖阳朝','　保靖阳朝')}</optgroup>${option('南部','南部')}${includeComparison?option('南北比较','南北比较'):''}${option('未标明','未标明')}</select>`;
+ return `<select data-filter="dialect" aria-label="方言">${option('','全部方言')}${option('北部','北部（毕兹 毕基 密基）')}${option('龙山','　龙山（福石）')}${option('保靖碗米坡','　保靖碗米坡（沙沙）')}${option('保靖阳朝','　保靖阳朝（厦）')}${option('南部','南部（孟兹）')}${includeComparison?option('南北比较','南北比较'):''}${option('未标明','未标明')}</select>`;
 }
 const dialectCache=new WeakMap();
 function dialectTags(item){
