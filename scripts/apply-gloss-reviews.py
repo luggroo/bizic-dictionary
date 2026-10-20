@@ -13,6 +13,18 @@ def apply_reviews(data, reviews):
         word = words[word_id]
         if word['term'] != review['term'] or word.get('enBeforeReview', word.get('en', '')) != review['en']:
             raise ValueError(f'Review identity mismatch: {word_id}')
+        if review.get('dialect'):
+            word.setdefault('dialectBeforeReview', word.get('dialect', ''))
+            word['dialect'] = review['dialect']
+            word['dialects'] = [review['dialect']]
+            word['location'] = review['location']
+            word['locations'] = [review['location']]
+            word['notice'] = '方言及地点经用户审核。'
+            for attestation in word.get('attestations', []):
+                attestation.setdefault('dialectBeforeReview', attestation.get('dialect', ''))
+                attestation['dialect'] = review['dialect']
+                attestation['location'] = review['location']
+                attestation['notice'] = '方言及地点经用户审核。'
         word.setdefault('zhBeforeReview', word.get('zh', ''))
         word['zh'] = review['zh']
         word['zhVariants'] = [review['zh']]
