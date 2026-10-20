@@ -77,3 +77,9 @@
 .corpus-extra{margin-top:24px}
 #detail-body{overflow-wrap:anywhere;min-width:0}
 @media(max-width:720px){.corpus-grid{grid-template-columns:minmax(0,1fr)}.corpus-card{padding:14px}.filters select{font-size:16px}.dialog-head{gap:8px;flex-wrap:wrap}.dialog-head #close{margin-left:auto}}
+
+/* Independent northern/southern preferences, usable on narrow screens. */
+#spelling-control,#detail-spelling-control{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.shell>header{height:auto;min-height:78px;padding-top:10px;padding-bottom:10px}
+.dialog-head{flex-wrap:wrap;gap:8px}
+@media(max-width:600px){#spelling-control{order:3;flex-basis:100%}.spelling-selector{font-size:12px;gap:5px}.spelling-selector select{min-width:0;max-width:145px;padding:6px}.shell>header{min-height:56px}#detail-spelling-control{order:3;flex-basis:100%}.dialog-head>button{margin-left:auto}}

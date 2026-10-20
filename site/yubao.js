@@ -47,7 +47,7 @@ async function loadYubao(data){
   for(const [serial,zh,raw,annotation] of p.sentences){const ipa=surveyIPA(raw,p.point);data.corpus.push({id:source+'-s-'+serial,source,survey:true,code:serial,title:zh,ipa,text:zh+'\n/'+ipa+'/',annotation,locations:[p.location],people:[],genre:'调查例句',dialect:p.dialect,audio:'',page:null})}
  }
 }
-function surveySentenceDetail(c){return `<div class="row"><h2 class="grow">${E(c.title)}</h2>${bookmark(c.id)}</div><p>/${E(c.ipa)}/</p><p class="tiny">${E(c.locations.join(' · '))} · 中文为调查提示句</p>${c.annotation?`<p>${E(c.annotation)}</p>`:''}<div class="detail-actions"><button data-copy="${E(c.id)}">复制引用</button></div><p><a href="${E(S[c.source].url)}" target="_blank" rel="noopener">中国语保 · 例句 ${E(c.code)} ↗</a></p>${noteArea(c.id)}`}
+function surveySentenceDetail(c){const converted=c.dialect==='南部'?southernSpelling(c.ipa,c.source):northernSurveySpelling(c.ipa,c.source.replace('yubao-',''));const spelling=converted?(c.dialect==='南部'?converted[southernDisplay==='poj'?'poj':'accent']:converted[spellingDisplay==='ye'?'ye':'accent']):'';return `<div class="row"><h2 class="grow">${E(c.title)}</h2>${bookmark(c.id)}</div>${spelling?`<p class="survey-spelling">${E(spelling)}</p>`:''}<p>/${E(c.ipa)}/</p><p class="tiny">${E(c.locations.join(' · '))} · 中文为调查提示句</p>${c.annotation?`<p>${E(c.annotation)}</p>`:''}<div class="detail-actions"><button data-copy="${E(c.id)}">复制引用</button></div><p><a href="${E(S[c.source].url)}" target="_blank" rel="noopener">中国语保 · 例句 ${E(c.code)} ↗</a></p>${noteArea(c.id)}`}
 
 // Wan­mipo surface-tone spelling: 33 and 31 share r, but retain distinct accents.
 const WANMIPO_TONES={'13':['f',2],'33':['r',3],'55':['x',1],'53':['v',4],'31':['r',3]};
