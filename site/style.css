@@ -66,3 +66,14 @@
 
 /* Reference grammar: readable inventories on phones and larger screens. */
 .grammar-inventory{max-width:100%;overflow-x:auto;margin:12px 0 24px}.grammar-inventory table{width:100%;border-collapse:collapse;font-size:15px}.grammar-inventory th,.grammar-inventory td{padding:9px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}.grammar-inventory th{background:#edf2ec}.grammar-inventory td{line-height:1.6;min-width:5em}.grammar-reference{margin:12px 0;color:var(--muted);font-size:13px}.grammar-reference summary{cursor:pointer}.brassett-rule h3{margin-top:22px}.grammar-inventory:focus-visible{outline:2px solid var(--green)}@media(max-width:600px){.grammar-inventory th,.grammar-inventory td{padding:8px;font-size:14px}.grammar-inventory table{min-width:360px}}
+
+/* Corpus cards remain usable on narrow screens and long IPA lines. */
+.corpus-card .num{font-family:inherit;margin:0;font-size:12px}
+.corpus-card-content{display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:100%;text-align:left;padding:12px 0 0;border:0;background:transparent;overflow-wrap:anywhere;white-space:normal}
+.corpus-card-content .card-title{font-size:16px;line-height:1.6}
+.corpus-card-content .survey-ipa{font-size:15px;color:var(--muted);line-height:1.7}
+.corpus-card-content .tiny{align-self:flex-end}
+.corpus-card audio{max-width:100%;margin-top:12px}
+.corpus-extra{margin-top:24px}
+#detail-body{overflow-wrap:anywhere;min-width:0}
+@media(max-width:720px){.corpus-grid{grid-template-columns:minmax(0,1fr)}.corpus-card{padding:14px}.filters select{font-size:16px}.dialog-head{gap:8px;flex-wrap:wrap}.dialog-head #close{margin-left:auto}}
