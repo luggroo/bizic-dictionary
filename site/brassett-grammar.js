@@ -2,13 +2,23 @@ const BRASSETT_GRAMMAR={
   "1.1": {
     "pages": [
       24,
-      25
+      25,
+      16
     ],
     "paragraphs": [
       "国际音标用斜线表示音位，如/p/，用方括号表示具体发音，如[b]。叶式拼音与国际音标的对应列在声母、韵母表中。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ka²",
+        "ipa": "/kʰa²⁴/",
+        "gloss": "吃",
+        "translation": "吃。拼写 ga²，对应叶式 gaf。",
+        "page": 16,
+        "number": "表2.14"
+      }
+    ]
   },
   "1.2": {
     "pages": [
@@ -19,7 +29,16 @@ const BRASSETT_GRAMMAR={
       "调类是声调的类别，调值是声调的实际音高。他砂话和拉西峒的四个调类相对应，但第二调分别读²⁴和³⁵，第四调分别读⁵¹和⁵³。叶式拼写用词尾字母x、f、r、v标记这四个调类。"
     ],
     "formula": "",
-    "examples": [],
+    "examples": [
+      {
+        "text": "",
+        "ipa": "/ʔa⁵⁵/；/ʔa²⁴/；/ʔa²¹/；/ʔa⁵¹/",
+        "gloss": "高平｜升｜低降｜高降",
+        "translation": "依次为“饿、写、取、喂”。",
+        "page": 13,
+        "number": "表2.6"
+      }
+    ],
     "tables": [
       {
         "title": "TS／拉西峒调类、调值与叶式调尾",
@@ -67,14 +86,25 @@ const BRASSETT_GRAMMAR={
   "1.3": {
     "pages": [
       3,
-      8
+      8,
+      14
     ],
     "paragraphs": [
       "北部土家语内部存在地域差异。他砂、拉西峒、仙仁和小龙热的声母、韵母及调值并不完全相同。",
-      "Brassett的描写以龙山县坡脚、他砂、靛房一带的调查为基础。Zhou的比较材料包括他砂、拉西峒、仙仁和小龙热，代号分别为TS、FX、XR、XL。"
+      "Brassett的描写以龙山县坡脚、他砂、靛房一带的调查为基础。Zhou的比较材料包括他砂、拉西峒、仙仁和小龙热，代号分别为TS、FX、XR、XL。",
+      "以下“雪”的变调例来自 Brassett 的龙山材料；其他调查点的调值另见声调章。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "",
+        "ipa": "/su²⁴ su²⁴/ → [su²⁴ su⁵⁵]",
+        "gloss": "第二音节由升调变为高平调",
+        "translation": "雪。",
+        "page": 14,
+        "number": "表2.8"
+      }
+    ]
   },
   "2.1": {
     "paragraphs": [
@@ -124,11 +154,11 @@ const BRASSETT_GRAMMAR={
             "倒"
           ],
           [
-          "l",
-          "l",
-          "laf",
-          "厚"
-        ],
+            "l",
+            "l",
+            "laf",
+            "厚"
+          ],
           [
             "n",
             "n",
@@ -999,7 +1029,24 @@ const BRASSETT_GRAMMAR={
       "他砂话的声调在多音节词和短语中会发生变化。两个升调相连时，后一个可变为高调；升调后接高降调时，后一个也可变为高调。连续高调的末音节以及低降调后的非重读升调音节可弱化。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "",
+        "ipa": "/su²⁴ su²⁴/ → [su²⁴ su⁵⁵]",
+        "gloss": "第二音节由升调变为高平调",
+        "translation": "雪。",
+        "page": 14,
+        "number": "表2.8"
+      },
+      {
+        "text": "",
+        "ipa": "/la²⁴ ka⁵¹/ → [la²⁴ ka⁵⁵]",
+        "gloss": "升调后的高降调变为高平调",
+        "translation": "黑。",
+        "page": 14,
+        "number": "表2.9"
+      }
+    ]
   },
   "4.3": {
     "pages": [
@@ -1010,7 +1057,24 @@ const BRASSETT_GRAMMAR={
       "表示非现实的i可以与前一音节的韵部结合，引起韵母变化。助词相接也会产生合音，例如lie¹与gu²可合为liao¹，因此两个语法成分有时只占一个音节。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "",
+        "ipa": "/ka²⁴/ ＋ /i/ → /kai²⁴/",
+        "gloss": "吃｜非现实",
+        "translation": "将要吃。",
+        "page": 16,
+        "number": "表2.14"
+      },
+      {
+        "text": "",
+        "ipa": "/ka²⁴ ta⁵⁵ tʰi⁵⁵/ → [ka²⁴ a⁵⁵ tʰi⁵⁵]",
+        "gloss": "吃｜不能",
+        "translation": "不能吃。否定成分的首辅音可以脱落。",
+        "page": 15,
+        "number": "表2.12"
+      }
+    ]
   },
   "5.2": {
     "pages": [
@@ -1018,33 +1082,69 @@ const BRASSETT_GRAMMAR={
       129
     ],
     "paragraphs": [
-      "语调、语速和重音共同影响句子的语气。陈述形式可以借助语调表达要求；ta¹ duo³也可因说话方式不同，表达“不必”或语气较强的“不得”。"
+      "陈述形式也可以借助语调表达命令。下面一句既可陈述对方的动作，也可要求对方去做。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ni² ra³ki¹ce³ di³",
+        "ipa": "/ɲi²⁴ za²¹kʰɨ⁵⁵tsʰɤ²¹ ti²¹/",
+        "gloss": "你｜野葱｜挖",
+        "translation": "你挖野葱；挖野葱去！",
+        "page": 89,
+        "number": "104"
+      }
+    ]
   },
   "5.3": {
     "pages": [
       73,
-      74
+      74,
+      161
     ],
     "paragraphs": [
-      "话题常出现在句首，其后可以有停顿，也可以伴随话题小词。停顿把话题与后续陈述分开，但话题并不总由停顿标记。"
+      "话题常放在句首，其后可有短暂停顿。下例先提出“弟弟”，后面用第三人称代词回指他；动作者是姐姐。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ang¹ngai⁴, a²da¹ guo² ha³ liao¹",
+        "ipa": "/ã⁵⁵ŋai⁵¹, a²⁴ta⁵⁵ kuɔ²⁴ xa²¹ liau⁵⁵/",
+        "gloss": "弟弟｜姐姐｜他｜打｜了",
+        "translation": "弟弟，姐姐打了他。",
+        "page": 161,
+        "number": "4"
+      }
+    ]
   },
   "6.1": {
     "pages": [
       46,
-      50
+      50,
+      107
     ],
     "paragraphs": [
-      "作者以名词、动词和小词为主要类别，把代词放在名词系统内，把通常称为形容词的性质谓词分析为状态动词。采用这套分类时，“形容词”不能预设为与汉语完全同构的独立类别。",
-      "动词不随主语人称和数作一致变化；参与者角色主要由语序、标记、词义及上下文识别。"
+      "名词可以指称人和事物；动词表达动作或状态。代词代替名词短语，助词则标明领属、时体等关系。土家语中许多相当于汉语形容词的词可以直接作谓语。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "lai⁴ sa⁴",
+        "ipa": "/lai⁵¹ sa⁵¹/",
+        "gloss": "今天｜冷",
+        "translation": "今天冷。",
+        "page": 107,
+        "number": "1"
+      },
+      {
+        "text": "guo² nie³ si¹ba¹ hhe¹se¹",
+        "ipa": "/kuɔ²⁴ ɲie²¹ sɿ⁵⁵pa⁵⁵ ɣɤ⁵⁵sɤ⁵⁵/",
+        "gloss": "他｜领属｜衣服｜脏",
+        "translation": "他的衣服脏。",
+        "page": 107,
+        "number": "3"
+      }
+    ]
   },
   "6.2": {
     "pages": [
@@ -1053,10 +1153,27 @@ const BRASSETT_GRAMMAR={
       101
     ],
     "paragraphs": [
-      "颜色等性质形式可具有名词性和谓词性用法；其他性质词作名词修饰语时可能需要专门形式。看到同一个词的两种用途，要记录分布，不能先假定所有状态动词都能直接放在名词后。"
+      "颜色词既能作谓语，也能作名词的修饰语。其他性质词作定语时常有专门的名词性形式，例如“好”/tsʰa²⁴/对应“好的”/tsʰai²⁴/。性质形式还可独立指称相应的事物。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "luo⁴ cai²",
+        "ipa": "/luɔ⁵¹ tsʰai²⁴/",
+        "gloss": "人｜好的",
+        "translation": "好人。",
+        "page": 101,
+        "number": "69"
+      },
+      {
+        "text": "cai² la² bu² a³xie²",
+        "ipa": "/tsʰai²⁴ la²⁴ pu²⁴ a²¹ɕie²⁴/",
+        "gloss": "好的｜一｜量词｜取来",
+        "translation": "拿个好的来。",
+        "page": 101,
+        "number": "71"
+      }
+    ]
   },
   "6.3": {
     "pages": [
@@ -1065,10 +1182,19 @@ const BRASSETT_GRAMMAR={
       146
     ],
     "paragraphs": [
-      "词类转换有多种途径：部分性质词有固定的定语名词形式，动词或动词短语也可通过名词化标记转成名词性成分。固定词形与能产句法名词化应分别收录。"
+      "有些性质词有固定的名词性形式，如“好”/tsʰa²⁴/与“好的”/tsʰai²⁴/。另一些词通过名物化标记组成修饰语；下例在“脏”后加 /ɲie²¹ ɕi²⁴/，修饰前面的“碗”。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "qie³bi² hhe¹se¹ nie³ xi² suo¹ da²",
+        "ipa": "/tɕʰie²¹pi²⁴ ɣɤ⁵⁵sɤ⁵⁵ ɲie²¹ ɕi²⁴ suɔ⁵⁵ ta²⁴/",
+        "gloss": "碗｜脏｜关联｜名物化｜三｜量词",
+        "translation": "三个脏碗。",
+        "page": 146,
+        "number": "27"
+      }
+    ]
   },
   "7.1": {
     "pages": [
@@ -1077,14 +1203,31 @@ const BRASSETT_GRAMMAR={
       30,
       31,
       32,
-      33
+      33,
+      34
     ],
     "paragraphs": [
-      "亲属称谓中的 a／ang 属于有限词族，不宜推广成任意名词的前缀。ka³ 可用于家族、住户相关构词；小称 -bu¹ 的能产性有限，-bu²li¹ 则可表达小物、幼体等意义。",
-      "-die¹ 的复数用法主要与人有关，也见于借词；它不是每个复数名词都必须带的词尾。"
+      "亲属称谓中常见 /a²¹/、/ã⁵⁵/，如“父亲”“母亲”“弟弟”。这些形式属于固定词族。后缀 /kʰa²¹/见于族称；/tie⁵⁵/可用于人的复数形式，其中“人＋/tie⁵⁵/”还可表示“别人”。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "a³ba¹; a³nie¹; ang¹ngai⁴",
+        "ipa": "/a²¹pa⁵⁵; a²¹ɲie⁵⁵; ã⁵⁵ŋai⁵¹/",
+        "gloss": "父亲；母亲；弟弟",
+        "translation": "父亲、母亲、弟弟。",
+        "page": 28,
+        "number": "表3.4"
+      },
+      {
+        "text": "a³nie¹ a³ba¹ luo⁴die¹ bo³ hu³ri¹",
+        "ipa": "/a²¹ɲie⁵⁵ a²¹pa⁵⁵ luɔ⁵¹tie⁵⁵ pɔ²¹ xu²¹zɿ⁵⁵/",
+        "gloss": "母亲｜父亲｜别人｜间接宾语｜工作",
+        "translation": "父母给别人做工。",
+        "page": 34,
+        "number": "8"
+      }
+    ]
   },
   "7.3": {
     "pages": [
@@ -1093,10 +1236,27 @@ const BRASSETT_GRAMMAR={
       34
     ],
     "paragraphs": [
-      "天气、水、手、脚、木等成分构成若干词族。判断一个多音节形式是复合还是派生，要看组成部分能否独立使用、组合意义和能产性，不能仅按词长判定。"
+      "若干词族共享表示天气、水、手脚或木头的成分。例如“天空”/mɤ²⁴/出现在天气词中，“木头”/kʰa²¹/出现在“木屋”“树林”等词中。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "me²ca²; me²ze³",
+        "ipa": "/mɤ²⁴tsʰa²⁴; mɤ²⁴tsɤ²¹/",
+        "gloss": "天＋晴；天＋下雨",
+        "translation": "晴天；雨。",
+        "page": 28,
+        "number": "表3.5"
+      },
+      {
+        "text": "ka³cuo⁴; ka³kuo³",
+        "ipa": "/kʰa²¹tsʰuɔ⁵¹; kʰa²¹kʰuɔ²¹/",
+        "gloss": "木＋屋；木＋林",
+        "translation": "木屋；树林。",
+        "page": 29,
+        "number": "表3.8"
+      }
+    ]
   },
   "8.1": {
     "pages": [
@@ -1104,10 +1264,27 @@ const BRASSETT_GRAMMAR={
       35
     ],
     "paragraphs": [
-      "名词与名词可以构成复合词；复合的整体义可能比两个成分的直接相加更固定。词汇表应同时保留整词和可分析的成分，而不是在翻译时随意拆成自由短语。"
+      "两个名词可以组成复合词。复合后，词义可能更加具体，例如“水＋路”表示水沟，“眼＋水”表示眼泪。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ce³la³; ka³cuo⁴",
+        "ipa": "/tsʰɤ²¹la²¹; kʰa²¹tsʰuɔ⁵¹/",
+        "gloss": "水＋路；木＋屋",
+        "translation": "水沟；木屋。",
+        "page": 34,
+        "number": "表3.23"
+      },
+      {
+        "text": "luo²bu¹ce³",
+        "ipa": "/luɔ²⁴pu⁵⁵tsʰɤ²¹/",
+        "gloss": "眼＋水",
+        "translation": "眼泪。",
+        "page": 35,
+        "number": "表3.24"
+      }
+    ]
   },
   "8.2": {
     "pages": [
@@ -1116,10 +1293,27 @@ const BRASSETT_GRAMMAR={
       39
     ],
     "paragraphs": [
-      "重叠有不同功能：数量与量词的重复配合 mo³ 可表达分配；状态谓词的重叠可加强性质；另有 V lie² V 和 V di¹ V ga² 等形式。它们不是可对全部动词无条件套用的同一规则。"
+      "数量短语的重叠可以表示逐个进行；性质词重叠可以加强程度。后一类还有在两次重复之间加入 /lie²¹/ 的形式。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ni² ce²si² la² bu² la² bu² mo³ ga²",
+        "ipa": "/ɲi²⁴ tsʰɤ²⁴sɿ²⁴ la²⁴ pu²⁴ la²⁴ pu²⁴ mɔ²¹ ka²⁴/",
+        "gloss": "你｜橘子｜一｜量词｜一｜量词｜方式｜吃",
+        "translation": "你一个一个地吃橘子。",
+        "page": 37,
+        "number": "12"
+      },
+      {
+        "text": "ge³di¹ ce³ sa⁴ lie³ sa⁴",
+        "ipa": "/kɤ²¹ti⁵⁵ tsʰɤ²¹ sa⁵¹ lie²¹ sa⁵¹/",
+        "gloss": "这｜水｜冷｜程度｜冷",
+        "translation": "这水很冷。",
+        "page": 38,
+        "number": "14"
+      }
+    ]
   },
   "8.3": {
     "pages": [
@@ -1127,10 +1321,19 @@ const BRASSETT_GRAMMAR={
       39
     ],
     "paragraphs": [
-      "部分重叠式已词汇化，并受谓语位置等条件限制。记录时需要保存完整结构与功能，不能从一个强度义重叠例子推导所有动词都能用重叠表示“做一做”。"
+      "有些重叠式是固定的词汇搭配，主要用作谓语。下面“很好”的形式采用“性质词＋/ti⁵⁵/＋性质词＋/ka²⁴/”的格式，不能任意套用于所有动词。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ni² nie³ a³ba¹ ca²di¹ca²ga²",
+        "ipa": "/ɲi²⁴ ɲie²¹ a²¹pa⁵⁵ tsʰa²⁴ti⁵⁵tsʰa²⁴ka²⁴/",
+        "gloss": "你｜领属｜父亲｜很好",
+        "translation": "你父亲很好。",
+        "page": 39,
+        "number": "20"
+      }
+    ]
   },
   "9.1": {
     "pages": [
@@ -1175,33 +1378,70 @@ const BRASSETT_GRAMMAR={
       106
     ],
     "paragraphs": [
-      "名词短语不是单一的“所有修饰语在名词前”。关联／领属短语与指示成分在中心名词前；性质名词和数量量词组在后，处所名词及名词小词还可跟在更外层。"
+      "领属短语和指示词放在中心名词前，性质修饰语与数量短语放在后。下例中心名词是“狗”，前后各有修饰成分。"
     ],
     "formula": "关联短语 → 指示词 → 中心名词 → 性质名词 → 数量量词组 → 处所名词 → 名词小词",
-    "examples": []
+    "examples": [
+      {
+        "text": "nga² nie³ ai¹di¹ ha⁴lie³ lang²ga¹ re¹ long³",
+        "ipa": "/ŋa²⁴ ɲie²¹ ai⁵⁵ti⁵⁵ xa⁵¹lie²¹ lã²⁴ka⁵⁵ zɤ⁵⁵ lɔ̃²¹/",
+        "gloss": "我｜领属｜那｜狗｜黑的｜四｜量词",
+        "translation": "我的那四只黑狗。",
+        "page": 106,
+        "number": "102"
+      }
+    ]
   },
   "10.2": {
     "pages": [
       48,
       96,
-      97
+      97,
+      106
     ],
     "paragraphs": [
-      "近指 ge³di¹、远指 ai¹di¹ 与数量表达承担不同功能。数量组通常跟在名词后；lao⁴ 可把“一”和量词结合为一个形式。不能仅凭没有冠词就断定一个名词一定是泛指。"
+      "近指 /kɤ²¹ ti⁵⁵/、远指 /ai⁵⁵ ti⁵⁵/都能修饰名词。数量组一般在名词后；/lau⁵¹/可合并表达“一＋量词”。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ai¹di¹ ha⁴lie³ lang²ga¹ re¹ long³",
+        "ipa": "/ai⁵⁵ti⁵⁵ xa⁵¹lie²¹ lã²⁴ka⁵⁵ zɤ⁵⁵ lɔ̃²¹/",
+        "gloss": "那｜狗｜黑的｜四｜量词",
+        "translation": "那四只黑狗。",
+        "page": 106,
+        "number": "101"
+      },
+      {
+        "text": "ra³ lao⁴",
+        "ipa": "/za²¹ lau⁵¹/",
+        "gloss": "鸡｜一（含量词）",
+        "translation": "一只鸡。",
+        "page": 97,
+        "number": "40"
+      }
+    ]
   },
   "10.3": {
     "pages": [
       106,
-      160
+      160,
+      101
     ],
     "paragraphs": [
-      "图 6.1 给出的是可组合成分的相对次序，不要求每个名词短语把所有位置填满。可从语境恢复的名词或参与者会省略；还原时应检查前文，而不是补上固定默认主语。"
+      "名词短语不必包含所有修饰成分。性质名词也能独立指称事物，中心名词的内容由语境补足。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "nga² bi²kui¹ di⁴",
+        "ipa": "/ŋa²⁴ pi²⁴kʰuei⁵⁵ ti⁵¹/",
+        "gloss": "我｜小的｜要",
+        "translation": "我要一个小的。",
+        "page": 101,
+        "number": "70"
+      }
+    ]
   },
   "11.1": {
     "paragraphs": [
@@ -1270,10 +1510,20 @@ const BRASSETT_GRAMMAR={
       }
     ],
     "pages": [
-      48
+      48,
+      49
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ge¹ze¹ hu²ni¹ eng³zou²",
+        "ipa": "/kɤ⁵⁵tsɤ⁵⁵ xu²⁴ɲi⁵⁵ ɜ̃²¹tsou²⁴/",
+        "gloss": "他们｜全｜来了",
+        "translation": "他们都来了。",
+        "page": 49,
+        "number": "4"
+      }
+    ]
   },
   "11.2": {
     "pages": [
@@ -1282,10 +1532,27 @@ const BRASSETT_GRAMMAR={
       102
     ],
     "paragraphs": [
-      "代词的领属和受益者关系可由后接成分表达，如 nga² nie³“我的”、guo² bo³“对他／给他”。这里应分析为代词与关系成分的组合，不能凭汉语翻译另造一套主格、宾格词尾。"
+      "代词后接关联成分 /ɲie²¹/可表达领属；后接 /pɔ²¹/可标明交谈对象或接受者。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "nga² nie³ ci¹pu¹",
+        "ipa": "/ŋa²⁴ ɲie²¹ tsʰɿ⁵⁵pʰu⁵⁵/",
+        "gloss": "我｜领属｜书",
+        "translation": "我的书。",
+        "page": 93,
+        "number": "9"
+      },
+      {
+        "text": "nga² guo² bo³ li³ la¹",
+        "ipa": "/ŋa²⁴ kuɔ²⁴ pɔ²¹ li²¹ la⁵⁵/",
+        "gloss": "我｜他｜间接宾语｜说｜进行",
+        "translation": "我在对他说话。",
+        "page": 102,
+        "number": "75"
+      }
+    ]
   },
   "11.3": {
     "paragraphs": [
@@ -1314,10 +1581,29 @@ const BRASSETT_GRAMMAR={
       }
     ],
     "pages": [
-      48
+      48,
+      107,
+      106
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ge³di¹ ci¹pu¹ hhe³",
+        "ipa": "/kɤ²¹ti⁵⁵ tsʰɿ⁵⁵pʰu⁵⁵ ɣɤ²¹/",
+        "gloss": "这｜书｜长",
+        "translation": "这本书很长。",
+        "page": 107,
+        "number": "2"
+      },
+      {
+        "text": "ai¹di¹ ha⁴lie³ lang²ga¹ re¹ long³",
+        "ipa": "/ai⁵⁵ti⁵⁵ xa⁵¹lie²¹ lã²⁴ka⁵⁵ zɤ⁵⁵ lɔ̃²¹/",
+        "gloss": "那｜狗｜黑的｜四｜量词",
+        "translation": "那四只黑狗。",
+        "page": 106,
+        "number": "101"
+      }
+    ]
   },
   "12.1": {
     "pages": [
@@ -1327,10 +1613,27 @@ const BRASSETT_GRAMMAR={
       97
     ],
     "paragraphs": [
-      "普通计数中数词与量词搭配。数量结构的中心名词通常在前，数词、量词依次在后；某些“一＋量词”还有合并形式。序数的完整规则仍须单独整理，不能从基数式直接推导。"
+      "数词一般和量词一起放在名词后。“人＋一＋量词”表示“一个人”，“衣服＋三＋量词”表示“三件衣服”。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "luo⁴ la² hu³",
+        "ipa": "/luɔ⁵¹ la²⁴ xu²¹/",
+        "gloss": "人｜一｜量词",
+        "translation": "一个人。",
+        "page": 96,
+        "number": "31"
+      },
+      {
+        "text": "si¹ba¹ suo¹ pi¹",
+        "ipa": "/sɿ⁵⁵pa⁵⁵ suɔ⁵⁵ pʰi⁵⁵/",
+        "gloss": "衣服｜三｜量词",
+        "translation": "三件衣服。",
+        "page": 96,
+        "number": "32"
+      }
+    ]
   },
   "12.2": {
     "pages": [
@@ -1338,10 +1641,27 @@ const BRASSETT_GRAMMAR={
       96
     ],
     "paragraphs": [
-      "量词选择与所指类别有关：书中列举人的 hu³、动物的 long³、细长物的 zi² 等。类别概括不能替代逐词搭配证据，尤其不应为未见过的名词自行选量词。"
+      "量词的选择与事物类别有关。人的量词是 /xu²¹/，衣物用 /pʰi⁵⁵/，碗用 /ta²⁴/，细长物可用 /tsɿ²⁴/。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "qie³bi² ong¹ da²",
+        "ipa": "/tɕʰie²¹pi²⁴ ɔ̃⁵⁵ ta²⁴/",
+        "gloss": "碗｜五｜量词",
+        "translation": "五个碗。",
+        "page": 96,
+        "number": "33"
+      },
+      {
+        "text": "hhe²la¹ ye³ zi²",
+        "ipa": "/ɣɤ²⁴la⁵⁵ je²¹ tsɿ²⁴/",
+        "gloss": "绳｜八｜量词",
+        "translation": "八根绳子。",
+        "page": 96,
+        "number": "34"
+      }
+    ]
   },
   "12.3": {
     "pages": [
@@ -1349,8 +1669,7 @@ const BRASSETT_GRAMMAR={
       106
     ],
     "paragraphs": [
-      "名词—数词—量词是第 6 章明确展示的次序。名词本身兼作计量单位时，也有数词直接置于该名词前的结构，不能把两类混为一谈。",
-      "校读提示：第 18 页的一处顺序表述与第 6 章的明确说明和例句不一致；这里以第 96 页例句及第 106 页图示说明该结构，同时保留这一内部差异。"
+      "数量组通常放在名词后；名词本身兼作计量单位时，数词也可直接放在该名词前。"
     ],
     "formula": "名词＋数词＋量词；数词＋兼作单位的名词（另一构式）",
     "examples": [
@@ -1360,7 +1679,8 @@ const BRASSETT_GRAMMAR={
         "translation": "一个人。",
         "page": 96,
         "number": "31",
-        "note": ""
+        "note": "",
+        "ipa": "/luɔ⁵¹ la²⁴ xu²¹/"
       },
       {
         "text": "si¹ba¹ suo¹ pi¹",
@@ -1368,7 +1688,8 @@ const BRASSETT_GRAMMAR={
         "translation": "三件衣服。",
         "page": 96,
         "number": "32",
-        "note": ""
+        "note": "",
+        "ipa": "/sɿ⁵⁵pa⁵⁵ suɔ⁵⁵ pʰi⁵⁵/"
       },
       {
         "text": "ong¹ cuo⁴",
@@ -1376,7 +1697,8 @@ const BRASSETT_GRAMMAR={
         "translation": "五座房屋。",
         "page": 96,
         "number": "35",
-        "note": ""
+        "note": "",
+        "ipa": "/ɔ̃⁵⁵ tsʰuɔ⁵¹/"
       }
     ]
   },
@@ -1387,11 +1709,27 @@ const BRASSETT_GRAMMAR={
       146
     ],
     "paragraphs": [
-      "性质谓词作定语时，有些使用固定的名词性形式：ca²“好”→ cai²，ci⁴“大”→ ci⁴ba¹，re⁴“美”→ re⁴kui²。它们不是一个能任意选择的统一后缀。",
-      "这些性质名词位于中心名词后、数量组前。没有固定形式的状态谓词可涉及 nie³ xi² 名词化，须按具体结构解释。"
+      "性质修饰语常放在中心名词后、数量组前。有些词使用固定的名词性形式，如“好”/tsʰa²⁴/对应“好的”/tsʰai²⁴/，“长”/ɣɤ²¹/对应“长的”/ɣɤ²¹ pa²¹/。"
     ],
     "formula": "中心名词＋性质名词＋数量量词组",
-    "examples": []
+    "examples": [
+      {
+        "text": "mu⁴nie³ hhe³ba³ suo¹ zi²",
+        "ipa": "/mu⁵¹ɲie²¹ ɣɤ²¹pa²¹ suɔ⁵⁵ tsɿ²⁴/",
+        "gloss": "竹子｜长的｜三｜量词",
+        "translation": "三根长竹子。",
+        "page": 101,
+        "number": "66"
+      },
+      {
+        "text": "luo⁴ cai²",
+        "ipa": "/luɔ⁵¹ tsʰai²⁴/",
+        "gloss": "人｜好的",
+        "translation": "好人。",
+        "page": 101,
+        "number": "69"
+      }
+    ]
   },
   "13.2": {
     "pages": [
@@ -1409,7 +1747,8 @@ const BRASSETT_GRAMMAR={
         "translation": "我的书。",
         "page": 93,
         "number": "9",
-        "note": ""
+        "note": "",
+        "ipa": "/ŋa²⁴ ɲie²¹ tsʰɿ⁵⁵pʰu⁵⁵/"
       }
     ]
   },
@@ -1419,35 +1758,80 @@ const BRASSETT_GRAMMAR={
       106
     ],
     "paragraphs": [
-      "领属、指示、性质和数量不是可以任意换位的平行修饰语。组织复杂名词短语时，应先确定中心名词，再按图 6.1 分配前置与后置修饰，而不是直接逐字照搬汉语次序。"
+      "多重修饰语有相对固定的位置：领属成分—指示词—名词—性质修饰语—数量短语。处所词可以再跟在整个名词短语之后。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "nga² nie³ ai¹di¹ ha⁴lie³ lang²ga¹ re¹ long³",
+        "ipa": "/ŋa²⁴ ɲie²¹ ai⁵⁵ti⁵⁵ xa⁵¹lie²¹ lã²⁴ka⁵⁵ zɤ⁵⁵ lɔ̃²¹/",
+        "gloss": "我｜领属｜那｜狗｜黑的｜四｜量词",
+        "translation": "我的那四只黑狗。",
+        "page": 106,
+        "number": "102"
+      },
+      {
+        "text": "nga² nie³ ai¹di¹ ha⁴lie³ lang²ga¹ re¹ long³ ta¹nie¹",
+        "ipa": "/ŋa²⁴ ɲie²¹ ai⁵⁵ti⁵⁵ xa⁵¹lie²¹ lã²⁴ka⁵⁵ zɤ⁵⁵ lɔ̃²¹ tʰa⁵⁵ɲie⁵⁵/",
+        "gloss": "我｜领属｜那｜狗｜黑的｜四｜量词｜后面",
+        "translation": "在我的那四只黑狗后面。",
+        "page": 106,
+        "number": "103"
+      }
+    ]
   },
   "14.1": {
     "pages": [
       99,
       102,
-      105
+      105,
+      84
     ],
     "paragraphs": [
-      "处所名词在参照物名词之后，表达内部等空间关系；进一步的来源、目标关系由外层成分表达。应区别“某物里面”的名词短语和“从／往某物里面”的关系表达。"
+      "处所词放在参照物名词后。例如“屋里”按“屋＋里面”排列，再和存在谓词构成句子。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "cuo⁴ wo²tu¹ luo⁴ xie²",
+        "ipa": "/tsʰuɔ⁵¹ wɔ²⁴tʰu⁵⁵ luɔ⁵¹ ɕie²⁴/",
+        "gloss": "屋｜里面｜人｜有",
+        "translation": "屋里有人。",
+        "page": 84,
+        "number": "62"
+      }
+    ]
   },
   "14.2": {
     "pages": [
       102,
       103,
       104,
-      105
+      105,
+      100
     ],
     "paragraphs": [
-      "名词后的 lie¹ 可标来源，bo¹ 可标目标；它们位于处所表达外层。bo¹ 与间接宾语 bo³、动词后状态 bo³ 不能因字母相同而合并为一个无调号词条。"
+      "来源标记 /lie⁵⁵/和目标标记 /pɔ⁵⁵/放在处所表达后。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "se² ta¹nie¹ lie¹ eng³qie²",
+        "ipa": "/sɤ²⁴ tʰa⁵⁵ɲie⁵⁵ lie⁵⁵ ɜ̃²¹tɕʰie²⁴/",
+        "gloss": "你们｜后面｜从｜来",
+        "translation": "你们从后面跟上来。",
+        "page": 100,
+        "number": "65"
+      },
+      {
+        "text": "ang²ni¹ ge⁴ bo³ mo³ wo⁴ta³ bo¹ xi⁴ca³",
+        "ipa": "/ã²⁴ɲi⁵⁵ kɤ⁵¹ pɔ²¹ mɔ²¹ wɔ⁵¹tʰa²¹ pɔ⁵⁵ ɕi⁵¹tsʰa²¹/",
+        "gloss": "我们｜害怕｜持续｜方式｜外面｜向｜跑",
+        "translation": "我们害怕地跑到外面。",
+        "page": 100,
+        "number": "64"
+      }
+    ]
   },
   "14.3": {
     "pages": [
@@ -1456,25 +1840,53 @@ const BRASSETT_GRAMMAR={
       121,
       122,
       123,
-      124
+      124,
+      101
     ],
     "paragraphs": [
-      "方向性还可在动词短语内表达：本书区分向说话者／参照点靠近与离开，以及命令中的方向和已实现运动中的方向。选择形式须先确定观察点，不能只依汉语“来、去”字面替换。"
+      "动词后的趋向成分可以表达朝参照位置移动或离开参照位置。它们与名词后的处所标记分工不同：“外面”说明位置，趋向成分说明动作的方向。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "hhe³ba³ la² zi² huo³ xie²",
+        "ipa": "/ɣɤ²¹pa²¹ la²⁴ tsɿ²⁴ xuɔ²¹ ɕie²⁴/",
+        "gloss": "长的｜一｜量词｜拿｜向这里",
+        "translation": "拿根长的来。",
+        "page": 101,
+        "number": "72"
+      }
+    ]
   },
   "15.1": {
     "pages": [
       50,
       51,
-      75
+      75,
+      107
     ],
     "paragraphs": [
-      "活动动词的及物用法与上下文相关；完整句中常见主语—宾语—动词次序。论元省略十分常见，所以单看一个表面不带宾语的句子不足以证明该动词只能是不及物动词。"
+      "中性及物句一般按“主语—宾语—动词”排列；不及物谓语可以直接接在主语后。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "a²da¹ ang¹ngai⁴ ha³",
+        "ipa": "/a²⁴ta⁵⁵ ã⁵⁵ŋai⁵¹ xa²¹/",
+        "gloss": "姐姐｜弟弟｜打",
+        "translation": "姐姐打弟弟。",
+        "page": 75,
+        "number": "17"
+      },
+      {
+        "text": "lai⁴ sa⁴",
+        "ipa": "/lai⁵¹ sa⁵¹/",
+        "gloss": "今天｜冷",
+        "translation": "今天冷。",
+        "page": 107,
+        "number": "1"
+      }
+    ]
   },
   "15.2": {
     "pages": [
@@ -1492,7 +1904,8 @@ const BRASSETT_GRAMMAR={
         "translation": "我在谈论他。",
         "page": 102,
         "number": "74",
-        "note": ""
+        "note": "",
+        "ipa": "/ŋa²⁴ kuɔ²⁴ li²¹ la⁵⁵/"
       },
       {
         "text": "nga² guo² bo³ li³ la¹",
@@ -1500,7 +1913,8 @@ const BRASSETT_GRAMMAR={
         "translation": "我在对他说话。",
         "page": 102,
         "number": "75",
-        "note": ""
+        "note": "",
+        "ipa": "/ŋa²⁴ kuɔ²⁴ pɔ²¹ li²¹ la⁵⁵/"
       }
     ]
   },
@@ -1520,7 +1934,8 @@ const BRASSETT_GRAMMAR={
         "translation": "妈妈让孩子睡觉。",
         "page": 156,
         "number": "47",
-        "note": ""
+        "note": "",
+        "ipa": "/a²¹ɲie⁵⁵ pɔ⁵⁵li²¹ tuɔ²¹ ɲie²⁴/"
       }
     ]
   },
@@ -1559,7 +1974,8 @@ const BRASSETT_GRAMMAR={
         "translation": "吃过了（事实）。",
         "page": 136,
         "number": "194",
-        "note": ""
+        "note": "",
+        "ipa": "/ka²⁴ lie⁵⁵/"
       },
       {
         "text": "ga² liao¹",
@@ -1567,7 +1983,8 @@ const BRASSETT_GRAMMAR={
         "translation": "已经吃过了（现在不饿／不必再招待）。",
         "page": 136,
         "number": "195",
-        "note": ""
+        "note": "",
+        "ipa": "/ka²⁴ liau⁵⁵/"
       }
     ]
   },
@@ -1635,7 +2052,8 @@ const BRASSETT_GRAMMAR={
         "translation": "他是土家人。",
         "page": 83,
         "number": "59",
-        "note": ""
+        "note": "",
+        "ipa": "/kuɔ²⁴ pi²⁴tsɿ⁵⁵kʰa²¹/"
       },
       {
         "text": "lai⁴ long⁴ka³",
@@ -1643,7 +2061,8 @@ const BRASSETT_GRAMMAR={
         "translation": "今天是新年。",
         "page": 83,
         "number": "60",
-        "note": ""
+        "note": "",
+        "ipa": "/lai⁵¹ lɔ̃⁵¹kʰa²¹/"
       }
     ]
   },
@@ -1665,7 +2084,8 @@ const BRASSETT_GRAMMAR={
         "translation": "屋里有人。",
         "page": 84,
         "number": "62",
-        "note": ""
+        "note": "",
+        "ipa": "/tsʰuɔ⁵¹ wɔ²⁴tʰu⁵⁵ luɔ⁵¹ ɕie²⁴/"
       }
     ]
   },
@@ -1675,10 +2095,27 @@ const BRASSETT_GRAMMAR={
       83
     ],
     "paragraphs": [
-      "无系词名词谓语和使用判断词的句子在本书材料中并存。汉语接触可与形式扩展有关，但不能因此把所有带系词句一律判为错误或把所有判断结构都称为借用。"
+      "判断句有不用系词和带系词两种形式。/sou²⁴/常作肯定答语，也可放在名词谓语后。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "guo² nga² nie³ biu²",
+        "ipa": "/kuɔ²⁴ ŋa²⁴ ɲie²¹ piu²⁴/",
+        "gloss": "她｜我｜领属｜女儿",
+        "translation": "她是我的女儿。",
+        "page": 52,
+        "number": "14"
+      },
+      {
+        "text": "guo² mie²jian¹ sou²",
+        "ipa": "/kuɔ²⁴ mie²⁴tɕiɛ̃⁵⁵ sou²⁴/",
+        "gloss": "他｜篾匠｜是",
+        "translation": "他是篾匠。",
+        "page": 52,
+        "number": "15"
+      }
+    ]
   },
   "19.1": {
     "pages": [
@@ -1696,7 +2133,8 @@ const BRASSETT_GRAMMAR={
         "translation": "我在挖土。",
         "page": 75,
         "number": "16",
-        "note": ""
+        "note": "",
+        "ipa": "/ŋa²⁴ li⁵¹ ka⁵¹/"
       },
       {
         "text": "a²da¹ ang¹ngai⁴ ha³",
@@ -1704,7 +2142,8 @@ const BRASSETT_GRAMMAR={
         "translation": "姐姐打弟弟。",
         "page": 75,
         "number": "17",
-        "note": ""
+        "note": "",
+        "ipa": "/a²⁴ta⁵⁵ ã⁵⁵ŋai⁵¹ xa²¹/"
       }
     ]
   },
@@ -1726,7 +2165,8 @@ const BRASSETT_GRAMMAR={
         "translation": "弟弟啊，是姐姐打了他。",
         "page": 161,
         "number": "4",
-        "note": ""
+        "note": "",
+        "ipa": "/ã⁵⁵ŋai⁵¹, a²⁴ta⁵⁵ kuɔ²⁴ xa²¹ liau⁵⁵/"
       },
       {
         "text": "a²da¹, guo² ang¹ngai⁴ ha³",
@@ -1734,7 +2174,8 @@ const BRASSETT_GRAMMAR={
         "translation": "姐姐啊，她在打弟弟。",
         "page": 161,
         "number": "5",
-        "note": ""
+        "note": "",
+        "ipa": "/a²⁴ta⁵⁵, kuɔ²⁴ ã⁵⁵ŋai⁵¹ xa²¹/"
       }
     ]
   },
@@ -1744,10 +2185,19 @@ const BRASSETT_GRAMMAR={
       161
     ],
     "paragraphs": [
-      "连续叙事中，人物先被引入，后续主语或宾语可在指称清楚时省略。指称切换或可能混淆时再明说。翻译一段文字应先追踪人物链，再给省略位置补汉语代词。"
+      "连续叙事中，已经明确的参与者可以省略。下例只在开头说一次“我”，随后几个动作共用这个主语。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "nga² nie³ba³ da⁴xi⁴ mo³ zi³ luo², ha¹ce¹ luo², qie³bi² bu¹zi¹ wo¹, cuo⁴ nie³ ye³ ri¹",
+        "ipa": "/ŋa²⁴ ɲie²¹pa²¹ ta⁵¹ɕi⁵¹ mɔ²¹ tsɿ²¹ luɔ²⁴, xa⁵⁵tsʰɤ⁵⁵ luɔ²⁴, tɕʰie²¹pi²⁴ pu⁵⁵tsɿ⁵⁵ wɔ⁵⁵, tsʰuɔ⁵¹ ɲie²¹ je²¹ zɿ⁵⁵/",
+        "gloss": "我｜父母｜帮助｜方式｜饭｜煮；菜｜煮；碗｜筷子｜洗；家｜关联｜事｜做",
+        "translation": "我帮父母煮饭、煮菜，洗碗筷，做家务。",
+        "page": 160,
+        "number": "2"
+      }
+    ]
   },
   "20.1": {
     "pages": [
@@ -1759,19 +2209,45 @@ const BRASSETT_GRAMMAR={
       89
     ],
     "paragraphs": [
-      "本书描述句末疑问小词、正负对举及选择问等资源；ma 可见于是非问，huo 可连接选择项。形式与语调共同影响语气，不能把一种句末成分当作每个问句都必须添加的标记。"
+      "是非问可以用句末 /ma/；选择问用 /xuo⁵⁵/连接两个选项，也可以正反对举。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ni² tong²qian³ xie² ma",
+        "ipa": "/ɲi²⁴ tʰɔ̃²⁴tɕʰiɛ̃²¹ ɕie²⁴ ma/",
+        "gloss": "你｜钱｜有｜疑问",
+        "translation": "你有钱吗？",
+        "page": 87,
+        "number": "92"
+      },
+      {
+        "text": "ni² zi³ ga² huo¹ ka¹bie¹lie¹ ga²",
+        "ipa": "/ɲi²⁴ tsɿ²¹ ka²⁴ xuɔ⁵⁵ kʰa⁵⁵pie⁵⁵lie⁵⁵ ka²⁴/",
+        "gloss": "你｜饭｜吃｜或者｜粥｜吃",
+        "translation": "你吃饭还是喝粥？",
+        "page": 87,
+        "number": "86"
+      },
+      {
+        "text": "guo² ca² huo¹ ca² da²",
+        "ipa": "/kuɔ²⁴ tsʰa²⁴ xuɔ⁵⁵ tsʰa²⁴ ta²⁴/",
+        "gloss": "他｜好｜或者｜好｜否定",
+        "translation": "他好不好？",
+        "page": 87,
+        "number": "89"
+      }
+    ]
   },
   "20.2": {
     "pages": [
       48,
-      84,
-      85
+      85,
+      86,
+      88
     ],
     "paragraphs": [
-      "特指疑问词通常留在它所对应成分的位置，不要求全部移到句首。问“他是谁”时，疑问词出现在名词谓语位置；句末的小词还可调整问话语气。"
+      "疑问词一般留在所询问成分的位置。例如询问年龄时，“几”放在“岁”前；询问做法或状况时，“怎么”在谓语前。/tɕʰĩ²¹ mɔ⁵⁵/既能问做法和近况，也能问原因。"
     ],
     "formula": "",
     "examples": [
@@ -1781,7 +2257,40 @@ const BRASSETT_GRAMMAR={
         "translation": "他是谁？",
         "page": 84,
         "number": "65",
-        "note": "原书英文逐词注释将 guo² 误标为第二人称；此处按第 48 页代词表解释。"
+        "note": "原书英文逐词注释将 guo² 误标为第二人称；此处按第 48 页代词表解释。",
+        "ipa": "/kuɔ²⁴ a⁵¹sɤ²¹ o/"
+      },
+      {
+        "text": "ni² ga⁴ se¹tong¹ xiao² o",
+        "ipa": "/ɲi²⁴ ka⁵¹ sɤ⁵⁵tʰɔ̃⁵⁵ ɕiau²⁴ o/",
+        "gloss": "你｜多少｜岁｜现在有｜疑问",
+        "translation": "你几岁了？",
+        "page": 86,
+        "number": "76"
+      },
+      {
+        "text": "guo² zu² lie¹ ga⁴ long¹ xiao² o",
+        "ipa": "/kuɔ²⁴ tsu²⁴ lie⁵⁵ ka⁵¹ lɔ̃⁵⁵ ɕiau²⁴ o/",
+        "gloss": "他｜出｜完成｜几｜年｜现在有｜疑问",
+        "translation": "他出去几年了？",
+        "page": 86,
+        "number": "77"
+      },
+      {
+        "text": "ni² nie¹ qing³mo¹ ka¹ o",
+        "ipa": "/ɲi²⁴ ɲie⁵⁵ tɕʰĩ²¹mɔ⁵⁵ kʰa⁵⁵ o/",
+        "gloss": "你｜日子｜怎样｜过｜疑问",
+        "translation": "你近来过得怎么样？",
+        "page": 86,
+        "number": "80"
+      },
+      {
+        "text": "ang²ni¹ qing³mo¹ hhi² ta¹ti¹ a",
+        "ipa": "/ã²⁴ɲi⁵⁵ tɕʰĩ²¹mɔ⁵⁵ ɣɨ²⁴ tʰa⁵⁵tʰi⁵⁵ a/",
+        "gloss": "我们｜为什么｜去｜不能｜疑问",
+        "translation": "我们为什么不能去？",
+        "page": 86,
+        "number": "78"
       }
     ],
     "tables": [
@@ -1809,16 +2318,24 @@ const BRASSETT_GRAMMAR={
             "什么时候"
           ],
           [
-            "gai¹、ga⁴",
-            "多少"
+            "ga⁴＋量词／计量词",
+            "几个；几岁；几年"
+          ],
+          [
+            "gai¹",
+            "多少；多大、多长等程度"
+          ],
+          [
+            "gai¹jiu¹",
+            "多久"
           ],
           [
             "qing³mo¹",
-            "为什么；怎样做"
+            "怎么、怎么样；为什么"
           ],
           [
             "qi²du¹",
-            "农历什么日期"
+            "什么日期（农历）"
           ]
         ]
       }
@@ -1840,7 +2357,8 @@ const BRASSETT_GRAMMAR={
         "translation": "今天不冷。",
         "page": 132,
         "number": "166",
-        "note": ""
+        "note": "",
+        "ipa": "/lai⁵¹ sa⁵¹ ta²⁴/"
       },
       {
         "text": "lai⁴ sa⁴ ta¹",
@@ -1848,7 +2366,8 @@ const BRASSETT_GRAMMAR={
         "translation": "今天不会冷（说话者判断）。",
         "page": 132,
         "number": "170",
-        "note": ""
+        "note": "",
+        "ipa": "/lai⁵¹ sa⁵¹ tʰa⁵⁵/"
       }
     ]
   },
@@ -1893,7 +2412,8 @@ const BRASSETT_GRAMMAR={
         "translation": "坐下（并坐着）。",
         "page": 90,
         "number": "110",
-        "note": ""
+        "note": "",
+        "ipa": "/ɔ̃²¹ pɔ²¹/"
       },
       {
         "text": "ci¹pu¹ tong² bo³",
@@ -1901,7 +2421,8 @@ const BRASSETT_GRAMMAR={
         "translation": "打开书（保持打开）。",
         "page": 90,
         "number": "112",
-        "note": ""
+        "note": "",
+        "ipa": "/tsʰɿ⁵⁵pʰu⁵⁵ tʰɔ̃²⁴ pɔ²¹/"
       }
     ]
   },
@@ -1911,10 +2432,27 @@ const BRASSETT_GRAMMAR={
       91
     ],
     "paragraphs": [
-      "专门禁止形式 ta⁴ 放在动词前，区别于陈述否定中动词后的 da²／ta¹。翻译“不要做”须先识别为禁止，不能只把普通否定句当作命令。"
+      "禁止成分 /ta⁵¹/放在动词前，陈述句的否定则可放在动词后。下列两句分别表示事实否定和禁止。"
     ],
     "formula": "ta⁴＋动词短语（禁止）；动词＋da²／ta¹（陈述否定）",
-    "examples": []
+    "examples": [
+      {
+        "text": "ni² sa³ li³ da²",
+        "ipa": "/ɲi²⁴ sa²¹ li²¹ ta²⁴/",
+        "gloss": "你｜话｜说｜否定",
+        "translation": "你没有说话。",
+        "page": 90,
+        "number": "116"
+      },
+      {
+        "text": "sa³ ta⁴ li³",
+        "ipa": "/sa²¹ tʰa⁵¹ li²¹/",
+        "gloss": "话｜禁止｜说",
+        "translation": "别说话。",
+        "page": 91,
+        "number": "117"
+      }
+    ]
   },
   "22.3": {
     "pages": [
@@ -1933,7 +2471,8 @@ const BRASSETT_GRAMMAR={
         "translation": "我们走吧！",
         "page": 90,
         "number": "113",
-        "note": ""
+        "note": "",
+        "ipa": "/ã²⁴ɲi⁵⁵ ɣɨ²⁴ tuɔ²¹/"
       }
     ]
   },
@@ -1953,7 +2492,8 @@ const BRASSETT_GRAMMAR={
         "translation": "她很漂亮。",
         "page": 147,
         "number": "33",
-        "note": ""
+        "note": "",
+        "ipa": "/kuɔ²⁴ zɤ⁵¹ ɕi²¹tʰai²⁴/"
       }
     ]
   },
@@ -1972,7 +2512,8 @@ const BRASSETT_GRAMMAR={
         "translation": "他比我胖一点。",
         "page": 75,
         "number": "11",
-        "note": ""
+        "note": "",
+        "ipa": "/ŋa²⁴, kuɔ²⁴ la²⁴pie⁵⁵ sɿ²⁴ ɲie⁵⁵/"
       }
     ]
   },
@@ -1996,7 +2537,8 @@ const BRASSETT_GRAMMAR={
         "translation": "学生。",
         "page": 141,
         "number": "表 8.1",
-        "note": ""
+        "note": "",
+        "ipa": "/tsʰɿ⁵⁵tʰu⁵⁵ ma⁵⁵/"
       },
       {
         "text": "la¹meng³ ka⁴ ma¹",
@@ -2004,7 +2546,8 @@ const BRASSETT_GRAMMAR={
         "translation": "看门人。",
         "page": 141,
         "number": "表 8.1",
-        "note": ""
+        "note": "",
+        "ipa": "/la⁵⁵mɜ̃²¹ kʰa⁵¹ ma⁵⁵/"
       }
     ]
   },
@@ -2028,10 +2571,19 @@ const BRASSETT_GRAMMAR={
       148
     ],
     "paragraphs": [
-      "本书材料既有前置 VP＋nie³＋名词，也有名词之后接带 bo³ xi² 的修饰结构。不能由其中一个例子推导“土家语关系子句永远前置”或“永远后置”。"
+      "名词修饰结构有不同的中心语位置。下例“买柴的”在“人”前；Brassett 也记录了名词后接名物化动词短语的形式，见下一节。"
     ],
     "formula": "前置：动词短语＋nie³＋中心名词；后置例型：中心名词＋〔动词 bo³ xi²〕",
-    "examples": []
+    "examples": [
+      {
+        "text": "ka³ pu¹ nie³ luo⁴",
+        "ipa": "/kʰa²¹ pʰu⁵⁵ ɲie²¹ luɔ⁵¹/",
+        "gloss": "柴｜买｜关联｜人",
+        "translation": "买柴的人。",
+        "page": 95,
+        "number": "24"
+      }
+    ]
   },
   "25.2": {
     "pages": [
@@ -2049,7 +2601,8 @@ const BRASSETT_GRAMMAR={
         "translation": "洗过的衣服很干净。",
         "page": 147,
         "number": "36",
-        "note": ""
+        "note": "",
+        "ipa": "/sɿ⁵⁵pa⁵⁵ [tsa²⁴ pɔ²¹ ɕi²⁴] suɔ²⁴li⁵⁵/"
       }
     ]
   },
@@ -2082,7 +2635,8 @@ const BRASSETT_GRAMMAR={
         "translation": "我们放牛时玩得很开心。",
         "page": 151,
         "number": "12",
-        "note": ""
+        "note": "",
+        "ipa": "/ã²⁴ɲi⁵⁵ wu²⁴ kʰa⁵¹ tsu²⁴, kɤ²¹tsʰɿ²⁴ tsʰa²⁴/"
       },
       {
         "text": "ni² eng³zi³ zu², guo² song¹kuo¹ liao¹",
@@ -2090,7 +2644,8 @@ const BRASSETT_GRAMMAR={
         "translation": "你来时，他已经回家了。",
         "page": 151,
         "number": "14",
-        "note": ""
+        "note": "",
+        "ipa": "/ɲi²⁴ ɜ̃²¹tsɿ²¹ tsu²⁴, kuɔ²⁴ sɔ̃⁵⁵kʰuɔ⁵⁵ liau⁵⁵/"
       }
     ]
   },
@@ -2100,10 +2655,27 @@ const BRASSETT_GRAMMAR={
       150
     ],
     "paragraphs": [
-      "相邻小句可以没有显式连词，由语境建立条件、原因或让步关系。句子并置本身并不唯一编码“如果”；翻译时要根据事件之间的合理关系和前后文确定。"
+      "相邻小句可以不加连词，由上下文表达条件、原因或让步。下例中，前一句表达条件，后一句表达让步。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ni² sa³ ru³ ta¹, me²ta¹ce³ ni² sa¹ i",
+        "ipa": "/ɲi²⁴ sa²¹ zu²¹ tʰa⁵⁵, mɤ²⁴tʰa⁵⁵tsʰɤ²¹ ɲi²⁴ sa⁵⁵ i/",
+        "gloss": "你｜话｜听｜否定；雷｜你｜劈｜非现实",
+        "translation": "你不听话，就会遭雷劈。",
+        "page": 150,
+        "number": "7"
+      },
+      {
+        "text": "guo² luo⁴ suan⁴, ci¹tu¹ xi² ca²",
+        "ipa": "/kuɔ²⁴ luɔ⁵¹ suã⁵¹, tsʰɿ⁵⁵tʰu⁵⁵ ɕi²⁴ tsʰa²⁴/",
+        "gloss": "他｜人｜小；学习｜名物化｜好",
+        "translation": "他年纪虽小，学习却很好。",
+        "page": 150,
+        "number": "9"
+      }
+    ]
   },
   "26.3": {
     "pages": [
@@ -2113,10 +2685,19 @@ const BRASSETT_GRAMMAR={
       155
     ],
     "paragraphs": [
-      "背景小句标记通常在该小句末端。工具表达还可用工具名词＋huo³ lie³＋主动作的连动来源结构；它并非简单把汉语“用”直接放在工具名词前。"
+      "表示工具时，工具名词放在 /xuo²¹ lie²¹/“用”前，主要动作放在后。这个结构可以接在先行动作之后。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ha¹ce¹ wo¹ lie¹, jiu¹ tuo³tuo³ huo³lie³ suo⁴",
+        "ipa": "/xa⁵⁵tsʰɤ⁵⁵ wɔ⁵⁵ lie⁵⁵, tɕiu⁵⁵ tʰuɔ²¹tʰuɔ²¹ xuɔ²¹lie²¹ suɔ⁵¹/",
+        "gloss": "菜｜洗｜完成；然后｜菜刀｜用｜切",
+        "translation": "洗好菜后，用菜刀切。",
+        "page": 154,
+        "number": "37"
+      }
+    ]
   },
   "27.1": {
     "pages": [
@@ -2125,22 +2706,49 @@ const BRASSETT_GRAMMAR={
       70
     ],
     "paragraphs": [
-      "nie¹ 可连接名词短语，应与关联成分 nie³ 区别，不可见到“和”就用它连接整句。ai¹lie¹ 等形式参与事件衔接，汉语来源的连接形式也见于材料；词源和当前句法功能要分开记录。"
+      "/ɲie⁵⁵/连接名词短语；/ai⁵⁵ lie⁵⁵/连接先后事件，表示“接着”。二者分别用于名词并列和小句衔接。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ang²ni¹ cu¹ wu² nie¹ ruo² xie²",
+        "ipa": "/ã²⁴ɲi⁵⁵ tsʰu⁵⁵ wu²⁴ ɲie⁵⁵ zuɔ²⁴ ɕie²⁴/",
+        "gloss": "我们｜家｜牛｜和｜羊｜有",
+        "translation": "我们家有牛和羊。",
+        "page": 68,
+        "number": "82"
+      },
+      {
+        "text": "wo¹ lie¹ you² tong⁴, ai¹lie¹ la² pe⁴ bu⁴",
+        "ipa": "/wɔ⁵⁵ lie⁵⁵ jou²⁴ tʰɔ̃⁵¹, ai⁵⁵lie⁵⁵ la²⁴ pʰɤ⁵¹ pu⁵¹/",
+        "gloss": "洗｜完成｜又｜蒸；然后｜一｜夜｜泡",
+        "translation": "洗好后再蒸，接着泡一夜。",
+        "page": 69,
+        "number": "86"
+      }
+    ]
   },
   "27.2": {
     "pages": [
       157,
       158,
-      159
+      159,
+      69
     ],
     "paragraphs": [
-      "顺序动作中，前一个事件可用 lie¹ 表示完成后再进入下一动作。操作说明也能使用这一模式，所以完成体不能单凭汉语译文归为过去时间。"
+      "叙述先后动作或说明操作步骤时，前一个动作可以用 /lie⁵⁵/标明完成。即使事情还没执行，也能先把一个步骤说成完成，再安排下一个步骤。"
     ],
     "formula": "先行动作＋lie¹，后续动作",
-    "examples": []
+    "examples": [
+      {
+        "text": "wo¹ lie¹ you² tong⁴, ai¹lie¹ la² pe⁴ bu⁴",
+        "ipa": "/wɔ⁵⁵ lie⁵⁵ jou²⁴ tʰɔ̃⁵¹, ai⁵⁵lie⁵⁵ la²⁴ pʰɤ⁵¹ pu⁵¹/",
+        "gloss": "洗｜完成｜再｜蒸；然后｜一｜夜｜泡",
+        "translation": "洗好后再蒸，接着泡一夜。（制作米食的步骤。）",
+        "page": 69,
+        "number": "86"
+      }
+    ]
   },
   "27.3": {
     "pages": [
@@ -2150,10 +2758,27 @@ const BRASSETT_GRAMMAR={
       163
     ],
     "paragraphs": [
-      "篇章通过话题延续、参与者省略和必要的回指维持连贯。作者认为 guo² 并非一律是主语标记或类似“把”的标记：它可回指不同语法角色，解释必须放回完整话语。"
+      "话题可以延续到后续小句，也可以由代词再次提起。第三人称代词既能回指主语，也能回指提前作话题的宾语。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "ang¹ngai⁴, a²da¹ guo² ha³ liao¹",
+        "ipa": "/ã⁵⁵ŋai⁵¹, a²⁴ta⁵⁵ kuɔ²⁴ xa²¹ liau⁵⁵/",
+        "gloss": "弟弟｜姐姐｜他｜打｜了",
+        "translation": "弟弟，姐姐打了他。",
+        "page": 161,
+        "number": "4"
+      },
+      {
+        "text": "a²da¹, guo² ang¹ngai⁴ ha³",
+        "ipa": "/a²⁴ta⁵⁵, kuɔ²⁴ ã⁵⁵ŋai⁵¹ xa²¹/",
+        "gloss": "姐姐｜她｜弟弟｜打",
+        "translation": "姐姐，她在打弟弟。",
+        "page": 161,
+        "number": "5"
+      }
+    ]
   },
   "28.1": {
     "pages": [
@@ -2171,13 +2796,31 @@ const BRASSETT_GRAMMAR={
       52,
       68,
       69,
-      70
+      70,
+      97
     ],
     "paragraphs": [
-      "汉语来源词与连接形式已经进入部分说话人的使用，判断词使用也有变化。词汇借入不自动等于整套句法被替换；需要逐个构式比较形式、分布和说话人差异。"
+      "借词进入土家语后，可以保留土家语的语序。下面两例借用了汉语的数词、量词或名词，仍按“名词—数词—量词”排列。"
     ],
     "formula": "",
-    "examples": []
+    "examples": [
+      {
+        "text": "wa⁴ qi² kuai⁴",
+        "ipa": "/wa⁵¹ tɕʰi²⁴ kʰuai⁵¹/",
+        "gloss": "瓦｜七｜块",
+        "translation": "七块瓦。",
+        "page": 97,
+        "number": "41"
+      },
+      {
+        "text": "zuo²zi¹ yi² zang¹",
+        "ipa": "/tsuɔ²⁴tsɿ⁵⁵ ji²⁴ tsã⁵⁵/",
+        "gloss": "桌子｜一｜张",
+        "translation": "一张桌子。",
+        "page": 97,
+        "number": "42"
+      }
+    ]
   },
   "28.3": {
     "pages": [
