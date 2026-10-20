@@ -2005,6 +2005,14 @@
       "en": "hand span",
       "zh": "拃",
       "status": "confirmed"
+    },
+    "stedt-rn-144716": {
+      "term": "se³⁵ thu³⁵",
+      "en": "die",
+      "zh": "死",
+      "status": "用户确认方言归属",
+      "dialect": "北部",
+      "location": "龙山"
     }
   }
 }
