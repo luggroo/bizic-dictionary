@@ -41,7 +41,7 @@ async function loadYubao(data){
    const key=source+'|'+zh+'|'+ipa.replace(/\s/g,'');
    if(seen.has(key)){const w=seen.get(key);w.attestations.push(a);w.notations.ipa[0].attestationIds.push(id);data.wordAliases[id]=w.id;continue}
    const w={...a,term:ipa,location:p.location,attestations:[a],sourceIds:[source],schemes:['IPA'],dialects:[p.dialect],collections:['中国语保'],positions:[''],categories:[''],forms:[ipa,raw],glosses:[],zhVariants:[zh],notations:{ye:[],brassett:[],accent:[],ipa:[{text:ipa,method:'source',profile:source,attestationIds:[id]}]}};
-   if(p.point==='60823'){const converted=wanmipoSpelling(raw);if(converted){w.notations.ye=[{text:converted.ye,accent:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id]}];w.notations.accent=[{text:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id]}]}}
+   if(['60756','60757','60823'].includes(p.point)){const converted=northernSurveySpelling(raw,p.point);if(converted){w.notations.ye=[{text:converted.ye,accent:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id]}];w.notations.accent=[{text:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id]}]}}
    data.words.push(w);seen.set(key,w);
   }
   for(const [serial,zh,raw,annotation] of p.sentences){const ipa=surveyIPA(raw,p.point);data.corpus.push({id:source+'-s-'+serial,source,survey:true,code:serial,title:zh,ipa,text:zh+'\n/'+ipa+'/',annotation,locations:[p.location],people:[],genre:'调查例句',dialect:p.dialect,audio:'',page:null})}
@@ -53,7 +53,7 @@ function surveySentenceDetail(c){return `<div class="row"><h2 class="grow">${E(c
 const WANMIPO_TONES={'13':['f',2],'33':['r',3],'55':['x',1],'53':['v',4],'31':['r',3]};
 function wanmipoSpelling(raw){
  const onsets={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','ɲ':'n','ȵ':'n','ŋ':'ng','p':'b','t':'d','k':'g','m':'m','n':'n','l':'l','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','':''};
- const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','ɤ':'e','ɤe':'e','ie':'ie','ai':'ai','au':'ao','iau':'iao','ɤu':'ou','iɤu':'iu','ui':'ui','ua':'ua','uai':'uai','ia':'ia','uo':'o','ũ':'ong','ã':'ang','iã':'ian','ĩ':'in','uã':'uan','ɤ̃':'en','uɤ̃':'un','iɚ':'ier','uɚ':'uer'};
+ const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','e':'e','ɤ':'e','ɤe':'e','ie':'ie','ai':'ai','au':'ao','iau':'iao','ɤu':'ou','iɤu':'iu','ui':'ui','ua':'ua','uai':'uai','ia':'ia','uo':'o','ũ':'ong','ã':'ang','iã':'ian','ĩ':'in','uã':'uan','ɤ̃':'en','uɤ̃':'un','iɚ':'ier','uɚ':'uer'};
  const text=plainTones(surveyIPA(raw,'60823')).normalize('NFC');
  let ye='',accent='',pos=0,previous='';
  for(const m of text.matchAll(/([^0-9\s]+)([0-9]+)/g)){
@@ -69,3 +69,30 @@ function wanmipoSpelling(raw){
  return pos&& !text.slice(pos).trim()?{ye:ye+text.slice(pos),accent:accent+text.slice(pos)}:null;
 }
 NOTATION_CONFIG.profiles.push({id:'yubao-60823',source:'yubao-60823',title:'中国语保 · 保靖碗米坡',kind:'ipa',status:'按表层调值转写',count:2990,dialects:['北部 · 保靖碗米坡'],notes:['碗米坡按表层调值转写：13→f／á，33→r／ä，55→x／ā，53→v／à，31→r／ǎ。33、31在叶式拼音中同写r，带调号拼音分别使用分音符和抑扬符。此约定不表示对音位调类或变调来源的分析。']});
+
+// Point-specific survey orthographies; original IPA remains untouched.
+function northernSurveySpelling(raw,point){
+ if(point==='60823')return wanmipoSpelling(raw);
+ if(!['60756','60757'].includes(point))return null;
+ const xr=point==='60756';
+ const tones=xr?{'55':['x',1],'35':['f',2],'33':['r',3],'53':['v',4]}:{'55':['x',1],'53':['x',1],'33':['x',1],'24':['f',2],'22':['r',3],'21':['r',3]};
+ const onsets={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','ɲ':'n','ȵ':'n','ŋ':'ng','p':'b','t':'d','k':'g','m':'m','n':'n','l':'l','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','ɸ':'h','':''};
+ const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','ɔ':'o','ɘ':'e','ə':'e','ɤ':'e','ɯ':'i','e':xr?'ei':'e','ɛ':'ai','ie':'ie','iɘ':'ie','iə':'ie','ai':'ai','ei':'ei','ɘi':'ei','au':'ao','iau':'iao','əu':'ou','ɘu':'ou','iəu':'iu','iɘu':'iu','iu':'iu','ui':'ui','uei':'ui','ua':'ua','uai':'uai','uɛ':'uai','ia':'ia','uo':'o','io':'io','aŋ':'ang','an':'an','ian':'ian','iaŋ':'iang','uan':'uan','uaŋ':'uang','uŋ':'ong','ɔŋ':'ong','ɘn':'en','ən':'en','ɘŋ':'en','əŋ':'en','en':'en','eŋ':'en','in':'in','iŋ':'in','un':'un','uen':'un','iən':'ian','ɚ':'er','iɚ':'ier','uɚ':'uer'};
+ const text=plainTones(surveyIPA(raw,point)).normalize('NFC');
+ let ye='',accent='',pos=0,previous='';
+ for(const m of text.matchAll(/([^0-9\s（）()]+)([0-9]+)/g)){
+  const gap=text.slice(pos,m.index);if(!/^[\s（）()]*$/.test(gap))return null;
+  const onset=Object.keys(onsets).sort((a,b)=>b.length-a.length).find(o=>m[1].startsWith(o));
+  const rime=m[1].slice(onset.length),vowel=rimes[rime],tone=tones[m[2]];
+  if(!vowel||!tone)return null;
+  let core=onsets[onset]+vowel;
+  if(xr&&['ȵ','ɲ'].includes(onset))core='ni'+(rime==='e'?'e':vowel.replace(/^i/,''));
+  const separator=!gap&&previous&&(/^[aeiou]/.test(core)||(/n$/.test(previous)&&/^g/.test(core)))?"'":'';
+  ye+=gap+core+tone[0];accent+=gap+separator+accentSyllable(core,tone[1]);previous=core;pos=m.index+m[0].length;
+ }
+ const tail=text.slice(pos);return pos&&/^[\s（）()]*$/.test(tail)?{ye:ye+tail,accent:accent+tail}:null;
+}
+for(const [point,title,count,notes] of [
+ ['60756','保靖仙仁（阳朝）',2883,'55→x，35→f，33→r，53→v；e→ei，ə→e，ɛ→ai；ȵ→ni，ȵe→nie；ɚ→er。'],
+ ['60757','龙山',2008,'按当前表层归并：55／53／33→x，24→f，22／21→r。异常调值保留IPA。']
+])NOTATION_CONFIG.profiles.push({id:'yubao-'+point,source:'yubao-'+point,title:'中国语保 · '+title,kind:'ipa',status:'按调查点规则转写',count,dialects:['北部 · '+title],notes:[notes]});
