@@ -40,7 +40,7 @@
   '19.2':{text:'物品可以移到句首作话题，主语和接受者留在后面。下例先提出“这杆笔”，再说明“我送给你”。',examples:[['/dzia²¹ kan³¹ bi²¹ ŋo³¹ ɲi³¹ lie⁵³/','这｜杆｜笔｜我｜你｜送','这杆笔我送你。（泸溪且己）','向亮（2019），第76页，例（28）。']]},
   '21.2':{text:'判断否定采用“否定成分＋判断动词”。下例中，/mɛ²¹/放在 /su⁵³/前，否定“这是我的”这一判断。',examples:[['/dzia²¹ bu²¹ mɛ²¹ su⁵³ ŋo¹³ gu²¹/','这｜个｜不｜是｜我｜的','这个不是我的。（泸溪且己）','向亮（2019），第73–74页，例（12）。']]},
   '28.1':{text:'南部土家语内部也有地域差异。例如下都和下且己的“蛇”在声调和元音上都不相同。',examples:[['/tɨ³³ pʰie³⁵/；/ti⁵⁵ pʰei⁵⁵/','下都；下且己','蛇。','Zhou（2020），第31页。']]},
-  '28.2':{text:'汉语借词可以独立使用，也可以与土家语成分组合。南部表示“白菜”的词借自汉语；表示“热闹”的词则把本族“人”与汉语“哄哄”组合起来。',examples:[['/buɛ²¹ tshɛ³⁵/','借词','白菜。','向亮（2011），第41页。'],['/ŋo⁵³ xoŋ⁵³ xoŋ⁵³/','人｜哄哄','热闹。','向亮（2011），第41页。']]}
+  '28.2':{text:'南部土家语吸收了汉语词汇，如表示“白菜”的 /bɯɛ²¹ tsʰɛ³⁵/。',examples:[['/bɯɛ²¹ tsʰɛ³⁵/','借词','白菜。','向亮（2011），第41页。']]}
  };
  for(const [id,entry] of Object.entries(southExamples)){const old=SOUTH_GRAMMAR[id];old.integratedHtml='<p>'+entry.text+'</p>'+entry.examples.map(x=>ex(...x)).join('')+'<details class="grammar-reference"><summary>文献出处</summary><button data-open="'+old.source+'">查看原文</button></details>';}
  // Sound-system introductions use attested words, rather than invented sentences.
