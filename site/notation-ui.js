@@ -11,7 +11,8 @@ function sourceNotationValues(w){
  const values={ye:[],brassett:[],ipa:[],accent:[]};
  for(const a of w.attestations||[]){
   if(a.dialect==='南部')continue;
-  const p=NOTATION_CONFIG.profiles.find(p=>p.id===a.source);
+  const pid=a.source==='stedt-cb523fc3dc'&&a.dialect==='北部'?a.source+':north':a.source;
+  const p=NOTATION_CONFIG.profiles.find(p=>p.id===pid);
   if(!p?.mappingMode||p.conversionEnabled===false||p.kind!=='ipa')continue;
   const r=convertNotation(a.term,p.id);if(r.error)continue;
   for(const row of r.rows)for(const kind of ['ye','brassett']){
@@ -60,6 +61,7 @@ function standardBrassettIPA(text){let out='',pos=0;for(const m of text.matchAll
 function reverseYe(text){const memo=new Map(),lookup=NOTATION_CONFIG.yeSyllables;function visit(pos){if(pos===text.length)return [''];if(memo.has(pos))return memo.get(pos);let result=[];for(let end=pos+1;end<text.length;end++){const core=text.slice(pos,end),tone={x:'1',f:'2',r:'3',v:'4'}[text[end]];if(!tone||!lookup[core])continue;for(const raw of lookup[core])for(const tail of visit(end+1)){result.push(raw+tone+tail);if(result.length>=16)break}if(result.length>=16)break}result=[...new Set(result)].slice(0,16);memo.set(pos,result);return result}return visit(0)}
 // A source profile is an explicit proposal, never a global IPA substitution.
 function sourceSyllableCores(core,p){
+ if(p.mappingMode==='tian-north')return p.syllableMap[core]||[];
  if(!p.mappingMode)return NOTATION_CONFIG.ipaSyllables[core];
  for(const [a,b] of Object.entries(p.symbolNormalization||{}))core=core.replaceAll(a,b);
  const on=Object.keys(p.onsetMap).filter(Boolean).sort((a,b)=>b.length-a.length).find(x=>core.startsWith(x))||'', r=core.slice(on.length), mode=p.mappingMode;
