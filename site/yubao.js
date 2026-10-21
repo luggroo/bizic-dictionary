@@ -56,7 +56,7 @@ function surveySentenceDetail(c){const converted=c.dialect==='南部'?southernSp
 const WANMIPO_TONES={'13':['f',2],'33':['r',3],'55':['x',1],'53':['v',4],'31':['r',3]};
 function wanmipoSpelling(raw){
  const onsets={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','ɲ':'n','ȵ':'n','ŋ':'ng','p':'b','t':'d','k':'g','m':'m','n':'n','l':'l','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','':''};
- const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','e':'e','ɤ':'e','ɤe':'e','ie':'ie','ai':'ai','au':'ao','iau':'iao','ɤu':'ou','iɤu':'iu','ui':'ui','ua':'ua','uai':'uai','ia':'ia','uo':'o','ũ':'ong','ã':'ang','iã':'ian','ĩ':'in','uã':'uan','ɤ̃':'en','uɤ̃':'un','iɚ':'ier','uɚ':'uer'};
+ const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','e':'e','ɤ':'e','ɤe':'e','ie':'ie','ai':'ai','au':'ao','iau':'iao','ɤu':'ou','iɤu':'iu','ui':'ui','ua':'ua','uai':'uai','ia':'ia','uo':'o','ũ':'ong','ã':'an','iã':'ian','ĩ':'in','uã':'uan','ɤ̃':'en','uɤ̃':'un','iɚ':'ier','uɚ':'uer'};
  const text=plainTones(surveyIPA(raw,'60823')).normalize('NFC');
  let ye='',accent='',pos=0,previous='';
  for(const m of text.matchAll(/([^0-9\s]+)([0-9]+)/g)){
@@ -80,7 +80,7 @@ function northernSurveySpelling(raw,point){
  const xr=point==='60756';
  const tones=xr?{'55':['x',1],'35':['f',2],'33':['r',3],'53':['v',4]}:{'55':['x',1],'53':['v',4],'33':['x',1],'24':['f',2],'22':['r',3],'21':['r',3]};
  const onsets={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','ɲ':'n','ȵ':'n','ŋ':'ng','p':'b','t':'d','k':'g','m':'m','n':'n','l':'l','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','ɸ':'h','':''};
- const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','ɔ':'o','ɘ':'e','ə':'e','ɤ':'e','ɯ':'i','e':xr?'ei':'e','ɛ':'ai','ie':'ie','iɘ':'ie','iə':'ie','ai':'ai','ei':'ei','ɘi':'ei','au':'ao','iau':'iao','əu':'ou','ɘu':'ou','iəu':'iu','iɘu':'iu','iu':'iu','ui':'ui','uei':'ui','ua':'ua','uai':'uai','uɛ':'uai','ia':'ia','uo':'o','io':'io','aŋ':'ang','an':'an','ian':'ian','iaŋ':'iang','uan':'uan','uaŋ':'uang','uŋ':'ong','ɔŋ':'ong','ɘn':'en','ən':'en','ɘŋ':'en','əŋ':'en','en':'en','eŋ':'en','in':'in','iŋ':'in','un':'un','uen':'un','iən':'ian','ɚ':'er','iɚ':'ier','uɚ':'uer'};
+ const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','ɔ':'o','ɘ':'e','ə':'e','ɤ':'e','ɯ':'i','e':xr?'ei':'e','ɛ':'ai','ie':'ie','iɘ':'ie','iə':'ie','ai':'ai','ei':'ei','ɘi':'ei','au':'ao','iau':'iao','əu':'ou','ɘu':'ou','iəu':'iu','iɘu':'iu','iu':'iu','ui':'ui','uei':'ui','ua':'ua','uai':'uai','uɛ':'uai','ia':'ia','uo':'o','io':'io','aŋ':xr?'an':'ang','an':'an','ian':'ian','iaŋ':'iang','uan':'uan','uaŋ':'uang','uŋ':'ong','ɔŋ':'ong','ɘn':'en','ən':'en','ɘŋ':'en','əŋ':'en','en':'en','eŋ':'en','in':'in','iŋ':'in','un':'un','uen':'un','iən':'ian','ɚ':'er','iɚ':'ier','uɚ':'uer'};
  const text=plainTones(surveyIPA(raw,point)).normalize('NFC');
  let ye='',accent='',pos=0,previous='';
  for(const m of text.matchAll(/([^0-9\s（）()]+)([0-9]+)/g)){
