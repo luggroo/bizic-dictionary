@@ -14,3 +14,9 @@ html[lang="en"] .filters select{max-width:100%}html[lang="en"] button{overflow-w
 
 .aside-foot>a{display:block;margin-top:4px}
 @media(max-width:720px){aside>nav{overflow-x:auto;overflow-y:hidden}aside>nav button{flex:0 0 auto}aside>nav button>span{overflow-wrap:normal}}
+
+/* Locally hosted Charis: shared Latin, tone-mark and IPA typography. */
+@font-face{font-family:Charis;src:url("fonts/Charis-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Charis;src:url("fonts/Charis-Bold.woff2") format("woff2");font-style:normal;font-weight:600 900;font-display:swap}
+:root{--tujia-font:Charis,"Charis SIL",Georgia,serif}
+.tujia-ui,.brand small.tujia-ui,.word,.word-ipa,.notation-form,.example-transcription,.lyric-tujia,.external-ipa,.survey-ipa,[lang="tji"]{font-family:var(--tujia-font)}
