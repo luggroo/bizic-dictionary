@@ -165,8 +165,8 @@ function southernOnsetOrder([ipa,spell]){return onsetSortKey(spell[0]);}
 function notationMatrix(place){
  const isYang=place==='yangchao';
  const sources=isYang?
-  [{title:'田静《仙仁土家语研究》（via Zhou 2020）',id:'zhou-xr',kind:'profile'},{title:'中国语保 · 阳朝',id:'60756',kind:'survey'}]:
-  [{title:'他砂 · IPA（via Zhou 2020）',id:'zhou-ts',kind:'profile'},{title:'张伟权《土家语汉语词典》· 拉西峒（via Zhou 2020）',id:'zhou-fx',kind:'profile'},{title:'Sun 1991',id:'stedt-7fd6565400',kind:'profile'},{title:'Huang & Dai 1992',id:'stedt-610ab69a37',kind:'profile'},{title:'Chen 1986',id:'stedt-24cc5bbb03',kind:'profile'},{title:'中国语保 · 龙山',id:'60757',kind:'survey'}];
+  [{title:'Dai & Tian 2005\nvia Zhou 2020',id:'zhou-xr',kind:'profile'},{title:'中国语保 · 阳朝',id:'60756',kind:'survey'}]:
+  [{title:'他砂 IPA\nZhou 2020',id:'zhou-ts',kind:'profile'},{title:'Zhang 2002\nvia Zhou 2020',id:'zhou-fx',kind:'profile'},{title:'Sun 1991',id:'stedt-7fd6565400',kind:'profile'},{title:'Huang & Dai 1992',id:'stedt-610ab69a37',kind:'profile'},{title:'Chen 1986',id:'stedt-24cc5bbb03',kind:'profile'},{title:'中国语保 · 龙山',id:'60757',kind:'survey'}];
  const profiles=Object.fromEntries(NOTATION_CONFIG.profiles.map(p=>[p.id,p]));
  const surveyOnsets={'p':'b','pʰ':'p','t':'d','tʰ':'t','k':'g','kʰ':'k','ts':'z','tsʰ':'c','tɕ':'j','tɕʰ':'q','m':'m','n':'n','l':'l','ɲ':'n','ȵ':'n','ŋ':'ng','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','ɸ':'h'};
  const surveyRimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','ɔ':'o','ɘ':'e','ə':'e','ɤ':'e','ɯ':'i','e':isYang?'ei':'e','ɛ':'ai','ie':'ie','iɘ':'ie','iə':'ie','ai':'ai','ei':'ei','ɘi':'ei','au':'ao','iau':'iao','əu':'ou','ɘu':'ou','iəu':'iu','iɘu':'iu','iu':'iu','ui':'ui','uei':'ui','ua':'ua','uai':'uai','uɛ':'uai','ia':'ia','uo':'o','io':'io','aŋ':'ang','an':'an','ian':'ian','iaŋ':'iang','uan':'uan','uaŋ':'uang','uŋ':'ong','ɔŋ':'ong','ɘn':'en','ən':'en','ɘŋ':'en','əŋ':'en','en':'en','eŋ':'en','in':'in','iŋ':'in','un':'un','uen':'un','iən':'ian','ɚ':'er','iɚ':'ier','uɚ':'uer'};
@@ -230,7 +230,7 @@ function notationMatrix(place){
  const notes=isYang?
  '<p class="tiny">声韵注：① 仙仁 /ʑ/ 与 /j/ 的 y 写法须检查介音组合，yiao 等形式已规范为 yao。② 阳朝语保 ȵ 按 ni 处理，腭音后的 e／ɛ 按整音节规则写 jie、qie、xie、ye；原始 IPA 保留。③ 表中的 e、ei、ie 涉及来源和声母条件，不能作为无条件音变对应。</p><p class="tiny">声调注：Zhou 仙仁 54→r、55→x，33→r；语保阳朝按 55、35、33、53 的表层调值处理。</p>':
  '<p class="tiny">声韵注：① Brassett 的独立韵母 i：g、h、k、hh 后读 [ɨ]，z、c、s、r 后读 [ɿ]。② Brassett hh→叶式 hx，eng→en，ing→in，uo→o。③ Zhou 各点 e／ie、o／uo 及 i 的读法有声母条件；具体转换按整个音节判断。④ ang 一行暂只列已确认的记号对应；实际使用频次待逐条核查。</p><p class="tiny">声调注：① Brassett 的 1–4 为原书调类，Zhou 2020 提供他砂的 IPA 音值。② 龙山语保当前按表层音值归并 55／53／33→x、24→f、22／21→r。</p>';
- return intro+matrix('onset','声母')+matrix('rime','韵母')+tone+notes;
+ return '<div class="notation-matrix">'+intro+matrix('onset','声母')+matrix('rime','韵母')+tone+notes+'</div>';
 }
 function notationGuide(){
  const profiles=NOTATION_CONFIG.profiles;
@@ -241,7 +241,7 @@ function notationGuide(){
  return `<section class="panel"><h2>拼音与调查点</h2><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p></section>
  <section class="panel"><h2>龙山</h2><p>声母、韵母和声调按来源横向对照。左列为本站拼音；Brassett 2004、2006 共用一列拼音；Zhou 2020 他砂列对应 IPA 音值。</p>
  ${notationMatrix('longshan')}</section>
- <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>田静《仙仁土家语研究》（via Zhou 2020）与中国语保阳朝资料的声韵调对照。</p>
+ <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>仙仁：戴庆厦、田静（2005），经 Zhou 2020 引用；另列中国语保阳朝。</p>
  ${notationMatrix('yangchao')}</section>
  <section class="panel"><h2>保靖 · 碗米坡</h2><p>独立按照调查点的表层声调转写。33 与 31 在叶式中都写 r，但调号拼音中分别为不标调和 ǎ。</p>
  ${notationSurveyTables('60823')}</section>
@@ -250,7 +250,7 @@ function notationGuide(){
  ${notationGuideTable('韵母',['来源 IPA','两种拼音韵母'],Object.entries(SOUTH_RIMES).map(([k,v])=>[k,v]))}
  ${notationGuideTable('声调',['来源 IPA','调号拼音／白话字','说明'],southTones)}
  <p class="tiny">资料：Zhou 南部下都／下且己，STEDT 南部田德生与陈康，中国语保 60824。具体词形中如有来源未能解析的音节，保留原 IPA。</p></section>
- <section class="panel"><h2>小龙热 · 杨再彪（2011）</h2><p>小龙热记音据杨再彪（2011）《湖南西部四种濒危语言调查》，经 Zhou 2020 引用整理。</p>${get('zhou-xl')?notationSourceTables(get('zhou-xl')):''}</section>`;
+ <section class="panel"><h2>小龙热 · Yang 2011 <small class="notation-source-via">via Zhou 2020</small></h2><p>杨再彪《湖南西部四种濒危语言调查》（2011）。</p>${get('zhou-xl')?notationSourceTables(get('zhou-xl')):''}</section>`;
 }
 function notationView(){const cfg=NOTATION_CONFIG,p=cfg.profiles.find(x=>x.id===notationState.source)||cfg.profiles[0],result=notationState.result;return pageHeader('notation')+notationGuide()+`<section class="panel">${notationSourcePicker(p)}<form id="notation-converter" class="searchbar"><input id="notation-input" value="${E(notationState.input)}" aria-label="原词形" placeholder="输入原词形"><button>转换</button></form>${result?result.error?`<p class="notice warn">${E(result.error)}</p>`:mappingTable(result.partial?'部分转写':result.ambiguous?'候选词形':'转换结果',result.southern?['调号拼音','白话字拼音']:['叶式拼音','调号拼音'],result.rows.map(x=>result.southern?[x.accent,x.poj]:[x.ye.replace(/⟦[^⟧]*⟧/g,'□'),x.accent||displayBrassett(x.brassett,'accent').replace(/⟦[^⟧]*⟧/g,'□')])):''}${result?.unresolved?.length?mappingTable('未转换部分',['原形','原因'],result.unresolved.map(x=>[x.text,x.reason])):''}<p class="tiny">1 ā · 2 á · 3 ǎ · 4 à</p><p class="tiny">碗米坡按表层调值转写：13 á／f · 33 不标调／r · 55 ā／x · 53 à／v · 31 ǎ／r。33 与 31 同写 r；调号拼音中33不标，31写ǎ。不标调表示33调值，不表示轻声。</p></section><details><summary>来源规则与审核</summary>${sourceReviewView(p)}${(p.notes||[]).map(x=>`<p>${E(x)}</p>`).join('')}${p.rules?mappingTable('声韵对应',['原记号','拼写','条件'],p.rules.map(r=>[r.raw,r.target,r.condition])):''}</details><details><summary>全部来源</summary>${mappingTable('对应进度',['来源','方言','记录数','状态'],notationSourceGroups().map(x=>[x.title,x.dialects.join(' / '),String(x.count),x.status]))}</details><div class="detail-actions"><button id="export-notation-rules">导出规则</button><button data-open="brassett-2006">Brassett 原书</button></div>`}
 function bindNotationView(){bindSourceReview();const source=document.querySelector('#notation-source');if(source)source.onchange=e=>{notationState.source=notationSourceGroups().find(g=>g.id===e.target.value).profiles[0].id;notationState.result=null;render()};const variant=document.querySelector('#notation-variant');if(variant)variant.onchange=e=>{notationState.source=e.target.value;notationState.result=null;render()};const f=document.querySelector('#notation-converter');if(f)f.onsubmit=e=>{e.preventDefault();notationState.input=document.querySelector('#notation-input').value;notationState.result=convertNotation(notationState.input,notationState.source);render()};const b=document.querySelector('#export-notation-rules');if(b)b.onclick=()=>download('tujia-source-notation-rules.json',NOTATION_CONFIG)}
