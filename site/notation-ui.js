@@ -159,11 +159,14 @@ function notationSurveyTables(point){
  notationGuideTable('声调',['来源 IPA','叶式拼音','调号拼音'],toneMap);
 }
 
+const NORTH_ONSET_ORDER=['','b','p','m','f','w','d','t','n','l','z','c','s','r','j','q','x','y','g','k','h','hx','ng'];
+function onsetSortKey(spelling){const i=NORTH_ONSET_ORDER.indexOf(spelling);return i<0?NORTH_ONSET_ORDER.length:i;}
+function southernOnsetOrder([ipa,spell]){return onsetSortKey(spell[0]);}
 function notationMatrix(place){
  const isYang=place==='yangchao';
  const sources=isYang?
   [{title:'Zhou 2020 · 仙仁',id:'zhou-xr',kind:'profile'},{title:'中国语保 · 阳朝',id:'60756',kind:'survey'}]:
-  [{title:'他砂 · Brassett 拼音／Zhou IPA',id:'zhou-ts',kind:'tasha'},{title:'Zhou 2020 · 拉西峒',id:'zhou-fx',kind:'profile'},{title:'中国语保 · 龙山',id:'60757',kind:'survey'}];
+  [{title:'他砂 · Brassett 拼音／Zhou IPA',id:'zhou-ts',kind:'tasha'},{title:'Zhou 2020 · 拉西峒',id:'zhou-fx',kind:'profile'},{title:'Sun 1991',id:'stedt-7fd6565400',kind:'profile'},{title:'Huang & Dai 1992',id:'stedt-610ab69a37',kind:'profile'},{title:'Chen 1986',id:'stedt-24cc5bbb03',kind:'profile'},{title:'Matisoff PC',id:'stedt-7d44caef06',kind:'profile'},{title:'中国语保 · 龙山',id:'60757',kind:'survey'}];
  const profiles=Object.fromEntries(NOTATION_CONFIG.profiles.map(p=>[p.id,p]));
  const southernUnrelated=''; // Tables in this section cover Northern survey points only.
  const surveyOnsets={'p':'b','pʰ':'p','t':'d','tʰ':'t','k':'g','kʰ':'k','ts':'z','tsʰ':'c','tɕ':'j','tɕʰ':'q','m':'m','n':'n','l':'l','ɲ':'n','ȵ':'n','ŋ':'ng','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','ɸ':'h'};
@@ -203,16 +206,16 @@ function notationMatrix(place){
    const p=profiles[source.id],dict=kind==='onset'?p?.onsetMap:p?.rhymeMap;
    for(const targets of Object.values(dict||{}))for(const t of targets||[])all.push(kind==='rime'?standardBrassettToYe(t):t);
   }
-  return [...new Set(all)].filter(Boolean).sort((a,b)=>a.localeCompare(b,'en'));
+  return [...new Set(all)].filter(Boolean).sort((a,b)=>kind==='onset'?(onsetSortKey(a)-onsetSortKey(b)||a.localeCompare(b,'en')):a.localeCompare(b,'en'));
  }
  const headings=['本站拼写',...sources.map(x=>x.title)];
  function matrix(kind,title){
   return notationGuideTable(title,headings,keys(kind).map(key=>[key,...sources.map(src=>{const vals=mappedSource(kind,src,key);return vals.length?vals.join(' / '):'—'})]));
  }
- const longTone=[['x · ā','55','55','55 / 53 / 33'],
-  ['f · á','24','35','24'],
-  ['r · ǎ','21','21','22 / 21'],
-  ['v · à','51','53','—']];
+ const longTone=[['x · ā','55','55','55','55','55','55','55 / 53 / 33'],
+ ['f · á','24','35','35','35','35','35','24'],
+ ['r · ǎ','21','21','21','21','21','21','22 / 21'],
+ ['v · à','51','53','53','53','—','53','—']];
  const yangTone=[['x · ā','55','55'],['f · á','35','35'],['r · ǎ','33 / 54','33'],['v · à','—','53']];
  const tone=notationGuideTable('声调',headings,isYang?yangTone:longTone);
  const intro='<p class="tiny">各列显示原材料音值。他砂列综合 Brassett 拼音与 Zhou 2020 IPA。— 表示尚无可核对应；多项音值以 / 分隔，条件见表下注释。表格为本站现有转换规则的索引。</p>';
@@ -235,12 +238,11 @@ function notationGuide(){
  <section class="panel"><h2>保靖 · 碗米坡</h2><p>独立按照调查点的表层声调转写。33 与 31 在叶式中都写 r，但调号拼音中分别为不标调和 ǎ。</p>
  ${notationSurveyTables('60823')}</section>
  <section class="panel"><h2>泸溪 · 潭溪（南部）</h2><p>南部独立使用调号拼音与白话字；保留浊音对立及原始 IPA。白话字用连字符分音节，c/ch、j、s 的字母合并并不证明语音互补分布。</p>
- ${notationGuideTable('声母',['来源 IPA','调号拼音','白话字'],Object.entries(SOUTH_ONSETS).filter(([k])=>k).map(([k,v])=>[k,...v]))}
+ ${notationGuideTable('声母',['来源 IPA','调号拼音','白话字'],Object.entries(SOUTH_ONSETS).filter(([k])=>k).sort((a,b)=>southernOnsetOrder(a)-southernOnsetOrder(b)||a[0].localeCompare(b[0],'en')).map(([k,v])=>[k,...v]))}
  ${notationGuideTable('韵母',['来源 IPA','两种拼音韵母'],Object.entries(SOUTH_RIMES).map(([k,v])=>[k,v]))}
  ${notationGuideTable('声调',['来源 IPA','调号拼音／白话字','说明'],southTones)}
  <p class="tiny">资料：Zhou 南部下都／下且己，STEDT 南部田德生与陈康，中国语保 60824。具体词形中如有来源未能解析的音节，保留原 IPA。</p></section>
- <section class="panel"><h2>其他来源与未确定调查点</h2><p>Sun、Huang & Dai、Chen 等北部来源及未标明具体村点的 STEDT 记录，不随意归入龙山或保靖。下面分别保留它们自己的声韵调规则。</p>
- ${profiles.filter(p=>['stedt-7fd6565400','stedt-610ab69a37','stedt-24cc5bbb03','zhou-xl','stedt-7d44caef06'].includes(p.id)).map(p=>'<details><summary>'+E(p.title)+' · 声韵调对应</summary>'+notationSourceTables(p)+'</details>').join('')}</section>`;
+ <section class="panel"><h2>小龙热</h2><p>Zhou 2020 的小龙热记音单独列出。</p>${get('zhou-xl')?notationSourceTables(get('zhou-xl')):''}</section>`;
 }
 function notationView(){const cfg=NOTATION_CONFIG,p=cfg.profiles.find(x=>x.id===notationState.source)||cfg.profiles[0],result=notationState.result;return pageHeader('notation')+notationGuide()+`<section class="panel">${notationSourcePicker(p)}<form id="notation-converter" class="searchbar"><input id="notation-input" value="${E(notationState.input)}" aria-label="原词形" placeholder="输入原词形"><button>转换</button></form>${result?result.error?`<p class="notice warn">${E(result.error)}</p>`:mappingTable(result.partial?'部分转写':result.ambiguous?'候选词形':'转换结果',result.southern?['调号拼音','白话字拼音']:['叶式拼音','调号拼音'],result.rows.map(x=>result.southern?[x.accent,x.poj]:[x.ye.replace(/⟦[^⟧]*⟧/g,'□'),x.accent||displayBrassett(x.brassett,'accent').replace(/⟦[^⟧]*⟧/g,'□')])):''}${result?.unresolved?.length?mappingTable('未转换部分',['原形','原因'],result.unresolved.map(x=>[x.text,x.reason])):''}<p class="tiny">1 ā · 2 á · 3 ǎ · 4 à</p><p class="tiny">碗米坡按表层调值转写：13 á／f · 33 不标调／r · 55 ā／x · 53 à／v · 31 ǎ／r。33 与 31 同写 r；调号拼音中33不标，31写ǎ。不标调表示33调值，不表示轻声。</p></section><details><summary>来源规则与审核</summary>${sourceReviewView(p)}${(p.notes||[]).map(x=>`<p>${E(x)}</p>`).join('')}${p.rules?mappingTable('声韵对应',['原记号','拼写','条件'],p.rules.map(r=>[r.raw,r.target,r.condition])):''}</details><details><summary>全部来源</summary>${mappingTable('对应进度',['来源','方言','记录数','状态'],notationSourceGroups().map(x=>[x.title,x.dialects.join(' / '),String(x.count),x.status]))}</details><div class="detail-actions"><button id="export-notation-rules">导出规则</button><button data-open="brassett-2006">Brassett 原书</button></div>`}
 function bindNotationView(){bindSourceReview();const source=document.querySelector('#notation-source');if(source)source.onchange=e=>{notationState.source=notationSourceGroups().find(g=>g.id===e.target.value).profiles[0].id;notationState.result=null;render()};const variant=document.querySelector('#notation-variant');if(variant)variant.onchange=e=>{notationState.source=e.target.value;notationState.result=null;render()};const f=document.querySelector('#notation-converter');if(f)f.onsubmit=e=>{e.preventDefault();notationState.input=document.querySelector('#notation-input').value;notationState.result=convertNotation(notationState.input,notationState.source);render()};const b=document.querySelector('#export-notation-rules');if(b)b.onclick=()=>download('tujia-source-notation-rules.json',NOTATION_CONFIG)}
