@@ -103,3 +103,5 @@ button.primary:hover,button.primary:focus-visible{background:var(--green);color:
 .notation-matrix th:first-child{width:90px}
 .notation-source-via{display:block;font-size:.68em;font-weight:400;color:var(--muted);margin-top:3px}
 @media(max-width:900px){.notation-matrix table{width:max-content;min-width:100%;table-layout:auto}.notation-matrix th:not(:first-child),.notation-matrix td:not(:first-child){max-width:145px;min-width:105px}}
+
+.external-text-block{padding:1rem 0;border-bottom:1px solid var(--line,#ddd)}.external-text-block p{font-size:1rem;line-height:1.7;white-space:pre-line;overflow-wrap:anywhere}.external-text-block .tiny{font-size:.8rem}.external-glosses{display:flex;flex-wrap:wrap;gap:.8rem;margin:1rem 0}.external-glosses>div{display:flex;flex-direction:column;font-size:.9rem;max-width:100%;overflow-wrap:anywhere}
