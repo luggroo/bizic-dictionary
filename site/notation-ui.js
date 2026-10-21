@@ -162,6 +162,33 @@ function notationSurveyTables(point){
 const NORTH_ONSET_ORDER=['','b','p','m','f','w','d','t','n','l','z','c','s','r','j','q','x','y','g','k','h','hx','ng'];
 function onsetSortKey(spelling){const i=NORTH_ONSET_ORDER.indexOf(spelling);return i<0?NORTH_ONSET_ORDER.length:i;}
 function southernOnsetOrder([ipa,spell]){return onsetSortKey(spell[0]);}
+// Build a per-source inventory from the unmodified word attestations.
+// A source's conversion dictionary can list proposed spellings absent from its actual data.
+let notationRimeInventoryCache=null;
+function notationSourceRimeInventory(){
+ if(notationRimeInventoryCache)return notationRimeInventoryCache;
+ const inventory=new Map();
+ if(!D?.words)return inventory;
+ const bySource=new Map();
+ for(const w of D.words)for(const a of w.attestations||[]){
+  if(!bySource.has(a.source))bySource.set(a.source,[]);
+  bySource.get(a.source).push(a.term);
+ }
+ for(const p of NOTATION_CONFIG.profiles){
+  const terms=bySource.get(p.source)||bySource.get(p.id)||[];
+  const recorded=new Set();
+  const onsetKeys=Object.keys(p.onsetMap||{}).filter(Boolean).sort((a,b)=>b.length-a.length);
+  for(const term of terms){
+   const normalized=plainTones(term).normalize('NFC').replaceAll('ʦ','ts').replaceAll('ʨ','tɕ').replaceAll('ȵ','ɲ̟').replace(/(tɕ|ts|p|t|k)h/g,'$1ʰ');
+   for(const item of normalized.matchAll(/([^0-9\s~～|/;,()（）\[\]]+)([0-9]+)/g)){
+    const core=item[1],onset=onsetKeys.find(o=>core.startsWith(o))||'';
+    recorded.add(core.slice(onset.length));
+   }
+  }
+  inventory.set(p.id,{terms:terms.length,rimes:recorded});
+ }
+ return notationRimeInventoryCache=inventory;
+}
 function notationMatrix(place){
  const isYang=place==='yangchao';
  const sources=isYang?
@@ -195,8 +222,10 @@ function notationMatrix(place){
    }
    return [];
   }
+  const inventory=kind==='rime'?notationSourceRimeInventory().get(p.id):null;
   return Object.entries(dictionary).filter(([raw,targets])=>{
    if(!(targets||[]).some(t=>(kind==='rime'?standardBrassettToYe(t):t)===key))return false;
+   if(kind==='rime'&&inventory?.terms&&!inventory.rimes.has(raw))return false;
    // A reverse conversion is not evidence of an attested source sound.
    // For ambiguous ang spellings, only retain source-specific reviewed rules.
    if(kind==='rime'&&key==='ang'){
@@ -226,7 +255,7 @@ function notationMatrix(place){
  ['v · à','4','51','53','53','—','53','—']];
  const yangTone=[['x · ā','55','55'],['f · á','35','35'],['r · ǎ','33 / 54','33'],['v · à','—','53']];
  const tone=notationGuideTable('声调',headings,isYang?yangTone:longTone);
- const intro='<p class="tiny">Brassett 拼音单列，其他列显示各材料的 IPA 音值。— 表示当前规则没有对应值；多项原记号以 / 分隔。这里列的是转换规则，尚未逐词统计各音值在原材料中的实际出现次数；待审候选不应视为已记录的变体。</p>';
+ const intro='<p class="tiny">Brassett 拼音单列，其他列显示各材料的 IPA 音值。— 表示当前规则没有对应值；多项原记号以 / 分隔。韵母已按来源词条中的原始记音筛掉未出现的形式；尚无可读取词条的来源仍沿用候选映射，须另行校核。</p>';
  const notes=isYang?
  '<p class="tiny">声韵注：① 仙仁 /ʑ/ 与 /j/ 的 y 写法须检查介音组合，yiao 等形式已规范为 yao。② 阳朝语保 ȵ 按 ni 处理，腭音后的 e／ɛ 按整音节规则写 jie、qie、xie、ye；原始 IPA 保留。③ 表中的 e、ei、ie 涉及来源和声母条件，不能作为无条件音变对应。</p><p class="tiny">声调注：Zhou 仙仁 54→r、55→x，33→r；语保阳朝按 55、35、33、53 的表层调值处理。</p>':
  '<p class="tiny">声韵注：① Brassett 的独立韵母 i：g、h、k、hh 后读 [ɨ]，z、c、s、r 后读 [ɿ]。② Brassett hh→叶式 hx，eng→en，ing→in，uo→o。③ Zhou 各点 e／ie、o／uo 及 i 的读法有声母条件；具体转换按整个音节判断。④ ang 一行暂只列已确认的记号对应；实际使用频次待逐条核查。</p><p class="tiny">声调注：① Brassett 的 1–4 为原书调类，Zhou 2020 提供他砂的 IPA 音值。② 龙山语保当前按表层音值归并 55／53／33→x、24→f、22／21→r。</p>';
