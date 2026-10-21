@@ -426,12 +426,13 @@
       "reviewEvidence": "语保潭溪 0621「岳父」ɡu³³ze³³，与 gu̵³³ze³³ 对应"
     },
     "stedt-rn-43613": {
-      "zh": "树皮；吠叫（汉义待确认）",
-      "status": "pending",
+      "zh": "吠叫",
+      "status": "confirmed",
       "previousZh": "树皮；吠叫（原义未细分）",
       "term": "gu̵³⁵",
       "en": "bark",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Bark (of dog)，词性 v；对应狗叫声，不能解释为树皮。"
     },
     "stedt-rn-453631": {
       "zh": "白楠（汉义待确认）",
@@ -476,12 +477,13 @@
       "reviewEvidence": "语保潭溪 1576「燕子」jã13tsi55，与 jiã55tsi55 同源词形"
     },
     "stedt-rn-453715": {
-      "zh": "手掌；棕榈（汉义待确认）",
-      "status": "pending",
+      "zh": "手掌",
+      "status": "confirmed",
       "previousZh": "手掌；棕榈（原义未细分）",
       "term": "jie²bi¹ta¹",
       "en": "palm",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Palm/Sole；语保龙山 2151「手心」tɕie²⁴la⁵⁵phi²¹，另有对应的手部词形。"
     },
     "stedt-rn-453635": {
       "zh": "指甲花；凤仙花；散沫花（汉义待确认）",
@@ -829,12 +831,13 @@
       "reviewEvidence": "语保碗米坡 0622「岳母」ma³³ma⁵⁵，龙山 0622 ma²¹ma²⁴；本条 ma²¹ma⁵⁵"
     },
     "stedt-rn-359077": {
-      "zh": "小型马；马驹（汉义待确认）",
-      "status": "pending",
+      "zh": "马驹",
+      "status": "confirmed",
       "previousZh": "马驹",
       "term": "ma⁵³pi³⁵",
       "en": "pony",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保阳朝 1687「马驹」ma³⁵pi⁵⁵pi³³；本条 ma⁵³pi³⁵ 同根，STEDT 英文 pony。"
     },
     "stedt-rn-196017": {
       "zh": "民族",
@@ -940,12 +943,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-416351": {
-      "zh": "树皮；吠叫（汉义待确认）",
-      "status": "pending",
+      "zh": "吠叫",
+      "status": "confirmed",
       "previousZh": "树皮；吠叫（原义未细分）",
       "term": "oŋ³⁵",
       "en": "bark",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Bark (of dog)，英语 bark 为动词「吠叫」。"
     },
     "stedt-rn-455131": {
       "zh": "庹",
@@ -956,12 +960,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-418001": {
-      "zh": "看守；观看；表（汉义待确认）",
-      "status": "pending",
+      "zh": "看",
+      "status": "confirmed",
       "previousZh": "看守；观看；表（原义未细分）",
       "term": "pa⁵³",
       "en": "watch",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保阳朝 0754「看」pa⁵³ 与本条 pa⁵³ 完全同形同调；STEDT 词性 v.，英语 watch。"
     },
     "stedt-rn-222129": {
       "zh": "陡；浸泡（汉义待确认）",
@@ -1081,28 +1086,31 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-290093": {
-      "zh": "煮；沸腾；疖子（汉义待确认）",
-      "status": "pending",
+      "zh": "沸腾",
+      "status": "confirmed",
       "previousZh": "煮；沸腾（原义未细分）",
       "term": "phɨe¹³",
       "en": "boil",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Verbs requiring liquids，英语 boil；语保龙山 1326「沸水」phɘ³³tshɘ²¹，非疖子。"
     },
     "stedt-rn-289177": {
-      "zh": "煮；沸腾；疖子（汉义待确认）",
-      "status": "pending",
+      "zh": "沸腾",
+      "status": "confirmed",
       "previousZh": "煮；沸腾（原义未细分）",
       "term": "phɨe⁵⁵",
       "en": "boil",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Verbs requiring liquids，英语 boil；语保龙山 1326「沸水」phɘ³³tshɘ²¹ 可核对词根。"
     },
     "stedt-rn-219324": {
-      "zh": "煮；沸腾；疖子（汉义待确认）",
-      "status": "pending",
+      "zh": "沸腾",
+      "status": "confirmed",
       "previousZh": "煮；沸腾（原义未细分）",
       "term": "phɯe⁵³",
       "en": "boil",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Verbs requiring liquids，英语 boil；语保碗米坡 1326「沸水」tshɤ⁵⁵phɤe⁵⁵，非疖子。"
     },
     "stedt-rn-348936": {
       "zh": "辫子",
@@ -1123,12 +1131,13 @@
       "reviewEvidence": "语保阳朝 0451「辫子」sa33tɕhi33piaŋ33tsɿ33；来源拼写 pian-tsi、pia-tsi，为汉语借词辫子"
     },
     "stedt-rn-288474": {
-      "zh": "平原；平常的（汉义待确认）",
-      "status": "pending",
+      "zh": "平地",
+      "status": "confirmed",
       "previousZh": "平原；平常的（原义未细分）",
       "term": "pi⁵⁵thiau⁵⁵",
       "en": "plain",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 1232「平地」pi⁵⁵thiɘ⁵⁵，与本条 pi⁵⁵thiau⁵⁵ 对应；STEDT 英文 plain 在此指地貌。"
     },
     "stedt-rn-349716": {
       "zh": "背部",
@@ -1332,12 +1341,13 @@
       "reviewEvidence": "语保阳朝 0690「钉子」teŋ55tsɿ33，碗米坡 0690 tɤ̃55tshɿ55，与 tẽ-tsi 对应"
     },
     "stedt-rn-289929": {
-      "zh": "植物；种植（汉义待确认）",
-      "status": "pending",
+      "zh": "种植",
+      "status": "confirmed",
       "previousZh": "植物；种植（原义未细分）",
       "term": "te³⁵",
       "en": "plant",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 词性 v，语义类 Verbs involving plants；英语 plant 是动词「种植」。"
     },
     "stedt-rn-288740": {
       "zh": "钉子",
@@ -1412,12 +1422,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-290258": {
-      "zh": "滴；掉下（汉义待确认）",
-      "status": "pending",
+      "zh": "滴",
+      "status": "confirmed",
       "previousZh": "掉（掉下）",
       "term": "tiã⁵⁵",
       "en": "drop",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保阳朝 0834「滴」ta⁵³、龙山 0834 ta⁵⁵；STEDT 该记录的英语 drop、词性 n，作「滴」解。"
     },
     "stedt-rn-454408": {
       "zh": "点亮",
@@ -1427,36 +1438,40 @@
       "en": "light"
     },
     "stedt-rn-228759": {
-      "zh": "滴；掉下（汉义待确认）",
-      "status": "pending",
+      "zh": "滴",
+      "status": "confirmed",
       "previousZh": "掉（掉下）",
       "term": "ti²¹",
       "en": "drop",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0834「滴」ta⁵⁵；本条 ti²¹ 对应同一词汇概念，英语 drop 在此为名词。"
     },
     "stedt-rn-355129": {
-      "zh": "病人；有耐心（汉义待确认）",
-      "status": "pending",
+      "zh": "病人",
+      "status": "confirmed",
       "previousZh": "病人；有耐心（原义未细分）",
       "term": "ti³⁵ma⁵⁵",
       "en": "patient",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 词性 n，语义类 Health-care；英语 patient 是名词「病人」。"
     },
     "stedt-rn-289342": {
-      "zh": "滴；掉下（汉义待确认）",
-      "status": "pending",
+      "zh": "滴",
+      "status": "confirmed",
       "previousZh": "掉（掉下）",
       "term": "ti⁵⁵",
       "en": "drop",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0834「滴」ta⁵⁵、碗米坡 0834 ta⁵⁵；STEDT 词性 n，英语 drop 为一滴。"
     },
     "stedt-rn-127349": {
-      "zh": "胸膛；箱子（汉义待确认）",
-      "status": "pending",
+      "zh": "胸膛",
+      "status": "confirmed",
       "previousZh": "胸膛；箱子（原义未细分）",
       "term": "to⁵⁵ po²¹ dɯ²¹ go³⁵",
       "en": "chest",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Chest（身体部位）；语保龙山 2148「胸脯」可作义项交叉验证。"
     },
     "stedt-rn-127354": {
       "zh": "背；后面；返回（汉义待确认）",
@@ -1497,12 +1512,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-289410": {
-      "zh": "井；好好地（汉义待确认）",
-      "status": "pending",
+      "zh": "井",
+      "status": "confirmed",
       "previousZh": "井；好好地（原英释同形歧义，须结合词条核定）",
       "term": "tshe³⁵wu⁵⁵pho²¹",
       "en": "well",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保潭溪 1325「井」tshe³⁵pu²¹，与本条 tshe³⁵wu⁵⁵pho²¹ 含相同词根及音节；英语 well 为水井。"
     },
     "stedt-rn-290261": {
       "zh": "寸",
@@ -1513,12 +1529,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-366494": {
-      "zh": "麻；大麻；麻雀（现有译文）（汉义待确认）",
-      "status": "pending",
+      "zh": "麻",
+      "status": "confirmed",
       "previousZh": "麻雀",
       "term": "tshie²¹khu³⁵",
       "en": "hemp",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Leafy vegetables，英文 hemp（麻类植物）；「麻雀」是另一义项，原词不支持。"
     },
     "stedt-rn-346803": {
       "zh": "井",
@@ -1544,12 +1561,13 @@
       "en": "foot (measure)"
     },
     "stedt-rn-368566": {
-      "zh": "猪食；喂猪（汉义待确认）",
-      "status": "pending",
+      "zh": "猪食",
+      "status": "confirmed",
       "previousZh": "猪食；喂猪",
       "term": "tshi⁵⁵si²¹",
       "en": "feed (pig) / pigwash",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 词性 n，英文 feed (pig) / pigwash；语保各点 2464「猪食」另有记录。"
     },
     "stedt-rn-390967": {
       "zh": "寸",
@@ -1570,12 +1588,13 @@
       "reviewEvidence": "语保阳朝 1329「春天」tshun55thiaŋ33；原记录 tshuən55 对应汉语借词「春」"
     },
     "stedt-rn-367527": {
-      "zh": "米；稻；饭（汉义待确认）",
-      "status": "pending",
+      "zh": "米",
+      "status": "confirmed",
       "previousZh": "米；稻；饭（原义未细分）",
       "term": "tsi²¹ɣɯe²¹",
       "en": "rice",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Seeds and flowers, nuts，词性 n；英语 rice 在此为谷粒／米，而非熟饭。"
     },
     "stedt-rn-359956": {
       "zh": "母猪",
@@ -1603,20 +1622,22 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-289231": {
-      "zh": "陡；浸泡（汉义待确认）",
-      "status": "pending",
+      "zh": "陡",
+      "status": "confirmed",
       "previousZh": "陡；浸泡（原义未细分）",
       "term": "tu⁵⁵",
       "en": "steep",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Position - high/low；英语 steep 为地形陡峭，非浸泡。"
     },
     "stedt-rn-127218": {
-      "zh": "手掌；棕榈（汉义待确认）",
-      "status": "pending",
+      "zh": "手掌",
+      "status": "confirmed",
       "previousZh": "手掌；棕榈（原义未细分）",
       "term": "tɕe³⁵ la⁵⁵ pʰi²¹",
       "en": "palm",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 2151「手心」tɕie²⁴la⁵⁵phi²¹，与本条 tɕe³⁵la⁵⁵pʰi²¹ 高度对应；STEDT Palm/Sole。"
     },
     "stedt-rn-145865": {
       "zh": "指甲",
@@ -1639,20 +1660,22 @@
       "reviewEvidence": "语保龙山 0485「指甲」tɕie24mi55thi21khuo55tha55，本条 tɕe/tɕie-mi-thi-kho-tha 对应"
     },
     "stedt-rn-127230": {
-      "zh": "脚底；鞋底（汉义待确认）",
-      "status": "pending",
+      "zh": "脚底",
+      "status": "confirmed",
       "previousZh": "脚底；鞋底（原义未细分）",
       "term": "tɕi²¹ la²¹ pʰi²¹",
       "en": "sole",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 2165「脚心」tɕi²²la²²phi³³，对应本条 tɕi²¹la²¹pʰi²¹；不涉及鞋底。"
     },
     "stedt-rn-350284": {
-      "zh": "小牛；小腿（汉义待确认）",
-      "status": "pending",
+      "zh": "小腿",
+      "status": "confirmed",
       "previousZh": "小牛；小腿（原义未细分）",
       "term": "tɕi²¹si²¹phɯe⁵⁵",
       "en": "calf",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Leg，词形 tɕi²¹si²¹phɯe⁵⁵；英语 calf 为小腿肚，不是牛犊。"
     },
     "stedt-rn-127143": {
       "zh": "背部；后面",
@@ -1721,12 +1744,13 @@
       "reviewEvidence": "词形含汉语「火车」借词：xo/ho + tshe/tshie；来源英语 train 作名词（列车），非训练"
     },
     "stedt-rn-216723": {
-      "zh": "喜欢；像（汉义待确认）",
-      "status": "pending",
+      "zh": "喜欢",
+      "status": "confirmed",
       "previousZh": "喜欢；像（原义未细分）",
       "term": "xuan⁵⁵ɕi⁵³",
       "en": "like",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "xuan⁵⁵ɕi⁵³ 与汉语借词「欢喜」同源，英文 like 在此指喜欢；语保各点 0882「喜欢」提供义项对照。"
     },
     "stedt-rn-454435": {
       "zh": "解决；决定；下决心（汉义待确认）",
@@ -1871,12 +1895,13 @@
       "reviewEvidence": "语保龙山 2379「孙女」与2380「外孙女」同形 zɘ53piəu24；本条 granddaughter 不自动区分内外关系"
     },
     "stedt-rn-453838": {
-      "zh": "看守；观看；表（汉义待确认）",
-      "status": "pending",
+      "zh": "看",
+      "status": "confirmed",
       "previousZh": "看守；观看；表（原义未细分）",
       "term": "zi¹",
       "en": "watch",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 词性 v，语义类 Watch；英语 watch 为动词「看／观看」，非手表。"
     },
     "stedt-rn-454069": {
       "zh": "母猪",
@@ -1899,12 +1924,13 @@
       "reviewEvidence": "语保阳朝 2463「猪草」tsɿ³³ɕi³³、碗米坡 2463 tsɿ⁵⁵ɕi⁵⁵、潭溪 2463 zi¹³ɕi³³；与本条 zi⁴xi³ 词形对应。用户明确核定为「猪草」。"
     },
     "stedt-rn-210501": {
-      "zh": "植物；种植（汉义待确认）",
-      "status": "pending",
+      "zh": "种植",
+      "status": "confirmed",
       "previousZh": "植物；种植（原义未细分）",
       "term": "zi⁵⁵",
       "en": "plant",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 词性 v，语义类 Verbs involving plants；英语 plant 在此是动词。"
     },
     "stedt-rn-359488": {
       "zh": "羊羔",
@@ -1954,20 +1980,22 @@
       "reviewEvidence": "语保潭溪 0977「轻」zu13、阳朝 0977 zu53、龙山 0977 zu55；本条各调值与调查点对应"
     },
     "stedt-rn-289004": {
-      "zh": "植物；种植（汉义待确认）",
-      "status": "pending",
+      "zh": "种植",
+      "status": "confirmed",
       "previousZh": "植物；种植（原义未细分）",
       "term": "ɣa⁵⁵~zi⁵⁵",
       "en": "plant",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 词性 v，语义类 Verbs involving plants；英语 plant 在此是动词。"
     },
     "stedt-rn-43475": {
-      "zh": "树皮；吠叫（汉义待确认）",
-      "status": "pending",
+      "zh": "吠叫",
+      "status": "confirmed",
       "previousZh": "树皮；吠叫（原义未细分）",
       "term": "ɣũ³⁵",
       "en": "bark",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Bark (of dog)，词性 v；不是名词树皮。"
     },
     "stedt-rn-196425": {
       "zh": "伯母",
@@ -2024,20 +2052,22 @@
       "reviewEvidence": "语保潭溪 0611「奶奶」a²¹pho²¹，与 ʔa²¹pho²¹ 对应"
     },
     "stedt-rn-289714": {
-      "zh": "菜肴；盘子（汉义待确认）",
-      "status": "pending",
+      "zh": "菜",
+      "status": "confirmed",
       "previousZh": "菜肴；盘子（原义未细分）",
       "term": "ʔa²¹ɕi²¹",
       "en": "dish",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保潭溪 0405「菜」a²¹ɕi²¹，与本条 ʔa²¹ɕi²¹ 完全对应；英文 dish 为菜，不是盘子。"
     },
     "stedt-rn-43503": {
-      "zh": "角；号角（汉义待确认）",
-      "status": "pending",
+      "zh": "角",
+      "status": "confirmed",
       "previousZh": "角；号角（原义未细分）",
       "term": "ʔa³³ kʰɨe³³",
       "en": "horn",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Horn(ed)/Antler，英文 horn 是动物角；语保各点 1668「角」另有记录。"
     },
     "stedt-rn-289648": {
       "zh": "岳母",
