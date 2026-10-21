@@ -70,6 +70,7 @@ function mergeDictionaryWords(data){
     else map.set(k,{...v,attestationIds:[...(v.attestationIds||[])]});
    }out.notations[key]=[...map.values()];
   }
+  out.zhReviewEvidence=unique(ws.map(w=>w.zhReviewEvidence)).join('；');
   out.mergedWordIds=unique(ws.flatMap(w=>w.mergedWordIds||[w.id]));
   byId.set(base.id,out);
   for(const w of ws.slice(1)){removed.add(w.id);aliases[w.id]=base.id}
