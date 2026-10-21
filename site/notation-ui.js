@@ -128,7 +128,14 @@ function notationSourcePicker(p){
  const formatLabels=new Map();
  return `<label>文献来源<select id="notation-source">${groups.map(g=>`<option value="${g.id}" ${g.id===key?'selected':''}>${E(g.title)}</option>`).join('')}</select></label>${group.profiles.length>1?`<label>输入记音格式<select id="notation-variant">${group.profiles.map(x=>{const label=notationProfileFormat(x),num=(formatLabels.get(label)||0)+1;formatLabels.set(label,num);return `<option value="${x.id}" ${x.id===p.id?'selected':''}>${E(label)}${num>1?' '+num:''}</option>`}).join('')}</select></label><p class="tiny">同一文献不同文件或记音格式。来源原文件名可在词条出处中查看。</p>`:''}`;
 }
-function notationGuideTable(title,heads,rows){return rows?.length?mappingTable(title,heads,rows):'<p class="tiny">该材料没有可确认的完整对应表；保留来源原记音。</p>'}
+function notationGuideTable(title,heads,rows){
+ if(!rows?.length)return '<p class="tiny">该材料没有可确认的完整对应表；保留来源原记音。</p>';
+ if(heads.length>4||rows.length<12)return mappingTable(title,heads,rows);
+ const pane=items=>`<div class="table-wrap"><table><thead><tr>${heads.map(h=>`<th scope="col">${E(h)}</th>`).join('')}</tr></thead><tbody>${items.map(row=>`<tr>${row.map((value,i)=>i?`<td>${E(value)}</td>`:`<th scope="row">${E(value)}</th>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+ const half=Math.ceil(rows.length/2);
+ return `<div class="np-split-host np-guide-split"><h3>${E(title)}</h3><div class="np-split ${heads.length===4?'np-split-four':'np-split-three'}">${pane(rows.slice(0,half))}${pane(rows.slice(half))}</div></div>`;
+}
+
 function notationSourceTables(profile){
  let html='<h3>'+E(profile.title)+'</h3><p class="tiny">'+E(profile.status||'')+'</p>';
  if(profile.kind==='brassett'||profile.kind==='ye'){
