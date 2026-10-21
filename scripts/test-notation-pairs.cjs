@@ -33,6 +33,25 @@ for(const f of ['notation-profiles.js','notation-ui.js','southern-notation.js','
  assert(!report['yubao-60757'].tones['x|ā'].includes('53'));
  assert(report['yubao-60757'].rimes.an.includes('an'));
  assert(report['yubao-60757'].rimes.ang.includes('aŋ'));
+ // No /n/–/ŋ/ contrast: an. The Longshan survey retains both spellings.
+ for(const [id,symbol] of [
+  ['zhou-ts','ã'],['zhou-fx','an'],['zhou-xr','ã'],
+  ['yubao-60756','aŋ'],['yubao-60823','ã']
+ ]){
+  assert(report[id].rimes.an.includes(symbol),id+' should use an for '+symbol);
+  assert(!Object.hasOwn(report[id].rimes,'ang'),id+' should not create an unsupported ang row');
+ }
+ assert.equal(vm.runInContext("northernSurveySpelling('laŋ55','60756').ye",context),'lanx');
+ assert.equal(vm.runInContext("wanmipoSpelling('pã55').ye",context),'banx');
+ // Each short-column vowel/consonant table has two balanced panels.
+ const yangHtml=vm.runInContext("notationPairTables('yangchao',D)",context);
+ const wanHtml=vm.runInContext("notationPairTables('wanmipo',D)",context);
+ const longHtml=vm.runInContext("notationPairTables('longshan',D)",context);
+ assert.equal((yangHtml.match(/class="np-split-host"/g)||[]).length,2);
+ assert.equal((wanHtml.match(/class="np-split-host"/g)||[]).length,2);
+ assert(!longHtml.includes('class="np-split-host"'));
+ assert(vm.runInContext("notationGuide()",context).includes('np-guide-split'));
+
  assert.equal(vm.runInContext("npIPASyllables('ȵie55')[0].onset",context),'ȵ');
  assert.equal(vm.runInContext("npIPASyllables('ȵie55')[0].text",context),'ȵie55');
  assert.equal(vm.runInContext("npCell('zhou-ts','onset','n',D).some(v=>v.value==='ȵ')",context),true);
