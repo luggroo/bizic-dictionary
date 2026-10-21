@@ -257,6 +257,22 @@ function notationMatrix(place){
   return Object.entries(dictionary).filter(([raw,targets])=>{
    if(!(targets||[]).some(t=>(kind==='rime'?standardBrassettToYe(t):t)===key))return false;
    if(inventory?.terms&&!(kind==='rime'?inventory.rimes:inventory.onsets).has(raw))return false;
+   if(kind==='rime'){
+    const rule=(p.rules||[]).find(x=>x.kind==='韵母'&&x.raw===raw);
+    // Do not display speculative mappings as independent phonetic variants.
+    if(rule?.status==='候选待审'&&!inventory?.rimes?.has(raw))return false;
+    // A reverse lookup with multiple target spellings is not a proof
+    // that each target occurs in this source; check the syllable conditions.
+    const candidateOnsets=Object.keys(p.onsetMap||{}).filter(Boolean);
+    const valid=candidateOnsets.some(on=>{
+     const mapped=sourceSyllableCores(on+raw,p);
+     return (mapped||[]).some(core=>{
+      const spellings=(p.onsetMap[on]||[]).flatMap(x=>(p.rhymeMap[raw]||[]).map(y=>x+y));
+      return mapped.includes(core)&&spellings.some(z=>standardBrassettToYe(z)===key);
+     });
+    });
+    if(candidateOnsets.length&&!valid)return false;
+   }
    if(sharedZhou){const rule=(p.rules||[]).find(x=>x.kind===(kind==='rime'?'韵母':'声母')&&x.raw===raw);if(!rule||rule.status==='候选待审')return false;}
    // A reverse conversion is not evidence of an attested source sound.
    // For ambiguous ang spellings, only retain source-specific reviewed rules.
@@ -292,7 +308,7 @@ function notationMatrix(place){
  const intro='<p class="tiny">Brassett 拼音单列，其他列显示各材料的 IPA 音值。空白表示该来源尚无可靠对应，多项原记号以 / 分隔。各调查点仅列已核对应；张伟权一列目前仅保留已明确核对的 i／ei，其他韵母待按原词典逐项核定。Zhou 各调查点的声韵表仅取各自已核规则；条件变体在下方注明。词条未分调查点的数据不参与音值统计。</p>';
  const notes=isYang?
  '<p class="tiny">声韵注：① 仙仁 /ʑ/ 与 /j/ 的 y 写法须检查介音组合，yiao 等形式已规范为 yao。② 阳朝语保 ȵ 按 ni 处理，腭音后的 e／ɛ 按整音节规则写 jie、qie、xie、ye；原始 IPA 保留。③ 表中的 e、ei、ie 涉及来源和声母条件，不能作为无条件音变对应。</p><p class="tiny">声调注：Zhou 仙仁 54→r、55→x，33→r；语保阳朝按 55、35、33、53 的表层调值处理。</p>':
- '<p class="tiny">声韵注：① Brassett 的独立韵母 i：g、h、k、hh 后读 [ɨ]，z、c、s、r 后读 [ɿ]。② Brassett hh→叶式 hx，eng→en，ing→in，uo→o。③ Zhou 各点 e／ie、o／uo 及 i 的读法有声母条件；具体转换按整个音节判断。④ ang 一行暂只列已确认的记号对应；实际使用频次待逐条核查。</p><p class="tiny">声调注：① Brassett 的 1–4 为原书调类，Brassett 提供他砂的 IPA 音值。② 龙山语保当前按表层音值归并 55／53／33→x、24→f、22／21→r。</p>';
+ '<p class="tiny">声韵注：① Brassett 的独立韵母 i：g、h、k、hh 后读 [ɨ]，z、c、s、r 后读 [ɿ]。② Brassett hh→叶式 hx，eng→en，ing→in，uo→o。③ Zhou 各点 e／ie、o／uo 及 i 的读法有声母条件；对应须核对具体声母。④ ang 一行暂只列已确认的记号对应；实际使用频次待逐条核查。</p><p class="tiny">声调注：① Brassett 的 1–4 为原书调类，Brassett 提供他砂的 IPA 音值。② 龙山语保当前按表层音值归并 55／53／33→x、24→f、22／21→r。</p>';
  return '<div class="notation-matrix">'+intro+matrix('onset','声母')+matrix('rime','韵母')+tone+notes+'</div>';
 }
 function notationGuide(){
