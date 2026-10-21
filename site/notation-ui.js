@@ -244,9 +244,16 @@ function notationMatrix(place){
    return fxReviewed[key]||[];
   }
   const inventory=notationSourceRimeInventory().get(p.id);
+  // Profiles drawn from Zhou's comparative file share one source ID.
+  // Without point-tagged attestations, restrict their column to explicitly
+  // documented source-specific correspondences.
+  const sharedZhou=src.id==='zhou-ts'||src.id==='zhou-xr';
   return Object.entries(dictionary).filter(([raw,targets])=>{
    if(!(targets||[]).some(t=>(kind==='rime'?standardBrassettToYe(t):t)===key))return false;
-   if(inventory?.terms&&!(kind==='rime'?inventory.rimes:inventory.onsets).has(raw))return false;
+   if(sharedZhou){
+    const rule=(p.rules||[]).find(x=>x.kind===(kind==='rime'?'韵母':'声母')&&x.raw===raw);
+    if(!rule||rule.status==='候选待审')return false;
+   }else if(inventory?.terms&&!(kind==='rime'?inventory.rimes:inventory.onsets).has(raw))return false;
    // A reverse conversion is not evidence of an attested source sound.
    // For ambiguous ang spellings, only retain source-specific reviewed rules.
    if(kind==='rime'&&key==='ang'){
