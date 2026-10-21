@@ -43,7 +43,6 @@ function wordIPA(w){return [...new Set(notationValues(w,'ipa').map(v=>phon(v.tex
 function completeSpellings(w){return visibleNotationValues(w).filter(v=>v.method!=='source-partial'&&!/[□⟦⟧]/.test(v.text))}
 function notationHead(w){return completeSpellings(w)[0]?.text||wordIPA(w)[0]||phon(w.term)}
 function ipaSubtitle(w){const ipa=wordIPA(w);return completeSpellings(w).length&&ipa.length?`<div class="word-ipa">${ipa.map(E).join(' · ')}</div>`:!ipa.length?'<div class="tiny">IPA 待校核</div>':''}
-function notationBadge(v){return v.method==='source-partial'?'部分转写':v.ambiguous?'多种候选':''}
 function notationCells(w,compact=false){const values=completeSpellings(w),ipa=wordIPA(w),shown=compact?values.slice(1,3):values.slice(1);return ipaSubtitle(w)+(!values.length&&ipa.length>1?`<div class="word-ipa">${ipa.slice(1).map(E).join(' · ')}</div>`:'')+shown.map(v=>`<div class="notation-form">${E(v.text)}</div>`).join('')+(values.some(v=>v.ambiguous)?'<small class="tiny">多种候选</small>':'')+(compact&&values.length>3?`<small class="tiny">另 ${values.length-3} 种</small>`:'')}
 
 function spellingSelector(item=null){
