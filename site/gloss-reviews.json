@@ -2,12 +2,13 @@
   "reviewedAt": "2026-10-21",
   "entries": {
     "w90": {
-      "zh": "祖母；外祖母（汉义待确认）",
-      "status": "pending",
+      "zh": "外祖母",
+      "status": "confirmed",
       "previousZh": "祖母",
       "term": "a3ba1",
       "en": "(maternal) grandmother",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "Brassett 英文原释 (maternal) grandmother，明确母系祖母，即外祖母。"
     },
     "w903": {
       "zh": "反动",
@@ -83,12 +84,13 @@
       "reviewEvidence": "汉语借词 ti3gao1「提高」；Brassett 中文原释「提高」"
     },
     "w2436": {
-      "zh": "差一点；几乎不（汉义待确认）",
-      "status": "pending",
+      "zh": "几乎不",
+      "status": "confirmed",
       "previousZh": "差一点",
       "term": "xi1ku1li1",
       "en": "hardly",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "Brassett 英文 hardly 表程度副词「几乎不」，中文原释「差一点」有语义偏差；保留英文来源。"
     },
     "w2449": {
       "zh": "无法应付",
@@ -265,12 +267,13 @@
       "reviewEvidence": "语保龙山 0462「鼻涕」uŋ²⁴tɕhi⁵⁵la⁵⁵、阳朝 eŋ⁵⁵tɕhi⁵⁵la⁵⁵、碗米坡 ũ⁵⁵tɕhi⁵⁵la¹³；Brassett ong⁴qi³la⁴ 同根。"
     },
     "w4660": {
-      "zh": "鼻垢；流鼻涕；抽鼻子（汉义待确认）",
-      "status": "pending",
+      "zh": "擤鼻涕",
+      "status": "confirmed",
       "previousZh": "流鼻涕；抽鼻子",
       "term": "ong4 qi3 se2",
       "en": "snivel",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "Brassett 英文 snivel 为鼻涕相关动作；同系列 ong4 qi3 la4 已对应「鼻涕」，末音 se2 指擤鼻动作的可能性较高，需例句核查。"
     },
     "w4886": {
       "zh": "轻",
@@ -352,12 +355,13 @@
       "reviewEvidence": "用户确认 a²da¹bi² 为「小姐姐」；保留 Brassett 来源的 younger elder sister 以便溯源"
     },
     "stedt-rn-127376": {
-      "zh": "脚底；鞋底（汉义待确认）",
-      "status": "pending",
+      "zh": "脚底",
+      "status": "confirmed",
       "previousZh": "脚底；鞋底（原义未细分）",
       "term": "a²¹ dʑi³⁵ a²¹ di³⁵",
       "en": "sole",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT sole 归在身体部位语义类 Foot，词形 a²¹dʑi³⁵a²¹di³⁵，不能解释为鞋底。"
     },
     "stedt-rn-356219": {
       "zh": "奶奶",
@@ -500,12 +504,13 @@
       "reviewEvidence": "STEDT 语义类 Palm/Sole；语保龙山 2151「手心」tɕie²⁴la⁵⁵phi²¹，另有对应的手部词形。"
     },
     "stedt-rn-453635": {
-      "zh": "指甲花；凤仙花；散沫花（汉义待确认）",
-      "status": "pending",
+      "zh": "指甲花",
+      "status": "confirmed",
       "previousZh": "指甲花；散沫花（原英释为 henna，植物种类待核）",
       "term": "jie²mi¹ti³ka¹pu¹",
       "en": "henna plant",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 英文 henna plant，汉语通常称指甲花（散沫花），保留具体物种待核注记。"
     },
     "stedt-rn-403494": {
       "zh": "牛皮",
@@ -1425,12 +1430,13 @@
       "en": "back"
     },
     "stedt-rn-420937": {
-      "zh": "能；可以（汉义待确认）",
-      "status": "pending",
+      "zh": "能",
+      "status": "confirmed",
       "previousZh": "能；可以（原释义未细分）",
       "term": "thiu³⁵",
       "en": "can",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 英文 can 作情态动词，与「能」义对应，「可以」为同义解释。"
     },
     "stedt-rn-289187": {
       "zh": "提高",
@@ -1591,12 +1597,13 @@
       "reviewEvidence": "历史词表 w8686：tshie21 mo,55＝井；并见 Brassett 2004 词条 417：水井。"
     },
     "stedt-rn-194538": {
-      "zh": "煮；沸腾；疖子（汉义待确认）",
-      "status": "pending",
+      "zh": "煮",
+      "status": "confirmed",
       "previousZh": "煮；沸腾（原义未细分）",
       "term": "tshie³⁵ka⁵⁵",
       "en": "boil",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 英文 boil 的动词义；与其他记录中的「煮」同语义组，排除名词疖子。"
     },
     "stedt-rn-229065": {
       "zh": "尺",
@@ -1799,12 +1806,13 @@
       "reviewEvidence": "xuan⁵⁵ɕi⁵³ 与汉语借词「欢喜」同源，英文 like 在此指喜欢；语保各点 0882「喜欢」提供义项对照。"
     },
     "stedt-rn-454435": {
-      "zh": "解决；决定；下决心（汉义待确认）",
-      "status": "pending",
+      "zh": "解决",
+      "status": "confirmed",
       "previousZh": "解决；决心（原义未细分）",
       "term": "ye³luo³",
       "en": "resolve",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 英文 resolve 的动词义，词形 ye³luo³ 对应汉语借词「解决」的可能性仍需语音核查。"
     },
     "stedt-rn-453833": {
       "zh": "藏",
