@@ -435,12 +435,13 @@
       "reviewEvidence": "STEDT 语义类 Bark (of dog)，词性 v；对应狗叫声，不能解释为树皮。"
     },
     "stedt-rn-453631": {
-      "zh": "白楠（汉义待确认）",
-      "status": "pending",
+      "zh": "白楠",
+      "status": "confirmed",
       "previousZh": "白楠（原文树名，具体种类待核）",
       "term": "ha¹la²ka³",
       "en": "white nanmu tree",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "来源英文明确为 white nanmu tree；中文保留原树名，不进一步推断植物学种。"
     },
     "stedt-rn-289802": {
       "zh": "火车",
@@ -607,12 +608,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-288782": {
-      "zh": "谷壳；剥壳（汉义待确认）",
-      "status": "pending",
+      "zh": "谷壳",
+      "status": "confirmed",
       "previousZh": "谷壳；剥壳（原义未细分）",
       "term": "kho⁵⁵tsho⁵⁵~phɨe⁵⁵tha⁵⁵kho⁵⁵tsho⁵⁵",
       "en": "husk",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 1499「糠」phɘ⁵⁵tha⁵⁵ 与本条变体 phɨe⁵⁵tha⁵⁵... 相符；英语 husk 指谷壳。"
     },
     "stedt-rn-288489": {
       "zh": "烟",
@@ -652,12 +654,13 @@
       "reviewEvidence": "语保龙山 0060「烟」khɘ24kha33，阳朝/碗米坡 0060 亦有同源词形；英语 smoke 在此作名词"
     },
     "stedt-rn-289721": {
-      "zh": "谷壳；剥壳（汉义待确认）",
-      "status": "pending",
+      "zh": "谷壳",
+      "status": "confirmed",
       "previousZh": "谷壳；剥壳（原义未细分）",
       "term": "kɨ²¹bɨe³³tshu³³",
       "en": "husk",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Plant parts and types，英语 husk 为谷物外壳；语保 1499「糠」是相关义项。"
     },
     "stedt-rn-290147": {
       "zh": "陡",
@@ -777,12 +780,13 @@
       "reviewEvidence": "语保龙山 0882「喜欢」li24sɿ55、潭溪 0882「喜欢」li21si13；对应本条 li/lɨ-si"
     },
     "stedt-rn-43368": {
-      "zh": "眼中异物；眼屎；眼病名称（汉义待确认）",
-      "status": "pending",
+      "zh": "眼屎",
+      "status": "confirmed",
       "previousZh": "眼中沙粒（原释义所指待核）",
       "term": "lo³⁵ se²¹",
       "en": "eye sand",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Eye Sand（眼部分泌物）；语保各点 2123「眼屎」对应义项。"
     },
     "stedt-rn-353932": {
       "zh": "男人",
@@ -867,12 +871,13 @@
       "reviewEvidence": "汉语借词「民族」min/mĩ-tshu，与英语 nationality 的本条指称对应"
     },
     "stedt-rn-345143": {
-      "zh": "光；轻；点亮（汉义待确认）",
-      "status": "pending",
+      "zh": "光",
+      "status": "confirmed",
       "previousZh": "光；轻（原义未细分）",
       "term": "mi⁵⁵za⁵⁵",
       "en": "light",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 词性 n，语义类 Light 7.1.11.1；英语 light 作名词光，非形容词轻。"
     },
     "stedt-rn-43612": {
       "zh": "飞",
@@ -918,12 +923,13 @@
       "reviewEvidence": "语保龙山 1576「燕子」mɘ24tsha55khu55li55 与本条 mɨe/mɯe-tsha-khu-li 对应"
     },
     "stedt-rn-127295": {
-      "zh": "背；后面；返回（汉义待确认）",
-      "status": "pending",
+      "zh": "背",
+      "status": "confirmed",
       "previousZh": "背；后面；返回（原义未细分）",
       "term": "mɯe⁵⁵ kʰɯe²¹",
       "en": "back",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Back（身体部位）1.4.8；英语 back 在此是名词背部，非返回。"
     },
     "stedt-rn-43457": {
       "zh": "闻",
@@ -969,12 +975,13 @@
       "reviewEvidence": "语保阳朝 0754「看」pa⁵³ 与本条 pa⁵³ 完全同形同调；STEDT 词性 v.，英语 watch。"
     },
     "stedt-rn-222129": {
-      "zh": "陡；浸泡（汉义待确认）",
-      "status": "pending",
+      "zh": "陡",
+      "status": "confirmed",
       "previousZh": "陡；浸泡（原义未细分）",
       "term": "pa⁵⁵za²¹",
       "en": "steep",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Position - high/low，英语 steep 指坡度陡，非浸泡。"
     },
     "stedt-rn-127206": {
       "zh": "背部",
@@ -1042,12 +1049,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-219069": {
-      "zh": "破；断；打破（汉义待确认）",
-      "status": "pending",
+      "zh": "破",
+      "status": "confirmed",
       "previousZh": "破；断；打破（原义未细分）",
       "term": "phi²¹",
       "en": "break",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 2870「破」phi⁵³，与本条 phi²¹ 同根；STEDT Change of state，英语 break 作破裂义。"
     },
     "stedt-rn-363349": {
       "zh": "苍蝇",
@@ -1078,12 +1086,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-200709": {
-      "zh": "谷壳；剥壳（汉义待确认）",
-      "status": "pending",
+      "zh": "糠",
+      "status": "confirmed",
       "previousZh": "谷壳；剥壳（原义未细分）",
       "term": "pho⁵⁵tha⁵⁵",
       "en": "husk",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 1499「糠」phɘ⁵⁵tha⁵⁵，与本条 pho⁵⁵tha⁵⁵ 对应；STEDT husk。"
     },
     "stedt-rn-290093": {
       "zh": "沸腾",
@@ -1212,20 +1221,22 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-289439": {
-      "zh": "时间；次（汉义待确认）",
-      "status": "pending",
+      "zh": "时间",
+      "status": "confirmed",
       "previousZh": "时间；次（原义未细分）",
       "term": "si²¹",
       "en": "time",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Other Intervals 9.1.5；英语 time 作时间／时段，非次数。"
     },
     "stedt-rn-127397": {
-      "zh": "肥；胖；脂肪（汉义待确认）",
-      "status": "pending",
+      "zh": "肥",
+      "status": "confirmed",
       "previousZh": "肥；胖；脂肪（原义未细分）",
       "term": "si²¹ tsʰe³⁵",
       "en": "fat",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保潭溪 0961「肥」si²¹，与本条 si²¹tsʰe³⁵ 词根相同；STEDT Fat/Be Fat。"
     },
     "stedt-rn-220701": {
       "zh": "失败",
@@ -1251,12 +1262,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-397789": {
-      "zh": "肥；胖；脂肪（汉义待确认）",
-      "status": "pending",
+      "zh": "肥",
+      "status": "confirmed",
       "previousZh": "肥；胖；脂肪（原义未细分）",
       "term": "si³⁵",
       "en": "fat",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保潭溪 0961「肥」si²¹ 与本条 si³⁵ 对应；STEDT Fat/Be Fat。"
     },
     "stedt-rn-453879": {
       "zh": "坐月子",
@@ -1269,12 +1281,13 @@
       "reviewEvidence": "语保龙山 0545「坐月子」sɿ55lie55uŋ22，阳朝 0545 sɿ53li33ɔŋ33，碗米坡 0545 sɿ53lie31ũ33"
     },
     "stedt-rn-453671": {
-      "zh": "红楠（汉义待确认）",
-      "status": "pending",
+      "zh": "红楠",
+      "status": "confirmed",
       "previousZh": "红楠（原文树名，具体种类待核）",
       "term": "si¹si¹ka³",
       "en": "red nanmu tree",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "来源英文明确为 red nanmu tree；中文保留原树名，不进一步推断植物学种。"
     },
     "stedt-rn-290264": {
       "zh": "升",
@@ -1474,12 +1487,13 @@
       "reviewEvidence": "STEDT 语义类 Chest（身体部位）；语保龙山 2148「胸脯」可作义项交叉验证。"
     },
     "stedt-rn-127354": {
-      "zh": "背；后面；返回（汉义待确认）",
-      "status": "pending",
+      "zh": "背",
+      "status": "confirmed",
       "previousZh": "背；后面；返回（原义未细分）",
       "term": "to⁵⁵ po²¹ mɯe⁵⁵ kʰɯe²¹",
       "en": "back",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Back（身体部位）1.4.8；英语 back 在此是名词背部，非返回。"
     },
     "stedt-rn-289968": {
       "zh": "舀",
@@ -1614,12 +1628,13 @@
       "en": "exit"
     },
     "stedt-rn-454416": {
-      "zh": "摘；挑选（汉义待确认）",
-      "status": "pending",
+      "zh": "挑选",
+      "status": "confirmed",
       "previousZh": "摘；挑选（原义未细分）",
       "term": "tu¹",
       "en": "pick",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 词性 v，语义类 Intentional separation - Sort 6.10.4；英语 pick 为挑选，不是采摘。"
     },
     "stedt-rn-289231": {
       "zh": "陡",
@@ -1786,12 +1801,13 @@
       "en": "fly"
     },
     "stedt-rn-289415": {
-      "zh": "平原；平常的（汉义待确认）",
-      "status": "pending",
+      "zh": "平原",
+      "status": "confirmed",
       "previousZh": "平原；平常的（原义未细分）",
       "term": "za⁵⁵bi³³",
       "en": "plain",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 语义类 Landforms and geographical features；英语 plain 为平原，非平常的。"
     },
     "stedt-rn-127348": {
       "zh": "咽",
@@ -1804,12 +1820,13 @@
       "reviewEvidence": "语保龙山 0765「咽」zɘ24，阳朝 0765 zə33，潭溪 0765 ze13；此词为动词吞咽"
     },
     "stedt-rn-454799": {
-      "zh": "喜欢；像（汉义待确认）",
-      "status": "pending",
+      "zh": "喜欢",
+      "status": "confirmed",
       "previousZh": "喜欢；像（原义未细分）",
       "term": "ze³",
       "en": "like",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT 词性 be v，语义类 Like 8.3.1.1.1；英语 like 为喜欢，非相像。"
     },
     "stedt-rn-289666": {
       "zh": "孙女",
