@@ -129,7 +129,7 @@ function notationGuide(){
  const get=id=>profiles.find(p=>p.id===id);
  const longshan=['1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE','165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO','stedt-07898ef938','stedt-39f4cd9a6b','1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF','brassett-phonetic','zhou-ts','zhou-fx','stedt-cb523fc3dc:north','yubao-60757'];
  const southTones=[['55','ā','高平'],['33','a（可标 a̱）','中平'],['35','á','上升'],['21','à','低降'],['13','ǎ','低升']];
- return `<section class="panel"><h2>拼音与调查点</h2><p>以下依调查点列出实际使用的声母、韵母、声调转换表，而不是只介绍通用拼音。<strong>龙山</strong>显示叶式与调号两种拼音；保靖各点与泸溪分别独立列出。原文 IPA 始终保留，未核对应不自动猜测。</p></section>
+ return `<section class="panel"><h2>拼音与调查点</h2><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p></section>
  <section class="panel"><h2>龙山</h2><p>本站使用叶式拼音（x/f/r/v 标调）和调号拼音（ā/á/ǎ/à）。下面逐材料列出对应表；Brassett 的拼写、音值及独立 i 的条件读法仅在本节解释。</p>
  ${notationGuideTable('两种拼音的声调对应',['Brassett / IPA','叶式','调号'],[['1 / 55','x','ā'],['2 / 24','f','á'],['3 / 21','r','ǎ'],['4 / 51','v','à']])}
  ${longshan.map(id=>get(id)).filter(Boolean).map(p=>'<details><summary>'+E(p.title)+' · 声韵调对应</summary>'+notationSourceTables(p)+(p.id==='yubao-60757'?notationSurveyTables('60757'):'')+'</details>').join('')}
