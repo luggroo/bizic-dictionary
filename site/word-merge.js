@@ -1,3 +1,26 @@
+// Older imports sometimes grouped identical Northern and Southern forms together.
+function splitCrossDialectWords(data){
+ const unique=a=>[...new Set(a.filter(x=>x!==undefined&&x!==null&&x!==''))];
+ const aliases=data.wordAliases||{};const result=[],existingIds=new Set(data.words.map(w=>w.id));
+ for(const w of data.words){
+  const ats=w.attestations||[],north=ats.filter(a=>a.dialect==='北部'),south=ats.filter(a=>a.dialect==='南部');
+  if(!north.length||!south.length){result.push(w);continue;}
+  const baseDialect=w.dialect==='南部'?'南部':'北部';
+  for(const dialect of ['北部','南部']){
+   const records=ats.filter(a=>a.dialect===dialect||(dialect===baseDialect&&!['北部','南部'].includes(a.dialect)));
+   const primary=records.find(a=>a.id===w.id)||records[0],id=dialect===baseDialect?w.id:w.id+(dialect==='南部'?'--south':'--north');
+   const ids=new Set(records.map(a=>a.id));const sources=unique(records.map(a=>(data.sourceAliases||{})[a.source]||a.source));
+   const out={...w,...primary,id,dialect,dialects:[dialect],attestations:records,source:sources[0],sourceIds:sources};
+   out.zh=dictionaryGlosses(records.map(a=>a.zh),'zh').join('; ');out.en=dictionaryGlosses(records.map(a=>a.en),'en').join('; ');
+   for(const [key,field]of [['forms','term'],['glosses','en'],['zhVariants','zh'],['schemes','scheme'],['positions','pos'],['collections','collection'],['categories','category']])out[key]=unique(records.map(a=>a[field]));
+   out.notations={};for(const key of ['ye','brassett','ipa','accent'])out.notations[key]=(w.notations?.[key]||[]).filter(v=>(v.attestationIds||[]).some(id=>ids.has(id))).map(v=>({...v,attestationIds:v.attestationIds.filter(id=>ids.has(id))}));
+   if(!out.notations.ipa.length)out.notations.ipa=unique(records.filter(a=>/IPA|国际音标|音标/i.test(a.scheme||'')).map(a=>a.term)).map(text=>({text,method:'source',attestationIds:records.filter(a=>a.term===text).map(a=>a.id)}));
+   delete out.senses;delete out.mergedWordIds;delete out.locations;delete out.location;
+   result.push(out);delete aliases[id];for(const a of records)if(a.id!==id&&!existingIds.has(a.id))aliases[a.id]=id;
+  }
+ }
+ data.words=result;data.wordAliases=aliases;
+}
 // Display glosses are deduplicated independently in Chinese and English.
 function dictionaryGlosses(values,language){
  const synonym=language==='zh'?{'姐':'姐姐','哥':'哥哥','弟':'弟弟','妹':'妹妹','爸':'爸爸','妈':'妈妈','鼻':'鼻子','耳':'耳朵','眼':'眼睛','舌':'舌头','牙':'牙齿','脖':'脖子'}:{'elder sister':'older sister','elder brother':'older brother'};
@@ -22,6 +45,7 @@ function applyYubaoGlossReview(data){
 }
 // Proposed same-form related-sense groups, separately by variety.
 function mergeDictionaryWords(data){
+ splitCrossDialectWords(data);
  applyYubaoGlossReview(data);
  const byId=new Map(data.words.map(w=>[w.id,w])),removed=new Set(),aliases={...(data.wordAliases||{})};
  const unique=a=>[...new Set(a.filter(v=>v!==undefined&&v!==null&&v!==''))];
