@@ -1,16 +1,11 @@
-# Reviewed spelling boundaries
+# Spelling boundary policy
 
-Boundary decisions are stored separately in `site/spelling-boundaries.js` and attached as `spellingBoundaries` metadata after dictionary merging. Original `notations`, attestation text, IPA, IDs and senses remain unchanged. No invisible characters are inserted into IPA.
+Current policy: join noun suffixes to their bases. Use spaces between nouns and verbs/adjectives, and hyphens before predicate suffixes. Predicate nominalizers such as ma retain their boundary; subsequent noun suffixes do not introduce another hyphen (xie-madie, xie-maka). Keep a verb's following grammatical marker chain together (nie-bieta).
 
-The current batch contains 421 explicit forms, matching 419 current entries. `kati-kuli` is documented in the grammar but has no standalone dictionary entry; its approval is recorded without creating one. Unreviewed spellings and differently shaped source variants remain unchanged.
+The audit removed 215 noun-only rules from the previous 421 rules. The remaining 206 explicit forms cover 206 current entries: 117 phrases, 5 verb-marker chains, 77 nominalizers and 7 predicates followed by nominalizers and noun suffixes. Mixed noun–verb–nominalizer constructions retain both boundary types (zi bang-ma, koba ti-ma, lamen ka-ma).
 
-Northern accent spelling and Ye spelling display the approved boundaries. Search indexes both existing spellings and separated display forms. Source transcription panels continue to show original records.
+Noun diminutives, sex markers, clan/household markers, plurals and locative suffixes are no longer hyphenated. No additional kuli/bu segmentation review is needed under this display policy. Necessary syllable-separating apostrophes are preserved (halie'aba).
 
-Rules: spaces for reviewed phrases; hyphens for reviewed affixes; a single hyphen before a verb's entire following marker string. Nominalizers can receive another boundary when a specific form has been reviewed. Only `asi-kuli`, `meti-kuli` and the grammar-attested `kati-kuli` are approved for kuli segmentation; bu words remain unchanged.
+Boundary metadata is attached after merging. Original notations, source IPA, attestations, IDs and senses are unchanged. Search accepts joined and separated spelling. Both Northern display modes use the same morphological decisions; Southern notation is unchanged.
 
-Validation: `node scripts/test-spelling-boundaries.cjs` checks both spelling modes, verb marker grouping, retained unsplit words, and byte equality of source notations and all non-boundary word data. Search, merge and southern spelling regression tests also pass.
-
-Expanded noun–verb phrases and animal-sex suffixes cover the reported give-way, avalanche, and male-dog entries. Tian Northern mapping now fully converts 1,078 of 1,089 source attestations; eleven retain unresolved segments. Complete alternates are displayed independently.
-
-
-Noun suffix follow-up: added 236 lexical rules across source variants. Covers diminutives bi/bibi and buli, animal aba/ba/niga, household ka, human plural die, nominalizer ma, four locative ta records and three previously approved kuli roots in other sources. Mixed boundaries preserve noun–verb spacing (zi bang-ma); apostrophes within stems are preserved. No global suffix matching is used. Homographic endings in gangbi “pen”, mixma “bee”, labi “side” and laba “trumpet” remain unsegmented. Locative so/ku/diu, and new kuli/bu candidates, require lexical evidence before new segmentation. Original IPA is unchanged.
+Validation: `node scripts/test-spelling-boundaries.cjs` checks restored noun forms, mixed constructions, predicate chains, apostrophes, original notation equality and equality of all non-boundary word data. Search, merge, Tian and Southern spelling regressions pass.
