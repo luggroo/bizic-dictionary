@@ -4,7 +4,7 @@
 
 |语言点|词条总数|含 IPA|尚无完整拼音|其中部分转写|
 |---|---:|---:|---:|---:|
-|北部 · 龙山|8886|8757|604|383|
+|北部 · 龙山|8886|8757|599|382|
 |南部 · 泸溪潭溪|4007|4007|6|0|
 |未标明|1|1|1|0|
 |北部 · 保靖阳朝|2859|2859|0|0|
@@ -157,9 +157,7 @@
 |stedt-rn-288723|女婿|ma³⁵~a⁵⁵ze⁵⁵ni³⁵|STEDT · Tian 86|
 |stedt-rn-288813|鞭子|ma⁵⁵piã⁵⁵tsi⁵⁵|STEDT · Tian 86|
 |stedt-rn-288814|鞍；马鞍|ma⁵⁵ŋã⁵⁵tsi⁵⁵|STEDT · Tian 86|
-|stedt-rn-288620|棉花|me²¹xa²¹|STEDT · Tian 86|
 |stedt-rn-43453|吹|me³⁵|STEDT · Tian 86|
-|stedt-rn-289383|然后；那时|me⁵⁵|STEDT · Tian 86|
 |stedt-rn-43417|痢疾|me⁵⁵ po²¹|STEDT · Tian 86|
 |stedt-rn-43468|生气起来|me⁵⁵ pʰɨe⁵⁵|STEDT · Tian 86|
 |stedt-rn-43464|生气|me⁵⁵ zɑ³⁵|STEDT · Tian 86|
@@ -534,9 +532,6 @@
 |stedt-rn-289384|一定；当然|xũ²¹xuai⁵⁵|STEDT · Tian 86|
 |stedt-rn-288984|偏|xũ³⁵|STEDT · Tian 86|
 |stedt-rn-289379|都；甚至|xu³⁵ni⁵⁵|STEDT · Tian 86|
-|stedt-rn-288902|鼓|xɨe²¹|STEDT · Tian 86|
-|stedt-rn-289175|漏|xɨe²¹|STEDT · Tian 86|
-|stedt-rn-289045|刺；扎|xɨe⁵⁵|STEDT · Tian 86|
 |stedt-rn-43356|鸡嗉囊|za²¹ kʰũ⁵⁵ nũ⁵⁵ pʰɨe⁵⁵|STEDT · Tian 86|
 |stedt-rn-288559|母鸡|za²¹ni²¹ka²¹|STEDT · Tian 86|
 |stedt-rn-288630|葱|za⁵⁵khɨe²¹tshi²¹|STEDT · Tian 86|

@@ -20,3 +20,13 @@ const NOTATION_CONFIG={"profiles":[{"id":"1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE","so
   'me、xɨe及其他未核音节保留原记音；异常调值2、5、33不自动改写。'
  ];
 }
+
+// User-reviewed whole words; keep the source tone values and original IPA.
+Object.assign(NOTATION_CONFIG.profiles.find(p=>p.id==='stedt-cb523fc3dc:north'),{
+ wordOverrides:{
+  'me55':{ye:'miex',brassett:'mie1'},
+  'me21xa21':{ye:'mierhar',brassett:'mie3ha3'},
+  'xɨe21':{ye:'her',brassett:'he3'},
+  'xɨe55':{ye:'hex',brassett:'he1'}
+ }
+});
