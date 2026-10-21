@@ -211,7 +211,7 @@ function notationSourceRimeInventory(){
 const ZHOU_PHONOLOGY={
  'zhou-ts':{
   onset:{p:'b','pʰ':'p',t:'d','tʰ':'t',k:'g','kʰ':'k',ts:'z','tsʰ':'c',tɕ:'j','tɕʰ':'q',s:'s',z:'r',ɕ:'x',x:'h',ɣ:'hx',m:'m',l:'l',ɲ̟:'n',ŋ:'ng',w:'w',j:'y'},
-  rhyme:{i:'i',ɤ:'e',a:'a',ɔ:'o',u:'u',ai:'ai',ei:'ei',au:'ao',ou:'ou',ĩ:'in',ɛ̃:'en',ã:'ang',ɔ̃:'ong',iɛ:'ie',ia:'ia',iu:'iu',iau:'iao',iou:'iu',iɛ̃:'ian',iɔ̃:'iong',ua:'ua',uɔ:'o',uai:'uai',uei:'ui',uɜ̃:'un',uã:'uan',ɛn:'en'}
+  rhyme:{i:'i',ɤ:'e',a:'a',ɔ:'o',u:'u',ai:'ai',ei:'ei',au:'ao',ou:'ou',ĩ:'in',ɛ̃:'en',ã:'ang',ɔ̃:'ong',iɛ:'ie',ia:'ia',iu:'iu',iau:'iao',iɛ̃:'ian',iɔ̃:'iong',ua:'ua',uɔ:'o',uai:'uai',uei:'ui',uɜ̃:'un',uã:'uan',ɛn:'en'}
  },
  'zhou-fx':{
   onset:{p:'b','pʰ':'p',t:'d','tʰ':'t',k:'g','kʰ':'k',ts:'z','tsʰ':'c',tɕ:'j','tɕʰ':'q',s:'s',z:'r',ɕ:'x',x:'h',ɣ:'hx',m:'m',l:'l',ɲ̟:'n',ŋ:'ng',w:'w',j:'y',ʑ:'r'},
@@ -300,9 +300,9 @@ function notationMatrix(place){
  ['v · à','4','51','53','53','—','53','—']];
  const yangTone=[['x · ā','55','55'],['f · á','35','35'],['r · ǎ','33 / 54','33'],['v · à','—','53']];
  const tone=notationGuideTable('声调',headings,isYang?yangTone:longTone);
- const intro='<p class="tiny">Brassett 拼音单列，其他列显示各材料的 IPA 音值。空白表示该来源尚无可靠对应，多项原记号以 / 分隔。声韵母按来源音系表列出。仅有候选关系的多向转换不列作确定音值；条件读音另作说明。词条统计用于交叉检查，不能替代音系分析。</p>';
+ const intro='<p class="tiny">Brassett 拼音单列，其他列显示各材料的 IPA 音值。Zhou 2020 表 1-5～1-12 的他砂、拉西峒、仙仁音系分别成列。空白表示该来源尚无可靠对应，多项原记号以 / 分隔。声韵母按来源音系表列出。仅有候选关系的多向转换不列作确定音值；条件读音另作说明。词条统计用于交叉检查，不能替代音系分析。</p>';
  const notes=isYang?
- '<p class="tiny">声韵注：① 仙仁 /ʑ/ 与 /j/ 的 y 写法须检查介音组合，yiao 等形式已规范为 yao。② 阳朝语保 ȵ 按 ni 处理，腭音后的 e／ɛ 按整音节规则写 jie、qie、xie、ye；原始 IPA 保留。③ 语保阳朝原始词表中 i（780次）、ɿ（495次）、e（351次）、ə（253次）以及 eŋ（176次）均有记录，独立统计。</p><p class="tiny">声调注：Zhou 仙仁 54→r、55→x，33→r；语保阳朝按 55、35、33、53 的表层调值处理。</p>':
+ '<p class="tiny">声韵注：① 仙仁 /ʑ/ 与 /j/ 的 y 写法须检查介音组合，yiao 等形式已规范为 yao。② 阳朝语保 ȵ 按 ni 处理，腭音后的 e／ɛ 按整音节规则写 jie、qie、xie、ye；原始 IPA 保留。③ Zhou 2020 §1.3：仙仁 /i/ 在软腭声母后读 [ɯ]，齿音后读 [ɿ]；/e/ 的 [ɯe]、[ɯɛ]、[ɯə]、[ə] 等按声母分布，/ie/ 可读 [ie]～[iɛ]。④ 语保阳朝原始词表中 i（780次）、ɿ（495次）、e（351次）、ə（253次）以及 eŋ（176次）均有记录，独立统计。</p><p class="tiny">声调注：Zhou 仙仁 54→r、55→x，33→r；语保阳朝按 55、35、33、53 的表层调值处理。</p>':
  '<p class="tiny">声韵注：① Brassett 的独立韵母 i：g、h、k、hh 后读 [ɨ]，z、c、s、r 后读 [ɿ]。② Brassett hh→叶式 hx，eng→en，ing→in，uo→o。③ Zhou 2020 表 1-7：他砂 ɤ 对拉西峒 e；他砂 iɛ 在齿龈塞音和 l 后对应拉西峒 e，其余环境对应 ie；他砂 ɨ 对拉西峒 ei。④ 拉西峒 ei 在软腭声母后有 [ei]～[i] 条件读音；/ĩ ẽ ã/ 在张伟权记音中作 in、en、an。④ 语保龙山原始词表中 i（568次）、ɿ（367次）、ɯ（107次）、ei（12次）、ian（47次）均有记录；不同音类保留区别。</p><p class="tiny">声调注：① Brassett 的 1–4 为原书调类，Brassett 提供他砂的 IPA 音值。② 龙山语保当前按表层音值归并 55／53／33→x、24→f、22／21→r。</p>';
  return '<div class="notation-matrix">'+intro+matrix('onset','声母')+matrix('rime','韵母')+tone+notes+'</div>';
 }
@@ -313,7 +313,7 @@ function notationGuide(){
  const longshan=['zhou-ts','zhou-fx','stedt-cb523fc3dc:north','yubao-60757'];
  const southTones=[['55','ā','高平'],['33','a（可标 a̱）','中平'],['35','á','上升'],['21','à','低降'],['13','ǎ','低升']];
  return `<section class="panel"><h2>拼音与调查点</h2><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p></section>
- <section class="panel"><h2>龙山</h2><p>声母、韵母和声调按来源横向对照。左列为本站拼音；Brassett 2004、2006 共用一列拼音；他砂 IPA 列据 Brassett。</p>
+ <section class="panel"><h2>龙山</h2><p>声母、韵母和声调按来源横向对照。左列为本站拼音；Brassett 2004、2006 共用一列拼音；他砂 IPA 据 Brassett，音系分布及拉西峒对应参见 Zhou 2020 §1.3。</p>
  ${notationMatrix('longshan')}</section>
  <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>仙仁：戴庆厦、田静（2005），经 Zhou 2020 引用；另列中国语保阳朝。</p>
  ${notationMatrix('yangchao')}</section>
