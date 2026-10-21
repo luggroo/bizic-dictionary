@@ -14,3 +14,9 @@ for(const [ipa,ye] of [['me55','miex'],['me21xa21','mierhar'],['xɨe21','her'],[
  const r=c.convertNotation(ipa,'stedt-cb523fc3dc:north');assert.equal(r.rows[0].ye,ye);assert.equal(r.reviewed,true);
 }
 console.log('PASS: four user-reviewed whole-word corrections');
+
+for(const [ipa,ye] of [['tsi55','zix'],['si21','sir'],['no55','nox'],['mũ21','mongr'],['liã35','lianf'],['te55','diex'],['the55','tiex'],['phe55','piex'],['khɨe55','kex'],['ɣɨe21','hxer'],['jiu35','youf'],['tha◦i35','taif']]){
+ const r=c.convertNotation(ipa,'stedt-cb523fc3dc:north');assert.equal(r.rows[0].ye,ye,ipa);assert.ok(!r.partial,ipa);
+}
+assert.equal(c.sourceNotationValues({attestations:[{id:'alt',source:'stedt-cb523fc3dc',dialect:'北部',term:'khɨu³⁵~khei³⁵'}]}).ye.filter(v=>v.method!=='source-partial')[0].text,'keif');
+console.log('PASS: Tian contextual vowels, nasals, independent alternates and unknown-tone preservation');

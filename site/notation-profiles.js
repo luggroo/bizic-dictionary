@@ -30,3 +30,17 @@ Object.assign(NOTATION_CONFIG.profiles.find(p=>p.id==='stedt-cb523fc3dc:north'),
   'xɨe55':{ye:'hex',brassett:'he1'}
  }
 });
+
+// Tian 86 Northern notation uses i after alveolars, o for rounded vowels,
+// and nasalized vowel letters. These are source spelling rules, not new IPA.
+{
+ const p=NOTATION_CONFIG.profiles.find(p=>p.id==='stedt-cb523fc3dc:north');
+ p.onsetMap={'p':['b'],'pʰ':['p'],'t':['d'],'tʰ':['t'],'k':['g'],'kʰ':['k'],'x':['h'],'ɣ':['hh'],'ts':['z'],'tsʰ':['c'],'s':['s'],'z':['r'],'tɕ':['j'],'tɕʰ':['q'],'ɕ':['x'],'m':['m'],'n':['n'],'ɲ̟':['n'],'l':['l'],'ŋ':['ng'],'w':['w'],'j':['y'],'':['']};
+ p.rhymeMap={'a':['a'],'ai':['ai'],'au':['ao'],'i':['i'],'u':['u'],'o':['o'],'ou':['ou'],'ei':['ei'],'ia':['ia'],'iau':['iao'],'iu':['iu'],'ua':['ua'],'uai':['uai'],'ui':['ui'],'uei':['ui'],'ã':['ang'],'ĩ':['ing'],'ũ':['ong'],'õ':['ong'],'ẽ':['eng'],'iã':['ian'],'uã':['uan'],'uẽ':['un'],'ɨe':['e']};
+ Object.assign(p.syllableMap,{me:['mie'],te:['die'],'tʰe':['tie'],'pʰe':['pie']});
+ p.notes=p.notes.filter(n=>!n.startsWith('me、'));
+ p.notes.push('补全本来源i、o、鼻化韵母及n声母组合；me→mie，te/tʰe/pʰe→die/tie/pie。e单独出现、ɨu及异常调值仍待核。');
+}
+
+// Same source notation and word already reviewed as taif.
+NOTATION_CONFIG.profiles.find(p=>p.id==='stedt-cb523fc3dc:north').wordOverrides['tha◦i35']={ye:'taif',brassett:'tai2'};
