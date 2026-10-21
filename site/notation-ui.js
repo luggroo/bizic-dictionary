@@ -158,6 +158,65 @@ function notationSurveyTables(point){
  notationGuideTable('韵母',['来源 IPA','叶式／调号拼音'],Object.entries(rimes).map(([a,b])=>[a,b]))+
  notationGuideTable('声调',['来源 IPA','叶式拼音','调号拼音'],toneMap);
 }
+
+function notationMatrix(place){
+ const isYang=place==='yangchao';
+ const sources=isYang?
+  [{title:'Zhou 2020 · 仙仁',id:'zhou-xr',kind:'profile'},{title:'中国语保 · 阳朝',id:'60756',kind:'survey'}]:
+  [{title:'Brassett 2004',id:'brassett-2004',kind:'brassett'},{title:'Brassett 2006',id:'brassett-2006',kind:'brassett'},{title:'Zhou 2020 · 他砂',id:'zhou-ts',kind:'profile'},{title:'Zhou 2020 · 拉西峒',id:'zhou-fx',kind:'profile'},{title:'Tian 1986 · 北部',id:'stedt-cb523fc3dc:north',kind:'tian'},{title:'中国语保 · 龙山',id:'60757',kind:'survey'}];
+ const profiles=Object.fromEntries(NOTATION_CONFIG.profiles.map(p=>[p.id,p]));
+ const southernUnrelated=''; // Tables in this section cover Northern survey points only.
+ const surveyOnsets={'p':'b','pʰ':'p','t':'d','tʰ':'t','k':'g','kʰ':'k','ts':'z','tsʰ':'c','tɕ':'j','tɕʰ':'q','m':'m','n':'n','l':'l','ɲ':'n','ȵ':'n','ŋ':'ng','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','ɸ':'h'};
+ const surveyRimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','ɔ':'o','ɘ':'e','ə':'e','ɤ':'e','ɯ':'i','e':isYang?'ei':'e','ɛ':'ai','ie':'ie','iɘ':'ie','iə':'ie','ai':'ai','ei':'ei','ɘi':'ei','au':'ao','iau':'iao','əu':'ou','ɘu':'ou','iəu':'iu','iɘu':'iu','iu':'iu','ui':'ui','uei':'ui','ua':'ua','uai':'uai','uɛ':'uai','ia':'ia','uo':'o','io':'io','aŋ':'ang','an':'an','ian':'ian','iaŋ':'iang','uan':'uan','uaŋ':'uang','uŋ':'ong','ɔŋ':'ong','ɘn':'en','ən':'en','ɘŋ':'en','əŋ':'en','en':'en','eŋ':'en','in':'in','iŋ':'in','un':'un','uen':'un','iən':'ian','ɚ':'er','iɚ':'ier','uɚ':'uer'};
+ // Normalize the special palatal combinations noted in the Yangchao converter.
+ function mappedSource(kind,src,key){
+  if(src.kind==='brassett'){
+   if(kind==='onset')return Object.entries(NOTATION_CONFIG.onsets).filter(([raw])=>(raw==='hh'?'hx':raw)===key).map(([raw])=>raw);
+   return Object.keys(NOTATION_CONFIG.rimes).filter(raw=>standardBrassettToYe(raw)===key);
+  }
+  if(src.kind==='survey'){
+   const dict=kind==='onset'?surveyOnsets:surveyRimes;
+   let rows=Object.entries(dict).filter(([raw,sp])=>sp===key).map(([raw])=>raw);
+   if(kind==='rime'&&isYang&&key==='ie')rows.push('e / ɛ（腭音后）');
+   return [...new Set(rows)];
+  }
+  const p=profiles[src.id];if(!p)return [];
+  const dictionary=kind==='onset'?p.onsetMap:p.rhymeMap;
+  if(!dictionary){
+   if(src.kind==='tian'){
+    const reference=kind==='onset'?NOTATION_CONFIG.onsets:NOTATION_CONFIG.rimes;
+    return Object.entries(reference).filter(([raw])=>(kind==='onset'?(raw==='hh'?'hx':raw):standardBrassettToYe(raw))===key).map(([,ipa])=>ipa);
+   }
+   return [];
+  }
+  return Object.entries(dictionary).filter(([raw,targets])=>(targets||[]).some(t=>(kind==='rime'?standardBrassettToYe(t):t)===key)).map(([raw])=>raw);
+ }
+ const bOns=Object.keys(NOTATION_CONFIG.onsets).filter(Boolean).map(k=>k==='hh'?'hx':k);
+ const bRimes=Object.keys(NOTATION_CONFIG.rimes).map(k=>standardBrassettToYe(k));
+ function keys(kind){
+  const all=[...(kind==='onset'?bOns:bRimes),...Object.values(kind==='onset'?surveyOnsets:surveyRimes)];
+  for(const source of sources.filter(x=>x.kind==='profile')){
+   const p=profiles[source.id],dict=kind==='onset'?p?.onsetMap:p?.rhymeMap;
+   for(const targets of Object.values(dict||{}))for(const t of targets||[])all.push(kind==='rime'?standardBrassettToYe(t):t);
+  }
+  return [...new Set(all)].filter(Boolean).sort((a,b)=>a.localeCompare(b,'en'));
+ }
+ const headings=['本站拼写',...sources.map(x=>x.title)];
+ function matrix(kind,title){
+  return notationGuideTable(title,headings,keys(kind).map(key=>[key,...sources.map(src=>{const vals=mappedSource(kind,src,key);return vals.length?vals.join(' / '):'—'})]));
+ }
+ const longTone=[['x · ā','1 / 55','1 / 55','55','55','55 → x 或 v*','55 / 53 / 33'],
+  ['f · á','2 / 24','2 / 24','24','35','35','24'],
+  ['r · ǎ','3 / 21','3 / 21','21','21','21','22 / 21'],
+  ['v · à','4 / 51','4 / 51','51','53','55 → x 或 v*','—']];
+ const yangTone=[['x · ā','54 / 55（候选）','55'],['f · á','35','35'],['r · ǎ','33','33'],['v · à','54 / 55（候选）','53']];
+ const tone=notationGuideTable('声调',headings,isYang?yangTone:longTone);
+ const intro='<p class="tiny">各列沿用原材料记音。— 表示尚无可核对应；多项音值以 / 分隔，条件见表下注释。表格为本站现有转换规则的索引。</p>';
+ const notes=isYang?
+ '<p class="tiny">声韵注：① 仙仁 /ʑ/ 与 /j/ 的 y 写法须检查介音组合，yiao 等形式已规范为 yao。② 阳朝语保 ȵ 按 ni 处理，腭音后的 e／ɛ 按整音节规则写 jie、qie、xie、ye；原始 IPA 保留。③ 表中的 e、ei、ie 涉及来源和声母条件，不能作为无条件音变对应。</p><p class="tiny">声调注：Zhou 仙仁的 54、55 存在多候选映射；语保阳朝按 55、35、33、53 的表层调值处理。</p>':
+ '<p class="tiny">声韵注：① Brassett 的独立韵母 i：g、h、k、hh 后读 [ɨ]，z、c、s、r 后读 [ɿ]。② Brassett hh→叶式 hx，eng→en，ing→in，uo→o。③ Zhou 各点 e／ie、o／uo 及 i 的读法有声母条件；表中列出原记音，具体转换按整个音节判断。</p><p class="tiny">声调注：① Brassett 1–4 为调类编号。部分电子文件的编号次序不同，已统一到原书的四调。② Tian 1986 未区分 Brassett 第四调，因此 55 可对应 x 或 v，须逐词核查。③ 龙山语保当前按表层音值归并 55／53／33→x、24→f、22／21→r。</p>';
+ return intro+matrix('onset','声母')+matrix('rime','韵母')+tone+notes;
+}
 function notationGuide(){
  const profiles=NOTATION_CONFIG.profiles;
  const get=id=>profiles.find(p=>p.id===id);
@@ -165,18 +224,10 @@ function notationGuide(){
  const longshan=['zhou-ts','zhou-fx','stedt-cb523fc3dc:north','yubao-60757'];
  const southTones=[['55','ā','高平'],['33','a（可标 a̱）','中平'],['35','á','上升'],['21','à','低降'],['13','ǎ','低升']];
  return `<section class="panel"><h2>拼音与调查点</h2><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p></section>
- <section class="panel"><h2>龙山</h2><p>本站使用叶式拼音（x/f/r/v 标调）和调号拼音（ā/á/ǎ/à）。下面逐材料列出对应表；Brassett 的拼写、音值及独立 i 的条件读法仅在本节解释。</p>
- ${notationGuideTable('两种拼音的声调对应',['Brassett / IPA','叶式','调号'],[['1 / 55','x','ā'],['2 / 24','f','á'],['3 / 21','r','ǎ'],['4 / 51','v','à']])}
- ${brassettGroups.map(group=>{const members=profiles.filter(p=>notationSourceKey(p)===group);return '<details><summary>'+E(group==='brassett-2004'?'Brassett (2004)':'Brassett (2006)')+' · 声韵调对应</summary>'+notationGuideTable('声母',['Brassett','叶式','IPA'],Object.entries(NOTATION_CONFIG.onsets).filter(([k])=>k).map(([k,v])=>[k,k==='hh'?'hx':k,v]))+notationGuideTable('韵母',['Brassett','叶式','IPA'],Object.entries(NOTATION_CONFIG.rimes).map(([k,v])=>[k,standardBrassettToYe(k),v]))+notationGuideTable('声调',['原调类','叶式','调号'],[['1','x','ā'],['2','f','á'],['3','r','ǎ'],['4','v','à']])+(members.some(p=>p.toneMap?.['2']?.[0]==='3')?'<p class="tiny">部分电子词表重新编号了调类；转写时先换算回原书的 1–4 调类。</p>':'')+'</details>'}).join('')}
- ${longshan.map(id=>get(id)).filter(Boolean).map(p=>'<details><summary>'+E(p.title)+' · 声韵调对应</summary>'+notationSourceTables(p)+(p.id==='yubao-60757'?notationSurveyTables('60757'):'')+'</details>').join('')}
- <details><summary>Brassett 拼写与音值（仅龙山）</summary>
- ${mappingTable('i 的读法',['拼写','声母条件','IPA','说明'],NOTATION_CONFIG.iRules)}
- ${mappingTable('Brassett → 叶式',['原形','叶式'],NOTATION_CONFIG.spellingRules)}
- ${mappingTable('Brassett 声母',['Brassett','叶式','IPA'],Object.entries(NOTATION_CONFIG.onsets).filter(([k])=>k).map(([k,v])=>[k,k==='hh'?'hx':k,v]))}
- ${mappingTable('Brassett 韵母',['Brassett','叶式','IPA'],Object.entries(NOTATION_CONFIG.rimes).map(([k,v])=>[k,standardBrassettToYe(k),v]))}</details></section>
- <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>中国语保 60756 与 Zhou 2020 仙仁资料的原始记音和声调规则分别展示，不直接套用龙山 Brassett。</p>
- ${notationSurveyTables('60756')}
- ${get('zhou-xr')?'<details open><summary>Zhou 2020 · 仙仁 · 声韵调对应</summary>'+notationSourceTables(get('zhou-xr'))+'</details>':''}</section>
+ <section class="panel"><h2>龙山</h2><p>声母、韵母和声调按来源横向对照。左列为本站拼音；Brassett 2004、2006 各占一列，词表和叶式对照文件归在相应年份下。</p>
+ ${notationMatrix('longshan')}</section>
+ <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>Zhou 2020 仙仁与中国语保阳朝资料的声韵调对照。</p>
+ ${notationMatrix('yangchao')}</section>
  <section class="panel"><h2>保靖 · 碗米坡</h2><p>独立按照调查点的表层声调转写。33 与 31 在叶式中都写 r，但调号拼音中分别为不标调和 ǎ。</p>
  ${notationSurveyTables('60823')}</section>
  <section class="panel"><h2>泸溪 · 潭溪（南部）</h2><p>南部独立使用调号拼音与白话字；保留浊音对立及原始 IPA。白话字用连字符分音节，c/ch、j、s 的字母合并并不证明语音互补分布。</p>
