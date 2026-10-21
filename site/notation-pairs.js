@@ -25,17 +25,17 @@ const NP_SOURCE_TABLES={
  'zhou-ts':{
   reference:'Zhou 2020 §1.3，表1-5～1-7；Brassett 2006 §2.2、§2.6',
   onset:{b:'p',p:'pʰ',m:'m',w:'w',d:'t',t:'tʰ',n:'ȵ',l:'l',z:'ts',c:'tsʰ',s:'s',r:'z',j:'tɕ',q:'tɕʰ',x:'ɕ',y:'j',g:'k',k:'kʰ',h:'x',hx:'ɣ',ng:'ŋ'},
-  rime:{a:'a',ai:'ai',ang:'ã',ao:'au',e:'ɤ',ei:'ei',en:'ɛ̃',i:'i',ia:'ia',ian:'iɛ̃',iao:'iau',ie:'iɛ',in:'ĩ',iong:'iɔ̃',iu:'iu',o:'ɔ',ong:'ɔ̃',ou:'ou',u:'u',ua:'ua',uai:'uai',uan:'uã',ui:'uei',un:'uɜ̃'}
+  rime:{a:'a',ai:'ai',an:'ã',ao:'au',e:'ɤ',ei:'ei',en:'ɛ̃',i:'i',ia:'ia',ian:'iɛ̃',iao:'iau',ie:'iɛ',in:'ĩ',iong:'iɔ̃',iu:'iu',o:'ɔ',ong:'ɔ̃',ou:'ou',u:'u',ua:'ua',uai:'uai',uan:'uã',ui:'uei',un:'uɜ̃'}
  },
  'zhou-fx':{
   reference:'Zhang 2002，经 Zhou 2020 §1.3、表1-7 引述',
   onset:{b:'p',p:'pʰ',m:'m',w:'w',d:'t',t:'tʰ',n:'ȵ',l:'l',z:'ts',c:'tsʰ',s:'s',r:'z',j:'tɕ',q:'tɕʰ',x:'ɕ',y:'j',g:'k',k:'kʰ',h:'x',ng:'ŋ'},
-  rime:{a:'a',ai:'ai',ang:'an',ao:'au',e:'e',ei:'ei',en:'en',i:'i',ia:'ia',ian:'iã',iao:'iau',ie:'ie',in:'in',iong:'ioŋ',iu:'iu',o:'o',ong:'oŋ',ou:'ou',u:'u',ua:'ua',uai:'uai',uan:'uan',ui:'uei'}
+  rime:{a:'a',ai:'ai',an:'an',ao:'au',e:'e',ei:'ei',en:'en',i:'i',ia:'ia',ian:'iã',iao:'iau',ie:'ie',in:'in',iong:'ioŋ',iu:'iu',o:'o',ong:'oŋ',ou:'ou',u:'u',ua:'ua',uai:'uai',uan:'uan',ui:'uei'}
  },
  'zhou-xr':{
   reference:'Dai & Tian 2005，经 Zhou 2020 §1.3、表1-8～1-12 引述',
   onset:{b:'p',p:'pʰ',m:'m',w:'w',d:'t',t:'tʰ',n:'n',l:'l',z:'ts',c:'tsʰ',s:'s',r:'z',j:'tɕ',q:'tɕʰ',x:'ɕ',y:'ʑ',g:'k',k:'kʰ',h:'x',hx:'ɣ',ng:'ŋ'},
-  rime:{a:'a',ai:'ɛ',ang:'ã',ao:'ɔ',e:'e',ei:'ei',en:'ẽ',i:'i',ia:'ia',ian:'iɛ̃',ie:'ie',in:'ĩ',io:'iɔ',iu:'iu',o:'o',ong:'õ',u:'u',ua:'ua',uai:'uɛ',ui:'ui'}
+  rime:{a:'a',ai:'ɛ',an:'ã',ao:'ɔ',e:'e',ei:'ei',en:'ẽ',i:'i',ia:'ia',ian:'iɛ̃',ie:'ie',in:'ĩ',io:'iɔ',iu:'iu',o:'o',ong:'õ',u:'u',ua:'ua',uai:'uɛ',ui:'ui'}
  }
 };
 // Remove symbols copied from other points, including the unused generic FX ɯ/ɨ set.
@@ -60,6 +60,21 @@ const NP_SOURCE_TABLES={
   const p=NOTATION_CONFIG.profiles.find(p=>p.id===id);
   for(const rule of p?.rules||[])if(rule.kind==='声母'&&rule.raw==='ɲ̟'&&String(rule.evidence||'').includes('ȵ'))rule.raw='ȵ';
  }
+}
+
+const NP_NASAL_DEFAULT_SOURCES=new Set(['zhou-ts','zhou-fx','zhou-xr','stedt-7fd6565400','stedt-610ab69a37','stedt-24cc5bbb03','yubao-60756','yubao-60823']);
+const NP_NASAL_CONTRAST_SOURCES=new Set(['yubao-60757']);
+for(const pid of NP_NASAL_DEFAULT_SOURCES){
+ const p=NOTATION_CONFIG.profiles.find(x=>x.id===pid);
+ if(!p?.rhymeMap)continue;
+ for(const raw of ['ã','an','ang','aŋ'])if(p.rhymeMap[raw])
+  p.rhymeMap[raw]=[...new Set(p.rhymeMap[raw].map(v=>v==='ang'?'an':v))];
+}
+function npCanonicalPair(out,pid){
+ if(!NP_NASAL_DEFAULT_SOURCES.has(pid)||out.rime!=='ang')return out;
+ const core=out.onset+'an';
+ return {...out,core,rime:'an',text:core+out.tone,
+  accent:accentSyllable(core,NP_TONE_LETTERS[out.tone]),sourceSpelling:out.text};
 }
 function npNormalize(raw){
  return plainTones(raw).normalize('NFC').replaceAll('ɡ','g').replaceAll('ɑ','a')
@@ -154,6 +169,7 @@ function npIndexSource(data,pid){
     const supported=linked.map(v=>({...v.parts[position],method:'entry-linked:'+v.profile})).filter(v=>outputs.some(o=>o.text===v.text));
     if(new Set(supported.map(v=>v.text)).size===1)outputs=[supported[0]];
    }
+   outputs=outputs.map(out=>npCanonicalPair(out,pid));
    const cores=[...new Set(outputs.map(o=>o.core))];
    if(cores.length!==1){index.unresolved.push({id:record.id,raw:record.raw,gloss:record.gloss,syllable:phon(unit.text),candidates:[...new Set(outputs.map(o=>o.text))],reason:reason||'多种拼写'});return;}
    const out=outputs[0];index.paired++;if(out.method.startsWith('stored:'))index.stored++;else if(out.method.startsWith('entry-linked:'))index.linked++;else index.generated++;
@@ -182,14 +198,14 @@ function npCell(pid,kind,key,data=D){
 }
 function npBrassett(kind,key){
  if(kind==='onset')return Object.keys(NOTATION_CONFIG.onsets).filter(raw=>(raw==='hh'?'hx':raw)===key).join(' / ');
- if(kind==='rime')return Object.keys(NOTATION_CONFIG.rimes).filter(raw=>standardBrassettToYe(raw)===key).join(' / ');
+ if(kind==='rime')return Object.keys(NOTATION_CONFIG.rimes).filter(raw=>(raw==='ang'?'an':standardBrassettToYe(raw))===key).join(' / ');
  return NP_TONE_LETTERS[key.split('|')[0]]||'';
 }
 function npFootnote(pid,kind,key){
  if(kind!=='rime')return '';
  if(pid==='zhou-fx'&&key==='i')return '1';
  if(pid==='zhou-fx'&&['e','ie'].includes(key))return '2';
- if(pid==='zhou-fx'&&['ang','en','in'].includes(key))return '3';
+ if(pid==='zhou-fx'&&['an','en','in'].includes(key))return '3';
  if(pid==='zhou-ts'&&key==='i')return '4';
  if(pid==='zhou-xr'&&['e','ie'].includes(key))return '1';
  if(pid==='zhou-xr'&&key==='i')return '2';
@@ -206,26 +222,32 @@ function npKeys(ids,kind,data,brassett){
  for(const id of ids){for(const key of audit.sources.get(id)?.[kind].keys()||[])keys.add(key);for(const key of Object.keys(NP_SOURCE_TABLES[id]?.[kind]||{}))keys.add(key);}
  if(brassett){
   if(kind==='onset')for(const key of Object.keys(NOTATION_CONFIG.onsets))keys.add(key==='hh'?'hx':key);
-  if(kind==='rime')for(const key of Object.keys(NOTATION_CONFIG.rimes))keys.add(standardBrassettToYe(key));
+  if(kind==='rime')for(const key of Object.keys(NOTATION_CONFIG.rimes))keys.add(key==='ang'?'an':standardBrassettToYe(key));
   if(kind==='tone')for(const [letter,tone]of Object.entries(NP_TONE_LETTERS))keys.add(letter+'|'+accentSyllable('a',tone));
  }
  return [...keys].sort((a,b)=>kind==='onset'?(NP_ORDER.indexOf(a)-NP_ORDER.indexOf(b)||a.localeCompare(b)):kind==='tone'?('xfrv'.indexOf(a[0])-'xfrv'.indexOf(b[0])||a.localeCompare(b)):a.localeCompare(b,'en'));
 }
 function npTable(title,ids,kind,data,brassett){
  const head=['叶式 / 调号',...(brassett?['Brassett\n拼音']:[]),...ids.map(id=>NOTATION_PAIR_SOURCES[id].title)];
- const rows=npKeys(ids,kind,data,brassett).map(key=>{
+ const keys=npKeys(ids,kind,data,brassett);
+ const body=items=>items.map(key=>{
   const label=kind==='tone'?key.replace('|',' · '):key||'∅';
   const cells=[...(brassett?[E(npBrassett(kind,key))]:[]),...ids.map(id=>npCellHTML(id,kind,key,data))];
   return `<tr><th scope="row">${E(label)}</th>${cells.map(cell=>`<td>${cell}</td>`).join('')}</tr>`;
  }).join('');
- return `<h3>${E(title)}</h3><div class="table-wrap"><table data-notation-kind="${kind}"><thead><tr>${head.map((h,i)=>`<th scope="col"${i?'':' class="np-key"'}>${E(h)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`;
+ const table=items=>`<div class="table-wrap"><table data-notation-kind="${kind}"><thead><tr>${head.map((h,i)=>`<th scope="col"${i?'':' class="np-key"'}>${E(h)}</th>`).join('')}</tr></thead><tbody>${body(items)}</tbody></table></div>`;
+ if(head.length<=4&&kind!=='tone'&&keys.length>=12){
+  const half=Math.ceil(keys.length/2);
+  return `<div class="np-split-host"><h3>${E(title)}</h3><div class="np-split ${head.length===4?'np-split-four':'np-split-three'}">${table(keys.slice(0,half))}${table(keys.slice(half))}</div></div>`;
+ }
+ return `<h3>${E(title)}</h3>${table(keys)}`;
 }
 function notationPairTables(place,data=D){
  const isYang=place==='yangchao',isWan=place==='wanmipo';
  const ids=isWan?['yubao-60823']:isYang?['zhou-xr','yubao-60756']:['zhou-ts','zhou-fx','stedt-7fd6565400','stedt-610ab69a37','stedt-24cc5bbb03','yubao-60757'];
  const notes=isWan?'<p>33 写 r，调号不标；31 也写 r，调号写 ǎ。</p>':isYang?
  '<p>¹ 仙仁 e、ɯe、ɯɛ、ɯə、ə，以及 ie、iɛ 的分布见 Zhou 2020 表1-10～1-12；表内保留实际配对的记号。² 仙仁 i 的条件读音包括软腭音后的 ɯ、齿音后的 ɿ。³ 语保阳朝 e 一般转 ei；腭音后的 e／ɛ 按整音节写 jie、qie、xie、ye。仙仁 33→r、54→v、55→x。</p>':
- '<p>¹ Zhang 的 i 行为 i／ei。软腭音后的 ei 转 i；零声母 ei 按整音节写 hxi。² Zhang 的 e 在 t、tʰ、l 及腭音后转 ie，其他环境转 e；原文 ie 保留。³ 未区分前后鼻音的来源沿用 ang；龙山语保 lan⁵⁵（现在）与 laŋ⁵⁵（火种）有 n／ŋ 的区别，分别写 an／ang。⁴ Brassett 独立韵母 i 在软腭音后为 ɨ、齿音后为 ɿ。</p>';
+ '<p>¹ Zhang 的 i 行为 i／ei。软腭音后的 ei 转 i；零声母 ei 按整音节写 hxi。² Zhang 的 e 在 t、tʰ、l 及腭音后转 ie，其他环境转 e；原文 ie 保留。³ 未发现前后鼻音对立的资料统一写 an；龙山语保有 lan⁵⁵（现在）与 laŋ⁵⁵（火种），分别写 an 与 ang。Brassett 原书的 ang 记号保留在原拼音列。⁴ Brassett 独立韵母 i 在软腭音后为 ɨ、齿音后为 ɿ。</p>';
  return `<div class="notation-matrix np-matrix"><p class="tiny">点击记音查看原词形、拼音和出处。词条未收录的音系项附表号；多解另列。</p>${npTable('声母',ids,'onset',data,!isYang&&!isWan)}${npTable('韵母',ids,'rime',data,!isYang&&!isWan)}${npTable('声调',ids,'tone',data,!isYang&&!isWan)}<div class="tiny np-notes">${notes}</div>${npAuditSummary(ids,data)}</div>`;
 }
 function npAuditSummary(ids,data){
