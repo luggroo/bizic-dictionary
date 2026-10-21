@@ -11,7 +11,7 @@ assert.equal(ctx.southernSpelling('tɕyã33','yubao-60824').accent,'jüan');
 assert.equal(ctx.southernSpelling('tɕyã33','yubao-60824').poj,'cüan');
 assert.equal(ctx.southernSpelling('lɨ̃²¹ lɨ̃²¹','stedt-cb523fc3dc').accent,'lènlèn');
 assert.equal(ctx.southernSpelling('nau55sui21','yubao-60824').accent,'nāusuèi');
-assert.equal(ctx.southernSpelling('ɣɨe³⁵','stedt-cb523fc3dc').accent,'ghé');
+assert.equal(ctx.southernSpelling('ɣɨe³⁵','stedt-cb523fc3dc').accent,'hxé');
 assert.equal(ctx.southernSpelling('dʑiaɨ³³','stedt-cb523fc3dc').accent,'jjiau');
 assert.equal(ctx.southernSpelling('dʑiau33','yubao-60824').accent,'jjiau');
 assert.equal(ctx.southernSpelling('ka33','yubao-60824',true).accent,'ga̱');
@@ -40,3 +40,5 @@ console.log('PASS: dz→j, z→r, apical ri contraction and affricate notation v
 
 for(const [ipa,poj] of [['je33','ie'],['ji55','ī'],['ja35','iá'],['jy55','ǖ'],['jye35','üé'],['wa33','ua'],['wu55','ū'],['wei35','uéi'],['wo21','uò'],['ʑe33','ye']])assert.equal(ctx.southernSpelling(ipa,'yubao-60824').poj,poj,ipa);
 console.log('PASS: vowel-initial glide spelling, no duplicate i/u, rounded front vowel, fricative distinction');
+
+assert.equal(ctx.southernSpelling('ɣɨe³⁵','stedt-cb523fc3dc').poj,'ghé');
