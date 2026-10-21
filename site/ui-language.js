@@ -5,8 +5,9 @@
   try { if (localStorage.getItem('tujia-ui-language') === 'en') language = 'en'; } catch {}
   const labels = Object.freeze({
     brand: 'bifzixkar afhxix', words: 'cixcix nix', grammar: 'sar qinrmox lir',
-    notation: 'sar qinrmox af', corpus: 'sar tux', sources: 'cixpux jierxif',
-    saved: 'suxsux-civ', history: 'lafzef lafzef lir', search: 'nix', save: 'suxsux'
+    // Zhou (2020) cover: Sufmur Bifzixsar (su²mu³); Brassett: -nie³ (genitive), sa³ (speech).
+    notation: 'sar qinrmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
+    saved: 'suxsux-civ', history: 'sufmur nier sar', search: 'nix', save: 'suxsux'
   });
   const textMemory = new WeakMap(), attributeMemory = new WeakMap();
   const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
