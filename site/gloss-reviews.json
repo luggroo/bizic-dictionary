@@ -1361,12 +1361,12 @@
       "en": "scoop"
     },
     "stedt-rn-288469": {
-      "zh": "井；好好地（汉义待确认）",
-      "status": "pending",
+      "zh": "井",
+      "status": "confirmed",
       "previousZh": "井；好好地（原英释同形歧义，须结合词条核定）",
       "term": "tshe²¹mũ³⁵",
       "en": "well",
-      "enNote": "Note: possible recording error"
+      "reviewEvidence": "Brassett 2004 词条 417：ce3mong2＝水井；用户确认 tshe²¹mũ³⁵＝井。"
     },
     "stedt-rn-289050": {
       "zh": "舀",
@@ -1408,12 +1408,12 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-346803": {
-      "zh": "井；好好地（汉义待确认）",
-      "status": "pending",
+      "zh": "井",
+      "status": "confirmed",
       "previousZh": "井；好好地（原英释同形歧义，须结合词条核定）",
       "term": "tshie²¹moŋ⁵⁵",
       "en": "well",
-      "enNote": "Note: possible recording error"
+      "reviewEvidence": "历史词表 w8686：tshie21 mo,55＝井；并见 Brassett 2004 词条 417：水井。"
     },
     "stedt-rn-194538": {
       "zh": "煮；沸腾；疖子（汉义待确认）",
