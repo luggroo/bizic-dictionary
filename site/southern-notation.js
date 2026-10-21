@@ -39,7 +39,7 @@ function southMark(rime,tone,explicit=false){
 }
 function southernSpelling(raw,source='',explicit=false){
  const text=southNormalize(raw,source).trim().replace(/^\/(.*)\/$/,'$1');
- let pos=0,accent='',poj='',count=0;
+ let pos=0,accent='',poj='',count=0,previousCore='';
  for(const m of text.matchAll(/([^0-9\s~～|｜/／,，;；()（）\[\]⁇?]+)([0-9]+|\?)/g)){
   const gap=text.slice(pos,m.index);
   if(!/^[\s~～|｜/／,，;；()（）\[\]-]*$/.test(gap))return null;
@@ -55,7 +55,10 @@ function southernSpelling(raw,source='',explicit=false){
   // This avoids collapsing common dental-i and alveolo-palatal-i syllables.
   const pojRime=r==='i'&&['ts','tsʰ','dz','s','z'].includes(onset)?'ri':rime;
   const pojMarked=m[2]==='?'?pojRime+'⁇':southMark(pojRime,m[2],explicit);
-  accent+=sep+SOUTH_ONSETS[onset][0]+marked;poj+=sep+SOUTH_ONSETS[onset][1]+pojMarked;
+  const core=SOUTH_ONSETS[onset][0]+rime;
+  const accentSep=sep==='-'?(/^[aeiouü]/i.test(core)||(/n$/i.test(previousCore)&&/^g/i.test(core))?"'":''):sep;
+  accent+=accentSep+SOUTH_ONSETS[onset][0]+marked;poj+=sep+SOUTH_ONSETS[onset][1]+pojMarked;
+  previousCore=core;
   count++;pos=m.index+m[0].length;
  }
  const tail=text.slice(pos);if(!count||!/^\s*[)）\]]*\s*$/.test(tail))return null;
@@ -73,7 +76,7 @@ function southernNotationValues(w){
  southernCache.set(w,result);return result;
 }
 function southernMappingHTML(){
- return `<details><summary>南部拼音对应</summary><p>词内音节以 - 分隔；韵尾 n 表示鼻化。55 ā · 33 a（明确标调时 a̱）· 35 á · 21 à · 13 ǎ。</p>`+
+ return `<details><summary>南部拼音对应</summary><p>调号拼音词内连写，后续音节以元音开头或 n 与 g 相接时用 ' 隔开；白话字以 - 分隔音节。韵尾 n 表示鼻化。55 ā · 33 a（明确标调时 a̱）· 35 á · 21 à · 13 ǎ。</p>`+
  mappingTable('声母',['IPA','调号拼音','白话字拼音'],Object.entries(SOUTH_ONSETS).filter(([k])=>k).map(([k,v])=>['/'+k+'/',...v]))+
  mappingTable('韵母',['IPA','拼写'],Object.entries(SOUTH_RIMES).map(([k,v])=>['/'+k+'/',v]))+
  '<p>南部白话字将 /ts, tɕ/ 统一写 c，/tsʰ, tɕʰ/ 统一写 ch，/s, ɕ/ 统一写 s。前元音 i、ü 前通常读为腭化音；这仅是正字法合并，不代表这些音在全部材料中已证明互补分布，原始 IPA 仍可在词条出处查看。</p><p>齿龈音后的舌尖元音在白话字中写 ri：cri、chri、dzri、sri、zri；对应腭音加前元音的 ci、chi、si。调号拼音仍写 zi、ci、zzi、si、ri。原已写 ri 的韵母保持不变。</p><p>田德生“鼻涕”的 /ɨ̃/ 写 en。来源中的 /ɨ/ 在舌根、喉部声母后按 i 转写；其余独立记录写 ri。原始音标可在词条出处中查看。</p></details>';

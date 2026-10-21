@@ -9,8 +9,8 @@ assert.equal(ctx.southernSpelling('bã33','yubao-60824').accent,'bban');
 assert.equal(ctx.southernSpelling('bã33','yubao-60824').poj,'ban');
 assert.equal(ctx.southernSpelling('tɕyã33','yubao-60824').accent,'jüan');
 assert.equal(ctx.southernSpelling('tɕyã33','yubao-60824').poj,'cüan');
-assert.equal(ctx.southernSpelling('lɨ̃²¹ lɨ̃²¹','stedt-cb523fc3dc').accent,'lèn-lèn');
-assert.equal(ctx.southernSpelling('nau55sui21','yubao-60824').accent,'nāu-suèi');
+assert.equal(ctx.southernSpelling('lɨ̃²¹ lɨ̃²¹','stedt-cb523fc3dc').accent,'lènlèn');
+assert.equal(ctx.southernSpelling('nau55sui21','yubao-60824').accent,'nāusuèi');
 assert.equal(ctx.southernSpelling('ɣɨe³⁵','stedt-cb523fc3dc').accent,'ghé');
 assert.equal(ctx.southernSpelling('dʑiaɨ³³','stedt-cb523fc3dc').accent,'jjiau');
 assert.equal(ctx.southernSpelling('dʑiau33','yubao-60824').accent,'jjiau');
@@ -28,6 +28,7 @@ for(const [raw,pinyin,poj] of [['tsi55','zī','crī'],['tshi35','cí','chrí'],[
 assert.equal(ctx.southernSpelling('si35si21','yubao-60824').poj,'srí-srì');
 // Alveolo-palatal c/ch/s and dental c/ch/s share letters, with ri reserved for dental apical i.
 for(const [ipa,poj] of [['tsi55','crī'],['tɕi55','cī'],['tshi35','chrí'],['tɕhi35','chí'],['si21','srì'],['ɕi21','sì']])assert.equal(ctx.southernSpelling(ipa,'yubao-60824').poj,poj);
+for(const [raw,accent,poj] of [['ɕiã33ku33',"xian'gu",'sian-ku'],['tsha33mẽ33a33lo35',"camen'aló",'cha-men-a-ló'],['ma21tɕi35a33ni35',"màjí'aní",'mà-cí-a-ní'],['no35do21','nóddò','nó-dò'],['tɕĩ33y21',"jin'ǜ",'cin-ǜ']]){const v=ctx.southernSpelling(raw,'yubao-60824');assert.equal(v.accent,accent);assert.equal(v.poj,poj)}
 const stats={};const rows=[];
 for(const w of JSON.parse(fs.readFileSync(path.join(root,'dictionary.json'))).words)for(const a of w.attestations||[])if(a.dialect==='南部')rows.push(a);
 for(const f of fs.readdirSync(root).filter(f=>/^yubao-60824-.*json$/.test(f)))for(const w of JSON.parse(fs.readFileSync(path.join(root,f))).words)rows.push({source:'yubao-60824',term:w[2]});
