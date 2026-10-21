@@ -369,12 +369,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-290103": {
-      "zh": "抬起；养（汉义待确认）",
-      "status": "pending",
+      "zh": "提高",
+      "status": "confirmed",
       "previousZh": "抬起；养（原义未细分）",
       "term": "di¹³kaɨ³³",
       "en": "raise",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "用户确认南部 di¹³kaɨ³³ 为「提高」；STEDT Tian 1986 英文 raise、语义类 Up, etc. 与向上提高义一致。保留原词形。"
     },
     "stedt-rn-289536": {
       "zh": "苍蝇",
@@ -1080,12 +1081,13 @@
       "reviewEvidence": "语保龙山 0246「苍蝇」phi24ka33，阳朝 0246 phi33ka33，与 phi-ka 对应"
     },
     "stedt-rn-289016": {
-      "zh": "放牧；吃草（汉义待确认）",
-      "status": "pending",
+      "zh": "放",
+      "status": "confirmed",
       "previousZh": "放牧；吃草（原义未细分）",
       "term": "pho⁵⁵",
       "en": "graze",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "田志慧 Tian 1986 北部 pho⁵⁵；语保龙山 0814「放」pho⁵⁵ 完全同形同调，碗米坡 0814「放」亦为 pho⁵⁵；原英文 graze 为语境用法「放牧」，基本义为「放」。"
     },
     "stedt-rn-200709": {
       "zh": "糠",
@@ -1961,12 +1963,13 @@
       "reviewEvidence": "语保龙山 1693「羊羔」zo24pi24，碗米坡 1693 zo13pi13pi55，与本条 zo35pi35 对应"
     },
     "stedt-rn-207951": {
-      "zh": "气味；闻；发出气味；臭（汉义待确认）",
-      "status": "pending",
+      "zh": "闻",
+      "status": "confirmed",
       "previousZh": "气味；闻（原义未细分）",
       "term": "zu²¹",
       "en": "smell",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "Sun H 91 ZMYY，STEDT rn 207951，原文 smell，词性 v、语义类 Smell；语保 0756「闻」在龙山 lan²²、阳朝 naŋ³³、碗米坡 nã³³、潭溪 ɕiõ¹³ 均为动词。Sun 记录 zu²¹ 为另一记音形式；保留原始形式，不声称各点同源词形一致。"
     },
     "stedt-rn-290150": {
       "zh": "轻",
@@ -2026,12 +2029,13 @@
       "reviewEvidence": "语保龙山 0626「伯母」ȵie21tshɿ55，本条 ȵie21tshi55 为对应同源形式"
     },
     "stedt-rn-433171": {
-      "zh": "找到；位于；在（汉义待确认）",
-      "status": "pending",
+      "zh": "找到",
+      "status": "confirmed",
       "previousZh": "找到了；位于",
       "term": "ȵi⁵³",
       "en": "found / located",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "Huang & Dai 1992 同一材料的 STEDT rn 430963 记录完全相同词形 ȵi⁵³，释义 find / look for（寻找／找到）；rn 433171 的 found / located 为相应完成义，不能据此引申为「位于」。"
     },
     "stedt-rn-289886": {
       "zh": "扔",
