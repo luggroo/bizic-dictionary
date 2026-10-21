@@ -4,7 +4,7 @@
   let language = 'zh';
   try { if (localStorage.getItem('tujia-ui-language') === 'en') language = 'en'; } catch {}
   const labels = Object.freeze({
-    brand: 'bifzixkar afhxix', words: 'cixcix nix', grammar: 'sar qinrmox lir',
+    brand: 'bifzixkar afhxix', home: 'enxdux qiev xief', words: 'cixcix nix', grammar: 'sar qinrmox lir',
     // Zhou (2020) cover: Sufmur Bifzixsar (su²mu³); Brassett: -nie³ (genitive), sa³ (speech).
     notation: 'sar qinrmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
     saved: 'suxsux-civ', history: 'sufmur nier sar', search: 'nix', save: 'suxsux'
@@ -39,13 +39,21 @@
     return typeof spellingDisplay !== 'undefined' && spellingDisplay === 'ye' ? ye : yeToAccent(ye);
   }
   function decorate() {
-    for (const key of ['words','grammar','notation','history','corpus','sources','saved']) {
+    for (const key of ['home','words','grammar','notation','history','corpus','sources','saved']) {
       const target = document.querySelector('nav [data-view="'+key+'"] > span');
       if (target && !target.querySelector('[data-ui-tujia]')) {
         const small = document.createElement('small');
         small.className = 'tujia-ui'; small.dataset.uiTujia = key; small.lang = 'tji';
         target.append(small);
       }
+    }
+    const hero = document.querySelector('.hero h1');
+    if (hero && !hero.querySelector('[data-ui-tujia]')) {
+      const small = document.createElement('small');
+      small.className = 'tujia-ui hero-tujia';
+      small.dataset.uiTujia = 'home';
+      small.lang = 'tji';
+      hero.append(small);
     }
     document.querySelectorAll('#search-form button[type="submit"]').forEach(button => {
       if (button.querySelector('[data-ui-tujia]')) return;
