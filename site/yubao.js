@@ -78,7 +78,7 @@ function northernSurveySpelling(raw,point){
  if(point==='60823')return wanmipoSpelling(raw);
  if(!['60756','60757'].includes(point))return null;
  const xr=point==='60756';
- const tones=xr?{'55':['x',1],'35':['f',2],'33':['r',3],'53':['v',4]}:{'55':['x',1],'53':['x',1],'33':['x',1],'24':['f',2],'22':['r',3],'21':['r',3]};
+ const tones=xr?{'55':['x',1],'35':['f',2],'33':['r',3],'53':['v',4]}:{'55':['x',1],'53':['v',4],'33':['x',1],'24':['f',2],'22':['r',3],'21':['r',3]};
  const onsets={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','ɲ':'n','ȵ':'n','ŋ':'ng','p':'b','t':'d','k':'g','m':'m','n':'n','l':'l','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','ɸ':'h','':''};
  const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','ɔ':'o','ɘ':'e','ə':'e','ɤ':'e','ɯ':'i','e':xr?'ei':'e','ɛ':'ai','ie':'ie','iɘ':'ie','iə':'ie','ai':'ai','ei':'ei','ɘi':'ei','au':'ao','iau':'iao','əu':'ou','ɘu':'ou','iəu':'iu','iɘu':'iu','iu':'iu','ui':'ui','uei':'ui','ua':'ua','uai':'uai','uɛ':'uai','ia':'ia','uo':'o','io':'io','aŋ':'ang','an':'an','ian':'ian','iaŋ':'iang','uan':'uan','uaŋ':'uang','uŋ':'ong','ɔŋ':'ong','ɘn':'en','ən':'en','ɘŋ':'en','əŋ':'en','en':'en','eŋ':'en','in':'in','iŋ':'in','un':'un','uen':'un','iən':'ian','ɚ':'er','iɚ':'ier','uɚ':'uer'};
  const text=plainTones(surveyIPA(raw,point)).normalize('NFC');
@@ -98,5 +98,5 @@ function northernSurveySpelling(raw,point){
 }
 for(const [point,title,count,notes] of [
  ['60756','保靖仙仁（阳朝）',2883,'55→x，35→f，33→r，53→v；e→ei，ə→e，ɛ→ai；j/q/x/y对应声母后的e、ɛ统一写jie/qie/xie/ye；ȵ→ni，ȵe→nie；ɚ→er。'],
- ['60757','龙山',2008,'按当前表层归并：55／53／33→x，24→f，22／21→r。异常调值保留IPA。']
+ ['60757','龙山',2008,'按当前表层归并：55／33→x，53→v，24→f，22／21→r。an 与 aŋ 分别写 an、ang；异常调值保留 IPA。']
 ])NOTATION_CONFIG.profiles.push({id:'yubao-'+point,source:'yubao-'+point,title:'中国语保 · '+title,kind:'ipa',status:'按调查点规则转写',count,dialects:['北部 · '+title],notes:[notes]});

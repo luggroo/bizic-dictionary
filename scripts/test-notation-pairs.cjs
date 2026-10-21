@@ -27,7 +27,19 @@ for(const f of ['notation-profiles.js','notation-ui.js','southern-notation.js','
  assert.equal(report['yubao-60823'].records,2990);
  assert.equal(report['zhou-fx'].records,370);
  assert.equal(report['zhou-xr'].records,342);
- assert.deepEqual(report['zhou-xr'].tones['r|ǎ'].sort(),['33','54']);
+ assert.deepEqual(report['zhou-xr'].tones['r|ǎ'],['33']);
+ assert.deepEqual(report['zhou-xr'].tones['v|à'],['54']);
+ assert.deepEqual(report['yubao-60757'].tones['v|à'],['53']);
+ assert(!report['yubao-60757'].tones['x|ā'].includes('53'));
+ assert(report['yubao-60757'].rimes.an.includes('an'));
+ assert(report['yubao-60757'].rimes.ang.includes('aŋ'));
+ assert.equal(vm.runInContext("npIPASyllables('ȵie55')[0].onset",context),'ȵ');
+ assert.equal(vm.runInContext("npIPASyllables('ȵie55')[0].text",context),'ȵie55');
+ assert.equal(vm.runInContext("npCell('zhou-ts','onset','n',D).some(v=>v.value==='ȵ')",context),true);
+ assert.equal(vm.runInContext("convertNotation('a33','zhou-xr').rows[0].ye",context),'ar');
+ assert.equal(vm.runInContext("convertNotation('a54','zhou-xr').rows[0].ye",context),'av');
+ assert.equal(vm.runInContext("northernSurveySpelling('laŋ53','60757').ye",context),'langv');
+ assert.equal(vm.runInContext("northernSurveySpelling('lan53','60757').ye",context),'lanv');
  for(const id of ['stedt-7fd6565400','stedt-610ab69a37'])assert(!report[id].rimes.i.includes('ɨ')&&!report[id].rimes.i.includes('ɿ'));
  // Accepted-input noise must not appear unless an actual record produces that pair.
  assert.equal(vm.runInContext(`(()=>{const p=NOTATION_CONFIG.profiles.find(p=>p.id==='zhou-fx');return Object.hasOwn(p.rhymeMap,'ɯ')})()`,context),false);

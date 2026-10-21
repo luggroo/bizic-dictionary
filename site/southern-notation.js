@@ -5,7 +5,7 @@ const SOUTH_ONSETS={
  'tɕʰ':['q','ch'],'tsʰ':['c','ch'],'pʰ':['p','ph'],'tʰ':['t','th'],'kʰ':['k','kh'],
  'dʑ':['jj','j'],'dz':['zz','j'],'tɕ':['j','c'],'ts':['z','c'],
  'p':['b','p'],'t':['d','t'],'k':['g','k'],'b':['bb','b'],'d':['dd','d'],'g':['gg','g'],
- 'm':['m','m'],'n':['n','n'],'ɲ':['ni','ni'],'ŋ':['ng','ng'],
+ 'm':['m','m'],'n':['n','n'],'ɲ':['ni','ni'],'ȵ':['ni','ni'],'ŋ':['ng','ng'],
  'f':['f','f'],'s':['s','s'],'z':['r','r'],'ɕ':['x','s'],'ʑ':['y','y'],
  'x':['h','h'],'ɣ':['hx','gh'],'ħ':['h','h'],'ʕ':['h','h'],
  'l':['l','l'],'w':['w','w'],'j':['y','y'],'ʔ':["'","'"],'':['','']
@@ -25,7 +25,7 @@ let southernDisplay='accent';
 try{if(localStorage.getItem('tujia-south-spelling-v1')==='poj')southernDisplay='poj'}catch{}
 function isSouthernWord(w){return w.dialect==='南部'||(w.dialects||[]).includes('南部')||(w.attestations||[]).some(a=>a.dialect==='南部')}
 function southNormalize(raw,source=''){
- let t=plainTones(raw).normalize('NFC').replaceAll('u̵','ʉ').replaceAll('ɡ','g').replaceAll('ɑ','a').replaceAll('ʦ','ts').replaceAll('ʣ','dz').replaceAll('ʨ','tɕ').replaceAll('ʥ','dʑ').replaceAll('ȵ','ɲ').replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ').replaceAll('d͡ʑ','dʑ').replaceAll('d͡z','dz');
+ let t=plainTones(raw).normalize('NFC').replaceAll('u̵','ʉ').replaceAll('ɡ','g').replaceAll('ɑ','a').replaceAll('ʦ','ts').replaceAll('ʣ','dz').replaceAll('ʨ','tɕ').replaceAll('ʥ','dʑ').replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ').replaceAll('d͡ʑ','dʑ').replaceAll('d͡z','dz');
  if(source.startsWith('stedt-'))t=t.replaceAll('h̄','ħ').replaceAll('ẖ','ħ');
  return t.replace(/(tɕ|ts|p|t|k)h/g,'$1ʰ').normalize('NFC');
 }
@@ -48,7 +48,7 @@ function southernSpelling(raw,source='',explicit=false){
   if(r==='ɨ̃'&&['l','n'].includes(onset)&&source.startsWith('stedt-cb523fc3dc'))rime='en';
   if(r==='ɨ'&&['k','kʰ','g','x','ɣ','ħ','ʕ'].includes(onset))rime='i';
   if(!rime||(!Object.hasOwn(SOUTH_TONES,m[2])&&m[2]!=='?'))return null;
-  if(onset==='ɲ'&&rime.startsWith('i'))rime=rime.slice(1);
+  if(['ɲ','ȵ'].includes(onset)&&rime.startsWith('i'))rime=rime.slice(1);
   const marked=m[2]==='?'?rime+'⁇':southMark(rime,m[2],explicit);if(marked===null)return null;
   const sep=count&&/^[\s-]*$/.test(gap)?'-':gap.replace(/[|｜]/g,' / ');
   // Apical i after dental sibilants uses ri in POJ (cri/chri/sri versus ci/chi/si).

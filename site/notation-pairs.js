@@ -15,7 +15,7 @@ const NOTATION_PAIR_SOURCES = {
  'yubao-60823':{title:'中国语保\n碗米坡'}
 };
 const NP_ORDER=['b','p','m','f','w','d','t','n','l','z','c','s','r','j','q','x','y','g','k','h','hx','ng',''];
-const NP_IPA_ONSETS=['tɕʰ','tsʰ','pʰ','tʰ','kʰ','dʑ','dz','tɕ','ts','ɲ̟','ɲ','ŋ','ʑ','ɣ','ɸ','p','t','k','m','n','l','s','z','ɕ','x','j','w','b','d','g','ʔ','h'];
+const NP_IPA_ONSETS=['tɕʰ','tsʰ','pʰ','tʰ','kʰ','dʑ','dz','tɕ','ts','ȵ','ɲ̟','ɲ','ŋ','ʑ','ɣ','ɸ','p','t','k','m','n','l','s','z','ɕ','x','j','w','b','d','g','ʔ','h'];
 const NP_SPELLING_ONSETS=['hx','ng','zh','ch','sh','b','p','m','f','d','t','n','l','z','c','s','r','j','q','x','y','g','k','h','w'];
 const NP_TONE_LETTERS={x:'1',f:'2',r:'3',v:'4'};
 const NP_CACHE=new WeakMap();
@@ -24,12 +24,12 @@ const NP_CACHE=new WeakMap();
 const NP_SOURCE_TABLES={
  'zhou-ts':{
   reference:'Zhou 2020 §1.3，表1-5～1-7；Brassett 2006 §2.2、§2.6',
-  onset:{b:'p',p:'pʰ',m:'m',w:'w',d:'t',t:'tʰ',n:'ɲ̟',l:'l',z:'ts',c:'tsʰ',s:'s',r:'z',j:'tɕ',q:'tɕʰ',x:'ɕ',y:'j',g:'k',k:'kʰ',h:'x',hx:'ɣ',ng:'ŋ'},
+  onset:{b:'p',p:'pʰ',m:'m',w:'w',d:'t',t:'tʰ',n:'ȵ',l:'l',z:'ts',c:'tsʰ',s:'s',r:'z',j:'tɕ',q:'tɕʰ',x:'ɕ',y:'j',g:'k',k:'kʰ',h:'x',hx:'ɣ',ng:'ŋ'},
   rime:{a:'a',ai:'ai',ang:'ã',ao:'au',e:'ɤ',ei:'ei',en:'ɛ̃',i:'i',ia:'ia',ian:'iɛ̃',iao:'iau',ie:'iɛ',in:'ĩ',iong:'iɔ̃',iu:'iu',o:'ɔ',ong:'ɔ̃',ou:'ou',u:'u',ua:'ua',uai:'uai',uan:'uã',ui:'uei',un:'uɜ̃'}
  },
  'zhou-fx':{
   reference:'Zhang 2002，经 Zhou 2020 §1.3、表1-7 引述',
-  onset:{b:'p',p:'pʰ',m:'m',w:'w',d:'t',t:'tʰ',n:'ɲ̟',l:'l',z:'ts',c:'tsʰ',s:'s',r:'z',j:'tɕ',q:'tɕʰ',x:'ɕ',y:'j',g:'k',k:'kʰ',h:'x',ng:'ŋ'},
+  onset:{b:'p',p:'pʰ',m:'m',w:'w',d:'t',t:'tʰ',n:'ȵ',l:'l',z:'ts',c:'tsʰ',s:'s',r:'z',j:'tɕ',q:'tɕʰ',x:'ɕ',y:'j',g:'k',k:'kʰ',h:'x',ng:'ŋ'},
   rime:{a:'a',ai:'ai',ang:'an',ao:'au',e:'e',ei:'ei',en:'en',i:'i',ia:'ia',ian:'iã',iao:'iau',ie:'ie',in:'in',iong:'ioŋ',iu:'iu',o:'o',ong:'oŋ',ou:'ou',u:'u',ua:'ua',uai:'uai',uan:'uan',ui:'uei'}
  },
  'zhou-xr':{
@@ -55,11 +55,16 @@ const NP_SOURCE_TABLES={
  const xr=NOTATION_CONFIG.profiles.find(p=>p.id==='zhou-xr');
  if(xr){xr.onsetMap.n=['n'];xr.rhymeMap.iɔ=['io'];xr.pointId='XR';const nRule=xr.rules?.find(r=>r.kind==='声母'&&r.raw==='n');if(nRule){nRule.target='n';nRule.status='来源记音已核';nRule.condition='n 与 l 分列';}}
  const ts=NOTATION_CONFIG.profiles.find(p=>p.id==='zhou-ts');if(ts)ts.pointId='TS';
+ // Keep the symbol used by the original source in phonology-rule descriptions.
+ for(const id of ['stedt-7fd6565400','stedt-610ab69a37','stedt-24cc5bbb03']){
+  const p=NOTATION_CONFIG.profiles.find(p=>p.id===id);
+  for(const rule of p?.rules||[])if(rule.kind==='声母'&&rule.raw==='ɲ̟'&&String(rule.evidence||'').includes('ȵ'))rule.raw='ȵ';
+ }
 }
 function npNormalize(raw){
  return plainTones(raw).normalize('NFC').replaceAll('ɡ','g').replaceAll('ɑ','a')
  .replaceAll('ʦ','ts').replaceAll('ʨ','tɕ').replaceAll('ʣ','dz').replaceAll('ʥ','dʑ')
- .replaceAll('ȵ','ɲ̟').replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ')
+ .replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ')
  .replaceAll('d͡z','dz').replaceAll('d͡ʑ','dʑ').replace(/(tɕ|ts|p|t|k)h/g,'$1ʰ');
 }
 function npIPASyllables(raw){
@@ -219,8 +224,8 @@ function notationPairTables(place,data=D){
  const isYang=place==='yangchao',isWan=place==='wanmipo';
  const ids=isWan?['yubao-60823']:isYang?['zhou-xr','yubao-60756']:['zhou-ts','zhou-fx','stedt-7fd6565400','stedt-610ab69a37','stedt-24cc5bbb03','yubao-60757'];
  const notes=isWan?'<p>33 写 r，调号不标；31 也写 r，调号写 ǎ。</p>':isYang?
- '<p>¹ 仙仁 e、ɯe、ɯɛ、ɯə、ə，以及 ie、iɛ 的分布见 Zhou 2020 表1-10～1-12；表内保留实际配对的记号。² 仙仁 i 的条件读音包括软腭音后的 ɯ、齿音后的 ɿ。³ 语保阳朝 e 一般转 ei；腭音后的 e／ɛ 按整音节写 jie、qie、xie、ye。仙仁 54→r、55→x。</p>':
- '<p>¹ Zhang 的 i 行为 i／ei。软腭音后的 ei 转 i；零声母 ei 按整音节写 hxi。² Zhang 的 e 在 t、tʰ、l 及腭音后转 ie，其他环境转 e；原文 ie 保留。³ Zhang 的 in、en、an 沿用原记号，分别对应 in、en、ang。⁴ Brassett 独立韵母 i 在软腭音后为 ɨ、齿音后为 ɿ。</p>';
+ '<p>¹ 仙仁 e、ɯe、ɯɛ、ɯə、ə，以及 ie、iɛ 的分布见 Zhou 2020 表1-10～1-12；表内保留实际配对的记号。² 仙仁 i 的条件读音包括软腭音后的 ɯ、齿音后的 ɿ。³ 语保阳朝 e 一般转 ei；腭音后的 e／ɛ 按整音节写 jie、qie、xie、ye。仙仁 33→r、54→v、55→x。</p>':
+ '<p>¹ Zhang 的 i 行为 i／ei。软腭音后的 ei 转 i；零声母 ei 按整音节写 hxi。² Zhang 的 e 在 t、tʰ、l 及腭音后转 ie，其他环境转 e；原文 ie 保留。³ 未区分前后鼻音的来源沿用 ang；龙山语保 lan⁵⁵（现在）与 laŋ⁵⁵（火种）有 n／ŋ 的区别，分别写 an／ang。⁴ Brassett 独立韵母 i 在软腭音后为 ɨ、齿音后为 ɿ。</p>';
  return `<div class="notation-matrix np-matrix"><p class="tiny">点击记音查看原词形、拼音和出处。词条未收录的音系项附表号；多解另列。</p>${npTable('声母',ids,'onset',data,!isYang&&!isWan)}${npTable('韵母',ids,'rime',data,!isYang&&!isWan)}${npTable('声调',ids,'tone',data,!isYang&&!isWan)}<div class="tiny np-notes">${notes}</div>${npAuditSummary(ids,data)}</div>`;
 }
 function npAuditSummary(ids,data){
