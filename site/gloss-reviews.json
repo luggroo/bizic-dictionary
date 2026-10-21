@@ -1039,12 +1039,14 @@
       "reviewEvidence": "语保龙山 0610「爷爷」pha²²phu⁵⁵，本条异读 pha²¹phu⁵⁵ 与含其他成分的变体"
     },
     "stedt-rn-228555": {
-      "zh": "某类物品的量词（汉义待确认）",
-      "status": "pending",
+      "zh": "把（有柄物品的量词）",
+      "status": "confirmed",
       "previousZh": "某类物品的量词（原英文截断，适用对象待核）",
       "term": "pha⁵⁵",
       "en": "classifier for objects with ha",
-      "enNote": "Note: possible recording error"
+      "enNote": "Sun 1991 English gloss is truncated; Tian 1986 rn 289337 gives 'clf for objects with handle'.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "同一 STEDT 数据库中 Tian 1986 的 rn 289337 记载完全相同的 pha⁵⁵，英文为 'clf for objects with handle'。Sun 1991 rn 228555 的 'classifier for objects with ha' 是截断文本；语义明确为有柄物品的量词「把」。"
     },
     "stedt-rn-196068": {
       "zh": "汉族",
@@ -1272,12 +1274,14 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-383001": {
-      "zh": "时间；次（汉义待确认）",
-      "status": "pending",
+      "zh": "时节；时间",
+      "status": "confirmed",
       "previousZh": "时间；次（原义未细分）",
       "term": "si²¹tɕie²¹",
       "en": "time",
-      "enNote": "Note: possible recording error"
+      "enNote": "The English 'time' denotes 时节／时间 here, not the counting word 次.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "用户确认 si²¹tɕie²¹ 即「时节」，表示时间。STEDT Huang & Dai 1992 rn 383001 及 Sun 1991 rn 183165 均记为 si²¹tɕie²¹、英文 time，归入 Other Intervals。"
     },
     "stedt-rn-397789": {
       "zh": "肥",
