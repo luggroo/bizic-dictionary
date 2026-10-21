@@ -118,7 +118,7 @@ function notationSourceGroups(){
  const groups=new Map();
  for(const p of NOTATION_CONFIG.profiles){
   const id=notationSourceKey(p);
-  if(!groups.has(id))groups.set(id,{id,title:id==='brassett-2004'?'Brassett (2004)':id==='brassett-2006'?'Brassett (2006)':p.title,profiles:[],dialects:p.dialects,count:0,status:p.status});
+  if(!groups.has(id))groups.set(id,{id,title:id==='brassett-2004'?'Brassett (2004)':id==='brassett-2006'?'Brassett (2006)':(NOTATION_PAIR_SOURCES[p.id]?.title.replace(/\n/g,' · ')||p.title),profiles:[],dialects:p.dialects,count:0,status:p.status});
   const g=groups.get(id);g.profiles.push(p);g.count+=p.count;
  }
  return [...groups.values()].map(g=>({...g,status:g.profiles.length>1?'同一来源 · '+g.profiles.length+' 种输入格式':g.status}));
@@ -148,172 +148,17 @@ function notationSourceTables(profile){
  if(profile.notes?.length)html+='<p class="tiny">'+profile.notes.map(E).join('；')+'</p>';
  return html;
 }
-function notationSurveyTables(point){
- const toneMap=point==='60823'?[['13','f','á'],['33','r','不标'],['55','x','ā'],['53','v','à'],['31','r','ǎ']]:point==='60756'?[['55','x','ā'],['35','f','á'],['33','r','ǎ'],['53','v','à']]:[['55 / 53 / 33','x','ā'],['24','f','á'],['22 / 21','r','ǎ']];
- const onsets={'p':'b','pʰ':'p','t':'d','tʰ':'t','k':'g','kʰ':'k','ts':'z','tsʰ':'c','tɕ':'j','tɕʰ':'q','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','m':'m','n':'n','l':'l','ɲ':'n','ŋ':'ng'};
- const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','e':point==='60756'?'ei':'e','ai':'ai','ei':'ei','au':'ao','iau':'iao','əu':'ou','iəu':'iu','ua':'ua','uai':'uai','ia':'ia','uo':'o','aŋ':'ang','ian':'ian','uan':'uan','ɚ':'er','iɚ':'ier','uɚ':'uer'};
- if(point==='60823'){Object.assign(rimes,{'ɤ':'e','ɤe':'e','ɤu':'ou','iɤu':'iu','ũ':'ong','ã':'ang','ĩ':'in','uã':'uan','ɤ̃':'en','uɤ̃':'un'});}
- if(point==='60756'){Object.assign(rimes,{'ə':'e','ɛ':'ai','ɘ':'e','ɔ':'o','ɯ':'i','iɘ':'ie','iə':'ie','ɘi':'ei','ɘu':'ou','uɛ':'uai','ɘn':'en','ɘŋ':'en','əŋ':'en'});}
- return notationGuideTable('声母',['来源 IPA','叶式／调号拼音'],Object.entries(onsets).map(([a,b])=>[a,b]))+
- notationGuideTable('韵母',['来源 IPA','叶式／调号拼音'],Object.entries(rimes).map(([a,b])=>[a,b]))+
- notationGuideTable('声调',['来源 IPA','叶式拼音','调号拼音'],toneMap);
-}
-
+function notationSurveyTables(point){return notationPairTables(point==='60823'?'wanmipo':point==='60756'?'yangchao':'longshan',D);}
 const NORTH_ONSET_ORDER=['','b','p','m','f','w','d','t','n','l','z','c','s','r','j','q','x','y','g','k','h','hx','ng'];
 function onsetSortKey(spelling){const i=NORTH_ONSET_ORDER.indexOf(spelling);return i<0?NORTH_ONSET_ORDER.length:i;}
 function southernOnsetOrder([ipa,spell]){return onsetSortKey(spell[0]);}
-// Build a per-source inventory from the unmodified word attestations.
-// A source's conversion dictionary can list proposed spellings absent from its actual data.
-let notationRimeInventoryCache=null;
-function notationSourceRimeInventory(){
- if(notationRimeInventoryCache)return notationRimeInventoryCache;
- const inventory=new Map();
- if(!D?.words)return inventory;
- const bySource=new Map();
- for(const w of D.words)for(const a of w.attestations||[]){
-  if(!bySource.has(a.source))bySource.set(a.source,[]);
-  bySource.get(a.source).push(a.term);
- }
- for(const p of NOTATION_CONFIG.profiles){
-  // Zhou point profiles share one bibliographic document, but not an attestation pool.
-  // Only an explicitly point-tagged source can populate each point inventory.
-  const isZhouPoint=/^zhou-(?:ts|fx|xr|xl)$/.test(p.id);
-  const terms=isZhouPoint?(bySource.get(p.id)||[]):(bySource.get(p.id)||bySource.get(p.source)||[]);
-  const recorded=new Set(),recordedOnsets=new Set();
-  const onsetKeys=Object.keys(p.onsetMap||{}).filter(Boolean).sort((a,b)=>b.length-a.length);
-  for(const term of terms){
-   const normalized=plainTones(term).normalize('NFC').replaceAll('ʦ','ts').replaceAll('ʨ','tɕ').replaceAll('ȵ','ɲ̟').replace(/(tɕ|ts|p|t|k)h/g,'$1ʰ');
-   for(const item of normalized.matchAll(/([^0-9\s~～|/;,()（）\[\]]+)([0-9]+)/g)){
-    const core=item[1],onset=onsetKeys.find(o=>core.startsWith(o))||'';
-    recorded.add(core.slice(onset.length));recordedOnsets.add(onset);
-   }
-  }
-  inventory.set(p.id,{terms:terms.length,rimes:recorded,onsets:recordedOnsets});
- }
- // Survey data uses a separate loader and keeps the original IPA as attestations.
- for(const point of ['60756','60757','60823']){
-  const id='yubao-'+point,terms=bySource.get(id)||[];
-  const onsets=['tɕʰ','tsʰ','pʰ','tʰ','kʰ','tɕ','ts','ɲ','ȵ','ŋ','ʑ','ɣ','ɸ','p','t','k','m','n','l','s','z','ɕ','x','j','w',''].sort((a,b)=>b.length-a.length);
-  const rimes=new Set(),recordedOnsets=new Set();
-  for(const term of terms){
-   const normalized=plainTones(surveyIPA(term,point)).normalize('NFC');
-   for(const item of normalized.matchAll(/([^0-9\\s~～|/;,()（）\\[\\]]+)([0-9]+)/g)){
-    const core=item[1],onset=onsets.find(o=>core.startsWith(o))||'';
-    recordedOnsets.add(onset);rimes.add(core.slice(onset.length));
-   }
-  }
-  inventory.set(id,{terms:terms.length,rimes,onsets:recordedOnsets});
- }
- return notationRimeInventoryCache=inventory;
-}
-// Directly indexed from Zhou (2020) §1.3, Tables 1-5 through 1-12.
-// Inventory and allophonic descriptions are kept separate.
-const ZHOU_PHONOLOGY={
- 'zhou-ts':{
-  onset:{p:'b','pʰ':'p',t:'d','tʰ':'t',k:'g','kʰ':'k',ts:'z','tsʰ':'c',tɕ:'j','tɕʰ':'q',s:'s',z:'r',ɕ:'x',x:'h',ɣ:'hx',m:'m',l:'l',ɲ̟:'n',ŋ:'ng',w:'w',j:'y'},
-  rhyme:{i:'i',ɤ:'e',a:'a',ɔ:'o',u:'u',ai:'ai',ei:'ei',au:'ao',ou:'ou',ĩ:'in',ɛ̃:'en',ã:'ang',ɔ̃:'ong',iɛ:'ie',ia:'ia',iu:'iu',iau:'iao',iɛ̃:'ian',iɔ̃:'iong',ua:'ua',uɔ:'o',uai:'uai',uei:'ui',uɜ̃:'un',uã:'uan',ɛn:'en'}
- },
- 'zhou-fx':{
-  onset:{p:'b','pʰ':'p',t:'d','tʰ':'t',k:'g','kʰ':'k',ts:'z','tsʰ':'c',tɕ:'j','tɕʰ':'q',s:'s',z:'r',ɕ:'x',x:'h',ɣ:'hx',m:'m',l:'l',ɲ̟:'n',ŋ:'ng',w:'w',j:'y',ʑ:'r'},
-  rhyme:{i:'i',ei:'ei',e:'e',ie:'ie',a:'a',u:'u',ai:'ai',au:'ao',ou:'ou',in:'in',en:'en',an:'ang',oŋ:'ong',ioŋ:'iong',iã:'ian',ua:'ua',uai:'uai',uei:'ui',ɔ:'o',uɔ:'o'}
- },
- 'zhou-xr':{
-  onset:{p:'b','pʰ':'p',t:'d','tʰ':'t',k:'g','kʰ':'k',ts:'z','tsʰ':'c',tɕ:'j','tɕʰ':'q',s:'s',z:'r',ɕ:'x',ʑ:'y',x:'h',ɣ:'hx',m:'m',n:'n',ɲ̟:'n',ŋ:'ng',w:'w',l:'l'},
-  rhyme:{i:'i',e:'e',ɛ:'ai',a:'a',ɔ:'ao',o:'o',u:'u',ei:'ei',ĩ:'in',ẽ:'en',ɛ̃:'en',ã:'ang',õ:'ong',ie:'ie',ia:'ia',iɔ:'io',iu:'iu',iɛ̃:'ian',iã:'ian',ɯe:'e',ui:'ui',uɛ:'uai',ua:'ua',uɛ̃:'uen'}
- }
-};
-function zhouPhonologyMatches(source,kind,key){
- const sys=ZHOU_PHONOLOGY[source];if(!sys)return null;
- const map=kind==='onset'?sys.onset:sys.rhyme;
- return Object.entries(map).filter(([,spelling])=>spelling===key).map(([ipa])=>ipa);
-}
-function notationMatrix(place){
- const isYang=place==='yangchao';
- const sources=isYang?
-  [{title:'Dai & Tian 2005\nvia Zhou 2020',id:'zhou-xr',kind:'profile'},{title:'中国语保 · 阳朝',id:'60756',kind:'survey'}]:
-  [{title:'他砂 IPA\nBrassett',id:'zhou-ts',kind:'profile'},{title:'Zhang 2002\nvia Zhou 2020',id:'zhou-fx',kind:'profile'},{title:'Sun 1991',id:'stedt-7fd6565400',kind:'profile'},{title:'Huang & Dai 1992',id:'stedt-610ab69a37',kind:'profile'},{title:'Chen 1986',id:'stedt-24cc5bbb03',kind:'profile'},{title:'中国语保 · 龙山',id:'60757',kind:'survey'}];
- const profiles=Object.fromEntries(NOTATION_CONFIG.profiles.map(p=>[p.id,p]));
- const surveyOnsets={'p':'b','pʰ':'p','t':'d','tʰ':'t','k':'g','kʰ':'k','ts':'z','tsʰ':'c','tɕ':'j','tɕʰ':'q','m':'m','n':'n','l':'l','ɲ':'n','ȵ':'n','ŋ':'ng','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','ɸ':'h'};
- const surveyRimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','ɔ':'o','ɘ':'e','ə':'e','ɤ':'e','ɯ':'i','e':isYang?'ei':'e','ɛ':'ai','ie':'ie','iɘ':'ie','iə':'ie','ai':'ai','ei':'ei','ɘi':'ei','au':'ao','iau':'iao','əu':'ou','ɘu':'ou','iəu':'iu','iɘu':'iu','iu':'iu','ui':'ui','uei':'ui','ua':'ua','uai':'uai','uɛ':'uai','ia':'ia','uo':'o','io':'io','aŋ':'ang','an':'an','ian':'ian','iaŋ':'iang','uan':'uan','uaŋ':'uang','uŋ':'ong','ɔŋ':'ong','ɘn':'en','ən':'en','ɘŋ':'en','əŋ':'en','en':'en','eŋ':'en','in':'in','iŋ':'in','un':'un','uen':'un','iən':'ian','ɚ':'er','iɚ':'ier','uɚ':'uer'};
- // Normalize the special palatal combinations noted in the Yangchao converter.
- function mappedSource(kind,src,key){
-  if(src.kind==='tasha'){
-   if(kind==='onset')return Object.entries(NOTATION_CONFIG.onsets).filter(([raw])=>(raw==='hh'?'hx':raw)===key).map(([raw])=>{const p=profiles['zhou-ts'];const mapped=p?.onsetMap||{};const ipa=Object.entries(mapped).filter(([,v])=>(v||[]).includes(key)).map(([ipa])=>ipa);return ipa.length?ipa.join(' / '):NOTATION_CONFIG.onsets[raw]||'—'});
-   return Object.keys(NOTATION_CONFIG.rimes).filter(raw=>standardBrassettToYe(raw)===key).map(raw=>{const p=profiles['zhou-ts'];const ipa=Object.entries(p?.rhymeMap||{}).filter(([,v])=>(v||[]).some(t=>standardBrassettToYe(t)===key)).map(([ipa])=>ipa);return ipa.length?ipa.join(' / '):NOTATION_CONFIG.rimes[raw]||'—'});
-  }
-  if(src.kind==='brassett'){
-   if(kind==='onset')return Object.entries(NOTATION_CONFIG.onsets).filter(([raw])=>(raw==='hh'?'hx':raw)===key).map(([raw])=>raw);
-   return Object.keys(NOTATION_CONFIG.rimes).filter(raw=>standardBrassettToYe(raw)===key);
-  }
-  if(src.kind==='survey'){
-   const dict=kind==='onset'?surveyOnsets:surveyRimes;
-   const observed=notationSourceRimeInventory().get('yubao-'+src.id);
-   const values=kind==='onset'?observed?.onsets:observed?.rimes;
-   const rows=Object.entries(dict).filter(([raw,sp])=>sp===key&&(!observed?.terms||values.has(raw))).map(([raw])=>raw);
-   return [...new Set(rows)];
-  }
-  const p=profiles[src.id];if(!p)return [];
-  const dictionary=kind==='onset'?p.onsetMap:p.rhymeMap;
-  if(!dictionary){
-   if(src.kind==='tian'){
-    const reference=kind==='onset'?NOTATION_CONFIG.onsets:NOTATION_CONFIG.rimes;
-    return Object.entries(reference).filter(([raw])=>(kind==='onset'?(raw==='hh'?'hx':raw):standardBrassettToYe(raw))===key).map(([,ipa])=>ipa);
-   }
-   return [];
-  }
-  // Phonological correspondences are organized by the individual source's
-  // documented sound system. Word-level inventory is supporting evidence only.
-  // Do not use another survey point's attestations to infer this inventory.
-  const inventory=notationSourceRimeInventory().get(p.id);
-  return Object.entries(dictionary).filter(([raw,targets])=>{
-   if(!(targets||[]).some(t=>(kind==='rime'?standardBrassettToYe(t):t)===key))return false;
-   const rule=(p.rules||[]).find(x=>x.kind===(kind==='rime'?'韵母':'声母')&&x.raw===raw);
-   if(rule?.status==='候选待审'&&kind==='rime'){
-    // Speculative one-to-many conversions must not produce asserted allophones.
-    if((targets||[]).length!==1)return false;
-    // The unambiguous source symbol can be shown, but not an invented variant.
-   }
-   // For genuinely word-attested records, discard nonexistent raw symbols.
-   if(inventory?.terms&&!(kind==='rime'?inventory.rimes:inventory.onsets).has(raw))return false;
-   return true;
-  }).map(([raw])=>raw);
- }
- const bOns=Object.keys(NOTATION_CONFIG.onsets).filter(Boolean).map(k=>k==='hh'?'hx':k);
- const bRimes=Object.keys(NOTATION_CONFIG.rimes).map(k=>standardBrassettToYe(k));
- function keys(kind){
-  const all=[...(kind==='onset'?bOns:bRimes),...Object.values(kind==='onset'?surveyOnsets:surveyRimes)];
-  for(const source of sources.filter(x=>x.kind==='profile')){
-   const p=profiles[source.id],dict=kind==='onset'?p?.onsetMap:p?.rhymeMap;
-   for(const targets of Object.values(dict||{}))for(const t of targets||[])all.push(kind==='rime'?standardBrassettToYe(t):t);
-  }
-  return [...new Set(all)].filter(Boolean).sort((a,b)=>kind==='onset'?(onsetSortKey(a)-onsetSortKey(b)||a.localeCompare(b,'en')):a.localeCompare(b,'en'));
- }
- const headings=isYang?['本站拼写',...sources.map(x=>x.title)]:['本站拼写','Brassett 拼音',...sources.map(x=>x.title)];
- function matrix(kind,title){
-  const rows=keys(kind).map(key=>[key,...(!isYang?[mappedSource(kind,{kind:'brassett'},key).join(' / ')||'']:[]),...sources.map(src=>mappedSource(kind,src,key).join(' / '))]);
-  const active=rows.filter(row=>row.slice(1).some(Boolean));
-  return notationGuideTable(title,headings,active);
- }
- const longTone=[['x · ā','1','55','55','55','55','55','55 / 53 / 33'],
- ['f · á','2','24','35','35','35','35','24'],
- ['r · ǎ','3','21','21','21','21','21','22 / 21'],
- ['v · à','4','51','53','53','—','53','—']];
- const yangTone=[['x · ā','55','55'],['f · á','35','35'],['r · ǎ','33 / 54','33'],['v · à','—','53']];
- const tone=notationGuideTable('声调',headings,isYang?yangTone:longTone);
- const intro='<p class="tiny">Brassett 拼音单列，其他列显示各材料的 IPA 音值。Zhou 2020 表 1-5～1-12 的他砂、拉西峒、仙仁音系分别成列。空白表示该来源尚无可靠对应，多项原记号以 / 分隔。声韵母按来源音系表列出。仅有候选关系的多向转换不列作确定音值；条件读音另作说明。词条统计用于交叉检查，不能替代音系分析。</p>';
- const notes=isYang?
- '<p class="tiny">声韵注：① 仙仁 /ʑ/ 与 /j/ 的 y 写法须检查介音组合，yiao 等形式已规范为 yao。② 阳朝语保 ȵ 按 ni 处理，腭音后的 e／ɛ 按整音节规则写 jie、qie、xie、ye；原始 IPA 保留。③ Zhou 2020 §1.3：仙仁 /i/ 在软腭声母后读 [ɯ]，齿音后读 [ɿ]；/e/ 的 [ɯe]、[ɯɛ]、[ɯə]、[ə] 等按声母分布，/ie/ 可读 [ie]～[iɛ]。④ 语保阳朝原始词表中 i（780次）、ɿ（495次）、e（351次）、ə（253次）以及 eŋ（176次）均有记录，独立统计。</p><p class="tiny">声调注：Zhou 仙仁 54→r、55→x，33→r；语保阳朝按 55、35、33、53 的表层调值处理。</p>':
- '<p class="tiny">声韵注：① Brassett 的独立韵母 i：g、h、k、hh 后读 [ɨ]，z、c、s、r 后读 [ɿ]。② Brassett hh→叶式 hx，eng→en，ing→in，uo→o。③ Zhou 2020 表 1-7：他砂 ɤ 对拉西峒 e；他砂 iɛ 在齿龈塞音和 l 后对应拉西峒 e，其余环境对应 ie；他砂 ɨ 对拉西峒 ei。④ 拉西峒 ei 在软腭声母后有 [ei]～[i] 条件读音；/ĩ ẽ ã/ 在张伟权记音中作 in、en、an。④ 语保龙山原始词表中 i（568次）、ɿ（367次）、ɯ（107次）、ei（12次）、ian（47次）均有记录；不同音类保留区别。</p><p class="tiny">声调注：① Brassett 的 1–4 为原书调类，Brassett 提供他砂的 IPA 音值。② 龙山语保当前按表层音值归并 55／53／33→x、24→f、22／21→r。</p>';
- return '<div class="notation-matrix">'+intro+matrix('onset','声母')+matrix('rime','韵母')+tone+notes+'</div>';
-}
+function notationMatrix(place){return notationPairTables(place,D);}
 function notationGuide(){
  const profiles=NOTATION_CONFIG.profiles;
  const get=id=>profiles.find(p=>p.id===id);
- const brassettGroups=['brassett-2004','brassett-2006'];
- const longshan=['zhou-ts','zhou-fx','stedt-cb523fc3dc:north','yubao-60757'];
  const southTones=[['55','ā','高平'],['33','a（可标 a̱）','中平'],['35','á','上升'],['21','à','低降'],['13','ǎ','低升']];
  return `<section class="panel"><h2>拼音与调查点</h2><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p></section>
- <section class="panel"><h2>龙山</h2><p>声母、韵母和声调按来源横向对照。左列为本站拼音；Brassett 2004、2006 共用一列拼音；他砂 IPA 据 Brassett，音系分布及拉西峒对应参见 Zhou 2020 §1.3。</p>
+ <section class="panel"><h2>龙山</h2><p>Brassett 2004、2006 共用一列拼音。各来源的原记音分别对照叶式与调号拼音。</p>
  ${notationMatrix('longshan')}</section>
  <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>仙仁：戴庆厦、田静（2005），经 Zhou 2020 引用；另列中国语保阳朝。</p>
  ${notationMatrix('yangchao')}</section>
@@ -326,12 +171,12 @@ function notationGuide(){
  <p class="tiny">资料：Zhou 南部下都／下且己，STEDT 南部田德生与陈康，中国语保 60824。具体词形中如有来源未能解析的音节，保留原 IPA。</p></section>
  <section class="panel"><h2>小龙热 · Yang 2011 <small class="notation-source-via">via Zhou 2020</small></h2><p>杨再彪《湖南西部四种濒危语言调查》（2011）。</p>${get('zhou-xl')?notationSourceTables(get('zhou-xl')):''}</section>`;
 }
-function notationView(){const cfg=NOTATION_CONFIG,p=cfg.profiles.find(x=>x.id===notationState.source)||cfg.profiles[0],result=notationState.result;return pageHeader('notation')+notationGuide()+`<section class="panel">${notationSourcePicker(p)}<form id="notation-converter" class="searchbar"><input id="notation-input" value="${E(notationState.input)}" aria-label="原词形" placeholder="输入原词形"><button>转换</button></form>${result?result.error?`<p class="notice warn">${E(result.error)}</p>`:mappingTable(result.partial?'部分转写':result.ambiguous?'候选词形':'转换结果',result.southern?['调号拼音','白话字拼音']:['叶式拼音','调号拼音'],result.rows.map(x=>result.southern?[x.accent,x.poj]:[x.ye.replace(/⟦[^⟧]*⟧/g,'□'),x.accent||displayBrassett(x.brassett,'accent').replace(/⟦[^⟧]*⟧/g,'□')])):''}${result?.unresolved?.length?mappingTable('未转换部分',['原形','原因'],result.unresolved.map(x=>[x.text,x.reason])):''}<p class="tiny">1 ā · 2 á · 3 ǎ · 4 à</p><p class="tiny">碗米坡按表层调值转写：13 á／f · 33 不标调／r · 55 ā／x · 53 à／v · 31 ǎ／r。33 与 31 同写 r；调号拼音中33不标，31写ǎ。不标调表示33调值，不表示轻声。</p></section><details><summary>来源规则与审核</summary>${sourceReviewView(p)}${(p.notes||[]).map(x=>`<p>${E(x)}</p>`).join('')}${p.rules?mappingTable('声韵对应',['原记号','拼写','条件'],p.rules.map(r=>[r.raw,r.target,r.condition])):''}</details><details><summary>全部来源</summary>${mappingTable('对应进度',['来源','方言','记录数','状态'],notationSourceGroups().map(x=>[x.title,x.dialects.join(' / '),String(x.count),x.status]))}</details><div class="detail-actions"><button id="export-notation-rules">导出规则</button><button data-open="brassett-2006">Brassett 原书</button></div>`}
+function notationView(){const cfg=NOTATION_CONFIG,p=cfg.profiles.find(x=>x.id===notationState.source)||cfg.profiles[0],result=notationState.result;return pageHeader('notation')+notationGuide()+`<section class="panel">${notationSourcePicker(p)}<form id="notation-converter" class="searchbar"><input id="notation-input" value="${E(notationState.input)}" aria-label="原词形" placeholder="输入原词形"><button>转换</button></form>${result?result.error?`<p class="notice warn">${E(result.error)}</p>`:mappingTable(result.partial?'部分转写':result.ambiguous?'候选词形':'转换结果',result.southern?['调号拼音','白话字拼音']:['叶式拼音','调号拼音'],result.rows.map(x=>result.southern?[x.accent,x.poj]:[x.ye.replace(/⟦[^⟧]*⟧/g,'□'),x.accent||displayBrassett(x.brassett,'accent').replace(/⟦[^⟧]*⟧/g,'□')])):''}${result?.unresolved?.length?mappingTable('未转换部分',['原形','原因'],result.unresolved.map(x=>[x.text,x.reason])):''}<p class="tiny">1 ā · 2 á · 3 ǎ · 4 à</p><p class="tiny">碗米坡按表层调值转写：13 á／f · 33 不标调／r · 55 ā／x · 53 à／v · 31 ǎ／r。33 与 31 同写 r；调号拼音中33不标，31写ǎ。不标调表示33调值，不表示轻声。</p></section><details><summary>来源规则与审核</summary>${sourceReviewView(p)}${(NOTATION_PAIR_SOURCES[p.id]?[]:p.notes||[]).map(x=>`<p>${E(x)}</p>`).join('')}${p.rules&&!NOTATION_PAIR_SOURCES[p.id]?mappingTable('声韵对应',['原记号','拼写','条件'],p.rules.map(r=>[r.raw,r.target,r.condition])):''}</details><details><summary>全部来源</summary>${mappingTable('对应进度',['来源','方言','记录数','状态'],notationSourceGroups().map(x=>[x.title,x.dialects.join(' / '),String(x.count),x.status]))}</details><div class="detail-actions"><button id="export-notation-rules">导出规则</button><button data-open="brassett-2006">Brassett 原书</button></div>`}
 function bindNotationView(){bindSourceReview();const source=document.querySelector('#notation-source');if(source)source.onchange=e=>{notationState.source=notationSourceGroups().find(g=>g.id===e.target.value).profiles[0].id;notationState.result=null;render()};const variant=document.querySelector('#notation-variant');if(variant)variant.onchange=e=>{notationState.source=e.target.value;notationState.result=null;render()};const f=document.querySelector('#notation-converter');if(f)f.onsubmit=e=>{e.preventDefault();notationState.input=document.querySelector('#notation-input').value;notationState.result=convertNotation(notationState.input,notationState.source);render()};const b=document.querySelector('#export-notation-rules');if(b)b.onclick=()=>download('tujia-source-notation-rules.json',NOTATION_CONFIG)}
 document.addEventListener('click',e=>{const el=e.target.closest('[data-notation-profile]');if(!el)return;notationState.source=el.dataset.notationProfile==='brassett-to-ye'?'1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE':el.dataset.notationProfile;notationState.result=null;if(document.querySelector('#detail').open)document.querySelector('#detail').close();setView('notation')});
 
 let notationReviews={};try{notationReviews=JSON.parse(localStorage.getItem('tujia-notation-reviews-v1')||'{}')}catch{}
 function reviewControls(id){const a=notationReviews[id]||{};return `<label>审核结论<select data-rule-review="${E(id)}">${[['pending','待审核'],['accept','同意此项'],['revise','需要修改'],['reject','不同意']].map(([v,t])=>`<option value="${v}" ${v===(a.status||'pending')?'selected':''}>${t}</option>`).join('')}</select></label><label>修改建议／依据<input data-rule-note="${E(id)}" value="${E(a.note||'')}" placeholder="候选、调查点、例词、页码"></label>`}
-function sourceReviewView(p){if(!p.rules)return '';return `<section class="source-review"><h3>本来源对应表与审核</h3><p>每项列出条件和依据。审核结论保存在当前浏览器，可导出交回整合；此处记录结论，不自动改动词典或已发布转换规则。</p>${(p.evidence||[]).map(e=>`<p><a href="${E(e.url)}" target="_blank" rel="noopener">${E(e.label)} ↗</a></p>`).join('')}${p.observedInventory?`<p class="tiny">本来源实际记录：${p.count} 条；分解出 ${p.observedInventory.syllables} 个带调片段、${p.observedInventory.onsets} 种声母记号、${p.observedInventory.rhymes} 种韵母／异常片段。片段统计不是已确认音位数。</p>`:''}${p.conversionAudit?`<p>全表检查：${p.conversionAudit.total} 条中，${p.conversionAudit.candidateConverted} 条可生成参考候选（其中 ${p.conversionAudit.ambiguous} 条多解），${p.conversionAudit.partialCount||0} 条可部分转换，${p.conversionAudit.unresolvedCount} 条尚未完整解决。可转换不代表已核实。</p><details><summary>查看未能整体转换的例词（最多25条）</summary>${mappingTable('未转换例词',['词条ID','原形','释义','原因'],p.conversionAudit.unresolved.map(a=>[a.id,phon(a.term),a.zh,a.reason]))}</details>`:''}${p.conversionEnabled===false?'<p class="notice">XL 转写已暂停，以下对应表仅为未启用草稿。</p>':'<h4>优先请你审核</h4>'}${p.reviewItems.map(q=>`<details><summary>${E(q.title)}</summary><p>${E(q.proposal)}</p><p class="tiny">依据：${E(q.evidence)}</p>${reviewControls(q.id)}</details>`).join('')}${['声母','韵母','声调'].map(kind=>`<details ${kind==='韵母'?'open':''}><summary>${kind}对应（${p.rules.filter(r=>r.kind===kind).length} 项）</summary><div class="table-wrap"><table><thead><tr><th>原记号</th><th>叶式参考／候选</th><th>适用条件与证据</th><th>审核</th></tr></thead><tbody>${p.rules.filter(r=>r.kind===kind).map(r=>`<tr><td>${E(kind==='声调'?allSup(r.raw):r.raw)}</td><td>${E(r.target)}<br><small>${E(r.status)}</small></td><td>${E(r.condition)}<details><summary>依据／例词</summary>${E(r.evidence)}</details></td><td>${reviewControls(r.id)}</td></tr>`).join('')}</tbody></table></div></details>`).join('')}${p.anomalies?.length?mappingTable('需逐词核对的异常调号',['词条ID','原形','释义','问题'],p.anomalies.map(a=>[a.id,phon(a.term),a.meaning,a.issue])):''}<div class="detail-actions"><a href="notation-coverage.json" download>下载全部未转换记录（含原形与原因）</a><button id="export-notation-review">导出审核稿（含规则和结论）</button><button id="import-notation-review">导入审核结论</button><input type="file" id="notation-review-file" accept="application/json" hidden></div></section>`}
+function sourceReviewView(p){const paired=notationPairSourceReview(p);if(paired!==null)return paired;if(!p.rules)return '';return `<section class="source-review"><h3>本来源对应表与审核</h3><p>每项列出条件和依据。审核结论保存在当前浏览器，可导出交回整合；此处记录结论，不自动改动词典或已发布转换规则。</p>${(p.evidence||[]).map(e=>`<p><a href="${E(e.url)}" target="_blank" rel="noopener">${E(e.label)} ↗</a></p>`).join('')}${p.observedInventory?`<p class="tiny">本来源实际记录：${p.count} 条；分解出 ${p.observedInventory.syllables} 个带调片段、${p.observedInventory.onsets} 种声母记号、${p.observedInventory.rhymes} 种韵母／异常片段。片段统计不是已确认音位数。</p>`:''}${p.conversionAudit?`<p>全表检查：${p.conversionAudit.total} 条中，${p.conversionAudit.candidateConverted} 条可生成参考候选（其中 ${p.conversionAudit.ambiguous} 条多解），${p.conversionAudit.partialCount||0} 条可部分转换，${p.conversionAudit.unresolvedCount} 条尚未完整解决。可转换不代表已核实。</p><details><summary>查看未能整体转换的例词（最多25条）</summary>${mappingTable('未转换例词',['词条ID','原形','释义','原因'],p.conversionAudit.unresolved.map(a=>[a.id,phon(a.term),a.zh,a.reason]))}</details>`:''}${p.conversionEnabled===false?'<p class="notice">XL 转写已暂停，以下对应表仅为未启用草稿。</p>':'<h4>优先请你审核</h4>'}${p.reviewItems.map(q=>`<details><summary>${E(q.title)}</summary><p>${E(q.proposal)}</p><p class="tiny">依据：${E(q.evidence)}</p>${reviewControls(q.id)}</details>`).join('')}${['声母','韵母','声调'].map(kind=>`<details ${kind==='韵母'?'open':''}><summary>${kind}对应（${p.rules.filter(r=>r.kind===kind).length} 项）</summary><div class="table-wrap"><table><thead><tr><th>原记号</th><th>叶式参考／候选</th><th>适用条件与证据</th><th>审核</th></tr></thead><tbody>${p.rules.filter(r=>r.kind===kind).map(r=>`<tr><td>${E(kind==='声调'?allSup(r.raw):r.raw)}</td><td>${E(r.target)}<br><small>${E(r.status)}</small></td><td>${E(r.condition)}<details><summary>依据／例词</summary>${E(r.evidence)}</details></td><td>${reviewControls(r.id)}</td></tr>`).join('')}</tbody></table></div></details>`).join('')}${p.anomalies?.length?mappingTable('需逐词核对的异常调号',['词条ID','原形','释义','问题'],p.anomalies.map(a=>[a.id,phon(a.term),a.meaning,a.issue])):''}<div class="detail-actions"><a href="notation-coverage.json" download>下载全部未转换记录（含原形与原因）</a><button id="export-notation-review">导出审核稿（含规则和结论）</button><button id="import-notation-review">导入审核结论</button><input type="file" id="notation-review-file" accept="application/json" hidden></div></section>`}
 function importNotationReviews(data){if(data.version!==1||!data.reviews||typeof data.reviews!=='object')throw Error('invalid');const valid=new Set(NOTATION_CONFIG.profiles.flatMap(p=>[...(p.rules||[]),...(p.reviewItems||[])].map(r=>r.id)));for(const [id,v] of Object.entries(data.reviews)){if(!valid.has(id)||!v||!['pending','accept','revise','reject'].includes(v.status))continue;notationReviews[id]={status:v.status,note:typeof v.note==='string'?v.note:'',updatedAt:typeof v.updatedAt==='string'?v.updatedAt:''}}localStorage.setItem('tujia-notation-reviews-v1',JSON.stringify(notationReviews))}
 function bindSourceReview(){function save(id,key,value){notationReviews[id]={status:'pending',note:'',...notationReviews[id],[key]:value,updatedAt:new Date().toISOString()};try{localStorage.setItem('tujia-notation-reviews-v1',JSON.stringify(notationReviews));toast('审核结论已保存至本机')}catch{toast('保存失败，请导出审核稿')}}document.querySelectorAll('[data-rule-review]').forEach(el=>el.onchange=()=>save(el.dataset.ruleReview,'status',el.value));document.querySelectorAll('[data-rule-note]').forEach(el=>el.onchange=()=>save(el.dataset.ruleNote,'note',el.value));const ex=document.querySelector('#export-notation-review');if(ex)ex.onclick=()=>download('tujia-notation-review.json',{version:1,profiles:NOTATION_CONFIG.profiles.filter(p=>p.rules),reviews:notationReviews});const im=document.querySelector('#import-notation-review'),file=document.querySelector('#notation-review-file');if(im)im.onclick=()=>file.click();if(file)file.onchange=async e=>{try{importNotationReviews(JSON.parse(await e.target.files[0].text()));render();toast('审核结论已导入')}catch{toast('无效审核文件，未导入')}}}

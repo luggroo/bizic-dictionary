@@ -1,0 +1,15 @@
+/* Compact, inspectable source correspondence tables. */
+.np-matrix table{table-layout:fixed;width:100%}
+.np-matrix thead th{white-space:pre-line;line-height:1.4;font-size:12px;vertical-align:bottom}
+.np-matrix tbody th{font-size:14px;font-weight:600;white-space:nowrap;text-align:left}
+.np-matrix .np-key{width:94px}
+.np-matrix td,.np-matrix th{padding:8px 9px;overflow-wrap:normal;word-break:normal;vertical-align:top}
+.np-cell{border:0;background:transparent;padding:0;text-align:left;font:inherit;color:inherit;line-height:1.45;white-space:normal;overflow-wrap:normal;border-bottom:1px dotted currentColor;border-radius:0;cursor:pointer}
+.np-cell:hover,.np-cell:focus-visible{background:var(--bg);color:var(--green);outline-offset:3px}
+.np-cell sup{font-size:10px;margin-left:3px}
+.np-empty{display:block;min-height:1.4em}
+.np-notes{line-height:1.8;margin:16px 0}
+.np-audit{margin-top:20px}
+.np-audit table{table-layout:auto}
+#detail-body h3 small{font-size:12px;font-weight:400}
+@media(max-width:1000px){.np-matrix table{width:max-content;min-width:100%;table-layout:auto}.np-matrix thead th:not(:first-child),.np-matrix td{min-width:88px;max-width:135px}.np-matrix tbody th{min-width:82px}.np-matrix th:first-child,.np-matrix td:first-child{position:sticky;left:0;background:var(--bg,#fff);z-index:1}}

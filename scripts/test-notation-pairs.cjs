@@ -1,0 +1,61 @@
+const fs=require('fs'),vm=require('vm'),assert=require('node:assert/strict');
+const path=require('node:path'),zlib=require('node:zlib');
+const root=process.argv[2]||path.resolve(__dirname,'../site');
+const out=process.argv[3];
+const read=f=>fs.existsSync(root+'/'+f)?fs.readFileSync(root+'/'+f,'utf8'):zlib.gunzipSync(fs.readFileSync(root+'/'+f+'.gz')).toString('utf8');
+const D=JSON.parse(read('data.json'));Object.assign(D,JSON.parse(read('dictionary.json')));
+const context={D,console,localStorage:{getItem(){return null}},document:{addEventListener(){}},E:s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),state:{},pageHeader:()=>'',fetch:async f=>({ok:true,json:async()=>JSON.parse(read(f))})};
+vm.createContext(context);
+for(const f of ['notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js','notation-pairs.js','word-merge-groups.js','word-merge.js','comparison-merge.js'])vm.runInContext(read(f),context,{filename:f});
+(async()=>{
+ await vm.runInContext('loadYubao(D)',context);
+ context.S=Object.fromEntries(D.sources.map(s=>[s.id,s]));
+ vm.runInContext('mergeDictionaryWords(D);mergeComparisons(D)',context);
+ console.time('full-pair-audit');
+ const report=JSON.parse(JSON.stringify(vm.runInContext(`(()=>{const audit=notationPairAudit(D);return Object.fromEntries([...audit.sources].map(([id,s])=>[id,{records:s.records,syllables:s.syllables,paired:s.paired,stored:s.stored,linked:s.linked,generated:s.generated,unresolved:s.unresolved,onsets:Object.fromEntries([...s.onset].map(([k,m])=>[k,[...m.keys()]])),rimes:Object.fromEntries([...s.rime].map(([k,m])=>[k,[...m.keys()]])),tones:Object.fromEntries([...s.tone].map(([k,m])=>[k,[...m.keys()]]))}]))})()`,context)));
+ console.timeEnd('full-pair-audit');
+ if(out)fs.writeFileSync(path.join(out,'notation-pair-audit.json'),JSON.stringify(report,null,2));
+ for(const [id,s]of Object.entries(report))console.log(id,JSON.stringify({records:s.records,syllables:s.syllables,paired:s.paired,stored:s.stored,linked:s.linked,generated:s.generated,rimes:Object.fromEntries(['e','ei','en','i','ian','ang','ie'].map(k=>[k,s.rimes[k]||[]]))}));
+ assert.deepEqual(report['zhou-fx'].rimes.i.sort(),['ei','i']);
+ for(const value of ['ɿ','ɨ','ɯ','ɤ','ɯe','ɯi'])assert(!Object.values(report['zhou-fx'].rimes).flat().includes(value),'FX contamination: '+value);
+ assert.deepEqual(report['zhou-fx'].rimes.en,['en']);
+ assert.equal(report['stedt-7fd6565400'].records,1004);
+ assert.equal(report['stedt-610ab69a37'].records,1246);
+ assert.equal(report['stedt-24cc5bbb03'].records,151);
+ assert.equal(report['yubao-60756'].records,2883);
+ assert.equal(report['yubao-60757'].records,2008);
+ assert.equal(report['yubao-60823'].records,2990);
+ assert.equal(report['zhou-fx'].records,370);
+ assert.equal(report['zhou-xr'].records,342);
+ assert.deepEqual(report['zhou-xr'].tones['r|ǎ'].sort(),['33','54']);
+ for(const id of ['stedt-7fd6565400','stedt-610ab69a37'])assert(!report[id].rimes.i.includes('ɨ')&&!report[id].rimes.i.includes('ɿ'));
+ // Accepted-input noise must not appear unless an actual record produces that pair.
+ assert.equal(vm.runInContext(`(()=>{const p=NOTATION_CONFIG.profiles.find(p=>p.id==='zhou-fx');return Object.hasOwn(p.rhymeMap,'ɯ')})()`,context),false);
+ // Source IDs on a common document must not mix TS and FX.
+ assert(!report['zhou-fx'].rimes.i.includes('ɨ'));
+ const wordA={id:'np-synthetic',zh:'test',attestations:[{id:'np-A',source:'stedt-7fd6565400',term:'li55',dialect:'北部'}],notations:{ye:[{text:'gar',profile:'stedt-610ab69a37',attestationIds:['np-B']}]}};
+ context.synthetic={words:[wordA],reconstructions:[]};
+ assert.equal(vm.runInContext(`npRecords(synthetic,'stedt-7fd6565400')[0].stored.length`,context),0);
+ // Stored exact pairs win over recomputation.
+ wordA.notations.ye.push({text:'lif',profile:'stedt-7fd6565400',attestationIds:['np-A'],method:'user-reviewed'});
+ assert.equal(vm.runInContext(`npIndexSource(synthetic,'stedt-7fd6565400').stored`,context),1);
+ // No data at a different point may supply the FX column.
+ context.empty={words:[],reconstructions:[{id:'synthetic-ts',dataset:'原始比较表 · all syllables',reflexes:{TS:'kɨ21'},locator:'test'}]};
+ assert.equal(vm.runInContext(`npRecords(empty,'zhou-fx').length`,context),0);
+ assert.equal(vm.runInContext("npSpellingSyllables('err')[0].rime",context),'er');
+ assert.equal(vm.runInContext("npSpellingSyllables('jierr')[0].rime",context),'ier');
+ const index=read('index.html');assert(index.includes('href="notation-pairs.css?'));assert.equal((index.match(/src="notation-pairs.js/g)||[]).length,1);
+ let html=vm.runInContext('notationGuide()',context);
+ if(out)fs.writeFileSync(path.join(out,'notation-guide.html'),html);
+ assert(!html.includes('Matisoff'));
+ assert(html.includes('data-pair-source="zhou-fx"'));
+ const sourceReview=vm.runInContext(`sourceReviewView(NOTATION_CONFIG.profiles.find(p=>p.id==='zhou-fx'))`,context);
+ assert(!sourceReview.includes('ɯi'));
+ const syn=read('notation-ui.js');assert(!syn.includes('mappedSource(')&&!syn.includes('notationSourceRimeInventory'));
+ assert.equal(vm.runInContext("convertNotation('kei21','zhou-fx').rows[0].ye",context),'gir');
+ assert.equal(vm.runInContext("convertNotation('ei35','zhou-fx').rows[0].ye",context),'hxif');
+ assert.equal(vm.runInContext("convertNotation('en35','zhou-fx').rows[0].ye",context),'enf');
+ assert(vm.runInContext("!!convertNotation('kɯ21','zhou-fx').error",context));
+ assert.equal(vm.runInContext("convertNotation('ʑiau55','zhou-xr').rows[0].ye",context),'yaox');
+ console.log('All regression tests passed.');
+})().catch(e=>{console.error(e);process.exitCode=1});
