@@ -240,51 +240,20 @@ function notationMatrix(place){
    }
    return [];
   }
-  // Zhou 2020 is a comparative source shared by multiple survey points.
-  // Its attestations cannot be treated as a separate Zhang dictionary inventory.
-  if(src.id==='zhou-fx'&&kind==='rime'){
-   // Zhang: i/ei is restricted by onset. Other verified rhyme symbols
-   // retain their own point-specific mappings; never use generic candidates.
-   const special={i:['i','ei'],ei:['ei']};
-   if(Object.hasOwn(special,key))return special[key];
-   return Object.entries(p.rhymeMap||{}).filter(([raw,targets])=>{
-    const rule=(p.rules||[]).find(x=>x.kind==='韵母'&&x.raw===raw);
-    return rule?.status==='用户已确认'&&(targets||[]).some(t=>standardBrassettToYe(t)===key);
-   }).map(([raw])=>raw);
-  }
+  // Phonological correspondences are organized by the individual source's
+  // documented sound system. Word-level inventory is supporting evidence only.
+  // Do not use another survey point's attestations to infer this inventory.
   const inventory=notationSourceRimeInventory().get(p.id);
-  // Profiles drawn from Zhou's comparative file share one source ID.
-  // Without point-tagged attestations, restrict their column to explicitly
-  // documented source-specific correspondences.
-  const sharedZhou=/^zhou-(?:ts|fx|xr|xl)$/.test(src.id);
-  // Source-specific phonological tables remain available even when the
-  // comparative document does not supply point-tagged dictionary entries.
   return Object.entries(dictionary).filter(([raw,targets])=>{
    if(!(targets||[]).some(t=>(kind==='rime'?standardBrassettToYe(t):t)===key))return false;
+   const rule=(p.rules||[]).find(x=>x.kind===(kind==='rime'?'韵母':'声母')&&x.raw===raw);
+   if(rule?.status==='候选待审'&&kind==='rime'){
+    // Speculative one-to-many conversions must not produce asserted allophones.
+    if((targets||[]).length!==1)return false;
+    // The unambiguous source symbol can be shown, but not an invented variant.
+   }
+   // For genuinely word-attested records, discard nonexistent raw symbols.
    if(inventory?.terms&&!(kind==='rime'?inventory.rimes:inventory.onsets).has(raw))return false;
-   if(kind==='rime'){
-    const rule=(p.rules||[]).find(x=>x.kind==='韵母'&&x.raw===raw);
-    // Do not display speculative mappings as independent phonetic variants.
-    if(rule?.status==='候选待审'&&!inventory?.rimes?.has(raw))return false;
-    // A reverse lookup with multiple target spellings is not a proof
-    // that each target occurs in this source; check the syllable conditions.
-    const candidateOnsets=Object.keys(p.onsetMap||{}).filter(Boolean);
-    const valid=candidateOnsets.some(on=>{
-     const mapped=sourceSyllableCores(on+raw,p);
-     return (mapped||[]).some(core=>{
-      const spellings=(p.onsetMap[on]||[]).flatMap(x=>(p.rhymeMap[raw]||[]).map(y=>x+y));
-      return mapped.includes(core)&&spellings.some(z=>standardBrassettToYe(z)===key);
-     });
-    });
-    if(candidateOnsets.length&&!valid)return false;
-   }
-   if(sharedZhou){const rule=(p.rules||[]).find(x=>x.kind===(kind==='rime'?'韵母':'声母')&&x.raw===raw);if(!rule||rule.status==='候选待审')return false;}
-   // A reverse conversion is not evidence of an attested source sound.
-   // For ambiguous ang spellings, only retain source-specific reviewed rules.
-   if(kind==='rime'&&key==='ang'){
-    const rule=(p.rules||[]).find(x=>x.kind==='韵母'&&x.raw===raw);
-    return rule?.status==='用户已确认';
-   }
    return true;
   }).map(([raw])=>raw);
  }
@@ -310,7 +279,7 @@ function notationMatrix(place){
  ['v · à','4','51','53','53','—','53','—']];
  const yangTone=[['x · ā','55','55'],['f · á','35','35'],['r · ǎ','33 / 54','33'],['v · à','—','53']];
  const tone=notationGuideTable('声调',headings,isYang?yangTone:longTone);
- const intro='<p class="tiny">Brassett 拼音单列，其他列显示各材料的 IPA 音值。空白表示该来源尚无可靠对应，多项原记号以 / 分隔。各调查点仅列已核对应；张伟权 i、ei 的对应随声母环境改变；其余只列已核定的拼写规则。Zhou 各调查点的声韵表仅取各自已核规则；条件变体在下方注明。词条未分调查点的数据不参与音值统计。</p>';
+ const intro='<p class="tiny">Brassett 拼音单列，其他列显示各材料的 IPA 音值。空白表示该来源尚无可靠对应，多项原记号以 / 分隔。声韵母优先依据各材料独立音系表列出。仅有候选关系的多向转换不列作确定音值；条件读音另作说明。词条统计用于交叉检查，不能替代音系分析。</p>';
  const notes=isYang?
  '<p class="tiny">声韵注：① 仙仁 /ʑ/ 与 /j/ 的 y 写法须检查介音组合，yiao 等形式已规范为 yao。② 阳朝语保 ȵ 按 ni 处理，腭音后的 e／ɛ 按整音节规则写 jie、qie、xie、ye；原始 IPA 保留。③ 语保阳朝原始词表中 i（780次）、ɿ（495次）、e（351次）、ə（253次）以及 eŋ（176次）均有记录，独立统计。</p><p class="tiny">声调注：Zhou 仙仁 54→r、55→x，33→r；语保阳朝按 55、35、33、53 的表层调值处理。</p>':
  '<p class="tiny">声韵注：① Brassett 的独立韵母 i：g、h、k、hh 后读 [ɨ]，z、c、s、r 后读 [ɿ]。② Brassett hh→叶式 hx，eng→en，ing→in，uo→o。③ Zhou 各点 e／ie、o／uo 及 i 的读法有声母条件；对应须核对具体声母。④ 语保龙山原始词表中 i（568次）、ɿ（367次）、ɯ（107次）、ei（12次）、ian（47次）均有记录；不同音类保留区别。</p><p class="tiny">声调注：① Brassett 的 1–4 为原书调类，Brassett 提供他砂的 IPA 音值。② 龙山语保当前按表层音值归并 55／53／33→x、24→f、22／21→r。</p>';
