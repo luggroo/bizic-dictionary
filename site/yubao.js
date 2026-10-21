@@ -20,10 +20,13 @@ function dialectTags(item){
   const src=S[id];if(src?.dialect==='北部'||src?.dialect==='南部')tags.add(src.dialect);
  }
  const locations=[item.location,...(item.locations||[])].filter(Boolean);
- for(const place of locations){if(/龙山|他砂|靛房|坡脚/.test(place)){tags.add('龙山');tags.add('北部')}if(/碗米坡/.test(place)){tags.add('保靖碗米坡');tags.add('北部')}if(/仙仁|阳朝/.test(place)){tags.add('保靖阳朝');tags.add('北部')}}
+ for(const place of locations){if(/龙山|他砂|靛房|坡脚/.test(place)){tags.add('龙山');tags.add('北部')}if(/保靖/.test(place)){tags.add('保靖');tags.add('北部')}if(/碗米坡/.test(place)){tags.add('保靖碗米坡');tags.add('北部')}if(/仙仁|阳朝/.test(place)){tags.add('保靖阳朝');tags.add('北部')}}
+ if(tags.has('北部')&&!['龙山','保靖','保靖阳朝','保靖碗米坡','南部'].some(t=>tags.has(t)))tags.add('龙山');
  dialectCache.set(item,tags);return tags;
 }
 function dialectMatches(item){return !state.dialect||dialectTags(item).has(state.dialect)}
+function wordVarietyInfo(w){const tags=dialectTags(w),loc=String(w.location||'').trim();if(tags.has('保靖阳朝'))return {label:'保靖阳朝',kind:'yangchao'};if(tags.has('保靖碗米坡'))return {label:'保靖碗米坡',kind:'wanmipo'};if(tags.has('保靖'))return {label:loc||'保靖',kind:'baojing'};if(tags.has('龙山')||tags.has('北部'))return {label:'龙山',kind:'longshan'};if(tags.has('南部'))return {label:loc||'南部',kind:'south'};return {label:loc||w.dialect||'未标明',kind:'other'}}
+function wordVarietyPill(w){const v=wordVarietyInfo(w);return `<span class="pill variety-pill variety-${v.kind}">${E(v.label)}</span>`}
 function corpusCitation(c){return [c.title,S[c.source]?.title,'编号 '+c.code,c.page?'PDF 第 '+c.page+' 页':'',S[c.source]?.url,S[c.audio]?.url?'录音：'+S[c.audio].url:''].filter(Boolean).join('；')}
 async function loadYubao(data){
  const manifest=await fetch('yubao-manifest.json').then(r=>{if(!r.ok)throw Error('Survey manifest unavailable');return r.json()});

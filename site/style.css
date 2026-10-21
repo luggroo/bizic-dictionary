@@ -83,3 +83,12 @@
 .shell>header{height:auto;min-height:78px;padding-top:10px;padding-bottom:10px}
 .dialog-head{flex-wrap:wrap;gap:8px}
 @media(max-width:600px){#spelling-control{order:3;flex-basis:100%}.spelling-selector{font-size:12px;gap:5px}.spelling-selector select{min-width:0;max-width:145px;padding:6px}.shell>header{min-height:56px}#detail-spelling-control{order:3;flex-basis:100%}.dialog-head>button{margin-left:auto}}
+
+/* Survey point badges: southern blue; northern red/orange/yellow. */
+.pill.variety-pill{font-weight:600;border:1px solid transparent}
+.pill.variety-longshan{background:#fde8e7;color:#8e1e1b;border-color:#ecaca7}
+.pill.variety-baojing{background:#fff1dc;color:#7c410a;border-color:#edc18c}
+.pill.variety-yangchao{background:#ffedd5;color:#8b3b0d;border-color:#fac79b}
+.pill.variety-wanmipo{background:#fff6ca;color:#765008;border-color:#e4cb6e;border-style:dashed}
+.pill.variety-south{background:#dfeeff;color:#1848a0;border-color:#a9cbf6}
+.pill.variety-other{background:#edf2eb;color:#57705d;border-color:#d9e3d7}
