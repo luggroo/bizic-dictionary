@@ -1681,20 +1681,24 @@
       "reviewEvidence": "语保碗米坡 1678「牛犊」uã13pi55，龙山 1678 pu24pi24；本条 wu35pi35 对应年轻牛只"
     },
     "stedt-rn-288775": {
-      "zh": "菜肴；盘子（汉义待确认）",
-      "status": "pending",
+      "zh": "菜",
+      "status": "confirmed",
       "previousZh": "菜肴；盘子（原义未细分）",
       "term": "xa⁵⁵tshe⁵⁵",
       "en": "dish",
-      "enNote": "Note: possible recording error"
+      "enNote": "English 'dish' refers to food/a prepared dish (菜), not a plate or serving vessel.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "用户核定：英文 dish 在本条表示菜；tshe／tshie 与汉语「菜」的借词读音相符。原文 IPA 保留。"
     },
     "stedt-rn-200403": {
-      "zh": "菜肴；盘子（汉义待确认）",
-      "status": "pending",
+      "zh": "菜",
+      "status": "confirmed",
       "previousZh": "菜肴；盘子（原义未细分）",
       "term": "xa⁵⁵tshie⁵⁵",
       "en": "dish",
-      "enNote": "Note: possible recording error"
+      "enNote": "English 'dish' refers to food/a prepared dish (菜), not a plate or serving vessel.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "用户核定：英文 dish 在本条表示菜；tshe／tshie 与汉语「菜」的借词读音相符。原文 IPA 保留。"
     },
     "stedt-rn-204432": {
       "zh": "火车",
