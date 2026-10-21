@@ -1,1 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 240" role="img" aria-label="溪州铜柱简化复原标志"><g fill="none" stroke="#164d45" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"><path fill="#164d45" stroke="none" d="M80 19 103 38 119 44 119 50 41 50 41 44 57 38Z"/><path d="M58 58 70 52H90L102 58V187L90 193H70L58 187Z" fill="#164d45"/><path d="M70 63V177M90 63V177" stroke="#f7f7f0" stroke-width="2.5"/><path d="M52 194Q36 180 28 185Q35 210 64 211M108 194Q124 180 132 185Q125 210 96 211M80 187Q58 200 80 215Q102 200 80 187Z" fill="#164d45"/><path d="M42 219H118L127 228H33Z" fill="#164d45"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 112" role="img" aria-label="溪州铜柱示意标志">
+  <g fill="#164d45">
+    <path d="M20 8H76V18H20Z"/>
+    <path d="M24 22H72V87H24Z"/>
+    <path d="M18 91H78V98H18ZM10 102H86V109H10Z"/>
+  </g>
+  <path d="M24 22H34V87H24ZM62 22H72V87H62Z" fill="#2e675b"/>
+  <g fill="none" stroke="#f7f7f0" stroke-width="2.5" stroke-linecap="square">
+    <path d="M34 26V83M62 26V83"/>
+    <path d="M43 33H53M43 42H53M43 51H53M43 60H53M43 69H53M43 78H53"/>
+  </g>
+</svg>
