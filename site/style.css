@@ -92,3 +92,5 @@
 .pill.variety-wanmipo{background:#fff6ca;color:#765008;border-color:#e4cb6e;border-style:dashed}
 .pill.variety-south{background:#dfeeff;color:#1848a0;border-color:#a9cbf6}
 .pill.variety-other{background:#edf2eb;color:#57705d;border-color:#d9e3d7}
+/* Keep selected actions legible while hovered or focused. */
+button.primary:hover,button.primary:focus-visible{background:var(--green);color:white;border-color:var(--green)}
