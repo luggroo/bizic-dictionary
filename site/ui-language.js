@@ -4,9 +4,9 @@
   let language = 'zh';
   try { if (localStorage.getItem('tujia-ui-language') === 'en') language = 'en'; } catch {}
   const labels = Object.freeze({
-    brand: 'bifzixkar afhxix', words: 'cixcix nix', grammar: 'sar qinrmox lir',
+    brand: 'bifzixkar afhxix', home: '这里有什么', words: 'cixcix nix', grammar: 'sar qinrmox lir',
     notation: 'sar qinrmox af', corpus: 'sar tux', sources: 'cixpux jierxif',
-    saved: 'suxsux-civ', search: 'nix', save: 'suxsux'
+    saved: 'suxsux-civ', history: 'sumu nie sa', search: 'nix', save: 'suxsux'
   });
   const textMemory = new WeakMap(), attributeMemory = new WeakMap();
   const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
@@ -38,7 +38,7 @@
     return typeof spellingDisplay !== 'undefined' && spellingDisplay === 'ye' ? ye : yeToAccent(ye);
   }
   function decorate() {
-    for (const key of ['words','grammar','notation','corpus','sources','saved']) {
+    for (const key of ['words','grammar','notation','history','corpus','sources','saved']) {
       const target = document.querySelector('nav [data-view="'+key+'"] > span');
       if (target && !target.querySelector('[data-ui-tujia]')) {
         const small = document.createElement('small');
@@ -49,7 +49,7 @@
     const hero = document.querySelector('.hero h1');
     if (hero && !hero.querySelector('[data-ui-tujia]')) {
       const small = document.createElement('small');
-      small.className = 'tujia-ui hero-tujia'; small.dataset.uiTujia = 'brand'; small.lang = 'tji';
+      small.className = 'tujia-ui hero-tujia'; small.dataset.uiTujia = 'home'; small.lang = 'tji';
       hero.append(small);
     }
     document.querySelectorAll('#search-form button[type="submit"]').forEach(button => {
