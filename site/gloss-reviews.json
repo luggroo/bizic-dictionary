@@ -1737,12 +1737,14 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-453833": {
-      "zh": "藏；兽皮（汉义待确认）",
-      "status": "pending",
+      "zh": "藏",
+      "status": "confirmed",
       "previousZh": "藏；兽皮（原义未细分）",
       "term": "ye⁴",
       "en": "hide",
-      "enNote": "Note: possible recording error"
+      "enNote": "English 'hide' means 'to conceal' here, not animal skin.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "用户核定：本词 hide 为动词「藏」，可与其他材料的「藏」词条对照；原始记音 ye⁴ 保留。"
     },
     "stedt-rn-454796": {
       "zh": "吟唱；叹息；呻吟（汉义待确认）",
