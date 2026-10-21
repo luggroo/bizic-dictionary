@@ -19,9 +19,10 @@ const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.s
  fs.writeFileSync('/tmp/boundary-results.json',JSON.stringify({annotated:annotated.length,changed},null,2));
  function check(id,expected){const w=data.words.find(w=>w.id===id||w.mergedWordIds?.includes(id));assert(w,id);ctx.w=w;const forms=vm.runInContext("spellingDisplay='accent';completeSpellings(w).map(v=>v.text)",ctx);assert(forms.includes(expected),id+' '+forms.join(' / '));}
  check('stedt-rn-289159','résū sū');check('stedt-rn-218406','riésū sū');
+ check('w2404','wú-bī');check('w107','ádā-bí');check('w286','bízī-kǎ');check('w2697','zǐ báng-mā');check('w1427','lō-bǐ-diě');check('w2555',"yě'àyǐ-mā");check('yubao-60823-v-0275','mo-àba');
  check('w1255','là pō');check('yubao-60757-v-0278','hāliě-ābā');check('yubao-60756-v-0278','hālēi-bā');check('yubao-60823-v-0278','hāliē-àba');check('yubao-60756-v-1220','sǔsǔ qǐcǎ');check('yubao-60823-v-1220','súsù pong');
  check('w2971','ǎsǐ-kūlī');check('w1511','mětī-kūlī');check('w508','cò zù');check('w1629','nié-biētà');check('w1435','lò cái');
- for(const id of ['w1429','w363','w584','w630','w962','w1437','w1493','w1229']){const w=data.words.find(w=>w.id===id||w.mergedWordIds?.includes(id));assert(!w.spellingBoundaries,id+' must remain unsplit');}
+ for(const id of ['w46','w717','w1534','w1225','w1429','w363','w584','w630','w962','w1437','w1493','w1229']){const w=data.words.find(w=>w.id===id||w.mergedWordIds?.includes(id));assert(!w.spellingBoundaries,id+' must remain unsplit');}
  for(const w of data.words)delete w.spellingBoundaries;
  assert.equal(JSON.stringify(data.words),before,'only boundary metadata may change');
  console.log('PASS: '+annotated.length+' annotated entries; source records, IPA, senses and IDs unchanged; reviewed boundaries render in both spelling modes.');
