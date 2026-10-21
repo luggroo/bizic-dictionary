@@ -165,7 +165,7 @@ function southernOnsetOrder([ipa,spell]){return onsetSortKey(spell[0]);}
 function notationMatrix(place){
  const isYang=place==='yangchao';
  const sources=isYang?
-  [{title:'Zhou 2020 · 仙仁',id:'zhou-xr',kind:'profile'},{title:'中国语保 · 阳朝',id:'60756',kind:'survey'}]:
+  [{title:'田静《仙仁土家语研究》（via Zhou 2020）',id:'zhou-xr',kind:'profile'},{title:'中国语保 · 阳朝',id:'60756',kind:'survey'}]:
   [{title:'他砂 · Brassett 拼音／Zhou IPA',id:'zhou-ts',kind:'tasha'},{title:'Zhou 2020 · 拉西峒',id:'zhou-fx',kind:'profile'},{title:'Sun 1991',id:'stedt-7fd6565400',kind:'profile'},{title:'Huang & Dai 1992',id:'stedt-610ab69a37',kind:'profile'},{title:'Chen 1986',id:'stedt-24cc5bbb03',kind:'profile'},{title:'Matisoff PC',id:'stedt-7d44caef06',kind:'profile'},{title:'中国语保 · 龙山',id:'60757',kind:'survey'}];
  const profiles=Object.fromEntries(NOTATION_CONFIG.profiles.map(p=>[p.id,p]));
  const southernUnrelated=''; // Tables in this section cover Northern survey points only.
@@ -233,7 +233,7 @@ function notationGuide(){
  return `<section class="panel"><h2>拼音与调查点</h2><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p></section>
  <section class="panel"><h2>龙山</h2><p>声母、韵母和声调按来源横向对照。左列为本站拼音；Brassett 2004、2006 与 Zhou 2020 他砂合为一列，结合拼音和 IPA 音值。</p>
  ${notationMatrix('longshan')}</section>
- <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>Zhou 2020 仙仁与中国语保阳朝资料的声韵调对照。</p>
+ <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>田静《仙仁土家语研究》（via Zhou 2020）与中国语保阳朝资料的声韵调对照。</p>
  ${notationMatrix('yangchao')}</section>
  <section class="panel"><h2>保靖 · 碗米坡</h2><p>独立按照调查点的表层声调转写。33 与 31 在叶式中都写 r，但调号拼音中分别为不标调和 ǎ。</p>
  ${notationSurveyTables('60823')}</section>
