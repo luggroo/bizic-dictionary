@@ -28,12 +28,13 @@
       "enNote": "Note: possible recording error"
     },
     "w1392": {
-      "zh": "风水；天气（汉义待确认）",
-      "status": "pending",
+      "zh": "天气",
+      "status": "confirmed",
       "previousZh": "风水",
       "term": "long3",
       "en": "weather",
-      "enNote": "Note: possible recording error"
+      "reviewEvidence": "Brassett 原英文 weather；原中文「风水」不符。",
+      "reviewedAt": "2026-10-21"
     },
     "w1754": {
       "zh": "买",
@@ -90,12 +91,13 @@
       "enNote": "Note: possible recording error"
     },
     "w2449": {
-      "zh": "交差；无法应付（汉义待确认）",
-      "status": "pending",
+      "zh": "无法应付",
+      "status": "confirmed",
       "previousZh": "交差",
       "term": "xia1xi1",
       "en": "to be unable to deal with",
-      "enNote": "Note: possible recording error"
+      "reviewEvidence": "原英文 to be unable to deal with；不支持「交差」义。",
+      "reviewedAt": "2026-10-21"
     },
     "w2680": {
       "zh": "正在",
@@ -332,12 +334,13 @@
       "reviewEvidence": "Brassett 中文词表 w2352「瘦」；语保龙山 0962/0965「瘦」uai55"
     },
     "w5535": {
-      "zh": "交差；无法应付（汉义待确认）",
-      "status": "pending",
+      "zh": "无法应付",
+      "status": "confirmed",
       "previousZh": "交差",
       "term": "xia1 xi1",
       "en": "unable to deal with",
-      "enNote": "Note: possible recording error"
+      "reviewEvidence": "原英文 unable to deal with；与 w2449 同词形。",
+      "reviewedAt": "2026-10-21"
     },
     "stedt-rn-453895": {
       "zh": "小姐姐",
@@ -613,12 +616,13 @@
       "reviewEvidence": "语保碗米坡 2544「口弦」khɤu⁵⁵ɕiã³³，潭溪 2544 khʉ²¹tɕi¹³；本条 khou⁵⁵tɕhin²¹ 属口簧类乐器，采用「口弦」"
     },
     "stedt-rn-289751": {
-      "zh": "棍；粘（汉义待确认）",
-      "status": "pending",
+      "zh": "棍子",
+      "status": "confirmed",
       "previousZh": "棍；粘（原义未细分）",
       "term": "kho³⁵h̄o²¹",
       "en": "stick",
-      "enNote": "Note: possible recording error"
+      "reviewEvidence": "英语 stick 的名词义；同组其他来源「棍子」记录提供语义对照，词形仍需单独比对。",
+      "reviewedAt": "2026-10-21"
     },
     "stedt-rn-288782": {
       "zh": "谷壳",
@@ -1266,12 +1270,13 @@
       "en": "lose"
     },
     "stedt-rn-288498": {
-      "zh": "时间；次（汉义待确认）",
-      "status": "pending",
+      "zh": "时间",
+      "status": "confirmed",
       "previousZh": "时间；次（原义未细分）",
       "term": "si²¹tɕe³⁵~si²¹ka³⁵",
       "en": "time",
-      "enNote": "Note: possible recording error"
+      "reviewEvidence": "与 si²¹tɕie²¹「时节／时间」同词根 si-tɕe；英语 time，不支持次数。",
+      "reviewedAt": "2026-10-21"
     },
     "stedt-rn-383001": {
       "zh": "时节；时间",
