@@ -94,3 +94,12 @@
 .pill.variety-other{background:#edf2eb;color:#57705d;border-color:#d9e3d7}
 /* Keep selected actions legible while hovered or focused. */
 button.primary:hover,button.primary:focus-visible{background:var(--green);color:white;border-color:var(--green)}
+
+/* Compact source headings in phonological comparison matrices. */
+.notation-matrix .table-wrap{overflow-x:auto}
+.notation-matrix table{width:100%;table-layout:fixed}
+.notation-matrix th,.notation-matrix td{min-width:0;overflow-wrap:anywhere;word-break:normal}
+.notation-matrix th{white-space:pre-line;vertical-align:bottom;line-height:1.35;font-size:12px}
+.notation-matrix th:first-child{width:90px}
+.notation-source-via{display:block;font-size:.68em;font-weight:400;color:var(--muted);margin-top:3px}
+@media(max-width:900px){.notation-matrix table{width:max-content;min-width:100%;table-layout:auto}.notation-matrix th:not(:first-child),.notation-matrix td:not(:first-child){max-width:145px;min-width:105px}}
