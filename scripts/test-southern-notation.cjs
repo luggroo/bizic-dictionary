@@ -42,3 +42,5 @@ for(const [ipa,poj] of [['je33','ie'],['ji55','ī'],['ja35','iá'],['jy55','ǖ']
 console.log('PASS: vowel-initial glide spelling, no duplicate i/u, rounded front vowel, fricative distinction');
 
 assert.equal(ctx.southernSpelling('ɣɨe³⁵','stedt-cb523fc3dc').poj,'ghé');
+
+for(const raw of ['ħa33','ʕa33','h̄a33','ẖa33','xa33']){assert.equal(ctx.southernSpelling(raw,'stedt-cb523fc3dc').accent,'ha');assert.equal(ctx.southernSpelling(raw,'stedt-cb523fc3dc').poj,'ha');}
