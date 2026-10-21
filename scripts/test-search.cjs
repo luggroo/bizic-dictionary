@@ -6,3 +6,18 @@ for(const [text,q] of [['miē','mie'],['mié','mie'],['miě','mie'],['miè','mie
 assert.equal(vm.runInContext("contains('lü','lu')",c),false);
 assert.notEqual(vm.runInContext("normalize('miē')",c),vm.runInContext("normalize('mié')",c),'dedup keys retain tones');
 console.log('PASS: toneless searches, v/ü alias, ü/u distinction and tone-sensitive identity');
+vm.runInContext("const state={q:'',exact:false,searchLanguage:''};function wordForms(w){return w.forms||[]}",c);
+vm.runInContext(app.slice(app.indexOf('const wordSearchIndex='),app.indexOf('function wordMatches(')),c);
+function score(w,q,lang='',exact=false){c.w=w;c.query=q;c.lang=lang;c.exact=exact;return vm.runInContext('state.q=query;state.searchLanguage=lang;state.exact=exact;wordSearchScore(w)',c)}
+for(const en of ['first (in time)','paste / glue / stick','Miao (nationality)','mantis','reactionary','hold meeting','intestines; bowels','stir-fry'])assert.equal(score({forms:['ba'],en},'ti'),0,en);
+assert.equal(score({forms:['tí'],en:'carry'},'ti'),100);
+assert.equal(score({forms:['tí'],en:'carry'},'ti','en'),0);
+assert(score({forms:['ba'],en:'cut; clip; trim'},'clip','en')>0);
+assert.equal(score({forms:['ba'],en:'clipping'},'clip','en'),0);
+assert.equal(score({forms:['ba'],en:'hold meeting'},'hold meeting','en'),100);
+assert(score({forms:['lüè']},'lve','tujia')>0);
+assert.equal(score({forms:['lüè']},'lue','tujia'),0);
+assert.equal(score({forms:['ba'],zh:'姐姐; 堂姐'},'姐姐','zh',true),100);
+assert.equal(score({forms:['tia']},'ti','tujia',true),0);
+assert.equal(score({forms:['tí']},'ti','zh'),0);
+console.log('PASS: language scopes, English tokens, ti noise rejection, spelling ranking and exact sense matching');

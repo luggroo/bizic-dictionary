@@ -4,7 +4,7 @@ const $=s=>document.querySelector(s), E=s=>String(s??'').replace(/[&<>"']/g,c=>(
 const normalize=s=>String(s??'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
 const searchNormalize=s=>normalize(s).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').replace(/a\u0308/g,'a').normalize('NFC').replace(/v/g,'ü');
 const contains=(s,q)=>searchNormalize(s).includes(searchNormalize(q));
-let state={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false}, compare=new Set(), currentDetail=null;
+let state={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,searchLanguage:''}, compare=new Set(), currentDetail=null;
 let saved={},notes={};try{saved=JSON.parse(localStorage.getItem('tujia-saved')||'{}');notes=JSON.parse(localStorage.getItem('tujia-notes')||'{}')}catch{}
 const titles={notation:'记音对应与补全',home:'知识总览',words:'词汇检索',topics:'语法与专题',corpus:'语料',sources:'文献目录',saved:'我的收藏',history:'历史比较',grammar:'参考语法'};
 const descriptions={notation:'',words:'',topics:'按主题浏览研究文献。',corpus:'阅读故事、民歌与日常对话。',sources:'',history:'比较各方言的词形与历史重建。',grammar:'',saved:'收藏、笔记与备份。'};
@@ -62,7 +62,39 @@ function dictionaryProvenance(w){return wordSourceGroups(w).map(g=>`<article cla
 
 function migrateDictionaryState(){for(const [old,id] of Object.entries({...D.sourceAliases,...D.wordAliases})){if(saved[old])saved[id]=true;delete saved[old];if(notes[old]){if(!notes[id])notes[id]=notes[old];else if(notes[id]!==notes[old])notes[id]+='\n\n【原记录 '+old+'】\n'+notes[old];delete notes[old]}}}
 
-function wordMatches(w){const q=searchNormalize(state.q);return (!q||(state.exact?[...wordForms(w),w.zh,...(w.glosses||[w.en])].some(x=>searchNormalize(x)===q):contains(wordSearchText(w),q)))&&(!state.scheme||w.schemes.includes(state.scheme))&&(!state.pos||w.positions.includes(state.pos))&&dialectMatches(w)&&(!state.category||wordSemanticCategories(w).includes(state.category))&&(!state.sourceFilter||wordSources(w).includes(canonicalSource(state.sourceFilter)))}
+// Separate indices prevent short spelling queries from matching inside English words.
+const wordSearchIndex=new WeakMap();
+const englishTokens=s=>normalize(s).match(/[a-z]+(?:'[a-z]+)?/g)||[];
+function indexedWord(w){
+ if(wordSearchIndex.has(w))return wordSearchIndex.get(w);
+ const forms=[...new Set(wordForms(w).filter(Boolean).map(searchNormalize))];
+ const chinese=[w.zh,...(w.zhVariants||[])].filter(Boolean).flatMap(s=>s.split(/[;；/／]/)).map(normalize);
+ const english=[w.en,...(w.glosses||[])].filter(Boolean).flatMap(s=>s.split(/[;；/／]/)).map(s=>normalize(s.replace(/\(note:.*?\)/gi,'')));
+ const index={forms,chinese,english,englishWords:new Set(english.flatMap(englishTokens))};wordSearchIndex.set(w,index);return index;
+}
+function wordSearchScore(w){
+ const raw=state.q.trim();if(!raw)return 1;
+ const index=indexedWord(w),lang=state.searchLanguage||'',q=searchNormalize(raw),normal=normalize(raw);let score=0;
+ if(!lang||lang==='tujia'){
+  const compact=t=>t.replace(/[\s'’\-]/g,'');
+  if(index.forms.some(f=>f===q||compact(f)===compact(q)))score=100;
+  if(!state.exact&&!score){
+   if(index.forms.some(f=>f.split(/[\s'’\-0-9]+/).includes(q)))score=80;
+   else if(q.length>=2&&index.forms.some(f=>f.startsWith(q)))score=50;
+  }
+ }
+ if(!lang||lang==='zh'){
+  if(index.chinese.includes(normal))score=Math.max(score,100);
+  else if(!state.exact&&/\p{Script=Han}/u.test(normal)&&index.chinese.some(f=>f.includes(normal)))score=Math.max(score,60);
+ }
+ if(!lang||lang==='en'){
+  if(index.english.includes(normal))score=Math.max(score,100);
+  else if(!state.exact){const tokens=englishTokens(raw);if(tokens.length&&tokens.every(t=>index.englishWords.has(t)))score=Math.max(score,70);}
+ }
+ return score;
+}
+function searchLanguageSelector(){return `<select data-filter="searchLanguage" aria-label="搜索语言">${[['','全部语言'],['tujia','搜土家语'],['zh','搜汉语'],['en','搜英语']].map(([v,t])=>`<option value="${v}" ${state.searchLanguage===v?'selected':''}>${t}</option>`).join('')}</select>`}
+function wordMatches(w){return wordSearchScore(w)>0&&(!state.scheme||w.schemes.includes(state.scheme))&&(!state.pos||w.positions.includes(state.pos))&&dialectMatches(w)&&(!state.category||wordSemanticCategories(w).includes(state.category))&&(!state.sourceFilter||wordSources(w).includes(canonicalSource(state.sourceFilter)))}
 function sourceMatches(s){return (!state.grammarSourceScope||s.grammarScope===state.grammarSourceScope)&&(!state.batch||!!s.recognition)&&(!state.priority||(state.priority==='全部待解析'?!!s.parsePriority:s.parsePriority?.tier===state.priority))&&(!state.q||contains(s.title+' '+(s.variantSearch||'')+' '+s.path+' '+s.text,state.q))&&(!state.topic||s.topics.includes(state.topic))&&dialectMatches(s)&&(!state.kind||s.kind===state.kind)&&(!state.status||s.status===state.status)}
 function pager(n){const pages=Math.max(1,Math.ceil(n/40));state.page=Math.min(state.page,pages);return `<div class="pager"><button data-page="${state.page-1}" ${state.page<=1?'disabled':''}>← 上一页</button><span>${state.page} / ${pages}</span><button data-page="${state.page+1}" ${state.page>=pages?'disabled':''}>下一页 →</button></div>`}
 function wordTable(items){return `<div class="word-grid">${items.map(w=>`<article class="word-card"><button class="word-card-content" data-open="${w.id}" aria-label="${E(w.zh||w.en)}，查看词条"><span class="word-card-heading"><span class="word word-card-title">${E(phon(notationHead(w)))}</span>${completeSpellings(w).length&&wordIPA(w).length?`<span class="word-ipa">${wordIPA(w).map(v=>'/'+E(v.replace(/^\/|\/$/g,''))+'/').join(' · ')}</span>`:''}</span><span class="word-card-meaning">${E(w.zh||w.en)}${w.zh&&w.en?`<span class="tiny">${E(w.en)}</span>`:''}</span><span class="word-card-dialect">${wordVarietyPill(w)}${w.pos?`<span class="tiny">${E(w.pos)}</span>`:''}${!wordIPA(w).length?'<span class="tiny">IPA 待校核</span>':''}</span></button>${bookmark(w.id)}</article>`).join('')}</div>`}
@@ -87,8 +119,9 @@ function randomWordItems(items,refresh=false){
 }
 function wordView(){
  let items=D.words.filter(wordMatches);
+ if(state.q.trim())items=items.map(w=>({w,score:wordSearchScore(w)})).sort((a,b)=>b.score-a.score).map(x=>x.w);
  const discovery=!state.q.trim()&&!state.browseWords;
- const filters=`<div class="filters">${select('pos',D.words.flatMap(w=>w.positions),'全部词性')}${dialectSelector()}${select('category',SEMANTIC_GROUP_ORDER,'全部语义分类')}<select data-filter="sourceFilter" aria-label="文献来源"><option value="">全部文献</option>${[...new Set(D.words.flatMap(wordSources))].map(id=>`<option value="${id}" ${state.sourceFilter===id?'selected':''}>${E(S[id].title)}</option>`).join('')}</select><label><input type="checkbox" id="exact" ${state.exact?'checked':''}>完整词形／义项匹配</label><button id="reset">清除筛选</button></div>`;
+ const filters=`<div class="filters">${searchLanguageSelector()}${select('pos',D.words.flatMap(w=>w.positions),'全部词性')}${dialectSelector()}${select('category',SEMANTIC_GROUP_ORDER,'全部语义分类')}<select data-filter="sourceFilter" aria-label="文献来源"><option value="">全部文献</option>${[...new Set(D.words.flatMap(wordSources))].map(id=>`<option value="${id}" ${state.sourceFilter===id?'selected':''}>${E(S[id].title)}</option>`).join('')}</select><label><input type="checkbox" id="exact" ${state.exact?'checked':''}>完整词形／义项匹配</label><button id="reset">清除筛选</button></div>`;
  if(discovery){const chosen=randomWordItems(items);return pageHeader('words')+search()+filters+`<div class="section-head"><h2>遇见几个土家语词</h2><button id="shuffle-words">换一组</button></div>`+(chosen.length?wordTable(chosen):empty())+`<div class="detail-actions"><button id="browse-all-words">浏览全部词汇 →</button></div>`}
  if(state.browseWords&&!state.q.trim()){const collator=new Intl.Collator('zh-CN',{numeric:true,sensitivity:'base'});items=items.map(w=>({w,key:notationHead(w)})).sort((a,b)=>collator.compare(a.key,b.key)).map(x=>x.w)}
  const pg=pager(items.length);
