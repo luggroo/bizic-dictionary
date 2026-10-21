@@ -207,7 +207,7 @@ function notationMatrix(place){
  const isYang=place==='yangchao';
  const sources=isYang?
   [{title:'Dai & Tian 2005\nvia Zhou 2020',id:'zhou-xr',kind:'profile'},{title:'中国语保 · 阳朝',id:'60756',kind:'survey'}]:
-  [{title:'他砂 IPA\nZhou 2020',id:'zhou-ts',kind:'profile'},{title:'Zhang 2002\nvia Zhou 2020',id:'zhou-fx',kind:'profile'},{title:'Sun 1991',id:'stedt-7fd6565400',kind:'profile'},{title:'Huang & Dai 1992',id:'stedt-610ab69a37',kind:'profile'},{title:'Chen 1986',id:'stedt-24cc5bbb03',kind:'profile'},{title:'中国语保 · 龙山',id:'60757',kind:'survey'}];
+  [{title:'他砂 IPA\nBrassett',id:'zhou-ts',kind:'profile'},{title:'Zhang 2002\nvia Zhou 2020',id:'zhou-fx',kind:'profile'},{title:'Sun 1991',id:'stedt-7fd6565400',kind:'profile'},{title:'Huang & Dai 1992',id:'stedt-610ab69a37',kind:'profile'},{title:'Chen 1986',id:'stedt-24cc5bbb03',kind:'profile'},{title:'中国语保 · 龙山',id:'60757',kind:'survey'}];
  const profiles=Object.fromEntries(NOTATION_CONFIG.profiles.map(p=>[p.id,p]));
  const surveyOnsets={'p':'b','pʰ':'p','t':'d','tʰ':'t','k':'g','kʰ':'k','ts':'z','tsʰ':'c','tɕ':'j','tɕʰ':'q','m':'m','n':'n','l':'l','ɲ':'n','ȵ':'n','ŋ':'ng','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','ɸ':'h'};
  const surveyRimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','ɔ':'o','ɘ':'e','ə':'e','ɤ':'e','ɯ':'i','e':isYang?'ei':'e','ɛ':'ai','ie':'ie','iɘ':'ie','iə':'ie','ai':'ai','ei':'ei','ɘi':'ei','au':'ao','iau':'iao','əu':'ou','ɘu':'ou','iəu':'iu','iɘu':'iu','iu':'iu','ui':'ui','uei':'ui','ua':'ua','uai':'uai','uɛ':'uai','ia':'ia','uo':'o','io':'io','aŋ':'ang','an':'an','ian':'ian','iaŋ':'iang','uan':'uan','uaŋ':'uang','uŋ':'ong','ɔŋ':'ong','ɘn':'en','ən':'en','ɘŋ':'en','əŋ':'en','en':'en','eŋ':'en','in':'in','iŋ':'in','un':'un','uen':'un','iən':'ian','ɚ':'er','iɚ':'ier','uɚ':'uer'};
@@ -236,6 +236,12 @@ function notationMatrix(place){
     return Object.entries(reference).filter(([raw])=>(kind==='onset'?(raw==='hh'?'hx':raw):standardBrassettToYe(raw))===key).map(([,ipa])=>ipa);
    }
    return [];
+  }
+  // Zhou 2020 is a comparative source shared by multiple survey points.
+  // Its attestations cannot be treated as a separate Zhang dictionary inventory.
+  if(src.id==='zhou-fx'&&kind==='rime'){
+   const fxReviewed={i:['i','ei'],ei:['ei'],e:['ɤ','ɯe'],ie:['e'],ian:['ian']};
+   return fxReviewed[key]||[];
   }
   const inventory=notationSourceRimeInventory().get(p.id);
   return Object.entries(dictionary).filter(([raw,targets])=>{
@@ -270,10 +276,10 @@ function notationMatrix(place){
  ['v · à','4','51','53','53','—','53','—']];
  const yangTone=[['x · ā','55','55'],['f · á','35','35'],['r · ǎ','33 / 54','33'],['v · à','—','53']];
  const tone=notationGuideTable('声调',headings,isYang?yangTone:longTone);
- const intro='<p class="tiny">Brassett 拼音单列，其他列显示各材料的 IPA 音值。— 表示当前规则没有对应值；多项原记号以 / 分隔。声母、韵母均按来源词条中的原始记音筛掉未出现的形式；尚无可读取词条的来源仍沿用候选映射，须另行校核。</p>';
+ const intro='<p class="tiny">Brassett 拼音单列，其他列显示各材料的 IPA 音值。— 表示当前规则没有对应值；多项原记号以 / 分隔。各调查点仅列已核对应；张伟权的 i／ei 按本来源的条件规则处理。共享比较资料尚未逐点核对的其余对应仍属待核。</p>';
  const notes=isYang?
  '<p class="tiny">声韵注：① 仙仁 /ʑ/ 与 /j/ 的 y 写法须检查介音组合，yiao 等形式已规范为 yao。② 阳朝语保 ȵ 按 ni 处理，腭音后的 e／ɛ 按整音节规则写 jie、qie、xie、ye；原始 IPA 保留。③ 表中的 e、ei、ie 涉及来源和声母条件，不能作为无条件音变对应。</p><p class="tiny">声调注：Zhou 仙仁 54→r、55→x，33→r；语保阳朝按 55、35、33、53 的表层调值处理。</p>':
- '<p class="tiny">声韵注：① Brassett 的独立韵母 i：g、h、k、hh 后读 [ɨ]，z、c、s、r 后读 [ɿ]。② Brassett hh→叶式 hx，eng→en，ing→in，uo→o。③ Zhou 各点 e／ie、o／uo 及 i 的读法有声母条件；具体转换按整个音节判断。④ ang 一行暂只列已确认的记号对应；实际使用频次待逐条核查。</p><p class="tiny">声调注：① Brassett 的 1–4 为原书调类，Zhou 2020 提供他砂的 IPA 音值。② 龙山语保当前按表层音值归并 55／53／33→x、24→f、22／21→r。</p>';
+ '<p class="tiny">声韵注：① Brassett 的独立韵母 i：g、h、k、hh 后读 [ɨ]，z、c、s、r 后读 [ɿ]。② Brassett hh→叶式 hx，eng→en，ing→in，uo→o。③ Zhou 各点 e／ie、o／uo 及 i 的读法有声母条件；具体转换按整个音节判断。④ ang 一行暂只列已确认的记号对应；实际使用频次待逐条核查。</p><p class="tiny">声调注：① Brassett 的 1–4 为原书调类，Brassett 提供他砂的 IPA 音值。② 龙山语保当前按表层音值归并 55／53／33→x、24→f、22／21→r。</p>';
  return '<div class="notation-matrix">'+intro+matrix('onset','声母')+matrix('rime','韵母')+tone+notes+'</div>';
 }
 function notationGuide(){
@@ -283,7 +289,7 @@ function notationGuide(){
  const longshan=['zhou-ts','zhou-fx','stedt-cb523fc3dc:north','yubao-60757'];
  const southTones=[['55','ā','高平'],['33','a（可标 a̱）','中平'],['35','á','上升'],['21','à','低降'],['13','ǎ','低升']];
  return `<section class="panel"><h2>拼音与调查点</h2><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p></section>
- <section class="panel"><h2>龙山</h2><p>声母、韵母和声调按来源横向对照。左列为本站拼音；Brassett 2004、2006 共用一列拼音；Zhou 2020 他砂列对应 IPA 音值。</p>
+ <section class="panel"><h2>龙山</h2><p>声母、韵母和声调按来源横向对照。左列为本站拼音；Brassett 2004、2006 共用一列拼音；他砂 IPA 列据 Brassett。</p>
  ${notationMatrix('longshan')}</section>
  <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>仙仁：戴庆厦、田静（2005），经 Zhou 2020 引用；另列中国语保阳朝。</p>
  ${notationMatrix('yangchao')}</section>
