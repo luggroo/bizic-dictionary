@@ -37,3 +37,6 @@ console.log('PASS: spelling, source normalization, unknown fallback, independent
 
 for(const [ipa,poj] of [['xo33zi33','ho-ri'],['dzi33','jri'],['dʑi33','ji'],['dza33','ja'],['za33','ra'],['zɨ33','ri'],['d͡zi33','jri'],['ʣi33','jri']])assert.equal(ctx.southernSpelling(ipa,'yubao-60824').poj,poj,ipa);
 console.log('PASS: dz→j, z→r, apical ri contraction and affricate notation variants');
+
+for(const [ipa,poj] of [['je33','ie'],['ji55','ī'],['ja35','iá'],['jy55','ǖ'],['jye35','üé'],['wa33','ua'],['wu55','ū'],['wei35','uéi'],['wo21','uò'],['ʑe33','ye']])assert.equal(ctx.southernSpelling(ipa,'yubao-60824').poj,poj,ipa);
+console.log('PASS: vowel-initial glide spelling, no duplicate i/u, rounded front vowel, fricative distinction');

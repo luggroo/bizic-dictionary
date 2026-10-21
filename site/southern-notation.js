@@ -56,10 +56,13 @@ function southernSpelling(raw,source='',explicit=false){
   let pojRime=r==='i'&&['ts','tsʰ','dz','s','z'].includes(onset)?'ri':rime;
   // r + apical ri is written ri, not rri.
   if(SOUTH_ONSETS[onset][1]==='r'&&pojRime==='ri')pojRime='i';
+  let pojOnset=SOUTH_ONSETS[onset][1];
+  if(onset==='j'){pojOnset='';if(!/^[iü]/.test(pojRime))pojRime='i'+pojRime;}
+  if(onset==='w'){pojOnset='';if(!pojRime.startsWith('u'))pojRime='u'+pojRime;}
   const pojMarked=m[2]==='?'?pojRime+'⁇':southMark(pojRime,m[2],explicit);
   const core=SOUTH_ONSETS[onset][0]+rime;
   const accentSep=sep==='-'?(/^[aeiouü]/i.test(core)||(/n$/i.test(previousCore)&&/^g/i.test(core))?"'":''):sep;
-  accent+=accentSep+SOUTH_ONSETS[onset][0]+marked;poj+=sep+SOUTH_ONSETS[onset][1]+pojMarked;
+  accent+=accentSep+SOUTH_ONSETS[onset][0]+marked;poj+=sep+pojOnset+pojMarked;
   previousCore=core;
   count++;pos=m.index+m[0].length;
  }
