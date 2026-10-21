@@ -1865,12 +1865,14 @@
       "reviewEvidence": "语保龙山 0270「母猪」tsɿ33ȵi21ka21，本条 tsi/zi-ni-ka 同源词形"
     },
     "stedt-rn-453683": {
-      "zh": "猪饲草；特定植物名（汉义待确认）",
-      "status": "pending",
+      "zh": "猪草",
+      "status": "confirmed",
       "previousZh": "猪草（具体植物待核）",
       "term": "zi⁴xi³",
       "en": "pigweed",
-      "enNote": "Note: possible recording error"
+      "enNote": "Original English 'pigweed' suggests a plant species; the Chinese expression here is 猪草 (grass/greens gathered for pig fodder).",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保阳朝 2463「猪草」tsɿ³³ɕi³³、碗米坡 2463 tsɿ⁵⁵ɕi⁵⁵、潭溪 2463 zi¹³ɕi³³；与本条 zi⁴xi³ 词形对应。用户明确核定为「猪草」。"
     },
     "stedt-rn-210501": {
       "zh": "植物；种植（汉义待确认）",
