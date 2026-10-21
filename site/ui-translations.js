@@ -3,6 +3,8 @@ const UI_TRANSLATIONS={
   "土家语知识索引": "Tujia Language Library",
   "土": "Tujia",
   "知识总览": "Overview",
+  "这里有什么": "What’s here",
+  "全部文献": "All literature",
   "词汇检索": "Dictionary",
   "参考语法": "Reference grammar",
   "记音对应": "Transcription guide",
