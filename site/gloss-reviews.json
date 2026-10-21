@@ -117,12 +117,13 @@
       "reviewEvidence": "Brassett 中文词表 w13 同一后缀词形 -cai 对应「那」；原英文 [there/then] 表示远指意义"
     },
     "w3136": {
-      "zh": "丢失；输（汉义待确认）",
-      "status": "pending",
+      "zh": "丢",
+      "status": "confirmed",
       "previousZh": "丢失；输（原义未细分）",
       "term": "bie1 lie2",
       "en": "lose",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保阳朝 0835「丢」phi³⁵lie⁵⁵ 与 Brassett bie¹lie² 词形相近；龙山 0835 pi⁵⁵lie²²lu²²，碗米坡 pi⁵⁵liau⁵⁵。与「输」su⁵⁵ 的词根不同。"
     },
     "w3150": {
       "zh": "薄",
@@ -143,12 +144,13 @@
       "reviewEvidence": "Brassett 中英词表同词根 bo4「薄」，叠用不另引入「瘦」义"
     },
     "w3215": {
-      "zh": "嫂子／弟媳／配偶的姐妹（汉义待确认）",
-      "status": "pending",
+      "zh": "嫂子",
+      "status": "confirmed",
       "previousZh": "嫂子／弟媳／配偶的姐妹（原义未细分）",
       "term": "ca2 cei1",
       "en": "sister-in-law",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "龙山语保 0639「嫂子」tsha²²tshɿ²²，Brassett ca²cei¹ 近似对应；其他姻亲称谓另有词形。"
     },
     "w3223": {
       "zh": "嫂子／弟媳／配偶的姐妹（汉义待确认）",
@@ -225,12 +227,13 @@
       "reviewEvidence": "Brassett 2004 中文词表 w915（肥；to be fat），与 2006 英文词表的调类编号换算一致"
     },
     "w4031": {
-      "zh": "叔伯舅姑父姨父等男性长辈（汉义待确认）",
-      "status": "pending",
+      "zh": "姑父",
+      "status": "confirmed",
       "previousZh": "叔伯舅姑父姨父等男性长辈（亲属关系未注明）",
       "term": "ka2 ke2",
       "en": "uncle",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0631「姑父」kha²¹khɘ²¹、阳朝 kha³³khə³³；Brassett ka²ke² 在音节结构上吻合。其他 uncle 类称谓另有词形。"
     },
     "w4230": {
       "zh": "耐烦",
@@ -251,12 +254,13 @@
       "reviewEvidence": "Brassett 中文词表 w1467 原释「姑母/女人」；不细分成姨母、婶母等亲属关系"
     },
     "w4658": {
-      "zh": "鼻涕；流鼻涕；抽鼻子（汉义待确认）",
-      "status": "pending",
+      "zh": "鼻涕",
+      "status": "confirmed",
       "previousZh": "流鼻涕；抽鼻子",
       "term": "ong4 qi3 la4",
       "en": "snivel",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0462「鼻涕」uŋ²⁴tɕhi⁵⁵la⁵⁵、阳朝 eŋ⁵⁵tɕhi⁵⁵la⁵⁵、碗米坡 ũ⁵⁵tɕhi⁵⁵la¹³；Brassett ong⁴qi³la⁴ 同根。"
     },
     "w4660": {
       "zh": "鼻垢；流鼻涕；抽鼻子（汉义待确认）",
@@ -353,20 +357,22 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-356219": {
-      "zh": "祖母；外祖母（汉义待确认）",
-      "status": "pending",
+      "zh": "奶奶",
+      "status": "confirmed",
       "previousZh": "奶奶",
       "term": "a⁵⁵ma⁵⁵",
       "en": "grandmother",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0611「奶奶」a³³ma⁵⁵、碗米坡 a⁵⁵ma³³，均与 a⁵⁵ma⁵⁵ 同根；「外祖母」0613 在两点另有词形。"
     },
     "stedt-rn-288695": {
-      "zh": "祖母；外祖母（汉义待确认）",
-      "status": "pending",
+      "zh": "奶奶",
+      "status": "confirmed",
       "previousZh": "奶奶",
       "term": "a⁵⁵ma⁵⁵~mu⁵⁵si⁵⁵a²¹ne⁵⁵",
       "en": "grandmother",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "首个异读 a⁵⁵ma⁵⁵ 与龙山语保 0611「奶奶」a³³ma⁵⁵、碗米坡 a⁵⁵ma³³ 同根；另一异读保留在原记音中。"
     },
     "stedt-rn-290103": {
       "zh": "提高",
@@ -412,12 +418,13 @@
       "en": "span"
     },
     "stedt-rn-453694": {
-      "zh": "鼻涕；流鼻涕；抽鼻子（汉义待确认）",
-      "status": "pending",
+      "zh": "鼻涕",
+      "status": "confirmed",
       "previousZh": "流鼻涕；抽鼻子",
       "term": "eng²qi¹la²",
       "en": "snivel",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保阳朝 0462「鼻涕」eŋ⁵⁵tɕhi⁵⁵la⁵⁵，与 eng²qi¹la² 同源音节对应；龙山及碗米坡亦有鼻涕的同根词。"
     },
     "stedt-rn-289647": {
       "zh": "岳父",
@@ -516,12 +523,13 @@
       "reviewEvidence": "语保龙山 1985「鞋底」包含 ɕie...li...phu 词段；本条 ji...li...pu，原英文 sole 指鞋底"
     },
     "stedt-rn-205044": {
-      "zh": "笔；圈栏（汉义待确认）",
-      "status": "pending",
+      "zh": "笔",
+      "status": "confirmed",
       "previousZh": "笔；圈栏（原义未细分）",
       "term": "kan⁵⁵pi²¹",
       "en": "pen",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保阳朝 2516「笔」pi³⁵；同 STEDT 5.1 语义组另有 jian²¹pi²¹「铅笔」、pi³⁵「笔」，本条 kan⁵⁵pi²¹ 的 pi 是汉语借词「笔」，非动物圈栏。"
     },
     "stedt-rn-453921": {
       "zh": "岳父；公公（汉义待确认）",
@@ -532,12 +540,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-289813": {
-      "zh": "笔；圈栏（汉义待确认）",
-      "status": "pending",
+      "zh": "笔",
+      "status": "confirmed",
       "previousZh": "笔；圈栏（原义未细分）",
       "term": "kã³³pi²¹",
       "en": "pen",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "同一 STEDT 5.1 语义组中 jian²¹pi²¹ 为「铅笔」，pi³⁵ 为「笔」；本条 kã³³pi²¹ 以 pi 表示书写工具，非圈栏。"
     },
     "stedt-rn-288812": {
       "zh": "棍子",
@@ -550,12 +559,13 @@
       "reviewEvidence": "语保龙山 0692「棍子」kan⁵⁵phɘ⁵⁵，对应本条 kã⁵⁵phɨe⁵⁵；另有异读 kha²¹tsu²¹"
     },
     "stedt-rn-288877": {
-      "zh": "笔；圈栏（汉义待确认）",
-      "status": "pending",
+      "zh": "笔",
+      "status": "confirmed",
       "previousZh": "笔；圈栏（原义未细分）",
       "term": "kã⁵⁵pi³⁵",
       "en": "pen",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "同一 STEDT 5.1 语义组中 jiã²¹pi³⁵ 为「铅笔」，pi³⁵ 为「笔」；本条 kã⁵⁵pi³⁵ 指书写工具。"
     },
     "stedt-rn-288708": {
       "zh": "岳父",
@@ -944,12 +954,13 @@
       "reviewEvidence": "语保龙山 0756「闻」lan22、阳朝 0756 naŋ33、碗米坡 0756 nã33、潭溪 0756 ɕiõ13；本条 smell 是感官动词"
     },
     "stedt-rn-43595": {
-      "zh": "咳嗽；啃咬（汉义待确认）",
-      "status": "pending",
+      "zh": "咳嗽",
+      "status": "confirmed",
       "previousZh": "咳嗽；啃咬（原释义并列，待核）",
       "term": "niu̵⁵⁵",
       "en": "cough, gnaw",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保碗米坡 0506「咳嗽」nũ⁵⁵、潭溪 0506 niʉ⁵⁵，与本条 niu̵⁵⁵ 相符；STEDT 语义类 Cough。"
     },
     "stedt-rn-416351": {
       "zh": "吠叫",
@@ -1036,12 +1047,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-196068": {
-      "zh": "汉语；汉人；汉族；中国的（汉义待确认）",
-      "status": "pending",
+      "zh": "汉族",
+      "status": "confirmed",
       "previousZh": "汉语；中国的（具体义项待核）",
       "term": "pha⁵⁵kha²¹",
       "en": "Chinese",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 2329「汉族」pa⁵⁵kha²¹、碗米坡 pha⁵⁵kha³³，与本条 pha⁵⁵kha²¹ 对应。"
     },
     "stedt-rn-289936": {
       "zh": "放牧；吃草（汉义待确认）",
@@ -1160,12 +1172,13 @@
       "en": "back"
     },
     "stedt-rn-453662": {
-      "zh": "杉木；冷杉；杉类（汉义待确认）",
-      "status": "pending",
+      "zh": "杉树",
+      "status": "confirmed",
       "previousZh": "冷杉；杉类（具体树种待核）",
       "term": "sa²",
       "en": "fir",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0146「杉树」sa²⁴kha²¹mu²¹、碗米坡 0146 sa³¹kha⁵⁵mu⁵⁵；本条 sa² 为杉的词根，不能据此确定植物学冷杉种。"
     },
     "stedt-rn-221517": {
       "zh": "薄",
@@ -1202,12 +1215,13 @@
       "reviewEvidence": "语保阳朝 0451「辫子」sa33tɕhi33piaŋ33tsɿ33；来源拼写 pian-tsi、pia-tsi，为汉语借词辫子"
     },
     "stedt-rn-189234": {
-      "zh": "杉木；冷杉；杉类（汉义待确认）",
-      "status": "pending",
+      "zh": "杉树",
+      "status": "confirmed",
       "previousZh": "冷杉；杉类（具体树种待核）",
       "term": "sa³⁵kha²¹moŋ²¹",
       "en": "fir",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0146「杉树」sa²⁴kha²¹mu²¹，与本条 sa³⁵kha²¹moŋ²¹ 对应；碗米坡 0146 同源词形。1391「冷杉」亦同词根，但缺乏种级鉴定。"
     },
     "stedt-rn-127253": {
       "zh": "肥肉",
@@ -1377,20 +1391,22 @@
       "reviewEvidence": "语保阳朝 0690「钉子」teŋ55tsɿ33，碗米坡 0690 tɤ̃55tshɿ55，与 tẽ-tsi 对应"
     },
     "stedt-rn-288692": {
-      "zh": "曾祖父；曾外祖父（汉义待确认）",
-      "status": "pending",
+      "zh": "曾祖父",
+      "status": "confirmed",
       "previousZh": "曾祖父；曾外祖父（原义未区分）",
       "term": "thai³⁵kũ⁵⁵~ne²¹thi³⁵khɨe⁵⁵thi³⁵",
       "en": "great grandfather",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保阳朝 2360「曾祖父」thɛ³³kɔŋ³³、碗米坡 pha³³phu³¹tɕhi⁵³pa³³、潭溪 a²¹tha³⁵；原文 great grandfather 不指定内外系，中文用泛称「曾祖父」。"
     },
     "stedt-rn-288693": {
-      "zh": "曾祖母；曾外祖母（汉义待确认）",
-      "status": "pending",
+      "zh": "曾祖母",
+      "status": "confirmed",
       "previousZh": "曾祖母；曾外祖母（原义未区分）",
       "term": "thai³⁵thai³⁵~ze⁵⁵kha⁵⁵ze⁵⁵ni²¹",
       "en": "great grandmother",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 2361「曾祖母」ȵie²¹thi²⁴、阳朝 thɛ⁵⁵phɔ⁵⁵、碗米坡 pha³³phu³¹pi¹³；原文 great grandmother 未指明内外系。"
     },
     "stedt-rn-381734": {
       "zh": "背部；后面",
@@ -1408,12 +1424,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-289187": {
-      "zh": "抬起；养（汉义待确认）",
-      "status": "pending",
+      "zh": "提高",
+      "status": "confirmed",
       "previousZh": "抬起；养（原义未细分）",
       "term": "thi²¹kau⁵⁵",
       "en": "raise",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "同 STEDT Tian 1986 的 di¹³kaɨ³³ 已核定为「提高」，本条 thi²¹kau⁵⁵ 与「提高」两音节汉语借词结构相合；STEDT Up, etc.，原英文 raise。"
     },
     "stedt-rn-43491": {
       "zh": "拃",
@@ -1431,12 +1448,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-289101": {
-      "zh": "返回；归还（汉义待确认）",
-      "status": "pending",
+      "zh": "归还",
+      "status": "confirmed",
       "previousZh": "返回；归还（原义未细分）",
       "term": "tho⁵⁵",
       "en": "return",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 2471「还钱」thuo⁵⁵、碗米坡 2471「还钱」...tho⁵⁵，归还义词根与本条 tho⁵⁵ 对应；「返回」2725 另有 suŋ⁵⁵khuo⁵⁵。"
     },
     "stedt-rn-290258": {
       "zh": "滴",
