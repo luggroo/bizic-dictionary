@@ -1,0 +1,16 @@
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.brand-pillar{width:35px;height:60px;object-fit:contain;flex-shrink:0}
+.tujia-ui,.brand small.tujia-ui{display:block;margin-top:3px;font-size:12px;font-weight:400;line-height:1.4;letter-spacing:0;text-transform:none;color:var(--muted)}
+nav button .tujia-ui{font-size:12px}nav button.active .tujia-ui{color:#d7e5df}
+.brand{align-items:center}.brand small.tujia-ui{font-size:13px}
+.hero-tujia{font-size:19px;letter-spacing:0;margin:6px 0 12px}
+#search-form button .tujia-ui{color:inherit;font-size:11px;opacity:.85;margin:0}
+.language-selector{display:flex;align-items:center;flex-shrink:0}.language-selector select{min-height:36px;padding:5px 8px;border:1px solid var(--line);border-radius:7px;background:white;color:var(--ink)}
+.shell>header{height:auto;min-height:78px;flex-wrap:wrap;gap:10px 16px;padding-top:12px;padding-bottom:12px}
+aside{overflow-y:auto}nav{margin-top:24px;gap:4px}nav button{padding:9px 12px;min-width:0}nav button>span{min-width:0;overflow-wrap:anywhere}
+html[lang="en"] .filters select{max-width:100%}html[lang="en"] button{overflow-wrap:break-word}
+@media(max-width:900px){.shell>header{padding-left:22px;padding-right:22px}.brand .tujia-ui{font-size:12px}}
+@media(max-width:600px){.shell>header{padding:10px 18px;min-height:56px}#crumb{flex:1;min-width:0}.language-selector{margin-left:auto}.media-switch{font-size:12px}.brand-pillar{width:26px;height:44px}.hero-tujia{font-size:17px}nav button .tujia-ui{font-size:11px}.language-selector select{font-size:16px}nav{margin-top:12px}}
+
+.aside-foot>a{display:block;margin-top:4px}
+@media(max-width:720px){aside>nav{overflow-x:auto;overflow-y:hidden}aside>nav button{flex:0 0 auto}aside>nav button>span{overflow-wrap:normal}}
