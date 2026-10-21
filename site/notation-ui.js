@@ -90,10 +90,36 @@ function sourceSyllableCores(core,p){
 function convertNotationAtomic(input,pid){const profile=NOTATION_CONFIG.profiles.find(p=>p.id===pid);if(!profile)return {error:'尚无此来源的独立规则。'};if(profile.conversionEnabled===false)return {error:profile.status+'。原始输入：'+phon(input)};if(['legacy','south'].includes(profile.kind))return {error:profile.status+'。'+(profile.notes||[]).join(' ')};let s=plainTones(input).normalize('NFC').trim().replaceAll('\\u2009','').replace(/\s+/g,''),options=[];if(profile.kind==='brassett'){s=s.toLowerCase();if(!/^-?(?:[a-z]+[1-4])+$/.test(s))return {error:'仅处理完整带调音节；括注、异读分隔、无调形式或未知数字请逐项核对。'};options=[s.replace(/[1-4]/g,c=>profile.toneMap[c]?.[0]||c)]}else if(profile.kind==='ye'){options=reverseYe(s.toLowerCase());if(!options.length)return {error:'这段叶式拼音没有唯一可核的音节分解。请分词检查；不猜测未收录或无调音节。'}}else{s=s.replace(/^\[/,'').replace(/\]$/,'').replace(/^\//,'').replace(/\/$/,'').replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ').replaceAll('ʦ','ts').replaceAll('ʨ','tɕ').replaceAll('ȵ','ɲ̟').replace(/(tɕ|ts|p|t|k)h/g,'$1ʰ');let pos=0;options=[''];for(const m of s.matchAll(/([^0-9]+)([0-9]+)/g)){if(m.index!==pos)return {error:'音节边界未解析，保留原文。'};const cores=sourceSyllableCores(m[1],profile),tones=profile.toneMap?.[m[2]];if(!cores?.length||!tones?.length)return {error:`来源 ${profile.title} 中的 ${phon(m[0])} 尚无已核映射（${!cores?.length?'音值／韵母或i的条件分布':'调值'}）。原形保持不变。`};options=options.flatMap(prefix=>cores.flatMap(core=>tones.map(t=>prefix+core+t))).slice(0,16);pos=m.index+m[0].length}if(!pos||pos!==s.length)return {error:'请输入每个音节都带数字调值的IPA，例如 kɨ²¹。'}}options=[...new Set(options)];return {profile:profile.title,status:profile.status,candidate:profile.kind==='ipa'&&profile.id!=='brassett-phonetic',ambiguous:options.length>1,original:input,rows:options.map(b=>({brassett:phon(b),ye:standardBrassettToYe(b),ipa:standardBrassettIPA(b)}))}}
 function convertNotation(input,pid){if(NOTATION_CONFIG.profiles.find(p=>p.id===pid)?.kind==='south'){const r=southernSpelling(input,pid);return r?{profile:pid,reviewed:true,southern:true,rows:[{...r,ipa:phon(input)}]}:{error:'此词尚无完整映射，保留国际音标。'}}if(['yubao-60756','yubao-60757','yubao-60823'].includes(pid)){const r=northernSurveySpelling(input,pid.slice(6));return r?{profile:NOTATION_CONFIG.profiles.find(p=>p.id===pid)?.title,reviewed:true,rows:[{ye:r.ye,accent:r.accent,brassett:'',ipa:phon(input)}]}:{error:'此词包含尚未确定的声韵或缺失调值，保留国际音标。'}}const p=NOTATION_CONFIG.profiles.find(p=>p.id===pid),override=p?.conversionEnabled!==false&&p?.wordOverrides?.[plainTones(input).normalize('NFC').replace(/\s+/g,'').trim()];if(override)return {profile:p.title,status:'用户逐词审核',candidate:false,reviewed:true,original:input,rows:[{ye:override.ye,brassett:phon(override.brassett),ipa:null}]};const full=convertNotationAtomic(input,pid);if(!full.error||!p||p.kind!=='ipa'||p.conversionEnabled===false)return full;const raw=plainTones(input).normalize('NFC'),unresolved=[],segments=[];let pos=0,converted=0;function literal(text){if(!text)return;const unknown=/[\p{L}\p{M}0-9]/u.test(text);if(unknown)unresolved.push({text:phon(text),reason:'无调、残缺或未解析片段'});segments.push({original:phon(text),rows:[{ye:unknown?'⟦'+phon(text)+'⟧':text,brassett:unknown?'⟦'+phon(text)+'⟧':text}],unresolved:unknown})}for(const m of raw.matchAll(/([\p{L}\p{M}]+)([0-9]+)/gu)){literal(raw.slice(pos,m.index));const result=convertNotationAtomic(m[0],pid);if(result.error){unresolved.push({text:phon(m[0]),reason:result.error});segments.push({original:phon(m[0]),rows:[{ye:'⟦'+phon(m[0])+'⟧',brassett:'⟦'+phon(m[0])+'⟧'}],unresolved:true})}else{segments.push({original:phon(m[0]),rows:result.rows});converted++}pos=m.index+m[0].length}literal(raw.slice(pos));if(!converted)return {...full,unresolved};let rows=[{ye:'',brassett:'',ipa:null}];for(const seg of segments)rows=rows.flatMap(a=>seg.rows.map(b=>({ye:a.ye+b.ye,brassett:a.brassett+b.brassett,ipa:null}))).slice(0,16);return {profile:p.title,status:p.status,candidate:true,original:input,ambiguous:rows.length>1,partial:unresolved.length>0,segmented:true,unresolved,segments,rows}}
 function mappingTable(title,headers,rows){return `<h3>${E(title)}</h3><div class="table-wrap"><table><thead><tr>${headers.map(x=>`<th>${E(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(x=>`<td>${E(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
-function notationSourceKey(p){const id=D.sourceAliases?.[p.source]||p.source;return ['brassett-2004','brassett-2006'].includes(id)?id:p.id}
-function notationSourceGroups(){const groups=new Map();for(const p of NOTATION_CONFIG.profiles){const id=notationSourceKey(p);if(!groups.has(id))groups.set(id,{id,title:['brassett-2004','brassett-2006'].includes(id)?S[id].title:p.title,profiles:[],dialects:p.dialects,count:0,status:p.status});const g=groups.get(id);g.profiles.push(p);g.count+=p.count}return [...groups.values()].map(g=>({...g,status:g.profiles.length>1?`统一来源 · ${g.profiles.length} 种记音／文件规则`:g.status}))}
-function notationSourcePicker(p){const groups=notationSourceGroups(),key=notationSourceKey(p),group=groups.find(g=>g.id===key);return `<label>文献来源<select id="notation-source">${groups.map(g=>`<option value="${g.id}" ${g.id===key?'selected':''}>${E(g.title)}</option>`).join('')}</select></label>${group.profiles.length>1?`<label>文件版本／输入记音<select id="notation-variant">${group.profiles.map(x=>`<option value="${x.id}" ${x.id===p.id?'selected':''}>${E(x.title)}</option>`).join('')}</select></label><p class="tiny">同一文献的不同输入格式。Excel调类重编号、叶式与IPA分别处理，不额外算作独立来源。</p>`:''}`}
-// Human-readable overview of the actual spelling systems used across sources.
+const BRASSETT_GROUPS={
+ 'brassett-2004':['1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE','stedt-07898ef938'],
+ 'brassett-2006':['165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO','stedt-39f4cd9a6b','1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF','brassett-phonetic']
+};
+function notationSourceKey(p){
+ for(const [key,ids]of Object.entries(BRASSETT_GROUPS))if(ids.includes(p.id)||ids.includes(p.source))return key;
+ const id=D.sourceAliases?.[p.source]||p.source;
+ return ['brassett-2004','brassett-2006'].includes(id)?id:p.id;
+}
+function notationProfileFormat(p){
+ if(p.kind==='ye')return '叶式拼音对照';
+ if(p.id==='brassett-phonetic')return '书中 IPA 音值';
+ if(p.kind==='brassett'&&p.toneMap?.['2']?.[0]==='3')return '数字调类重编号词表';
+ if(p.kind==='brassett')return '数字调类词表';
+ return p.title;
+}
+function notationSourceGroups(){
+ const groups=new Map();
+ for(const p of NOTATION_CONFIG.profiles){
+  const id=notationSourceKey(p);
+  if(!groups.has(id))groups.set(id,{id,title:id==='brassett-2004'?'Brassett (2004)':id==='brassett-2006'?'Brassett (2006)':p.title,profiles:[],dialects:p.dialects,count:0,status:p.status});
+  const g=groups.get(id);g.profiles.push(p);g.count+=p.count;
+ }
+ return [...groups.values()].map(g=>({...g,status:g.profiles.length>1?'同一来源 · '+g.profiles.length+' 种输入格式':g.status}));
+}
+function notationSourcePicker(p){
+ const groups=notationSourceGroups(),key=notationSourceKey(p),group=groups.find(g=>g.id===key);
+ const formatLabels=new Map();
+ return `<label>文献来源<select id="notation-source">${groups.map(g=>`<option value="${g.id}" ${g.id===key?'selected':''}>${E(g.title)}</option>`).join('')}</select></label>${group.profiles.length>1?`<label>输入记音格式<select id="notation-variant">${group.profiles.map(x=>{const label=notationProfileFormat(x),num=(formatLabels.get(label)||0)+1;formatLabels.set(label,num);return `<option value="${x.id}" ${x.id===p.id?'selected':''}>${E(label)}${num>1?' '+num:''}</option>`}).join('')}</select></label><p class="tiny">同一文献不同文件或记音格式。来源原文件名可在词条出处中查看。</p>`:''}`;
+}
 function notationGuideTable(title,heads,rows){return rows?.length?mappingTable(title,heads,rows):'<p class="tiny">该材料没有可确认的完整对应表；保留来源原记音。</p>'}
 function notationSourceTables(profile){
  let html='<h3>'+E(profile.title)+'</h3><p class="tiny">'+E(profile.status||'')+'</p>';
@@ -127,11 +153,13 @@ function notationSurveyTables(point){
 function notationGuide(){
  const profiles=NOTATION_CONFIG.profiles;
  const get=id=>profiles.find(p=>p.id===id);
- const longshan=['1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE','165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO','stedt-07898ef938','stedt-39f4cd9a6b','1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF','brassett-phonetic','zhou-ts','zhou-fx','stedt-cb523fc3dc:north','yubao-60757'];
+ const brassettGroups=['brassett-2004','brassett-2006'];
+ const longshan=['zhou-ts','zhou-fx','stedt-cb523fc3dc:north','yubao-60757'];
  const southTones=[['55','ā','高平'],['33','a（可标 a̱）','中平'],['35','á','上升'],['21','à','低降'],['13','ǎ','低升']];
  return `<section class="panel"><h2>拼音与调查点</h2><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p></section>
  <section class="panel"><h2>龙山</h2><p>本站使用叶式拼音（x/f/r/v 标调）和调号拼音（ā/á/ǎ/à）。下面逐材料列出对应表；Brassett 的拼写、音值及独立 i 的条件读法仅在本节解释。</p>
  ${notationGuideTable('两种拼音的声调对应',['Brassett / IPA','叶式','调号'],[['1 / 55','x','ā'],['2 / 24','f','á'],['3 / 21','r','ǎ'],['4 / 51','v','à']])}
+ ${brassettGroups.map(group=>{const members=profiles.filter(p=>notationSourceKey(p)===group);return '<details><summary>'+E(group==='brassett-2004'?'Brassett (2004)':'Brassett (2006)')+' · 声韵调对应</summary>'+notationGuideTable('声母',['Brassett','叶式','IPA'],Object.entries(NOTATION_CONFIG.onsets).filter(([k])=>k).map(([k,v])=>[k,k==='hh'?'hx':k,v]))+notationGuideTable('韵母',['Brassett','叶式','IPA'],Object.entries(NOTATION_CONFIG.rimes).map(([k,v])=>[k,standardBrassettToYe(k),v]))+notationGuideTable('声调',['原调类','叶式','调号'],[['1','x','ā'],['2','f','á'],['3','r','ǎ'],['4','v','à']])+(members.some(p=>p.toneMap?.['2']?.[0]==='3')?'<p class="tiny">部分电子词表重新编号了调类；转写时先换算回原书的 1–4 调类。</p>':'')+'</details>'}).join('')}
  ${longshan.map(id=>get(id)).filter(Boolean).map(p=>'<details><summary>'+E(p.title)+' · 声韵调对应</summary>'+notationSourceTables(p)+(p.id==='yubao-60757'?notationSurveyTables('60757'):'')+'</details>').join('')}
  <details><summary>Brassett 拼写与音值（仅龙山）</summary>
  ${mappingTable('i 的读法',['拼写','声母条件','IPA','说明'],NOTATION_CONFIG.iRules)}
