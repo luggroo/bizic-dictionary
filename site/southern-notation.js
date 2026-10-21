@@ -49,7 +49,10 @@ function southernSpelling(raw,source='',explicit=false){
   if(onset==='ɲ'&&rime.startsWith('i'))rime=rime.slice(1);
   const marked=m[2]==='?'?rime+'⁇':southMark(rime,m[2],explicit);if(marked===null)return null;
   const sep=count&&/^[\s-]*$/.test(gap)?'-':gap.replace(/[|｜]/g,' / ');
-  accent+=sep+SOUTH_ONSETS[onset][0]+marked;poj+=sep+SOUTH_ONSETS[onset][1]+marked;
+  // Apical i after dental fricates uses ri in POJ; existing ri stays ri.
+  const pojRime=r==='i'&&['ts','tsʰ','dz','s','z'].includes(onset)?'ri':rime;
+  const pojMarked=m[2]==='?'?pojRime+'⁇':southMark(pojRime,m[2],explicit);
+  accent+=sep+SOUTH_ONSETS[onset][0]+marked;poj+=sep+SOUTH_ONSETS[onset][1]+pojMarked;
   count++;pos=m.index+m[0].length;
  }
  const tail=text.slice(pos);if(!count||!/^\s*[)）\]]*\s*$/.test(tail))return null;
@@ -70,6 +73,6 @@ function southernMappingHTML(){
  return `<details><summary>南部拼音对应</summary><p>词内音节以 - 分隔；韵尾 n 表示鼻化。55 ā · 33 a（明确标调时 a̱）· 35 á · 21 à · 13 ǎ。</p>`+
  mappingTable('声母',['IPA','调号拼音','白话字拼音'],Object.entries(SOUTH_ONSETS).filter(([k])=>k).map(([k,v])=>['/'+k+'/',...v]))+
  mappingTable('韵母',['IPA','拼写'],Object.entries(SOUTH_RIMES).map(([k,v])=>['/'+k+'/',v]))+
- '<p>田德生“鼻涕”的 /ɨ̃/ 写 en。来源中的 /ɨ/ 在舌根、喉部声母后按 i 转写；其余独立记录写 ri。原始音标可在词条出处中查看。</p></details>';
+ '<p>舌尖元音在白话字中写 ri：tsri、tshri、dzri、sri、zri；调号拼音仍写 zi、ci、zzi、si、ri。原已写 ri 的韵母保持不变。</p><p>田德生“鼻涕”的 /ɨ̃/ 写 en。来源中的 /ɨ/ 在舌根、喉部声母后按 i 转写；其余独立记录写 ri。原始音标可在词条出处中查看。</p></details>';
 }
 NOTATION_CONFIG.profiles.push({id:'yubao-60824',source:'yubao-60824',title:'中国语保 · 南部潭溪',kind:'south',count:2884,dialects:['南部'],status:'南部双方案',notes:[]});
