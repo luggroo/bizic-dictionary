@@ -4,7 +4,7 @@
   let language = 'zh';
   try { if (localStorage.getItem('tujia-ui-language') === 'en') language = 'en'; } catch {}
   const labels = Object.freeze({
-    brand: 'bifzixkar afhxix', home: '这里有什么', words: 'cixcix nix', grammar: 'sar qinrmox lir',
+    brand: 'bifzixkar afhxix', words: 'cixcix nix', grammar: 'sar qinrmox lir',
     notation: 'sar qinrmox af', corpus: 'sar tux', sources: 'cixpux jierxif',
     saved: 'suxsux-civ', history: 'sumu nie sa', search: 'nix', save: 'suxsux'
   });
@@ -45,12 +45,6 @@
         small.className = 'tujia-ui'; small.dataset.uiTujia = key; small.lang = 'tji';
         target.append(small);
       }
-    }
-    const hero = document.querySelector('.hero h1');
-    if (hero && !hero.querySelector('[data-ui-tujia]')) {
-      const small = document.createElement('small');
-      small.className = 'tujia-ui hero-tujia'; small.dataset.uiTujia = 'home'; small.lang = 'tji';
-      hero.append(small);
     }
     document.querySelectorAll('#search-form button[type="submit"]').forEach(button => {
       if (button.querySelector('[data-ui-tujia]')) return;
