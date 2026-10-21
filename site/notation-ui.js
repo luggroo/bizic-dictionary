@@ -94,35 +94,62 @@ function notationSourceKey(p){const id=D.sourceAliases?.[p.source]||p.source;ret
 function notationSourceGroups(){const groups=new Map();for(const p of NOTATION_CONFIG.profiles){const id=notationSourceKey(p);if(!groups.has(id))groups.set(id,{id,title:['brassett-2004','brassett-2006'].includes(id)?S[id].title:p.title,profiles:[],dialects:p.dialects,count:0,status:p.status});const g=groups.get(id);g.profiles.push(p);g.count+=p.count}return [...groups.values()].map(g=>({...g,status:g.profiles.length>1?`统一来源 · ${g.profiles.length} 种记音／文件规则`:g.status}))}
 function notationSourcePicker(p){const groups=notationSourceGroups(),key=notationSourceKey(p),group=groups.find(g=>g.id===key);return `<label>文献来源<select id="notation-source">${groups.map(g=>`<option value="${g.id}" ${g.id===key?'selected':''}>${E(g.title)}</option>`).join('')}</select></label>${group.profiles.length>1?`<label>文件版本／输入记音<select id="notation-variant">${group.profiles.map(x=>`<option value="${x.id}" ${x.id===p.id?'selected':''}>${E(x.title)}</option>`).join('')}</select></label><p class="tiny">同一文献的不同输入格式。Excel调类重编号、叶式与IPA分别处理，不额外算作独立来源。</p>`:''}`}
 // Human-readable overview of the actual spelling systems used across sources.
+function notationGuideTable(title,heads,rows){return rows?.length?mappingTable(title,heads,rows):'<p class="tiny">该材料没有可确认的完整对应表；保留来源原记音。</p>'}
+function notationSourceTables(profile){
+ let html='<h3>'+E(profile.title)+'</h3><p class="tiny">'+E(profile.status||'')+'</p>';
+ if(profile.kind==='brassett'||profile.kind==='ye'){
+  html+=notationGuideTable('声母',['来源 Brassett','叶式拼音','IPA'],Object.entries(NOTATION_CONFIG.onsets).filter(([s])=>s).map(([s,ipa])=>[s,s==='hh'?'hx':s,ipa]));
+  html+=notationGuideTable('韵母',['来源 Brassett','叶式拼音','IPA'],Object.entries(NOTATION_CONFIG.rimes).map(([s,ipa])=>[s,standardBrassettToYe(s),ipa]));
+ }else if(profile.kind==='ipa'){
+  const ons=profile.onsetMap||{},rimes=profile.rhymeMap||{};
+  const grouped=profile.rules||[];
+  html+=notationGuideTable('声母',['原记音','本站拼写','条件／核对状态'],grouped.some(x=>x.kind==='声母')?grouped.filter(x=>x.kind==='声母').map(x=>[x.raw,x.target,x.condition||x.status||'']):Object.entries(ons).map(([s,variants])=>[s,(variants||[]).join(' / '),'按本来源整音节验证']));
+  html+=notationGuideTable('韵母',['原记音','本站拼写','条件／核对状态'],grouped.some(x=>x.kind==='韵母')?grouped.filter(x=>x.kind==='韵母').map(x=>[x.raw,x.target,x.condition||x.status||'']):Object.entries(rimes).map(([s,variants])=>[s,(variants||[]).join(' / '),'按本来源整音节验证']));
+ }
+ if(profile.kind==='brassett'||profile.kind==='ye'){
+  html+=notationGuideTable('声调',['原材料调类','Brassett 调类','叶式','调号'],Object.entries(profile.toneMap||{}).map(([s,d])=>[s,d.join('/'),d.map(x=>({1:'x',2:'f',3:'r',4:'v'}[x]||'待核')).join('/'),d.map(x=>({1:'ā',2:'á',3:'ǎ',4:'à'}[x]||'待核')).join('/')]));
+ }else{
+  html+=notationGuideTable('声调',['原材料调值','叶式','调号'],Object.entries(profile.toneMap||{}).map(([s,d])=>[s,d.map(x=>({1:'x',2:'f',3:'r',4:'v'}[x]||'待核')).join('/'),d.map(x=>({1:'ā',2:'á',3:'ǎ',4:'à'}[x]||'待核')).join('/')]));
+ }
+ if(profile.notes?.length)html+='<p class="tiny">'+profile.notes.map(E).join('；')+'</p>';
+ return html;
+}
+function notationSurveyTables(point){
+ const toneMap=point==='60823'?[['13','f','á'],['33','r','不标'],['55','x','ā'],['53','v','à'],['31','r','ǎ']]:point==='60756'?[['55','x','ā'],['35','f','á'],['33','r','ǎ'],['53','v','à']]:[['55 / 53 / 33','x','ā'],['24','f','á'],['22 / 21','r','ǎ']];
+ const onsets={'p':'b','pʰ':'p','t':'d','tʰ':'t','k':'g','kʰ':'k','ts':'z','tsʰ':'c','tɕ':'j','tɕʰ':'q','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','m':'m','n':'n','l':'l','ɲ':'n','ŋ':'ng'};
+ const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','e':point==='60756'?'ei':'e','ai':'ai','ei':'ei','au':'ao','iau':'iao','əu':'ou','iəu':'iu','ua':'ua','uai':'uai','ia':'ia','uo':'o','aŋ':'ang','ian':'ian','uan':'uan','ɚ':'er','iɚ':'ier','uɚ':'uer'};
+ if(point==='60823'){Object.assign(rimes,{'ɤ':'e','ɤe':'e','ɤu':'ou','iɤu':'iu','ũ':'ong','ã':'ang','ĩ':'in','uã':'uan','ɤ̃':'en','uɤ̃':'un'});}
+ if(point==='60756'){Object.assign(rimes,{'ə':'e','ɛ':'ai','ɘ':'e','ɔ':'o','ɯ':'i','iɘ':'ie','iə':'ie','ɘi':'ei','ɘu':'ou','uɛ':'uai','ɘn':'en','ɘŋ':'en','əŋ':'en'});}
+ return notationGuideTable('声母',['来源 IPA','叶式／调号拼音'],Object.entries(onsets).map(([a,b])=>[a,b]))+
+ notationGuideTable('韵母',['来源 IPA','叶式／调号拼音'],Object.entries(rimes).map(([a,b])=>[a,b]))+
+ notationGuideTable('声调',['来源 IPA','叶式拼音','调号拼音'],toneMap);
+}
 function notationGuide(){
- const northTones=[['55 / Brassett 1','x','ā'],['24 / Brassett 2','f','á'],['21 / Brassett 3','r','ǎ'],['51 / Brassett 4','v','à']];
- const southTones=[['55','ā','高平'],['33','a（亦可标 a̱）','中平；默认不标'],['35','á','升'],['21','à','降'],['13','ǎ','低升']];
- const northOnsets=Object.entries(NOTATION_CONFIG.onsets).filter(([k])=>k).map(([k,v])=>[k==='hh'?'hx':k,v]);
- const northRimes=Object.entries(NOTATION_CONFIG.rimes).map(([k,v])=>[standardBrassettToYe(k),v]);
- const groups=notationSourceGroups();
- return `<section class="panel"><h2>本站拼音怎么读</h2>
- <p>本站按<strong>北部</strong>与<strong>南部</strong>分别制定拼写规则。词条默认显示带调号的易读拼音；也可以在页面顶部切换为北部「叶式」或南部「白话字」。IPA 和文献原记音保留在出处中。<strong>同一个字母在南、北部不一定对应同一个音值</strong>，不能把 Brassett 的规则直接用于其他资料。</p>
- ${mappingTable('两套拼写',['','北部','南部'],[
- ['默认显示','调号拼音（由叶式／已核转换生成）','调号拼音'],
- ['另一种显示','叶式拼音（x/f/r/v 标调类）','白话字（音节间用连字符）'],
- ['转换来源','Brassett、Tian、Sun、Chen、Huang & Dai、Zhou、语保等各自核对','Zhou／南部词表、STEDT、语保等按南部声韵调转换'],
- ['不能确定时','显示来源 IPA 或待核提示；不凭意思猜词形','保留 IPA 或待核提示；不混入北部映射']
- ])}
- <p class="tiny">拼音是本站用于词汇检索的统一显示层，不会覆盖文献原文；来源特有音位、浊音与尚未核定的对立仍以 IPA 为准。</p></section>
- <section class="panel"><h2>北部拼音</h2><p>拼写以叶式方案为基础，默认用元音上的调号显示。声调和字母对应见下表。这里列的是统一显示方案，<strong>不是所有来源都按 Brassett 原样记录</strong>。</p>
- ${mappingTable('声调',['调值／Brassett 调类','叶式','调号'],northTones)}
- ${mappingTable('声母：拼写与 IPA',['拼写','IPA'],northOnsets)}
- ${mappingTable('韵母：拼写与 IPA',['拼写','IPA'],northRimes)}
- <p>须注意：独立韵母 <strong>i</strong> 在 g、h、k、hx 后按 /ɨ/ 读，在 z、c、s、r 后按 /ɿ/ 读，其余按各声母环境判断；不是所有来源的 i 都能套用此规则。Brassett 的 hh→hx、eng→en、ing→in、uo→o 只是该来源转叶式的对应。</p></section>
- <section class="panel"><h2>南部拼音</h2><p>南部默认采用调号拼音，另提供更明确保留送气与部分音类区别的「白话字」显示。南部有清不送气、送气、浊音的对立，因此不能借用北部的声母表。</p>
- ${mappingTable('声调',['来源 IPA 调值','拼音','读法'],southTones)}
- ${mappingTable('声母：IPA → 两种拼写',['IPA','调号拼音','白话字'],Object.entries(SOUTH_ONSETS).filter(([k])=>k).map(([k,v])=>[k,...v]))}
- ${mappingTable('韵母：IPA → 拼写',['IPA','拼写'],Object.entries(SOUTH_RIMES).map(([k,v])=>[k,v]))}
- <p>白话字的 c/ch、j、s 等合并部分声母类别；<strong>这是拼写选择，并不声称这些音处处互补分布</strong>。齿龈声母后的舌尖元音可以用 ri 区分；鼻化韵母一般用 n 表示。白话字用 - 分音节，默认调号拼音主要连写，必要时用 ' 避免歧义。</p></section>
- <section class="panel"><h2>每种文献如何转换</h2>
- <p>先选择下方的具体文献，在转换器中输入来源原记音。每个来源独立处理声母、韵母、声调以及例外；表中的“候选／待核”不会冒充已核定读音。</p>
- ${mappingTable('全部来源及处理状态',['文献／数据集','适用地区','记录数','转换状态'],groups.map(g=>[g.title,g.dialects.join(' / '),String(g.count),g.status]))}
- <p class="tiny">详细的来源专属声韵映射、条件和核对依据，请使用下面的「来源规则与审核」；该表会随上方的文献来源选择更新。</p></section>`;
+ const profiles=NOTATION_CONFIG.profiles;
+ const get=id=>profiles.find(p=>p.id===id);
+ const longshan=['1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE','165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO','stedt-07898ef938','stedt-39f4cd9a6b','1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF','brassett-phonetic','zhou-ts','zhou-fx','stedt-cb523fc3dc:north','yubao-60757'];
+ const southTones=[['55','ā','高平'],['33','a（可标 a̱）','中平'],['35','á','上升'],['21','à','低降'],['13','ǎ','低升']];
+ return `<section class="panel"><h2>拼音与调查点</h2><p>以下依调查点列出实际使用的声母、韵母、声调转换表，而不是只介绍通用拼音。<strong>龙山</strong>显示叶式与调号两种拼音；保靖各点与泸溪分别独立列出。原文 IPA 始终保留，未核对应不自动猜测。</p></section>
+ <section class="panel"><h2>龙山</h2><p>本站使用叶式拼音（x/f/r/v 标调）和调号拼音（ā/á/ǎ/à）。下面逐材料列出对应表；Brassett 的拼写、音值及独立 i 的条件读法仅在本节解释。</p>
+ ${notationGuideTable('两种拼音的声调对应',['Brassett / IPA','叶式','调号'],[['1 / 55','x','ā'],['2 / 24','f','á'],['3 / 21','r','ǎ'],['4 / 51','v','à']])}
+ ${longshan.map(id=>get(id)).filter(Boolean).map(p=>'<details><summary>'+E(p.title)+' · 声韵调对应</summary>'+notationSourceTables(p)+(p.id==='yubao-60757'?notationSurveyTables('60757'):'')+'</details>').join('')}
+ <details><summary>Brassett 拼写与音值（仅龙山）</summary>
+ ${mappingTable('i 的读法',['拼写','声母条件','IPA','说明'],NOTATION_CONFIG.iRules)}
+ ${mappingTable('Brassett → 叶式',['原形','叶式'],NOTATION_CONFIG.spellingRules)}
+ ${mappingTable('Brassett 声母',['Brassett','叶式','IPA'],Object.entries(NOTATION_CONFIG.onsets).filter(([k])=>k).map(([k,v])=>[k,k==='hh'?'hx':k,v]))}
+ ${mappingTable('Brassett 韵母',['Brassett','叶式','IPA'],Object.entries(NOTATION_CONFIG.rimes).map(([k,v])=>[k,standardBrassettToYe(k),v]))}</details></section>
+ <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>中国语保 60756 与 Zhou 2020 仙仁资料的原始记音和声调规则分别展示，不直接套用龙山 Brassett。</p>
+ ${notationSurveyTables('60756')}
+ ${get('zhou-xr')?'<details open><summary>Zhou 2020 · 仙仁 · 声韵调对应</summary>'+notationSourceTables(get('zhou-xr'))+'</details>':''}</section>
+ <section class="panel"><h2>保靖 · 碗米坡</h2><p>独立按照调查点的表层声调转写。33 与 31 在叶式中都写 r，但调号拼音中分别为不标调和 ǎ。</p>
+ ${notationSurveyTables('60823')}</section>
+ <section class="panel"><h2>泸溪 · 潭溪（南部）</h2><p>南部独立使用调号拼音与白话字；保留浊音对立及原始 IPA。白话字用连字符分音节，c/ch、j、s 的字母合并并不证明语音互补分布。</p>
+ ${notationGuideTable('声母',['来源 IPA','调号拼音','白话字'],Object.entries(SOUTH_ONSETS).filter(([k])=>k).map(([k,v])=>[k,...v]))}
+ ${notationGuideTable('韵母',['来源 IPA','两种拼音韵母'],Object.entries(SOUTH_RIMES).map(([k,v])=>[k,v]))}
+ ${notationGuideTable('声调',['来源 IPA','调号拼音／白话字','说明'],southTones)}
+ <p class="tiny">资料：Zhou 南部下都／下且己，STEDT 南部田德生与陈康，中国语保 60824。具体词形中如有来源未能解析的音节，保留原 IPA。</p></section>
+ <section class="panel"><h2>其他来源与未确定调查点</h2><p>Sun、Huang & Dai、Chen 等北部来源及未标明具体村点的 STEDT 记录，不随意归入龙山或保靖。下面分别保留它们自己的声韵调规则。</p>
+ ${profiles.filter(p=>['stedt-7fd6565400','stedt-610ab69a37','stedt-24cc5bbb03','zhou-xl','stedt-7d44caef06'].includes(p.id)).map(p=>'<details><summary>'+E(p.title)+' · 声韵调对应</summary>'+notationSourceTables(p)+'</details>').join('')}</section>`;
 }
 function notationView(){const cfg=NOTATION_CONFIG,p=cfg.profiles.find(x=>x.id===notationState.source)||cfg.profiles[0],result=notationState.result;return pageHeader('notation')+notationGuide()+`<section class="panel">${notationSourcePicker(p)}<form id="notation-converter" class="searchbar"><input id="notation-input" value="${E(notationState.input)}" aria-label="原词形" placeholder="输入原词形"><button>转换</button></form>${result?result.error?`<p class="notice warn">${E(result.error)}</p>`:mappingTable(result.partial?'部分转写':result.ambiguous?'候选词形':'转换结果',result.southern?['调号拼音','白话字拼音']:['叶式拼音','调号拼音'],result.rows.map(x=>result.southern?[x.accent,x.poj]:[x.ye.replace(/⟦[^⟧]*⟧/g,'□'),x.accent||displayBrassett(x.brassett,'accent').replace(/⟦[^⟧]*⟧/g,'□')])):''}${result?.unresolved?.length?mappingTable('未转换部分',['原形','原因'],result.unresolved.map(x=>[x.text,x.reason])):''}<p class="tiny">1 ā · 2 á · 3 ǎ · 4 à</p><p class="tiny">碗米坡按表层调值转写：13 á／f · 33 不标调／r · 55 ā／x · 53 à／v · 31 ǎ／r。33 与 31 同写 r；调号拼音中33不标，31写ǎ。不标调表示33调值，不表示轻声。</p></section><details><summary>来源规则与审核</summary>${sourceReviewView(p)}${(p.notes||[]).map(x=>`<p>${E(x)}</p>`).join('')}${p.rules?mappingTable('声韵对应',['原记号','拼写','条件'],p.rules.map(r=>[r.raw,r.target,r.condition])):''}</details><details><summary>Brassett 拼写与音值</summary>${mappingTable('i 的读法',['拼写','条件','IPA','说明'],cfg.iRules)}${mappingTable('拼写对应',['Brassett','叶式'],cfg.spellingRules)}${mappingTable('声母',['Brassett','叶式','IPA'],Object.entries(cfg.onsets).filter(([k])=>k).map(([k,v])=>[k,k==='hh'?'hx':k,v]))}${mappingTable('韵母',['Brassett','叶式','IPA'],Object.entries(cfg.rimes).map(([k,v])=>[k,standardBrassettToYe(k),v]))}</details><details><summary>全部来源</summary>${mappingTable('对应进度',['来源','方言','记录数','状态'],notationSourceGroups().map(x=>[x.title,x.dialects.join(' / '),String(x.count),x.status]))}</details><div class="detail-actions"><button id="export-notation-rules">导出规则</button><button data-open="brassett-2006">Brassett 原书</button></div>`}
 function bindNotationView(){bindSourceReview();const source=document.querySelector('#notation-source');if(source)source.onchange=e=>{notationState.source=notationSourceGroups().find(g=>g.id===e.target.value).profiles[0].id;notationState.result=null;render()};const variant=document.querySelector('#notation-variant');if(variant)variant.onchange=e=>{notationState.source=e.target.value;notationState.result=null;render()};const f=document.querySelector('#notation-converter');if(f)f.onsubmit=e=>{e.preventDefault();notationState.input=document.querySelector('#notation-input').value;notationState.result=convertNotation(notationState.input,notationState.source);render()};const b=document.querySelector('#export-notation-rules');if(b)b.onclick=()=>download('tujia-source-notation-rules.json',NOTATION_CONFIG)}
