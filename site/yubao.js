@@ -58,6 +58,20 @@ function surveySentenceDetail(c){const converted=c.dialect==='南部'?southernSp
 
 // Wan­mipo surface-tone spelling: 33 and 31 share r, but retain distinct accents.
 const WANMIPO_TONES={'13':['f',2],'33':['r',3],'55':['x',1],'53':['v',4],'31':['r',3]};
+// Avoid duplicated medial i after y in all northern survey spellings.
+function northernYCore(core){
+ if(!core.startsWith('yi'))return core;
+ const rhyme=core.slice(1);
+ if(rhyme==='i')return 'yi';
+ if(rhyme==='iu')return 'you';
+ if(rhyme==='in')return 'yin';
+ if(rhyme==='ian')return 'yan';
+ if(rhyme==='iang')return 'yang';
+ if(rhyme==='iao')return 'yao';
+ if(rhyme==='ie')return 'ye';
+ if(rhyme==='iong')return 'yong';
+ return core;
+}
 function wanmipoSpelling(raw){
  const onsets={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','ɲ':'n','ȵ':'n','ŋ':'ng','p':'b','t':'d','k':'g','m':'m','n':'n','l':'l','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','':''};
  const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','e':'e','ɤ':'e','ɤe':'e','ie':'ie','ai':'ai','au':'ao','iau':'iao','ɤu':'ou','iɤu':'iu','ui':'ui','ua':'ua','uai':'uai','ia':'ia','uo':'o','ũ':'ong','ã':'an','iã':'ian','ĩ':'in','uã':'uan','ɤ̃':'en','uɤ̃':'un','iɚ':'ier','uɚ':'uer'};
@@ -68,7 +82,7 @@ function wanmipoSpelling(raw){
   const onset=Object.keys(onsets).sort((a,b)=>b.length-a.length).find(o=>m[1].startsWith(o));
   const rime=m[1].slice(onset.length),vowel=rimes[rime],tone=WANMIPO_TONES[m[2]];
   if(!vowel||!tone)return null;
-  const core=onsets[onset]+vowel;
+  const core=northernYCore(onsets[onset]+vowel);
   const marked=m[2]==='33'?core:accentSyllable(core,tone[1]);
   const separator=!gap&&previous&&(/^[aeiou]/.test(core)||(/n$/.test(previous)&&/^g/.test(core)))?"'":'';
   ye+=gap+core+tone[0];accent+=gap+separator+marked;previous=core;pos=m.index+m[0].length;
@@ -92,7 +106,7 @@ function northernSurveySpelling(raw,point){
   const onset=Object.keys(onsets).sort((a,b)=>b.length-a.length).find(o=>m[1].startsWith(o));
   const rime=m[1].slice(onset.length),vowel=rimes[rime],tone=tones[m[2]];
   if(!vowel||!tone)return null;
-  let core=onsets[onset]+vowel;
+  let core=northernYCore(onsets[onset]+vowel);
   if(xr&&['ȵ','ɲ'].includes(onset))core='ni'+(rime==='e'?'e':vowel.replace(/^i/,''));
   if(xr&&['e','ɛ'].includes(rime)&&['tɕ','tɕʰ','ɕ','ʑ'].includes(onset))core=({'tɕ':'jie','tɕʰ':'qie','ɕ':'xie','ʑ':'ye'})[onset];
   const separator=!gap&&previous&&(/^[aeiou]/.test(core)||(/n$/.test(previous)&&/^g/.test(core)))?"'":'';
