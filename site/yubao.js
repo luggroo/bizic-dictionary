@@ -31,6 +31,7 @@ function corpusCitation(c){return [c.title,S[c.source]?.title,'编号 '+c.code,c
 async function loadYubao(data){
  const manifest=await fetch('yubao-manifest.json').then(r=>{if(!r.ok)throw Error('Survey manifest unavailable');return r.json()});
  const parts=await Promise.all(manifest.map(f=>fetch(f).then(r=>{if(!r.ok)throw Error('Survey data unavailable');return r.json()})));
+ const english=await fetch('yubao-english.json').then(r=>{if(!r.ok)throw Error('Survey English glosses unavailable');return r.json()});
  const sources=new Set(data.sources.map(s=>s.id)),seen=new Map();
  for(const p of parts){
   const source='yubao-'+p.point;
@@ -40,10 +41,13 @@ async function loadYubao(data){
   }
   for(const [serial,zh,raw,annotation,alias] of p.words){
    const id=source+'-v-'+serial,ipa=surveyIPA(raw,p.point);
-   const a={id,source,term:raw,zh,en:'',pos:'',scheme:'IPA',locator:'词汇 '+serial,alt:alias,notice:annotation,dialect:p.dialect,collection:'中国语保',category:'',language:'土家语'};
+   const en=english.serialOverrides[serial]||english.glosses[zh]||'';
+   if(!en)throw Error('Missing survey English gloss: '+serial+' '+zh);
+   const enTranslation={method:'editorial-translation',basis:'语保汉语调查词目与提示',evidence:english.evidence[p.point+'-'+serial]||[]};
+   const a={id,source,term:raw,zh,en,originalEn:'',enTranslation,pos:'',scheme:'IPA',locator:'词汇 '+serial,alt:alias,notice:annotation,dialect:p.dialect,collection:'中国语保',category:'',language:'土家语'};
    const key=source+'|'+zh+'|'+ipa.replace(/\s/g,'');
-   if(seen.has(key)){const w=seen.get(key);w.attestations.push(a);w.notations.ipa[0].attestationIds.push(id);data.wordAliases[id]=w.id;continue}
-   const w={...a,term:ipa,location:p.location,attestations:[a],sourceIds:[source],schemes:['IPA'],dialects:[p.dialect],collections:['中国语保'],positions:[''],categories:[''],forms:[ipa,raw],glosses:[],zhVariants:[zh],notations:{ye:[],brassett:[],accent:[],ipa:[{text:ipa,method:'source',profile:source,attestationIds:[id]}]}};
+   if(seen.has(key)){const w=seen.get(key);w.attestations.push(a);if(!w.glosses.includes(en))w.glosses.push(en);w.notations.ipa[0].attestationIds.push(id);data.wordAliases[id]=w.id;continue}
+   const w={...a,term:ipa,location:p.location,attestations:[a],sourceIds:[source],schemes:['IPA'],dialects:[p.dialect],collections:['中国语保'],positions:[''],categories:[''],forms:[ipa,raw],glosses:[en],zhVariants:[zh],notations:{ye:[],brassett:[],accent:[],ipa:[{text:ipa,method:'source',profile:source,attestationIds:[id]}]}};
    if(['60756','60757','60823'].includes(p.point)){const converted=northernSurveySpelling(raw,p.point);if(converted){w.notations.ye=[{text:converted.ye,accent:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id]}];w.notations.accent=[{text:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id]}]}}
    data.words.push(w);seen.set(key,w);
   }
