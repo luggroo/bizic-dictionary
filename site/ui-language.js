@@ -6,7 +6,7 @@
   const labels = Object.freeze({
     brand: 'bifzixkar afhxix', words: 'cixcix nix', grammar: 'sar qinrmox lir',
     notation: 'sar qinrmox af', corpus: 'sar tux', sources: 'cixpux jierxif',
-    saved: 'suxsux-civ', history: 'sumu nie sa', search: 'nix', save: 'suxsux'
+    saved: 'suxsux-civ', history: 'lafzef lafzef lir', search: 'nix', save: 'suxsux'
   });
   const textMemory = new WeakMap(), attributeMemory = new WeakMap();
   const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
