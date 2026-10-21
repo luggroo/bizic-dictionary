@@ -24,7 +24,7 @@ run("state.dialect='南部'");assert.doesNotMatch(ctx.spellingSelector(),/叶式
 const w={dialect:'南部',attestations:[{id:'example',dialect:'南部',source:'yubao-60824',term:'bã33'}]};
 assert.equal(ctx.notationHead(w),'bban');run("southernDisplay='poj'");assert.equal(ctx.notationHead(w),'ban');
 assert.equal(ctx.convertNotation('bã33','yubao-60824').rows[0].accent,'bban');
-for(const [raw,pinyin,poj] of [['tsi55','zī','crī'],['tshi35','cí','chrí'],['dzi21','zzì','dzrì'],['si33','si','sri'],['zi13','rǐ','zrǐ'],['ɨ13','rǐ','rǐ'],['tɕi55','jī','cī'],['tɕhi35','qí','chí'],['ɕi21','xì','sì'],['ɕy35','xǘ','sǘ'],['sie55','siē','siē'],['sĩ33','sin','sin'],['sʉ33','seu','seu']]){const result=ctx.southernSpelling(raw,'yubao-60824');assert.equal(result.accent,pinyin,raw);assert.equal(result.poj,poj,raw)}
+for(const [raw,pinyin,poj] of [['tsi55','zī','crī'],['tshi35','cí','chrí'],['dzi21','zzì','jrì'],['si33','si','sri'],['zi13','rǐ','rǐ'],['ɨ13','rǐ','rǐ'],['tɕi55','jī','cī'],['tɕhi35','qí','chí'],['ɕi21','xì','sì'],['ɕy35','xǘ','sǘ'],['sie55','siē','siē'],['sĩ33','sin','sin'],['sʉ33','seu','seu']]){const result=ctx.southernSpelling(raw,'yubao-60824');assert.equal(result.accent,pinyin,raw);assert.equal(result.poj,poj,raw)}
 assert.equal(ctx.southernSpelling('si35si21','yubao-60824').poj,'srí-srì');
 // Alveolo-palatal c/ch/s and dental c/ch/s share letters, with ri reserved for dental apical i.
 for(const [ipa,poj] of [['tsi55','crī'],['tɕi55','cī'],['tshi35','chrí'],['tɕhi35','chí'],['si21','srì'],['ɕi21','sì']])assert.equal(ctx.southernSpelling(ipa,'yubao-60824').poj,poj);
@@ -34,3 +34,6 @@ for(const w of JSON.parse(fs.readFileSync(path.join(root,'dictionary.json'))).wo
 for(const f of fs.readdirSync(root).filter(f=>/^yubao-60824-.*json$/.test(f)))for(const w of JSON.parse(fs.readFileSync(path.join(root,f))).words)rows.push({source:'yubao-60824',term:w[2]});
 for(const a of rows){stats[a.source]??={converted:0,ipa:0};stats[a.source][ctx.southernSpelling(a.term,a.source)?'converted':'ipa']++}
 console.log('PASS: spelling, source normalization, unknown fallback, independent selectors, Northern regression');console.log(stats);
+
+for(const [ipa,poj] of [['xo33zi33','ho-ri'],['dzi33','jri'],['dʑi33','ji'],['dza33','ja'],['za33','ra'],['zɨ33','ri'],['d͡zi33','jri'],['ʣi33','jri']])assert.equal(ctx.southernSpelling(ipa,'yubao-60824').poj,poj,ipa);
+console.log('PASS: dz→j, z→r, apical ri contraction and affricate notation variants');
