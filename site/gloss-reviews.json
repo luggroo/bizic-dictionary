@@ -417,12 +417,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-289647": {
-      "zh": "岳父；公公（汉义待确认）",
-      "status": "pending",
+      "zh": "岳父",
+      "status": "confirmed",
       "previousZh": "岳父",
       "term": "gu̵³³ze³³",
       "en": "father-in-law",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保潭溪 0621「岳父」ɡu³³ze³³，与 gu̵³³ze³³ 对应"
     },
     "stedt-rn-43613": {
       "zh": "树皮；吠叫（汉义待确认）",
@@ -533,12 +534,14 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-288812": {
-      "zh": "棍；粘（汉义待确认）",
-      "status": "pending",
+      "zh": "棍子",
+      "status": "confirmed",
       "previousZh": "棍；粘（原义未细分）",
       "term": "kã⁵⁵phɨe⁵⁵~kha²¹tsu²¹",
       "en": "stick",
-      "enNote": "Note: possible recording error"
+      "enNote": "English 'stick' is a wooden stick/rod here, not the verb 'adhere'.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0692「棍子」kan⁵⁵phɘ⁵⁵，对应本条 kã⁵⁵phɨe⁵⁵；另有异读 kha²¹tsu²¹"
     },
     "stedt-rn-288877": {
       "zh": "笔；圈栏（汉义待确认）",
@@ -549,28 +552,31 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-288708": {
-      "zh": "岳父；公公（汉义待确认）",
-      "status": "pending",
+      "zh": "岳父",
+      "status": "confirmed",
       "previousZh": "岳父",
       "term": "kha²¹khɨ²¹~ni⁵⁵kho⁵⁵a²¹pa⁵⁵",
       "en": "father-in-law",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0621「岳父」kha²¹khɘ²¹，与 kha²¹khɨ²¹ 对应"
     },
     "stedt-rn-357771": {
-      "zh": "岳父；公公（汉义待确认）",
-      "status": "pending",
+      "zh": "岳父",
+      "status": "confirmed",
       "previousZh": "岳父",
       "term": "kha²¹khɯe²¹",
       "en": "father-in-law",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0621「岳父」kha²¹khɘ²¹，与 kha²¹khɯe²¹ 对应"
     },
     "stedt-rn-201882": {
-      "zh": "棍；粘（汉义待确认）",
-      "status": "pending",
+      "zh": "棍子",
+      "status": "confirmed",
       "previousZh": "棍；粘（原义未细分）",
       "term": "kha²¹tsu²¹",
       "en": "stick",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "此形 kha²¹tsu²¹ 在 STEDT rn 288812 同一「棍子」义项中作为异读记录；语保龙山 0692「棍子」"
     },
     "stedt-rn-210960": {
       "zh": "放牧；吃草（汉义待确认）",
@@ -581,12 +587,14 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-205860": {
-      "zh": "口琴；笙；口簧（汉义待确认）",
-      "status": "pending",
+      "zh": "口弦",
+      "status": "confirmed",
       "previousZh": "笙；口簧类乐器（具体所指待核）",
       "term": "khou⁵⁵tɕhin²¹",
       "en": "mouth organ",
-      "enNote": "Note: possible recording error"
+      "enNote": "English 'mouth organ' here refers to the local jaw harp (口弦), not a keyboard organ.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保碗米坡 2544「口弦」khɤu⁵⁵ɕiã³³，潭溪 2544 khʉ²¹tɕi¹³；本条 khou⁵⁵tɕhin²¹ 属口簧类乐器，采用「口弦」"
     },
     "stedt-rn-289751": {
       "zh": "棍；粘（汉义待确认）",
@@ -623,12 +631,14 @@
       "reviewEvidence": "语保龙山 0060「烟」khɘ24kha33，阳朝/碗米坡 0060 亦有同源词形；英语 smoke 在此作名词"
     },
     "stedt-rn-358756": {
-      "zh": "角；号角（汉义待确认）",
-      "status": "pending",
+      "zh": "角",
+      "status": "confirmed",
       "previousZh": "角；号角（原义未细分）",
       "term": "khɯe⁵⁵",
       "en": "horn",
-      "enNote": "Note: possible recording error"
+      "enNote": "English 'horn' here is an animal horn, not a musical trumpet.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 1668「角」（兽角）khɯ⁵⁵，碗米坡 khɤe⁵⁵；本条 khɯe⁵⁵ 同源"
     },
     "stedt-rn-289430": {
       "zh": "烟",
@@ -657,12 +667,14 @@
       "reviewEvidence": "语保潭溪 0979「陡」kɨ33ti35，与本条 kɨ33tei35 对应"
     },
     "stedt-rn-43357": {
-      "zh": "角；号角（汉义待确认）",
-      "status": "pending",
+      "zh": "角",
+      "status": "confirmed",
       "previousZh": "角；号角（原义未细分）",
       "term": "kʰɨe⁵⁵",
       "en": "horn",
-      "enNote": "Note: possible recording error"
+      "enNote": "English 'horn' refers to an animal horn.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 1668「角」khɯ⁵⁵、碗米坡 1668 khɤe⁵⁵；本条 kʰɨe⁵⁵ 为同源记音"
     },
     "stedt-rn-429251": {
       "zh": "闻",
@@ -771,20 +783,22 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-353932": {
-      "zh": "人；男人（汉义待确认）",
-      "status": "pending",
+      "zh": "男人",
+      "status": "confirmed",
       "previousZh": "人；男人（原义未细分）",
       "term": "lo⁵⁵pa⁵⁵tie⁵⁵",
       "en": "man",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0575「男人」lo⁵⁵pa³³tie³³，与 lo⁵⁵pa⁵⁵tie⁵⁵ 同词根；「人」0574 只有 lo⁵⁵"
     },
     "stedt-rn-453975": {
-      "zh": "人；男人（汉义待确认）",
-      "status": "pending",
+      "zh": "男人",
+      "status": "confirmed",
       "previousZh": "人；男人（原义未细分）",
       "term": "luo⁴ba¹",
       "en": "man",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0574「人」lo⁵⁵、0575「男人」lo⁵⁵pa³³tie³³；本条 luo⁴ba¹ 含同类男性标记"
     },
     "stedt-rn-290043": {
       "zh": "喜欢",
@@ -797,20 +811,22 @@
       "reviewEvidence": "语保龙山 0882「喜欢」li24sɿ55、潭溪 0882「喜欢」li21si13；对应本条 li/lɨ-si"
     },
     "stedt-rn-288709": {
-      "zh": "岳母；婆婆（汉义待确认）",
-      "status": "pending",
+      "zh": "岳母",
+      "status": "confirmed",
       "previousZh": "岳母",
       "term": "ma²¹ma³⁵~ni⁵⁵kho⁵⁵a²¹ne⁵⁵",
       "en": "mother-in-law",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0622「岳母」ma²¹ma²⁴，阳朝 0622 ma³³ma³⁵；本条 ma²¹ma³⁵ 异调同源"
     },
     "stedt-rn-357824": {
-      "zh": "岳母；婆婆（汉义待确认）",
-      "status": "pending",
+      "zh": "岳母",
+      "status": "confirmed",
       "previousZh": "岳母",
       "term": "ma²¹ma⁵⁵",
       "en": "mother-in-law",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保碗米坡 0622「岳母」ma³³ma⁵⁵，龙山 0622 ma²¹ma²⁴；本条 ma²¹ma⁵⁵"
     },
     "stedt-rn-359077": {
       "zh": "小型马；马驹（汉义待确认）",
@@ -979,20 +995,22 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-356166": {
-      "zh": "祖父；外祖父（汉义待确认）",
-      "status": "pending",
+      "zh": "爷爷",
+      "status": "confirmed",
       "previousZh": "祖父；外祖父（原义未区分）",
       "term": "pha²¹phu⁵⁵",
       "en": "grandfather",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0610「爷爷」pha²²phu⁵⁵，与 pha²¹phu⁵⁵ 对应"
     },
     "stedt-rn-288694": {
-      "zh": "祖父；外祖父（汉义待确认）",
-      "status": "pending",
+      "zh": "爷爷",
+      "status": "confirmed",
       "previousZh": "祖父；外祖父（原义未区分）",
       "term": "pha²¹phu⁵⁵~mu⁵⁵si⁵⁵a²¹pa⁵⁵",
       "en": "grandfather",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保龙山 0610「爷爷」pha²²phu⁵⁵，本条异读 pha²¹phu⁵⁵ 与含其他成分的变体"
     },
     "stedt-rn-228555": {
       "zh": "某类物品的量词（汉义待确认）",
@@ -1982,20 +2000,22 @@
       "reviewEvidence": "语保龙山 0756「闻」lan22、阳朝 0756 naŋ33、碗米坡 0756 nã33、潭溪 0756 ɕiõ13；本条 smell 是感官动词"
     },
     "stedt-rn-289633": {
-      "zh": "祖父；外祖父（汉义待确认）",
-      "status": "pending",
+      "zh": "爷爷",
+      "status": "confirmed",
       "previousZh": "祖父；外祖父（原义未区分）",
       "term": "ʔa²¹khu̵⁵⁵",
       "en": "grandfather",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保潭溪 0610「爷爷」a¹³khʉ⁵⁵ 与 ʔa²¹khu̵⁵⁵ 对应；该点「公公」同形，原英语 grandparent 取祖辈义"
     },
     "stedt-rn-289634": {
-      "zh": "祖母；外祖母（汉义待确认）",
-      "status": "pending",
+      "zh": "奶奶",
+      "status": "confirmed",
       "previousZh": "奶奶",
       "term": "ʔa²¹pho²¹",
       "en": "grandmother",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保潭溪 0611「奶奶」a²¹pho²¹，与 ʔa²¹pho²¹ 对应"
     },
     "stedt-rn-289714": {
       "zh": "菜肴；盘子（汉义待确认）",
@@ -2014,12 +2034,13 @@
       "enNote": "Note: possible recording error"
     },
     "stedt-rn-289648": {
-      "zh": "岳母；婆婆（汉义待确认）",
-      "status": "pending",
+      "zh": "岳母",
+      "status": "confirmed",
       "previousZh": "岳母",
       "term": "ʔa³³mi³³",
       "en": "mother-in-law",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "语保潭溪 0622「岳母」a³³mi³³，与 ʔa³³mi³³ 对应"
     },
     "w441": {
       "previousZh": "尺",
