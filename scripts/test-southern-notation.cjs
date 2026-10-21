@@ -17,7 +17,7 @@ assert.equal(ctx.southernSpelling('dʑiau33','yubao-60824').accent,'jjiau');
 assert.equal(ctx.southernSpelling('ka33','yubao-60824',true).accent,'ga̱');
 for(const raw of ['ma221','ma31','pæ̃33','broken','ka33xyz','ka'])assert.equal(ctx.southernSpelling(raw,'yubao-60824'),null,raw);
 assert.equal(ctx.yeToAccent('axngair'),"āngǎi");
-assert.equal(ctx.northernSurveySpelling('pa33','60823').accent,'bä');
+assert.equal(ctx.northernSurveySpelling('pa33','60823').accent,'ba');
 assert.equal(ctx.northernSurveySpelling('pa31','60823').accent,'bǎ');
 assert.match(ctx.spellingSelector(),/叶式拼音/);assert.match(ctx.spellingSelector(),/白话字拼音/);
 run("state.dialect='南部'");assert.doesNotMatch(ctx.spellingSelector(),/叶式拼音/);

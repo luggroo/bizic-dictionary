@@ -5,7 +5,7 @@ function surveyIPA(raw,point){
 }
 function dialectSelector(includeComparison=false){
  const option=(value,label)=>`<option value="${E(value)}" ${state.dialect===value?'selected':''}>${E(label)}</option>`;
- return `<select data-filter="dialect" aria-label="方言">${option('','全部方言')}${option('北部','北部（毕兹 密基）')}${option('龙山','　龙山（福石）')}${option('保靖碗米坡','　保靖碗米坡（沙沙）')}${option('保靖阳朝','　保靖阳朝（厦）')}${option('南部','南部（孟兹）')}${includeComparison?option('南北比较','南北比较'):''}${option('未标明','未标明')}</select>`;
+ return `<select data-filter="dialect" aria-label="方言">${option('','全部方言')}${option('北部','北部（毕兹 密基）')}${option('龙山','　北部 · 龙山')}${option('保靖碗米坡','　北部 · 保靖碗米坡')}${option('保靖阳朝','　北部 · 保靖阳朝')}${option('南部','南部 · 泸溪潭溪')}${includeComparison?option('南北比较','南北比较'):''}${option('未标明','未标明')}</select>`;
 }
 const dialectCache=new WeakMap();
 function dialectTags(item){
@@ -25,7 +25,7 @@ function dialectTags(item){
  dialectCache.set(item,tags);return tags;
 }
 function dialectMatches(item){return !state.dialect||dialectTags(item).has(state.dialect)}
-function wordVarietyInfo(w){const tags=dialectTags(w),loc=String(w.location||'').trim();if(tags.has('保靖阳朝'))return {label:'保靖阳朝',kind:'yangchao'};if(tags.has('保靖碗米坡'))return {label:'保靖碗米坡',kind:'wanmipo'};if(tags.has('保靖'))return {label:loc||'保靖',kind:'baojing'};if(tags.has('龙山')||tags.has('北部'))return {label:'龙山',kind:'longshan'};if(tags.has('南部'))return {label:loc||'南部',kind:'south'};return {label:loc||w.dialect||'未标明',kind:'other'}}
+function wordVarietyInfo(w){const tags=dialectTags(w),loc=String(w.location||'').trim();if(tags.has('保靖阳朝'))return {label:'北部 · 保靖阳朝',kind:'yangchao'};if(tags.has('保靖碗米坡'))return {label:'北部 · 保靖碗米坡',kind:'wanmipo'};if(tags.has('保靖'))return {label:loc||'保靖',kind:'baojing'};if(tags.has('龙山')||tags.has('北部'))return {label:'北部 · 龙山',kind:'longshan'};if(tags.has('南部'))return {label:'南部 · 泸溪潭溪',kind:'south'};return {label:loc||w.dialect||'未标明',kind:'other'}}
 function wordVarietyPill(w){const v=wordVarietyInfo(w);return `<span class="pill variety-pill variety-${v.kind}">${E(v.label)}</span>`}
 function corpusCitation(c){return [c.title,S[c.source]?.title,'编号 '+c.code,c.page?'PDF 第 '+c.page+' 页':'',S[c.source]?.url,S[c.audio]?.url?'录音：'+S[c.audio].url:''].filter(Boolean).join('；')}
 async function loadYubao(data){
@@ -34,7 +34,7 @@ async function loadYubao(data){
  const sources=new Set(data.sources.map(s=>s.id)),seen=new Map();
  for(const p of parts){
   const source='yubao-'+p.point;
-  p.location=({'60756':'保靖阳朝','60823':'保靖碗米坡','60824':'泸溪（潭溪）'})[p.point]||p.location;
+  p.location=({'60756':'保靖阳朝','60823':'保靖碗米坡','60824':'泸溪潭溪'})[p.point]||p.location;
   if(!sources.has(source)){
    data.sources.push({id:source,title:'中国语保 · '+p.location,url:'https://zhongguoyuyan.cn/point/'+p.point,dialect:p.dialect,locations:[p.location],topics:['词汇','例句'],kind:'调查资料',status:'已收录',path:'中国语言资源保护工程',text:'',dialectBasis:p.dialect+'土家语，'+p.location});sources.add(source);
   }
@@ -65,13 +65,13 @@ function wanmipoSpelling(raw){
   const rime=m[1].slice(onset.length),vowel=rimes[rime],tone=WANMIPO_TONES[m[2]];
   if(!vowel||!tone)return null;
   const core=onsets[onset]+vowel;
-  let marked=accentSyllable(core,tone[1]);if(m[2]==='33')marked=marked.normalize('NFD').replace('\u030c','\u0308').normalize('NFC');
+  const marked=m[2]==='33'?core:accentSyllable(core,tone[1]);
   const separator=!gap&&previous&&(/^[aeiou]/.test(core)||(/n$/.test(previous)&&/^g/.test(core)))?"'":'';
   ye+=gap+core+tone[0];accent+=gap+separator+marked;previous=core;pos=m.index+m[0].length;
  }
  return pos&& !text.slice(pos).trim()?{ye:ye+text.slice(pos),accent:accent+text.slice(pos)}:null;
 }
-NOTATION_CONFIG.profiles.push({id:'yubao-60823',source:'yubao-60823',title:'中国语保 · 保靖碗米坡',kind:'ipa',status:'按表层调值转写',count:2990,dialects:['北部 · 保靖碗米坡'],notes:['碗米坡按表层调值转写：13→f／á，33→r／ä，55→x／ā，53→v／à，31→r／ǎ。33、31在叶式拼音中同写r，带调号拼音分别使用分音符和抑扬符。此约定不表示对音位调类或变调来源的分析。']});
+NOTATION_CONFIG.profiles.push({id:'yubao-60823',source:'yubao-60823',title:'中国语保 · 保靖碗米坡',kind:'ipa',status:'按表层调值转写',count:2990,dialects:['北部 · 保靖碗米坡'],notes:['碗米坡按表层调值转写：13→f／á，33→r／不标调，55→x／ā，53→v／à，31→r／ǎ。33、31在叶式拼音中同写r；调号拼音中33不标，31写ǎ。不标调表示33调值，不表示轻声。']});
 
 // Point-specific survey orthographies; original IPA remains untouched.
 function northernSurveySpelling(raw,point){
