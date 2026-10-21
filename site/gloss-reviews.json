@@ -10,12 +10,14 @@
       "enNote": "Note: possible recording error"
     },
     "w903": {
-      "zh": "反动；作出反应（汉义待确认）",
-      "status": "pending",
+      "zh": "反动",
+      "status": "confirmed",
       "previousZh": "反动",
       "term": "huan1dong2",
       "en": "to react",
-      "enNote": "Note: possible recording error"
+      "enNote": "Source English 'to react' mistranslates the Chinese loanword 反动; preserve the original English in provenance.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "汉语借词「反动」，原词形 huan1dong2 对应汉语「反动」的两个语素；Brassett 中文词表原释亦为「反动」。英文 to react 为错误或不准确的翻译。"
     },
     "w1177": {
       "zh": "打滚",
