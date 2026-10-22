@@ -9,6 +9,10 @@ const EDITORIAL_NOTES=[{
 },...Object.entries(typeof YUBAO_LUXI_CORRECTIONS==='undefined'?{}:YUBAO_LUXI_CORRECTIONS).map(([serial,c])=>({
  id:'luxi-transcription-'+serial,wordIds:['yubao-60824-v-'+serial],kind:'记音校订',text:c.note
 }))];
+EDITORIAL_NOTES.push(
+ {id:'wanmipo-xiunao-fusion',wordIds:['yubao-60823-v-2733'],kind:'词干与后缀',text:'可分析为 xi•unao：后缀 -unao 的 u 与词干融合，拼写作 xiu-náo。• 标示形态分析中的边界，- 标示融合后的拼写分界。'},
+ {id:'wanmipo-piunao-fusion',wordIds:['yubao-60823-v-2870'],kind:'词干与后缀',text:'可分析为 pi•unao：后缀 -unao 的 u 与词干融合，拼写作 piu-náo。• 标示形态分析中的边界，- 标示融合后的拼写分界。'}
+);
 function editorialNotesFor(w){
  const ids=new Set([w.id,...(w.mergedWordIds||[]),...(w.attestations||[]).map(a=>a.id)]);
  return [...(w.editorialNotes||[]),...EDITORIAL_NOTES.filter(n=>n.wordIds.some(id=>ids.has(id)))].filter((n,i,a)=>a.findIndex(x=>x.id===n.id)===i);

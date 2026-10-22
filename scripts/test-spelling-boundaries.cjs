@@ -25,6 +25,34 @@ const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.s
  check('w1255','là pō');check('yubao-60757-v-0278',"hāliě'ābā");check('yubao-60756-v-0278',"hālēibā");check('yubao-60823-v-0278',"hāliē'àba");check('yubao-60756-v-1220','sǔsǔ qǐcǎ');check('yubao-60823-v-1220','súsù pong');
  check('w2971',"ǎsǐkūlī");check('w1511',"mětīkūlī");check('w508','cò zù');check('w1629','nié-biētà');check('w1435','lò cái');
  for(const id of ['w46','w717','w1534','w1225','w1429','w363','w584','w630','w962','w1437','w1493','w1229']){const w=data.words.find(w=>w.id===id||w.mergedWordIds?.includes(id));assert(!w.spellingBoundaries,id+' must remain unsplit');}
+ const newRules=vm.runInContext("SPELLING_BOUNDARY_REVIEWS.filter(r=>r.sourceForm||r.key==='hamokualiao')",ctx);
+ for(const rule of newRules){
+  const w=data.words.find(w=>rule.wordIds.includes(w.id)||w.mergedWordIds?.some(id=>rule.wordIds.includes(id)));assert(w,rule.wordIds[0]);ctx.w=w;
+  const mode=rule.mode||'accent';ctx.mode=mode;
+  const forms=vm.runInContext("spellingDisplay='accent';southernDisplay=mode;completeSpellings(w).map(v=>v.text)",ctx);
+  const matching=forms.filter(t=>ctx.boundaryPlain(t).replace(/[\s'’-]/g,'')===rule.key);
+  assert(matching.length,rule.wordIds[0]+' missing form '+forms);
+  assert(matching.some(t=>rule.separator==='-'?t.includes('-'):t.includes(' ')),rule.wordIds[0]+' missing boundary '+forms);
+ }
+ check('stedt-rn-407684','hǎ-mǒ-kuā-liāo');
+ check('yubao-60756-v-0831','góunà-liě');
+ check('yubao-60823-v-0765','re-liē');
+ check('yubao-60823-v-2733','xiu-náo');
+ check('yubao-60823-v-2870','piu-náo');
+ check('yubao-60824-v-2635','no yiì');
+ check('yubao-60824-v-2663',"ǎjjiē yǎu'a");
+ check('yubao-60824-v-2664','ǎjjiē jǖ');
+ check('yubao-60824-v-2665','ǎjjiē nǒn');
+ check('yubao-60824-v-2666','ǎjjiē pè');
+ check('yubao-60824-v-2667','ǎjjiē zzò');
+ const translations=vm.runInNewContext(fs.readFileSync(path.join(root,'ui-translations.js'),'utf8')+';UI_TRANSLATIONS;');
+ for(const [id,analysis] of [['yubao-60823-v-2733','xi•unao'],['yubao-60823-v-2870','pi•unao']]){
+  const word=data.words.find(w=>w.id===id||w.mergedWordIds?.includes(id));
+  assert(ctx.editorialNotesHTML(word).includes(analysis),id+' fusion analysis note');
+  const note=ctx.editorialNotesFor(word).find(n=>n.text.includes(analysis));
+  assert(translations[note.kind]&&translations[note.text]?.includes(analysis),id+' English fusion note');
+ }
+ console.log('PASS: all '+newRules.length+' new display rules matched actual dictionary forms.');
  for(const w of data.words)delete w.spellingBoundaries;
  assert.equal(JSON.stringify(data.words),before,'only boundary metadata may change');
  console.log('PASS: '+annotated.length+' annotated entries; source records, IPA, senses and IDs unchanged; reviewed boundaries render in both spelling modes.');
