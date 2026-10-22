@@ -10,7 +10,7 @@
     // pa¹sa³ (STEDT 454776); lie³ ‘use’ (456418); ni¹ ‘look for’ (w1598).
     // yinxyiv and bifsar: spellings and tones confirmed by the user.
     searchEn: 'yinxyiv lier nix', searchZh: 'paxsar lier nix', searchTujia: 'bifsar lier nix',
-    saved: 'suxsux-civ', history: 'sufmur nier sar', search: 'nix', save: 'suxsux'
+    history: 'sufmur nier sar', search: 'nix'
   });
   const textMemory = new WeakMap(), attributeMemory = new WeakMap();
   const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
@@ -42,7 +42,7 @@
     return typeof spellingDisplay !== 'undefined' && spellingDisplay === 'ye' ? ye : yeToAccent(ye);
   }
   function decorate() {
-    for (const key of ['home','words','grammar','notation','history','corpus','sources','saved']) {
+    for (const key of ['home','words','grammar','notation','history','corpus','sources']) {
       const target = document.querySelector('nav [data-view="'+key+'"] > span');
       if (target && !target.querySelector('[data-ui-tujia]')) {
         const small = document.createElement('small');
@@ -84,7 +84,6 @@
       const current = element.getAttribute(attr), previous = cache[attr];
       const source = previous && current === previous.output ? previous.source : current;
       let output = translate(source);
-      if (element.matches('[data-save]') && source === '收藏' && ['title','aria-label'].includes(attr)) output += ' · ' + spelling('save');
       cache[attr] = {source,output};
       if (current !== output) element.setAttribute(attr,output);
     }
