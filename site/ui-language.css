@@ -18,11 +18,46 @@ html[lang="en"] .filters select{max-width:100%}html[lang="en"] button{overflow-w
 /* Keep a translated page label from shrinking underneath adjacent controls. */
 @media(max-width:600px){#crumb{min-width:min-content}}
 
-/* Locally hosted Charis: shared Latin, tone-mark and IPA typography. */
-@font-face{font-family:Charis;src:url("fonts/Charis-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
-@font-face{font-family:Charis;src:url("fonts/Charis-Bold.woff2") format("woff2");font-style:normal;font-weight:600 900;font-display:swap}
-:root{--tujia-font:Charis,"Charis SIL",Georgia,serif}
-.tujia-ui,.brand small.tujia-ui,.word,.word-ipa,.notation-form,.example-transcription,.lyric-tujia,.external-ipa,.survey-ipa,[lang="tji"]{font-family:var(--tujia-font)}
-
-/* Tujia-only section eyebrow labels; use the same accented spelling as navigation. */
-.eyebrow .tujia-ui{display:inline;margin:0;color:inherit;font-family:var(--tujia-font);font-size:1em;font-weight:inherit;line-height:inherit;letter-spacing:.06em;vertical-align:baseline}
+/* Full, same-origin fonts. Gentium Plus is spelling; Charis is phonetic text.
+   The Pages build installs the pinned upstream Gentium Plus release. */
+@font-face{font-family:"Gentium Plus";src:url("fonts/GentiumPlus-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Gentium Plus";src:url("fonts/GentiumPlus-Bold.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"Gentium Plus";src:url("fonts/GentiumPlus-Italic.woff2") format("woff2");font-style:italic;font-weight:400;font-display:swap}
+@font-face{font-family:"Gentium Plus";src:url("fonts/GentiumPlus-BoldItalic.woff2") format("woff2");font-style:italic;font-weight:700;font-display:swap}
+@font-face{font-family:"Charis SIL";src:url("fonts/Charis-Regular.woff2") format("woff2");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Charis SIL";src:url("fonts/Charis-Bold.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap}
+:root{--tujia-font:"Gentium Plus","Charis SIL",Georgia,serif;--ipa-font:"Charis SIL",Charis,"Gentium Plus",serif}
+.tujia-ui,.brand small.tujia-ui,.word,.notation-form,.example-transcription,.lyric-tujia,.survey-spelling,[lang="tji"],[data-script="transliteration"],.external-text-block details>p,.external-glosses>div>span:first-child,textarea[data-notation-field="ye"],textarea[data-notation-field="accent"],textarea[data-notation-field="brassett"]{font-family:var(--tujia-font);letter-spacing:normal;font-kerning:normal}
+.word-ipa,.external-ipa,.survey-ipa,.example .form,.np-cell,[data-script="ipa"],textarea[data-notation-field="ipa"],.survey-spelling+p{font-family:var(--ipa-font);letter-spacing:normal;font-kerning:normal}
+/* An unconverted dictionary headword and legacy inline Georgia declarations
+   must not override the semantic notation kind. */
+.word[data-script="ipa"],h1[data-script="ipa"]{font-family:var(--ipa-font)!important}
+.word,.word-card .word-card-title,.word-card .word-ipa,.notation-form,.example-transcription,.lyric-tujia,.survey-spelling{line-height:1.55}
+[data-script] sup,.word sup,.word-ipa sup{font-family:inherit}
+.bilingual-label{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0}
+.bilingual-label>.tujia-ui,.brand .bilingual-label>.tujia-ui{display:block;margin:0;color:inherit;font-family:var(--tujia-font);font-size:16px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none;overflow:visible}
+.bilingual-label>.ui-secondary{display:block;font-size:12px;font-weight:400;line-height:1.45;color:var(--muted)}
+.brand .bilingual-label>.tujia-ui{font-size:20px}
+.brand .bilingual-label>.ui-secondary{font-size:13px}
+aside>nav button.active .ui-secondary{color:#d7e5df}
+aside>nav button.active .tujia-ui{color:inherit}
+.hero h1.bilingual-label{gap:4px;letter-spacing:normal}
+.hero h1.bilingual-label>.hero-tujia{font-size:34px;line-height:1.5}
+.hero h1.bilingual-label>.ui-secondary{font-size:22px;color:var(--ink)}
+.search-language-label{align-items:center}
+.search-languages .search-language-label>.tujia-ui{font-size:16px;line-height:1.5;margin:0;color:var(--ink)}
+.search-languages .search-language-label>.ui-secondary{font-size:12px}
+#search-form button.bilingual-label{align-items:center;justify-content:center}
+#search-form button.bilingual-label>.tujia-ui{font-size:16px;color:inherit;opacity:1;margin:0;line-height:1.5}
+#search-form button.bilingual-label>.ui-secondary{font-size:12px;color:inherit;opacity:.85;padding:0}
+/* These are already above the translated page heading, and remain inline. */
+.eyebrow .tujia-ui{display:inline;margin:0;color:inherit;font-family:var(--tujia-font);font-size:14px;font-weight:400;line-height:1.6;letter-spacing:0;vertical-align:baseline}
+@media(max-width:720px){
+  aside>nav .bilingual-label{gap:1px}
+  aside>nav .bilingual-label>.tujia-ui{font-size:15px;line-height:1.5}
+  aside>nav .bilingual-label>.ui-secondary{font-size:11px}
+  .brand .bilingual-label>.tujia-ui{font-size:19px}
+  .hero h1.bilingual-label>.hero-tujia{font-size:29px}
+  .hero h1.bilingual-label>.ui-secondary{font-size:20px}
+  .search-languages .search-language-label>.tujia-ui{font-size:15px}
+}

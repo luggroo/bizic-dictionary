@@ -41,6 +41,25 @@
     const ye = labels[key] || '';
     return typeof spellingDisplay !== 'undefined' && spellingDisplay === 'ye' ? ye : yeToAccent(ye);
   }
+  // Move existing nodes, rather than copying labels, so translation memory and
+  // event handlers survive language/spelling changes. DOM and visual order agree.
+  function tujiaFirst(label) {
+    const host = label.parentElement;
+    if (!host || host.closest('.eyebrow')) return;
+    if (!host.matches('.brand>span,aside>nav button>span,.hero h1,.search-language-label,#search-form button')) return;
+    host.classList.add('bilingual-label');
+    for (const node of [...host.childNodes]) {
+      if (node === label) continue;
+      if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+        const secondary = document.createElement('span');
+        secondary.className = 'ui-secondary';
+        node.before(secondary); secondary.append(node);
+      } else if (node.nodeType === Node.ELEMENT_NODE && !node.matches('svg,[data-ui-tujia]')) {
+        node.classList.add('ui-secondary');
+      }
+    }
+    if (host.firstChild !== label) host.prepend(label);
+  }
   function decorate() {
     for (const key of ['home','words','grammar','notation','history','corpus','sources']) {
       const target = document.querySelector('nav [data-view="'+key+'"] > span');
@@ -67,6 +86,7 @@
     document.querySelectorAll('[data-ui-tujia]').forEach(el => {
       const value = spelling(el.dataset.uiTujia);
       if (el.textContent !== value) el.textContent = value;
+      tujiaFirst(el);
     });
   }
   function translateText(node) {
@@ -107,6 +127,7 @@
   function refresh(roots = [document.body]) {
     observer?.disconnect();
     decorate();
+    window.TujiaTypography?.refresh(node => textMemory.get(node)?.source || node.nodeValue);
     roots.forEach(root => { if (root.isConnected) translateTree(root); });
     document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
     const select = document.getElementById('ui-language');
