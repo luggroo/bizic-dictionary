@@ -12,7 +12,7 @@ const GRAMMAR_RIMES={
  'a':'a','ai':'ai','au':'ao','ou':'ou','u':'u','ia':'ia','iau':'iao','iu':'iu',
  'ua':'ua','uai':'uai','uei':'ui','ui':'ui','i':'i','e':'e','ɤ':'e','ɿ':'i','ɨ':'i','ɯ':'i',
  'ĩ':'in','ã':'an','iɛ̃':'ian','iã':'ian','uã':'uan','ɔ̃':'ong','õ':'ong','iɔ̃':'iong',
- 'ɜ̃':'en','ɛ̃':'en','ẽ':'en','uɜ̃':'un','uɛ̃':'un','ũ':'un','ie':'ie','iɛ':'ie',
+ 'ɜŋ':'en','ɨe':'e','ɜ̃':'en','ɛ̃':'en','ẽ':'en','uɜ̃':'un','uɛ̃':'un','ũ':'un','ie':'ie','iɛ':'ie',
  'ɔ':'o','o':'o','uɔ':'o','ei':'ei','ɯi':'ei','ɯe':'e','ɯə':'e','ɯɛ':'e','uɛ':'uai','iə':'ie','iẽ':'ian','iuŋ':'iong','ue':'ue','uẽ':'uan','ə':'e',
  'an':'an','aŋ':'ang','en':'en','in':'in','ian':'ian','uan':'uan','un':'un','uin':'un',
  'oŋ':'ong','ioŋ':'iong','iŋ':'in','uŋ':'un','io':'io','iɔ':'io','ɛ':'ai','y':'ü',
