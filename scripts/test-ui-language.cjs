@@ -26,7 +26,7 @@ const server=http.createServer((req,res)=>{
     await page.locator('nav [data-view="words"]').click();
     assert.equal(await page.locator('.word-card').count(),12);
     const snapshot=await page.evaluate(()=>JSON.stringify(D.words.map(w=>[w.id,w.zh,w.en,w.term,w.forms,w.attestations])));
-    await page.selectOption('[data-filter="searchLanguage"]','zh');
+    await page.locator('[data-search-language="zh"]').click();
     await page.locator('#query').fill('水');
     await page.locator('#search-form button').click();
     assert.match(await page.locator('.result-head').innerText(),/entries/);
@@ -34,7 +34,7 @@ const server=http.createServer((req,res)=>{
     const before=await page.locator('.word-card-meaning').allTextContents();
     await page.selectOption('#ui-language','zh');
     assert.deepEqual(await page.locator('.word-card-meaning').allTextContents(),before);
-    assert.equal(await page.inputValue('[data-filter="searchLanguage"]'),'zh');
+    assert.equal(await page.locator('[data-search-language="zh"]').getAttribute('aria-pressed'),'true');
     assert.equal(await page.inputValue('#query'),'水');
     await page.selectOption('#ui-language','en');
     const bookmark=page.locator('.bookmark').first(),id=await bookmark.getAttribute('data-save');
