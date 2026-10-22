@@ -102,3 +102,42 @@ for(const [tone,form] of [['55','crı̄'],['33','crı'],['35','crı́'],['21','c
 }
 assert.equal(ctx.southernSpelling('zi13','yubao-60824').accent,'rı̌');
 assert.equal(ctx.southernSpelling('tsi21','yubao-60824').accent,'zrı̀');
+
+// Written y absorbs medial i before another vowel, including nasalized rimes.
+const withoutTone=s=>s.normalize('NFD').replace(/[\u0300\u0301\u0304\u030c\u0331]/g,'').normalize('NFC');
+for(const [raw,accent,poj] of [
+ ['jia35','yá','iá'],['jie35','yé','ié'],['jio55','yō','iō'],
+ ['jiau55','yāu','iāu'],['jiã21','yàn','iàn'],['jiõ13','yǒn','iǒn'],
+ ['jiɯ35','yéu','iéu'],['jiʉ35','yéu','iéu'],
+ ['ʑio55','yō','yō'],['ʑiau55','yāu','yāu'],
+ ['ji35','yí','í'],['jĩ55','yīn','īn'],['jɨ21','yıì','ıì'],
+ ['ji35a21',"yí'à",'í-à']
+]){
+ const value=ctx.southernSpelling(raw,'yubao-60824');
+ assert.equal(value.accent,accent,raw);assert.equal(value.poj,poj,raw);
+}
+const youngWomanRaw='si³³la²¹dʑi⁵⁵ʔa¹³jio⁵⁵be²¹';
+assert.equal(ctx.southernSpelling(youngWomanRaw,'stedt-cb523fc3dc').accent,"silàjjī'ǎyōbbè");
+const youngWoman={dialect:'南部',attestations:[{id:'young-woman',dialect:'南部',source:'stedt-cb523fc3dc',term:youngWomanRaw}]};
+run("southernDisplay='accent'");assert.equal(ctx.notationHead(youngWoman),"silàjjī'ǎyōbbè");
+assert.equal(ctx.convertNotation(youngWomanRaw,'stedt-cb523fc3dc:south').rows[0].accent,"silàjjī'ǎyōbbè");
+// Cover every supported rime and tone as well as all loaded Southern records.
+for(const source of ['stedt-cb523fc3dc','stedt-4fdbdbf516','yubao-60824']){
+ for(const onset of ['j','ʑ'])for(const rime of run('Object.keys(SOUTH_RIMES)'))for(const tone of ['55','33','35','21','13']){
+  const raw=onset+rime+tone,value=ctx.southernSpelling(raw,source);assert(value,raw);
+  for(const form of Object.values(value))assert(!/yi[aeiouüêı]/.test(withoutTone(form)),source+' '+raw+' → '+form);
+ }
+}
+for(const a of rows){
+ const value=ctx.southernSpelling(a.term,a.source);if(!value)continue;
+ for(const form of Object.values(value))assert(!/yi[aeiouüêı]/.test(withoutTone(form)),a.source+' '+a.term+' → '+form);
+}
+const translations=vm.runInNewContext(fs.readFileSync(path.join(root,'ui-translations.js'),'utf8')+';UI_TRANSLATIONS');
+assert(translations[run('SOUTH_PINYIN_RULES')].includes('yio → yo'));
+console.log('PASS: y + medial i across all rimes, tones, sources, '+rows.length+' Southern records, display and conversion; yi/yin and syllable boundaries preserved');
+assert.equal(ctx.northernSurveySpelling('ʑia55phiã33','60823').accent,'yāpian');
+assert.equal(ctx.northernSurveySpelling('sɿ33sɿ33ui55ʑia33','60823').accent,"sisi'uīya");
+assert.equal(ctx.northernSurveySpelling('ʑia55phiã33','60823').ye,'yaxpianr');
+for(const [core,expected] of [['yia','ya'],['yio','yo'],['yier','yer'],['yiu','you'],['yi','yi'],['yin','yin'],['yu','yu']]){
+ assert.equal(ctx.northernYCore(core),expected);assert.equal(ctx.normalizeYInitialSyllable(core),expected);
+}

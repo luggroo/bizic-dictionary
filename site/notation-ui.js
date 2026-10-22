@@ -125,10 +125,8 @@ function reverseYe(text){const memo=new Map(),lookup=NOTATION_CONFIG.yeSyllables
 // After the palatal y onset, spell medial-i rimes as conventional y-initial syllables.
 // Do not change standalone yi, yin, or unrelated consonant classes.
 function normalizeYInitialSyllable(core){
- if(!core.startsWith('y'))return core;
- const rest=core.slice(1);
- const changes={ia:'a',iao:'ao',ian:'an',iang:'ang',ie:'e',io:'o',iong:'ong',iu:'ou',iua:'ua',iuan:'uan'}; // y+u stays yu; y+iu becomes you.
- return 'y'+(changes[rest]||rest);
+ if(core==='yiu')return 'you'; // Northern iu uses ou after y; y+u stays yu.
+ return core.replace(/^yi(?=[aeiouüêı])/,'y');
 }
 function sourceSyllableCores(core,p){
  if(p.id==='brassett-phonetic')return brassettIPAInputMap()[core];
