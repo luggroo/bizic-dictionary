@@ -27,7 +27,7 @@ function isSouthernWord(w){return w.dialect==='南部'||(w.dialects||[]).include
 function southNormalize(raw,source=''){
  let t=plainTones(raw).normalize('NFC').replaceAll('u̵','ʉ').replaceAll('ɡ','g').replaceAll('ɑ','a').replaceAll('ʦ','ts').replaceAll('ʣ','dz').replaceAll('ʨ','tɕ').replaceAll('ʥ','dʑ').replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ').replaceAll('d͡ʑ','dʑ').replaceAll('d͡z','dz');
  if(source.startsWith('stedt-'))t=t.replaceAll('h̄','ħ').replaceAll('ẖ','ħ');
- return t.replace(/(tɕ|ts|p|t|k)h/g,'$1ʰ').normalize('NFC');
+ return normalizeIPAAspiration(t).normalize('NFC');
 }
 function southMark(rime,tone,explicit=false){
  const mark=tone==='33'&&explicit?'\u0331':SOUTH_TONES[tone];
