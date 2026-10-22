@@ -32,7 +32,7 @@
     notation: 'sar qifmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
     // Search action wording approved for this interface; not a source quotation.
     searchEn: 'yinxyiv niv-xivsour', searchZh: 'pavsar niv-xivsour', searchTujia: 'bifsar niv-xivsour',
-    history: 'nierzuvbarzuv niex sar', search: 'nix'
+    history: 'nierzuxbarzux niex sar', search: 'nix'
   });
   const textMemory = new WeakMap(), attributeMemory = new WeakMap(), grammarMemory = new WeakMap();
   const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
