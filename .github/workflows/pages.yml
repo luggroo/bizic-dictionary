@@ -29,6 +29,11 @@ jobs:
         run: python3 scripts/apply-gloss-reviews.py site
       - name: Canonicalize published IPA and deduplicate forms
         run: node scripts/normalize-ipa-data.cjs site
+      - name: Verify merged dictionary IPA and notation rules
+        run: |
+          node scripts/test-word-merges.cjs
+          node scripts/test-southern-notation.cjs
+          node scripts/test-notation-pairs.cjs
       - name: Version browser assets
         run: |
           python3 - <<'PYCODE'
