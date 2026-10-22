@@ -93,13 +93,14 @@
       "reviewEvidence": "Brassett 英文 hardly 表程度副词「几乎不」，中文原释「差一点」有语义偏差；保留英文来源。"
     },
     "w2449": {
-      "zh": "无法应付",
-      "status": "confirmed",
+      "zh": "交差（汉义待确认）",
+      "status": "pending",
       "previousZh": "交差",
       "term": "xia1xi1",
       "en": "to be unable to deal with",
-      "reviewEvidence": "原英文 to be unable to deal with；不支持「交差」义。",
-      "reviewedAt": "2026-10-21"
+      "reviewEvidence": "Brassett 2004 中文词表原条目 2449 明写「交差」；英文 to be unable to deal with 与汉义不吻合。同一条目对应叶式拼写 xiaxxix（Sheet1!C708:G708）。保留原中文为候选，可能存在英语翻译或原始记录错误，需上下文核实。",
+      "reviewedAt": "2026-10-21",
+      "enNote": "Original Chinese entry says 交差 ('report completion; hand over an assignment'), but English says 'to be unable to deal with'. Potential source/translation error; sense unresolved."
     },
     "w2680": {
       "zh": "正在",
@@ -157,12 +158,13 @@
       "reviewEvidence": "龙山语保 0639「嫂子」tsha²²tshɿ²²，Brassett ca²cei¹ 近似对应；其他姻亲称谓另有词形。"
     },
     "w3223": {
-      "zh": "嫂子／弟媳／配偶的姐妹（汉义待确认）",
-      "status": "pending",
+      "zh": "嫂子",
+      "status": "confirmed",
       "previousZh": "嫂子／弟媳／配偶的姐妹（原义未细分）",
       "term": "ca2 qi4",
       "en": "sister-in-law",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "使用者核定 ca²qi⁴ 为「嫂子」。同一条包含 Brassett 2004 英文 sister-in-law 和 STEDT rn 455781（Brassett 04）；汉义不扩大到弟媳等其他姻亲关系。"
     },
     "w3293": {
       "zh": "小年",
@@ -267,13 +269,14 @@
       "reviewEvidence": "语保龙山 0462「鼻涕」uŋ²⁴tɕhi⁵⁵la⁵⁵、阳朝 eŋ⁵⁵tɕhi⁵⁵la⁵⁵、碗米坡 ũ⁵⁵tɕhi⁵⁵la¹³；Brassett ong⁴qi³la⁴ 同根。"
     },
     "w4660": {
-      "zh": "擤鼻涕",
+      "zh": "鼻涕",
       "status": "confirmed",
       "previousZh": "流鼻涕；抽鼻子",
       "term": "ong4 qi3 se2",
       "en": "snivel",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "Brassett 英文 snivel 为鼻涕相关动作；同系列 ong4 qi3 la4 已对应「鼻涕」，末音 se2 指擤鼻动作的可能性较高，需例句核查。"
+      "reviewEvidence": "使用者核定 ong⁴qi³se² 为「鼻涕」。Brassett 2004（词条 4660），对应 STEDT rn 456131，原英语 snivel，词性 n.；语保龙山、阳朝、碗米坡 0462「鼻涕」及同系列 ong⁴qi³la⁴ 支持鼻涕相关义，不能凭 se² 断定为「擤鼻涕」动作。",
+      "enNote": "Original English 'snivel' is ambiguous; Chinese gloss reviewed as 鼻涕 ('nasal mucus; snot'), not necessarily the action of blowing one's nose."
     },
     "w4886": {
       "zh": "轻",
@@ -337,13 +340,14 @@
       "reviewEvidence": "Brassett 中文词表 w2352「瘦」；语保龙山 0962/0965「瘦」uai55"
     },
     "w5535": {
-      "zh": "无法应付",
-      "status": "confirmed",
+      "zh": "交差（汉义待确认）",
+      "status": "pending",
       "previousZh": "交差",
       "term": "xia1 xi1",
       "en": "unable to deal with",
-      "reviewEvidence": "原英文 unable to deal with；与 w2449 同词形。",
-      "reviewedAt": "2026-10-21"
+      "reviewEvidence": "Brassett 2004 英语表 Sheet1!A2765:C2765 的同形 xia¹xi¹，英文 unable to deal with；配对词条 w2449 中文原释为「交差」，此条汉译据同一词形引用该条。中文与英文原资料不一致，疑有记录／翻译错误，待核。",
+      "reviewedAt": "2026-10-21",
+      "enNote": "Original matching Chinese entry says 交差, but English says 'unable to deal with'; potential source/translation error. Sense not confirmed."
     },
     "stedt-rn-453895": {
       "zh": "小姐姐",
@@ -540,12 +544,13 @@
       "reviewEvidence": "语保阳朝 2516「笔」pi³⁵；同 STEDT 5.1 语义组另有 jian²¹pi²¹「铅笔」、pi³⁵「笔」，本条 kan⁵⁵pi²¹ 的 pi 是汉语借词「笔」，非动物圈栏。"
     },
     "stedt-rn-453921": {
-      "zh": "岳父；公公（汉义待确认）",
-      "status": "pending",
+      "zh": "岳父",
+      "status": "confirmed",
       "previousZh": "岳父",
       "term": "ka³ki³",
       "en": "father-in-law",
-      "enNote": "Note: possible recording error"
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "使用者核定「岳父」；STEDT rn 453921，Brassett 06 Tujia，原文定位 2.4，英文 father-in-law；该词条不据英文泛译为「公公」。"
     },
     "stedt-rn-289813": {
       "zh": "笔",
@@ -603,12 +608,14 @@
       "reviewEvidence": "此形 kha²¹tsu²¹ 在 STEDT rn 288812 同一「棍子」义项中作为异读记录；语保龙山 0692「棍子」"
     },
     "stedt-rn-210960": {
-      "zh": "放牧；吃草（汉义待确认）",
-      "status": "pending",
+      "zh": "看守",
+      "status": "confirmed",
       "previousZh": "放牧；吃草（原义未细分）",
       "term": "kha⁵³",
       "en": "graze",
-      "enNote": "Note: possible recording error"
+      "enNote": "Original STEDT English 'graze' conflicts with verified Chinese gloss 看守 ('guard; watch over'); source Sun H 91 ZMYY, location 607.38.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "使用者核对原义为「看守」。STEDT rn 210960 的来源为 Sun H 91 ZMYY（孙宏开 1991），原文定位 607.38；原英文 graze 与原义不合，已指出英文释义有误。"
     },
     "stedt-rn-205860": {
       "zh": "口弦",
@@ -1067,12 +1074,14 @@
       "reviewEvidence": "语保龙山 2329「汉族」pa⁵⁵kha²¹、碗米坡 pha⁵⁵kha³³，与本条 pha⁵⁵kha²¹ 对应。"
     },
     "stedt-rn-289936": {
-      "zh": "放牧；吃草（汉义待确认）",
-      "status": "pending",
+      "zh": "放",
+      "status": "confirmed",
       "previousZh": "放牧；吃草（原义未细分）",
       "term": "pha⁵⁵~bo³⁵",
       "en": "graze",
-      "enNote": "Note: possible recording error"
+      "enNote": "English 'graze' may be a context-specific or over-narrow gloss of 放 ('let go; release; put; let out'); review original Tian 1986 context.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "使用者核定「放」；STEDT rn 289936，南部土家语，来源 Tian 86（田志慧 1986），原英语 graze 可能是语境性或偏窄的释义，待原书上下文进一步核实。"
     },
     "stedt-rn-219069": {
       "zh": "破",
@@ -1830,7 +1839,9 @@
       "previousZh": "吟唱；呻吟（原文 sign 可能为拼写错误，待核）",
       "term": "yi²la¹re⁴re⁴",
       "en": "sign, intone, moan",
-      "enNote": "Note: possible recording error"
+      "enNote": "English 'sign, intone, moan' is preserved; 'sign' may be a typo for 'sigh'. Chinese meaning requires source verification; no evidence of a recording error.",
+      "reviewedAt": "2026-10-21",
+      "reviewEvidence": "STEDT rn 454796（Brassett 06 Tujia，原文定位 6.1）英文为 sign, intone, moan。sign 是否为 sigh 的拼写误植，以及具体汉义，仍需对照原书；目前没有证据将其标为记音错误。"
     },
     "stedt-rn-43474": {
       "zh": "飞",
