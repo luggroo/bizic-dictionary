@@ -38,7 +38,11 @@ function sourceNotationValues(w){
 function notationValues(w,kind){const values=[...(w.notations?.[kind]||[]),...sourceNotationValues(w)[kind].filter(v=>!(w.notations?.[kind]||[]).some(x=>x.text===v.text))];return kind==='ipa'?mergeIPANotations(values):values}
 let spellingDisplay='accent';try{if(localStorage.getItem('tujia-north-spelling-v2')==='ye')spellingDisplay='ye'}catch{}
 const TONE_MARKS={1:'\u0304',2:'\u0301',3:'\u030c',4:'\u0300'};
+// Apply to one decoded syllable, never to source IPA or tone-letter strings.
+// Rounded front ü already supplies the palatal vowel; hx is a separate onset.
+function pinyinPalatalCore(core){return core.replace(/^(jj|[jqx])(?=[aeouê])/i,'$1i')}
 function accentSyllable(core,tone){
+ core=pinyinPalatalCore(core);
  const lower=core.toLowerCase();let i=lower.indexOf('a');if(i<0)i=lower.indexOf('e');if(i<0)i=lower.indexOf('o');
  if(i<0){for(let k=core.length-1;k>=0;k--)if('iuü'.includes(lower[k])){i=k;break}}
  if(i<0)i=lower.search(/[mn]/);if(i<0)return core;
@@ -222,22 +226,25 @@ function notationGuide(){
  const profiles=NOTATION_CONFIG.profiles;
  const get=id=>profiles.find(p=>p.id===id);
  const southTones=[['55','ā','高平'],['33','a（可标 a̱）','中平'],['35','á','上升'],['21','à','低降'],['13','ǎ','低升']];
- return `<section class="panel"><h2>拼音与调查点</h2><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p></section>
- <section class="panel"><h2>龙山</h2><p>Brassett 2004、2006 共用一列拼音。各来源的原记音分别对照叶式与调号拼音。</p>
+ return `<details class="panel notation-section"><summary><h2>拼音与调查点</h2></summary><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p></details>
+ <details class="panel notation-section"><summary><h2>龙山</h2></summary><p>Brassett 2004、2006 共用一列拼音。各来源的原记音分别对照叶式与调号拼音。</p>
  <details><summary>Brassett 拼音与 IPA</summary>${notationSourceTables(get('1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE'))}</details>
- ${notationMatrix('longshan')}</section>
- <section class="panel"><h2>保靖 · 阳朝（仙仁）</h2><p>仙仁：戴庆厦、田静（2005），经 Zhou 2020 引用；另列中国语保阳朝。</p>
- ${notationMatrix('yangchao')}</section>
- <section class="panel"><h2>保靖 · 碗米坡</h2><p>独立按照调查点的表层声调转写。33 与 31 在叶式中都写 r，但调号拼音中分别为不标调和 ǎ。</p>
- ${notationSurveyTables('60823')}</section>
- <section class="panel"><h2>泸溪 · 潭溪（南部）</h2><p>南部独立使用调号拼音与白话字；保留浊音对立及原始 IPA。白话字用连字符分音节，c/ch、j、s 的字母合并并不证明语音互补分布。</p>
+ ${notationMatrix('longshan')}</details>
+ <details class="panel notation-section"><summary><h2>保靖 · 阳朝（仙仁）</h2></summary><p>仙仁：戴庆厦、田静（2005），经 Zhou 2020 引用；另列中国语保阳朝。</p>
+ ${notationMatrix('yangchao')}</details>
+ <details class="panel notation-section"><summary><h2>保靖 · 碗米坡</h2></summary><p>独立按照调查点的表层声调转写。33 与 31 在叶式中都写 r，但调号拼音中分别为不标调和 ǎ。</p>
+ ${notationSurveyTables('60823')}</details>
+ <details class="panel notation-section"><summary><h2>泸溪 · 潭溪（南部）</h2></summary><p>南部独立使用调号拼音与白话字；保留浊音对立及原始 IPA。白话字用连字符分音节，c/ch、j、s 的字母合并并不证明语音互补分布。</p>
  ${notationGuideTable('声母',['来源 IPA','调号拼音','白话字'],Object.entries(SOUTH_ONSETS).filter(([k])=>k).sort((a,b)=>southernOnsetOrder(a)-southernOnsetOrder(b)||a[0].localeCompare(b[0],'en')).map(([k,v])=>[k,...v]))}
- ${notationGuideTable('韵母',['来源 IPA','两种拼音韵母'],Object.entries(SOUTH_RIMES).map(([k,v])=>[k,v]))}
+ ${notationGuideTable('韵母',['来源 IPA','调号拼音','白话字'],southernRimeRows().filter(([r])=>r!=='ɨ'))}
+ ${notationGuideTable('分来源韵母',['来源','来源 IPA','声母环境','调号拼音','白话字'],southernSourceRimeRows())}
+ <p>${SOUTH_PINYIN_RULES}</p>
+ <p>${SOUTH_SOURCE_RIME_RULES}</p>
  ${notationGuideTable('声调',['来源 IPA','调号拼音／白话字','说明'],southTones)}
- <p class="tiny">资料：Zhou 南部下都／下且己，STEDT 南部田德生与陈康，中国语保 60824。具体词形中如有来源未能解析的音节，保留原 IPA。</p></section>
- <section class="panel"><h2>小龙热 · Yang 2011 <small class="notation-source-via">via Zhou 2020</small></h2><p>杨再彪《湖南西部四种濒危语言调查》（2011）。</p>${get('zhou-xl')?notationSourceTables(get('zhou-xl')):''}</section>`;
+ <p class="tiny">资料：Zhou 南部下都／下且己，STEDT 南部田德生与陈康，中国语保 60824。具体词形中如有来源未能解析的音节，保留原 IPA。</p></details>
+ <details class="panel notation-section"><summary><h2>小龙热 · Yang 2011 <small class="notation-source-via">via Zhou 2020</small></h2></summary><p>杨再彪《湖南西部四种濒危语言调查》（2011）。</p>${get('zhou-xl')?notationSourceTables(get('zhou-xl')):''}</details>`;
 }
-function notationView(){const cfg=NOTATION_CONFIG,p=cfg.profiles.find(x=>x.id===notationState.source)||cfg.profiles[0],result=notationState.result;return pageHeader('notation')+notationGuide()+`<section class="panel">${notationSourcePicker(p)}<form id="notation-converter" class="searchbar"><input id="notation-input" value="${E(notationState.input)}" aria-label="原词形" placeholder="输入原词形"><button>转换</button></form>${result?result.error?`<p class="notice warn">${E(result.error)}</p>`:mappingTable(result.partial?'部分转写':result.ambiguous?'候选词形':'转换结果',result.southern?['调号拼音','白话字拼音']:['叶式拼音','调号拼音'],result.rows.map(x=>result.southern?[x.accent,x.poj]:[x.ye.replace(/⟦[^⟧]*⟧/g,'□'),x.accent||displayBrassett(x.brassett,'accent').replace(/⟦[^⟧]*⟧/g,'□')])):''}${result?.unresolved?.length?mappingTable('未转换部分',['原形','原因'],result.unresolved.map(x=>[x.text,x.reason])):''}<p class="tiny">1 ā · 2 á · 3 ǎ · 4 à</p><p class="tiny">碗米坡按表层调值转写：13 á／f · 33 不标调／r · 55 ā／x · 53 à／v · 31 ǎ／r。33 与 31 同写 r；调号拼音中33不标，31写ǎ。不标调表示33调值，不表示轻声。</p></section><details><summary>来源规则与笔记</summary>${sourceReviewView(p)}${(NOTATION_PAIR_SOURCES[p.id]?[]:p.notes||[]).map(x=>`<p>${E(x)}</p>`).join('')}${p.rules&&!NOTATION_PAIR_SOURCES[p.id]?mappingTable('声韵对应',['原记号','拼写','条件'],p.rules.map(r=>[r.raw,r.target,r.condition])):''}</details><details><summary>全部来源</summary>${mappingTable('对应进度',['来源','方言','记录数','状态'],notationSourceGroups().map(x=>[x.title,x.dialects.join(' / '),String(x.count),x.status]))}</details><div class="detail-actions"><button id="export-notation-rules">导出规则</button><button data-open="brassett-2006">Brassett 原书</button></div>`}
+function notationView(){const cfg=NOTATION_CONFIG,p=cfg.profiles.find(x=>x.id===notationState.source)||cfg.profiles[0],result=notationState.result;return pageHeader('notation')+notationGuide()+`<details class="panel notation-section" open><summary><h2>记音转换</h2></summary>${notationSourcePicker(p)}<form id="notation-converter" class="searchbar"><input id="notation-input" value="${E(notationState.input)}" aria-label="原词形" placeholder="输入原词形"><button>转换</button></form>${result?result.error?`<p class="notice warn">${E(result.error)}</p>`:mappingTable(result.partial?'部分转写':result.ambiguous?'候选词形':'转换结果',result.southern?['调号拼音','白话字拼音']:['叶式拼音','调号拼音'],result.rows.map(x=>result.southern?[x.accent,x.poj]:[x.ye.replace(/⟦[^⟧]*⟧/g,'□'),x.accent||displayBrassett(x.brassett,'accent').replace(/⟦[^⟧]*⟧/g,'□')])):''}${result?.unresolved?.length?mappingTable('未转换部分',['原形','原因'],result.unresolved.map(x=>[x.text,x.reason])):''}<p class="tiny">1 ā · 2 á · 3 ǎ · 4 à</p><p class="tiny">碗米坡按表层调值转写：13 á／f · 33 不标调／r · 55 ā／x · 53 à／v · 31 ǎ／r。33 与 31 同写 r；调号拼音中33不标，31写ǎ。不标调表示33调值，不表示轻声。</p></details><details><summary>来源规则与笔记</summary>${sourceReviewView(p)}${(NOTATION_PAIR_SOURCES[p.id]?[]:p.notes||[]).map(x=>`<p>${E(x)}</p>`).join('')}${p.rules&&!NOTATION_PAIR_SOURCES[p.id]?mappingTable('声韵对应',['原记号','拼写','条件'],p.rules.map(r=>[r.raw,r.target,r.condition])):''}</details><details><summary>全部来源</summary>${mappingTable('对应进度',['来源','方言','记录数','状态'],notationSourceGroups().map(x=>[x.title,x.dialects.join(' / '),String(x.count),x.status]))}</details><div class="detail-actions"><button id="export-notation-rules">导出规则</button><button data-open="brassett-2006">Brassett 原书</button></div>`}
 function bindNotationView(){bindSourceReview();const source=document.querySelector('#notation-source');if(source)source.onchange=e=>{notationState.input=document.querySelector('#notation-input').value;notationState.source=notationSourceGroups().find(g=>g.id===e.target.value).profiles[0].id;notationState.result=null;render()};const variant=document.querySelector('#notation-variant');if(variant)variant.onchange=e=>{notationState.input=document.querySelector('#notation-input').value;notationState.source=e.target.value;notationState.result=null;render()};const f=document.querySelector('#notation-converter');if(f)f.onsubmit=e=>{e.preventDefault();notationState.input=document.querySelector('#notation-input').value;notationState.result=convertNotation(notationState.input,notationState.source);render()};const b=document.querySelector('#export-notation-rules');if(b)b.onclick=()=>download('tujia-source-notation-rules.json',NOTATION_CONFIG)}
 document.addEventListener('click',e=>{const el=e.target.closest('[data-notation-profile]');if(!el)return;notationState.source=el.dataset.notationProfile==='brassett-to-ye'?'1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE':el.dataset.notationProfile;notationState.result=null;setView('notation')});
 

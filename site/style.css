@@ -132,3 +132,10 @@ button.primary:hover,button.primary:focus-visible{background:var(--green);color:
 .site-footer p{max-width:80ch;margin:0}
 .site-footer p+p{margin-top:6px}
 .site-footer a{text-decoration:underline;text-underline-offset:3px}
+
+/* Independently collapsible sections in the notation guide. */
+#main>details.notation-section{padding:20px;border:1px solid var(--line);border-radius:10px;background:white}
+.notation-section>summary{cursor:pointer;color:var(--ink)}
+.notation-section>summary h2{display:inline;margin:0;font-size:21px}
+.notation-section[open]>summary{margin-bottom:15px}
+.notation-section>summary:focus-visible{outline:2px solid var(--green);outline-offset:5px}

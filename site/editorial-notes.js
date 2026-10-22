@@ -6,7 +6,9 @@ const EDITORIAL_NOTES=[{
  literalMeaning:'/la²⁴pu⁵⁵/ 意为“盐”，/uo⁵⁵/ 意为“背”；/lu²²/ 可能表示动作完成并离去。/ȵie²⁴pie⁵⁵liau/ 意为“睡着了”，末尾 liau 在原记录中未标声调。',
  originalMeaning:'死。原注：“婉称，最常用的几种，指老人：他～了”。',
  evidenceIds:['yubao-60757-v-0806','w1621','w1628','yubao-60757-v-0552']
-}];
+},...Object.entries(typeof YUBAO_LUXI_CORRECTIONS==='undefined'?{}:YUBAO_LUXI_CORRECTIONS).map(([serial,c])=>({
+ id:'luxi-transcription-'+serial,wordIds:['yubao-60824-v-'+serial],kind:'记音校订',text:c.note
+}))];
 function editorialNotesFor(w){
  const ids=new Set([w.id,...(w.mergedWordIds||[]),...(w.attestations||[]).map(a=>a.id)]);
  return [...(w.editorialNotes||[]),...EDITORIAL_NOTES.filter(n=>n.wordIds.some(id=>ids.has(id)))].filter((n,i,a)=>a.findIndex(x=>x.id===n.id)===i);

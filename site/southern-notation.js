@@ -21,6 +21,15 @@ const SOUTH_RIMES={
 };
 const SOUTH_TONES={'55':'\u0304','33':'','35':'\u0301','21':'\u0300','13':'\u030c'};
 const SOUTH_ORDER=Object.keys(SOUTH_ONSETS).sort((a,b)=>b.length-a.length);
+const SOUTH_PINYIN_RULES='调号拼音 j、q、x（含浊音 jj）后补足 i，如 je → jie、qa → qia、xon → xion；已有 i 或 ü 不重复添加。下表为基础对应，/i、ei、ɨ/ 的来源差异另列。';
+const SOUTH_SOURCE_RIME_RULES='Tian 86 南部：调号拼音与白话字共用韵母，/i/ 写 i，/ei/ 写 ei；/ɨ/ 在 /k、kʰ、g、ŋ、x、ɣ/ 后写 i，其他位置写 ii。中国语保泸溪：/t、d/ 后的 /ɨ/ 在两套拼写中写 ei；其他位置沿用原对应。';
+function southernRimeRows(){return Object.entries(SOUTH_RIMES).map(([ipa,rime])=>[ipa,rime==='ri'?'ii':rime,rime])}
+function southernSourceRimeRows(){return [
+ ['Tian 86','i','全部','i','i'],['Tian 86','ei','全部','ei','ei'],
+ ['Tian 86','ɨ','k、kʰ、g、ŋ、x、ɣ','i','i'],['Tian 86','ɨ','其他声母或零声母','ii','ii'],
+ ['中国语保 · 泸溪','ɨ','t、d','ei','ei'],['中国语保 · 泸溪','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['中国语保 · 泸溪','ɨ','其他声母或零声母','ii','ri'],
+ ['其他南部来源','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['其他南部来源','ɨ','其他声母或零声母','ii','ri']
+]}
 let southernDisplay='accent';
 try{if(localStorage.getItem('tujia-south-spelling-v1')==='poj')southernDisplay='poj'}catch{}
 function isSouthernWord(w){return w.dialect==='南部'||(w.dialects||[]).includes('南部')||(w.attestations||[]).some(a=>a.dialect==='南部')}
@@ -39,6 +48,7 @@ function southMark(rime,tone,explicit=false){
 }
 function southernSpelling(raw,source='',explicit=false){
  const text=southNormalize(raw,source).trim().replace(/^\/(.*)\/$/,'$1');
+ const tian=['stedt-cb523fc3dc','stedt-cb523fc3dc:south'].includes(source),luxi=source==='yubao-60824';
  let pos=0,accent='',poj='',count=0,previousCore='';
  for(const m of text.matchAll(/([^0-9\s~～|｜/／,，;；()（）\[\]⁇?]+)([0-9]+|\?)/g)){
   const gap=text.slice(pos,m.index);
@@ -47,22 +57,27 @@ function southernSpelling(raw,source='',explicit=false){
   // Only the two reviewed Tian 'nasal mucus' forms use this exceptional mapping.
   if(r==='ɨ̃'&&['l','n'].includes(onset)&&source.startsWith('stedt-cb523fc3dc'))rime='en';
   if(r==='ɨ'&&['k','kʰ','g','x','ɣ','ħ','ʕ'].includes(onset))rime='i';
+  const sharedRime=tian&&['i','ei','ɨ'].includes(r);
+  if(sharedRime)rime=r==='ɨ'?(['k','kʰ','g','ŋ','x','ɣ'].includes(onset)?'i':'ii'):r;
+  if(luxi&&r==='ɨ'&&['t','d'].includes(onset))rime='ei';
   if(!rime||(!Object.hasOwn(SOUTH_TONES,m[2])&&m[2]!=='?'))return null;
   if(['ɲ','ȵ'].includes(onset)&&rime.startsWith('i'))rime=rime.slice(1);
-  const marked=m[2]==='?'?rime+'⁇':southMark(rime,m[2],explicit);if(marked===null)return null;
   const sep=count&&/^[\s-]*$/.test(gap)?'-':gap.replace(/[|｜]/g,' / ');
   // Apical i after dental sibilants uses ri in POJ (cri/chri/sri versus ci/chi/si).
   // This avoids collapsing common dental-i and alveolo-palatal-i syllables.
-  let pojRime=r==='i'&&['ts','tsʰ','dz','s','z'].includes(onset)?'ri':rime;
+  let pojRime=!sharedRime&&r==='i'&&['ts','tsʰ','dz','s','z'].includes(onset)?'ri':rime;
   // r + apical ri is written ri, not rri.
   if(SOUTH_ONSETS[onset][1]==='r'&&pojRime==='ri')pojRime='i';
   let pojOnset=SOUTH_ONSETS[onset][1];
-  if(onset==='j'){pojOnset='';if(!/^[iü]/.test(pojRime))pojRime='i'+pojRime;}
-  if(onset==='w'){pojOnset='';if(!pojRime.startsWith('u'))pojRime='u'+pojRime;}
+  if(onset==='j'&&!sharedRime){pojOnset='';if(!/^[iü]/.test(pojRime))pojRime='i'+pojRime;}
+  if(onset==='w'&&!sharedRime){pojOnset='';if(!pojRime.startsWith('u'))pojRime='u'+pojRime;}
   const pojMarked=m[2]==='?'?pojRime+'⁇':southMark(pojRime,m[2],explicit);
-  const core=SOUTH_ONSETS[onset][0]+rime;
+  const pinyinOnset=SOUTH_ONSETS[onset][0];
+  const core=pinyinPalatalCore(pinyinOnset+(rime==='ri'?'ii':rime));
+  const pinyinRime=core.slice(pinyinOnset.length);
+  const marked=m[2]==='?'?pinyinRime+'⁇':southMark(pinyinRime,m[2],explicit);if(marked===null)return null;
   const accentSep=sep==='-'?(/^[aeiouü]/i.test(core)||(/n$/i.test(previousCore)&&/^g/i.test(core))?"'":''):sep;
-  accent+=accentSep+SOUTH_ONSETS[onset][0]+marked;poj+=sep+pojOnset+pojMarked;
+  accent+=accentSep+pinyinOnset+marked;poj+=sep+pojOnset+pojMarked;
   previousCore=core;
   count++;pos=m.index+m[0].length;
  }
@@ -75,15 +90,16 @@ function southernNotationValues(w){
  const result=[];
  for(const a of w.attestations||[]){
   if(a.dialect!=='南部')continue;
-  const r=southernSpelling(a.term,a.source);if(!r)continue;
-  if(!result.some(v=>v.accent===r.accent&&v.poj===r.poj))result.push({...r,method:'source',profile:a.source,attestationIds:[a.id]});
+  const r=southernSpelling(a.correctedTerm||a.term,a.source);if(!r)continue;
+  if(!result.some(v=>v.accent===r.accent&&v.poj===r.poj))result.push({...r,method:a.correctedTerm?'editorial-correction':'source',profile:a.source,attestationIds:[a.id]});
  }
  southernCache.set(w,result);return result;
 }
 function southernMappingHTML(){
  return `<details><summary>南部拼音对应</summary><p>调号拼音词内连写，后续音节以元音开头或 n 与 g 相接时用 ' 隔开；白话字以 - 分隔音节。韵尾 n 表示鼻化。55 ā · 33 a（明确标调时 a̱）· 35 á · 21 à · 13 ǎ。</p>`+
  mappingTable('声母',['IPA','调号拼音','白话字拼音'],Object.entries(SOUTH_ONSETS).filter(([k])=>k).map(([k,v])=>['/'+k+'/',...v]))+
- mappingTable('韵母',['IPA','拼写'],Object.entries(SOUTH_RIMES).map(([k,v])=>['/'+k+'/',v]))+
- '<p>南部白话字将 /dz, dʑ/ 写 j，/z/ 写 r；/ts, tɕ/ 统一写 c，/tsʰ, tɕʰ/ 统一写 ch，/s, ɕ/ 统一写 s。前元音 i、ü 前通常读为腭化音；这仅是正字法合并，不代表这些音在全部材料中已证明互补分布，原始 IPA 仍可在词条出处查看。</p><p>齿龈音后的舌尖元音在白话字中写 ri：cri、chri、jri、sri、ri；对应腭音加前元音的 ci、chi、si。调号拼音仍写 zi、ci、zzi、si、ri。原已写 ri 的韵母保持不变。</p><p>田德生“鼻涕”的 /ɨ̃/ 写 en。来源中的 /ɨ/ 在舌根、喉部声母后按 i 转写；其余独立记录写 ri。原始音标可在词条出处中查看。</p></details>';
+ mappingTable('韵母',['IPA','调号拼音','白话字'],southernRimeRows().filter(([r])=>r!=='ɨ').map(([k,...v])=>['/'+k+'/',...v]))+
+ mappingTable('分来源韵母',['来源','IPA','声母环境','调号拼音','白话字'],southernSourceRimeRows())+
+ '<p>'+SOUTH_PINYIN_RULES+'</p><p>'+SOUTH_SOURCE_RIME_RULES+'</p><p>南部白话字将 /dz, dʑ/ 写 j，/z/ 写 r；/ts, tɕ/ 统一写 c，/tsʰ, tɕʰ/ 统一写 ch，/s, ɕ/ 统一写 s。前元音 i、ü 前通常读为腭化音；这仅是正字法合并，不代表这些音在全部材料中已证明互补分布，原始 IPA 仍可在词条出处查看。</p><p>Tian 86 的 /i/ 在两套拼写中均写 i。其他来源的齿龈音后 /i/ 在白话字中写 ri：cri、chri、jri、sri、ri；调号拼音写 zi、ci、zzi、si、ri。</p><p>田德生“鼻涕”的 /ɨ̃/ 写 en。原始音标可在词条出处中查看。</p></details>';
 }
 NOTATION_CONFIG.profiles.push({id:'yubao-60824',source:'yubao-60824',title:'中国语保 · 南部潭溪',kind:'south',count:2884,dialects:['南部'],status:'南部双方案',notes:[]});

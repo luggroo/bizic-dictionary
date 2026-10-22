@@ -1,3 +1,16 @@
+// Corrections are keyed by survey item and preserve the original recording transcript.
+const YUBAO_LUXI_CORRECTIONS={
+ '1287':{original:'xei33dzẽ33',corrected:'xuei33dzẽ33',note:'原记音 xei³³dzẽ³³；据录音校订为 xuei³³dzẽ³³，首音节补记介音 u。'},
+ '0363':{original:'ɕi35di55',corrected:'ɕi55ti35',note:'原记音 ɕi³⁵di⁵⁵；据录音校订为 ɕi⁵⁵ti³⁵。第二音节声母为清不送气音 [t]，两音节声调分别为 55、35。'},
+ '0435':{original:'dia21',corrected:'tia21',note:'原记音 dia²¹；据录音，声母为清不送气音 [t]，校订为 tia²¹。'},
+ '0502':{original:'nɨ21tɕi21pa35',corrected:'li21tɕi21pa35',note:'原记音 nɨ²¹tɕi²¹pa³⁵；据录音，首音节校订为 li²¹。'},
+ '0751':{original:'nɨ33ɣɨ35',corrected:'li33ɣɨ35',note:'原记音 nɨ³³ɣɨ³⁵；据录音，首音节校订为 li³³。'},
+ '2168':{original:'lɨ21tɕi21',corrected:'li21tɕi21',note:'原记音 lɨ²¹tɕi²¹；据录音，首音节校订为 li²¹。'}
+};
+function surveyWordCorrection(raw,point,serial){
+ const correction=point==='60824'?YUBAO_LUXI_CORRECTIONS[serial]:null;
+ return correction&&raw.normalize('NFC')===correction.original.normalize('NFC')?correction:null;
+}
 function surveyIPA(raw,point){
  let text=String(raw).normalize('NFC').replaceAll('ʦ','ts').replaceAll('ʨ','tɕ');
  if(point==='60823')text=text.replaceAll('sɣ33','se33');
@@ -40,14 +53,17 @@ async function loadYubao(data){
    data.sources.push({id:source,title:'中国语保 · '+p.location,url:'https://zhongguoyuyan.cn/point/'+p.point,dialect:p.dialect,locations:[p.location],topics:['词汇','例句'],kind:'调查资料',status:'已收录',path:'中国语言资源保护工程',text:'',dialectBasis:p.dialect+'土家语，'+p.location});sources.add(source);
   }
   for(const [serial,zh,raw,annotation,alias] of p.words){
-   const id=source+'-v-'+serial,ipa=surveyIPA(raw,p.point);
+   const correction=surveyWordCorrection(raw,p.point,serial);
+   const id=source+'-v-'+serial,ipa=surveyIPA(correction?.corrected||raw,p.point);
    const en=english.serialOverrides[serial]||english.glosses[zh]||'';
    if(!en)throw Error('Missing survey English gloss: '+serial+' '+zh);
    const enTranslation={method:'editorial-translation',basis:'语保汉语调查词目与提示',evidence:english.evidence[p.point+'-'+serial]||[]};
    const a={id,source,term:raw,zh,en,originalEn:'',enTranslation,pos:'',scheme:'IPA',locator:'词汇 '+serial,alt:alias,notice:annotation,dialect:p.dialect,collection:'中国语保',category:'',language:'土家语'};
+   if(correction)a.correctedTerm=correction.corrected;
    const key=source+'|'+zh+'|'+ipa.replace(/\s/g,'');
    if(seen.has(key)){const w=seen.get(key);w.attestations.push(a);if(!w.glosses.includes(en))w.glosses.push(en);w.notations.ipa[0].attestationIds.push(id);data.wordAliases[id]=w.id;continue}
    const w={...a,term:ipa,location:p.location,attestations:[a],sourceIds:[source],schemes:['IPA'],dialects:[p.dialect],collections:['中国语保'],positions:[''],categories:[''],forms:[ipa,raw],glosses:[en],zhVariants:[zh],notations:{ye:[],brassett:[],accent:[],ipa:[{text:ipa,method:'source',profile:source,attestationIds:[id]}]}};
+   if(correction)w.notations.ipa[0].method='editorial-correction';
    if(['60756','60757','60823'].includes(p.point)){const converted=northernSurveySpelling(raw,p.point);if(converted){w.notations.ye=[{text:converted.ye,accent:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id]}];w.notations.accent=[{text:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id]}]}}
    data.words.push(w);seen.set(key,w);
   }
@@ -82,7 +98,7 @@ function wanmipoSpelling(raw){
   const onset=Object.keys(onsets).sort((a,b)=>b.length-a.length).find(o=>m[1].startsWith(o));
   const rime=m[1].slice(onset.length),vowel=rimes[rime],tone=WANMIPO_TONES[m[2]];
   if(!vowel||!tone)return null;
-  const core=northernYCore(onsets[onset]+vowel);
+  const core=pinyinPalatalCore(northernYCore(onsets[onset]+vowel));
   const marked=m[2]==='33'?core:accentSyllable(core,tone[1]);
   const separator=!gap&&previous&&(/^[aeiou]/.test(core)||(/n$/.test(previous)&&/^g/.test(core)))?"'":'';
   ye+=gap+core+tone[0];accent+=gap+separator+marked;previous=core;pos=m.index+m[0].length;
@@ -109,6 +125,7 @@ function northernSurveySpelling(raw,point){
   let core=northernYCore(onsets[onset]+vowel);
   if(xr&&['ȵ','ɲ'].includes(onset))core='ni'+(rime==='e'?'e':vowel.replace(/^i/,''));
   if(xr&&['e','ɛ'].includes(rime)&&['tɕ','tɕʰ','ɕ','ʑ'].includes(onset))core=({'tɕ':'jie','tɕʰ':'qie','ɕ':'xie','ʑ':'ye'})[onset];
+  core=pinyinPalatalCore(core);
   const separator=!gap&&previous&&(/^[aeiou]/.test(core)||(/n$/.test(previous)&&/^g/.test(core)))?"'":'';
   ye+=gap+core+tone[0];accent+=gap+separator+accentSyllable(core,tone[1]);previous=core;pos=m.index+m[0].length;
  }

@@ -39,6 +39,7 @@ jobs:
         run: |
           node scripts/test-word-merges.cjs
           node scripts/test-southern-notation.cjs
+          node scripts/test-southern-source-rimes.cjs
           node scripts/test-notation-pairs.cjs
       - name: Version browser assets
         run: |
