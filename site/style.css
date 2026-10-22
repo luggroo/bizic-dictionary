@@ -112,3 +112,6 @@ button.primary:hover,button.primary:focus-visible{background:var(--green);color:
 
 .search-language-icon{flex-shrink:0}
 .search-language-label{min-width:0}
+
+/* Mobile navigation uses text labels; font-size:0 already hides glyph icons. */
+@media(max-width:720px){aside>nav .nav-icon{display:none}}
