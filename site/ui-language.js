@@ -31,9 +31,8 @@
     brand: 'bifzixkar afhxix', home: 'ger laix xief', words: 'cixcix nix', grammar: 'sar qinrmox lir',
     // Zhou (2020) cover: Sufmur Bifzixsar (su²mu³); Brassett: -nie³ (genitive), sa³ (speech).
     notation: 'sar qinrmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
-    // pa¹sa³ (STEDT 454776); lie³ ‘use’ (456418); ni¹ ‘look for’ (w1598).
-    // yinxyiv and bifsar: spellings and tones confirmed by the user.
-    searchEn: 'yinxyiv lier nix', searchZh: 'paxsar lier nix', searchTujia: 'bifsar lier nix',
+    // Search action wording approved for this interface; not a source quotation.
+    searchEn: 'yinxyiv nivxivsour', searchZh: 'pavsar nivxivsour', searchTujia: 'bifsar nivxivsour',
     history: 'sufmur nier sar', search: 'nix'
   });
   const textMemory = new WeakMap(), attributeMemory = new WeakMap(), grammarMemory = new WeakMap();

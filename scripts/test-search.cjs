@@ -48,8 +48,15 @@ for(const [lang,query] of [['en','here'],['en','there'],['zh','这里'],['tujia'
  assert.equal(vm.runInContext("input.value=' '+query+' ';form.onsubmit({preventDefault(){},submitter:{dataset:{searchLanguage:lang}}});state.searchLanguage+'|'+state.q",c),lang+'|'+query);
 }
 assert.equal(vm.runInContext('renders',c),4);
+// Default submissions clear the last single-language scope and preserve filters.
+for(const submitter of [undefined,{dataset:{}}]){
+ c.submitter=submitter;
+ assert.equal(vm.runInContext("state.searchLanguage='zh';state.dialect='北部';input.value='here';form.onsubmit({preventDefault(){},submitter});state.searchLanguage+'|'+state.q+'|'+state.dialect",c),'|here|北部');
+}
+assert.equal(vm.runInContext('searchScopeLabel()',c),'搜索范围：土话、客话、英语');
 const buttons=vm.runInContext('languageSearchButtons()',c);
 assert.equal((buttons.match(/type="submit" form="search-form"/g)||[]).length,3);
 assert.equal((buttons.match(/<svg /g)||[]).length,3);
 assert(!buttons.includes('aria-pressed'));
+assert(buttons.includes('只逻土话')&&buttons.includes('只逻客话')&&buttons.includes('只逻英语'));
 console.log('PASS: three independent submit actions search current input, with icons and no selection state');

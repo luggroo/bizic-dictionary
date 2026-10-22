@@ -34,9 +34,20 @@ const server=http.createServer((req,res)=>{
     await page.selectOption('#ui-language','zh');
     assert.deepEqual(await page.locator('.word-card-meaning').allTextContents(),before);
     assert.equal(await page.locator('[data-search-language][aria-pressed]').count(),0);
-    assert.equal(await page.locator('#search-form button').count(),0);
+    assert.equal(await page.locator('#search-form button').count(),1);
+    assert.equal(await page.locator('[data-ui-tujia="searchZh"]').innerText(),'pavsar nivxivsour');
     assert.equal(await page.evaluate(()=>state.searchLanguage),'zh');
     assert.equal(await page.inputValue('#query'),'水');
+    await page.locator('#query').fill('here');
+    await page.locator('#query').press('Enter');
+    assert.equal(await page.evaluate(()=>state.searchLanguage),'');
+    assert.equal(await page.locator('.search-scope').innerText(),'搜索范围：土话、客话、英语');
+    await page.locator('[data-search-language="en"]').click();
+    assert.equal(await page.evaluate(()=>state.searchLanguage),'en');
+    await page.locator('[data-search-all]').click();
+    assert.equal(await page.evaluate(()=>state.searchLanguage),'');
+    await page.locator('#query').fill('水');
+    await page.locator('[data-search-language="zh"]').click();
     await page.selectOption('#ui-language','en');
     assert.equal(await page.locator('.bookmark,[data-save]').count(),0);
     await page.locator('.word-card-content').first().click();
@@ -72,7 +83,8 @@ const server=http.createServer((req,res)=>{
     await page.screenshot({path:'/tmp/tujia-ui-mobile-en.png',fullPage:true});
     await page.selectOption('#ui-language','zh');
     await page.screenshot({path:'/tmp/tujia-ui-mobile-zh.png',fullPage:true});
-    assert.equal(await page.locator('nav [data-view="words"]>span').innerText(),'词汇检索\ncīcī nī');
+    assert.equal(await page.locator('nav [data-view="words"] .ui-secondary').innerText(),'词汇检索');
+    assert.equal(await page.locator('nav [data-view="words"] .tujia-ui').innerText(),'cīcī nī');
     assert.deepEqual(errors,[]);
     console.log('PASS: UI languages and both spellings; search/filter values; protected glosses and source data; detail/reload; removed favorites; seven views; 390/768/1280px layouts.');
   } finally {await browser.close();server.close();}
