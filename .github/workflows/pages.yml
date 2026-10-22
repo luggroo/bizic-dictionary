@@ -2,7 +2,7 @@ name: Publish Tujia knowledge index
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'scripts/prepare-webfonts.py', '.github/workflows/pages.yml']
+    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/normalize-ipa-data.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
