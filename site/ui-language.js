@@ -12,7 +12,7 @@
     searchEn: 'yinxyiv lier nix', searchZh: 'paxsar lier nix', searchTujia: 'bifsar lier nix',
     history: 'sufmur nier sar', search: 'nix'
   });
-  const textMemory = new WeakMap(), attributeMemory = new WeakMap();
+  const textMemory = new WeakMap(), attributeMemory = new WeakMap(), grammarMemory = new WeakMap();
   const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
   const escapeRE = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   const templates = Object.entries(UI_TRANSLATIONS).filter(([s]) => /\{\w+\}/.test(s)).map(([source, target]) => {
@@ -33,6 +33,18 @@
         return UI_TRANSLATIONS[value] || value;
       });
       break;
+    }
+    // Chapter numbers and link arrows are presentation, not part of the title.
+    if (!translated) {
+      const separated = trim.match(/^(·\s*)(.+)$/);
+      if (separated) translated = separated[1] + translate(separated[2]);
+      const numbered = trim.match(/^(\d+(?:\.\d+)*(?:\.)?\s+)(.+?)(\s+●)?$/);
+      if (numbered && UI_TRANSLATIONS[numbered[2]]) translated = numbered[1] + UI_TRANSLATIONS[numbered[2]] + (numbered[3] || '');
+      const decorated = trim.match(/^(.+?)(\s*(?:→|↗|\/ CONTENTS|\/ §\d+|· PDF ↗))$/);
+      if (!translated && decorated) {
+        const value = translate(decorated[1]);
+        if (value !== decorated[1]) translated = value + decorated[2];
+      }
     }
     if (!translated) return source;
     return source.slice(0,source.indexOf(trim)) + translated + source.slice(source.indexOf(trim)+trim.length);
@@ -121,19 +133,43 @@
       if (node.nodeType === Node.TEXT_NODE) translateText(node); else translateAttributes(node);
     }
   }
+  function translateGrammar() {
+    // Keep complete prose runs together across IPA font decoration. Switching
+    // languages restores the run before typography marks its phonetic spans.
+    for (const root of document.querySelectorAll('.grammar-article,[data-reference-grammar]')) {
+      for (const span of root.querySelectorAll('[data-grammar-localized]')) {
+        const memory = grammarMemory.get(span);
+        if (!memory || memory.language === language) continue;
+        span.textContent = translate(memory.source);
+        memory.language = language;
+      }
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+        acceptNode: node => node.parentElement.closest('script,style,code,pre,[data-ui-content],.form,.example-transcription,.source-row') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+      });
+      const nodes = []; let node;
+      while ((node = walker.nextNode())) if (/\p{Script=Han}/u.test(node.nodeValue)) nodes.push(node);
+      for (const node of nodes) {
+        const span = document.createElement('span'), source = node.nodeValue;
+        span.dataset.grammarLocalized = ''; span.dataset.uiContent = '';
+        grammarMemory.set(span, {source,language});
+        span.textContent = translate(source); node.replaceWith(span);
+      }
+    }
+  }
   let observer, queued = false;
   const pending = new Set();
   function observe() { observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['aria-label','title','placeholder','alt']}); }
   function refresh(roots = [document.body]) {
     observer?.disconnect();
     decorate();
+    translateGrammar();
     window.TujiaTypography?.refresh(node => textMemory.get(node)?.source || node.nodeValue);
     roots.forEach(root => { if (root.isConnected) translateTree(root); });
     document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
     const select = document.getElementById('ui-language');
     if (select) select.value = language;
     const title = typeof state === 'undefined' ? '知识总览' : titles[state.view] || '知识总览';
-    document.title = translate(title) + ' · ' + translate('土家语知识索引');
+    document.title = document.body.dataset.documentTitle ? translate(document.body.dataset.documentTitle) : translate(title) + ' · ' + translate('土家语知识索引');
     if (observer) observe();
   }
   function setLanguage(value) {
