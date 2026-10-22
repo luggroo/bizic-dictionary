@@ -32,7 +32,7 @@
     // Zhou (2020) cover: Sufmur Bifzixsar (su²mu³); Brassett: -nie³ (genitive), sa³ (speech).
     notation: 'sar qinrmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
     // Search action wording approved for this interface; not a source quotation.
-    searchEn: 'yinxyiv nivxivsour', searchZh: 'pavsar nivxivsour', searchTujia: 'bifsar nivxivsour',
+    searchEn: 'yinxyiv niv-xivsour', searchZh: 'pavsar niv-xivsour', searchTujia: 'bifsar niv-xivsour',
     history: 'sufmur nier sar', search: 'nix'
   });
   const textMemory = new WeakMap(), attributeMemory = new WeakMap(), grammarMemory = new WeakMap();

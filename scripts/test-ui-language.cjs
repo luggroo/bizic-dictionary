@@ -35,7 +35,7 @@ const server=http.createServer((req,res)=>{
     assert.deepEqual(await page.locator('.word-card-meaning').allTextContents(),before);
     assert.equal(await page.locator('[data-search-language][aria-pressed]').count(),0);
     assert.equal(await page.locator('#search-form button').count(),1);
-    assert.equal(await page.locator('[data-ui-tujia="searchZh"]').innerText(),'pavsar nivxivsour');
+    assert.equal(await page.locator('[data-ui-tujia="searchZh"]').innerText(),'pavsar niv-xivsour');
     assert.equal(await page.evaluate(()=>state.searchLanguage),'zh');
     assert.equal(await page.inputValue('#query'),'水');
     await page.locator('#query').fill('here');
