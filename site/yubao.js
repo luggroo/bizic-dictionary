@@ -1,7 +1,7 @@
 function surveyIPA(raw,point){
  let text=String(raw).normalize('NFC').replaceAll('ʦ','ts').replaceAll('ʨ','tɕ');
  if(point==='60823')text=text.replaceAll('sɣ33','se33');
- return text.replace(/(tɕ|ts|p|t|k)h/g,'$1ʰ').replace(/[0-9]/g,c=>'⁰¹²³⁴⁵⁶⁷⁸⁹'[Number(c)]);
+ return normalizeIPA(text);
 }
 function dialectSelector(includeComparison=false){
  const option=(value,label)=>`<option value="${E(value)}" ${state.dialect===value?'selected':''}>${E(label)}</option>`;
