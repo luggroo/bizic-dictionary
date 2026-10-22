@@ -107,7 +107,7 @@ button.primary:hover,button.primary:focus-visible{background:var(--green);color:
 .external-text-block{padding:1rem 0;border-bottom:1px solid var(--line,#ddd)}.external-text-block p{font-size:1rem;line-height:1.7;white-space:pre-line;overflow-wrap:anywhere}.external-text-block .tiny{font-size:.8rem}.external-glosses{display:flex;flex-wrap:wrap;gap:.8rem;margin:1rem 0}.external-glosses>div{display:flex;flex-direction:column;font-size:.9rem;max-width:100%;overflow-wrap:anywhere}
 
 .search-languages{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
-.search-languages button{flex:1;min-width:140px;padding:5px 12px;line-height:1.35;display:flex;align-items:center;justify-content:center;gap:8px}
+.search-languages button{flex:1;min-width:140px;padding:7px 12px;line-height:1.35;display:flex;align-items:center;justify-content:center;gap:8px}
 .search-languages .tujia-ui{display:block;margin-top:1px;line-height:1.25}
 
 .search-language-icon{flex-shrink:0}
