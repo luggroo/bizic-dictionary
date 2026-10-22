@@ -4,7 +4,7 @@
   let language = 'zh';
   try { if (localStorage.getItem('tujia-ui-language') === 'en') language = 'en'; } catch {}
   const labels = Object.freeze({
-    brand: 'bifzixkar afhxix', home: 'enxdux qiev xief', words: 'cixcix nix', grammar: 'sar qinrmox lir',
+    brand: 'bifzixkar afhxix', home: 'ger laix xief', words: 'cixcix nix', grammar: 'sar qinrmox lir',
     // Zhou (2020) cover: Sufmur Bifzixsar (su²mu³); Brassett: -nie³ (genitive), sa³ (speech).
     notation: 'sar qinrmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
     saved: 'suxsux-civ', history: 'sufmur nier sar', search: 'nix', save: 'suxsux'
