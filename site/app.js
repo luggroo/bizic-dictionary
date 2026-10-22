@@ -6,7 +6,7 @@ const searchNormalize=s=>normalize(s).normalize('NFD').replace(/[\u0300\u0301\u0
 const contains=(s,q)=>searchNormalize(s).includes(searchNormalize(q));
 let state={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,searchLanguage:''}, currentDetail=null;
 let saved={},notes={};try{saved=JSON.parse(localStorage.getItem('tujia-saved')||'{}');notes=JSON.parse(localStorage.getItem('tujia-notes')||'{}')}catch{}
-const titles={notation:'记音对应与补全',home:'知识总览',words:'词汇检索',topics:'语法与专题',corpus:'语料',sources:'全部文献',saved:'我的收藏',history:'历史比较',grammar:'参考语法'};
+const titles={notation:'记音对应与补全',home:'知识总览',words:'词汇检索',topics:'语法与专题',corpus:'例句语料',sources:'全部文献',saved:'我的收藏',history:'历史比较',grammar:'参考语法'};
 const descriptions={notation:'',words:'',topics:'按主题浏览研究文献。',corpus:'阅读故事、民歌与日常对话。',sources:'',history:'比较各方言的词形与历史重建。',grammar:'',saved:'收藏、笔记与备份。'};
 function toast(s){$('#toast').textContent=s;$('#toast').style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').style.display='none',2400)}
 function persist(){try{localStorage.setItem('tujia-saved',JSON.stringify(saved));localStorage.setItem('tujia-notes',JSON.stringify(notes));return true}catch{toast('浏览器无法保存，请导出备份');return false}}
