@@ -32,11 +32,11 @@ const GRAMMAR_ROWS=[
 ];
 const GRAMMAR_REVIEWED={
  '7':{text:'田恒金的论文讨论北部方言中六个名词后缀，摘要把它们的作用概括为标识所指对象的外形特征。后缀的具体读音与条件变体需要回到原 PDF 核对，提取文本中的音标不够完整。',source:'1uar2kjwON289pzSe_9EmT9GgvVOQyLTC',locator:'摘要；原刊第 90 页起'},
- '14':{text:'徐世璇将空间范畴的表达分为处所词与方位词，并从位格标记、方位后置词及空间拓扑表达展开分析。文章说明所用语料来自北部方言他砂话的田野调查，不能直接推广到全部方言。',source:'1UDD6WkwQt5KKDaRdMswg4t9y37NfxYT1',locator:'提要、引言及“空间概念的类别”'},
- '15':{text:'向亮（2019）把判断句、被动句与双宾句放在方言类型比较中讨论。文章还指出，这些构式的原生性与汉语接触来源存在不同看法。阅读论元结构时应同时记录方言点和作者的来源分析。',source:'1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK',locator:'原刊第 71 页：提要与引言'},
- '18':{text:'向亮（2019）梳理了土家语判断句研究中的不同主张，指出各方言的表现形式并不一致。该文不能简化为“土家语没有判断词”或“所有判断句都来自汉语”这样的单一规则。',source:'1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK',locator:'原刊第 71–72 页：“土家语的判断句”'},
- '21':{text:'向亮（2015）讨论 thai35 的多种用法及词性争议：存在否定、谓词否定，以及与其他成分组合表达程度的用法需要区分。文献提出的历史关系是作者的分析，索引保留这一归属，不将其写成无争议规则。',source:'1CA3LWWeMBP_0Ku6DH9OJsgqvV6YC46zz',locator:'原刊第 143 页：摘要、用例与词性分析'},
- '23':{text:'《土家语比较句的方言差异》分别讨论等比与差比结构，并比较北部与南部材料。因此，比较结构应按方言点和结构类型排列，而不能只给出一个通用模板。',source:'1mxCYZQWiZncFB73HZrJjsYwoT2QnThB6',locator:'文章开头与“北部土家语的差比句”'},
- '25':{text:'Xu（2008）区分关系子句前置、中心语内置、关系子句后置及无中心语四类结构，并依据动词语法形式区分复杂与简单形式。章节结构据此把“中心语的位置”与“动词形式”设为两条不同的分析轴。',source:'1_TeDq68CmPyRn5uniEjL8X-kGRHA_J1u',locator:'原刊第 985 页：摘要'}
+ '14':{text:'徐世璇将空间范畴的表达分为处所词与方位词，并从位格标记、方位后置词及空间拓扑表达展开分析。所用语料来自北部方言他砂话的田野调查。',source:'1UDD6WkwQt5KKDaRdMswg4t9y37NfxYT1',locator:'提要、引言及“空间概念的类别”'},
+ '15':{text:'向亮（2019）把判断句、被动句与双宾句放在方言类型比较中讨论。文章还指出，这些构式的原生性与汉语接触来源存在不同看法。不同方言的构式及其历史来源在文中分别讨论。',source:'1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK',locator:'原刊第 71 页：提要与引言'},
+ '18':{text:'向亮（2019）梳理了土家语判断句研究中的不同主张，指出各方言的表现形式并不一致。判断词的使用及判断句的历史来源因方言和构式而异。',source:'1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK',locator:'原刊第 71–72 页：“土家语的判断句”'},
+ '21':{text:'向亮（2015）讨论 thai35 的多种用法及词性争议：存在否定、谓词否定，以及与其他成分组合表达程度的用法需要区分。这些用法之间的历史关系是向亮提出的一种解释。',source:'1CA3LWWeMBP_0Ku6DH9OJsgqvV6YC46zz',locator:'原刊第 143 页：摘要、用例与词性分析'},
+ '23':{text:'《土家语比较句的方言差异》分别讨论等比与差比结构，并比较北部与南部材料。各方言的比较结构在形式和语序上有所不同。',source:'1mxCYZQWiZncFB73HZrJjsYwoT2QnThB6',locator:'文章开头与“北部土家语的差比句”'},
+ '25':{text:'Xu（2008）区分关系子句前置、中心语内置、关系子句后置及无中心语四类结构，并依据动词语法形式区分复杂与简单形式。中心语位置和动词形式是两项不同的分类标准。',source:'1_TeDq68CmPyRn5uniEjL8X-kGRHA_J1u',locator:'原刊第 985 页：摘要'}
 };
 const GRAMMAR=GRAMMAR_ROWS.map((r,i)=>({id:String(i+1),part:r[0],title:r[1],intro:r[2],sections:r[3].map((s,j)=>{const [title,query,question]=s.split('|');return {id:`${i+1}.${j+1}`,title,query,question}}),pattern:r[4],related:r[5].map(String),reviewed:GRAMMAR_REVIEWED[String(i+1)]}));

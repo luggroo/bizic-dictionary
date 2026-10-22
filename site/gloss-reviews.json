@@ -16,7 +16,7 @@
       "previousZh": "反动",
       "term": "huan1dong2",
       "en": "to react",
-      "enNote": "Source English 'to react' mistranslates the Chinese loanword 反动; preserve the original English in provenance.",
+      "enNote": "Source English 'to react' does not match the Chinese loanword 反动.",
       "reviewedAt": "2026-10-21",
       "reviewEvidence": "汉语借词「反动」，原词形 huan1dong2 对应汉语「反动」的两个语素；Brassett 中文词表原释亦为「反动」。英文 to react 为错误或不准确的翻译。"
     },
@@ -164,7 +164,7 @@
       "term": "ca2 qi4",
       "en": "sister-in-law",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "使用者核定 ca²qi⁴ 为「嫂子」。同一条包含 Brassett 2004 英文 sister-in-law 和 STEDT rn 455781（Brassett 04）；汉义不扩大到弟媳等其他姻亲关系。"
+      "reviewEvidence": "ca²qi⁴ 释为「嫂子」。同一条包含 Brassett 2004 英文 sister-in-law 和 STEDT rn 455781（Brassett 04）；本站补充释义限定为兄嫂。"
     },
     "w3293": {
       "zh": "小年",
@@ -275,8 +275,8 @@
       "term": "ong4 qi3 se2",
       "en": "snivel",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "使用者核定 ong⁴qi³se² 为「鼻涕」。Brassett 2004（词条 4660），对应 STEDT rn 456131，原英语 snivel，词性 n.；语保龙山、阳朝、碗米坡 0462「鼻涕」及同系列 ong⁴qi³la⁴ 支持鼻涕相关义，不能凭 se² 断定为「擤鼻涕」动作。",
-      "enNote": "Original English 'snivel' is ambiguous; Chinese gloss reviewed as 鼻涕 ('nasal mucus; snot'), not necessarily the action of blowing one's nose."
+      "reviewEvidence": "ong⁴qi³se² 释为「鼻涕」。Brassett 2004（词条 4660），对应 STEDT rn 456131，原英语 snivel，词性 n.；语保龙山、阳朝、碗米坡 0462「鼻涕」及同系列 ong⁴qi³la⁴ 支持「鼻涕」这一名词义。",
+      "enNote": "The source word 'snivel' is ambiguous; here the gloss is 鼻涕 ('nasal mucus; snot')."
     },
     "w4886": {
       "zh": "轻",
@@ -356,7 +356,7 @@
       "term": "a²da¹bi²",
       "en": "younger elder sister",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "用户确认 a²da¹bi² 为「小姐姐」；保留 Brassett 来源的 younger elder sister 以便溯源"
+      "reviewEvidence": "a²da¹bi² 释为「小姐姐」。Brassett 原英文释义为 younger elder sister。"
     },
     "stedt-rn-127376": {
       "zh": "脚底",
@@ -365,7 +365,7 @@
       "term": "a²¹ dʑi³⁵ a²¹ di³⁵",
       "en": "sole",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "STEDT sole 归在身体部位语义类 Foot，词形 a²¹dʑi³⁵a²¹di³⁵，不能解释为鞋底。"
+      "reviewEvidence": "STEDT sole 归在身体部位语义类 Foot，词形 a²¹dʑi³⁵a²¹di³⁵，指脚底。"
     },
     "stedt-rn-356219": {
       "zh": "奶奶",
@@ -392,7 +392,7 @@
       "term": "di¹³kaɨ³³",
       "en": "raise",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "用户确认南部 di¹³kaɨ³³ 为「提高」；STEDT Tian 1986 英文 raise、语义类 Up, etc. 与向上提高义一致。保留原词形。"
+      "reviewEvidence": "南部 di¹³kaɨ³³ 释为「提高」；STEDT Tian 1986 英文 raise、语义类 Up, etc. 与向上提高义一致。保留原词形。"
     },
     "stedt-rn-289536": {
       "zh": "苍蝇",
@@ -453,7 +453,7 @@
       "term": "gu̵³⁵",
       "en": "bark",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "STEDT 语义类 Bark (of dog)，词性 v；对应狗叫声，不能解释为树皮。"
+      "reviewEvidence": "STEDT 语义类 Bark (of dog)，词性 v；指狗叫声。"
     },
     "stedt-rn-453631": {
       "zh": "白楠",
@@ -550,7 +550,7 @@
       "term": "ka³ki³",
       "en": "father-in-law",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "使用者核定「岳父」；STEDT rn 453921，Brassett 06 Tujia，原文定位 2.4，英文 father-in-law；该词条不据英文泛译为「公公」。"
+      "reviewEvidence": "本条释为「岳父」；STEDT rn 453921，Brassett 06 Tujia，原文定位 2.4，英文 father-in-law；本站补充释义指妻子的父亲。"
     },
     "stedt-rn-289813": {
       "zh": "笔",
@@ -615,7 +615,7 @@
       "en": "graze",
       "enNote": "Original STEDT English 'graze' conflicts with verified Chinese gloss 看守 ('guard; watch over'); source Sun H 91 ZMYY, location 607.38.",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "使用者核对原义为「看守」。STEDT rn 210960 的来源为 Sun H 91 ZMYY（孙宏开 1991），原文定位 607.38；原英文 graze 与原义不合，已指出英文释义有误。"
+      "reviewEvidence": "本条释为「看守」。STEDT rn 210960 的来源为 Sun H 91 ZMYY（孙宏开 1991），原文定位 607.38；原英文 graze 与此义不符。"
     },
     "stedt-rn-205860": {
       "zh": "口弦",
@@ -746,7 +746,7 @@
       "en": "billion",
       "enNote": "Original English 'billion' (10^9) is erroneous; 万万 equals 10^8, one hundred million.",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "用户确认 la-wan-wan = 万万 = 一亿（100,000,000）；原英文 billion 折算有误"
+      "reviewEvidence": "la-wan-wan 的字面义为「万万」，即一亿（100,000,000）；原英文 billion 与此不符。"
     },
     "stedt-rn-288959": {
       "zh": "扔",
@@ -1079,9 +1079,9 @@
       "previousZh": "放牧；吃草（原义未细分）",
       "term": "pha⁵⁵~bo³⁵",
       "en": "graze",
-      "enNote": "English 'graze' may be a context-specific or over-narrow gloss of 放 ('let go; release; put; let out'); review original Tian 1986 context.",
+      "enNote": "The gloss 'graze' may reflect one use of 放 ('let go; release; put; let out'); its intended sense in Tian 1986 remains uncertain.",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "使用者核定「放」；STEDT rn 289936，南部土家语，来源 Tian 86（田志慧 1986），原英语 graze 可能是语境性或偏窄的释义，待原书上下文进一步核实。"
+      "reviewEvidence": "本条释为「放」；STEDT rn 289936，南部土家语，来源 Tian 86（田志慧 1986），原英语 graze 可能是语境性或偏窄的释义，待原书上下文进一步核实。"
     },
     "stedt-rn-219069": {
       "zh": "破",
@@ -1300,7 +1300,7 @@
       "en": "time",
       "enNote": "The English 'time' denotes 时节／时间 here, not the counting word 次.",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "用户确认 si²¹tɕie²¹ 即「时节」，表示时间。STEDT Huang & Dai 1992 rn 383001 及 Sun 1991 rn 183165 均记为 si²¹tɕie²¹、英文 time，归入 Other Intervals。"
+      "reviewEvidence": "si²¹tɕie²¹ 对应汉语「时节」，表示时间。STEDT Huang & Dai 1992 rn 383001 及 Sun 1991 rn 183165 均记为 si²¹tɕie²¹、英文 time，归入 Other Intervals。"
     },
     "stedt-rn-397789": {
       "zh": "肥",
@@ -1554,7 +1554,7 @@
       "previousZh": "井；好好地（原英释同形歧义，须结合词条核定）",
       "term": "tshe²¹mũ³⁵",
       "en": "well",
-      "reviewEvidence": "Brassett 2004 词条 417：ce3mong2＝水井；用户确认 tshe²¹mũ³⁵＝井。"
+      "reviewEvidence": "Brassett 2004 词条 417：ce3mong2＝水井；tshe²¹mũ³⁵ 释为「井」。"
     },
     "stedt-rn-289050": {
       "zh": "舀",
@@ -1773,7 +1773,7 @@
       "en": "dish",
       "enNote": "English 'dish' refers to food/a prepared dish (菜), not a plate or serving vessel.",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "用户核定：英文 dish 在本条表示菜；tshe／tshie 与汉语「菜」的借词读音相符。原文 IPA 保留。"
+      "reviewEvidence": "英文 dish 在本条表示「菜」；tshe／tshie 与汉语「菜」的借词读音相符。原文 IPA 保留。"
     },
     "stedt-rn-200403": {
       "zh": "菜",
@@ -1783,7 +1783,7 @@
       "en": "dish",
       "enNote": "English 'dish' refers to food/a prepared dish (菜), not a plate or serving vessel.",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "用户核定：英文 dish 在本条表示菜；tshe／tshie 与汉语「菜」的借词读音相符。原文 IPA 保留。"
+      "reviewEvidence": "英文 dish 在本条表示「菜」；tshe／tshie 与汉语「菜」的借词读音相符。原文 IPA 保留。"
     },
     "stedt-rn-204432": {
       "zh": "火车",
@@ -1831,7 +1831,7 @@
       "en": "hide",
       "enNote": "English 'hide' means 'to conceal' here, not animal skin.",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "用户核定：本词 hide 为动词「藏」，可与其他材料的「藏」词条对照；原始记音 ye⁴ 保留。"
+      "reviewEvidence": "本词 hide 为动词「藏」，可与其他材料的「藏」词条对照；原始记音 ye⁴ 保留。"
     },
     "stedt-rn-454796": {
       "zh": "吟唱；叹息；呻吟（汉义待确认）",
@@ -1839,7 +1839,7 @@
       "previousZh": "吟唱；呻吟（原文 sign 可能为拼写错误，待核）",
       "term": "yi²la¹re⁴re⁴",
       "en": "sign, intone, moan",
-      "enNote": "English 'sign, intone, moan' is preserved; 'sign' may be a typo for 'sigh'. Chinese meaning requires source verification; no evidence of a recording error.",
+      "enNote": "The source gloss is 'sign, intone, moan'; 'sign' may be a typo for 'sigh'. The Chinese meaning remains uncertain.",
       "reviewedAt": "2026-10-21",
       "reviewEvidence": "STEDT rn 454796（Brassett 06 Tujia，原文定位 6.1）英文为 sign, intone, moan。sign 是否为 sigh 的拼写误植，以及具体汉义，仍需对照原书；目前没有证据将其标为记音错误。"
     },
@@ -1885,7 +1885,7 @@
       "term": "ze³³be³³je²¹",
       "en": "granddaughter",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "语保龙山 2379「孙女」与2380「外孙女」同形 zɘ53piəu24；本条 granddaughter 不自动区分内外关系"
+      "reviewEvidence": "语保龙山 2379「孙女」与2380「外孙女」同形 zɘ53piəu24；本条 granddaughter 未区分内外亲属关系"
     },
     "stedt-rn-289665": {
       "zh": "孙子",
@@ -1894,7 +1894,7 @@
       "term": "ze³³~ze³³be²¹",
       "en": "grandson",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "语保龙山 0654「孙子」与0658「外孙」同形 zɘ53；本条 grandson 不自动区分内外关系"
+      "reviewEvidence": "语保龙山 0654「孙子」与0658「外孙」同形 zɘ53；本条 grandson 未区分内外亲属关系"
     },
     "stedt-rn-127200": {
       "zh": "咽",
@@ -1913,7 +1913,7 @@
       "term": "ze⁵⁵piu³⁵",
       "en": "granddaughter",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "语保龙山 2379「孙女」与2380「外孙女」同形 zɘ53piəu24；本条 granddaughter 不自动区分内外关系"
+      "reviewEvidence": "语保龙山 2379「孙女」与2380「外孙女」同形 zɘ53piəu24；本条 granddaughter 未区分内外亲属关系"
     },
     "stedt-rn-288726": {
       "zh": "孙子",
@@ -1922,7 +1922,7 @@
       "term": "ze⁵⁵~ze⁵⁵pi³⁵",
       "en": "grandson",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "语保龙山 0654「孙子」与0658「外孙」同形 zɘ53；本条 grandson 不自动区分内外关系"
+      "reviewEvidence": "语保龙山 0654「孙子」与0658「外孙」同形 zɘ53；本条 grandson 未区分内外亲属关系"
     },
     "stedt-rn-428539": {
       "zh": "咽",
@@ -1941,7 +1941,7 @@
       "term": "zie⁵⁵",
       "en": "grandson",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "语保龙山 0654「孙子」与0658「外孙」同形 zɘ53；本条 grandson 不自动区分内外关系"
+      "reviewEvidence": "语保龙山 0654「孙子」与0658「外孙」同形 zɘ53；本条 grandson 未区分内外亲属关系"
     },
     "stedt-rn-197598": {
       "zh": "孙子",
@@ -1950,7 +1950,7 @@
       "term": "zie⁵⁵pio³⁵",
       "en": "grandson",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "语保龙山 0654「孙子」与0658「外孙」同形 zɘ53；本条 grandson 不自动区分内外关系"
+      "reviewEvidence": "语保龙山 0654「孙子」与0658「外孙」同形 zɘ53；本条 grandson 未区分内外亲属关系"
     },
     "stedt-rn-356660": {
       "zh": "孙女",
@@ -1959,7 +1959,7 @@
       "term": "zie⁵⁵piu³⁵",
       "en": "granddaughter",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "语保龙山 2379「孙女」与2380「外孙女」同形 zɘ53piəu24；本条 granddaughter 不自动区分内外关系"
+      "reviewEvidence": "语保龙山 2379「孙女」与2380「外孙女」同形 zɘ53piəu24；本条 granddaughter 未区分内外亲属关系"
     },
     "stedt-rn-453838": {
       "zh": "看",
@@ -1988,7 +1988,7 @@
       "en": "pigweed",
       "enNote": "Original English 'pigweed' suggests a plant species; the Chinese expression here is 猪草 (grass/greens gathered for pig fodder).",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "语保阳朝 2463「猪草」tsɿ³³ɕi³³、碗米坡 2463 tsɿ⁵⁵ɕi⁵⁵、潭溪 2463 zi¹³ɕi³³；与本条 zi⁴xi³ 词形对应。用户明确核定为「猪草」。"
+      "reviewEvidence": "语保阳朝 2463「猪草」tsɿ³³ɕi³³、碗米坡 2463 tsɿ⁵⁵ɕi⁵⁵、潭溪 2463 zi¹³ɕi³³；与本条 zi⁴xi³ 词形对应。本条释为「猪草」。"
     },
     "stedt-rn-210501": {
       "zh": "种植",
@@ -2081,7 +2081,7 @@
       "term": "ȵi⁵³",
       "en": "found / located",
       "reviewedAt": "2026-10-21",
-      "reviewEvidence": "Huang & Dai 1992 同一材料的 STEDT rn 430963 记录完全相同词形 ȵi⁵³，释义 find / look for（寻找／找到）；rn 433171 的 found / located 为相应完成义，不能据此引申为「位于」。"
+      "reviewEvidence": "Huang & Dai 1992 同一材料的 STEDT rn 430963 记录完全相同词形 ȵi⁵³，释义 find / look for（寻找／找到）；rn 433171 的 found / located 为相应完成义，表示找到了某物。"
     },
     "stedt-rn-289886": {
       "zh": "扔",
@@ -2274,7 +2274,7 @@
       "term": "se³⁵ thu³⁵",
       "en": "die",
       "zh": "死",
-      "status": "用户确认方言归属",
+      "status": "方言归属补注",
       "dialect": "北部",
       "location": "龙山"
     }

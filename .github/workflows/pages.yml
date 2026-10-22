@@ -2,7 +2,7 @@ name: Publish Tujia knowledge index
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/normalize-ipa-data.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', '.github/workflows/pages.yml']
+    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/apply-gloss-reviews.py', 'scripts/normalize-ipa-data.cjs', 'scripts/test-reader-copy.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -29,6 +29,8 @@ jobs:
         run: python3 scripts/apply-gloss-reviews.py site
       - name: Canonicalize published IPA and deduplicate forms
         run: node scripts/normalize-ipa-data.cjs site
+      - name: Check reader-facing copy
+        run: node scripts/test-reader-copy.cjs
       - name: Verify merged dictionary IPA and notation rules
         run: |
           node scripts/test-word-merges.cjs

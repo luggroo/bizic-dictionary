@@ -252,7 +252,7 @@ function notationPairTables(place,data=D){
 }
 function npAuditSummary(ids,data){
  const audit=notationPairAudit(data);
- return `<details class="np-audit"><summary>数据核对</summary><p class="tiny">来源记录内按音节对齐。优先采用数据库已存配对；同条目拼写可核对或消歧，其余使用词条当前的转写结果。转写结果不作为原书音位分析的独立证据。</p><div class="table-wrap"><table><thead><tr><th>来源</th><th>原记录</th><th>音节</th><th>唯一配对</th><th>多解／未解析</th></tr></thead><tbody>${ids.map(id=>{const x=audit.sources.get(id);return `<tr><td>${E(NOTATION_PAIR_SOURCES[id].title)}</td><td>${x.records}</td><td>${x.syllables}</td><td>${x.paired}</td><td><button class="np-cell" data-pair-source="${id}" data-pair-kind="unresolved" data-pair-key="">${x.unresolved.length}</button></td></tr>`}).join('')}</tbody></table></div></details>`;
+ return `<details class="np-audit"><summary>数据核对</summary><p class="tiny">表中按音节并列来源记音与本站拼写，并附例词及出处。拼写对应仅供查读，音位分析请参照原文。</p><div class="table-wrap"><table><thead><tr><th>来源</th><th>原记录</th><th>音节</th><th>唯一配对</th><th>多解／未解析</th></tr></thead><tbody>${ids.map(id=>{const x=audit.sources.get(id);return `<tr><td>${E(NOTATION_PAIR_SOURCES[id].title)}</td><td>${x.records}</td><td>${x.syllables}</td><td>${x.paired}</td><td><button class="np-cell" data-pair-source="${id}" data-pair-kind="unresolved" data-pair-key="">${x.unresolved.length}</button></td></tr>`}).join('')}</tbody></table></div></details>`;
 }
 function notationPairSourceReview(p){
  if(!NOTATION_PAIR_SOURCES[p.id])return null;
@@ -270,7 +270,7 @@ function npShowEvidence(pid,kind,key){
   const cells=npCell(pid,kind,key);
   body=`<h2>${E(key.replace('|',' · ')||'∅')}</h2>`+cells.map(cell=>{
    if(cell.basis==='source-table')return `<h3>${E(cell.value)}</h3><p>${E(cell.reference)}</p><p class="tiny">音系表项目；当前词条未提供实例。</p>`;
-   return `<h3>${E(cell.value||'∅')} <small>· ${cell.count} 个音节</small></h3><p class="tiny">声母环境：${E([...cell.onsets].map(x=>x||'∅').join('、'))}</p>`+mappingTable('例词',['原记音','叶式拼音','调号拼音','词义','记录／出处'],cell.examples.map(e=>[e.ipa,e.spelling,e.accent,e.gloss,e.recordId+' · '+e.locator]))+`<p class="tiny">${cell.examples.some(e=>e.method.startsWith('stored:'))?'含数据库已存的同记录配对。':cell.examples.some(e=>e.method.startsWith('entry-linked:'))?'含数据库同条目拼写核对。':'拼音为本站当前转换结果。'}原词形与来源记录保留。</p>`;
+   return `<h3>${E(cell.value||'∅')} <small>· ${cell.count} 个音节</small></h3><p class="tiny">声母环境：${E([...cell.onsets].map(x=>x||'∅').join('、'))}</p>`+mappingTable('例词',['原记音','叶式拼音','调号拼音','词义','记录／出处'],cell.examples.map(e=>[e.ipa,e.spelling,e.accent,e.gloss,e.recordId+' · '+e.locator]))+`<p class="tiny">${cell.examples.some(e=>e.method.startsWith('stored:'))?'记音与拼写来自同一条来源记录。':cell.examples.some(e=>e.method.startsWith('entry-linked:'))?'拼写参照同一词条的其他记录。':'拼音由本站转写。'}原记音见上表。</p>`;
   }).join('');
  }
  document.querySelector('#detail-label').textContent=label.replace(/\n/g,' · ');

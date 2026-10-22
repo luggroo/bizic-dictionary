@@ -19,12 +19,12 @@ def apply_reviews(data, reviews):
             word['dialects'] = [review['dialect']]
             word['location'] = review['location']
             word['locations'] = [review['location']]
-            word['notice'] = '方言及地点经用户审核。'
+            word['notice'] = '方言及地点见词条来源说明。'
             for attestation in word.get('attestations', []):
                 attestation.setdefault('dialectBeforeReview', attestation.get('dialect', ''))
                 attestation['dialect'] = review['dialect']
                 attestation['location'] = review['location']
-                attestation['notice'] = '方言及地点经用户审核。'
+                attestation['notice'] = '方言及地点见词条来源说明。'
         word.setdefault('zhBeforeReview', word.get('zh', ''))
         word['zh'] = review['zh']
         word['zhVariants'] = [review['zh']]

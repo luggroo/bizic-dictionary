@@ -2,8 +2,8 @@
 const EDITORIAL_NOTES=[{
  id:'death-euphemism-sleep',wordIds:['yubao-60757-v-0552'],
  kind:'婉称',
- text:'以“背盐去了”“睡着了”婉称死亡。/uo⁵⁵/ 的“背”义经用户确认；/lu²²/ 暂按完成离心标记分析。',
- literalMeaning:'/la²⁴pu⁵⁵ uo⁵⁵-lu²²/：盐＋背－完成离心，即“背盐去了”。/ȵie²⁴pie⁵⁵liau/：睡着了。末尾 liau 在原记录中未标声调。',
+ text:'用于婉称老年人去世，字面为“背盐去了”或“睡着了”。',
+ literalMeaning:'/la²⁴pu⁵⁵/ 意为“盐”，/uo⁵⁵/ 意为“背”；/lu²²/ 可能表示动作完成并离去。/ȵie²⁴pie⁵⁵liau/ 意为“睡着了”，末尾 liau 在原记录中未标声调。',
  originalMeaning:'死。原注：“婉称，最常用的几种，指老人：他～了”。',
  evidenceIds:['yubao-60757-v-0806','w1621','w1628','yubao-60757-v-0552']
 }];
