@@ -1,7 +1,7 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
 const root=path.resolve(__dirname,'../site');
 const ctx=vm.createContext({console,localStorage:{getItem:()=>null},document:{addEventListener(){}}});
-for(const f of ['notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
+for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
 const run=s=>vm.runInContext(s,ctx);
 run(`const E=s=>String(s);let state={view:'words',dialect:''};`);
 assert.equal(run('spellingDisplay'),'accent');assert.equal(run('southernDisplay'),'accent');
