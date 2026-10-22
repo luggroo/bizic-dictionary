@@ -27,6 +27,20 @@ assert.equal(score({forms:['cıi']},'cii','tujia',true),100);
 assert.equal(score({forms:['cıi']},'ci','tujia',true),0);
 assert.equal(score({forms:['cıi']},'cri','tujia',true),0);
 console.log('PASS: language scopes, English tokens, ti noise rejection, spelling ranking and exact sense matching');
+const glottalQuotes=["'",'‘','’','ʼ','ʻ','ʹ','′','＇','ʔ'];
+for(const quote of glottalQuotes){
+ assert.equal(score({forms:['ʔo³⁵',"'ó"]},quote,'tujia'),80,quote+' finds the consonant');
+ assert.equal(score({forms:['ʔo³⁵',"'ó"]},quote),80,quote+' works across languages');
+ assert.equal(score({forms:["ma'à"],en:"father's brother"},quote),0,quote+' excludes boundaries and English punctuation');
+ assert.equal(score({forms:['ʔo³⁵']},quote,'en'),0);
+ assert.equal(score({forms:['ʔo³⁵']},quote,'tujia',true),0,'exact matching still means whole forms');
+ assert.equal(score({forms:['ʔo³⁵',"'ó"]},quote+'o','tujia',true),100);
+ assert.equal(score({forms:['ó']},quote+'o','tujia',true),0,'an explicit onset is not discarded');
+ assert(score({forms:['ma³³ʔa²¹']},quote+'a','tujia')>0,'medial glottal syllables');
+ assert.equal(score({forms:["'ıì-mò"]},quote+'ii-mo','tujia',true),100,'dotless and toneless spelling aliases');
+}
+assert.notEqual(vm.runInContext("normalize('ʔo')",c),vm.runInContext('normalize("\'o")',c),'search aliases never rewrite source identity');
+console.log('PASS: apostrophe variants and IPA glottal queries, with boundary and language-scope exclusions');
 for(const en of ['there','therefore','everywhere','where'])assert.equal(score({forms:['ba'],en},'here','en'),0,en);
 for(const en of ["chest (English 'chest' here is the body part.)","pigweed (Original English 'pigweed' suggests a plant; here the gloss is 猪草 (grass/greens); not a species.)","time (The English 'time' denotes 时节／时间 here.)","water (Note: 'here' belongs to an editorial note (unverified).)"]){
  assert.equal(score({forms:['ba'],en},'here','en'),0,en);

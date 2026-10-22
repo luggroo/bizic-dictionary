@@ -2,7 +2,7 @@
 let D, S, W, C, R;
 const $=s=>document.querySelector(s), E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const normalize=s=>String(s??'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
-const searchNormalize=s=>normalize(s).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').replace(/a\u0308/g,'a').normalize('NFC').replace(/v/g,'ü').replace(/ı/g,'i');
+const searchNormalize=s=>normalize(s).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').replace(/a\u0308/g,'a').normalize('NFC').replace(/v/g,'ü').replace(/ı/g,'i').replace(/[ʔ‘’ʼʻʹ′]/g,"'");
 const contains=(s,q)=>searchNormalize(s).includes(searchNormalize(q));
 const DEFAULT_STATE={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,searchLanguage:'',browseWords:false,corpusCollection:''};
 let state={...DEFAULT_STATE}, currentDetail=null,currentOverlay=null;
@@ -78,20 +78,24 @@ function searchableEnglish(value){
 }
 function indexedWord(w){
  if(wordSearchIndex.has(w))return wordSearchIndex.get(w);
- const forms=[...new Set(wordForms(w).filter(Boolean).map(searchNormalize))];
+ const rawForms=wordForms(w).filter(Boolean);
+ const forms=[...new Set(rawForms.map(searchNormalize))];
  const chinese=[w.zh,...(w.zhVariants||[])].filter(Boolean).flatMap(s=>s.split(/[;；/／]/)).map(normalize);
  const english=[w.en,...(w.glosses||[])].filter(Boolean).flatMap(s=>searchableEnglish(s).split(/[;；/／]/)).map(normalize);
- const index={forms,chinese,english,englishWords:new Set(english.flatMap(englishTokens))};wordSearchIndex.set(w,index);return index;
+ const index={forms,hasGlottal:rawForms.some(f=>f.includes('ʔ')),chinese,english,englishWords:new Set(english.flatMap(englishTokens))};wordSearchIndex.set(w,index);return index;
 }
 function wordSearchScore(w,language=state.searchLanguage){
  const raw=state.q.trim();if(!raw)return 1;
  const index=indexedWord(w),lang=language||'',q=searchNormalize(raw),normal=normalize(raw);let score=0;
+ // A bare apostrophe searches the recorded consonant, not spelling separators or English punctuation.
+ if(q==="'")return !state.exact&&(!lang||lang==='tujia')&&index.hasGlottal?80:0;
  if(!lang||lang==='tujia'){
-  const compact=t=>t.replace(/[\s'’\-]/g,'');
-  if(index.forms.some(f=>f===q||compact(f)===compact(q)))score=100;
+  const quoted=q.includes("'"),compact=t=>t.replace(quoted?/[\s\-]/g:/[\s'\-]/g,'');
+  const compactQuery=compact(q);
+  if(index.forms.some(f=>f===q||(compactQuery&&compact(f)===compactQuery)))score=100;
   if(!state.exact&&!score){
-   if(index.forms.some(f=>f.split(/[\s'’\-0-9]+/).includes(q)))score=80;
-   else if(q.length>=2&&index.forms.some(f=>f.startsWith(q)))score=50;
+   if(index.forms.some(f=>f.split(quoted?/[\s\-0-9]+/:/[\s'\-0-9]+/).includes(q)))score=80;
+   else if(q.length>=2&&index.forms.some(f=>quoted?f.includes(q):f.startsWith(q)))score=50;
   }
  }
  if(!lang||lang==='zh'){
