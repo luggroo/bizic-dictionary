@@ -77,10 +77,10 @@ function npCanonicalPair(out,pid){
   accent:accentSyllable(core,NP_TONE_LETTERS[out.tone]),sourceSpelling:out.text};
 }
 function npNormalize(raw){
- return plainTones(raw).normalize('NFC').replaceAll('ɡ','g').replaceAll('ɑ','a')
+ return normalizeIPAAspiration(plainTones(raw).normalize('NFC').replaceAll('ɡ','g').replaceAll('ɑ','a')
  .replaceAll('ʦ','ts').replaceAll('ʨ','tɕ').replaceAll('ʣ','dz').replaceAll('ʥ','dʑ')
  .replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ')
- .replaceAll('d͡z','dz').replaceAll('d͡ʑ','dʑ').replace(/(tɕ|ts|p|t|k)h/g,'$1ʰ');
+ .replaceAll('d͡z','dz').replaceAll('d͡ʑ','dʑ'));
 }
 function npIPASyllables(raw){
  return [...npNormalize(raw).matchAll(/([\p{L}\p{M}ʔ]+)([0-9]{1,3})(?![0-9])/gu)].map(m=>{
