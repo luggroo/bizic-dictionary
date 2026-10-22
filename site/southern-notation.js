@@ -21,13 +21,13 @@ const SOUTH_RIMES={
 };
 const SOUTH_TONES={'55':'\u0304','33':'','35':'\u0301','21':'\u0300','13':'\u030c'};
 const SOUTH_ORDER=Object.keys(SOUTH_ONSETS).sort((a,b)=>b.length-a.length);
-const SOUTH_PINYIN_RULES='调号拼音 j、q、x（含浊音 jj）后补足 i，如 je → jie、qa → qia、xon → xion；已有 i 或 ü 不重复添加。下表为基础对应，/i、ei、ɨ/ 的来源差异另列。';
-const SOUTH_SOURCE_RIME_RULES='Tian 86 南部：调号拼音与白话字共用韵母，/i/ 写 i，/ei/ 写 ei；/ɨ/ 在 /k、kʰ、g、ŋ、x、ɣ/ 后写 i，其他位置写 ii。中国语保泸溪：/t、d/ 后的 /ɨ/ 在两套拼写中写 ei；其他位置沿用原对应。';
+const SOUTH_PINYIN_RULES='调号拼音 j、q、x（含浊音 jj）后补足 i，如 je → jie、qa → qia、xon → xion；已有 i 或 ü 不重复添加。/jiɯ、jiʉ/ 的调号拼音写 yeu，白话字写 ieu。下表为基础对应，/i、ei、ɨ/ 的来源差异另列。';
+const SOUTH_SOURCE_RIME_RULES='Tian 86 南部：调号拼音与白话字共用韵母，/i/ 写 i，/ei/ 写 ei；/ɨ/ 在 /k、kʰ、g、ŋ、x、ɣ/ 后写 i，其他位置写 ii。中国语保泸溪：/t、d/ 后的 /ɨ/ 在两套拼写中写 ei；/k、kʰ、g、x、ɣ、ħ、ʕ/ 后写 i，其他位置写 ii。';
 function southernRimeRows(){return Object.entries(SOUTH_RIMES).map(([ipa,rime])=>[ipa,rime==='ri'?'ii':rime,rime])}
 function southernSourceRimeRows(){return [
  ['Tian 86','i','全部','i','i'],['Tian 86','ei','全部','ei','ei'],
  ['Tian 86','ɨ','k、kʰ、g、ŋ、x、ɣ','i','i'],['Tian 86','ɨ','其他声母或零声母','ii','ii'],
- ['中国语保 · 泸溪','ɨ','t、d','ei','ei'],['中国语保 · 泸溪','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['中国语保 · 泸溪','ɨ','其他声母或零声母','ii','ri'],
+ ['中国语保 · 泸溪','ɨ','t、d','ei','ei'],['中国语保 · 泸溪','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['中国语保 · 泸溪','ɨ','其他声母或零声母','ii','ii'],
  ['其他南部来源','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['其他南部来源','ɨ','其他声母或零声母','ii','ri']
 ]}
 let southernDisplay='accent';
@@ -59,7 +59,10 @@ function southernSpelling(raw,source='',explicit=false){
   if(r==='ɨ'&&['k','kʰ','g','x','ɣ','ħ','ʕ'].includes(onset))rime='i';
   const sharedRime=tian&&['i','ei','ɨ'].includes(r);
   if(sharedRime)rime=r==='ɨ'?(['k','kʰ','g','ŋ','x','ɣ'].includes(onset)?'i':'ii'):r;
-  if(luxi&&r==='ɨ'&&['t','d'].includes(onset))rime='ei';
+  if(luxi&&r==='ɨ'){
+   if(['t','d'].includes(onset))rime='ei';
+   else if(rime==='ri')rime='ii';
+  }
   if(!rime||(!Object.hasOwn(SOUTH_TONES,m[2])&&m[2]!=='?'))return null;
   if(['ɲ','ȵ'].includes(onset)&&rime.startsWith('i'))rime=rime.slice(1);
   const sep=count&&/^[\s-]*$/.test(gap)?'-':gap.replace(/[|｜]/g,' / ');
@@ -73,7 +76,9 @@ function southernSpelling(raw,source='',explicit=false){
   if(onset==='w'&&!sharedRime){pojOnset='';if(!pojRime.startsWith('u'))pojRime='u'+pojRime;}
   const pojMarked=m[2]==='?'?pojRime+'⁇':southMark(pojRime,m[2],explicit);
   const pinyinOnset=SOUTH_ONSETS[onset][0];
-  const core=pinyinPalatalCore(pinyinOnset+(rime==='ri'?'ii':rime));
+  let pinyinBaseRime=rime==='ri'?'ii':rime;
+  if(onset==='j'&&['iɯ','iʉ'].includes(r))pinyinBaseRime=pinyinBaseRime.slice(1);
+  const core=pinyinPalatalCore(pinyinOnset+pinyinBaseRime);
   const pinyinRime=core.slice(pinyinOnset.length);
   const marked=m[2]==='?'?pinyinRime+'⁇':southMark(pinyinRime,m[2],explicit);if(marked===null)return null;
   const accentSep=sep==='-'?(/^[aeiouü]/i.test(core)||(/n$/i.test(previousCore)&&/^g/i.test(core))?"'":''):sep;
