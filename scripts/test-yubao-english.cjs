@@ -2,7 +2,7 @@ const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('ass
 const root=path.resolve(__dirname,'../site');
 const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'));
 const ctx=vm.createContext({console,document:{addEventListener(){}},localStorage:{getItem:()=>null},fetch:async f=>({ok:true,json:async()=>read(f)})});
-for(const f of ['notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
+for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
 (async()=>{
  const data={wordAliases:{},words:[],sources:[],corpus:[]};await ctx.loadYubao(data);
  const attestations=new Map(data.words.flatMap(w=>w.attestations.map(a=>[a.id,a])));let count=0;
