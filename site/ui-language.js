@@ -28,9 +28,9 @@
     }
   }
   const labels = Object.freeze({
-    brand: 'bifzixkar afhxix', home: 'ger laix xief', words: 'cixcix nix', grammar: 'sar qinrmox lir',
+    brand: 'bifzixkar afhxix', home: 'ger laix xief', words: 'cixcix nix', grammar: 'sar qifmox lir',
     // Zhou (2020) cover: Sufmur Bifzixsar (su²mu³); Brassett: -nie³ (genitive), sa³ (speech).
-    notation: 'sar qinrmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
+    notation: 'sar qifmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
     // Search action wording approved for this interface; not a source quotation.
     searchEn: 'yinxyiv niv-xivsour', searchZh: 'pavsar niv-xivsour', searchTujia: 'bifsar niv-xivsour',
     history: 'sufmur nier sar', search: 'nix'
