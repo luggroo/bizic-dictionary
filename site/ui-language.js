@@ -185,6 +185,7 @@
     observer?.disconnect();
     decorate();
     localizeLinks();
+    window.ReviewedGrammar?.refresh();
     translateGrammar();
     window.TujiaTypography?.refresh(node => textMemory.get(node)?.source || node.nodeValue);
     roots.forEach(root => { if (root.isConnected) translateTree(root); });

@@ -4,7 +4,7 @@ const $=s=>document.querySelector(s), E=s=>String(s??'').replace(/[&<>"']/g,c=>(
 const normalize=s=>String(s??'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
 const searchNormalize=s=>normalize(s).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').replace(/a\u0308/g,'a').normalize('NFC').replace(/v/g,'ü').replace(/ı/g,'i').replace(/[ʔ‘’ʼʻʹ′]/g,"'");
 const contains=(s,q)=>searchNormalize(s).includes(searchNormalize(q));
-const DEFAULT_STATE={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,searchLanguage:'',browseWords:false,corpusCollection:''};
+const DEFAULT_STATE={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarAnchor:'',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,searchLanguage:'',browseWords:false,corpusCollection:''};
 let state={...DEFAULT_STATE}, currentDetail=null,currentOverlay=null;
 const titles={notation:'记音对应与补全',home:'知识总览',words:'词汇检索',topics:'语法与专题',corpus:'例句语料',sources:'全部文献',history:'历史比较',grammar:'参考语法'};
 const descriptions={notation:'',words:'',topics:'按主题浏览研究文献。',corpus:'阅读故事、民歌与日常对话。',sources:'',history:'比较各方言的词形与历史重建。',grammar:''};
@@ -174,7 +174,7 @@ const ROUTE_FIELDS={
  sources:['q','topic','dialect','kind','status','priority','batch','grammarSourceScope','page'],
  corpus:['q','dialect','genre','corpusCollection','page'],
  history:['q','page'],
- grammar:['q'],
+ grammar:['q','grammarAnchor'],
  notation:[]
 };
 let navigationReady=false,restoringNavigation=false,closingDetail=false,navigationSerial=0,lastNavigationToken='';
@@ -186,7 +186,7 @@ function cleanViewState(value){
  if(next.view==='saved'||!Object.hasOwn(ROUTE_FIELDS,next.view))next.view='home';
  for(const key of Object.keys(next))if(typeof DEFAULT_STATE[key]==='string')next[key]=String(next[key]??'').slice(0,2000);
  next.grammarDialect=next.grammarDialect==='south'?'south':'north';
- if(!DIALECT_GRAMMARS[next.grammarDialect].some(ch=>ch.id===next.chapter))next.chapter='1';
+ next.chapter=typeof normalizeGrammarChapter==='function'?normalizeGrammarChapter(next.chapter,next.grammarDialect):next.chapter;
  next.page=Number.isFinite(Number(next.page))?Math.max(1,Math.floor(Number(next.page)||1)):1;
  next.exact=next.exact===true||next.exact==='1';
  next.browseWords=next.browseWords===true||next.browseWords==='1';
@@ -212,7 +212,11 @@ function parseViewHash(hash){
  else next.view=path||'home';
  const params=new URLSearchParams(query);
  for(const key of ROUTE_FIELDS[next.view]||[])if(params.has(key))next[key]=params.get(key);
- return {state:cleanViewState(next),anchor:oldAnchor?path:''};
+ if(oldAnchor&&typeof GRAMMAR_ANCHORS!=='undefined'){
+  const target=path.startsWith('section-')?path.slice(8).replaceAll('.','-'):'fn-'+path;
+  const where=GRAMMAR_ANCHORS[target];if(where){next.chapter=where.chapter;next.grammarAnchor=target;}
+ }
+ return {state:cleanViewState(next),anchor:next.grammarAnchor||(oldAnchor?path:'')};
 }
 function resolveDetailId(value){
  if(typeof value!=='string'||!value)return null;
