@@ -20,6 +20,12 @@ assert.equal(score({forms:['lüè']},'lue','tujia'),0);
 assert.equal(score({forms:['ba'],zh:'姐姐; 堂姐'},'姐姐','zh',true),100);
 assert.equal(score({forms:['tia']},'ti','tujia',true),0);
 assert.equal(score({forms:['tí']},'ti','zh'),0);
+for(const q of ['ıì-mò-kēn-crı̀','ıi-mo-ken-cri','ii-mo-ken-cri','iimokencri']){
+ assert.equal(score({forms:['ıì-mò-kēn-crı̀']},q,'tujia',true),100,q);
+}
+assert.equal(score({forms:['cıi']},'cii','tujia',true),100);
+assert.equal(score({forms:['cıi']},'ci','tujia',true),0);
+assert.equal(score({forms:['cıi']},'cri','tujia',true),0);
 console.log('PASS: language scopes, English tokens, ti noise rejection, spelling ranking and exact sense matching');
 for(const en of ['there','therefore','everywhere','where'])assert.equal(score({forms:['ba'],en},'here','en'),0,en);
 for(const en of ["chest (English 'chest' here is the body part.)","pigweed (Original English 'pigweed' suggests a plant; here the gloss is 猪草 (grass/greens); not a species.)","time (The English 'time' denotes 时节／时间 here.)","water (Note: 'here' belongs to an editorial note (unverified).)"]){

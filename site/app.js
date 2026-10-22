@@ -2,7 +2,7 @@
 let D, S, W, C, R;
 const $=s=>document.querySelector(s), E=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const normalize=s=>String(s??'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
-const searchNormalize=s=>normalize(s).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').replace(/a\u0308/g,'a').normalize('NFC').replace(/v/g,'ü');
+const searchNormalize=s=>normalize(s).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').replace(/a\u0308/g,'a').normalize('NFC').replace(/v/g,'ü').replace(/ı/g,'i');
 const contains=(s,q)=>searchNormalize(s).includes(searchNormalize(q));
 const DEFAULT_STATE={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,searchLanguage:'',browseWords:false,corpusCollection:''};
 let state={...DEFAULT_STATE}, currentDetail=null,currentOverlay=null;

@@ -11,7 +11,7 @@ const SOUTH_ONSETS={
  'l':['l','l'],'w':['w','w'],'j':['y','y'],'ʔ':["'","'"],'':['','']
 };
 const SOUTH_RIMES={
- 'i':'i','e':'e','a':'a','o':'o','u':'u','y':'ü','ɯ':'eu','ʉ':'eu','ɨ':'ri',
+ 'i':'i','e':'e','a':'a','o':'o','u':'u','y':'ü','ɯ':'eu','ʉ':'eu','ɨ':'ıi','ɿ':'rı',
  'ei':'ei','ai':'ai','au':'au','aɨ':'au','aɯ':'au',
  'ie':'ie','ɨe':'e','ɯe':'e','ia':'ia','io':'io','iɯ':'ieu','iʉ':'ieu',
  'iau':'iau','iaɨ':'iau','iaɯ':'iau','ue':'ue','ua':'ua','uei':'uei','ui':'uei','uai':'uai','uo':'uo',
@@ -22,13 +22,17 @@ const SOUTH_RIMES={
 const SOUTH_TONES={'55':'\u0304','33':'','35':'\u0301','21':'\u0300','13':'\u030c'};
 const SOUTH_ORDER=Object.keys(SOUTH_ONSETS).sort((a,b)=>b.length-a.length);
 const SOUTH_PINYIN_RULES='调号拼音 j、q、x（含浊音 jj）后补足 i，如 je → jie、qa → qia、xon → xion；已有 i 或 ü 不重复添加。/jiɯ、jiʉ/ 的调号拼音写 yeu，白话字写 ieu。下表为基础对应，/i、ei、ɨ/ 的来源差异另列。';
-const SOUTH_SOURCE_RIME_RULES='Tian 86 南部：调号拼音与白话字共用韵母，/i/ 写 i，/ei/ 写 ei；/ɨ/ 在 /k、kʰ、g、ŋ、x、ɣ/ 后写 i，其他位置写 ii。中国语保泸溪：/t、d/ 后的 /ɨ/ 在两套拼写中写 ei；/k、kʰ、g、x、ɣ、ħ、ʕ/ 后写 i，其他位置写 ii。';
-function southernRimeRows(){return Object.entries(SOUTH_RIMES).map(([ipa,rime])=>[ipa,rime==='ri'?'ii':rime,rime])}
+const SOUTH_SOURCE_RIME_RULES='Tian 86 南部：调号拼音与白话字共用韵母，/i/ 写 i，/ei/ 写 ei；/ɨ/ 在 /k、kʰ、g、ŋ、x、ɣ/ 后写 i，其他位置写 ıi。中国语保泸溪：/t、d/ 后的 /ɨ/ 在两套拼写中写 ei；/k、kʰ、g、x、ɣ、ħ、ʕ/ 后写 i，其他位置写 ıi。';
+const SOUTH_APICAL_RULES='舌尖元音写 rı，末字母为无点 ı；声调直接加在 ı 上：rı̄、rı、rı́、rı̀、rı̌。声母 r 与韵母 rı 相接时只写一个 r。Tian 86 的 /i/ 按来源对应写 i；其他南部来源中，/ts、tsʰ、dz、s、z/ 后记作 /i/ 的舌尖元音，白话字写 crı、chrı、jrı、srı、rı，调号拼音写 zrı、crı、zzrı、srı、rı。直接记作 /ɿ/ 的舌尖元音也写 rı；原始 IPA 保留各来源的记法。';
+const SOUTH_DOTLESS_I_RULES='ıi 表示一个元音 /ɨ/，首字母为无点 ı，声调标在第二个 i 上：ıī、ıi、ıí、ıì、ıǐ。白话字的 cıi、chıi、sıi 与 ci、chi、si 区分；ıi 不触发 i、ü 前的腭化读法。搜索时也可输入 ii。';
+function southernRimeRows(){return Object.entries(SOUTH_RIMES).map(([ipa,rime])=>[ipa,rime,rime])}
 function southernSourceRimeRows(){return [
  ['Tian 86','i','全部','i','i'],['Tian 86','ei','全部','ei','ei'],
- ['Tian 86','ɨ','k、kʰ、g、ŋ、x、ɣ','i','i'],['Tian 86','ɨ','其他声母或零声母','ii','ii'],
- ['中国语保 · 泸溪','ɨ','t、d','ei','ei'],['中国语保 · 泸溪','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['中国语保 · 泸溪','ɨ','其他声母或零声母','ii','ii'],
- ['其他南部来源','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['其他南部来源','ɨ','其他声母或零声母','ii','ri']
+ ['Tian 86','ɨ','k、kʰ、g、ŋ、x、ɣ','i','i'],['Tian 86','ɨ','其他声母或零声母','ıi','ıi'],
+ ['中国语保 · 泸溪','ɨ','t、d','ei','ei'],['中国语保 · 泸溪','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['中国语保 · 泸溪','ɨ','其他声母或零声母','ıi','ıi'],
+ ['中国语保泸溪及其他非 Tian 86 来源','i','ts、tsʰ、dz、s、z（舌尖元音）','rı','rı'],
+ ['南部各来源','ɿ','全部','rı','rı'],
+ ['其他南部来源','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['其他南部来源','ɨ','其他声母或零声母','ıi','ıi']
 ]}
 let southernDisplay='accent';
 try{if(localStorage.getItem('tujia-south-spelling-v1')==='poj')southernDisplay='poj'}catch{}
@@ -42,7 +46,7 @@ function southMark(rime,tone,explicit=false){
  const mark=tone==='33'&&explicit?'\u0331':SOUTH_TONES[tone];
  if(mark===undefined)return null;if(!mark)return rime;
  let index=rime.indexOf('a');if(index<0)index=rime.indexOf('e');if(index<0)index=rime.indexOf('o');
- if(index<0){for(let i=rime.length-1;i>=0;i--)if('iuü'.includes(rime[i])){index=i;break}}
+ if(index<0){for(let i=rime.length-1;i>=0;i--)if('iuüı'.includes(rime[i])){index=i;break}}
  if(index<0)return null;
  return (rime.slice(0,index+1)+mark+rime.slice(index+1)).normalize('NFC');
 }
@@ -58,30 +62,29 @@ function southernSpelling(raw,source='',explicit=false){
   if(r==='ɨ̃'&&['l','n'].includes(onset)&&source.startsWith('stedt-cb523fc3dc'))rime='en';
   if(r==='ɨ'&&['k','kʰ','g','x','ɣ','ħ','ʕ'].includes(onset))rime='i';
   const sharedRime=tian&&['i','ei','ɨ'].includes(r);
-  if(sharedRime)rime=r==='ɨ'?(['k','kʰ','g','ŋ','x','ɣ'].includes(onset)?'i':'ii'):r;
+  if(sharedRime)rime=r==='ɨ'?(['k','kʰ','g','ŋ','x','ɣ'].includes(onset)?'i':'ıi'):r;
   if(luxi&&r==='ɨ'){
    if(['t','d'].includes(onset))rime='ei';
-   else if(rime==='ri')rime='ii';
   }
+  // Dental i is the source's apical-vowel notation outside Tian's separate i mapping.
+  if(!tian&&r==='i'&&['ts','tsʰ','dz','s','z'].includes(onset))rime='rı';
   if(!rime||(!Object.hasOwn(SOUTH_TONES,m[2])&&m[2]!=='?'))return null;
   if(['ɲ','ȵ'].includes(onset)&&rime.startsWith('i'))rime=rime.slice(1);
   const sep=count&&/^[\s-]*$/.test(gap)?'-':gap.replace(/[|｜]/g,' / ');
-  // Apical i after dental sibilants uses ri in POJ (cri/chri/sri versus ci/chi/si).
-  // This avoids collapsing common dental-i and alveolo-palatal-i syllables.
-  let pojRime=!sharedRime&&r==='i'&&['ts','tsʰ','dz','s','z'].includes(onset)?'ri':rime;
-  // r + apical ri is written ri, not rri.
-  if(SOUTH_ONSETS[onset][1]==='r'&&pojRime==='ri')pojRime='i';
+  let pojRime=rime;
+  // The onset r and the r of the apical rime are written only once.
+  if(SOUTH_ONSETS[onset][1]==='r'&&pojRime==='rı')pojRime='ı';
   let pojOnset=SOUTH_ONSETS[onset][1];
-  if(onset==='j'&&!sharedRime){pojOnset='';if(!/^[iü]/.test(pojRime))pojRime='i'+pojRime;}
+  if(onset==='j'&&!sharedRime){pojOnset='';if(!/^[iıü]/.test(pojRime))pojRime='i'+pojRime;}
   if(onset==='w'&&!sharedRime){pojOnset='';if(!pojRime.startsWith('u'))pojRime='u'+pojRime;}
   const pojMarked=m[2]==='?'?pojRime+'⁇':southMark(pojRime,m[2],explicit);
   const pinyinOnset=SOUTH_ONSETS[onset][0];
-  let pinyinBaseRime=rime==='ri'?'ii':rime;
+  let pinyinBaseRime=pinyinOnset==='r'&&rime==='rı'?'ı':rime;
   if(onset==='j'&&['iɯ','iʉ'].includes(r))pinyinBaseRime=pinyinBaseRime.slice(1);
   const core=pinyinPalatalCore(pinyinOnset+pinyinBaseRime);
   const pinyinRime=core.slice(pinyinOnset.length);
   const marked=m[2]==='?'?pinyinRime+'⁇':southMark(pinyinRime,m[2],explicit);if(marked===null)return null;
-  const accentSep=sep==='-'?(/^[aeiouü]/i.test(core)||(/n$/i.test(previousCore)&&/^g/i.test(core))?"'":''):sep;
+  const accentSep=sep==='-'?(/^[aeiouüı]/i.test(core)||(/n$/i.test(previousCore)&&/^g/i.test(core))?"'":''):sep;
   accent+=accentSep+pinyinOnset+marked;poj+=sep+pojOnset+pojMarked;
   previousCore=core;
   count++;pos=m.index+m[0].length;
@@ -105,6 +108,6 @@ function southernMappingHTML(){
  mappingTable('声母',['IPA','调号拼音','白话字拼音'],Object.entries(SOUTH_ONSETS).filter(([k])=>k).map(([k,v])=>['/'+k+'/',...v]))+
  mappingTable('韵母',['IPA','调号拼音','白话字'],southernRimeRows().filter(([r])=>r!=='ɨ').map(([k,...v])=>['/'+k+'/',...v]))+
  mappingTable('分来源韵母',['来源','IPA','声母环境','调号拼音','白话字'],southernSourceRimeRows())+
- '<p>'+SOUTH_PINYIN_RULES+'</p><p>'+SOUTH_SOURCE_RIME_RULES+'</p><p>南部白话字将 /dz, dʑ/ 写 j，/z/ 写 r；/ts, tɕ/ 统一写 c，/tsʰ, tɕʰ/ 统一写 ch，/s, ɕ/ 统一写 s。前元音 i、ü 前通常读为腭化音；这仅是正字法合并，不代表这些音在全部材料中已证明互补分布，原始 IPA 仍可在词条出处查看。</p><p>Tian 86 的 /i/ 在两套拼写中均写 i。其他来源的齿龈音后 /i/ 在白话字中写 ri：cri、chri、jri、sri、ri；调号拼音写 zi、ci、zzi、si、ri。</p><p>田德生“鼻涕”的 /ɨ̃/ 写 en。原始音标可在词条出处中查看。</p></details>';
+ '<p>'+SOUTH_PINYIN_RULES+'</p><p>'+SOUTH_SOURCE_RIME_RULES+'</p><p>'+SOUTH_DOTLESS_I_RULES+'</p><p>南部白话字将 /dz, dʑ/ 写 j，/z/ 写 r；/ts, tɕ/ 统一写 c，/tsʰ, tɕʰ/ 统一写 ch，/s, ɕ/ 统一写 s。前元音 i、ü 前通常读为腭化音；这仅是正字法合并，不代表这些音在全部材料中已证明互补分布，原始 IPA 仍可在词条出处查看。</p><p>'+SOUTH_APICAL_RULES+'</p><p>田德生“鼻涕”的 /ɨ̃/ 写 en。原始音标可在词条出处中查看。</p></details>';
 }
 NOTATION_CONFIG.profiles.push({id:'yubao-60824',source:'yubao-60824',title:'中国语保 · 南部潭溪',kind:'south',count:2884,dialects:['南部'],status:'南部双方案',notes:[]});

@@ -39,7 +39,7 @@ const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.s
  check('yubao-60823-v-0765','re-liē');
  check('yubao-60823-v-2733','xiu-náo');
  check('yubao-60823-v-2870','piu-náo');
- check('yubao-60824-v-2635','no yiì');
+ check('yubao-60824-v-2635','no yıì');
  check('yubao-60824-v-2663',"ǎjjiē yǎu'a");
  check('yubao-60824-v-2664','ǎjjiē jǖ');
  check('yubao-60824-v-2665','ǎjjiē nǒn');
