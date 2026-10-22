@@ -3,6 +3,30 @@
 (() => {
   let language = 'zh';
   try { if (localStorage.getItem('tujia-ui-language') === 'en') language = 'en'; } catch {}
+  function urlLanguage() {
+    const value = new URLSearchParams(location.search).get('lang');
+    return value === 'en' || value === 'zh' ? value : null;
+  }
+  language = urlLanguage() || language;
+  const script = document.currentScript || document.querySelector('script[src*="ui-language.js"]');
+  const siteRoot = new URL('.', script?.src || location.href);
+  function syncLanguageURL() {
+    const url = new URL(location.href);
+    if (url.searchParams.get('lang') === language) return;
+    url.searchParams.set('lang', language);
+    history.replaceState(history.state, '', url);
+  }
+  function localizeLinks() {
+    for (const link of document.querySelectorAll('a[href]')) {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || link.hasAttribute('download')) continue;
+      const url = new URL(href, location.href);
+      if (url.origin !== siteRoot.origin || !url.pathname.startsWith(siteRoot.pathname) || !/(?:\/|\.html)$/.test(url.pathname)) continue;
+      url.searchParams.set('lang', language);
+      const localized = url.pathname + url.search + url.hash;
+      if (href !== localized) link.setAttribute('href', localized);
+    }
+  }
   const labels = Object.freeze({
     brand: 'bifzixkar afhxix', home: 'ger laix xief', words: 'cixcix nix', grammar: 'sar qinrmox lir',
     // Zhou (2020) cover: Sufmur Bifzixsar (su²mu³); Brassett: -nie³ (genitive), sa³ (speech).
@@ -162,6 +186,7 @@
   function refresh(roots = [document.body]) {
     observer?.disconnect();
     decorate();
+    localizeLinks();
     translateGrammar();
     window.TujiaTypography?.refresh(node => textMemory.get(node)?.source || node.nodeValue);
     roots.forEach(root => { if (root.isConnected) translateTree(root); });
@@ -175,10 +200,12 @@
   function setLanguage(value) {
     language = value === 'en' ? 'en' : 'zh';
     try { localStorage.setItem('tujia-ui-language',language); } catch {}
+    syncLanguageURL();
     refresh();
   }
   window.TujiaUI = {refresh,translate,spelling,setLanguage,get language(){return language;}};
-  document.getElementById('ui-language').addEventListener('change', e => setLanguage(e.target.value));
+  document.getElementById('ui-language')?.addEventListener('change', e => setLanguage(e.target.value));
+  window.addEventListener('popstate', () => setLanguage(urlLanguage() || language));
   // Run after app.js initializes its shared lexical bindings.
   document.addEventListener('DOMContentLoaded', () => {
     observer = new MutationObserver(records => {
@@ -190,6 +217,6 @@
         const roots = [...pending]; pending.clear(); refresh(roots);
       });
     });
-    refresh();
+    setLanguage(language);
   });
 })();

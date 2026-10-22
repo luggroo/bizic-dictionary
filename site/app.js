@@ -203,6 +203,18 @@ function parseViewHash(hash){
  for(const key of ROUTE_FIELDS[next.view]||[])if(params.has(key))next[key]=params.get(key);
  return {state:cleanViewState(next),anchor:oldAnchor?path:''};
 }
+function resolveDetailId(value){
+ if(typeof value!=='string'||!value)return null;
+ const id=Object.hasOwn(D.wordAliases||{},value)?D.wordAliases[value]:value;
+ return [W,C,S,R].some(items=>Object.hasOwn(items||{},id))?id:null;
+}
+function navigationURL(detail=null,value=state){
+ const url=new URL(location.href),id=resolveDetailId(detail);
+ if(id)url.searchParams.set('id',id);else url.searchParams.delete('id');
+ url.hash=viewHash(value);
+ return url.pathname+url.search+url.hash;
+}
+function sharedDetailView(id){return W[id]?'words':C[id]?'corpus':R[id]?'history':'sources'}
 function navigationEntry(){return history.state?.tujiaNavigation===1?history.state:null}
 function navigationToken(){return location.href+'|'+(navigationEntry()?.key||'')}
 function mainOpenDetails(){return [...document.querySelectorAll('#main details')].flatMap((el,i)=>el.open?[i]:[])}
@@ -237,7 +249,7 @@ function commitDetailNavigation(detail,wasOpen){
  currentOverlay=detail;
  if(!navigationReady||restoringNavigation)return;
  const entry=wasOpen?{...(navigationEntry()||newNavigationEntry()),detail}:newNavigationEntry(detail);
- history[wasOpen?'replaceState':'pushState'](entry,'',viewHash());
+ history[wasOpen?'replaceState':'pushState'](entry,'',navigationURL(detail));
  lastNavigationToken=navigationToken();
 }
 function restoreDetailNavigation(detail){
@@ -249,7 +261,7 @@ function finishNavigation(previous){
  const hash=viewHash(),changed=location.hash!==hash,dialog=$('#detail');
  const entry=changed?newNavigationEntry():{...(previous||newNavigationEntry()),viewState:{...state},detail:dialog.open?currentOverlay:null,notation:notationNavigationState(),scrollY:window.scrollY,openDetails:mainOpenDetails()};
  // A link out of a detail replaces the overlay entry; Back returns to its list.
- history[changed&&!previous?.detail?'pushState':'replaceState'](entry,'',hash);
+ history[changed&&!previous?.detail?'pushState':'replaceState'](entry,'',navigationURL(entry.detail));
  lastNavigationToken=navigationToken();
 }
 function revealPageAnchor(id){
@@ -262,24 +274,35 @@ function revealPageAnchor(id){
 function restoreNavigation(){
  if(!navigationReady||navigationToken()===lastNavigationToken)return;
  const parsed=parseViewHash(location.hash),saved=navigationEntry();
- const entry=saved&&viewHash(saved.viewState)===location.hash?saved:null;
+ const requestedId=new URLSearchParams(location.search).get('id'),sharedId=resolveDetailId(requestedId);
+ if(!location.hash&&sharedId)parsed.state.view=sharedDetailView(sharedId);
+ const entry=saved&&viewHash(saved.viewState)===location.hash&&resolveDetailId(saved.detail)===sharedId?saved:null;
  restoringNavigation=true;closingDetail=false;
  closeDetailSilently();
  state=cleanViewState(entry?.viewState||parsed.state);
  restoreNotationState(entry?.notation);
  render();
  if(entry?.openDetails){const open=new Set(entry.openDetails);document.querySelectorAll('#main details').forEach((el,i)=>el.open=open.has(i))}
- if(entry?.detail)restoreDetailNavigation(entry.detail);
+ if(sharedId||entry?.detail)restoreDetailNavigation(sharedId||entry.detail);
  const restored={...(entry||newNavigationEntry()),viewState:{...state},detail:$('#detail').open?currentOverlay:null,notation:notationNavigationState(),scrollY:entry?(navigationPositions.get(entry.key)??entry.scrollY??0):0,openDetails:mainOpenDetails()};
- history.replaceState(restored,'',viewHash());
+ history.replaceState(restored,'',navigationURL(restored.detail));
  lastNavigationToken=navigationToken();
  const token=lastNavigationToken;
  requestAnimationFrame(()=>{if(token===navigationToken()){window.scrollTo({top:restored.scrollY,behavior:'instant'});if(parsed.anchor)revealPageAnchor(parsed.anchor)}});
  restoringNavigation=false;
+ if(requestedId&&!sharedId)toast('未找到该条目。');
 }
 function initializeNavigation(){
  navigationReady=true;
  history.scrollRestoration='manual';
+ const sharedId=resolveDetailId(new URLSearchParams(location.search).get('id'));
+ // A fresh shared link gets a list entry underneath, so Close and Back stay on site.
+ if(sharedId&&!navigationEntry()?.detail){
+  state=parseViewHash(location.hash).state;
+  if(!location.hash)state.view=sharedDetailView(sharedId);
+  history.replaceState(newNavigationEntry(),'',navigationURL());
+  history.pushState(newNavigationEntry(sharedId),'',navigationURL(sharedId));
+ }
  restoreNavigation();
 }
 window.addEventListener('popstate',restoreNavigation);
@@ -331,8 +354,8 @@ function sourceVariantPanel(s){if(s.canonicalSource)return `<div class="notice">
 function sourceDetail(s){return `<div class="eyebrow"><span class="tujia-ui" data-ui-tujia="sources" lang="tji"></span></div><div class="row"><h2 class="grow">${E(s.title)}</h2></div><div class="chips">${pill(s.kind)}${s.topics.map(t=>pill(t)).join('')}${pill(s.status,s.status.includes('待'))}</div><dl><dt>原始目录</dt><dd>${E(s.path)}</dd><dt>方言标签</dt><dd>${E(s.dialect)}</dd><dt>地点线索</dt><dd>${E(s.locations.join(' / ')||'题名未说明')}</dd><dt>文件大小</dt><dd>${s.size?(Number(s.size)/1024/1024).toFixed(2)+' MB':'不适用／未提供'}</dd></dl>${sourceVariantPanel(s)}${s.id==='brassett-2006'?brassettSourcePanel():''}${s.recognition?recognitionPanel(s):''}${s.description?`<p class="sub">${E(s.description)}</p>`:''}<div class="detail-actions">${sourceLink(s.id)}<button data-copy="${s.id}">复制来源引用</button>${D.words.some(w=>wordSources(w).includes(s.id))?`<button data-source-words="${s.id}">检索本来源词条</button>`:''}</div>${s.image?`<figure style="margin:15px 0"><a href="${E(s.image)}" target="_blank"><img class="research-map" hidden data-media-src="${E(s.image)}" alt="原始地图 ${E(s.title)}"></a><figcaption class="tiny">原图 ${E(s.title)} · 点击放大。历史版本地图请结合论文勘误阅读。</figcaption></figure>`:''}${s.media?`<audio controls preload="metadata" hidden data-media-src="${E(s.media)}"></audio>`:''}${s.members?`<h3>压缩包内容</h3>${s.members.map(m=>`<p>${E(m.name)} · ${(m.size/1024).toFixed(0)} KB</p>${m.media?`<audio controls preload="none" hidden data-media-src="${E(m.media)}"></audio>`:''}`).join('')}`:''}${s.text.length>500?`<div class="notice warn">${E(s.textNotice)}</div><h3>提取文本</h3><div class="compact-search"><input id="within" value="${E(state.q)}" placeholder="在正文中查找关键词" aria-label="文内定位"><button id="within-find">定位</button></div><div class="text-view" id="source-text">${s.recognition?recognizedHTML(s):E(s.text)}</div>`:`<div class="notice">${s.media?'暂无逐句转写，可查看原始资料。':s.status.includes('词表')?'可通过“检索本来源词条”查看词汇。':'暂无全文，请打开原件。'}</div>`}`}
 function corpusDetail(c){if(c.externalText)return longshanTextDetail(c);if(c.survey)return surveySentenceDetail(c);return `<div class="eyebrow"><span class="tujia-ui" data-ui-tujia="corpus" lang="tji"></span></div><div class="row"><h2 class="grow">${E(c.title)}</h2></div><div class="chips">${pill(c.genre)}${pill(c.code)}</div>${corpusPlayer(c)}<dl><dt>方言判定依据</dt><dd>${E(S[c.source].dialectBasis||'范围尚未核定')}</dd><dt>地点线索</dt><dd>${E(c.locations.join(' / ')||'待核')}</dd><dt>人物原文</dt><dd>${c.people.length?c.people.map(E).join('<br>'):'待核'}</dd><dt>文本来源</dt><dd>土家语文库 网站原版（拼音版）${c.page?' · PDF 第 '+c.page+' 页起':''}</dd></dl><div class="detail-actions">${sourceLink(c.audio,'打开原始录音 ↗')}${sourceLink(c.source,'打开 PDF 原件 ↗')}<button data-copy="${c.id}">复制语料引用</button></div>${c.text?`<div class="compact-search"><input id="within" value="${E(state.q)}" placeholder="在本段文本中定位" aria-label="语料内定位"><button id="within-find">定位</button></div><details><summary>查看原始全文与分行</summary><div class="text-view" id="source-text">${E(c.text)}</div></details>`:'<div class="notice warn">暂无文本。</div>'}`}
 function openDetail(id){
- id=D.wordAliases?.[id]||id;
- if(!W[id]&&!S[id]&&!C[id]&&!R[id])return;
+ id=resolveDetailId(id);
+ if(!id)return;
  const dialog=$('#detail'),wasOpen=dialog.open;
  saveNavigationPosition();
  const html=R[id]?reconstructionDetail(R[id]):W[id]?wordDetail(W[id]):C[id]?corpusDetail(C[id]):sourceDetail(S[id]);

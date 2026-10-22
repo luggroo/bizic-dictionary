@@ -1,6 +1,7 @@
 /* English translations of reference-grammar prose and corpus titles.
  * Source data, transcriptions and Chinese readings remain unchanged. */
 Object.assign(UI_TRANSLATIONS, {
+  "未找到该条目。": "Entry not found.",
   "土家语的记音包括拉丁字母拼写和国际音标，各方案采用不同的声调标记。": "Tujia is written in several Latin-based orthographies and in the International Phonetic Alphabet (IPA), with different conventions for marking tones.",
   "国际音标用斜线表示音位，如/p/，用方括号表示具体发音，如[b]。叶式拼音与国际音标的对应列在声母、韵母表中。": "IPA uses slashes for phonemes, as in /p/, and square brackets for phonetic realizations, as in [b]. The initial and rime tables show the correspondences between Ye romanization and IPA.",
   "吃": "eat",
