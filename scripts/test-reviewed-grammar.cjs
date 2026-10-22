@@ -21,8 +21,16 @@ const root=path.resolve(__dirname,'../site');
      if(JSON.stringify(zhIPA)!==JSON.stringify(enIPA))failures.push(ch.id+': IPA changes in English: '+JSON.stringify({zh:zhIPA.filter((x,i)=>zhIPA.indexOf(x)===i&&zhIPA.filter(y=>y===x).length!==enIPA.filter(y=>y===x).length),en:enIPA.filter((x,i)=>enIPA.indexOf(x)===i&&zhIPA.filter(y=>y===x).length!==enIPA.filter(y=>y===x).length),counts:[zhIPA.length,enIPA.length]}));
      if(JSON.stringify(zhRefs)!==JSON.stringify([...english.querySelectorAll('.grammar-citation')].map(n=>[n.textContent,n.dataset.footnoteTarget])))failures.push(ch.id+': citation numbering changes with language');
      const walker=document.createTreeWalker(english,NodeFilter.SHOW_TEXT);let n;while((n=walker.nextNode()))if(!n.parentElement.closest('[data-spelling-pending]')&&/\p{Script=Han}/u.test(n.nodeValue))failures.push(ch.id+': untranslated '+n.nodeValue);
+     for(const rendered of [document.querySelector('main'),english]){const words=document.createTreeWalker(rendered,NodeFilter.SHOW_TEXT);let word;while((word=words.nextNode()))if(!word.parentElement.closest('.grammar-pair')&&/[\p{Script=Latin}\p{M}ʰ]+[¹²³⁴⁵]+/u.test(word.nodeValue))failures.push(ch.id+': IPA without romanization '+word.nodeValue);}
      for(const a of english.querySelectorAll('.grammar-citation')){if(!/^\[\d+\]$/.test(a.textContent)||!a.title||/\p{Script=Han}/u.test(a.title)||!english.querySelector('#'+a.dataset.footnoteTarget))failures.push(ch.id+': invalid reference '+a.outerHTML);}
      if(ch.id==='101'&&(![...english.querySelectorAll('.grammar-ipa')].some(n=>n.textContent==='/p/')||![...english.querySelectorAll('.grammar-ipa')].some(n=>n.textContent==='[b]')))failures.push('IPA slashes/brackets missing');
+     if(ch.id==='104'){
+      const overview=[...document.querySelectorAll('table')].find(t=>t.querySelectorAll('th')[1]?.textContent==='形式或组合');
+      const forms=[...overview.querySelectorAll('tbody tr')].map(r=>r.cells[1]);
+      for(const cell of forms){const w=document.createTreeWalker(cell,NodeFilter.SHOW_TEXT);let n;while((n=w.nextNode()))if(!n.parentElement.closest('.grammar-pair')&&/\/[^/]+\//.test(n.nodeValue))failures.push('Overview: unpaired IPA '+n.nodeValue);}
+      for(const ipa of ['la','tɕi','xu','tuɔ','ɕi','tsʰi','ɲie ɕi','ma'])if(!forms.some(c=>[...c.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa===ipa&&!/[¹²³⁴⁵xfrv]$/.test(p.querySelector('.grammar-spelling').dataset.ye))))failures.push('Overview: variable-tone affix not displayed without tone: '+ipa);
+      for(const [ipa,ye] of [['ɕie²⁴','xief'],['ɕiau²⁴','xiaof'],['ɜ̃²¹tsɿ²¹','enrzir'],['ɜ̃²¹tsou²⁴','enrzouf'],['tʰai²⁴','taif'],['tʰau²⁴','taof']])if(!forms.some(c=>[...c.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa===ipa&&p.querySelector('.grammar-spelling').dataset.ye===ye)))failures.push('Overview: irregular word missing its tone: '+ipa);
+     }
      results.push({id:ch.id,pairs:document.querySelectorAll('.grammar-pair').length,examples:document.querySelectorAll('.grammar-interlinear').length});
      for(const n of document.querySelectorAll('.grammar-pair')){
       if(n.dataset.spellingPending){pending.add(n.dataset.ipa);continue;}

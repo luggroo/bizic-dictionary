@@ -57,7 +57,7 @@ function grammarLocalizeSource(root,language){
   if(!en){const numbered=key.match(/^(\d+(?:\.\d+)*\.?\s+)(.+)$/);if(numbered&&UI_TRANSLATIONS[numbered[2]])en=numbered[1]+UI_TRANSLATIONS[numbered[2]];}
   if(en)node.nodeValue=raw.slice(0,raw.indexOf(key))+en+raw.slice(raw.indexOf(key)+key.length);
   node.nodeValue=node.nodeValue.replace(/[。；，：（）、＋]/g,c=>({'。':'. ','；':'; ','，':', ','：':': ','（':'(', '）':')','、':', ','＋':' + '})[c]);
-  if(node.nextSibling?.nodeType===1&&node.nextSibling.matches('a,strong,em,code')&&/[A-Za-z0-9’”)]$/.test(node.nodeValue))node.nodeValue+=' ';
+  if(node.nextSibling?.nodeType===1&&node.nextSibling.matches('a,strong,em,code')&&/[A-Za-z0-9’”),;:]$/.test(node.nodeValue))node.nodeValue+=' ';
   if(node.previousSibling?.nodeType===1&&node.previousSibling.matches('a,strong,em,code')&&/^[A-Za-z0-9‘“(]/.test(node.nodeValue))node.nodeValue=' '+node.nodeValue;
  }
 }
@@ -65,6 +65,13 @@ function grammarBuildReferences(root,ch,language){
  const en=language==='en',definitions=new Map(),entries=[],byContent=new Map();let serial=0;
  for(const note of root.querySelectorAll('details.grammar-reference')){
   const body=note.querySelector('p[id]');if(body)definitions.set(body.id,body.cloneNode(true));note.remove();
+ }
+ // Markdown hard breaks can leave an example and its source in one paragraph.
+ for(const p of [...root.querySelectorAll('p')]){
+  const parts=p.innerHTML.split(/<br\s*\/?>(?:\s*)/i);if(parts.length<2)continue;
+  const sources=[],rest=[];
+  for(const html of parts){const q=document.createElement('p');q.innerHTML=html;if(q.textContent.trim().startsWith('出处：'))sources.push(q);else rest.push(html);}
+  if(sources.length){p.innerHTML=rest.join('<br>');let after=p;for(const q of sources){after.after(q);after=q;}}
  }
  function citation(body,oldId=''){
   const key=body.innerHTML.trim();let entry=byContent.get(key);
@@ -151,16 +158,16 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  // Pair every remaining phonetic word/phrase, including inline citations and tables.
  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('script,style,.grammar-pair,.grammar-gloss')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
  const nodes=[];let node;while((node=walker.nextNode()))nodes.push(node);
- const letters='a-zɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰüɡ\u0300-\u036f';
+ const letters='a-zãẽĩõũỹɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰüɡ\u0300-\u036f';
  const token='['+letters+']+';
  const enclosed='['+letters+'¹²³⁴⁵0-9 \\t(){},、;*+＝=~～\\-]+';const pattern=new RegExp('(?<!['+letters+'¹²³⁴⁵])/(?<slashIPA>'+enclosed+')/(?!['+letters+'¹²³⁴⁵])|\\[('+enclosed+')\\]|'+token+'[¹²³⁴⁵]+(?:'+token+'[¹²³⁴⁵]+)*|'+token,'gu');
  for(const n of nodes){
   const raw=n.nodeValue,fr=document.createDocumentFragment();let pos=0,changed=false;
   for(const m of raw.matchAll(pattern)){
    const ipa=m[1]||m[2]||m[0],enclosedMatch=m[1]!==undefined||m[2]!==undefined;
-   if(enclosedMatch&&!/[¹²³⁴⁵ɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰ\u0300-\u036f]/u.test(ipa)&&!ipa.split(/[ ,、;+~～]+/).every(s=>/^(?:p|b|t|d|k|g|m|n|l|s|z|f|h|w|j|r|ts|dz|i|u|y|e|o|a|ai|au|ei|ou|ia|ie|iu|ua|uo|ui|an|en|in|un|po|xu|kau)$/.test(s)))continue;
+   if(enclosedMatch&&!/[¹²³⁴⁵ɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰ\u0300-\u036f]/u.test(ipa)&&!ipa.split(/[ ,、;+~～]+/).every(s=>/^(?:p|b|t|d|k|g|m|n|l|s|z|f|h|w|j|r|ts|dz|i|u|y|e|o|a|ai|au|ei|ou|ia|ie|iu|ua|uo|ui|an|en|in|un|po|xu|kau|la|lu|lie|liau|ti|tiu|to|tso|ma|ta)$/.test(s)))continue;
    if(!enclosedMatch&&!/[¹²³⁴⁵ɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰ\u0303\u0329]/u.test(ipa))continue;
-   if(!/[a-zɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥ]/u.test(ipa))continue;
+   if(!/[a-zãẽĩõũỹɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥ]/u.test(ipa))continue;
    // Non-IPA Latin labels such as /CONTENTS/ are excluded by the lowercase pattern.
    let d=ch.dialect;
    if(ipa.includes('ʕɯ')&&/ŋo/.test(ipa))d='south';

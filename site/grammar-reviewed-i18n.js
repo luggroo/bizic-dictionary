@@ -826,3 +826,27 @@ Object.assign(UI_TRANSLATIONS,{
 Object.assign(UI_TRANSLATIONS,{'鲁曼等（2021），':'Lu et al. (2021), ','Zhou（2020），':'Zhou (2020), ','Feng（2025），':'Feng (2025), '});
 Object.assign(UI_TRANSLATIONS,{'从完整句子看语序':'Word order in a complete sentence','记音、音节与连读':'Transcription, syllables and connected speech','南部内部的方言概况':'Dialect variation within Southern Tujia'});
 Object.assign(UI_TRANSLATIONS,{'拼音可在叶氏拼音和带调号拼音之间切换；IPA沿用各材料的调值。完整例句及出处见本章各节和':'Romanization can be switched between Ye spelling and tone-marked spelling; IPA preserves each source’s tone values. Full examples and references appear in this chapter and in '});
+
+Object.assign(UI_TRANSLATIONS,{
+  "部分词缀没有固定声调，具体声调高低由前后字声调决定。表中这类词缀不标声调，完整词形和例句保留所据材料的调值。拼音可在叶氏拼音和带调号拼音之间切换。完整例句及出处见本章各节和": "Some affixes have no fixed tone: their pitch depends on the tones of the surrounding syllables. These affixes are shown without tone marks in the table; complete word forms and examples retain the tones recorded in their sources. Romanization can be switched between Ye spelling and tone-marked spelling. Full examples and references appear in this chapter and in ",
+  "词干＋/i/及其合音，如/ka²⁴/ → /kai²⁴/": "Stem + /i/ and its contracted forms, e.g. /ka²⁴/ → /kai²⁴/",
+  "/kai²⁴xu²¹/（以“吃”为例）": "/kai²⁴xu²¹/ (with ‘eat’)",
+  "/po/～/pɔ/用于指令": "/po/～/pɔ/ in directives",
+  "/tʰa/＋动词": "/tʰa/ + verb",
+  "/tuɔ²¹/＋动词短语": "/tuɔ²¹/ + verb phrase",
+  "谓词短语＋/ɕi/": "Predicate phrase + /ɕi/",
+  "性质词＋/ɕi/＋/tʰai²⁴/": "Property word + /ɕi/ + /tʰai²⁴/",
+  "性质词重叠；性质词＋/lie²¹/＋性质词": "Reduplicated property word; property word + /lie²¹/ + property word",
+  "性质词＋/ti⁵⁵/＋性质词＋/ka²⁴/": "Property word + /ti⁵⁵/ + property word + /ka²⁴/",
+  "性质谓词＋/ɲie⁵⁵/": "Property predicate + /ɲie⁵⁵/",
+  "使用缩合词形": "Uses contracted forms",
+  "没有；现在没有": "Not have; not have now",
+  "“有、去、来”有不规则的完成形式。下表也列出“没有”和“现在没有”的整体词形。": "‘Have’, ‘go’ and ‘come’ have irregular completed forms. The table also lists the whole-word forms meaning ‘not have’ and ‘not have now’.",
+  "变化形式": "Changed form",
+  "有 → 有了": "Have → have now",
+  "没有 → 现在没有": "Not have → not have now",
+  "“有了”和“来了”使用表中的缩合词形。": "‘Have now’ and ‘have come’ use the contracted forms in the table.",
+  "“有、有了、没有、现在没有”的读音见 Brassett 词库：": "For the pronunciation of ‘have’, ‘have now’, ‘not have’ and ‘not have now’, see the Brassett lexicon: ",
+  "词条2487": "entry 2487",
+  "。IPA沿用正文转写；“有”的原拼写 xief 对应正文 /ɕie²⁴/。不规则完成形式及使用缩合词形的说明另见未刊补充材料。": ". IPA follows the transcription used in the main text: xief ‘have’ is written /ɕie²⁴/. The pairing of irregular completed forms and the requirement for contracted forms are also described in unpublished supplementary material."
+});
