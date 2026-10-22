@@ -28,7 +28,7 @@ const server=http.createServer((req,res)=>{
     const snapshot=await page.evaluate(()=>JSON.stringify(D.words.map(w=>[w.id,w.zh,w.en,w.term,w.forms,w.attestations])));
     await page.locator('[data-search-language="zh"]').click();
     await page.locator('#query').fill('水');
-    await page.locator('#search-form button').click();
+    await page.locator('#query').press('Enter');
     assert.match(await page.locator('.result-head').innerText(),/entries/);
     assert.match(await page.locator('.word-card-meaning').first().innerText(),/水/);
     const before=await page.locator('.word-card-meaning').allTextContents();
