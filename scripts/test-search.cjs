@@ -28,6 +28,23 @@ vm.runInContext(app.slice(app.indexOf('function rankedWords('),app.indexOf('\nfu
 c.items=[{forms:['ba'],en:'there'},{forms:['da'],en:'come here'},{forms:['ga'],en:'here'}];
 assert.equal(vm.runInContext("state.q='here';state.searchLanguage='zh';rankedWords(items,'').map(w=>w.en).join('|')",c),'here|come here');
 assert(app.includes("const words=rankedWords(D.words,'');"));
-assert.equal((app.match(/search\(\)\+searchLanguageSelector\(\)/g)||[]).length,2);
-assert(!app.slice(app.indexOf('function globalView()'),app.indexOf('function setView(')).includes('searchLanguageSelector()'));
+assert.equal((app.match(/search\(\)\+languageSearchButtons\(\)/g)||[]).length,2);
+assert(!app.slice(app.indexOf('function globalView()'),app.indexOf('function setView(')).includes('languageSearchButtons()'));
 console.log('PASS: here excludes embedded matches, exact gloss ranks first, global search ignores dictionary language, controls confined to dictionary');
+// Exercise the actual submit handler, including consecutive searches in the same language.
+vm.runInContext(`const form={},input={value:''};let renders=0;
+const document={querySelectorAll:()=>[]};
+const $=s=>s==='#search-form'?form:s==='#query'?input:null;
+function render(){renders++}`,c);
+vm.runInContext(app.slice(app.indexOf('function bindMain()'),app.indexOf('function download(')),c);
+vm.runInContext("state.view='words';bindMain()",c);
+for(const [lang,query] of [['en','here'],['en','there'],['zh','这里'],['tujia','nix']]){
+ c.lang=lang;c.query=query;
+ assert.equal(vm.runInContext("input.value=' '+query+' ';form.onsubmit({preventDefault(){},submitter:{dataset:{searchLanguage:lang}}});state.searchLanguage+'|'+state.q",c),lang+'|'+query);
+}
+assert.equal(vm.runInContext('renders',c),4);
+const buttons=vm.runInContext('languageSearchButtons()',c);
+assert.equal((buttons.match(/type="submit" form="search-form"/g)||[]).length,3);
+assert.equal((buttons.match(/<svg /g)||[]).length,3);
+assert(!buttons.includes('aria-pressed'));
+console.log('PASS: three independent submit actions search current input, with icons and no selection state');
