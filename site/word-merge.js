@@ -78,5 +78,5 @@ function mergeDictionaryWords(data){
  // Resolve old aliases directly, so saved words and existing links survive.
  for(const old of Object.keys(aliases)){let id=aliases[old],seen=new Set([old]);while(aliases[id]&&!seen.has(id)){seen.add(id);id=aliases[id]}aliases[old]=id}
  data.words=data.words.filter(w=>!removed.has(w.id)).map(w=>byId.get(w.id));data.wordAliases=aliases;
- for(const w of data.words){w.zh=dictionaryGlosses([w.zh],'zh').join('; ');w.en=dictionaryGlosses([w.en],'en').join('; ')}
+ for(const w of data.words){normalizeIPAWord(w);w.zh=dictionaryGlosses([w.zh],'zh').join('; ');w.en=dictionaryGlosses([w.en],'en').join('; ')}
 }
