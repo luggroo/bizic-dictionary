@@ -1,0 +1,27 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
+const root=path.resolve(__dirname,'../site');
+const ctx=vm.createContext({localStorage:{getItem:()=>null},document:{addEventListener(){}},window:{addEventListener(){}}});
+for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
+const finals={a:'a',ai:'ai',an:'ɛn',ang:'aŋ',ao:'au',e:'ɤ',ei:'ei',eng:'ɜŋ',i:'i',ia:'ia',ian:'iɛn',iao:'iau',ie:'iɛ',ii:'ɯ',ing:'iŋ',iong:'iɔŋ',iu:'iu',o:'ɔ',ong:'ɔŋ',ou:'ou',u:'u',ua:'ua',uai:'uai',uan:'uɛn',ui:'uei',un:'un',uo:'uɔ'};
+for(const [spelling,ipa]of Object.entries(finals))assert.equal(ctx.standardSyllableIPA(spelling),ipa,spelling);
+const examples={yan:'jɛn',yang:'jaŋ',wan:'wɛn',gan:'kɛn',ban:'pɛn',tan:'tʰɛn',bii:'pɯ',pii:'pʰɯ',hu:'fu',hua:'fua',hui:'fuei',ha:'xa',hhu:'ɣu',ni:'ȵi',li:'li',ji:'tɕi',qi:'tɕʰi',xi:'ɕi',ci:'tsʰɨ',zi:'tsɨ',ri:'zɨ',si:'sɨ',gi:'kɨ',ki:'kʰɨ',hi:'xɨ',hhi:'ɣɨ'};
+for(const [spelling,ipa]of Object.entries(examples))assert.equal(ctx.standardSyllableIPA(spelling),ipa,spelling);
+assert.equal(ctx.standardBrassettIPA('cuo4yan3gu2'),'tsʰuɔ⁵¹jɛn²¹ku²⁴');
+assert.equal(ctx.standardBrassettIPA('yan'),'jɛn');
+assert.equal(ctx.standardBrassettIPA('a1a2a3a4'),'a⁵⁵a²⁴a²¹a⁵¹');
+// Separators do not introduce tone, and marked tones attach to the last syllable.
+for(const [spelling,ipa]of Object.entries({'a':'a','-di':'-ti','di²-':'ti²⁴-','me²a':'mɤ²⁴a','bao¹wa':'pau⁵⁵wa','-adi²':'-ati²⁴','-adiu²':'-atiu²⁴','-aduo³':'-atuɔ²¹','-alie³':'-aliɛ²¹','-alu³':'-alu²¹','-axie²':'-aɕiɛ²⁴','bo³|luo¹｜luo¹':'pɔ²¹luɔ⁵⁵luɔ⁵⁵','si¹◦si¹':'sɨ⁵⁵sɨ⁵⁵','ta◦i²':'tʰai²⁴','ha⁴lie³|':'xa⁵¹liɛ²¹'}))assert.equal(ctx.standardBrassettIPA(spelling),ipa,spelling);
+for(const bad of ['yan5','yan12','yan?','zzz','|','-'])assert.equal(ctx.standardBrassettIPA(bad),null,bad);
+assert.equal(ctx.convertNotation('bii4','165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO').rows[0].ipa,'pɯ²⁴');
+assert.equal(ctx.convertNotation('a','1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE').rows[0].ipa,'a');
+assert.equal(ctx.convertNotation('bo3|luo1','stedt-07898ef938').rows[0].ipa,'pɔ²¹luɔ⁵⁵');
+assert.equal(ctx.convertNotation('jɛn21','brassett-phonetic').rows[0].brassett,'yan³');
+assert.equal(ctx.convertNotation('pɯ24','brassett-phonetic').rows[0].brassett,'bii²');
+const makeWord=(ipa=[])=>({attestations:[],notations:{brassett:[{text:'cuo⁴yan³gu²',attestationIds:['source-1']}],ipa}});
+const word=makeWord(),original=JSON.stringify(word);
+assert.deepEqual(Array.from(ctx.wordIPA(word)),['tsʰuɔ⁵¹jɛn²¹ku²⁴']);
+assert.equal(JSON.stringify(word),original);
+assert.equal(ctx.notationValues(word,'ipa')[0].method,'derived');
+assert.deepEqual(Array.from(ctx.notationValues(word,'ipa')[0].attestationIds),['source-1']);
+assert.deepEqual(Array.from(ctx.wordIPA(makeWord([{text:'tsʰuɔ⁵¹jan²¹ku²⁴'}]))),['tsʰuɔ⁵¹jan²¹ku²⁴']);
+console.log('PASS: Brassett correspondence table, conditional sounds, untoned forms, separators, source tone numbering and original source IPA');

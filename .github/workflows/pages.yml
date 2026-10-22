@@ -2,7 +2,7 @@ name: Publish Tujia knowledge index
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/apply-gloss-reviews.py', 'scripts/normalize-ipa-data.cjs', 'scripts/test-reader-copy.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', '.github/workflows/pages.yml']
+    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/apply-gloss-reviews.py', 'scripts/test-reader-copy.cjs', 'scripts/normalize-ipa-data.cjs', 'scripts/refresh-brassett-ipa.cjs', 'scripts/test-brassett-ipa.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -20,13 +20,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Test IPA normalization
-        run: node scripts/test-ipa-normalize.cjs
+        run: |
+          node scripts/test-ipa-normalize.cjs
+          node scripts/test-brassett-ipa.cjs
       - name: Expand website datasets
         run: find site -name '*.gz' -exec gzip -dk {} \;
       - name: Install same-origin Gentium Plus webfonts
         run: python3 scripts/prepare-webfonts.py site
       - name: Apply reviewed Chinese glosses
         run: python3 scripts/apply-gloss-reviews.py site
+      - name: Refresh derived Brassett IPA
+        run: node scripts/refresh-brassett-ipa.cjs site
       - name: Canonicalize published IPA and deduplicate forms
         run: node scripts/normalize-ipa-data.cjs site
       - name: Check reader-facing copy

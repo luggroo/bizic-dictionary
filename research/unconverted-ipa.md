@@ -6,11 +6,11 @@
 
 |语言点|词条总数|含 IPA|尚无完整拼音|其中部分转写|
 |---|---:|---:|---:|---:|
-|北部 · 龙山|6994|6869|54|14|
+|北部 · 龙山|6994|6994|54|14|
 |北部 · 保靖阳朝|2859|2859|0|0|
 |北部 · 保靖碗米坡|2961|2961|7|0|
 |南部 · 泸溪潭溪|3763|3763|6|0|
-|合计|16577|16452|67|14|
+|合计|16577|16577|67|14|
 
 “含 IPA”沿用网站记音字段的判定，包含原记音仅为占位符 `·` 的条目；这类记录在下表单独标注。部分转写栏中的 `□` 表示尚未完成映射的片段。
 
@@ -19,35 +19,35 @@
 |词条 ID|汉义／原释义|原记音|转写状态|已有部分拼音|来源|
 |---|---|---|---|---|---|
 |stedt-rn-224883|松; 松弛|goŋ⁵⁵|未转写|—|STEDT · Sun H 91 ZMYY|
-|stedt-rn-431565|靠; 倚靠|kho̱³³|未转写|—|STEDT · Huang and Dai 92 TBL|
+|stedt-rn-431565|靠; 倚靠|kʰo̱³³|未转写|—|STEDT · Huang and Dai 92 TBL|
 |stedt-rn-288459|冰|lã³⁵kɨu⁵⁵tsi⁵⁵|部分转写|láng□zī|STEDT · Tian 86|
 |stedt-rn-386736|十四|la³⁵xm⁵⁵zie⁵⁵|部分转写|lá□riē|STEDT · Huang and Dai 92 TBL|
 |stedt-rn-355437|瞎子|lo³³tsi⁵⁵|部分转写|□zī|STEDT · Huang and Dai 92 TBL|
-|stedt-rn-372742|火把|mi⁵⁵pha⁵|部分转写|mī□|STEDT · Huang and Dai 92 TBL|
+|stedt-rn-372742|火把|mi⁵⁵pʰa⁵|部分转写|mī□|STEDT · Huang and Dai 92 TBL|
 |stedt-rn-289347|亩|mɨu⁵⁵|未转写|—|STEDT · Tian 86|
 |stedt-rn-431232|养鸡|noŋ⁵⁵|未转写|—|STEDT · Huang and Dai 92 TBL|
 |stedt-rn-288513|三月|sã⁵⁵je³³|部分转写|sāng□|STEDT · Tian 86|
-|stedt-rn-144716|死|se³⁵ thu³⁵|未转写|—|STEDT · Matisoff PC|
+|stedt-rn-144716|死|se³⁵ tʰu³⁵|未转写|—|STEDT · Matisoff PC|
 |stedt-rn-228249|第八|ti³¹pa⁵⁵|部分转写|□bā|STEDT · Sun H 91 ZMYY|
 |stedt-rn-346488|洞; 洞穴|toŋ²¹ka³³|部分转写|dǒng□|STEDT · Huang and Dai 92 TBL|
-|stedt-rn-288554|狼|tshai²¹kɨu⁵⁵tsi⁵⁵|部分转写|cǎi□zī|STEDT · Tian 86|
-|stedt-rn-373783|缸; 坛|tshie³¹tsha²¹tsoŋ²¹|部分转写|□cǎzǒng|STEDT · Huang and Dai 92 TBL|
+|stedt-rn-288554|狼|tsʰai²¹kɨu⁵⁵tsi⁵⁵|部分转写|cǎi□zī|STEDT · Tian 86|
+|stedt-rn-373783|缸; 坛|tsʰie³¹tsʰa²¹tsoŋ²¹|部分转写|□cǎzǒng|STEDT · Huang and Dai 92 TBL|
 |stedt-rn-197496|侄子|tsi³¹tsi³¹|未转写|—|STEDT · Sun H 91 ZMYY|
 |stedt-rn-127242|指甲|tɕe³⁵ mi⁵⁵ tʰi²¹ kʰo⁵⁵ tʰ|部分转写|jié mī tǐ kō□|STEDT · Chen 86 TuBQ|
-|stedt-rn-288762|绑腿|tɕhi³³la³⁵|部分转写|□lá|STEDT · Tian 86|
+|stedt-rn-288762|绑腿|tɕʰi³³la³⁵|部分转写|□lá|STEDT · Tian 86|
 |stedt-rn-127243|脚趾甲|tɕi³⁵ mi⁵⁵ tʰi²¹ kʰo⁵⁵ tʰ|部分转写|jí mī tǐ kō□|STEDT · Chen 86 TuBQ|
 |stedt-rn-414569|会（会写）|ɣme⁵³|未转写|—|STEDT · Huang and Dai 92 TBL|
-|stedt-rn-352839|尿|ɤɯe⁵⁵tshie⁵⁵|部分转写|□ciē|STEDT · Huang and Dai 92 TBL|
+|stedt-rn-352839|尿|ɤɯe⁵⁵tsʰie⁵⁵|部分转写|□ciē|STEDT · Huang and Dai 92 TBL|
 |stedt-rn-355028|贼|ʑie²¹ɣɯe³⁵ma⁵⁵|部分转写|□hxémā|STEDT · Huang and Dai 92 TBL|
-|yubao-60757-v-0071|以后|tchin³³ȵie²⁴ tʰa⁵⁵ȵie⁵⁵|未转写|—|中国语保 · 龙山|
+|yubao-60757-v-0071|以后|tcʰin³³ȵie²⁴ tʰa⁵⁵ȵie⁵⁵|未转写|—|中国语保 · 龙山|
 |yubao-60757-v-0124|末尾|ȵie²²¹pʰuŋ²⁴tʰa⁵⁵ȵie⁵⁵|未转写|—|中国语保 · 龙山|
-|yubao-60757-v-0137|进去|tchi⁵⁵lie²²|未转写|—|中国语保 · 龙山|
+|yubao-60757-v-0137|进去|tcʰi⁵⁵lie²²|未转写|—|中国语保 · 龙山|
 |yubao-60757-v-0259|马|mnŋ²¹|未转写|—|中国语保 · 龙山|
-|yubao-60757-v-0432|炸|tchi²¹|未转写|—|中国语保 · 龙山|
-|yubao-60757-v-0464|嘴巴|zɘ²⁴ tsa²⁴tchi³³|未转写|—|中国语保 · 龙山|
+|yubao-60757-v-0432|炸|tcʰi²¹|未转写|—|中国语保 · 龙山|
+|yubao-60757-v-0464|嘴巴|zɘ²⁴ tsa²⁴tcʰi³³|未转写|—|中国语保 · 龙山|
 |yubao-60757-v-0552|死|la²⁴pu⁵⁵uo⁵⁵lu²² ȵie²⁴pie⁵⁵liau|未转写|—|中国语保 · 龙山|
 |yubao-60757-v-0744|划拳|tɕie²⁴tʂua²⁴|未转写|—|中国语保 · 龙山|
-|yubao-60757-v-0810|撞|tʂhuan⁵³|未转写|—|中国语保 · 龙山|
+|yubao-60757-v-0810|撞|tʂʰuan⁵³|未转写|—|中国语保 · 龙山|
 |yubao-60757-v-0975|少|pʰu⁵⁵tsʰ²²|未转写|—|中国语保 · 龙山|
 |yubao-60757-v-1083|仨|ʂuan³³ɸu³³|未转写|—|中国语保 · 龙山|
 |yubao-60757-v-1096|床|ts⁵⁵|未转写|—|中国语保 · 龙山|
@@ -95,7 +95,7 @@
 |---|---|---|---|---|---|
 |stedt-rn-289451|月|çɨe²¹|未转写|—|STEDT · Tian 86|
 |stedt-rn-290004|用|jɤ¹³|未转写|—|STEDT · Tian 86|
-|stedt-rn-289629|民族|mĩ²¹tshu̵²̄¹|未转写|—|STEDT · Tian 86|
+|stedt-rn-289629|民族|mĩ²¹tsʰu̵²̄¹|未转写|—|STEDT · Tian 86|
 |stedt-rn-290109|动员; 发动|tõ³⁵jyã³¹|未转写|—|STEDT · Tian 86|
 |yubao-60824-v-0275|公猫|ma²²¹tɕi³⁵a³³bo³³|未转写|—|中国语保 · 泸溪潭溪|
 |yubao-60824-v-1621|蜂王|dzi³³mo³³a²¹ma³¹ni³⁵|未转写|—|中国语保 · 泸溪潭溪|

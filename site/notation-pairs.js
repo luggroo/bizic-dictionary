@@ -4,7 +4,7 @@
  */
 'use strict';
 const NOTATION_PAIR_SOURCES = {
- 'zhou-ts':{title:'Brassett\nIPA',point:'TS'},
+ 'zhou-ts':{title:'Zhou 2020\nTS (Brassett)',point:'TS'},
  'zhou-fx':{title:'Zhang 2002\nvia Zhou 2020',point:'FX'},
  'zhou-xr':{title:'Dai & Tian 2005\nvia Zhou 2020',point:'XR'},
  'stedt-7fd6565400':{title:'Sun 1991'},
@@ -247,7 +247,7 @@ function notationPairTables(place,data=D){
  const ids=isWan?['yubao-60823']:isYang?['zhou-xr','yubao-60756']:['zhou-ts','zhou-fx','stedt-7fd6565400','stedt-610ab69a37','stedt-24cc5bbb03','yubao-60757'];
  const notes=isWan?'<p>33 写 r，调号不标；31 也写 r，调号写 ǎ。</p>':isYang?
  '<p>¹ 仙仁 e、ɯe、ɯɛ、ɯə、ə，以及 ie、iɛ 的分布见 Zhou 2020 表1-10～1-12；表内保留实际配对的记号。² 仙仁 i 的条件读音包括软腭音后的 ɯ、齿音后的 ɿ。³ 语保阳朝 e 一般转 ei；腭音后的 e／ɛ 按整音节写 jie、qie、xie、ye。仙仁 33→r、54→v、55→x。</p>':
- '<p>¹ Zhang 的 i 行为 i／ei。软腭音后的 ei 转 i；零声母 ei 按整音节写 hxi。² Zhang 的 e 在 t、tʰ、l 及腭音后转 ie，其他环境转 e；原文 ie 保留。³ 未发现前后鼻音对立的资料统一写 an；龙山语保有 lan⁵⁵（现在）与 laŋ⁵⁵（火种），分别写 an 与 ang。Brassett 原书的 ang 记号保留在原拼音列。⁴ Brassett 独立韵母 i 在软腭音后为 ɨ、齿音后为 ɿ。</p>';
+ '<p>¹ Zhang 的 i 行为 i／ei。软腭音后的 ei 转 i；零声母 ei 按整音节写 hxi。² Zhang 的 e 在 t、tʰ、l 及腭音后转 ie，其他环境转 e；原文 ie 保留。³ 未发现前后鼻音对立的资料统一写 an；龙山语保有 lan⁵⁵（现在）与 laŋ⁵⁵（火种），分别写 an 与 ang。Brassett 原书的 ang 记号保留在原拼音列。⁴ TS 列保留来源记音。本站 Brassett 拼音转 IPA 时，c/g/h/hh/k/r/s/z 后的独立韵母 i 写 ɨ。</p>';
  return `<div class="notation-matrix np-matrix"><p class="tiny">点击记音查看原词形、拼音和出处。词条未收录的音系项附表号；多解另列。</p>${npTable('声母',ids,'onset',data,!isYang&&!isWan)}${npTable('韵母',ids,'rime',data,!isYang&&!isWan)}${npTable('声调',ids,'tone',data,!isYang&&!isWan)}<div class="tiny np-notes">${notes}</div>${npAuditSummary(ids,data)}</div>`;
 }
 function npAuditSummary(ids,data){
