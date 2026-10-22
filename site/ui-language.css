@@ -20,3 +20,6 @@ html[lang="en"] .filters select{max-width:100%}html[lang="en"] button{overflow-w
 @font-face{font-family:Charis;src:url("fonts/Charis-Bold.woff2") format("woff2");font-style:normal;font-weight:600 900;font-display:swap}
 :root{--tujia-font:Charis,"Charis SIL",Georgia,serif}
 .tujia-ui,.brand small.tujia-ui,.word,.word-ipa,.notation-form,.example-transcription,.lyric-tujia,.external-ipa,.survey-ipa,[lang="tji"]{font-family:var(--tujia-font)}
+
+/* Tujia-only section eyebrow labels; use the same accented spelling as navigation. */
+.eyebrow .tujia-ui{display:inline;margin:0;color:inherit;font-family:var(--tujia-font);font-size:1em;font-weight:inherit;line-height:inherit;letter-spacing:.06em;vertical-align:baseline}
