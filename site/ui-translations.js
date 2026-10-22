@@ -1,5 +1,9 @@
 /* Reviewed interface copy; source texts and dictionary glosses stay in their source language. */
 const UI_TRANSLATIONS={
+  "本站界面与英语翻译主要通过 AI 辅助（vibe coding）完成，可能存在错误。": "The interface and English translations were created mainly with AI assistance (vibe coding) and may contain errors.",
+  "如需更正或反馈，请前往 GitHub 仓库：": "For corrections or feedback, visit the GitHub repository:",
+  "提交 issue": "Open an issue",
+  "提交 pull request": "Submit a pull request",
   "土家语知识索引": "Tujia Language Library",
   "土": "Tujia",
   "知识总览": "Overview",
@@ -211,7 +215,6 @@ const UI_TRANSLATIONS={
   "多种候选": "Multiple candidates",
   "另 {count} 种": "{count} more forms",
   "白话字拼音": "POJ-style romanization",
-  "编辑记音": "Edit transcription / transliteration",
   "每行一种词形。": "One form per line.",
   "来源、页码／修订理由": "Source, page or reason for correction",
   "保存补充": "Save additions",

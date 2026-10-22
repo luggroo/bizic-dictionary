@@ -3,7 +3,6 @@ const SUPER_DIGITS='⁰¹²³⁴⁵⁶⁷⁸⁹';
 const phon=s=>String(s??'').replaceAll('\\u2009',' ').replace(/([\p{L}\p{M}\]])([0-9]+)/gu,(_,a,n)=>a+[...n].map(x=>SUPER_DIGITS[Number(x)]).join(''));
 const plainTones=s=>String(s??'').replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g,c=>String(SUPER_DIGITS.indexOf(c)));
 const allSup=s=>String(s).replace(/[0-9]/g,c=>SUPER_DIGITS[Number(c)]);
-let transcriptionEdits={};try{transcriptionEdits=JSON.parse(localStorage.getItem('tujia-transcriptions-v1')||'{}')}catch{}
 let notationState={source:'brassett-phonetic',input:'kɨ²¹',result:null};
 const sourceNotationCache=new WeakMap();
 function sourceNotationValues(w){
@@ -27,7 +26,7 @@ function sourceNotationValues(w){
  }
  sourceNotationCache.set(w,values);return values;
 }
-function notationValues(w,kind){const values=[...(w.notations?.[kind]||[]),...sourceNotationValues(w)[kind].filter(v=>!(w.notations?.[kind]||[]).some(x=>x.text===v.text)),...(transcriptionEdits[w.id]?.[kind]||'').split('\n').map(t=>t.trim()).filter(Boolean).map(text=>({text,method:'user',profile:'',attestationIds:[]}))];return kind==='ipa'?mergeIPANotations(values):values}
+function notationValues(w,kind){const values=[...(w.notations?.[kind]||[]),...sourceNotationValues(w)[kind].filter(v=>!(w.notations?.[kind]||[]).some(x=>x.text===v.text))];return kind==='ipa'?mergeIPANotations(values):values}
 let spellingDisplay='accent';try{if(localStorage.getItem('tujia-north-spelling-v2')==='ye')spellingDisplay='ye'}catch{}
 const TONE_MARKS={1:'\u0304',2:'\u0301',3:'\u030c',4:'\u0300'};
 function accentSyllable(core,tone){
@@ -54,9 +53,6 @@ function spellingSelector(item=null){
  const select=(region,label,value,options)=>`<label class="spelling-selector">${label}<select data-spelling-display="${region}" aria-label="${label}拼音显示">${options.map(([v,t])=>`<option value="${v}" ${value===v?'selected':''}>${t}</option>`).join('')}</select></label>`;
  return (!south?select('north','北部',spellingDisplay,[['accent','调号拼音'],['ye','叶式拼音']]):'')+(!north?select('south','南部',southernDisplay,[['accent','调号拼音'],['poj','白话字拼音']]):'');
 }
-function transcriptionEditor(w){const own=transcriptionEdits[w.id]||{};return `<details class="transcription-editor"><summary>编辑记音</summary><p class="tiny">每行一种词形。</p><form id="transcription-form">${Object.entries(NOTATION_LABELS).map(([k,label])=>`<label>${label}<textarea data-notation-field="${k}" rows="2" placeholder="尚缺的记音或更正建议">${E(own[k]||'')}</textarea></label>`).join('')}<label>来源、页码／修订理由<textarea data-notation-field="evidence" rows="2">${E(own.evidence||'')}</textarea></label><button type="submit">保存补充</button></form></details>`}
-function bindTranscriptionEditor(w){const form=document.querySelector('#transcription-form');if(!form)return;form.onsubmit=e=>{e.preventDefault();const item={};form.querySelectorAll('[data-notation-field]').forEach(el=>item[el.dataset.notationField]=el.value.trim());transcriptionEdits[w.id]=item;try{localStorage.setItem('tujia-transcriptions-v1',JSON.stringify(transcriptionEdits));toast('记音补充已保存至本机');openDetail(w.id)}catch{toast('本机保存失败，请先导出备份')}}}
-function migrateTranscriptions(){for(const [old,id]of Object.entries(D.wordAliases||{})){if(!transcriptionEdits[old])continue;const dest=transcriptionEdits[id]||{};for(const [k,v]of Object.entries(transcriptionEdits[old]))if(v&&!String(dest[k]||'').split('\n').includes(v))dest[k]=dest[k]?dest[k]+'\n'+v:v;transcriptionEdits[id]=dest;delete transcriptionEdits[old]}}
 function standardBrassettToYe(text){return text.replaceAll('hh','hx').replaceAll('eng','en').replaceAll('ing','in').replaceAll('uo','o').replace(/[1-4]/g,c=>({1:'x',2:'f',3:'r',4:'v'}[c]))}
 function standardSyllableIPA(core){const onset=Object.keys(NOTATION_CONFIG.onsets).filter(Boolean).sort((a,b)=>b.length-a.length).find(k=>core.startsWith(k))||'',rhyme=core.slice(onset.length);let vowel=NOTATION_CONFIG.rimes[rhyme];if(!vowel)return null;if(rhyme==='i'){if(['g','h','k','hh'].includes(onset))vowel='ɨ';else if(['z','c','s','r'].includes(onset))vowel='ɿ'}if(onset==='y'&&rhyme==='e')vowel='e';return NOTATION_CONFIG.onsets[onset]+vowel}
 function standardBrassettIPA(text){let out='',pos=0;for(const m of text.matchAll(/([a-z]+)([1-4])/g)){const sep=text.slice(pos,m.index);if(sep!==''&&sep!=='-')return null;const part=standardSyllableIPA(m[1]);if(!part)return null;out+=sep+part+allSup(NOTATION_CONFIG.tones[m[2]].pitch);pos=m.index+m[0].length}return out&&pos===text.length?out:null}
