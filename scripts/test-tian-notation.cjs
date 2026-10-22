@@ -1,7 +1,7 @@
 const fs=require('fs'),vm=require('vm'),assert=require('assert/strict'),path=require('path');
 const root=path.resolve(__dirname,'../site');
 const c=vm.createContext({localStorage:{getItem:()=>null},document:{addEventListener(){}}});
-for(const f of ['notation-profiles.js','notation-ui.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
+for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c);
 for(const [ipa,ye] of [['a21ne55','arniex'],['a55le55','axliex'],['ne21','nier'],['mɨe35','mef'],['mɨe35tse21','mefzer'],['tɕe55','jiex']]){
  const r=c.convertNotation(ipa,'stedt-cb523fc3dc:north');assert.equal(r.rows[0].ye,ye,ipa);assert.ok(!r.partial,ipa);
  const w={attestations:[{id:'test',source:'stedt-cb523fc3dc',dialect:'北部',term:ipa}]};assert.equal(c.sourceNotationValues(w).ye[0].text,ye);
