@@ -19,12 +19,16 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+      - name: Test IPA normalization
+        run: node scripts/test-ipa-normalize.cjs
       - name: Expand website datasets
         run: find site -name '*.gz' -exec gzip -dk {} \;
       - name: Install same-origin Gentium Plus webfonts
         run: python3 scripts/prepare-webfonts.py site
       - name: Apply reviewed Chinese glosses
         run: python3 scripts/apply-gloss-reviews.py site
+      - name: Canonicalize published IPA and deduplicate forms
+        run: node scripts/normalize-ipa-data.cjs site
       - name: Version browser assets
         run: |
           python3 - <<'PYCODE'
