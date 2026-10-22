@@ -261,6 +261,8 @@ function notationPairSourceReview(p){
 }
 function npShowEvidence(pid,kind,key){
  const label=NOTATION_PAIR_SOURCES[pid]?.title||pid,index=notationPairAudit().sources.get(pid);if(!index)return;
+ const dialog=document.querySelector('#detail'),wasOpen=dialog.open;
+ saveNavigationPosition();
  let body='';
  if(kind==='unresolved'){
   body=mappingTable('多解／未解析',['原词形','音节','释义','候选／原因'],index.unresolved.map(r=>[r.raw,r.syllable,r.gloss,r.candidates.join(' / ')||r.reason]));
@@ -274,7 +276,8 @@ function npShowEvidence(pid,kind,key){
  document.querySelector('#detail-label').textContent=label.replace(/\n/g,' · ');
  document.querySelector('#detail-spelling-control').innerHTML='';
  document.querySelector('#detail-body').innerHTML=body;
- if(typeof currentDetail!=='undefined')currentDetail=null;
- const dialog=document.querySelector('#detail');if(!dialog.open)dialog.showModal();dialog.scrollTop=0;
+ currentDetail=null;
+ if(!wasOpen)dialog.showModal();dialog.scrollTop=0;
+ commitDetailNavigation({type:'notation-pair',source:pid,kind,key},wasOpen);
 }
 document.addEventListener('click',event=>{const el=event.target.closest('[data-pair-source]');if(el)npShowEvidence(el.dataset.pairSource,el.dataset.pairKind,el.dataset.pairKey);});

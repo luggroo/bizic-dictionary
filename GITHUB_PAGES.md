@@ -12,6 +12,8 @@
 
 本地预览前解压：`find site -name '*.gz' -exec gzip -dk {} \;`，然后 `python -m http.server 8000 --directory site`。
 
-当前没有离线缓存，浏览器收藏及审核结果不会跨设备或跨域名自动同步。iOS / Android 真机验收尚未完成。
+当前没有离线缓存，本机记音修订及审核结果不会跨设备或跨域名自动同步。手机导航与布局已通过 Chromium 和 WebKit 模拟测试；iOS / Android 真机验收尚未完成。
+
+手机 QA 的修复、覆盖范围和仍缺失的媒体见 [docs/mobile-qa.md](docs/mobile-qa.md)。回归脚本为 `scripts/test-mobile-navigation.cjs`，可用 `BROWSER=webkit` 测试 WebKit，或用 `BASE_URL` 指定线上地址。
 
 详见 docs/repository-coverage.md；Replit 在线数据库后续修改尚未导出核对。

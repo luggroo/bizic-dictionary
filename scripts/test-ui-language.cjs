@@ -22,7 +22,7 @@ const server=http.createServer((req,res)=>{
     assert.equal(await page.locator('nav [data-ui-tujia="words"]').innerText(),'cīcī nī');
     await page.selectOption('#spelling-control [data-spelling-display="north"]','ye');
     assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bifzixkar afhxix');
-    assert.equal(await page.locator('nav [data-ui-tujia="saved"]').innerText(),'suxsux-civ');
+    assert.equal(await page.locator('nav [data-view="saved"]').count(),0);
     await page.locator('nav [data-view="words"]').click();
     assert.equal(await page.locator('.word-card').count(),12);
     const snapshot=await page.evaluate(()=>JSON.stringify(D.words.map(w=>[w.id,w.zh,w.en,w.term,w.forms,w.attestations])));
@@ -38,10 +38,7 @@ const server=http.createServer((req,res)=>{
     assert.equal(await page.evaluate(()=>state.searchLanguage),'zh');
     assert.equal(await page.inputValue('#query'),'水');
     await page.selectOption('#ui-language','en');
-    const bookmark=page.locator('.bookmark').first(),id=await bookmark.getAttribute('data-save');
-    assert.match(await bookmark.getAttribute('aria-label'),/suxsux/);
-    await bookmark.click();
-    assert.equal(await bookmark.innerText(),'★');
+    assert.equal(await page.locator('.bookmark,[data-save]').count(),0);
     await page.locator('.word-card-content').first().click();
     await page.waitForSelector('dialog[open]');
     assert.match(await page.locator('#detail-label').innerText(),/Dictionary entry/);
@@ -49,13 +46,12 @@ const server=http.createServer((req,res)=>{
     await page.selectOption('#detail-spelling-control [data-spelling-display="north"]','accent');
     assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīkǎ áhxī');
     await page.locator('#close').click();
-    await page.locator('nav [data-view="saved"]').click();
-    assert.equal(await page.locator('#main [data-save="'+id+'"]').count(),1);
+    assert.equal(await page.locator('#note,#save-note').count(),0);
     await page.reload();
     await page.waitForSelector('.word-card',{timeout:90000});
     assert.equal(await page.inputValue('#ui-language'),'en');
     assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīkǎ áhxī');
-    for(const view of ['home','words','corpus','sources','grammar','notation','history','topics','saved']){
+    for(const view of ['home','words','corpus','sources','grammar','notation','history']){
       await page.locator('nav [data-view="'+view+'"]').click();
       assert(await page.locator('#main').innerText(),view+' is empty');
       assert(!/未能载入|undefined|NaN/.test(await page.locator('#main').innerText()),view+' failed');
@@ -78,6 +74,6 @@ const server=http.createServer((req,res)=>{
     await page.screenshot({path:'/tmp/tujia-ui-mobile-zh.png',fullPage:true});
     assert.equal(await page.locator('nav [data-view="words"]>span').innerText(),'词汇检索\ncīcī nī');
     assert.deepEqual(errors,[]);
-    console.log('PASS: UI languages and both spellings; search/filter values; protected glosses and source data; bookmark/detail/reload; nine views; 390/768/1280px layouts.');
+    console.log('PASS: UI languages and both spellings; search/filter values; protected glosses and source data; detail/reload; removed favorites; seven views; 390/768/1280px layouts.');
   } finally {await browser.close();server.close();}
 })().catch(e=>{console.error(e);server.close();process.exitCode=1;});

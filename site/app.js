@@ -4,7 +4,8 @@ const $=s=>document.querySelector(s), E=s=>String(s??'').replace(/[&<>"']/g,c=>(
 const normalize=s=>String(s??'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
 const searchNormalize=s=>normalize(s).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').replace(/a\u0308/g,'a').normalize('NFC').replace(/v/g,'ü');
 const contains=(s,q)=>searchNormalize(s).includes(searchNormalize(q));
-let state={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,searchLanguage:''}, currentDetail=null;
+const DEFAULT_STATE={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,searchLanguage:'',browseWords:false,corpusCollection:''};
+let state={...DEFAULT_STATE}, currentDetail=null,currentOverlay=null;
 const titles={notation:'记音对应与补全',home:'知识总览',words:'词汇检索',topics:'语法与专题',corpus:'例句语料',sources:'全部文献',history:'历史比较',grammar:'参考语法'};
 const descriptions={notation:'',words:'',topics:'按主题浏览研究文献。',corpus:'阅读故事、民歌与日常对话。',sources:'',history:'比较各方言的词形与历史重建。',grammar:''};
 function toast(s){$('#toast').textContent=s;$('#toast').style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').style.display='none',2400)}
@@ -59,11 +60,23 @@ function dictionaryProvenance(w){return wordSourceGroups(w).map(g=>`<article cla
 // Separate indices prevent short spelling queries from matching inside English words.
 const wordSearchIndex=new WeakMap();
 const englishTokens=s=>normalize(s).match(/[a-z]+(?:'[a-z]+)?/g)||[];
+function searchableEnglish(value){
+ const text=String(value),noteStart=/^\(\s*(?:note\s*:|(?:(?:original(?:\s+stedt)?|source|the)\s+)?english\s+['"‘“])/i;
+ let output='';
+ for(let i=0;i<text.length;){
+  if(text[i]==='('&&noteStart.test(text.slice(i))){
+   let depth=0;
+   do{if(text[i]==='(')depth++;else if(text[i]===')')depth--;i++}while(i<text.length&&depth);
+   output+=' ';
+  }else output+=text[i++];
+ }
+ return output;
+}
 function indexedWord(w){
  if(wordSearchIndex.has(w))return wordSearchIndex.get(w);
  const forms=[...new Set(wordForms(w).filter(Boolean).map(searchNormalize))];
  const chinese=[w.zh,...(w.zhVariants||[])].filter(Boolean).flatMap(s=>s.split(/[;；/／]/)).map(normalize);
- const english=[w.en,...(w.glosses||[])].filter(Boolean).flatMap(s=>s.split(/[;；/／]/)).map(s=>normalize(s.replace(/\(note:.*?\)/gi,'')));
+ const english=[w.en,...(w.glosses||[])].filter(Boolean).flatMap(s=>searchableEnglish(s).split(/[;；/／]/)).map(normalize);
  const index={forms,chinese,english,englishWords:new Set(english.flatMap(englishTokens))};wordSearchIndex.set(w,index);return index;
 }
 function wordSearchScore(w,language=state.searchLanguage){
@@ -142,8 +155,173 @@ function corpusView(){
 
 function topicsView(){return pageHeader('topics')+search('搜索专题名称或研究方向…')+topicCards(D.topics.filter(t=>!state.q||contains(t.name+' '+t.summary,state.q)))}
 function globalView(){const chapters=Object.values(DIALECT_GRAMMARS).flat().filter(g=>contains(g.title+' '+g.sections.map(s=>s.title+' '+s.query).join(' '),state.q));const recon=D.reconstructions.filter(r=>!r.componentOf&&contains([r.no,r.proto,r.zh,r.en,...Object.values(r.reflexes)].join(' '),state.q));const words=rankedWords(D.words,'');const sources=D.sources.filter(s=>contains(s.title+' '+s.text+' '+s.path,state.q));const corpus=D.corpus.filter(c=>contains(c.title+' '+c.text,state.q));return `<div class="eyebrow"><span class="tujia-ui" data-ui-tujia="brand" lang="tji"></span> / <span class="tujia-ui" data-ui-tujia="search" lang="tji"></span></div><h1>检索整个知识库</h1>${search('词形、释义、文献正文与语料…')}<p class="sub">“${E(state.q)}” · 词汇 ${words.length} · 文献 ${sources.length} · 语料 ${corpus.length} · 语法章节 ${chapters.length} · 历史比较 ${recon.length}</p>${chapters.length?`<div class="section-head"><h2>参考语法</h2></div><div class="chips">${chapters.map(g=>`<button data-chapter="${g.id}" data-grammar-dialect="${g.dialect}">${GRAMMAR_LABELS[g.dialect]} · §${g.id} ${E(g.title)}</button>`).join('')}</div>`:''}${recon.length?`<div class="section-head"><h2>历史比较</h2><button data-results="history">查看全部 ${recon.length} 条 →</button></div>${reconstructionTable(recon.slice(0,6))}`:''}<div class="section-head"><h2>词汇</h2><button data-results="words">查看全部 ${words.length} 条 →</button></div>${words.length?wordTable(words.slice(0,8)):empty()}<div class="section-head"><h2>文献与正文</h2><button data-results="sources">查看全部 ${sources.length} 份 →</button></div>${sources.length?sourceRows(sources,5):empty()}<div class="section-head"><h2>语料</h2><button data-results="corpus">查看全部 ${corpus.length} 段 →</button></div>${corpus.length?corpusCards(corpus.slice(0,3)):empty()}`}
-function render(){if(state.view==='topics'){state.view='sources';history.replaceState(null,'','#sources')}if($('#spelling-control'))$('#spelling-control').innerHTML=spellingSelector();document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.view===state.view));$('#crumb').textContent=titles[state.view]||'知识检索';const views={home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:historyView,grammar:grammarView,notation:notationView};$('#main').innerHTML=views[state.view]();document.title=(titles[state.view]||'知识总览')+' · 土家语知识索引';bindMain();bindNotationView();if(window.TujiaUI)TujiaUI.refresh()}
-function setView(v,keep=false){if(v==='topics')v='sources';state={view:v,q:keep?state.q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarDialect:state.grammarDialect||'north',grammarSourceScope:'',page:1,exact:false,searchLanguage:''};history.replaceState(null,'','#'+v);render();window.scrollTo({top:0,behavior:'smooth'})}
+// The URL records the selected page and its controls. History also keeps the
+// scroll position and the single detail overlay, so Back works on phones.
+const ROUTE_FIELDS={
+ home:['q'],
+ words:['q','scheme','pos','dialect','category','sourceFilter','page','exact','searchLanguage','browseWords'],
+ sources:['q','topic','dialect','kind','status','priority','batch','grammarSourceScope','page'],
+ corpus:['q','dialect','genre','corpusCollection','page'],
+ history:['q','page'],
+ grammar:['q'],
+ notation:[]
+};
+let navigationReady=false,restoringNavigation=false,closingDetail=false,navigationSerial=0,lastNavigationToken='';
+const navigationPositions=new Map();
+function cleanViewState(value){
+ const next={...DEFAULT_STATE};
+ for(const key of Object.keys(next))if(Object.hasOwn(value||{},key))next[key]=value[key];
+ if(next.view==='topics')next.view='sources';
+ if(next.view==='saved'||!Object.hasOwn(ROUTE_FIELDS,next.view))next.view='home';
+ for(const key of Object.keys(next))if(typeof DEFAULT_STATE[key]==='string')next[key]=String(next[key]??'').slice(0,2000);
+ next.grammarDialect=next.grammarDialect==='south'?'south':'north';
+ if(!DIALECT_GRAMMARS[next.grammarDialect].some(ch=>ch.id===next.chapter))next.chapter='1';
+ next.page=Number.isFinite(Number(next.page))?Math.max(1,Math.floor(Number(next.page)||1)):1;
+ next.exact=next.exact===true||next.exact==='1';
+ next.browseWords=next.browseWords===true||next.browseWords==='1';
+ if(!['','tujia','zh','en'].includes(next.searchLanguage))next.searchLanguage='';
+ if(!['','north','south'].includes(next.grammarSourceScope))next.grammarSourceScope='';
+ if(next.corpusCollection&&D&&!D.corpus.some(c=>corpusCollectionKey(c)===next.corpusCollection))next.corpusCollection='';
+ return next;
+}
+function viewHash(value=state){
+ const params=new URLSearchParams();
+ for(const key of ROUTE_FIELDS[value.view]||[]){
+  const v=value[key];
+  if(v!==DEFAULT_STATE[key]&&v!==''&&v!=null)params.set(key,typeof v==='boolean'?(v?'1':'0'):String(v));
+ }
+ const route=value.view==='grammar'?'grammar/'+value.grammarDialect+'/'+value.chapter:value.view;
+ return '#'+route+(params.size?'?'+params:'');
+}
+function parseViewHash(hash){
+ const [path,query='']=hash.replace(/^#/,'').split('?'),next={...DEFAULT_STATE};
+ const grammar=path.match(/^grammar\/(north|south)\/(\d+)$/);
+ const oldAnchor=path.match(/^(?:ref|section)-(north|south)-(\d+)[.-]/);
+ if(grammar||oldAnchor){const match=grammar||oldAnchor;next.view='grammar';next.grammarDialect=match[1];next.chapter=match[2]}
+ else next.view=path||'home';
+ const params=new URLSearchParams(query);
+ for(const key of ROUTE_FIELDS[next.view]||[])if(params.has(key))next[key]=params.get(key);
+ return {state:cleanViewState(next),anchor:oldAnchor?path:''};
+}
+function navigationEntry(){return history.state?.tujiaNavigation===1?history.state:null}
+function navigationToken(){return location.href+'|'+(navigationEntry()?.key||'')}
+function mainOpenDetails(){return [...document.querySelectorAll('#main details')].flatMap((el,i)=>el.open?[i]:[])}
+function notationNavigationState(){
+ if(state.view!=='notation')return null;
+ const input=document.querySelector('#notation-input')?.value??notationState.input;
+ return {source:notationState.source,input,converted:input===notationState.input&&!!notationState.result};
+}
+function restoreNotationState(snapshot){
+ if(!snapshot||!NOTATION_CONFIG.profiles.some(p=>p.id===snapshot.source))return;
+ notationState={source:snapshot.source,input:String(snapshot.input??''),result:null};
+ if(snapshot.converted)notationState.result=convertNotation(notationState.input,notationState.source);
+}
+function saveNavigationPosition(){
+ const entry=navigationEntry();
+ if(!navigationReady||restoringNavigation||!entry||viewHash(entry.viewState)!==location.hash)return;
+ navigationPositions.set(entry.key,window.scrollY);
+ const openDetails=mainOpenDetails();
+ const input=entry.notation?document.querySelector('#notation-input')?.value:undefined;
+ const notation=input===undefined?entry.notation:{...entry.notation,input,converted:input===entry.notation.input&&entry.notation.converted};
+ if(entry.scrollY===window.scrollY&&JSON.stringify(entry.openDetails)===JSON.stringify(openDetails)&&JSON.stringify(entry.notation)===JSON.stringify(notation))return;
+ history.replaceState({...entry,scrollY:window.scrollY,openDetails,notation},'',location.href);
+}
+function newNavigationEntry(detail=null){return {tujiaNavigation:1,key:Date.now()+'-'+(++navigationSerial),viewState:{...state},detail,notation:notationNavigationState(),scrollY:window.scrollY,openDetails:mainOpenDetails()}}
+function closeDetailSilently(){
+ const dialog=$('#detail');
+ dialog.querySelectorAll('audio').forEach(a=>a.pause());
+ if(dialog.open)dialog.close();
+ currentDetail=null;currentOverlay=null;
+}
+function commitDetailNavigation(detail,wasOpen){
+ currentOverlay=detail;
+ if(!navigationReady||restoringNavigation)return;
+ const entry=wasOpen?{...(navigationEntry()||newNavigationEntry()),detail}:newNavigationEntry(detail);
+ history[wasOpen?'replaceState':'pushState'](entry,'',viewHash());
+ lastNavigationToken=navigationToken();
+}
+function restoreDetailNavigation(detail){
+ if(typeof detail==='string')openDetail(detail);
+ else if(detail?.type==='notation-pair')npShowEvidence(detail.source,detail.kind,detail.key);
+}
+function finishNavigation(previous){
+ if(!navigationReady||restoringNavigation)return;
+ const hash=viewHash(),changed=location.hash!==hash,dialog=$('#detail');
+ const entry=changed?newNavigationEntry():{...(previous||newNavigationEntry()),viewState:{...state},detail:dialog.open?currentOverlay:null,notation:notationNavigationState(),scrollY:window.scrollY,openDetails:mainOpenDetails()};
+ // A link out of a detail replaces the overlay entry; Back returns to its list.
+ history[changed&&!previous?.detail?'pushState':'replaceState'](entry,'',hash);
+ lastNavigationToken=navigationToken();
+}
+function revealPageAnchor(id){
+ const target=document.getElementById(id);
+ if(!target)return false;
+ for(let parent=target.parentElement;parent;parent=parent.parentElement)if(parent.tagName==='DETAILS')parent.open=true;
+ target.scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+ return true;
+}
+function restoreNavigation(){
+ if(!navigationReady||navigationToken()===lastNavigationToken)return;
+ const parsed=parseViewHash(location.hash),saved=navigationEntry();
+ const entry=saved&&viewHash(saved.viewState)===location.hash?saved:null;
+ restoringNavigation=true;closingDetail=false;
+ closeDetailSilently();
+ state=cleanViewState(entry?.viewState||parsed.state);
+ restoreNotationState(entry?.notation);
+ render();
+ if(entry?.openDetails){const open=new Set(entry.openDetails);document.querySelectorAll('#main details').forEach((el,i)=>el.open=open.has(i))}
+ if(entry?.detail)restoreDetailNavigation(entry.detail);
+ const restored={...(entry||newNavigationEntry()),viewState:{...state},detail:$('#detail').open?currentOverlay:null,notation:notationNavigationState(),scrollY:entry?(navigationPositions.get(entry.key)??entry.scrollY??0):0,openDetails:mainOpenDetails()};
+ history.replaceState(restored,'',viewHash());
+ lastNavigationToken=navigationToken();
+ const token=lastNavigationToken;
+ requestAnimationFrame(()=>{if(token===navigationToken()){window.scrollTo({top:restored.scrollY,behavior:'instant'});if(parsed.anchor)revealPageAnchor(parsed.anchor)}});
+ restoringNavigation=false;
+}
+function initializeNavigation(){
+ navigationReady=true;
+ history.scrollRestoration='manual';
+ restoreNavigation();
+}
+window.addEventListener('popstate',restoreNavigation);
+window.addEventListener('hashchange',restoreNavigation);
+let scrollSaveTimer;
+window.addEventListener('scroll',()=>{
+ const entry=navigationEntry();
+ if(navigationReady&&!restoringNavigation&&entry)navigationPositions.set(entry.key,window.scrollY);
+ clearTimeout(scrollSaveTimer);
+ // Safari rate-limits History API writes; a swipe must not write every frame.
+ scrollSaveTimer=setTimeout(saveNavigationPosition,200);
+},{passive:true});
+window.addEventListener('pagehide',saveNavigationPosition);
+function render(){
+ const previous=navigationEntry();
+ saveNavigationPosition();
+ state=cleanViewState(state);
+ if(navigationReady&&!restoringNavigation&&location.hash!==viewHash())closeDetailSilently();
+ if($('#spelling-control'))$('#spelling-control').innerHTML=spellingSelector();
+ document.querySelectorAll('aside>nav button').forEach(b=>{const active=b.dataset.view===state.view;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
+ const nav=$('aside>nav'),active=nav.querySelector('.active');
+ if(active&&nav.scrollWidth>nav.clientWidth){
+  const box=nav.getBoundingClientRect(),button=active.getBoundingClientRect();
+  if(button.left<box.left)nav.scrollLeft-=box.left-button.left;
+  else if(button.right>box.right)nav.scrollLeft+=button.right-box.right;
+ }
+ $('#crumb').textContent=titles[state.view]||'知识检索';
+ const views={home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:historyView,grammar:grammarView,notation:notationView};
+ $('#main').innerHTML=views[state.view]();
+ document.title=(titles[state.view]||'知识总览')+' · 土家语知识索引';
+ bindMain();bindNotationView();if(window.TujiaUI)TujiaUI.refresh();
+ finishNavigation(previous);
+}
+function setView(v,keep=false,patch={}){
+ state={...DEFAULT_STATE,view:v,q:keep?state.q:'',grammarDialect:state.grammarDialect||'north',...patch};
+ if($('#detail').open&&viewHash(cleanViewState(state))===location.hash){
+  const changedNotation=state.view==='notation'&&JSON.stringify(notationNavigationState())!==JSON.stringify(navigationEntry()?.notation);
+  if(!changedNotation){closeDetail();return}
+  closeDetailSilently();
+ }
+ render();window.scrollTo({top:0,behavior:'instant'});
+}
 function bindMain(){document.querySelectorAll('[data-corpus-collection]').forEach(b=>b.onclick=()=>{state.corpusCollection=b.dataset.corpusCollection;state.page=1;state.genre="";render();window.scrollTo({top:0,behavior:"smooth"})});if($('#shuffle-words'))$('#shuffle-words').onclick=()=>{randomWordItems(D.words.filter(wordMatches),true);render()};if($('#browse-all-words'))$('#browse-all-words').onclick=()=>{state.browseWords=true;state.page=1;render()};if($('#discover-words'))$('#discover-words').onclick=()=>{state.browseWords=false;state.q='';state.page=1;render()};const form=$('#search-form');if(form)form.onsubmit=e=>{e.preventDefault();state.q=$('#query').value.trim();state.searchLanguage=state.view==='words'?(e.submitter?.dataset.searchLanguage||''):'';state.page=1;render()};document.querySelectorAll('[data-filter]').forEach(el=>el.onchange=()=>{state[el.dataset.filter]=el.value;state.page=1;render()});if($('#exact'))$('#exact').onchange=e=>{state.exact=e.target.checked;state.page=1;render()};if($('#reset'))$('#reset').onclick=()=>{if(state.view==='corpus'){state.q='';state.genre='';state.dialect='';state.page=1;render()}else setView(state.view)};if($('#export-words'))$('#export-words').onclick=()=>download('tujia-words.json',D.words.filter(wordMatches).map(w=>({...w,source_title:S[w.source].title,source_url:S[w.source].url})));if($('#export-sources'))$('#export-sources').onclick=()=>download('tujia-catalogue.json',D.sources.filter(sourceMatches).map(({text,...s})=>s));if($('#export-reconstructions'))$('#export-reconstructions').onclick=()=>download('proto-bizic-comparison.json',D.reconstructions.filter(reconstructionMatches));}
 function download(name,obj){const u=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 function sourceLink(id,label='打开来源原件 ↗'){if(!S[id]?.url)return '';return `<a href="${E(S[id].url)}" target="_blank" rel="noopener">${label}</a>`}
@@ -152,9 +330,82 @@ function wordDetail(w){const related=D.words.filter(x=>x.id!==w.id&&((w.zh&&norm
 function sourceVariantPanel(s){if(s.canonicalSource)return `<div class="notice">本文件属于 <button data-open="${s.canonicalSource}">${E(S[s.canonicalSource].title)}</button>。</div>`;if(!s.variantIds)return '';return `<h3>原著与文件版本</h3><p>${E(s.originalTitle)}</p>${s.variantIds.map(id=>{const v=S[id];return `<article class="card"><button data-open="${id}">${E(v.title)}</button>${sourceLink(id)}</article>`}).join('')}`}
 function sourceDetail(s){return `<div class="eyebrow"><span class="tujia-ui" data-ui-tujia="sources" lang="tji"></span></div><div class="row"><h2 class="grow">${E(s.title)}</h2></div><div class="chips">${pill(s.kind)}${s.topics.map(t=>pill(t)).join('')}${pill(s.status,s.status.includes('待'))}</div><dl><dt>原始目录</dt><dd>${E(s.path)}</dd><dt>方言标签</dt><dd>${E(s.dialect)}</dd><dt>地点线索</dt><dd>${E(s.locations.join(' / ')||'题名未说明')}</dd><dt>文件大小</dt><dd>${s.size?(Number(s.size)/1024/1024).toFixed(2)+' MB':'不适用／未提供'}</dd></dl>${sourceVariantPanel(s)}${s.id==='brassett-2006'?brassettSourcePanel():''}${s.recognition?recognitionPanel(s):''}${s.parsePriority?`<details><summary>解析优先级 #${s.parsePriority.rank}</summary><p>${E(s.parsePriority.reason)}</p></details>`:''}${s.description?`<p class="sub">${E(s.description)}</p>`:''}<div class="detail-actions">${sourceLink(s.id)}<button data-copy="${s.id}">复制来源引用</button>${D.words.some(w=>wordSources(w).includes(s.id))?`<button data-source-words="${s.id}">检索本来源词条</button>`:''}</div>${s.image?`<figure style="margin:15px 0"><a href="${E(s.image)}" target="_blank"><img class="research-map" hidden data-media-src="${E(s.image)}" alt="原始地图 ${E(s.title)}"></a><figcaption class="tiny">原图 ${E(s.title)} · 点击放大。历史版本地图请结合论文勘误阅读。</figcaption></figure>`:''}${s.media?`<audio controls preload="metadata" hidden data-media-src="${E(s.media)}"></audio>`:''}${s.members?`<h3>压缩包内容</h3>${s.members.map(m=>`<p>${E(m.name)} · ${(m.size/1024).toFixed(0)} KB</p>${m.media?`<audio controls preload="none" hidden data-media-src="${E(m.media)}"></audio>`:''}`).join('')}`:''}${s.text.length>500?`<div class="notice warn">${E(s.textNotice)}</div><h3>提取文本</h3><div class="compact-search"><input id="within" value="${E(state.q)}" placeholder="在这份文本中定位关键词" aria-label="文内定位"><button id="within-find">定位</button></div><div class="text-view" id="source-text">${s.recognition?recognizedHTML(s):E(s.text)}</div>`:`<div class="notice">${s.media?'暂无逐句转写，可查看原始资料。':s.status.includes('结构化')?'已提取词条，可从上方入口检索。':'暂无全文，请打开原件。'}</div>`}`}
 function corpusDetail(c){if(c.externalText)return longshanTextDetail(c);if(c.survey)return surveySentenceDetail(c);return `<div class="eyebrow"><span class="tujia-ui" data-ui-tujia="corpus" lang="tji"></span></div><div class="row"><h2 class="grow">${E(c.title)}</h2></div><div class="chips">${pill(c.genre)}${pill(c.code)}</div>${corpusPlayer(c)}<dl><dt>方言判定依据</dt><dd>${E(S[c.source].dialectBasis||'范围尚未核定')}</dd><dt>地点线索</dt><dd>${E(c.locations.join(' / ')||'待核')}</dd><dt>人物原文</dt><dd>${c.people.length?c.people.map(E).join('<br>'):'待核'}</dd><dt>文本来源</dt><dd>土家语文库 网站原版（拼音版）${c.page?' · PDF 第 '+c.page+' 页起':''}</dd></dl><div class="detail-actions">${sourceLink(c.audio,'打开原始录音 ↗')}${sourceLink(c.source,'打开 PDF 原件 ↗')}<button data-copy="${c.id}">复制语料引用</button></div>${c.text?`<div class="compact-search"><input id="within" value="${E(state.q)}" placeholder="在本段文本中定位" aria-label="语料内定位"><button id="within-find">定位</button></div><details><summary>查看原始全文与分行</summary><div class="text-view" id="source-text">${E(c.text)}</div></details>`:'<div class="notice warn">暂无文本。</div>'}`}
-function openDetail(id){id=D.wordAliases?.[id]||id;$('#detail-spelling-control').innerHTML=spellingSelector(W[id]||C[id]);if(!W[id]&&!S[id]&&!C[id]&&!R[id])return;currentDetail=id;$('#detail-label').textContent=W[id]?'词汇条目':C[id]?'语料详情':R[id]?'历史比较':'文献详情';$('#detail-body').innerHTML=R[id]?reconstructionDetail(R[id]):W[id]?wordDetail(W[id]):C[id]?corpusDetail(C[id]):sourceDetail(S[id]);if(W[id])bindTranscriptionEditor(W[id]);if(!$('#detail').open)$('#detail').showModal();if(C[id]&&!C[id].survey&&!C[id].externalText){try{bindCorpusPlayer(C[id])}catch(error){console.error('Corpus player unavailable',error)}}$('#detail').scrollTop=0;if($('#jump-doc-page'))$('#jump-doc-page').onclick=()=>{const n=Number($('#doc-page-number').value);if(S[id]?.recognition?.pageImages&&n>=1&&n<=S[id].recognition.pageCount)$('#source-text').innerHTML=recognizedHTML(S[id],'',n);const target=$('#doc-page-'+n);if(target)target.scrollIntoView({block:'start',behavior:'smooth'});else toast('请输入有效的文件页码')};if($('#within-find'))$('#within-find').onclick=()=>{document.querySelector('#source-text')?.closest('details')?.setAttribute('open','');const q=$('#within').value.trim(),text=W[id]?'':C[id]?C[id].text:S[id].text;const box=$('#source-text');if(S[id]?.recognition){box.innerHTML=recognizedHTML(S[id],q);const first=box.querySelector('mark');if(first)first.scrollIntoView({block:'center',behavior:'smooth'});else if(q)toast('没有找到关键词');return}if(!q){box.innerHTML=E(text);return}const at=normalize(text).indexOf(normalize(q));if(at<0){toast('没有找到关键词');return}const escaped=q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');const parts=text.split(new RegExp('('+escaped+')','gi'));box.innerHTML=parts.map((p,i)=>i%2?'<mark>'+E(p)+'</mark>':E(p)).join('');const first=box.querySelector('mark');if(first)first.scrollIntoView({block:'center',behavior:'smooth'})}}
-document.addEventListener('click',async e=>{const b=e.target.closest('button,a');if(!b)return;if(b.dataset.readerPage&&S[currentDetail]?.recognition?.pageImages){const n=Number(b.dataset.readerPage);$('#source-text').innerHTML=recognizedHTML(S[currentDetail],'',n);$('#doc-page-number').value=readingPages[currentDetail];$('#source-text').scrollIntoView({block:'start'});return}if(b.dataset.recognitionBatch){setView('sources');state.batch='first-five';render();return}if(b.dataset.priorityQueue){setView('sources');state.priority='全部待解析';render();return}if(b.dataset.grammarDialect){state.grammarDialect=b.dataset.grammarDialect;state.chapter=b.dataset.chapter||'1';state.view='grammar';state.q='';history.replaceState(null,'','#grammar/'+state.grammarDialect+'/'+state.chapter);if($('#detail').open)$('#detail').close();render();window.scrollTo({top:0,behavior:'smooth'});return}if(b.dataset.chapter){state.chapter=b.dataset.chapter;state.view='grammar';history.replaceState(null,'','#grammar/'+(state.grammarDialect||'north')+'/'+state.chapter);state.q='';render();window.scrollTo({top:0,behavior:'smooth'});return}if(b.dataset.grammarQuery){state.q=b.dataset.grammarQuery;state.view='sources';state.grammarSourceScope=b.dataset.queryScope||state.grammarDialect||'north';render();return}if(b.dataset.view){if(!D){location.hash=b.dataset.view;return}if($('#detail').open)$('#detail').close();setView(b.dataset.view);return}if(b.dataset.results){setView(b.dataset.results,true);return}if(b.dataset.query){state.q=b.dataset.query;render();return}if(b.dataset.topic){setView('sources');state.topic=b.dataset.topic;render();return}if(b.dataset.open){openDetail(b.dataset.open);return}if(b.dataset.page){state.page=Number(b.dataset.page);render();window.scrollTo({top:200,behavior:'smooth'});return}if(b.dataset.wordSearch){$('#detail').close();setView('words');state.q=b.dataset.wordSearch;render();return}if(b.dataset.sourceWords){const sourceId=b.dataset.sourceWords;$('#detail').close();setView('words');state.sourceFilter=sourceId;render();return}if(b.dataset.copy){const id=b.dataset.copy,w=W[id],c=C[id],s=S[id];const str=w?`${phon(w.term)} — ${w.zh||w.en} (${w.scheme}); ${w.attestations.map(a=>`${phon(a.term)} [${a.scheme}] ${S[a.source].title}, ${a.locator}. ${S[a.source].url}`).join('; ')}`:c?corpusCitation(c):`${s.title}. ${s.url}`;try{await navigator.clipboard.writeText(str);toast('引用已复制')}catch{toast('复制不可用，请从原件链接获取出处')}}});
-$('#close').onclick=()=>{$('#detail').querySelectorAll('audio').forEach(a=>a.pause());$('#detail').close();render()};$('#detail').addEventListener('close',()=>{$('#detail').querySelectorAll('audio').forEach(a=>a.pause())});document.addEventListener('play',e=>{if(e.target.tagName==='AUDIO')document.querySelectorAll('audio').forEach(a=>{if(a!==e.target)a.pause()})},true);
-fetch('data.json').then(r=>{if(!r.ok)throw Error();return r.json()}).then(async data=>{if(data.dictionaryFile){const r=await fetch(data.dictionaryFile);if(!r.ok)throw Error('Dictionary unavailable');Object.assign(data,await r.json())}await loadYubao(data);await loadLongshanTexts(data);D=data;removeExcludedSource(D);S=Object.fromEntries(D.sources.map(s=>[s.id,s]));mergeDictionaryWords(D);initializeSpellingBoundaries(D);initializeSemanticCategories(D.words);mergeComparisons(D);for(const s of D.sources)s.title=s.title.replace(/^STEDT\s*·\s*/,'');S=Object.fromEntries([...(D.sourceVariants||[]),...D.sources].map(x=>[x.id,x]));W=Object.fromEntries(D.words.map(x=>[x.id,x]));for(const [old,id]of Object.entries(D.wordAliases||{}))W[old]=W[id];migrateTranscriptions();C=Object.fromEntries(D.corpus.map(x=>[x.id,x]));R=Object.fromEntries((D.reconstructions||[]).map(x=>[x.id,x]));const hash=location.hash.slice(1);if(hash==='saved')history.replaceState(null,'','#home');else if(titles[hash])state.view=hash;const gm=hash.match(/^grammar\/(north|south)\/(\d+)$/);if(gm){state.view='grammar';state.grammarDialect=gm[1];state.chapter=gm[2]}render()}).catch(()=>{$('#main').innerHTML='<div class="empty">资料未能载入。请检查网络后刷新页面。</div>'});
+function openDetail(id){
+ id=D.wordAliases?.[id]||id;
+ if(!W[id]&&!S[id]&&!C[id]&&!R[id])return;
+ const dialog=$('#detail'),wasOpen=dialog.open;
+ saveNavigationPosition();
+ const html=R[id]?reconstructionDetail(R[id]):W[id]?wordDetail(W[id]):C[id]?corpusDetail(C[id]):sourceDetail(S[id]);
+ currentDetail=id;
+ $('#detail-spelling-control').innerHTML=spellingSelector(W[id]||C[id]);
+ $('#detail-label').textContent=W[id]?'词汇条目':C[id]?'语料详情':R[id]?'历史比较':'文献详情';
+ $('#detail-body').innerHTML=html;
+ if(W[id])bindTranscriptionEditor(W[id]);
+ if(!wasOpen)dialog.showModal();
+ if(C[id]&&!C[id].survey&&!C[id].externalText){try{bindCorpusPlayer(C[id])}catch(error){console.error('Corpus player unavailable',error)}}
+ dialog.scrollTop=0;
+ commitDetailNavigation(id,wasOpen);
+ if($('#jump-doc-page'))$('#jump-doc-page').onclick=()=>{
+  const n=Number($('#doc-page-number').value);
+  if(!Number.isInteger(n)||n<1||n>S[id]?.recognition?.pageCount){toast('请输入有效的文件页码');return}
+  if(S[id]?.recognition?.pageImages)$('#source-text').innerHTML=recognizedHTML(S[id],'',n);
+  const target=$('#doc-page-'+n);
+  if(target)target.scrollIntoView({block:'start',behavior:'smooth'});else toast('请输入有效的文件页码');
+ };
+ if($('#within-find'))$('#within-find').onclick=()=>{
+  document.querySelector('#source-text')?.closest('details')?.setAttribute('open','');
+  const q=$('#within').value.trim(),text=W[id]?'':C[id]?C[id].text:S[id].text,box=$('#source-text');
+  if(S[id]?.recognition){box.innerHTML=recognizedHTML(S[id],q);const first=box.querySelector('mark');if(first)first.scrollIntoView({block:'center',behavior:'smooth'});else if(q)toast('没有找到关键词');return}
+  if(!q){box.innerHTML=E(text);return}
+  const at=normalize(text).indexOf(normalize(q));
+  if(at<0){toast('没有找到关键词');return}
+  const escaped=q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  box.innerHTML=text.split(new RegExp('('+escaped+')','gi')).map((p,i)=>i%2?'<mark>'+E(p)+'</mark>':E(p)).join('');
+  const first=box.querySelector('mark');if(first)first.scrollIntoView({block:'center',behavior:'smooth'});
+ };
+}
+function closeDetail(){
+ if(closingDetail)return;
+ if(navigationReady&&navigationEntry()?.detail){closingDetail=true;history.back()}
+ else closeDetailSilently();
+}
+document.addEventListener('click',async e=>{
+ const b=e.target.closest('button,a');if(!b)return;
+ if(b.tagName==='A'&&b.getAttribute('href')?.startsWith('#')&&!b.dataset.view){
+  let id;try{id=decodeURIComponent(b.getAttribute('href').slice(1))}catch{return}
+  if(document.getElementById(id)){e.preventDefault();revealPageAnchor(id);return}
+ }
+ if(b.dataset.readerPage&&S[currentDetail]?.recognition?.pageImages){
+  const n=Number(b.dataset.readerPage);$('#source-text').innerHTML=recognizedHTML(S[currentDetail],'',n);$('#doc-page-number').value=readingPages[currentDetail];$('#source-text').scrollIntoView({block:'start'});return;
+ }
+ if(b.dataset.recognitionBatch){setView('sources',false,{batch:'first-five'});return}
+ if(b.dataset.priorityQueue){setView('sources',false,{priority:'全部待解析'});return}
+ if(b.dataset.grammarDialect||b.dataset.chapter){
+  setView('grammar',false,{grammarDialect:b.dataset.grammarDialect||state.grammarDialect||'north',chapter:b.dataset.chapter||'1'});return;
+ }
+ if(b.dataset.grammarQuery){setView('sources',false,{q:b.dataset.grammarQuery,grammarSourceScope:b.dataset.queryScope||state.grammarDialect||'north'});return}
+ if(b.dataset.view){
+  e.preventDefault();
+  if(!D){location.hash=b.dataset.view;return}
+  setView(b.dataset.view);return;
+ }
+ if(b.dataset.results){setView(b.dataset.results,true);return}
+ if(b.dataset.query){state.q=b.dataset.query;state.page=1;render();return}
+ if(b.dataset.topic){setView('sources',false,{topic:b.dataset.topic});return}
+ if(b.dataset.open){openDetail(b.dataset.open);return}
+ if(b.dataset.page){state.page=Number(b.dataset.page);render();window.scrollTo({top:200,behavior:'instant'});return}
+ if(b.dataset.wordSearch){setView('words',false,{q:b.dataset.wordSearch});return}
+ if(b.dataset.sourceWords){setView('words',false,{sourceFilter:b.dataset.sourceWords});return}
+ if(b.dataset.copy){
+  const id=b.dataset.copy,w=W[id],c=C[id],s=S[id];
+  const str=w?`${phon(w.term)} — ${w.zh||w.en} (${w.scheme}); ${w.attestations.map(a=>`${phon(a.term)} [${a.scheme}] ${S[a.source].title}, ${a.locator}. ${S[a.source].url}`).join('; ')}`:c?corpusCitation(c):`${s.title}. ${s.url}`;
+  try{await navigator.clipboard.writeText(str);toast('引用已复制')}catch{toast('复制不可用，请从原件链接获取出处')}
+ }
+});
+$('#close').onclick=closeDetail;
+$('#detail').addEventListener('cancel',e=>{e.preventDefault();closeDetail()});
+$('#detail').addEventListener('close',()=>{$('#detail').querySelectorAll('audio').forEach(a=>a.pause())});
+document.addEventListener('play',e=>{if(e.target.tagName==='AUDIO')document.querySelectorAll('audio').forEach(a=>{if(a!==e.target)a.pause()})},true);
+fetch('data.json').then(r=>{if(!r.ok)throw Error();return r.json()}).then(async data=>{if(data.dictionaryFile){const r=await fetch(data.dictionaryFile);if(!r.ok)throw Error('Dictionary unavailable');Object.assign(data,await r.json())}await loadYubao(data);await loadLongshanTexts(data);D=data;removeExcludedSource(D);S=Object.fromEntries(D.sources.map(s=>[s.id,s]));mergeDictionaryWords(D);initializeSpellingBoundaries(D);initializeSemanticCategories(D.words);mergeComparisons(D);for(const s of D.sources)s.title=s.title.replace(/^STEDT\s*·\s*/,'');S=Object.fromEntries([...(D.sourceVariants||[]),...D.sources].map(x=>[x.id,x]));W=Object.fromEntries(D.words.map(x=>[x.id,x]));for(const [old,id]of Object.entries(D.wordAliases||{}))W[old]=W[id];migrateTranscriptions();C=Object.fromEntries(D.corpus.map(x=>[x.id,x]));R=Object.fromEntries((D.reconstructions||[]).map(x=>[x.id,x]));initializeNavigation()}).catch(()=>{$('#main').innerHTML='<div class="empty">资料未能载入。请检查网络后刷新页面。</div>'});
 
-document.addEventListener('change',e=>{if(!e.target.dataset.spellingDisplay)return;if(e.target.dataset.spellingDisplay==='south'){southernDisplay=e.target.value==='poj'?'poj':'accent';try{localStorage.setItem('tujia-south-spelling-v1',southernDisplay)}catch{}}else{spellingDisplay=e.target.value==='ye'?'ye':'accent';try{localStorage.setItem('tujia-north-spelling-v2',spellingDisplay)}catch{}}const id=currentDetail,isOpen=$('#detail').open;render();$('#detail-spelling-control').innerHTML=spellingSelector();if(isOpen&&id){if(C[id]&&!C[id].survey){const lines=corpusLyricLines(C[id].text);document.querySelectorAll('.lyric-tujia').forEach((el,i)=>el.textContent=displayBrassett(lines[i].text))}else openDetail(id)}});
+document.addEventListener('change',e=>{if(!e.target.dataset.spellingDisplay)return;if(e.target.dataset.spellingDisplay==='south'){southernDisplay=e.target.value==='poj'?'poj':'accent';try{localStorage.setItem('tujia-south-spelling-v1',southernDisplay)}catch{}}else{spellingDisplay=e.target.value==='ye'?'ye':'accent';try{localStorage.setItem('tujia-north-spelling-v2',spellingDisplay)}catch{}}const id=currentDetail,isOpen=$('#detail').open;render();$('#detail-spelling-control').innerHTML=spellingSelector();if(isOpen&&id){if(C[id]&&!C[id].survey){const lines=corpusLyricLines(C[id].text);document.querySelectorAll('.lyric-tujia').forEach((el,i)=>el.textContent=displayBrassett(lines[i].text))}else openDetail(id)}else if(isOpen&&currentOverlay)restoreDetailNavigation(currentOverlay)});

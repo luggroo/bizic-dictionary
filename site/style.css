@@ -114,3 +114,11 @@ button.primary:hover,button.primary:focus-visible{background:var(--green);color:
 
 /* Mobile navigation uses text labels; font-size:0 already hides glyph icons. */
 @media(max-width:720px){aside>nav .nav-icon{display:none}}
+
+/* Three overview statistics must fit even on the narrowest phone screens. */
+@media(max-width:720px){.metric{min-width:0;padding:12px 10px}.metric b{font-size:clamp(22px,6vw,26px)}.metric:nth-child(-n+2){border-right:1px solid var(--line);border-bottom:0}}
+
+/* Long translated option labels stay inside the converter panel. */
+#notation-source,#notation-variant{display:block;width:100%;max-width:100%;min-width:0;margin:8px 0}
+@media(max-width:720px){.searchbar input,.compact-search input,.spelling-selector select,#notation-source,#notation-variant{font-size:16px}}
+@media(max-width:720px){.dialog-head #close{min-width:44px;min-height:44px}}

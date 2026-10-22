@@ -22,6 +22,11 @@ assert.equal(score({forms:['tia']},'ti','tujia',true),0);
 assert.equal(score({forms:['tí']},'ti','zh'),0);
 console.log('PASS: language scopes, English tokens, ti noise rejection, spelling ranking and exact sense matching');
 for(const en of ['there','therefore','everywhere','where'])assert.equal(score({forms:['ba'],en},'here','en'),0,en);
+for(const en of ["chest (English 'chest' here is the body part.)","pigweed (Original English 'pigweed' suggests a plant; here the gloss is 猪草 (grass/greens); not a species.)","time (The English 'time' denotes 时节／时间 here.)","water (Note: 'here' belongs to an editorial note (unverified).)"]){
+ assert.equal(score({forms:['ba'],en},'here','en'),0,en);
+}
+assert(score({forms:['ba'],en:'water (hot)'},'hot','en')>0,'meaningful sense qualifiers remain searchable');
+assert.equal(score({forms:['ba'],en:"pigweed (Original English 'pigweed' suggests a plant (grass/greens).); fodder"},'fodder','en'),100,'senses after nested editorial notes remain searchable');
 assert.equal(score({forms:['ba'],en:'here'},'here','en'),100);
 assert.equal(score({forms:['ba'],en:'come here'},'here','en'),70);
 vm.runInContext(app.slice(app.indexOf('function rankedWords('),app.indexOf('\nfunction wordMatches(')),c);
