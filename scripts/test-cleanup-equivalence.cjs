@@ -4,7 +4,7 @@ const root=path.resolve(__dirname,'..'),base=process.argv[2]||'43765b36a0c70ad93
 function read(p,before){return before?cp.execFileSync('git',['show',`${base}:${p}`],{cwd:root,maxBuffer:50e6}).toString():fs.readFileSync(path.join(root,p),'utf8')}
 async function snapshot(before){
  const dummy={addEventListener(){},querySelectorAll:()=>[],classList:{toggle(){}},style:{}};
- const c=vm.createContext({MutationObserver:class{observe(){}},console,localStorage:{getItem:()=>null},document:{getElementById:()=>dummy,addEventListener(){},querySelector:()=>dummy,querySelectorAll:()=>[]},window:{},fetch:async p=>({ok:true,json:async()=>JSON.parse(read('site/'+p,before))})});
+ const c=vm.createContext({MutationObserver:class{observe(){}},console,localStorage:{getItem:()=>null},document:{getElementById:()=>dummy,addEventListener(){},querySelector:()=>dummy,querySelectorAll:()=>[]},window:{addEventListener(){}},fetch:async p=>({ok:true,json:async()=>JSON.parse(read('site/'+p,before))})});
  vm.runInContext('Math.random=()=>0.25',c);
  const files=[...read('site/index.html',before).matchAll(/<script src="([^"?]+)/g)].map(m=>m[1]);
  for(const f of files){let s=read('site/'+f,before);if(f==='app.js')s=s.slice(0,s.indexOf("document.addEventListener("));vm.runInContext(s,c,{filename:f})}
