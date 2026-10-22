@@ -29,11 +29,10 @@
   }
   const labels = Object.freeze({
     brand: 'bifzixkar afhxix', home: 'ger laix xief', words: 'cixcix nix', grammar: 'sar qifmox lir',
-    // Zhou (2020) cover: Sufmur Bifzixsar (su²mu³); Brassett: -nie³ (genitive), sa³ (speech).
     notation: 'sar qifmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
     // Search action wording approved for this interface; not a source quotation.
     searchEn: 'yinxyiv niv-xivsour', searchZh: 'pavsar niv-xivsour', searchTujia: 'bifsar niv-xivsour',
-    history: 'sufmur nier sar', search: 'nix'
+    history: 'nierzuvbarzuv niex sar', search: 'nix'
   });
   const textMemory = new WeakMap(), attributeMemory = new WeakMap(), grammarMemory = new WeakMap();
   const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
