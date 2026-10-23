@@ -34854,9 +34854,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0860"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「转」。",
+  "text": "可能借自湘语「转」。",
   "donor": "转",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -34867,7 +34867,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-0876",
@@ -39600,9 +39600,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2208"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「传染」。",
+  "text": "可能借自湘语「传染」。",
   "donor": "传染",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -39613,7 +39613,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-2220",
@@ -40545,9 +40545,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2454"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「马棚棚」。",
+  "text": "可能借自湘语「马棚棚」。",
   "donor": "马棚棚",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -40558,7 +40558,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-2457",
@@ -40671,9 +40671,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2486"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「渡船」。",
+  "text": "可能借自湘语「渡船」。",
   "donor": "渡船",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -40684,7 +40684,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-2489",
@@ -43884,9 +43884,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1560"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「穿山甲」。",
+  "text": "可能借自湘语「穿山甲」。",
   "donor": "穿山甲",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43897,7 +43897,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-1688",
@@ -43905,9 +43905,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1688"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「马鬃毛」。",
+  "text": "可能借自湘语「马鬃毛」。",
   "donor": "马鬃毛",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43918,7 +43918,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-1699",
@@ -49712,6 +49712,303 @@ EDITORIAL_NOTES.push(...[
   "scope": "whole",
   "reviewedForms": [{"ipa": "ʔo³⁵", "span": [1, 1]}],
   "reviewBatch": "loan-supplement-2026-10-23"
+ }
+]);
+EDITORIAL_NOTES.push(...[
+ {
+  "id": "chinese-loan-stedt-rn-289482",
+  "wordIds": [
+   "stedt-rn-289482",
+   "yubao-60824-v-0259"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「马」。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1792",
+  "wordIds": [
+   "yubao-60824-v-1792"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「钩子」。",
+  "donor": "钩子",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "kai¹³tɕi⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-0052",
+  "wordIds": [
+   "yubao-60824-v-0052"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「砖」。",
+  "donor": "砖",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕyã³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289676",
+  "wordIds": [
+   "stedt-rn-289676"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「砖」。",
+  "donor": "砖",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕya³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-290190",
+  "wordIds": [
+   "stedt-rn-290190"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「真」。",
+  "donor": "真",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕĩ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1685",
+  "wordIds": [
+   "yubao-60824-v-1685"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自湘语。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³bo¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1686",
+  "wordIds": [
+   "yubao-60824-v-1686"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自湘语。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³ni³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1687",
+  "wordIds": [
+   "yubao-60824-v-1687"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自湘语。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³bie²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2574",
+  "wordIds": [
+   "yubao-60824-v-2574"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自湘语。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo²¹dʑi¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2358",
+  "wordIds": [
+   "yubao-60824-v-2358"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自湘语。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³a²¹dʑie¹³nia³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-0929",
+  "wordIds": [
+   "yubao-60824-v-0929"
+  ],
+  "kind": "借词来源",
+  "text": "「马屁股」部分（第 1—3 音节）可能借自湘语。",
+  "donor": "马屁股",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³pʰie¹³ku⁵⁵pʰe²¹",
+    "span": [
+     1,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2768",
+  "wordIds": [
+   "yubao-60824-v-2768"
+  ],
+  "kind": "借词来源",
+  "text": "「砖」部分（第 1 音节）可能借自湘语。",
+  "donor": "砖",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "tɕyã³³ʉ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2772",
+  "wordIds": [
+   "yubao-60824-v-2772"
+  ],
+  "kind": "借词来源",
+  "text": "「穿」部分（第 3 音节）可能借自湘语。",
+  "donor": "穿",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "a¹³ɣe⁵⁵tɕʰyã³³",
+    "span": [
+     3,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2479",
+  "wordIds": [
+   "yubao-60824-v-2479"
+  ],
+  "kind": "借词来源",
+  "text": "「钩子」部分（第 2—3 音节）可能借自湘语。",
+  "donor": "钩子",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi³³kai¹³tɕie⁵⁵",
+    "span": [
+     2,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  }
 ]);
 // Index source IDs once; list filtering visits every merged entry.

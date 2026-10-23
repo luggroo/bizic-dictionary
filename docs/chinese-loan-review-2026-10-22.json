@@ -7,13 +7,14 @@
     "yubao-60824-v-2438": "Luxi Wuxi li24 po42 matches li13 po55; compare Jishou li11 pa42.",
     "otherSouthern": "Use Southwestern Mandarin or Xiang where the donor variety is not distinguishable.",
     "donorRevision20261023": {
-      "xiangOnly": [
+      "broadenedCount": 37,
+      "publicExplanation": "Short donor attribution only.",
+      "xiangOnlyAfterInitialQualification": [
         "yubao-60824-v-2438",
         "yubao-60824-v-0200",
         "stedt-rn-289703"
       ],
-      "broadenedCount": 37,
-      "publicExplanation": "Short donor attribution only."
+      "followUp": "xiang-loan-confirmation-2026-10-23.json"
     }
   },
   "glossChanges": [
@@ -35638,9 +35639,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "西南官话或湘语",
-      "note": "可能借自西南官话或湘语「转」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 转.",
+      "donorVariety": "湘语",
+      "note": "可能借自湘语「转」。",
+      "noteEn": "Possibly borrowed from Xiang 转.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -40384,9 +40385,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "西南官话或湘语",
-      "note": "可能借自西南官话或湘语「传染」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 传染.",
+      "donorVariety": "湘语",
+      "note": "可能借自湘语「传染」。",
+      "noteEn": "Possibly borrowed from Xiang 传染.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -41329,9 +41330,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "西南官话或湘语",
-      "note": "可能借自西南官话或湘语「马棚棚」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 马棚棚.",
+      "donorVariety": "湘语",
+      "note": "可能借自湘语「马棚棚」。",
+      "noteEn": "Possibly borrowed from Xiang 马棚棚.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -41455,9 +41456,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "西南官话或湘语",
-      "note": "可能借自西南官话或湘语「渡船」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 渡船.",
+      "donorVariety": "湘语",
+      "note": "可能借自湘语「渡船」。",
+      "noteEn": "Possibly borrowed from Xiang 渡船.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -44668,9 +44669,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "西南官话或湘语",
-      "note": "可能借自西南官话或湘语「穿山甲」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 穿山甲.",
+      "donorVariety": "湘语",
+      "note": "可能借自湘语「穿山甲」。",
+      "noteEn": "Possibly borrowed from Xiang 穿山甲.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -44689,9 +44690,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "西南官话或湘语",
-      "note": "可能借自西南官话或湘语「马鬃毛」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 马鬃毛.",
+      "donorVariety": "湘语",
+      "note": "可能借自湘语「马鬃毛」。",
+      "noteEn": "Possibly borrowed from Xiang 马鬃毛.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },

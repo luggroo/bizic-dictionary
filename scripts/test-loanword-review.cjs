@@ -36,9 +36,18 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  assert(c.editorialNotesFor(get('stedt-rn-288801')).some(n=>n.text==='可能借自西南官话，具体原词待考。'));
  for(const w of data.words)for(const a of w.attestations||[])if(surveyBefore.has(a.id))assert.equal(sourceFields(a),surveyBefore.get(a.id),a.id+' survey source changed');
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2345);
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2359);
  for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,'西南官话',id+' northern donor variety');}
  for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
+ // Exact Southern forms and source aliases receive the accepted donor; native
+ // components and other forms with the same Chinese gloss keep their scope.
+ const xiangWhole=['stedt-rn-289482','yubao-60824-v-0259','yubao-60824-v-1792','yubao-60824-v-0052','stedt-rn-289676','stedt-rn-290190'];
+ const xiangParts=['yubao-60824-v-1685','yubao-60824-v-1686','yubao-60824-v-1687','yubao-60824-v-2574','yubao-60824-v-2358','yubao-60824-v-0929','yubao-60824-v-2768','yubao-60824-v-2772','yubao-60824-v-2479'];
+ for(const id of [...xiangWhole,...xiangParts,'yubao-60824-v-0860','yubao-60824-v-2208','yubao-60824-v-2454','yubao-60824-v-2486','yubao-60824-v-1560','yubao-60824-v-1688'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' accepted Xiang donor');
+ for(const id of xiangWhole)assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole',id+' whole Xiang loan');
+ for(const id of xiangParts)assert.equal(c.modernChineseLoanInfo(get(id)).scope,'component',id+' mixed compound');
+ for(const [id,span] of [['yubao-60824-v-2772',[3,3]],['yubao-60824-v-2479',[2,3]],['yubao-60824-v-0929',[1,3]]])assert.deepEqual(Array.from(c.editorialNotesFor(get(id)).find(n=>n.id==='chinese-loan-'+id).reviewedForms[0].span),span,id+' loan syllables');
+ for(const id of ['yubao-60824-v-2866','stedt-rn-289804','stedt-rn-289969','yubao-60824-v-2487','yubao-60824-v-2976'])assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' unrelated form or gloss');
  for(const id of ['stedt-rn-290103','yubao-60824-v-1748'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语或西南官话'),id+' qualified donor');
  assert(c.editorialNotesFor(get('yubao-60824-v-2053')).some(n=>n.text==='可能借自西南官话或湘语「桂花」。'));
  const timed=c.editorialNotesFor(get('stedt-rn-288498')).find(n=>n.id==='chinese-loan-stedt-rn-288498');assert(timed.text.includes('/si²¹tɕe³⁵/')&&!timed.text.includes('si²¹ka³⁵'));
@@ -78,6 +87,8 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.wordMatches(get('yubao-60756-v-0747')),true);
  assert.equal(c.wordMatches(get('stedt-rn-288498')),true);
  assert.equal(c.wordMatches(get('w576')),true);
+ for(const id of xiangWhole)assert.equal(c.wordMatches(get(id)),false,id+' whole-loan filter');
+ for(const id of xiangParts)assert.equal(c.wordMatches(get(id)),true,id+' mixed compound remains visible');
  c.loanPosFixture=get('yubao-60756-v-0747');
  vm.runInContext("state.pos=WordClasses.ids(loanPosFixture)[0]||''",c);
  assert.equal(c.wordMatches(get('yubao-60756-v-0747')),true,'partial loan survives matching POS filter');
@@ -87,5 +98,5 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.parseViewHash('#words?hideWholeLoans=false').state.hideWholeLoans,false);
  const counts={};for(const w of data.words){const scope=c.modernChineseLoanInfo(w).scope||'unmarked';counts[scope]=(counts[scope]||0)+1;}
  console.log('Loan badge coverage:',counts);
- console.log('PASS: reviewed glosses, source preservation, 2345 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
+ console.log('PASS: reviewed glosses, source preservation, 2359 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
 })().catch(e=>{console.error(e);process.exit(1)});
