@@ -2,7 +2,7 @@ Object.assign(UI_TRANSLATIONS,{"语音": "Phonology", "基本语序与句型": "
 Object.assign(UI_TRANSLATIONS,{'其他格与关系标记（待补充）':'Other case and relation markers (to be added)','动词、形容词及其他谓语变化（待补充）':'Other verb, adjective and predicate forms (to be added)'});
 // Reviewed prose translations.
 Object.assign(UI_TRANSLATIONS,{
-  "名词化可以把动作、性质或一句话变成指人、事物、事情或地方的表达，例如“吃的东西”“做工的人”“吃饭的地方”。北部材料中可见以下四种形式：": "Nominalization turns an action, a property or a clause into an expression referring to a person, thing, event or place, such as ‘something to eat’, ‘a person who works’ or ‘a place to eat’. Northern sources record the following four forms:",
+  "名词化让动词、形容词或小句可以像名词一样使用。例如，“吃”可以组成“吃的东西”，“做工”可以组成“做工的人”，“吃饭”可以组成“吃饭的地方”。北部土家语材料中可见以下四种名词化形式：": "Nominalization allows a verb, adjective or clause to be used like a noun. For example, ‘eat’ can form an expression meaning ‘something to eat’, ‘work’ can form ‘someone who works’, and ‘eat a meal’ can form ‘a place to eat’. Northern Tujia sources record the following four nominalizing forms:",
   "主要表示": "Main use",
   "意思举例": "Examples of meaning",
   "事情，也可指人或物": "Events; also people or things",
