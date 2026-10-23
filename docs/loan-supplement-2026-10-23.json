@@ -13,7 +13,7 @@
         "yubao-60824-v-0200"
       ],
       "kind": "借词来源",
-      "text": "可能借自泸溪一带湘语「莴笋」。「笋」可比较武溪 suẽ⁴²、辰溪 suei³¹、古丈死客子话 sueĩ⁵¹；具体来源点尚待核实。",
+      "text": "可能借自湘语「莴笋」。",
       "donor": "莴笋",
       "donorVariety": "湘语",
       "scope": "whole",
@@ -281,16 +281,27 @@
       "reviewBatch": "loan-supplement-2026-10-23"
     },
     {
-      "id": "luxi-sock-etymology",
+      "id": "chinese-loan-stedt-rn-289703",
       "wordIds": [
         "stedt-rn-289703"
       ],
       "kind": "借词来源",
-      "text": "疑借自泸溪一带湘语「袜」。可比较武溪 βo²⁴、古丈死客子话 vo²³、溆浦 uɒ¹³。土家语 ʔo³⁵ 的声母和声调对应仍需更多词例支持，借入年代待考。",
+      "text": "可能借自湘语「袜」。",
       "donor": "袜",
       "donorVariety": "湘语",
       "evidenceStatus": "tentative",
-      "borrowingPeriod": "undetermined"
+      "borrowingPeriod": "undetermined",
+      "scope": "whole",
+      "reviewedForms": [
+        {
+          "ipa": "ʔo³⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
     }
   ],
   "limits": [
@@ -381,5 +392,9 @@
     "Publishing checks passed: IPA, Brassett IPA, word classes, merged entries, southern notation/source rimes, notation pairs, reader copy and loan review.",
     "Prepared search: 99,512 checks across 16,577 entries; gzip and fallback loading passed.",
     "Rendered all 14 affected entries at 390px and 1280px in Chinese and English; no horizontal dialog overflow or browser errors. Inspected screenshots of corrected 可以, partial-loan 耳孔 and tentative 袜子 notes."
-  ]
+  ],
+  "followUp": {
+    "request": "Classify sock ʔo35 as a recent whole-word loan.",
+    "action": "Add 新借 / Loan badge and include this exact form in the whole-loan filter. Retain the qualified donor comparison and undetermined borrowing date."
+  }
 }

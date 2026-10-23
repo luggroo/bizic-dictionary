@@ -123,25 +123,26 @@ EDITORIAL_NOTES.push(...[
   ]
  },
  {
-  "id": "chinese-loan-stedt-rn-289802",
-  "wordIds": [
-   "stedt-rn-289802"
-  ],
-  "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「火车」。",
-  "donor": "火车",
-  "donorVariety": "西南官话或湘语",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "h̄o⁵⁵tsʰe³³",
-    "span": [
-     1,
-     2
-    ]
-   }
-  ]
- },
+ "id": "chinese-loan-stedt-rn-289802",
+ "wordIds": [
+  "stedt-rn-289802"
+ ],
+ "kind": "借词来源",
+ "text": "可能借自湘语「火车」。",
+ "donor": "火车",
+ "donorVariety": "湘语",
+ "scope": "whole",
+ "reviewedForms": [
+  {
+   "ipa": "h̄o⁵⁵tsʰe³³",
+   "span": [
+    1,
+    2
+   ]
+  }
+ ],
+ "reviewBatch": "ma-car-dragonfly-2026-10-23"
+},
  {
   "id": "chinese-loan-stedt-rn-204432",
   "wordIds": [
@@ -455,9 +456,9 @@ EDITORIAL_NOTES.push(...[
    "stedt-rn-290103"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「提高」。",
+  "text": "可能借自湘语或西南官话「提高」。",
   "donor": "提高",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -6205,26 +6206,33 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "complete-components-4"
  },
  {
-  "id": "chinese-loan-w1787",
-  "wordIds": [
-   "w1787"
-  ],
-  "kind": "借词来源",
-  "text": "/tɕʰi³⁵tsʰe⁵⁵/ 可能借自西南官话「汽车」。",
-  "donor": "汽车",
-  "donorVariety": "西南官话",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "tɕʰi³⁵tsʰe⁵⁵",
-    "span": [
-     1,
-     2
-    ]
-   }
-  ],
-  "reviewBatch": "complete-components-4"
- },
+ "id": "chinese-loan-w1787",
+ "wordIds": [
+  "w1787"
+ ],
+ "kind": "借词来源",
+ "text": "可能借自西南官话「汽车」。",
+ "donor": "汽车",
+ "donorVariety": "西南官话",
+ "scope": "whole",
+ "reviewedForms": [
+  {
+   "ipa": "tɕʰi²⁴tsʰɤ⁵⁵",
+   "span": [
+    1,
+    2
+   ]
+  },
+  {
+   "ipa": "tɕʰi³⁵tsʰe⁵⁵",
+   "span": [
+    1,
+    2
+   ]
+  }
+ ],
+ "reviewBatch": "ma-car-dragonfly-2026-10-23"
+},
  {
   "id": "chinese-loan-w1791",
   "wordIds": [
@@ -15585,26 +15593,26 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "complete-components-4"
  },
  {
-  "id": "chinese-loan-stedt-rn-289801",
-  "wordIds": [
-   "stedt-rn-289801"
-  ],
-  "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「车子」。",
-  "donor": "车子",
-  "donorVariety": "西南官话或湘语",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "tsʰe³³tsi²¹",
-    "span": [
-     1,
-     2
-    ]
-   }
-  ],
-  "reviewBatch": "complete-components-4"
- },
+ "id": "chinese-loan-stedt-rn-289801",
+ "wordIds": [
+  "stedt-rn-289801"
+ ],
+ "kind": "借词来源",
+ "text": "可能借自湘语「车子」。",
+ "donor": "车子",
+ "donorVariety": "湘语",
+ "scope": "whole",
+ "reviewedForms": [
+  {
+   "ipa": "tsʰe³³tsi²¹",
+   "span": [
+    1,
+    2
+   ]
+  }
+ ],
+ "reviewBatch": "ma-car-dragonfly-2026-10-23"
+},
  {
   "id": "chinese-loan-stedt-rn-289345",
   "wordIds": [
@@ -16290,9 +16298,9 @@ EDITORIAL_NOTES.push(...[
    "stedt-rn-289762"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「大锅」。",
+  "text": "可能借自湘语或西南官话「大锅」。",
   "donor": "大锅",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -16453,26 +16461,26 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "complete-components-4"
  },
  {
-  "id": "chinese-loan-stedt-rn-289803",
-  "wordIds": [
-   "stedt-rn-289803"
-  ],
-  "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「汽车」。",
-  "donor": "汽车",
-  "donorVariety": "西南官话或湘语",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "tɕʰi³³tsʰe³³",
-    "span": [
-     1,
-     2
-    ]
-   }
-  ],
-  "reviewBatch": "complete-components-4"
- },
+ "id": "chinese-loan-stedt-rn-289803",
+ "wordIds": [
+  "stedt-rn-289803"
+ ],
+ "kind": "借词来源",
+ "text": "可能借自湘语「汽车」。",
+ "donor": "汽车",
+ "donorVariety": "湘语",
+ "scope": "whole",
+ "reviewedForms": [
+  {
+   "ipa": "tɕʰi³³tsʰe³³",
+   "span": [
+    1,
+    2
+   ]
+  }
+ ],
+ "reviewBatch": "ma-car-dragonfly-2026-10-23"
+},
  {
   "id": "chinese-loan-stedt-rn-184185",
   "wordIds": [
@@ -33363,9 +33371,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0306"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「大锅」。",
+  "text": "可能借自湘语或西南官话「大锅」。",
   "donor": "大锅",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -34854,9 +34862,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0860"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「转」。",
+  "text": "可能借自湘语「转」。",
   "donor": "转",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -34867,7 +34875,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-0876",
@@ -37731,9 +37739,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1801"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「大锅」。",
+  "text": "可能借自湘语或西南官话「大锅」。",
   "donor": "大锅",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -39600,9 +39608,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2208"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「传染」。",
+  "text": "可能借自湘语「传染」。",
   "donor": "传染",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -39613,7 +39621,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-2220",
@@ -40020,9 +40028,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2322"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「屠夫」。",
+  "text": "可能借自湘语或西南官话「屠夫」。",
   "donor": "屠夫",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -40545,9 +40553,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2454"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「马棚棚」。",
+  "text": "可能借自湘语「马棚棚」。",
   "donor": "马棚棚",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -40558,7 +40566,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-2457",
@@ -40624,56 +40632,56 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "complete-components-4"
  },
  {
-  "id": "chinese-loan-yubao-60824-v-2483",
-  "wordIds": [
-   "yubao-60824-v-2483"
-  ],
-  "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「火车」。",
-  "donor": "火车",
-  "donorVariety": "西南官话或湘语",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "xo⁵⁵tsʰe³³",
-    "span": [
-     1,
-     2
-    ]
-   }
-  ],
-  "reviewBatch": "complete-components-4"
- },
+ "id": "chinese-loan-yubao-60824-v-2483",
+ "wordIds": [
+  "yubao-60824-v-2483"
+ ],
+ "kind": "借词来源",
+ "text": "可能借自湘语「火车」。",
+ "donor": "火车",
+ "donorVariety": "湘语",
+ "scope": "whole",
+ "reviewedForms": [
+  {
+   "ipa": "xo⁵⁵tsʰe³³",
+   "span": [
+    1,
+    2
+   ]
+  }
+ ],
+ "reviewBatch": "ma-car-dragonfly-2026-10-23"
+},
  {
-  "id": "chinese-loan-yubao-60824-v-2484",
-  "wordIds": [
-   "yubao-60824-v-2484"
-  ],
-  "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「汽车」。",
-  "donor": "汽车",
-  "donorVariety": "西南官话或湘语",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "tɕʰi¹³tsʰe³³",
-    "span": [
-     1,
-     2
-    ]
-   }
-  ],
-  "reviewBatch": "complete-components-4"
- },
+ "id": "chinese-loan-yubao-60824-v-2484",
+ "wordIds": [
+  "yubao-60824-v-2484"
+ ],
+ "kind": "借词来源",
+ "text": "可能借自湘语「汽车」。",
+ "donor": "汽车",
+ "donorVariety": "湘语",
+ "scope": "whole",
+ "reviewedForms": [
+  {
+   "ipa": "tɕʰi¹³tsʰe³³",
+   "span": [
+    1,
+    2
+   ]
+  }
+ ],
+ "reviewBatch": "ma-car-dragonfly-2026-10-23"
+},
  {
   "id": "chinese-loan-yubao-60824-v-2486",
   "wordIds": [
    "yubao-60824-v-2486"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「渡船」。",
+  "text": "可能借自湘语「渡船」。",
   "donor": "渡船",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -40684,7 +40692,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-2489",
@@ -43842,9 +43850,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1517"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「豆芽菜」。",
+  "text": "可能借自湘语或西南官话「豆芽菜」。",
   "donor": "豆芽菜",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43884,9 +43892,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1560"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「穿山甲」。",
+  "text": "可能借自湘语「穿山甲」。",
   "donor": "穿山甲",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43897,7 +43905,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-1688",
@@ -43905,9 +43913,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1688"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话或湘语「马鬃毛」。",
+  "text": "可能借自湘语「马鬃毛」。",
   "donor": "马鬃毛",
-  "donorVariety": "西南官话或湘语",
+  "donorVariety": "湘语",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43918,7 +43926,7 @@ EDITORIAL_NOTES.push(...[
     ]
    }
   ],
-  "reviewBatch": "complete-components-4"
+  "reviewBatch": "xiang-confirmation-2026-10-23"
  },
  {
   "id": "chinese-loan-yubao-60824-v-1699",
@@ -43926,9 +43934,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1699"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「哈巴狗」。",
+  "text": "可能借自湘语或西南官话「哈巴狗」。",
   "donor": "哈巴狗",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43947,9 +43955,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1811"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「大锅刷把」。",
+  "text": "可能借自湘语或西南官话「大锅刷把」。",
   "donor": "大锅刷把",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43968,9 +43976,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1863"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「子弹头子」。",
+  "text": "可能借自湘语或西南官话「子弹头子」。",
   "donor": "子弹头子",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -44010,9 +44018,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1945"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「收音机」。",
+  "text": "可能借自湘语或西南官话「收音机」。",
   "donor": "收音机",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -44052,9 +44060,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2255"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「六指头」。",
+  "text": "可能借自湘语或西南官话「六指头」。",
   "donor": "六指头",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -44346,9 +44354,9 @@ EDITORIAL_NOTES.push(...[
    "stedt-rn-290119"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「斗争」。",
+  "text": "可能借自湘语或西南官话「斗争」。",
   "donor": "斗争",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45417,9 +45425,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0194"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「绿豆」。",
+  "text": "可能借自湘语或西南官话「绿豆」。",
   "donor": "绿豆",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45459,9 +45467,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0323"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「枕头」。",
+  "text": "可能借自湘语或西南官话「枕头」。",
   "donor": "枕头",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45480,9 +45488,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0332"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「抽屉」。",
+  "text": "可能借自湘语或西南官话「抽屉」。",
   "donor": "抽屉",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45501,9 +45509,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0382"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「扣子」。",
+  "text": "可能借自湘语或西南官话「扣子」。",
   "donor": "扣子",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45522,9 +45530,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0399"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「豆浆」。",
+  "text": "可能借自湘语或西南官话「豆浆」。",
   "donor": "豆浆",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45543,9 +45551,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0476"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「左手」。",
+  "text": "可能借自湘语或西南官话「左手」。",
   "donor": "左手",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45564,9 +45572,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0477"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「右手」。",
+  "text": "可能借自湘语或西南官话「右手」。",
   "donor": "右手",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45585,9 +45593,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0478"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「拳头」。",
+  "text": "可能借自湘语或西南官话「拳头」。",
   "donor": "拳头",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45669,9 +45677,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1276"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「洞口」。",
+  "text": "可能借自湘语或西南官话「洞口」。",
   "donor": "洞口",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45858,9 +45866,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1547"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「狗熊」。",
+  "text": "可能借自湘语或西南官话「狗熊」。",
   "donor": "狗熊",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45879,9 +45887,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1633"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「臭虫」。",
+  "text": "可能借自湘语或西南官话「臭虫」。",
   "donor": "臭虫",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45900,9 +45908,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1735"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「榫头」。",
+  "text": "可能借自湘语或西南官话「榫头」。",
   "donor": "榫头",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45942,9 +45950,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1748"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「楼板」。",
+  "text": "可能借自湘语或西南官话「楼板」。",
   "donor": "楼板",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45984,9 +45992,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1852"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「墨斗」。",
+  "text": "可能借自湘语或西南官话「墨斗」。",
   "donor": "墨斗",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46005,9 +46013,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1890"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「手表」。",
+  "text": "可能借自湘语或西南官话「手表」。",
   "donor": "手表",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46026,9 +46034,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1946"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「手机」。",
+  "text": "可能借自湘语或西南官话「手机」。",
   "donor": "手机",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46047,9 +46055,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1957"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「绸子」。",
+  "text": "可能借自湘语或西南官话「绸子」。",
   "donor": "绸子",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46068,9 +46076,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1991"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「手套」。",
+  "text": "可能借自湘语或西南官话「手套」。",
   "donor": "手套",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46089,9 +46097,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2010"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「扣肉」。",
+  "text": "可能借自湘语或西南官话「扣肉」。",
   "donor": "扣肉",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46131,9 +46139,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2030"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「豆豉」。",
+  "text": "可能借自湘语或西南官话「豆豉」。",
   "donor": "豆豉",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46152,9 +46160,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2056"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「豆腐渣」。",
+  "text": "可能借自湘语或西南官话「豆腐渣」。",
   "donor": "豆腐渣",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46173,9 +46181,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2152"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「手背」。",
+  "text": "可能借自湘语或西南官话「手背」。",
   "donor": "手背",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46194,9 +46202,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2160"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「虎口」。",
+  "text": "可能借自湘语或西南官话「虎口」。",
   "donor": "虎口",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46236,9 +46244,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2274"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「寿命」。",
+  "text": "可能借自湘语或西南官话「寿命」。",
   "donor": "寿命",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46257,9 +46265,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2306"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「光头」。",
+  "text": "可能借自湘语或西南官话「光头」。",
   "donor": "光头",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -49431,7 +49439,7 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0200"
   ],
   "kind": "借词来源",
-  "text": "可能借自泸溪一带湘语「莴笋」。「笋」可比较武溪 suẽ⁴²、辰溪 suei³¹、古丈死客子话 sueĩ⁵¹；具体来源点尚待核实。",
+  "text": "可能借自湘语「莴笋」。",
   "donor": "莴笋",
   "donorVariety": "湘语",
   "scope": "whole",
@@ -49699,16 +49707,1616 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "loan-supplement-2026-10-23"
  },
  {
-  "id": "luxi-sock-etymology",
+  "id": "chinese-loan-stedt-rn-289703",
   "wordIds": [
    "stedt-rn-289703"
   ],
   "kind": "借词来源",
-  "text": "疑借自泸溪一带湘语「袜」。可比较武溪 βo²⁴、古丈死客子话 vo²³、溆浦 uɒ¹³。土家语 ʔo³⁵ 的声母和声调对应仍需更多词例支持，借入年代待考。",
+  "text": "可能借自湘语「袜」。",
   "donor": "袜",
   "donorVariety": "湘语",
   "evidenceStatus": "tentative",
-  "borrowingPeriod": "undetermined"
+  "borrowingPeriod": "undetermined",
+  "scope": "whole",
+  "reviewedForms": [{"ipa": "ʔo³⁵", "span": [1, 1]}],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ }
+]);
+EDITORIAL_NOTES.push(...[
+ {
+  "id": "chinese-loan-stedt-rn-289482",
+  "wordIds": [
+   "stedt-rn-289482",
+   "yubao-60824-v-0259"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「马」。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1792",
+  "wordIds": [
+   "yubao-60824-v-1792"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「钩子」。",
+  "donor": "钩子",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "kai¹³tɕi⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-0052",
+  "wordIds": [
+   "yubao-60824-v-0052"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「砖」。",
+  "donor": "砖",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕyã³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289676",
+  "wordIds": [
+   "stedt-rn-289676"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「砖」。",
+  "donor": "砖",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕya³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-290190",
+  "wordIds": [
+   "stedt-rn-290190"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「真」。",
+  "donor": "真",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕĩ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1685",
+  "wordIds": [
+   "yubao-60824-v-1685"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自湘语。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³bo¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1686",
+  "wordIds": [
+   "yubao-60824-v-1686"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自湘语。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³ni³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1687",
+  "wordIds": [
+   "yubao-60824-v-1687"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自湘语。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³bie²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2574",
+  "wordIds": [
+   "yubao-60824-v-2574"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自湘语。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo²¹dʑi¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2358",
+  "wordIds": [
+   "yubao-60824-v-2358"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自湘语。",
+  "donor": "马",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³a²¹dʑie¹³nia³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-0929",
+  "wordIds": [
+   "yubao-60824-v-0929"
+  ],
+  "kind": "借词来源",
+  "text": "「马屁股」部分（第 1—3 音节）可能借自湘语。",
+  "donor": "马屁股",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "mo¹³pʰie¹³ku⁵⁵pʰe²¹",
+    "span": [
+     1,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2768",
+  "wordIds": [
+   "yubao-60824-v-2768"
+  ],
+  "kind": "借词来源",
+  "text": "「砖」部分（第 1 音节）可能借自湘语。",
+  "donor": "砖",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "tɕyã³³ʉ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2772",
+  "wordIds": [
+   "yubao-60824-v-2772"
+  ],
+  "kind": "借词来源",
+  "text": "「穿」部分（第 3 音节）可能借自湘语。",
+  "donor": "穿",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "a¹³ɣe⁵⁵tɕʰyã³³",
+    "span": [
+     3,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2479",
+  "wordIds": [
+   "yubao-60824-v-2479"
+  ],
+  "kind": "借词来源",
+  "text": "「钩子」部分（第 2—3 音节）可能借自湘语。",
+  "donor": "钩子",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi³³kai¹³tɕie⁵⁵",
+    "span": [
+     2,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "xiang-confirmation-2026-10-23"
+ }
+]);
+EDITORIAL_NOTES.push(...[
+ {
+  "id": "chinese-loan-yubao-60756-v-1875",
+  "wordIds": [
+   "yubao-60756-v-1875"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「马鞭子」。",
+  "donor": "马鞭子",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³pʰiaŋ³³tsɿ³³",
+    "span": [
+     1,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0259",
+  "wordIds": [
+   "yubao-60756-v-0259"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「马」。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1685",
+  "wordIds": [
+   "yubao-60756-v-1685"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵a⁵³pa³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1686",
+  "wordIds": [
+   "yubao-60756-v-1686"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵ȵi⁵⁵ka⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1687",
+  "wordIds": [
+   "yubao-60756-v-1687"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma³⁵pi⁵⁵pi³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1688",
+  "wordIds": [
+   "yubao-60756-v-1688"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³ɕi³³ka³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2574",
+  "wordIds": [
+   "yubao-60756-v-2574"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵tɕʰi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-384224",
+  "wordIds": [
+   "stedt-rn-384224"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「马」。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-359128",
+  "wordIds": [
+   "stedt-rn-359128"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³pa⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-359077",
+  "wordIds": [
+   "stedt-rn-359077"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³pi³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-359280",
+  "wordIds": [
+   "stedt-rn-359280"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³sie²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-359229",
+  "wordIds": [
+   "stedt-rn-359229"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³si³⁵ka⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-370922",
+  "wordIds": [
+   "stedt-rn-370922"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³tsʰo⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-359178",
+  "wordIds": [
+   "stedt-rn-359178"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³ȵi²¹ka²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-288541",
+  "wordIds": [
+   "stedt-rn-288541"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「马」。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0259",
+  "wordIds": [
+   "yubao-60823-v-0259"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「马」。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1685",
+  "wordIds": [
+   "yubao-60823-v-1685"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵a⁵³pa³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1686",
+  "wordIds": [
+   "yubao-60823-v-1686"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵ni⁵³ka¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1687",
+  "wordIds": [
+   "yubao-60823-v-1687"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³pi¹³pi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1688",
+  "wordIds": [
+   "yubao-60823-v-1688"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵ɕi¹³ka⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2574",
+  "wordIds": [
+   "yubao-60823-v-2574"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵tũ¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-w1459",
+  "wordIds": [
+   "w1459"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「马」。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "ma⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-w1462",
+  "wordIds": [
+   "w1462"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵¹tɕi⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2358",
+  "wordIds": [
+   "yubao-60823-v-2358"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵tɕie⁵³ma³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2358",
+  "wordIds": [
+   "yubao-60756-v-2358"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³tɕe³³xa³³ma³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1873",
+  "wordIds": [
+   "yubao-60823-v-1873"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³lũ³³tsʰɿ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1874",
+  "wordIds": [
+   "yubao-60823-v-1874"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵³ɣɤe¹³la⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1876",
+  "wordIds": [
+   "yubao-60823-v-1876"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵nie³³no⁵⁵tũ¹³tsʰɿ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1880",
+  "wordIds": [
+   "yubao-60756-v-1880"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵ɣə³³la³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2498",
+  "wordIds": [
+   "yubao-60823-v-2498"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「马」。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-w1460",
+  "wordIds": [
+   "w1460"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「马鞍子」。",
+  "donor": "马鞍子",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵¹aŋ⁵⁵tsɨ⁵⁵",
+    "span": [
+     1,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1878",
+  "wordIds": [
+   "yubao-60823-v-1878"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵nie³¹tsɿ⁵⁵kɤe³¹ɣɤe¹³la⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1879",
+  "wordIds": [
+   "yubao-60823-v-1879"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵nie³¹tʰa⁵⁵nie³¹ɣɤe¹³la⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1880",
+  "wordIds": [
+   "yubao-60823-v-1880"
+  ],
+  "kind": "借词来源",
+  "text": "「马」部分（第 1 音节）可能借自西南官话。",
+  "donor": "马",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵ɕi⁵⁵nie³¹ɣɤe¹³la⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1887",
+  "wordIds": [
+   "yubao-60824-v-1887"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语。",
+  "donor": "",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰʉ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2442",
+  "wordIds": [
+   "yubao-60824-v-2442"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「风车」。",
+  "donor": "风车",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "fẽ³³tsʰe³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-0362",
+  "wordIds": [
+   "yubao-60824-v-0362"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「单车」。",
+  "donor": "单车",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tã³³tsʰe³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1281",
+  "wordIds": [
+   "yubao-60824-v-1281"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语「车路」。",
+  "donor": "车路",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰe³³lu¹³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-204483",
+  "wordIds": [
+   "stedt-rn-204483"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「汽车」。",
+  "donor": "汽车",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi³⁵tsʰie⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60757-v-2442",
+  "wordIds": [
+   "yubao-60757-v-2442"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「车子」。",
+  "donor": "车子",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰɘ³³tsɿ³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0362",
+  "wordIds": [
+   "yubao-60823-v-0362"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「单车」。",
+  "donor": "单车",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tã⁵⁵tsʰɤ³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2483",
+  "wordIds": [
+   "yubao-60823-v-2483"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「火车」。",
+  "donor": "火车",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "xo⁵⁵tsʰɤe⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2484",
+  "wordIds": [
+   "yubao-60823-v-2484"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「汽车」。",
+  "donor": "汽车",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi¹³tsʰɤe⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2442",
+  "wordIds": [
+   "yubao-60823-v-2442"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「风车」。",
+  "donor": "风车",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "xũ⁵⁵tsʰɤe³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1887",
+  "wordIds": [
+   "yubao-60823-v-1887"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「车轴」。",
+  "donor": "车轴",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰɤe⁵⁵tsʰɤu⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0678",
+  "wordIds": [
+   "yubao-60823-v-0678"
+  ],
+  "kind": "借词来源",
+  "text": "「车」部分（第 6 音节）可能借自西南官话。",
+  "donor": "车",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "luɤ̃³³tsɿ³¹na¹³pu⁵⁵nie⁵⁵tsʰɤ⁵⁵",
+    "span": [
+     6,
+     6
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1855",
+  "wordIds": [
+   "yubao-60823-v-1855"
+  ],
+  "kind": "借词来源",
+  "text": "「车子」部分（第 3—4 音节）可能借自西南官话。",
+  "donor": "车子",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰɤ³³sa³¹tsʰɤe⁵⁵tsʰɿ⁵⁵",
+    "span": [
+     3,
+     4
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289522",
+  "wordIds": [
+   "stedt-rn-289522"
+  ],
+  "kind": "借词来源",
+  "text": "「蟜娘」部分（第 1—2 音节）可能借自湘语。",
+  "donor": "蟜娘",
+  "donorVariety": "湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "dʑio²¹niã³⁵du̵²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "xiang-etymology-stedt-rn-289737",
+  "wordIds": [
+   "stedt-rn-289737"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语，借入年代未定。",
+  "donorVariety": "湘语",
+  "borrowingPeriod": "undetermined",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰo³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ },
+ {
+  "id": "phrase-structure-yubao-60823-v-2790",
+  "wordIds": [
+   "yubao-60823-v-2790"
+  ],
+  "kind": "结构分析",
+  "text": "宾动短语：no⁵⁵「人」＋pu¹³「杀」。",
+  "reviewBatch": "ma-car-dragonfly-2026-10-23"
+ }
+]);
+EDITORIAL_NOTES.push({
+ "id": "chinese-loan-yubao-60824-v-2903",
+ "wordIds": [
+  "yubao-60824-v-2903"
+ ],
+ "kind": "借词来源",
+ "text": "当代湘语借词。",
+ "donorVariety": "湘语",
+ "borrowingPeriod": "contemporary",
+ "scope": "whole",
+ "reviewedForms": [
+  {
+   "ipa": "tsau³⁵nie²¹",
+   "span": [
+    1,
+    2
+   ]
+  }
+ ],
+ "reviewBatch": "xiang-contemporary-2026-10-23"
+});
+EDITORIAL_NOTES.push(...[
+ {
+  "id": "chinese-loan-w2258",
+  "wordIds": [
+   "w2258"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「提高」。",
+  "donor": "提高",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi²¹kau⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289187",
+  "wordIds": [
+   "stedt-rn-289187"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「提高」。",
+  "donor": "提高",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi²¹kau⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-181176",
+  "wordIds": [
+   "stedt-rn-181176"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「泉」。",
+  "donor": "泉",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰian²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2901",
+  "wordIds": [
+   "yubao-60756-v-2901"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「厉害」。",
+  "donor": "厉害",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "li³³xɛ³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-w472",
+  "wordIds": [
+   "w472"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「除」。",
+  "donor": "除",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2566",
+  "wordIds": [
+   "yubao-60756-v-2566"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「除」。",
+  "donor": "除",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2566",
+  "wordIds": [
+   "yubao-60823-v-2566"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「除」。",
+  "donor": "除",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2566",
+  "wordIds": [
+   "yubao-60824-v-2566"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语或西南官话「除」。",
+  "donor": "除",
+  "donorVariety": "湘语或西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "zu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2550",
+  "wordIds": [
+   "yubao-60756-v-2550"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「照相」。按宾动语序重组为「相 照」，两个成分均为借词。",
+  "donor": "照相",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ɕaŋ³⁵tsau⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2550",
+  "wordIds": [
+   "yubao-60823-v-2550"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「照相」。按宾动语序重组为「相 照」，两个成分均为借词。",
+  "donor": "照相",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã¹³tsau¹³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2550",
+  "wordIds": [
+   "yubao-60824-v-2550"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语或西南官话「照相」。按宾动语序重组为「相 照」，两个成分均为借词。",
+  "donor": "照相",
+  "donorVariety": "湘语或西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã¹³tsau¹³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
  }
 ]);
 // Index source IDs once; list filtering visits every merged entry.

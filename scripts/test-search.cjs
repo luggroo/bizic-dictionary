@@ -19,6 +19,13 @@ assert(score({forms:['lüè']},'lve','tujia')>0);
 assert.equal(score({forms:['lüè']},'lue','tujia'),0);
 assert.equal(score({forms:['ba'],zh:'姐姐; 堂姐'},'姐姐','zh',true),100);
 assert.equal(score({forms:['tia']},'ti','tujia',true),0);
+const dragonfly={forms:['jjiòniánddèu'],en:'dragonfly'};
+assert(score(dragonfly,'ddeu','tujia')>0,'word-final syllable is searchable');
+assert(score(dragonfly,'nian','tujia')>0,'word-medial syllable is searchable');
+assert(score({forms:['ddèu']},'ddeu','tujia')>score({forms:['ddèubā']},'ddeu','tujia'));
+assert(score({forms:['ddèubā']},'ddeu','tujia')>score(dragonfly,'ddeu','tujia'),'prefix precedes embedded matches');
+assert.equal(score(dragonfly,'ddeu','tujia',true),0,'exact matching still requires the complete form');
+assert.equal(score(dragonfly,'ddeu','en'),0,'embedded spelling matches respect the language scope');
 assert.equal(score({forms:['tí']},'ti','zh'),0);
 for(const q of ['ıì-mò-kēn-crı̀','ıi-mo-ken-cri','ii-mo-ken-cri','iimokencri']){
  assert.equal(score({forms:['ıì-mò-kēn-crı̀']},q,'tujia',true),100,q);

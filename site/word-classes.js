@@ -113,12 +113,17 @@ const WordClasses=(()=>{
    return [...new Set([...(Array.isArray(w?.positions)?w.positions:[]),w?.pos]
      .filter(x=>x!==null&&x!==undefined&&String(x).trim()).map(x=>String(x).trim()))];
  }
+ const reviewedClasses=new Map([['yubao-60823-v-2790',['phrase']],['yubao-60756-v-2550',['phrase']],['yubao-60823-v-2550',['phrase']],['yubao-60824-v-2550',['phrase']]]);
+ function reviewedIds(w){
+   return [...new Set([w?.id,...(w?.mergedWordIds||[]),...(w?.attestations||[]).map(a=>a.id)]
+     .flatMap(id=>reviewedClasses.get(id)||[]))];
+ }
  const cache=new WeakMap();
  function ids(w){
    if(!w||typeof w!=='object')return ['unclassified'];
    if(cache.has(w))return cache.get(w);
-   const found=new Set();
-   for(const raw of sourceLabels(w))for(const id of resolve(raw))found.add(id);
+   const found=new Set(reviewedIds(w));
+   if(!found.size)for(const raw of sourceLabels(w))for(const id of resolve(raw))found.add(id);
    if(!found.size)found.add('unclassified');
    const out=[...found].filter(id=>![...found].some(other=>other!==id&&other.startsWith(id+'.')))
      .sort((a,b)=>order.get(a)-order.get(b));
@@ -146,14 +151,14 @@ const WordClasses=(()=>{
    'affix.suffix.adjectival':'adj. suff.',interjection:'interj.',ideophone:'ideo.',phrase:'phr.',unclassified:'uncl.'
  };
  function abbreviation(w){
-   return sourceLabels(w).length?ids(w).map(id=>abbreviations[id]).join(', '):'';
+   return sourceLabels(w).length||reviewedIds(w).length?ids(w).map(id=>abbreviations[id]).join(', '):'';
  }
  function label(w,language){
-   if(!sourceLabels(w).length)return '';
+   if(!sourceLabels(w).length&&!reviewedIds(w).length)return '';
    return ids(w).map(id=>language?byId.get(id)[language]:byId.get(id).zh+' / '+byId.get(id).en).join(' · ');
  }
  function badges(w){
-   return sourceLabels(w).length?ids(w).map(id=>'<span class="word-class-badge">'+escape(byId.get(id).zh)+'</span>').join(''):'';
+   return sourceLabels(w).length||reviewedIds(w).length?ids(w).map(id=>'<span class="word-class-badge">'+escape(byId.get(id).zh)+'</span>').join(''):'';
  }
  function escape(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  let counts=new Map();
