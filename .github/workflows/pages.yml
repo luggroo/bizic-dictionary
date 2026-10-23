@@ -2,7 +2,7 @@ name: Publish Tujia knowledge index
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/apply-gloss-reviews.py', 'scripts/test-reader-copy.cjs', 'scripts/normalize-ipa-data.cjs', 'scripts/refresh-brassett-ipa.cjs', 'scripts/test-brassett-ipa.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', '.github/workflows/pages.yml']
+    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/apply-gloss-reviews.py', 'scripts/test-reader-copy.cjs', 'scripts/normalize-ipa-data.cjs', 'scripts/refresh-brassett-ipa.cjs', 'scripts/test-brassett-ipa.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-word-classes.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -23,6 +23,7 @@ jobs:
         run: |
           node scripts/test-ipa-normalize.cjs
           node scripts/test-brassett-ipa.cjs
+          node scripts/test-word-classes.cjs
       - name: Expand website datasets
         run: find site -name '*.gz' -exec gzip -dk {} \;
       - name: Install same-origin Gentium Plus webfonts

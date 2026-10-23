@@ -139,3 +139,7 @@ button.primary:hover,button.primary:focus-visible{background:var(--green);color:
 .notation-section>summary h2{display:inline;margin:0;font-size:21px}
 .notation-section[open]>summary{margin-bottom:15px}
 .notation-section>summary:focus-visible{outline:2px solid var(--green);outline-offset:5px}
+
+/* Compact bilingual word-class labels and a native grouped selector. */
+.filters select[data-filter="pos"]{max-width:min(330px,100%)}
+.word-class-label{font-size:11px;line-height:1.45;color:var(--muted)}
