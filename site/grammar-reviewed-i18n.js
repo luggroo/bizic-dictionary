@@ -1865,3 +1865,22 @@ Object.assign(UI_TRANSLATIONS,{
   "现在不能做、已经不能做了": "Cannot do it now; can no longer do it",
   "出处：Brassett等（2006），第120、131–132、135–137页。": "Source: Brassett et al. (2006), pp. 120, 131–132, 135–137."
 });
+
+// Aspectual contrasts in the predicate overview.
+Object.assign(UI_TRANSLATIONS,{
+  "将要发生与开始": "Anticipated events and onset",
+  "进行、持续与当前相关": "Progress, duration and present relevance",
+  "事件发生后：完结、经历和结果": "After an event: completion, experience and results",
+  "体态的否定": "Negating aspectual meanings",
+  "“做完”“做过”“做了”和“结果仍在”有不同的侧重点。ji、lie也可用于尚未执行的步骤，具体时间由语境决定，见": "Finishing, prior experience, an event having occurred and a persisting result have different emphases. Ji and lie can also occur in instructions for steps yet to be carried out; time is determined by context. See ",
+  "已经做了，突出当前结果，如“吃过中饭了”；所引补充语料中可换成liao": "An event has occurred, with its present result in focus, as in “have eaten lunch”; interchangeable with liao in the cited supplementary data",
+  "动作或变化已经发生，如“吃了”“红了”“冷了”；与当前情况的联系随语境而异": "An action or change has occurred, as in “have eaten”, “has turned red” or “has become cold”; the link to the current situation depends on context",
+  "结果状态＋陈述确认": "Resulting state + assertion",
+  "鲁曼等的“刚刚吃饭”例中，突出吃过后仍饱的状态；xi对整个陈述起作用。": "In Lu et al.’s example of having just eaten, the resulting state of still being full is highlighted; xi has scope over the whole assertion.",
+  "已经做完或达到某种程度，如“做完了”“冷透了”": "An action has been completed or a degree attained, as in “have finished” or “has become thoroughly cold”",
+  "经历的否定": "Negated experience",
+  "没做过，如“没吃过”；与bola的“做过”相对，见": "No prior experience, as in “have never eaten”; contrasts with bola “have done before”. See ",
+  "没做完，如“没拿完”。": "An action was not completed, as in “did not finish taking them.”",
+  "鲁曼、周雪姣、向鹏辉（2021），《土家语名物化标记ɕi功能扩展研究》，第431–432页，例45。作者把po xi与liao相对照，分别突出饭后保持的状态和吃饭事件的结束；详见": "Lu Man, Zhou Xuejiao and Xiang Penghui (2021), Functional Extensions of the Tujia Nominalizer ɕi, pp. 431–432, example 45. The authors contrast po xi, highlighting the state persisting after eating, with liao, highlighting the end of the eating event; see ",
+  "Brassett等（2006），第112页，例30：“没拿完”。终点成分ji后接事实否定；“还没吃完”的形式另见田志慧第526页。": "Brassett et al. (2006), p. 112, example 30: “did not finish taking them”. The endpoint marker ji is followed by factual negation. For “have not finished eating yet”, see Tian Zhihui, p. 526."
+});

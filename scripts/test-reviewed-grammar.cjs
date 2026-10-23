@@ -90,12 +90,12 @@ const root=path.resolve(__dirname,'../site');
       const overview=document.querySelector('.grammar-predicate-overview');
       const headings=[...overview.querySelectorAll('h5')].map(h=>h.textContent);
       if(JSON.stringify(headings)!==JSON.stringify(['一般否定','体态及其否定','情态及其否定','方向','程度','不规则变化','名词化']))failures.push('Overview: missing or reordered sections');
-      if(overview.querySelectorAll('table').length!==7)failures.push('Overview: each section must have its own table');
+      if(overview.querySelectorAll('table').length!==10)failures.push('Overview: missing section or aspect subgroup table');
       const forms=[...overview.querySelectorAll('tbody td')];
       for(const cell of forms){const w=document.createTreeWalker(cell,NodeFilter.SHOW_TEXT);let n;while((n=w.nextNode()))if(!n.parentElement.closest('.grammar-pair')&&/\/[^/]+\//.test(n.nodeValue))failures.push('Overview: unpaired IPA '+n.nodeValue);}
       const orderTables=[...document.querySelectorAll('table')].filter(t=>['位置','位置组合'].includes(t.rows[0]?.cells[0]?.textContent));
       for(const table of orderTables){const copy=table.cloneNode(true);copy.querySelectorAll('.grammar-pair').forEach(n=>n.remove());if(/\/[^/]+\//.test(copy.textContent))failures.push('Postpredicate order: IPA missing switchable spelling');}
-      for(const ipa of ['la','tɕi','xu','tuɔ','ɕi','tsʰi','ɲie ɕi','ma','ku'])if(!forms.some(c=>[...c.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa===ipa&&!/[¹²³⁴⁵xfrv]$/.test(p.querySelector('.grammar-spelling').dataset.ye))))failures.push('Overview: variable-tone affix not displayed without tone: '+ipa);
+      for(const ipa of ['la','tɕi','po la','po ɕi','liau','tɕi liau','xu','tuɔ','ɕi','tsʰi','ɲie ɕi','ma','ku'])if(!forms.some(c=>[...c.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa===ipa&&!/[¹²³⁴⁵xfrv]$/.test(p.querySelector('.grammar-spelling').dataset.ye))))failures.push('Overview: variable-tone affix not displayed without tone: '+ipa);
       const modality=[...overview.querySelectorAll('table')].find(t=>t.rows[0].cells[2]?.textContent==='对应否定');
       for(const [positive,negative] of [['ɣɤ⁵⁵','tsʰɿ⁵⁵ ɣɤ⁵⁵'],['tsʰɤ⁵⁵','xɨ⁵⁵ tsʰɤ⁵⁵'],['pie⁵⁵','tʰa⁵⁵ pie⁵⁵'],['tsʰa²⁴','tsʰa²⁴ ta²⁴'],['tsʰɤ⁵⁵','tʰa⁵⁵ tsʰɤ⁵⁵']])if(![...modality.tBodies[0].rows].some(r=>r.cells[1].querySelector('[data-ipa="'+positive+'"]')&&r.cells[2].querySelector('[data-ipa="'+negative+'"]')))failures.push('Overview: modal negative separated from affirmative '+negative);
       if(![...document.querySelectorAll('h4')].some(h=>h.textContent==='Brassett的合音分析'))failures.push('Overview: contraction analysis lost its attribution');
