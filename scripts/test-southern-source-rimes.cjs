@@ -37,7 +37,7 @@ assert.equal(c.surveyWordCorrection('other','60824','0363'),null);assert.equal(c
  const straw=data.words.find(w=>w.id===luxi+'-v-0182');assert(straw);
  assert.equal(straw.attestations[0].term,'ɨ21mo21kẽ55tsi21');
  const spelling=c.southernNotationValues(straw)[0];
- assert.equal(spelling.accent,'ıìmògēnzrı̀');assert.equal(spelling.poj,'ıì-mò-kēn-crı̀');
+ assert.equal(spelling.accent,'ıìmògēnzì');assert.equal(spelling.poj,'ıì-mò-kēn-crı̀');
  assert.equal(straw.notations.ipa[0].text,'ɨ²¹mo²¹kẽ⁵⁵tsi²¹');
  for(const name of ['SOUTH_SOURCE_RIME_RULES','SOUTH_DOTLESS_I_RULES','SOUTH_APICAL_RULES']){
   const translated=vm.runInContext('UI_TRANSLATIONS['+name+']',c);

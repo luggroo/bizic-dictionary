@@ -12,8 +12,8 @@ const SOUTH_ONSETS={
 };
 const SOUTH_RIMES={
  'i':'i','e':'e','a':'a','o':'o','u':'u','y':'ü','ɯ':'eu','ʉ':'eu','ɨ':'ıi','ɿ':'rı',
- 'ei':'ei','ai':'ai','au':'au','aɨ':'au','aɯ':'au',
- 'ie':'ie','ɨe':'e','ɯe':'e','ia':'ia','io':'io','iɯ':'ieu','iʉ':'ieu',
+ 'ei':'ei','ai':'ai','au':'au','ao':'au','aɨ':'au','aɯ':'au',
+ 'ie':'ie','ɨe':'e','ɯe':'e','ia':'ia','io':'io','iu':'iu','iɯ':'ieu','iʉ':'ieu',
  'iau':'iau','iaɨ':'iau','iaɯ':'iau','ue':'ue','ua':'ua','uei':'uei','ui':'uei','uai':'uai','uo':'uo',
  'ye':'üe','ya':'üa','yi':'üi',
  'ĩ':'in','ẽ':'en','ã':'an','õ':'on','ũ':'un','ỹ':'ün',
@@ -23,15 +23,15 @@ const SOUTH_TONES={'55':'\u0304','33':'','35':'\u0301','21':'\u0300','13':'\u030
 const SOUTH_ORDER=Object.keys(SOUTH_ONSETS).sort((a,b)=>b.length-a.length);
 const SOUTH_PINYIN_RULES='调号拼音 j、q、x（含浊音 jj）后补足 i，如 je → jie、qa → qia、xon → xion；已有 i 或 ü 不重复添加。两套拼写中，y 后的 i 在另一个元音前省去，如 yia → ya、yie → ye、yio → yo、yieu → yeu；yi、yin 保留 i。白话字 /j/ 起首的相应形式写 ia、ie、io、ieu。下表为基础对应，/i、ei、ɨ/ 的来源差异另列。';
 const SOUTH_SOURCE_RIME_RULES='Tian 86 南部：调号拼音与白话字共用韵母，/i/ 写 i，/ei/ 写 ei；/ɨ/ 在 /k、kʰ、g、ŋ、x、ɣ/ 后写 i，其他位置写 ıi。中国语保泸溪：/t、d/ 后的 /ɨ/ 在两套拼写中写 ei；/k、kʰ、g、x、ɣ、ħ、ʕ/ 后写 i，其他位置写 ıi。';
-const SOUTH_APICAL_RULES='舌尖元音写 rı，末字母为无点 ı；声调直接加在 ı 上：rı̄、rı、rı́、rı̀、rı̌。声母 r 与韵母 rı 相接时只写一个 r。Tian 86 的 /i/ 按来源对应写 i；其他南部来源中，/ts、tsʰ、dz、s、z/ 后记作 /i/ 的舌尖元音，白话字写 crı、chrı、jrı、srı、rı，调号拼音写 zrı、crı、zzrı、srı、rı。直接记作 /ɿ/ 的舌尖元音也写 rı；原始 IPA 保留各来源的记法。';
+const SOUTH_APICAL_RULES='舌尖元音在调号拼音中写 i，在白话字中写 rı。例如 /ts、tsʰ、dz、s、z/ 后的舌尖元音，调号拼音写 zi、ci、zzi、si、ri，白话字写 crı、chrı、jrı、srı、rı。白话字的 ı 不带点，声调直接加在 ı 上：rı̄、rı、rı́、rı̀、rı̌；声母 r 与韵母 rı 相接时只写一个 r。Tian 86 的 /i/ 按来源对应，在两套拼写中都写 i。其他来源中，上述声母后记作 /i/ 或直接记作 /ɿ/ 的舌尖元音按此规则拼写；原始 IPA 保留各来源的记法。';
 const SOUTH_DOTLESS_I_RULES='ıi 表示一个元音 /ɨ/，首字母为无点 ı，声调标在第二个 i 上：ıī、ıi、ıí、ıì、ıǐ。白话字的 cıi、chıi、sıi 与 ci、chi、si 区分；ıi 不触发 i、ü 前的腭化读法。搜索时也可输入 ii。';
-function southernRimeRows(){return Object.entries(SOUTH_RIMES).map(([ipa,rime])=>[ipa,rime,rime])}
+function southernRimeRows(){return Object.entries(SOUTH_RIMES).map(([ipa,rime])=>[ipa,rime==='rı'?'i':rime,rime])}
 function southernSourceRimeRows(){return [
  ['Tian 86','i','全部','i','i'],['Tian 86','ei','全部','ei','ei'],
  ['Tian 86','ɨ','k、kʰ、g、ŋ、x、ɣ','i','i'],['Tian 86','ɨ','其他声母或零声母','ıi','ıi'],
  ['中国语保 · 泸溪','ɨ','t、d','ei','ei'],['中国语保 · 泸溪','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['中国语保 · 泸溪','ɨ','其他声母或零声母','ıi','ıi'],
- ['中国语保泸溪及其他非 Tian 86 来源','i','ts、tsʰ、dz、s、z（舌尖元音）','rı','rı'],
- ['南部各来源','ɿ','全部','rı','rı'],
+ ['中国语保泸溪及其他非 Tian 86 来源','i','ts、tsʰ、dz、s、z（舌尖元音）','i','rı'],
+ ['南部各来源','ɿ','全部','i','rı'],
  ['其他南部来源','ɨ','k、kʰ、g、x、ɣ、ħ、ʕ','i','i'],['其他南部来源','ɨ','其他声母或零声母','ıi','ıi']
 ]}
 let southernDisplay='accent';
@@ -71,18 +71,19 @@ function southernSpelling(raw,source='',explicit=false){
   // Dental i is the source's apical-vowel notation outside Tian's separate i mapping.
   if(!tian&&r==='i'&&['ts','tsʰ','dz','s','z'].includes(onset))rime='rı';
   if(!rime||(!Object.hasOwn(SOUTH_TONES,m[2])&&m[2]!=='?'))return null;
-  if(['ɲ','ȵ'].includes(onset)&&rime.startsWith('i'))rime=rime.slice(1);
+  // Keep the vowel available for tone marking, including standalone /ɲi/.
+  const nasalOverlap=['ɲ','ȵ'].includes(onset)&&rime.startsWith('i');
   const sep=count&&/^[\s-]*$/.test(gap)?'-':gap.replace(/[|｜]/g,' / ');
   let pojRime=rime;
   // The onset r and the r of the apical rime are written only once.
   if(SOUTH_ONSETS[onset][1]==='r'&&pojRime==='rı')pojRime='ı';
-  let pojOnset=SOUTH_ONSETS[onset][1];
+  let pojOnset=nasalOverlap?'n':SOUTH_ONSETS[onset][1];
   if(onset==='j'&&!sharedRime){pojOnset='';if(!/^[iıü]/.test(pojRime))pojRime='i'+pojRime;}
   if(onset==='w'&&!sharedRime){pojOnset='';if(!pojRime.startsWith('u'))pojRime='u'+pojRime;}
   pojRime=southYInitialRime(pojOnset,pojRime);
   const pojMarked=m[2]==='?'?pojRime+'⁇':southMark(pojRime,m[2],explicit);
-  const pinyinOnset=SOUTH_ONSETS[onset][0];
-  let pinyinBaseRime=pinyinOnset==='r'&&rime==='rı'?'ı':rime;
+  const pinyinOnset=nasalOverlap?'n':SOUTH_ONSETS[onset][0];
+  let pinyinBaseRime=rime==='rı'?'i':rime;
   pinyinBaseRime=southYInitialRime(pinyinOnset,pinyinBaseRime);
   const core=pinyinPalatalCore(pinyinOnset+pinyinBaseRime);
   const pinyinRime=core.slice(pinyinOnset.length);

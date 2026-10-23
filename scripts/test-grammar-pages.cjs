@@ -9,6 +9,19 @@ const result=vm.runInContext(`(()=>{
  const failures=[];let pages=0,citations=0;
  const bodyPairs=root=>[...root.querySelectorAll('.grammar-pair')].filter(n=>!n.closest('.grammar-footnotes')).map(n=>n.dataset.ipa).sort();
  const root=html=>{const n=document.createElement('div');n.innerHTML=html;return n};
+ // Stable routes must survive reordered and merged reading sections.
+ for(const [dialect,chapters] of Object.entries(REVIEWED_GRAMMAR)){
+  for(const ch of chapters)for(const [index,section] of ch.sections.entries()){
+   const route=grammarPageURL(ch,section).split('/');
+   if(route[2]+'.'+route[3]!==section.id)failures.push(section.id+': route points to another section');
+   if(grammarPageNumber(ch,section)!==ch.number+'.'+(index+1))failures.push(section.id+': reading number out of order');
+  }
+  for(const [old,target] of Object.entries(GRAMMAR_PAGE_REDIRECTS[dialect]||{})){
+   const resolved=grammarResolvePage({grammarDialect:dialect,grammarSection:old});
+   const ch=chapters.find(c=>c.id===resolved.chapter);
+   if(resolved.grammarSection!==target||!ch?.sections.some(s=>s.id===target))failures.push(old+': missing redirect target');
+  }
+ }
  for(const d of ['north','south'])for(const ch of REVIEWED_GRAMMAR[d])for(const language of ['zh','en']){
   const whole=root(grammarRenderHTML(ch,language)),combined=[],rendered=new Map();
   for(const section of ch.sections.length?ch.sections:[null]){

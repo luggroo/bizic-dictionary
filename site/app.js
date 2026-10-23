@@ -190,6 +190,7 @@ function cleanViewState(value){
  for(const key of Object.keys(next))if(typeof DEFAULT_STATE[key]==='string')next[key]=String(next[key]??'').slice(0,2000);
  next.grammarDialect=next.grammarDialect==='south'?'south':'north';
  next.chapter=typeof normalizeGrammarChapter==='function'?normalizeGrammarChapter(next.chapter,next.grammarDialect):next.chapter;
+ if(typeof grammarResolvePage==='function')Object.assign(next,grammarResolvePage(next));
  if(typeof normalizeGrammarSection==='function')next.grammarSection=normalizeGrammarSection(next.chapter,next.grammarDialect,next.grammarSection,next.grammarAnchor);
  if(D&&next.pos)next.pos=WordClasses.filterId(next.pos);
  next.page=Number.isFinite(Number(next.page))?Math.max(1,Math.floor(Number(next.page)||1)):1;

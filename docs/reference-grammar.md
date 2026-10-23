@@ -21,15 +21,13 @@
   - [7. 话题、篇章与语言变异](#north-part-6)
 
 - **南部土家语**
-  - [1. 语音、语序与方言概况](#south-part-1)
-
-  - [2. 名词、代词与名词短语](#south-part-2)
-  - [3. 动词、形容词与谓语结构](#south-part-3)
-
-  - [4. 句子类型与语气](#south-part-4)
-  - [5. 名词化、从句与复句](#south-part-5)
-
-  - [6. 话题、篇章与语言变异](#south-part-6)
+  - [1. 语音](#south-part-1)
+  - [2. 基本语序与句型](#south-basic-order)
+  - [3. 名词、代词与名词短语](#south-part-2)
+  - [4. 动词、形容词与谓语结构](#south-part-3)
+  - [5. 句子类型与语气](#south-part-4)
+  - [6. 从句与复句](#south-part-5)
+  - [7. 话题与语言接触](#south-part-6)
 - [附录：现有语音与记音资料](#phonology-appendix)
 - [审阅说明与内容去向](#review-notes)
 
@@ -3131,140 +3129,205 @@ zuf放在背景小句末尾，表示“当……时”。
 ---
 
 # 南部土家语
-
-南部土家语部分依次介绍语音与语序、名词短语、动词和形容词，以及句子结构。资料尚缺的部分在相应章节标明。
+南部土家语部分依次介绍语音、基本语序与句型、名词短语、动词和形容词，以及从句和复句。
 
 <a id="south-part-1"></a>
 
-## 1. 语音、语序与方言概况
+## 1. 语音
 
-### 1.1 从完整句子看语序
+<!-- grammar-id:201 -->
+
+### 1.1 声母、韵母与声调
+
+<!-- grammar-id:201.4 -->
+
+<a id="south-1-3"></a>
+
+<a id="south-28-1"></a>
+
+南部土家语的声母、韵母和声调与拼音的对应见[记音对应](https://luggroo.github.io/bizic-dictionary/#notation)。
+
+声母有清不送气、清送气和浊音的区别，如 /p/、/pʰ/、/b/。韵母包括单元音、复元音和鼻化元音。《Proto-Bizic: A Study of Tujia Historical Phonology》列出的下都单字调有五个：⁵⁵、³³、³⁵、²¹、¹³。
+
+各资料的记音和分析不完全一致，细小的写法差别也可能来自记音习惯。例句保留所引资料的读音；涉及具体用法时，再注明来源或地点。
+
+出处：《Proto-Bizic: A Study of Tujia Historical Phonology》（2020），第30—31页。[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)
+
+<!-- southern-phonology-tables -->
+
+### 1.2 例句记音
+
+<!-- grammar-id:201.2 -->
+
+<a id="south-1-1"></a>
+
+<a id="south-3-3"></a>
+
+例句依次列出拼音、国际音标、逐词解释和整句译文。拼音随显示设置切换；国际音标保留来源的记音。
+
+音标上方的数字表示声调，1 最低，5 最高。一个词可以有几个音节，各音节分别标调。例如 /ʔa¹³lie⁵⁵/“蛋”有两个音节，声调分别为¹³和⁵⁵。
+
+音标用斜线 / / 标示，方括号 [ ] 内是具体读音。每一栏的拼音、音标和逐词解释相互对应；逐词解释中的“·”分开词内各部分的意思。
+
+出处：《Proto-Bizic: A Study of Tujia Historical Phonology》（2020），第30—31、95—96页。[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)
+
+<a id="south-basic-order"></a>
+
+## 2. 基本语序与句型
+
+<!-- grammar-id:207 -->
+
+### 2.1 主语、宾语与动词
+
+<!-- grammar-id:207.1 -->
+
+南部土家语常把主语放在前面，宾语放在动词前。带两个宾语时，收到东西的人可以放在物品前面。
+
+<a id="south-15-2"></a>
 
 表示“给谁什么”时，可以按“主语—收到东西的人—物品—动词”排列。下面泸溪且己的例句把“你”放在“铜钱”前，两者后面都没有额外的关系词。
 
-/ŋo³¹ ɲi³¹ doŋ²¹ dzian²¹ ʕɯ¹³/
+/ŋo³¹ ɲi³¹ doŋ²¹ dʑian²¹ ʕɯ¹³/
 
 我｜你｜铜钱｜还
 
 我还你钱。（泸溪且己）
 
-向亮（2019），第76页，例（27）。
+出处：《土家语三种句式的类型学特征》（2019），第76页，例（27）。
 
 [原文](https://drive.google.com/file/d/1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK/view)
 
-本句的双宾语结构见[名词的语序与关系词](#south-15-2)；判断句的现有例句见[判断与否定](#south-18-1)。
+### 2.2 判断句
 
-### 1.2 记音、音节与连读
+<!-- grammar-id:207.2 -->
 
-<a id="south-1-1"></a>
+<a id="south-21-2"></a>
 
-#### 例句与词例的记音
+<a id="south-18-1"></a>
 
-南部土家语例词以国际音标记音。斜线/ /表示音位，方括号[ ]表示具体发音，上标数字标记声调。下都与下且己分别简称CB、CJ。
+说明是什么或是谁的东西时，可以用相当于“是”的词。说“不是”时，“不”放在“是”前；下例的 /mɛ²¹ sɯ⁵³/ 表示“不是”。
 
-**词例**
+/dʑia²¹ bu²¹ mɛ²¹ sɯ⁵³ ŋo¹³ gu²¹/
 
-| 形式 | 意义 | 出处 |
-| --- | --- | --- |
-| /tɨ³³pʰie³⁵/ | 蛇（下都） | Zhou 2020，第31页 |
-| /ti⁵⁵pʰei⁵⁵/ | 蛇（下且己） | Zhou 2020，第31页 |
+这｜个｜不｜是｜我｜的
 
-说明：论文用 TJI 指北部、TJS 指南部；第30页图1-9和第31页表1-16标题里的 “TJI (CB)” 与章节和调查点说明不符，本站按南部 CB 处理，并保留这一校勘记录。
+这个不是我的。（泸溪且己）
 
-说明：原文使用 ʦ、ǳ、ʨ、ʥ 等合字记音；本节保留原字符，不静默换成另一套拼写。南部 IPA 不套用北部叶氏拼音转换。
-
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：§1.3，第21页；§1.3.4，第30–31页
-
-<a id="south-3-3"></a>
-
-#### 多音节词与声调
-
-一个词可以包含多个音节，各音节分别带调。例如下都“蛇”tɨ³³pʰie³⁵有两个音节，声调分别为³³和³⁵；下且己的ti⁵⁵pʰei⁵⁵也有两个音节，但都读⁵⁵。
-
-**按词显示、按音节读调**
-
-| 词义 | 调查点 | 连写例词 | 对应的音节结构 |
-| --- | --- | --- | --- |
-| 血 | CB | mi²¹mi²¹ | mi²¹＋mi²¹ |
-| 血 | CJ | mie²¹mie²¹ | mie²¹＋mie²¹ |
-| 蛋 | CB | ʔa¹³lie⁵⁵ | ʔa¹³＋lie⁵⁵ |
-
-说明：原书把“血”的 CJ 形式放在 CB {CJ} 栏的花括号里；这里拆成两个有明确调查点的记录。
-
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：表1-17；§5.3及表5-6、5-7，第31、95–96页
-
-<a id="south-4-2"></a>
-
-#### 连续语流中的低调
-
-连续语流中的低调对立有时会弱化，¹³与²¹在正常语速下可能不易区分。这种现象与语速和语境有关。
-
-**低调记录实例**
-
-| 词义 | CB | CJ | 分析层次 |
-| --- | --- | --- | --- |
-| 血 | mi²¹mi²¹ | mie²¹mie²¹ | 原表记录低调；底层或历史13的解释属于作者的假说 |
-
-说明：现代例词中记录的调值为21；重建调值属于历史解释，与现代读音分列。
-
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：§5.3末段，第94页；表5-6，第95页
-
-### 1.3 南部内部的方言概况
-
-<a id="south-1-3"></a>
-
-#### 下都、下且己与资料来源
-
-下都和下且己均位于泸溪县，两地话在声母、韵母和声调上存在差异。例如“蛇”在下都读tɨ³³pʰie³⁵，在下且己读ti⁵⁵pʰei⁵⁵。
-
-**南部调查点与底本**
-
-| 代号 | 调查点 | Zhou 所用来源 | 资料性质 |
-| --- | --- | --- | --- |
-| CB | Cebu／下都，泸溪县 | Li（2000） | 较全面的田野词表；Zhou 说明底本尚未作音位分析 |
-| CJ | Caji-adi／下且己，泸溪县 | Xiang（2017） | 约1,000条词汇；须与邻近且己的其他资料区别 |
-
-说明：当前整理采用 Computer Friendly Version (with typographical corrections)，不混用 Submitted Version 的分页或排版。正文页码与本 PDF 文件页序在所核页面一致。
-
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：§1.3 Sources and Phonology，第21页
-
-<a id="south-28-1"></a>
-
-#### 方言词例的差异
-
-南部土家语内部也有地域差异。例如下都和下且己的“蛇”在声调和元音上都不相同。
-
-/tɨ³³ pʰie³⁵/；/ti⁵⁵ pʰei⁵⁵/
-
-下都；下且己
-
-蛇。
-
-Zhou（2020），第31页。
+出处：《土家语三种句式的类型学特征》（2019），第73–74页，例（12）。
 
 [原文](https://drive.google.com/file/d/1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK/view)
 
-详细声母、韵母和调值表见[附录 B](#south-1-2)。
+### 2.3 存在与处所
+
+<!-- grammar-id:207.3 -->
+
+说人在哪里时，可以先说人，再说地点，最后说“在”。
+
+| 拼音 | 'àmà | càdè | hxéu |
+| --- | --- | --- | --- |
+| IPA | ʔa²¹ma²¹ | tsʰa²¹te²¹ | ɣɯ³⁵ |
+| 中文逐词 | 妈妈 | 家里 | 在 |
+| English | mother | home | be at |
+
+译文：妈妈在家里。 / Mother is at home.
+
+出处：向亮《南部土家语研究》（2017），第131页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+表示没有某种东西时，下面的例句把“没有”放在东西后面。
+
+| 拼音 | ga | càdè | wòní | gēulié |
+| --- | --- | --- | --- | --- |
+| IPA | ka³³ | tsʰa²¹te²¹ | wo²¹ȵi³⁵ | kɯ⁵⁵lie³⁵ |
+| 中文逐词 | 他 | 家 | 母牛 | 没有 |
+| English | his | home | cow | not have |
+
+译文：他家没有母牛。 / His family has no cow.
+
+出处：向亮《南部土家语研究》（2017），第131页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+### 2.4 被动句
+
+<!-- grammar-id:207.4 -->
+
+被动句可以先说受到影响的人，再说发生的事。《土家语三种句式的类型学特征》中的泸溪且己例句按“我—被—打—了”排列，没有说是谁打的。
+
+| 拼音 | ngo | hěu | bbūlà |
+| --- | --- | --- | --- |
+| IPA | ŋo³¹ | ʕɯ¹³ | bu⁵³la²¹ |
+| 中文逐词 | 我 | 被 | 打·了 |
+| English | I | was | hit·already |
+
+译文：我被打了。 / I was hit.
+
+出处：向亮《土家语三种句式的类型学特征》（2019），第74页。[原文](https://drive.google.com/file/d/1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK/view)
 
 <a id="south-part-2"></a>
 
-## 2. 名词、代词与名词短语
+## 3. 名词、代词与名词短语
 
-### 2.1 名词构词
+<!-- grammar-id:202 -->
+
+### 3.1 人称、反身与指示代词
+
+<!-- grammar-id:202.3 -->
+
+#### 人称与反身代词
+
+代词可以指说话的人、听话的人或另一个人，也可以作主语或宾语。下表列出《南部土家语研究》中的六个人称代词。同一个词在例句中的声调有时与单独列词时不同，例句保留原书的读音。
+
+| 意思 | 代词 |
+| --- | --- |
+| 我 | ŋo³¹ |
+| 你 | ȵi³³ |
+| 他 | ka³³ |
+| 我们 | ʔa²¹ȵi²¹ |
+| 你们 | ʔɯe²¹sɿ²¹ |
+| 他们 | ka²¹sɿ²¹ |
+
+出处：向亮《南部土家语研究》（2017），第102页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+“自己”可以放在“我、你、他”等代词后面。下面的短语相当于英语的 myself。
+
+| 拼音 | ngo | cibo |
+| --- | --- | --- |
+| IPA | ŋo³¹ | tsʰɿ³³po³³ |
+| 中文逐词 | 我 | 自己 |
+| English | I | self |
+
+译文：我自己。 / Myself.
+
+出处：向亮《南部土家语研究》（2017），第103页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+#### 指示代词
+
+“这”和“那”可以指出正在说的东西。指地方时，可以用“这里”和“那里”。下表四个词见《南部土家语研究》。
+
+| 意思 | 说法 |
+| --- | --- |
+| 这 | dʑia²¹ |
+| 那 | da²¹ |
+| 这里 | dʑia²¹te²¹ |
+| 那里 | da²¹te²¹ |
+
+出处：向亮《南部土家语研究》（2017），第103页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+### 3.2 名词构词
+
+<!-- grammar-id:202.1 -->
 
 <a id="south-7-1"></a>
 
-#### 职业称谓中的复合形式
+#### 用“人”组成工作名称
 
-南部部分职业称谓以“人”为中心，前面的动宾结构说明职业活动。例如“石头＋打＋人”表示石匠，“衣服＋缝＋人”表示裁缝。
+有些工作的名称用“人”结尾，前面说明这个人做什么。例如“石头＋打＋人”表示石匠，“衣服＋缝＋人”表示裁缝。
 
-/lɯ⁵¹ bu⁵¹ ɲia⁵⁵/
+/lɯ⁵ bu⁵¹ ɲia⁵⁵/
 
 石头｜打｜人
 
 石匠。
 
-向亮（2011），第40页。
+出处：《土家语近义词语义的方言差异》（2011），第40页。“石”的声调原文只印作⁵，拼音未标调。
 
 /ɕi³³ ti²¹ lo¹³ ɲia⁵⁵/
 
@@ -3272,115 +3335,548 @@ Zhou（2020），第31页。
 
 裁缝。
 
-向亮（2011），第40页。
+出处：《土家语近义词语义的方言差异》（2011），第40页。
 
 [原文](https://drive.google.com/file/d/1xKy0DTQTNNtKEfyzDBkyr5wmg0mz5oIi/view)
 
-### 2.2 名词的语序与关系词
+### 3.3 数词与量词
 
-<a id="south-15-2"></a>
+<!-- grammar-id:202.4 -->
 
-#### 接受者与物品的排列
+表示数量时，常先说事物，再说数量。例如“两间房子”按“房子—两—间”排列，“三个人”按“人—三—个”排列。
 
-表示“给谁什么”时，可以按“主语—收到东西的人—物品—动词”排列。下面泸溪且己的例句把“你”放在“铜钱”前，两者后面都没有额外的关系词。
+| 拼音 | ca | liē | bbù |
+| --- | --- | --- | --- |
+| IPA | tsʰa³³ | lie⁵⁵ | bu²¹ |
+| 中文逐词 | 房子 | 两 | 间 |
+| English | house | two | units |
 
-/ŋo³¹ ɲi³¹ doŋ²¹ dzian²¹ ʕɯ¹³/
+译文：两间房子。 / Two houses.
 
-我｜你｜铜钱｜还
+出处：李敬忠《泸溪土家语》（2000），第101页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
 
-我还你钱。（泸溪且己）
+| 拼音 | nia | sā | nì |
+| --- | --- | --- | --- |
+| IPA | ȵia³³ | sa⁵⁵ | ȵi²¹ |
+| 中文逐词 | 人 | 三 | 个 |
+| English | person | three | units |
 
-向亮（2019），第76页，例（27）。
+译文：三个人。 / Three people.
 
-[原文](https://drive.google.com/file/d/1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK/view)
+出处：李敬忠《泸溪土家语》（2000），第101页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
 
-<p class="grammar-pending">其他关系词（待补充）</p>
+有些名词在没有数量时，也带着相当于“个、间”的词。《泸溪土家语》把“房子”记作 /tsʰa³³bu²¹/，把“人”记作 /ȵia³³ȵi²¹/。说“两间房子”时，“两”插在“房子”和“间”之间。
+
+出处：李敬忠《泸溪土家语》（2000），第101页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+### 3.4 名词短语的结构
+
+<!-- grammar-id:202.5 -->
+
+#### 形容词与数量短语
+
+形容词也常放在名词后面。形容词和数量一起出现时，可以按“名词—形容词—数量”排列。下例先说“衣服”，再说“新”，最后说“一件”。
+
+| 拼音 | xidí | 'àxì | la | bí |
+| --- | --- | --- | --- | --- |
+| IPA | ɕi³³ti³⁵ | ʔa²¹ɕi²¹ | la³³ | pi³⁵ |
+| 中文逐词 | 衣服 | 新 | 一 | 件 |
+| English | clothes | new | one | item |
+
+译文：一件新衣服。 / One new item of clothing.
+
+出处：李敬忠《泸溪土家语》（2000），第140页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+#### 所属关系与名词省略
+
+表示所属关系时，名词或代词后加 /wu²¹/，放在所修饰的名词前。
+
+| 拼音 | ngo | wù | mci |
+| --- | --- | --- | --- |
+| IPA | ŋo³³ | wu²¹ | m³³tsʰi³³ |
+| 中文逐词 | 我 | 的 | 书 |
+| English | I | of | book |
+
+译文：我的书。 / My book.
+
+出处：李敬忠《泸溪土家语》（2000），第127页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+《南部土家语研究》注明：大陂流村、婆罗寨用 /wu²¹/，且己用 /gu²¹/。所指明确时，可以省略后面的名词，见判断句一节。
+
+出处：向亮《南部土家语研究》（2017），第110页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
 
 <a id="south-part-3"></a>
 
-## 3. 动词、形容词与谓语结构
+## 4. 动词、形容词与谓语结构
 
-### 3.1 判断与否定
+<!-- grammar-id:203 -->
 
-<a id="south-18-1"></a>
+### 4.1 动词与形容词的重叠
 
-#### 判断谓语
+<!-- grammar-id:203.5 -->
 
-南部判断句可使用判断动词。否定判断时，否定成分放在判断动词前；下例的 /mɛ²¹ su⁵³/表示“不是”。
+动词重复一遍，可以表示短暂地做一下。《泸溪土家语》列出 /ɣi²¹ɣi²¹/“走走”和 /hi⁵⁵hi⁵⁵/“说说”。
 
-/dzia²¹ bu²¹ mɛ²¹ su⁵³ ŋo¹³ gu²¹/
+出处：李敬忠《泸溪土家语》（2000），第119页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
 
-这｜个｜不｜是｜我｜的
+形容词重复时，可以加强描写，也可以说明动作怎么做。下例把“好”重复，再加 /bie²¹/，整体表示“好好地”。
 
-这个不是我的。（泸溪且己）
+| 拼音 | ngo | còcòbbiè | bbǒ |
+| --- | --- | --- | --- |
+| IPA | ŋo³³ | tsʰo²¹tsʰo²¹bie²¹ | bo¹³ |
+| 中文逐词 | 我 | 好好地 | 看 |
+| English | I | carefully | look |
 
-向亮（2019），第73–74页，例（12）。
+译文：我好好地看。 / I look carefully.
 
-[原文](https://drive.google.com/file/d/1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK/view)
+出处：李敬忠《泸溪土家语》（2000），第113页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
 
-<a id="south-21-2"></a>
+### 4.2 程度与比较
 
-#### 判断否定
+<!-- grammar-id:203.6 -->
 
-判断否定采用“否定成分＋判断动词”。下例中，/mɛ²¹/放在 /su⁵³/前，否定“这是我的”这一判断。
+《土家语比较句的方言差异》列有带汉语借词“比”的比较句，顺序是“谁—比—谁—怎么样”。还可以加入相当于“更”的词。下例括号内的词可以省略。
 
-例句同上。
+| 拼音 | ngo | bī | ga | (gén) | gāu |
+| --- | --- | --- | --- | --- | --- |
+| IPA | ŋo³¹ | pi⁵¹ | ka³³ | (ken³⁵) | kao⁵⁵ |
+| 中文逐词 | 我 | 比 | 他 | （更） | 高 |
+| English | I | than | him | (even more) | tall |
 
-出处：向亮（2019），第73—74页，例（12）。
+译文：我比他（更）高。 / I am (even) taller than him.
 
-<p class="grammar-pending">动词、形容词及其他谓语变化（待补充）</p>
+出处：向亮《土家语比较句的方言差异》（2011），第149页。[原文](https://drive.google.com/file/d/1mxCYZQWiZncFB73HZrJjsYwoT2QnThB6/view)
+
+表示相差多少时，“一点”可以放在形容词前。下面按“我—比—你—一点—高”排列。
+
+| 拼音 | ngo | bī | ni | làddì | gāu |
+| --- | --- | --- | --- | --- | --- |
+| IPA | ŋo³¹ | pi⁵¹ | ȵi³³ | la²¹di²¹ | kao⁵⁵ |
+| 中文逐词 | 我 | 比 | 你 | 一点 | 高 |
+| English | I | than | you | a little | tall |
+
+译文：我比你高一点。 / I am a little taller than you.
+
+出处：向亮《土家语比较句的方言差异》（2011），第149页。[原文](https://drive.google.com/file/d/1mxCYZQWiZncFB73HZrJjsYwoT2QnThB6/view)
+
+“最”也可以借用汉语词，放在形容词前。
+
+| 拼音 | ga | niā | zuéi | cò |
+| --- | --- | --- | --- | --- |
+| IPA | ka³³ | ȵia⁵⁵ | tsui³⁵ | tsʰo²¹ |
+| 中文逐词 | 他 | 人 | 最 | 好 |
+| English | he | person | most | good |
+
+译文：他人最好。 / He is the best person.
+
+出处：向亮《土家语比较句的方言差异》（2011），第149页。[原文](https://drive.google.com/file/d/1mxCYZQWiZncFB73HZrJjsYwoT2QnThB6/view)
+
+说两个人在某方面相同时，可以在后面加“一样”，再说是哪方面一样。下例说的是两个人一样重。
+
+| 拼音 | gasè | liēngè | làlè | ddèu |
+| --- | --- | --- | --- | --- |
+| IPA | ka³³se²¹ | lie⁵¹ŋɨe²¹ | la²¹le²¹ | dɯ²¹ |
+| 中文逐词 | 他们 | 两个 | 一样 | 重 |
+| English | they | two people | equally | heavy |
+
+译文：他们两个一样重。 / The two of them weigh the same.
+
+出处：向亮《土家语比较句的方言差异》（2011），第149页。[原文](https://drive.google.com/file/d/1mxCYZQWiZncFB73HZrJjsYwoT2QnThB6/view)
+
+表示“没有别人那么……”时，也有不用“比”的说法。下例先说“我们、他们”，再说“大、没有”。
+
+| 拼音 | ànì | gàsè | qī | mié |
+| --- | --- | --- | --- | --- |
+| IPA | a²¹ȵi²¹ | ka²¹se²¹ | tɕʰi⁵⁵ | mie³⁵ |
+| 中文逐词 | 我们 | 他们 | 大 | 没有 |
+| English | we | they | big | not |
+
+译文：我们没有他们大。 / We are not as big as them.
+
+出处：向亮《土家语比较句的方言差异》（2011），第149页。[原文](https://drive.google.com/file/d/1mxCYZQWiZncFB73HZrJjsYwoT2QnThB6/view)
+
+### 4.3 时间与动作的阶段
+
+<!-- grammar-id:203.2 -->
+
+#### 经历与持续
+
+《泸溪土家语》中的 /kʰo⁵⁵/ 放在动词后，表示以前做过；/la²¹/ 可以接着放在后面，意思接近汉语的“了”。
+
+| 拼音 | rǐkōlà |
+| --- | --- |
+| IPA | zi¹³kʰo⁵⁵la²¹ |
+| 中文逐词 | 做·过·了 |
+| English | do·before·already |
+
+译文：做过了。 / Have done it before.
+
+出处：李敬忠《泸溪土家语》（2000），第116页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+表示动作或状态还在继续，可以在动词后加 /tu²¹/。下面的“坐着”说的是保持坐的状态。
+
+| 拼音 | 'údù |
+| --- | --- |
+| IPA | ʔu³⁵tu²¹ |
+| 中文逐词 | 坐·着 |
+| English | sit·continuing |
+
+译文：坐着。 / Remain seated.
+
+出处：李敬忠《泸溪土家语》（2000），第115页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+《泸溪土家语》还列有两个 /tu²¹/ 连用的说法，用来讲持续了一段时间的事情。下例先说“这里、我、十年”，最后说“住”。
+
+| 拼音 | jjiàdiè | ngo | hì | niú | 'údùdù |
+| --- | --- | --- | --- | --- | --- |
+| IPA | dʑia²¹tie²¹ | ŋo³³ | hi²¹ | ȵiu³⁵ | ʔu³⁵tu²¹tu²¹ |
+| 中文逐词 | 这里 | 我 | 十 | 年 | 住·着 |
+| English | here | I | ten | years | live·continuing |
+
+译文：我在这里住了十年。 / I have lived here for ten years.
+
+出处：李敬忠《泸溪土家语》（2000），第116页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+#### 将来的动作
+
+《南部土家语研究》中的 /de²¹/ 放在动词后，可以表示打算做的事。下例中的“买—要”表示“将要买”。
+
+| 拼音 | mùniàn | ngo | zzìlòn | pūddè |
+| --- | --- | --- | --- | --- |
+| IPA | mu²¹ȵian²¹ | ŋo³¹ | dzɿ²¹loŋ²¹ | pʰu⁵³de²¹ |
+| 中文逐词 | 今天 | 我 | 猪 | 买·要 |
+| English | today | I | pig | buy·will |
+
+译文：今天我要去买猪。 / I am going to buy a pig today.
+
+出处：向亮《南部土家语研究》（2017），第96页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+### 4.4 能力与可能
+
+<!-- grammar-id:203.3 -->
+
+说有能力做某事时，表示“会”的词也可以放在动词后。下面“字—写—会”的意思是“会写字”。
+
+| 拼音 | ngo | mcǐ | wāggè |
+| --- | --- | --- | --- |
+| IPA | ŋo³¹ | m³³tsʰɿ¹³ | wa⁵³ge²¹ |
+| 中文逐词 | 我 | 字 | 写·会 |
+| English | I | characters | write·can |
+
+译文：我会写字。 / I can write.
+
+出处：向亮《南部土家语研究》（2017），第98页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+《泸溪土家语》中的 /tsʰie⁵⁵/ 可以说明能不能做到。要说“做不到”，把“不”放在它前面。下面两例只差一个“不”。
+
+| 拼音 | hxiéháciē |
+| --- | --- |
+| IPA | ɣie³⁵ha³⁵tsʰie⁵⁵ |
+| 中文逐词 | 吃·完·能 |
+| English | eat·finish·can |
+
+译文：吃得完。 / Can finish eating it.
+
+出处：李敬忠《泸溪土家语》（2000），第117页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+| 拼音 | hxiéházìciē |
+| --- | --- |
+| IPA | ɣie³⁵ha³⁵tsi²¹tsʰie⁵⁵ |
+| 中文逐词 | 吃·完·不·能 |
+| English | eat·finish·not·can |
+
+译文：吃不完。 / Cannot finish eating it.
+
+出处：李敬忠《泸溪土家语》（2000），第117页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+### 4.5 否定
+
+<!-- grammar-id:203.4 -->
+
+表示“不、没、别”的词不止一个，位置也不完全一样。“不是”中的“不”放在“是”前；下面表示“没”的 /mie³⁵/ 放在动词后。
+
+| 拼音 | ngo | ga | 'āu | mié |
+| --- | --- | --- | --- | --- |
+| IPA | ŋo³¹ | ka³³ | ʔao⁵⁵ | mie³⁵ |
+| 中文逐词 | 我 | 他 | 理 | 没 |
+| English | I | him | pay attention to | not |
+
+译文：我没理他。 / I did not pay attention to him.
+
+出处：向亮《南部土家语研究》（2017），第97页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+劝人不要做某事时，可以把表示“别”的词放在动词前。下面按“你—我—别—讲”排列。
+
+| 拼音 | ni | ngo | dà | hēu |
+| --- | --- | --- | --- | --- |
+| IPA | ȵi³¹ | ŋo³¹ | ta²¹ | ʕɯ⁵³ |
+| 中文逐词 | 你 | 我 | 别 | 讲 |
+| English | you | me | do not | criticize |
+
+译文：你莫讲我！ / Do not criticize me!
+
+出处：向亮《南部土家语研究》（2017），第97页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
 
 <a id="south-part-4"></a>
 
-## 4. 句子类型与语气
+## 5. 句子类型与语气
 
-本部分暂无现成正文。
+<!-- grammar-id:204 -->
+
+### 5.1 疑问句
+
+<!-- grammar-id:204.1 -->
+
+#### 特殊疑问句
+
+问人、东西或地方，可以分别用表示“谁、什么、哪里”的词。下表列出《南部土家语研究》中的几种形式。
+
+| 问什么 | 疑问词 |
+| --- | --- |
+| 谁 | ʔa²¹sɿ²¹ |
+| 什么 | tsʰao¹³ku²¹ |
+| 哪里 | ba²¹te³¹ |
+
+出处：向亮《南部土家语研究》（2017），第103页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+疑问词可以留在句中要问的地方。《泸溪土家语》的下例先说“这头牛、是”，再说“谁的”。
+
+| 拼音 | jjià | wònù | si | 'asi | wù |
+| --- | --- | --- | --- | --- | --- |
+| IPA | dʑia²¹ | wo²¹nu²¹ | si³³ | ʔa³³si³³ | wu²¹ |
+| 中文逐词 | 这 | 牛 | 是 | 谁 | 的 |
+| English | this | cow | be | who | of |
+
+译文：这是谁的牛？ / Whose cow is this?
+
+出处：李敬忠《泸溪土家语》（2000），第147页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+#### 一般疑问句
+
+把肯定和否定放在一起，就可以提问。例如“是—不—是”相当于汉语的“是不是”。
+
+| 拼音 | séu | mè | sēu |
+| --- | --- | --- | --- |
+| IPA | sɯ³⁵ | mɛ²¹ | sɯ⁵³ |
+| 中文逐词 | 是 | 不 | 是 |
+| English | be | not | be |
+
+译文：是不是？ / Is it or not?
+
+出处：向亮《南部土家语研究》（2017），第97页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+也可以在句末加一个表示提问的词。《南部土家语研究》列有 /di³⁵/ 和 /ma³³/。下面的 /di³⁵/ 放在整句话最后。
+
+| 拼音 | ga | ni | yǐdēu | ddí |
+| --- | --- | --- | --- | --- |
+| IPA | ka³³ | ȵi³¹ | ji¹³tɯ⁵³ | di³⁵ |
+| 中文逐词 | 他 | 你 | 认得 | 吗 |
+| English | he | you | recognize | question |
+
+译文：他认得到你吗？ / Does he recognize you?
+
+出处：向亮《南部土家语研究》（2017），第128页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+### 5.2 祈使句
+
+<!-- grammar-id:204.3 -->
+
+请人做事时，可以不说“你”，直接说动作。句末还可以加相当于“吧”的词。
+
+| 拼音 | nièlà | bbà |
+| --- | --- | --- |
+| IPA | ȵie²¹la²¹ | ba²¹ |
+| 中文逐词 | 睡·了 | 吧 |
+| English | sleep·now | suggestion |
+
+译文：睡觉吧。 / Go to sleep.
+
+出处：向亮《南部土家语研究》（2017），第130页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+劝人别做某事时，“别”放在动作前。
+
+| 拼音 | dà | cāu |
+| --- | --- | --- |
+| IPA | ta²¹ | tsʰao⁵³ |
+| 中文逐词 | 别 | 吵 |
+| English | do not | make noise |
+
+译文：莫吵！ / Do not make noise!
+
+出处：向亮《南部土家语研究》（2017），第130页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
 
 <a id="south-part-5"></a>
 
-## 5. 名词化、从句与复句
+## 6. 从句与复句
 
-本部分暂无现成正文。
+<!-- grammar-id:205 -->
+
+### 6.1 名词性短语
+
+<!-- grammar-id:205.1 -->
+
+知道在说什么东西时，可以只说“好的、白的、红的”，不再重复名词。《泸溪土家语》中的 /wu²¹/ 可以放在形容词后，组成这样的短语。
+
+| 拼音 | ngo | siwù | pū | bbònǐwù | zì | pū |
+| --- | --- | --- | --- | --- | --- | --- |
+| IPA | ŋo³³ | si³³wu²¹ | pʰu⁵⁵ | bo²¹ȵi¹³wu²¹ | tsi²¹ | pʰu⁵⁵ |
+| 中文逐词 | 我 | 白的 | 买 | 红的 | 不 | 买 |
+| English | I | white one | buy | red one | not | buy |
+
+译文：我买白的，不买红的。 / I will buy the white one, not the red one.
+
+出处：李敬忠《泸溪土家语》（2000），第127页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+类似的短语也可以指做某种工作的人。《南部土家语研究》中的“铁—打—的”整体表示“打铁的人”，也就是铁匠；这里用的是 /gu²¹/。
+
+| 拼音 | tiè | bbūggù |
+| --- | --- | --- |
+| IPA | tʰie²¹ | bu⁵³gu²¹ |
+| 中文逐词 | 铁 | 打的 |
+| English | iron | one who works |
+
+译文：打铁的；铁匠。 / A person who works iron; a blacksmith.
+
+出处：向亮《南部土家语研究》（2017），第110页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+### 6.2 定语从句
+
+<!-- grammar-id:205.2 -->
+
+“他养的猪”里，“他养的”说明是哪一些猪。这段话放在“猪”前面，末尾加 /wu²¹/。后面再说这些猪怎么样。
+
+| 拼音 | ga | newù | zzǐ | bbǔlī | sìsìwù |
+| --- | --- | --- | --- | --- | --- |
+| IPA | ka³³ | ne³³wu²¹ | dzi¹³ | bu¹³li⁵⁵ | si²¹si²¹wu²¹ |
+| 中文逐词 | 他 | 养的 | 猪 | 都 | 肥肥的 |
+| English | he | raises | pigs | all | fat |
+
+译文：他养的猪都肥肥的。 / The pigs he raises are all fat.
+
+出处：李敬忠《泸溪土家语》（2000），第127页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+### 6.3 连接动作
+
+<!-- grammar-id:205.3 -->
+
+#### 同一主语的几个动作
+
+几个动作可以连着说，说明做什么、怎么做或去做什么。下例按“木材—扛—卖—去”排列，意思是扛着木材去卖。
+
+| 拼音 | kó | bbie | lú | zzéu |
+| --- | --- | --- | --- | --- |
+| IPA | kʰo³⁵ | bie³³ | lu³⁵ | dzɯ³⁵ |
+| 中文逐词 | 木材 | 扛 | 卖 | 去 |
+| English | wood | carry | sell | go |
+
+译文：扛木材去卖。 / Carry wood away to sell.
+
+出处：李敬忠《泸溪土家语》（2000），第136页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+#### 叫别人做事
+
+说“叫某人做事”时，句中会有两个人：一个人叫，另一个人去做。《泸溪土家语》的例句先说“他、儿子”，再说“叫”，后面接儿子要做的事。原文的“他”可以省略。
+
+| 拼音 | (ga) | bbiènì | ha | wò | pā | yè |
+| --- | --- | --- | --- | --- | --- | --- |
+| IPA | (ka³³) | bie²¹ȵi²¹ | xa³³ | wo²¹ | pʰa⁵⁵ | jie²¹ |
+| 中文逐词 | （他） | 儿子 | 叫 | 牛 | 放 | 去 |
+| English | (he) | son | tell | cattle | graze | go |
+
+译文：（他）叫儿子去放牛。 / (He) tells his son to take the cattle out to graze.
+
+出处：李敬忠《泸溪土家语》（2000），第136页。[原文](https://drive.google.com/file/d/1TElY1mDJQ8KRfd8IyQEN4TtX02qAKp7j/view)
+
+《南部土家语研究》也列有“他—喊—你—别—怕”这样的顺序。因此，“叫谁”的位置要结合具体说法来看。
+
+出处：向亮《南部土家语研究》（2017），第131页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+### 6.4 并列、原因与条件
+
+<!-- grammar-id:205.5 -->
+
+两句话可以直接接在一起。下例先说他做什么工作，再说我做什么工作，中间没有相当于“和”的词。
+
+| 拼音 | ga | séu | kǒhxéggù | ngo | séu | tièbbūggù |
+| --- | --- | --- | --- | --- | --- | --- |
+| IPA | ka³³ | sɯ³⁵ | kʰo¹³ɣɯe³⁵gu²¹ | ŋo³¹ | sɯ³⁵ | tʰie²¹bu⁵³gu²¹ |
+| 中文逐词 | 他 | 是 | 木匠 | 我 | 是 | 铁匠 |
+| English | he | be | carpenter | I | be | blacksmith |
+
+译文：他是木匠，我是铁匠。 / He is a carpenter; I am a blacksmith.
+
+出处：向亮《南部土家语研究》（2017），第132页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+原因和条件有时也靠两句话的内容来表达。《南部土家语研究》把“天旱了，庄稼没有收成”列为因果复句，把“走累了，你就休息一会儿”列为假设复句。理解时要看前后意思；土家语原句不一定有与“因为”或“如果”一一对应的词。
+
+出处：向亮《南部土家语研究》（2017），第133页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+连接两句话时，也能使用从汉语借来的词。《南部土家语研究》的例句里有相当于“就、才、又”的词，用来说明先后、条件或意思的变化。
+
+出处：向亮《南部土家语研究》（2017），第132—133页。[原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
 
 <a id="south-part-6"></a>
 
-## 6. 话题、篇章与语言变异
+## 7. 话题与语言接触
 
-### 6.1 话题与语序
+<!-- grammar-id:206 -->
+
+### 7.1 话题与语序
+
+<!-- grammar-id:206.1 -->
 
 <a id="south-19-2"></a>
 
-#### 物品前置作话题
+#### 先说要谈的东西
 
-物品可以移到句首作话题，主语和接受者留在后面。下例先提出“这杆笔”，再说明“我送给你”。
+要谈的东西可以放在句首，后面再说谁把它给谁。下例先说“这杆笔”，再说“我送给你”。
 
-/dzia²¹ kan³¹ bi²¹ ŋo³¹ ɲi³¹ lie⁵³/
+/dʑia²¹ kan³¹ bi²¹ ŋo³¹ ɲi³¹ lie⁵³/
 
 这｜杆｜笔｜我｜你｜送
 
 这杆笔我送你。（泸溪且己）
 
-向亮（2019），第76页，例（28）。
+出处：《土家语三种句式的类型学特征》（2019），第76页，例（28）。
 
 [原文](https://drive.google.com/file/d/1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK/view)
 
-### 6.2 语言接触
+### 7.2 语言接触
+
+<!-- grammar-id:206.2 -->
 
 <a id="south-28-2"></a>
 
 #### 汉语借词
 
-南部土家语吸收了汉语词汇，如表示“白菜”的 /bɯɛ²¹ tsʰɛ³⁵/。
+南部土家语吸收了汉语词汇，如表示“白菜”的 /bɯe²¹ tsʰE³⁵/。
 
-/bɯɛ²¹ tsʰɛ³⁵/
+/bɯe²¹ tsʰE³⁵/
 
 借词
 
 白菜。
 
-向亮（2011），第41页。
+出处：《土家语近义词语义的方言差异》（2011），第41页。E 沿用原文记号。
 
 [原文](https://drive.google.com/file/d/1xKy0DTQTNNtKEfyzDBkyr5wmg0mz5oIi/view)
+
+
+当地的汉语借词有两个重要来源：湘语辰溆片的泸溪话，称“小客话”；西南官话中的吉首话，称“大客话”。
+
+出处：《南部土家语研究》（2017），第19—20页。 [原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
+
+湘语一类的例子有 /mo¹³/“马”、/kai¹³tɕi⁵⁵/“钩子”、/tɕyã³³/“砖”，还有 /ʔo³⁵/“袜子”。“马”的 o、“钩”的 ai，以及“砖”的声母 tɕ 和元音 y，都体现了当地湘语的读音特点。这类词的来源可以通过声母、韵母与邻近汉语的对应来判断。
+
+出处：中国语言资源保护工程“泸溪潭溪”调查词表，第0259、1792、0052项。词形来自调查记录，湘语来源按读音对应判断。 [调查词表](https://zhongguoyuyan.cn/point/60824) [马](https://luggroo.github.io/bizic-dictionary/?lang=zh&id=yubao-60824-v-0259#words) [钩子](https://luggroo.github.io/bizic-dictionary/?lang=zh&id=yubao-60824-v-1792#words) [砖](https://luggroo.github.io/bizic-dictionary/?lang=zh&id=yubao-60824-v-0052#words)
+
+《土家语简志》南部词表中的 /tsʰo³³/“纺车”也可能借自湘语的“车”。借入年代未定，也可能是早期借词。
+
+出处：《土家语简志》（1986）南部词表，STEDT 转录 rn 289703（袜子）、289737（纺车）；词源归属为推测。 [袜子](https://luggroo.github.io/bizic-dictionary/?lang=zh&id=stedt-rn-289703#words) [纺车](https://luggroo.github.io/bizic-dictionary/?lang=zh&id=stedt-rn-289737#words)
+
+官话一类的例子有 /len²¹tɕy³³/“邻居”、/ji⁵⁵jian²¹/“医院”、/fã⁵⁵sen⁵⁵/“翻身”。《南部土家语研究》将这几个词明确列为官话读音的借词。
+
+出处：《南部土家语研究》（2017），第118页。该书说明了当地与吉首官话的接触，但未逐词注明具体借入地点。 [原文](https://drive.google.com/file/d/1d139fB7mkdaqxx21hwKJtL1qEfvywFhc/view)
 
 ---
 
@@ -3394,38 +3890,9 @@ Zhou（2020），第31页。
 
 ## 附录 B：南部语音与记音
 
-<a id="south-1-2"></a>
-
-#### 调类与调值
-
-五度制调值用1至5表示由低到高的相对音高。例如⁵⁵表示高平调，³⁵表示升调，²¹表示低降调。下都的⁵⁵有[⁵³]变体，³³有[³¹]变体。
-
-**调号的读法**
-
-| 记法 | 在本节中的用途 |
-| --- | --- |
-| /⁵⁵/ | 高平调的音位记法 |
-| [⁵³] | 所列高调语音变体 |
-| *¹ᴴ、*¹ᴹ、*¹ᴸ 等 | 祖语重建调类，不表示现代南部的具体调值 |
-
-**词例**
-
-| 形式 | 意义 | 出处 |
-| --- | --- | --- |
-| /tɨ³³pʰie³⁵/ | 蛇（下都） | Zhou 2020，第31页 |
-| /ti⁵⁵pʰei⁵⁵/ | 蛇（下且己） | Zhou 2020，第31页 |
-
-说明：原文首段写有“CJ tones in parentheses”，但正文缺少清楚的逐项 CB—CJ 对照，CJ 单字调的对应关系仍待核实。
-
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：§1.3.4，第30页首段；与北部§1.3.1的编号系统区分
-
 <a id="south-2-1"></a>
 
-#### 声母表与词例
-
-南部土家语的塞音有清不送气、清送气和浊音三组，如p／pʰ／b、t／tʰ／d、k／kʰ／g；塞擦音也有相应的三组对立。声母w、j与喉塞音ʔ相区别。
-
-**南部声母（据表1-15整理）**
+#### 声母表
 
 | 发音方式 | 唇部 | 齿／齿龈 | 腭部 | 软腭 | 咽／喉部 |
 | --- | --- | --- | --- | --- | --- |
@@ -3435,103 +3902,17 @@ Zhou（2020），第31页。
 | 鼻音 | m | (n) | ɲ | ŋ | — |
 | 近音／边音 | w | l | j | — | — |
 
-**声母词例**
+表中沿用《Proto-Bizic》的记音；/n/ 的括号表示它与 /l/ 的关系需要结合来源阅读。/ʔ/ 是喉塞音，/ħ/、/ʕ/ 沿用原表符号。
 
-| 声母 | 下都 CB | 下且己 CJ | 汉义 |
-| --- | --- | --- | --- |
-| d | die⁵⁵／de⁵⁵／dei⁵⁵ | die⁵³ | 想 |
-| s | sie⁵⁵／sɨe⁵⁵／se⁵⁵ | se⁵³ | 插 |
-| t、pʰ | tɨ³³pʰie³⁵ | ti⁵⁵pʰei⁵⁵ | 蛇 |
-| ʔ、d | ʔa²¹de²¹ | ʔa²¹de²¹ | 里面 |
-
-说明：原表把 ʔ 排在 Nasal 行；本站按喉塞音列入塞音行，明确属于排版校正。部位栏用较宽的中文标签归组，f 为唇齿音。
-
-说明：n 的括号须结合 n／l 变体说明阅读，不据此断言 CB、CJ 都有独立 /n/ 音位。
-
-说明：Zhou 将这组音称为会厌擦音（epiglottal fricatives），但使用 ħ、ʕ 记写，并讨论底本的误记。此处沿用其符号；术语与符号之间的差异仍待考。
-
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：§1.3.4，表1-15及其后说明，第30页
+出处：《Proto-Bizic: A Study of Tujia Historical Phonology》（2020），第30页。[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)
 
 <a id="south-2-2"></a>
 
-#### 韵母表与词例
-
-下都话的元音分为口元音与鼻化元音，鼻化用元音上的波浪号表示。元音ɨ的出现大多与前面的声母有关；ɯ则具有独立的音位地位。元音与介音、收尾滑音结合，构成不同的韵母。
-
-**CB 元音图中的符号（按原图分组）**
-
-| 类别 | 符号 | 阅读限制 |
-| --- | --- | --- |
-| 口元音图 | i y ɨ ɯ u e o a | 记录图中位置；不据此宣称有8个独立口元音音位 |
-| 鼻化元音图 | ĩ ỹ ũ ẽ æ̃ ã | 鼻化号标记元音鼻化 |
-| 图外括号项 | (ɿ) | 原图以括号标示，不另计为已确立的独立音位 |
-
-**CB 与 CJ 的两项韵母对应**
-
-| CB | CJ | 作者的记音处理 |
-| --- | --- | --- |
-| ai、e | e̞ | CJ 底本用 ᴇ；Zhou 统一写 e |
-| ũ | õ，亦可实现为 oŋ | 保留鼻化元音与带鼻音尾实现的区别 |
-
-**韵母词例**
-
-| 形式 | 意义 | 出处 |
-| --- | --- | --- |
-| /tɨ³³pʰie³⁵/ | 蛇（下都） | Zhou 2020，第31页 |
-| /ti⁵⁵pʰei⁵⁵/ | 蛇（下且己） | Zhou 2020，第31页 |
-
-说明：这些对应见于文中所列词例；其他 CB／CJ 词形及鼻韵母需分别参照各调查点的记录。
-
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：图1-9；§1.3.4元音讨论，第30–31页
-
 <a id="south-2-3"></a>
-
-#### 音值分布与方言差异
-
-下都的[ɨ]多出现在软腭音、喉音后，是/i/的条件变体。“蛇”tɨ³³pʰie³⁵中的tɨ³³是例外，下且己对应ti⁵⁵pʰei⁵⁵。下且己的/i/在部分齿音、软腭音后可读作[ɯ]，而/ɯ/没有相应的[i]变体。
-
-**分布与变体**
-
-| 项目 | CB | CJ |
-| --- | --- | --- |
-| n／l | 底本称 n 可读 l，但并非每个 l 都能读 n | Xiang（2017）记为自由变体 |
-| i／ɨ | 软腭、喉部音后常见 [ɨ]；“蛇” tɨ³³pʰie³⁵ 是特殊例 | 不设独立 /ɨ/；“蛇” ti⁵⁵pʰei⁵⁵ |
-| i／ɯ | 不把 /ɯ/ 一概分析成 /i/ 的条件变体 | 作者认为 /i/ 在齿音、软腭音后可有 [ɯ] 变体，而 /ɯ/ 不在任何环境读作 [i] |
-
-说明：“蛇”可能经历遮蔽原互补分布的较新音变，是 Zhou 的解释性假说，并非已证明的音变年代或普遍规则。
-
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：§1.3.4声母和高元音变体讨论，第30–31页
-
-<a id="south-3-1"></a>
-
-#### 音节结构
-
-南部土家语音节由声母、韵母和声调构成。韵母可含介音或收尾滑音，鼻音也可独立成音节。下都“竹”m̩³³tɯ⁵⁵的第一个音节就是成音节鼻音m̩。
-
-下且己许多词中的m̩对应下都齿音前的mu；“骂”则记录为mũ³³du³⁵，保留了鼻化元音。
-
-**文中说明的音节成分**
-
-| 成分 | 正文依据 |
-| --- | --- |
-| 介音 | CB 列 i、u、ɨ、y；正文另注相关 CJ 形式为 ɯ |
-| 滑音韵尾 | i、u |
-| 复元音韵母 | ei、ai、au |
-| 成音节鼻音 | m̩，主要见于后接齿音的音节串 |
-
-说明：原文称有五种可能的介音，但所列CB符号只有四项，另有CJ的括注；文字与表列数量不一致。
-
-说明：m̩、mu 以及可能的 mũ 是自由变体这一点，由 Zhou 根据词表分布提出；Li、Xiang 的底本没有直接给出这条自由变体规则。
-
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：§1.3.4，表1-16及成音节鼻音讨论，第30–31页
 
 <a id="south-3-2"></a>
 
-#### 韵母与韵尾
-
-下都话有i、u、ɨ、y等介音，i、u还可充当收尾滑音。部分韵母只出现在腭音后，另一些只见于近期汉语借词。下且己与下都的韵母有若干对应差异，如下都的ũ对应下且己的õ或oŋ。
-
-**下都韵母组合全表**
+#### 韵母表
 
 | 介音组 | 记录的韵母 |
 | --- | --- |
@@ -3541,43 +3922,17 @@ Zhou（2020），第31页。
 | u 组 | ue、ua、uei、uai、uẽ、uã |
 | y 组 | ye、yĩ、ỹ、yæ̃ |
 
-**齿音后 e／ie／ɨe 的实际异读（表1-17）**
+表列《Proto-Bizic》据《泸溪土家语》整理的韵母组合。元音上的波浪号表示鼻化；部分组合只见于特定声母后或汉语借词中。各项是资料中的记音形式，不都代表独立的音。
 
-| 词义 | CB（Li 2000） | CJ（Xiang 2017） |
-| --- | --- | --- |
-| 想 | die⁵⁵；de⁵⁵；dei⁵⁵ | die⁵³ |
-| 迟／慢 | de⁵⁵；dɨe⁵⁵ | de⁵³ |
-| 里面 | (ʔa²¹)tie²¹；de²¹；tɨe²¹ | ʔa²¹de²¹ |
-| 插 | sie⁵⁵；sɨe⁵⁵；se⁵⁵ | se⁵³ |
-| 断 | de³⁵ | die³⁵ |
+出处：《Proto-Bizic: A Study of Tujia Historical Phonology》（2020），第30—31页。[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)
 
-**韵母整词例与两地对应**
-
-| 韵母现象 | 下都 CB | 下且己 CJ | 汉义 |
-| --- | --- | --- | --- |
-| ɨ 与 i | tɨ³³pʰie³⁵ | ti⁵⁵pʰei⁵⁵ | 蛇 |
-| e／ɨe 变体 | de⁵⁵／dɨe⁵⁵ | de⁵³ | 慢 |
-| e 与 ie | de³⁵ | die³⁵ | 断 |
-| 成音节鼻音与 ɯ | m̩³³tɯ⁵⁵ | — | 竹 |
-
-**下都韵母的分布限制**
-
-| 限制 | 项目 |
-| --- | --- |
-| 只在腭音后出现（原表斜体） | ia、io、iɯ、iu、yĩ、yæ̃ |
-| 近期汉语借词（原表划线） | au、iu、iã、iæ̃、iõ、ue、uei、uai、uẽ |
-
-说明：Zhou 认为底本中 e、ie、ɨe 的记录存在不一致，因而没有把它们的每一项差异都用于祖语对立重建。重建时的合并并不排除现代 CB 中仍有这些语音差异。
-
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：表1-16；表1-17及正文，第30–31页
+<a id="south-1-2"></a>
 
 <a id="south-4-1"></a>
 
-#### 调系与调值
+<a id="south-4-2"></a>
 
-下都话有五个单字调：⁵⁵、³³、³⁵、²¹、¹³。⁵⁵可读作[⁵⁵]或[⁵³]，³³可读作[³³]或[³¹]，两组读法分别属于同一调类。¹³与²¹在正常语速下有时不易区分。
-
-**下都CB单字调与实现**
+#### 声调表
 
 | 单字调 | 语音实现 | 调形 |
 | --- | --- | --- |
@@ -3587,16 +3942,17 @@ Zhou（2020），第31页。
 | ²¹ | [²¹] | 低降 |
 | ¹³ | [¹³] | 低升 |
 
-**词中的调值**
+同一声调可以有不同读法，如⁵⁵与⁵³、³³与³¹。连续说话时，¹³和²¹有时不易区分。
 
-| 形式 | 意义 | 出处 |
-| --- | --- | --- |
-| /mi²¹mi²¹/ | 血（下都） | Zhou 2020，表5-4 |
-| /ʔa¹³lie⁵⁵/ | 蛋（下都） | Zhou 2020，表5-7 |
+出处：《Proto-Bizic: A Study of Tujia Historical Phonology》（2020），第30、94—95页。[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)
 
-说明：Zhou 2020第30页首段明确以CB列五个单字调，却残留“CJ tones in parentheses”的表述；括号内实际列的是自由变体。该处没有提供完整的 CJ 调表；CJ 调值见具体词例。
+<a id="south-3-1"></a>
 
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：§1.3.4，第30页首段
+#### 音节结构
+
+音节通常由声母、韵母和声调构成。鼻音也可以独立成音节，例如 /m̩³³tɯ⁵⁵/“竹”的第一个音节。
+
+出处：《Proto-Bizic: A Study of Tujia Historical Phonology》（2020），第30—31页。[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)
 
 <a id="south-4-3"></a>
 
@@ -3604,7 +3960,7 @@ Zhou（2020），第31页。
 
 下都话部分前缀的声调受后续词根影响：词根为³⁵、³³或¹³时，前缀多读³³；词根为²¹时，前缀多读²¹；词根为⁵⁵时，前缀多读¹³。这个分布存在例外，例如“生”和“盖”。
 
-**作者归纳的 CB 前缀调分布**
+**《Proto-Bizic》中的下都前缀调分布**
 
 | 后续音节 | 前缀的实际声调 |
 | --- | --- |
@@ -3612,7 +3968,7 @@ Zhou（2020），第31页。
 | ²¹ | ²¹ |
 | ⁵⁵ | ¹³ |
 
-**表5-7中的 CB 例词**
+**《Proto-Bizic》表5-7中的下都例词**
 
 | 词义 | 连写形式 | 前缀调＋后续调 |
 | --- | --- | --- |
@@ -3625,7 +3981,7 @@ Zhou（2020），第31页。
 
 说明：词首有无 ʔ 按所引表格保留，没有为整齐而统一增删。
 
-出处：[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：§5.3.1与表5-7，第95–96页
+出处：《Proto-Bizic: A Study of Tujia Historical Phonology》（2020）。[原文](https://drive.google.com/file/d/1KzWEWXuY4CoZ7iVeOYcukKF42nv7HM4x/view)：§5.3.1与表5-7，第95–96页
 
 ---
 

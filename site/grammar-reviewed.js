@@ -4,7 +4,7 @@ for(const d of ['north','south']){
  for(const ch of REVIEWED_GRAMMAR[d])for(const sec of ch.sections)grammarBlocks(d)[sec.id]={integratedHtml:ch.html};
 }
 function normalizeGrammarChapter(id,d){return REVIEWED_GRAMMAR[d].some(c=>c.id===id)?id:GRAMMAR_LEGACY_CHAPTERS[d][id]||REVIEWED_GRAMMAR[d][0].id;}
-const GRAMMAR_JOINED_WORDS=['tɕĩ⁴⁴ xʊa⁴⁴','sa⁴⁴ mi⁴⁴','nie²⁴ pi⁴⁴','pa⁵⁵ pa⁵⁵','ta⁵¹ pʰi²¹','pʰa²¹ pʰu³⁵','tɕʰi³⁵ pu⁵⁵','doŋ²¹ dzian²¹','ɕi³³ ti²¹','a²¹ pa⁵⁵','a⁵⁵ tiu⁵⁵','a⁵⁵ lu²¹','tɕʰie²¹ pi²⁴'];
+const GRAMMAR_JOINED_WORDS=['tɕĩ⁴⁴ xʊa⁴⁴','sa⁴⁴ mi⁴⁴','nie²⁴ pi⁴⁴','pa⁵⁵ pa⁵⁵','ta⁵¹ pʰi²¹','pʰa²¹ pʰu³⁵','tɕʰi³⁵ pu⁵⁵','doŋ²¹ dzian²¹','doŋ²¹ dʑian²¹','ɕi³³ ti²¹','a²¹ pa⁵⁵','a⁵⁵ tiu⁵⁵','a⁵⁵ lu²¹','tɕʰie²¹ pi²⁴'];
 function grammarExampleWords(ipa,gloss){
  let text=ipa;for(const word of GRAMMAR_JOINED_WORDS)text=text.replaceAll(word,word.replaceAll(' ','\u00a0'));
  let words=text.split(/\s+/u).filter(Boolean);
@@ -187,7 +187,7 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  // Pair every remaining phonetic word/phrase, including inline citations and tables.
  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('script,style,.grammar-pair,.grammar-gloss')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
  const nodes=[];let node;while((node=walker.nextNode()))nodes.push(node);
- const letters='a-zãẽĩõũỹɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰüɡ\u0300-\u036f';
+ const letters='a-z'+(ch.dialect==='south'?'E':'')+'ãẽĩõũỹɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰüɡ\u0300-\u036f';
  const token='['+letters+']+';
  const enclosed='['+letters+'¹²³⁴⁵0-9 \\t(){},、;*+＝=~～\\-]+';const pattern=new RegExp('(?<!['+letters+'¹²³⁴⁵])/(?<slashIPA>'+enclosed+')/(?!['+letters+'¹²³⁴⁵])|\\[('+enclosed+')\\]|'+token+'[¹²³⁴⁵]+(?:'+token+'[¹²³⁴⁵]+)*|'+token,'gu');
  for(const n of nodes){
@@ -197,7 +197,7 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
    if(enclosedMatch&&!/[¹²³⁴⁵ɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰ\u0300-\u036f]/u.test(ipa)&&!ipa.split(/[ ,、;+~～]+/).every(s=>/^(?:p|b|t|d|k|g|m|n|l|s|z|f|h|w|j|r|ts|dz|i|u|y|e|o|a|ai|au|ei|ou|ia|ie|iu|ua|uo|ui|an|en|in|un|po|xu|kau|la|lu|lie|liau|ti|tiu|to|tso|ma|ta)$/.test(s)))continue;
    if(!enclosedMatch&&!/[¹²³⁴⁵ɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰ\u0303\u0329]/u.test(ipa))continue;
    if(!/[a-zãẽĩõũỹɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥ]/u.test(ipa))continue;
-   // Non-IPA Latin labels such as /CONTENTS/ are excluded by the lowercase pattern.
+   // Uppercase labels are excluded, except for the source vowel notation E.
    let d=ch.dialect;
    if(ipa.includes('ʕɯ')&&/ŋo/.test(ipa))d='south';
    if(enclosedMatch){try{grammarSpelling(ipa,d);}catch{continue;}}

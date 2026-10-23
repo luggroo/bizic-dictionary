@@ -31,11 +31,14 @@ function grammarNorthSyllable(core,tone=''){
 }
 function grammarSouthSyllable(core,tone=''){
  const actual=core;
- core=core.replaceAll('e̞','e');
+ core=core.replaceAll('e̞','e').replaceAll('E','e');
+ // Xiang 2011, p. 40 prints only a single 5 on 'stone'. Leave its
+ // romanization unmarked rather than inventing a second tone digit.
+ if(actual==='lɯ'&&tone==='5')return southernSpelling(core+'33','grammar-source');
  if(core==='iu')return {accent:southMark('iu',tone||'33'),poj:southMark('iu',tone||'33')};
  core=core.replace(/^h/,'x').replaceAll('ɯɛ','ɯe').replaceAll('ɛ','e');
  // These cited sources write oral nasal codas explicitly, unlike the main lexicon.
- core=core.replace(/oŋ$/,'õ').replace(/ian$/,'iã').replace(/an$/,'ã');
+ core=core.replace(/oŋ$/,'õ').replace(/ian$/,'iã').replace(/an$/,'ã').replace(/en$/,'ẽ');
  if(core==='m̩'||core==='m'){
   const t={'53':'55','51':'55','31':'33'}[tone]||tone;
   const mark=t?SOUTH_TONES[t]:'';if(mark===undefined)throw Error('Unmapped syllabic-m tone: '+tone);

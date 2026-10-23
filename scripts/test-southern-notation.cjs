@@ -14,6 +14,11 @@ assert.equal(ctx.southernSpelling('nau55sui21','yubao-60824').accent,'nāusuèi'
 assert.equal(ctx.southernSpelling('ɣɨe³⁵','stedt-cb523fc3dc').accent,'hxé');
 assert.equal(ctx.southernSpelling('dʑiaɨ³³','stedt-cb523fc3dc').accent,'jjiau');
 assert.equal(ctx.southernSpelling('dʑiau33','yubao-60824').accent,'jjiau');
+// Book examples retain /ɲi/, /ɲiu/ and the source spelling /ao/.
+for(const [ipa,accent,poj] of [['ɲi21','nì','nì'],['ȵi13','nǐ','nǐ'],['ɲiu35','niú','niú'],['ɲie55','niē','niē'],['ɲa33','nia','nia'],['ʔao55',"'āu","'āu"],['tsʰao55','cāu','chāu']]){
+ const form=ctx.southernSpelling(ipa,'grammar-source');
+ assert.equal(form?.accent,accent,ipa);assert.equal(form?.poj,poj,ipa);
+}
 assert.equal(ctx.southernSpelling('ka33','yubao-60824',true).accent,'ga̱');
 for(const raw of ['ma221','ma31','pæ̃33','broken','ka33xyz','ka'])assert.equal(ctx.southernSpelling(raw,'yubao-60824'),null,raw);
 assert.equal(ctx.yeToAccent('axngair'),"āngǎi");
@@ -24,7 +29,7 @@ run("state.dialect='南部'");assert.doesNotMatch(ctx.spellingSelector(),/叶式
 const w={dialect:'南部',attestations:[{id:'example',dialect:'南部',source:'yubao-60824',term:'bã33'}]};
 assert.equal(ctx.notationHead(w),'bban');run("southernDisplay='poj'");assert.equal(ctx.notationHead(w),'ban');
 assert.equal(ctx.convertNotation('bã33','yubao-60824').rows[0].accent,'bban');
-for(const [raw,pinyin,poj] of [['tsi55','zrı̄','crı̄'],['tshi35','crı́','chrı́'],['dzi21','zzrı̀','jrı̀'],['si33','srı','srı'],['zi13','rı̌','rı̌'],['ɨ13','ıǐ','ıǐ'],['tɕi55','jī','cī'],['tɕhi35','qí','chí'],['ɕi21','xì','sì'],['ɕy35','xǘ','sǘ'],['sie55','siē','siē'],['sĩ33','sin','sin'],['sʉ33','seu','seu']]){const result=ctx.southernSpelling(raw,'yubao-60824');assert.equal(result.accent,pinyin,raw);assert.equal(result.poj,poj,raw)}
+for(const [raw,pinyin,poj] of [['tsi55','zī','crı̄'],['tshi35','cí','chrı́'],['dzi21','zzì','jrı̀'],['si33','si','srı'],['zi13','rǐ','rı̌'],['ɨ13','ıǐ','ıǐ'],['tɕi55','jī','cī'],['tɕhi35','qí','chí'],['ɕi21','xì','sì'],['ɕy35','xǘ','sǘ'],['sie55','siē','siē'],['sĩ33','sin','sin'],['sʉ33','seu','seu']]){const result=ctx.southernSpelling(raw,'yubao-60824');assert.equal(result.accent,pinyin,raw);assert.equal(result.poj,poj,raw)}
 assert.equal(ctx.southernSpelling('si35si21','yubao-60824').poj,'srı́-srı̀');
 // Alveolo-palatal c/ch/s and dental c/ch/s share letters, with rı reserved for dental apical i.
 for(const [ipa,poj] of [['tsi55','crı̄'],['tɕi55','cī'],['tshi35','chrı́'],['tɕhi35','chí'],['si21','srı̀'],['ɕi21','sì']])assert.equal(ctx.southernSpelling(ipa,'yubao-60824').poj,poj);
@@ -47,18 +52,18 @@ for(const raw of ['ħa33','ʕa33','h̄a33','ẖa33','xa33']){assert.equal(ctx.so
 
 // Whole-word regressions: palatal medials, the reported fish-fry form, and ıi boundaries.
 for(const [raw,accent,poj] of [
- ['si21ŋɨ21bie21','srı̀ngıìbbiè','srı̀-ngıì-biè'],
+ ['si21ŋɨ21bie21','sìngıìbbiè','srı̀-ngıì-biè'],
  ['dʑe55','jjiē','jē'],['tɕʰe35','qié','ché'],['ɕẽ33','xien','sen'],
  ['dʑua13','jjiuǎ','juǎ'],['tɕɨ21','jıì','cıì'],['dɨ55','ddēi','dēi'],
- ['ma33ɨ21',"ma'ıì",'ma-ıì'],['zi33','rı','rı'],['zɨ33','rıi','rıi'],
+ ['ma33ɨ21',"ma'ıì",'ma-ıì'],['zi33','ri','rı'],['zɨ33','rıi','rıi'],
  ['ɣe35','hxé','ghé'],['kɨ21','gì','kì']
 ]){const value=ctx.southernSpelling(raw,'yubao-60824');assert.equal(value.accent,accent,raw);assert.equal(value.poj,poj,raw)}
 assert.equal(ctx.southernSpelling('ŋɨ33','yubao-60824',true).accent,'ngıi̱');
 assert.equal(ctx.southernSpelling('ɨ?','yubao-60824').accent,'ıi⁇');
 const fish={dialect:'南部',attestations:[{id:'fish-fry',dialect:'南部',source:'yubao-60824',term:'si21ŋɨ21bie21'}]};
-run("southernDisplay='accent'");assert.equal(ctx.notationHead(fish),'srı̀ngıìbbiè');
+run("southernDisplay='accent'");assert.equal(ctx.notationHead(fish),'sìngıìbbiè');
 run("southernDisplay='poj'");assert.equal(ctx.notationHead(fish),'srı̀-ngıì-biè');
-assert.equal(ctx.convertNotation('si21ŋɨ21bie21','yubao-60824').rows[0].accent,'srı̀ngıìbbiè');
+assert.equal(ctx.convertNotation('si21ŋɨ21bie21','yubao-60824').rows[0].accent,'sìngıìbbiè');
 assert.equal(ctx.southernRimeRows().find(row=>row[0]==='ɨ').slice(1).join('/'),'ıi/ıi');
 for(const [raw,point,accent] of [
  ['tɕa55','60756','jiā'],['tɕʰau33','60756','qiǎo'],['ɕɔŋ33','60756','xiǒng'],
@@ -95,13 +100,16 @@ assert.equal(ctx.southernSpelling('jɨ21','yubao-60824').poj,'ıì');
 assert.equal(ctx.southernSpelling('ma33ɨ21','yubao-60824').accent,"ma'ıì");
 console.log('PASS: dotless rime contrasts, all tones, glide spelling and vowel boundaries');
 
-for(const [tone,form] of [['55','crı̄'],['33','crı'],['35','crı́'],['21','crı̀'],['13','crı̌']]){
+for(const [tone,form,accent] of [['55','crı̄','zī'],['33','crı','zi'],['35','crı́','zí'],['21','crı̀','zì'],['13','crı̌','zǐ']]){
  const v=ctx.southernSpelling('tsi'+tone,'yubao-60824');
  assert.equal(v.poj,form);assert(!v.poj.includes('i'));
+ assert.equal(v.accent,accent);
  assert.equal(ctx.southernSpelling('tsɿ'+tone,'yubao-60824').poj,form);
+ assert.equal(ctx.southernSpelling('tsɿ'+tone,'yubao-60824').accent,accent);
 }
-assert.equal(ctx.southernSpelling('zi13','yubao-60824').accent,'rı̌');
-assert.equal(ctx.southernSpelling('tsi21','yubao-60824').accent,'zrı̀');
+assert.equal(ctx.southernSpelling('zi13','yubao-60824').accent,'rǐ');
+assert.equal(ctx.southernSpelling('tsi21','yubao-60824').accent,'zì');
+assert.equal(ctx.southernRimeRows().find(row=>row[0]==='ɿ').slice(1).join('/'),'i/rı');
 
 // Written y absorbs medial i before another vowel, including nasalized rimes.
 const withoutTone=s=>s.normalize('NFD').replace(/[\u0300\u0301\u0304\u030c\u0331]/g,'').normalize('NFC');
