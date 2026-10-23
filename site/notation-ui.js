@@ -71,8 +71,11 @@ function standardSyllableIPA(core){
  const onset=Object.keys(NOTATION_CONFIG.onsets).filter(Boolean).sort((a,b)=>b.length-a.length).find(k=>core.startsWith(k))||'',rhyme=core.slice(onset.length);
  let vowel=NOTATION_CONFIG.rimes[rhyme];if(!vowel)return null;
  if(rhyme==='i'&&['c','g','h','hh','k','r','s','z'].includes(onset))vowel='ɨ';
- const consonant=onset==='h'&&rhyme.startsWith('u')?'f':NOTATION_CONFIG.onsets[onset];
- return consonant+vowel;
+ // In the reviewed hua/hui/huan series, hu corresponds to the labial
+ // fricative as a unit; the medial u is not repeated after f. Standalone
+ // hu retains [xu], as in Brassett et al. (2006), pp. 10 and 24.
+ if(onset==='h'&&/^u[aeio]/.test(rhyme))return 'f'+vowel.replace(/^u/,'');
+ return NOTATION_CONFIG.onsets[onset]+vowel;
 }
 function brassettCoreIPA(core){
  const direct=standardSyllableIPA(core);if(direct)return [direct];

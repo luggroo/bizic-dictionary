@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-21",
+  "reviewedAt": "2026-10-22",
   "entries": {
     "w90": {
       "zh": "外祖母",
@@ -535,13 +535,13 @@
       "reviewEvidence": "语保龙山 1985「鞋底」包含 ɕie...li...phu 词段；本条 ji...li...pu，原英文 sole 指鞋底"
     },
     "stedt-rn-205044": {
-      "zh": "笔",
+      "zh": "钢笔",
       "status": "confirmed",
       "previousZh": "笔；圈栏（原义未细分）",
       "term": "kan⁵⁵pi²¹",
       "en": "pen",
-      "reviewedAt": "2026-10-21",
-      "reviewEvidence": "语保阳朝 2516「笔」pi³⁵；同 STEDT 5.1 语义组另有 jian²¹pi²¹「铅笔」、pi³⁵「笔」，本条 kan⁵⁵pi²¹ 的 pi 是汉语借词「笔」，非动物圈栏。"
+      "reviewedAt": "2026-10-22",
+      "reviewEvidence": "kan⁵⁵pi²¹ 对应汉语「钢笔」；Brassett 同义词条 w717 的原始汉义为「钢笔」。"
     },
     "stedt-rn-453921": {
       "zh": "岳父",
@@ -553,13 +553,13 @@
       "reviewEvidence": "本条释为「岳父」；STEDT rn 453921，Brassett 06 Tujia，原文定位 2.4，英文 father-in-law；本站补充释义指妻子的父亲。"
     },
     "stedt-rn-289813": {
-      "zh": "笔",
+      "zh": "钢笔",
       "status": "confirmed",
       "previousZh": "笔；圈栏（原义未细分）",
       "term": "kã³³pi²¹",
       "en": "pen",
-      "reviewedAt": "2026-10-21",
-      "reviewEvidence": "同一 STEDT 5.1 语义组中 jian²¹pi²¹ 为「铅笔」，pi³⁵ 为「笔」；本条 kã³³pi²¹ 以 pi 表示书写工具，非圈栏。"
+      "reviewedAt": "2026-10-22",
+      "reviewEvidence": "kã³³pi²¹ 对应汉语「钢笔」，可与北部 kaŋ⁵⁵pi²¹「钢笔」比较。"
     },
     "stedt-rn-288812": {
       "zh": "棍子",
@@ -572,13 +572,13 @@
       "reviewEvidence": "语保龙山 0692「棍子」kan⁵⁵phɘ⁵⁵，对应本条 kã⁵⁵phɨe⁵⁵；另有异读 kha²¹tsu²¹"
     },
     "stedt-rn-288877": {
-      "zh": "笔",
+      "zh": "钢笔",
       "status": "confirmed",
       "previousZh": "笔；圈栏（原义未细分）",
       "term": "kã⁵⁵pi³⁵",
       "en": "pen",
-      "reviewedAt": "2026-10-21",
-      "reviewEvidence": "同一 STEDT 5.1 语义组中 jiã²¹pi³⁵ 为「铅笔」，pi³⁵ 为「笔」；本条 kã⁵⁵pi³⁵ 指书写工具。"
+      "reviewedAt": "2026-10-22",
+      "reviewEvidence": "kã⁵⁵pi³⁵ 对应汉语「钢笔」；英语 pen 在此指钢笔。"
     },
     "stedt-rn-288708": {
       "zh": "岳父",
@@ -2277,6 +2277,60 @@
       "status": "方言归属补注",
       "dialect": "北部",
       "location": "龙山"
+    },
+    "stedt-rn-289609": {
+      "zh": "总理",
+      "status": "confirmed",
+      "previousZh": "宰相；总理",
+      "term": "tsõ⁵⁵li⁵⁵",
+      "en": "prime minister",
+      "reviewedAt": "2026-10-22",
+      "reviewEvidence": "tsõ⁵⁵li⁵⁵ 对应汉语「总理」；英语 prime minister 在此指总理。"
+    },
+    "stedt-rn-288668": {
+      "zh": "总理",
+      "status": "confirmed",
+      "previousZh": "宰相；总理",
+      "term": "tsũ⁵⁵li⁵⁵",
+      "en": "prime minister",
+      "reviewedAt": "2026-10-22",
+      "reviewEvidence": "tsũ⁵⁵li⁵⁵ 对应汉语「总理」；英语 prime minister 在此指总理。"
+    },
+    "stedt-rn-289842": {
+      "zh": "工人阶级",
+      "status": "confirmed",
+      "previousZh": "无产阶级",
+      "term": "kõ³³ze³³kai³³tɕi²¹",
+      "en": "proletariat",
+      "reviewedAt": "2026-10-22",
+      "reviewEvidence": "kõ³³ze³³kai³³tɕi²¹ 的四音节对应「工人阶级」；原英文 proletariat 译作「无产阶级」，未反映借入词形。"
+    },
+    "stedt-rn-288915": {
+      "zh": "工人阶级",
+      "status": "confirmed",
+      "previousZh": "无产阶级",
+      "term": "kũ⁵⁵zĩ²¹kai⁵⁵tɕi³⁵",
+      "en": "proletariat",
+      "reviewedAt": "2026-10-22",
+      "reviewEvidence": "kũ⁵⁵zĩ²¹kai⁵⁵tɕi³⁵ 的四音节对应「工人阶级」；原英文 proletariat 译作「无产阶级」，未反映借入词形。"
+    },
+    "stedt-rn-289701": {
+      "zh": "裹脚",
+      "status": "confirmed",
+      "previousZh": "绑腿",
+      "term": "ko⁵⁵tɕio²¹",
+      "en": "legging",
+      "reviewedAt": "2026-10-22",
+      "reviewEvidence": "ko⁵⁵tɕio²¹ 对应「裹脚」；原英文 legging 的补译「绑腿」未反映借入词形。"
+    },
+    "w2649": {
+      "zh": "爪爪",
+      "status": "confirmed",
+      "previousZh": "爪",
+      "term": "zao1zao1",
+      "en": "claw",
+      "reviewedAt": "2026-10-22",
+      "reviewEvidence": "tsau⁵⁵tsau⁵⁵ 保留叠词「爪爪」的完整词形。"
     }
   }
 }

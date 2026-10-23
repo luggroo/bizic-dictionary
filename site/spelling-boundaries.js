@@ -10,6 +10,8 @@ SPELLING_BOUNDARY_REVIEWS.push(
  {wordIds:['yubao-60756-v-0831'],key:'gounalie',parts:['gouna','lie'],separator:'-',kind:'verb-chain',gloss:'扔',basis:'User-confirmed gouna-lie; no boundary within gouna',sourceForm:'kəu35na53lie33'},
  {wordIds:['yubao-60823-v-0765'],key:'relie',parts:['re','lie'],separator:'-',kind:'verb-chain',gloss:'咽',basis:'User-confirmed re-lie; exact function of lie remains open',sourceForm:'zɤ33lie55'}
 );
+// Chinese noun component followed by the native verb ‘hit/play’.
+SPELLING_BOUNDARY_REVIEWS.push({wordIds:['yubao-60756-v-0747','yubao-60823-v-0747'],key:'majianha',parts:['majian','ha'],separator:' ',kind:'phrase',gloss:'打麻将',basis:'Chinese loan component 麻将 followed by a native verb'});
 function boundaryPlain(text){return String(text).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').normalize('NFC').toLowerCase().replace(/ı/g,'i')}
 function initializeSpellingBoundaries(data){
  const byId=new Map();for(const rule of SPELLING_BOUNDARY_REVIEWS)for(const id of rule.wordIds){if(!byId.has(id))byId.set(id,[]);byId.get(id).push(rule)}
