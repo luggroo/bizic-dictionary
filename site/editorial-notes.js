@@ -51078,7 +51078,8 @@ EDITORIAL_NOTES.push({
   "yubao-60824-v-2903"
  ],
  "kind": "借词来源",
- "text": "当代湘语借词。",
+ "text": "当代湘语借词，原词为「造孽」。",
+ "donor": "造孽",
  "donorVariety": "湘语",
  "borrowingPeriod": "contemporary",
  "scope": "whole",
@@ -62368,6 +62369,51 @@ EDITORIAL_NOTES.push(...[
    }
   ],
   "reviewBatch": "components-followup-2026-10-23"
+ }
+]);
+
+EDITORIAL_NOTES.push(...[
+ {
+  "id": "chinese-loan-yubao-60823-v-2903",
+  "wordIds": [
+   "yubao-60823-v-2903"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「造孽」。",
+  "donor": "造孽",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsau¹³nie³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "zaonie-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60757-v-2903",
+  "wordIds": [
+   "yubao-60757-v-2903"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「造孽」。",
+  "donor": "造孽",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsau²⁴ȵie³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "zaonie-followup-2026-10-23"
  }
 ]);
 

@@ -9,7 +9,7 @@
           "yubao-60824-v-2903"
         ],
         "kind": "借词来源",
-        "text": "当代湘语借词。",
+        "text": "当代湘语借词，原词为「造孽」。",
         "donorVariety": "湘语",
         "borrowingPeriod": "contemporary",
         "scope": "whole",
@@ -22,9 +22,10 @@
             ]
           }
         ],
-        "reviewBatch": "xiang-contemporary-2026-10-23"
+        "reviewBatch": "xiang-contemporary-2026-10-23",
+        "donor": "造孽"
       },
-      "noteEn": "Contemporary loan from Xiang."
+      "noteEn": "Contemporary loan from Xiang 造孽 (used to mean pitiful)."
     },
     {
       "note": {

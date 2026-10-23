@@ -79,7 +79,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert(raised.attestations.every(a=>['to provide','provide'].includes(a.en)),'original English remains in source records');
  assert(!raised.en.includes('erroneous'),'correction commentary is not a gloss');
  for(const {wordIds} of followup.phraseBoundaries){c.photoFixture=get(wordIds[0]);assert.equal(vm.runInContext('JSON.stringify(WordClasses.ids(photoFixture))',c),'["phrase"]');}
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2935);
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2937);
  const componentsFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-components-followup-2026-10-23.json'),'utf8'));
  for(const {note} of componentsFollowup.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
@@ -90,6 +90,11 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  for(const row of componentsFollowup.retainedCandidates)for(const id of row.ids)assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' candidate stays unmarked');
  assert.equal(c.reviewedSpelling(get('yubao-60823-v-2897'),'dānzisō','accent'),'dānzi sō');
  assert.equal(c.reviewedSpelling(get('yubao-60823-v-2897'),'danxzirsox','ye'),'danxzir sox');
+ for(const id of ['yubao-60823-v-2903','yubao-60757-v-2903','yubao-60824-v-2903']){
+  const n=c.editorialNotesFor(get(id)).find(n=>n.id==='chinese-loan-'+id);
+  assert.equal(n.donor,'造孽');assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole');
+ }
+ assert.equal(c.editorialNotesFor(get('yubao-60756-v-2903')).find(n=>n.id==='chinese-loan-yubao-60756-v-2903').donor,'可怜','Yangchao uses a distinct donor');
  const correctedNonLoans=['yubao-60756-v-2277','yubao-60757-v-2277','stedt-rn-289762','yubao-60824-v-0306','yubao-60824-v-1801'];
  for(const id of correctedNonLoans)assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' reviewed non-loan');
  const pigLiver=get('yubao-60823-v-0411'),liverNote=c.editorialNotesFor(pigLiver).find(n=>n.id==='chinese-loan-yubao-60823-v-0411');
@@ -178,5 +183,5 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.parseViewHash('#words?hideWholeLoans=false').state.hideWholeLoans,false);
  const counts={};for(const w of data.words){const scope=c.modernChineseLoanInfo(w).scope||'unmarked';counts[scope]=(counts[scope]||0)+1;}
  console.log('Loan badge coverage:',counts);
- console.log('PASS: reviewed glosses, source preservation, 2935 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
+ console.log('PASS: reviewed glosses, source preservation, 2937 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
 })().catch(e=>{console.error(e);process.exit(1)});

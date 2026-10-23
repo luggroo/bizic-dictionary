@@ -3225,3 +3225,8 @@ Object.assign(UI_TRANSLATIONS, {
 });
 
 Object.assign(UI_TRANSLATIONS,{"各调查点的调号拼音和叶式拼音都用 y 表示音节起首的 /j/、/ʑ/，以及元音起首的 /i/、/i…/。例如 /i/ → yi、/ie/ → ye、/ia/ → ya；yi、yin 保留 i。白话字沿用自己的拼写规则。": "Across all survey points, tone-marked and Ye spelling use y for initial /j/, /ʑ/, and vowel-initial /i, i…/: /i/ → yi, /ie/ → ye, /ia/ → ya. Yi and yin retain i. POJ-style spelling follows its own rules."});
+
+Object.assign(UI_TRANSLATIONS, {
+ "可能借自西南官话「造孽」。": "Possibly borrowed from Southwestern Mandarin 造孽 (used to mean pitiful).",
+ "当代湘语借词，原词为「造孽」。": "Contemporary loan from Xiang 造孽 (used to mean pitiful)."
+});

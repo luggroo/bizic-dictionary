@@ -1,0 +1,64 @@
+{
+  "baseCommit": "de29bfb231a5964aa18a8ccf7031c5358bba0c57",
+  "decisions": [
+    {
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2903",
+        "wordIds": [
+          "yubao-60823-v-2903"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话「造孽」。",
+        "donor": "造孽",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "tsau¹³nie³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "zaonie-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 造孽 (used to mean pitiful)."
+    },
+    {
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-2903",
+        "wordIds": [
+          "yubao-60757-v-2903"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话「造孽」。",
+        "donor": "造孽",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "tsau²⁴ȵie³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "zaonie-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 造孽 (used to mean pitiful)."
+    }
+  ],
+  "existingDonorClarification": {
+    "id": "yubao-60824-v-2903",
+    "donor": "造孽",
+    "donorVariety": "湘语",
+    "borrowingPeriod": "contemporary"
+  },
+  "unchangedContrast": {
+    "id": "yubao-60756-v-2903",
+    "ipa": "kʰɔ⁵⁵liaŋ³³",
+    "donor": "可怜"
+  }
+}
