@@ -62459,6 +62459,33 @@ EDITORIAL_NOTES.push(
 {"id":"chinese-loan-yubao-60824-v-2420","wordIds":["yubao-60824-v-2420"],"kind":"借词来源","donor":"肥料","donorVariety":"西南官话或湘语","scope":"component","text":"「肥料」部分（第 1—2 音节）可能借自西南官话或湘语。","reviewedForms":[{"ipa":"xuei²¹liau¹³sã¹³","span":[1,2]}],"reviewBatch":"phonotactic-screening-2026-10-23"},
 {"id":"chinese-loan-yubao-60756-v-2417","wordIds":["yubao-60756-v-2417"],"kind":"借词来源","donor":"荒山","donorVariety":"西南官话","scope":"component","text":"「荒山」部分（第 1—2 音节）可能借自西南官话。","reviewedForms":[{"ipa":"xuaŋ⁵⁵saŋ³³kʰɛ³³","span":[1,2]}],"reviewBatch":"phonotactic-screening-2026-10-23"}
 );
+
+// Feng (2019), Tone Sandhi in Tujia Grammatical Particles, §4.2.2 and Table 5.3.
+// These rules describe phonetic realizations in Dianfang, Longshan, not lexical tone
+// assignments or generalizations to Southern Tujia. Match the grammatical sense,
+// since several of these forms also have unrelated lexical or verbal-particle uses.
+const PARTICLE_TONE_GROUP1='Feng（2019，第39页，龙山典房）：前一音节为44、24或53调时，此助词通常读44调；前一音节为21调时读21调。个别多音节词后有例外。（调值按原文）';
+const PARTICLE_TONE_GOAL='Feng（2019，第25—26页，龙山典房）：前一音节为44或24调时读44，21或53调时读21。表示目标、接受者或受益者时，变调规律相同。（调值按原文）';
+const PARTICLE_TONE_MANNER='Feng（2019，第33页，龙山典房）：前一音节为21或53调时，实录读21；44或24调后读44的规则沿用Brassett等（2006），尚需更多例证。（调值按原文）';
+const PARTICLE_TONE_ENTRIES=[
+ {key:'goal-po', forms:['pɔ','po'], meanings:/(?:目标|方向|目的地|去往|往|向|给|接受者|受益者|间接宾语|与格|goal|destination|recipient|beneficiar|toward|dative|indirect object)/iu, text:PARTICLE_TONE_GOAL},
+ {key:'source-lie', forms:['lie','liɛ'], meanings:/(?:来源|起点|从|由|源格|from|source|ablative)/iu, text:PARTICLE_TONE_GROUP1},
+ {key:'nominalizer-xi', forms:['ɕi'], meanings:/(?:名词化|关系从句|定语从句|名词后缀|的|nominali[sz]|relativiz|nmlz)/iu, text:PARTICLE_TONE_GROUP1},
+ {key:'agent-ma', forms:['ma'], meanings:/(?:施事|名词化|的人|者|agentive|agent nominal|one who|person who|nominali[sz]|doer)/iu, text:PARTICLE_TONE_GROUP1},
+ {key:'associative-nie', forms:['ɲie','ȵie','nie','ɲiɛ','ȵiɛ'], meanings:/(?:领属|属格|所属|所有|修饰|结构助词|的|possessiv|associativ|genitiv|attributiv)/iu, text:PARTICLE_TONE_GROUP1},
+ {key:'adverbial-mo', forms:['mɔ','mo'], meanings:/(?:方式|状语|副词|伴随|地|adverb|manner|instrumental)/iu, text:PARTICLE_TONE_MANNER}
+];
+function particleToneNotesFor(w){
+ if(!w||(w.dialect!=='北部'&&!(w.dialects||[]).includes('北部')))return [];
+ const stems=new Set((typeof wordIPA==='function'?wordIPA(w):[]).map(s=>String(s).replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹0-9\s/()[\]]/gu,'').normalize('NFC')));
+ const glosses=[w.zh,w.en,...(w.glosses||[]),...(w.zhVariants||[]),
+  ...(w.senses||[]).flatMap(s=>[s.zh,s.en]),
+  ...(w.attestations||[]).flatMap(s=>[s.zh,s.en,s.pos])];
+ const meaning=glosses.filter(v=>typeof v==='string').join(' ');
+ return PARTICLE_TONE_ENTRIES.filter(p=>p.forms.some(f=>stems.has(f))&&p.meanings.test(meaning))
+  .map(p=>({id:'feng-2019-tone-'+p.key,kind:'语流变调',text:p.text}));
+}
+
 // Index source IDs once; list filtering visits every merged entry.
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){
@@ -62469,7 +62496,7 @@ function editorialNotesFor(w){
  const ids=new Set([w.id,...(w.mergedWordIds||[]),...(w.attestations||[]).map(a=>a.id)]);
  const inferred=typeof WordClasses!=='undefined'&&WordClasses.provenance(w).some(p=>p.origin==='site-ai-assisted');
  const posNote=inferred?[{id:'site-pos-inference',kind:'词性',text:'带虚线的词性由本站借助 AI 根据现有释义和资料推测，可能有误。原文献标签保留在词性说明中。'}]:[];
- return [...(w.editorialNotes||[]),...posNote,...[...ids].flatMap(id=>editorialNotesByWordId.get(id)||[])].filter((n,i,a)=>a.findIndex(x=>x.id===n.id)===i);
+ return [...(w.editorialNotes||[]),...posNote,...particleToneNotesFor(w),...[...ids].flatMap(id=>editorialNotesByWordId.get(id)||[])].filter((n,i,a)=>a.findIndex(x=>x.id===n.id)===i);
 }
 const modernChineseLoanCache=new WeakMap();
 function loanIPAForms(value){

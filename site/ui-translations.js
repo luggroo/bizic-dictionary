@@ -3271,3 +3271,11 @@ Object.assign(UI_TRANSLATIONS,{
  'j、q、x、y后对应ie（jie、qie、xie、ye）；其他声母后的跨点同源对应为ai（p.26），不是把ɛ读成ai':'After written j, q, x and y, the spelling uses ie: jie, qie, xie and ye. After other onsets, the cross-variety cognate correspondence is ai (p. 26); this does not give ai as the pronunciation of ɛ.',
  '仙仁ɛ在拼音声母j、q、x、y后分别写作jie、qie、xie、ye，原始音标与调值仍按来源保留。':'Xianren ɛ after written j, q, x and y is spelled jie, qie, xie and ye respectively. The source IPA and tone values are retained.'
 });
+
+
+Object.assign(UI_TRANSLATIONS,{
+ '语流变调':'Tone sandhi',
+ 'Feng（2019，第39页，龙山典房）：前一音节为44、24或53调时，此助词通常读44调；前一音节为21调时读21调。个别多音节词后有例外。（调值按原文）':'Feng (2019, p. 39; Dianfang, Longshan): this particle is usually pronounced with tone 44 after 44, 24, or 53, and tone 21 after 21. Some multisyllabic contexts are exceptions. Tone values follow the thesis.',
+ 'Feng（2019，第25—26页，龙山典房）：前一音节为44或24调时读44，21或53调时读21。表示目标、接受者或受益者时，变调规律相同。（调值按原文）':'Feng (2019, pp. 25–26; Dianfang, Longshan): the particle is pronounced 44 after 44 or 24, and 21 after 21 or 53. The same pattern occurs for goal, recipient, and beneficiary uses. Tone values follow the thesis.',
+ 'Feng（2019，第33页，龙山典房）：前一音节为21或53调时，实录读21；44或24调后读44的规则沿用Brassett等（2006），尚需更多例证。（调值按原文）':'Feng (2019, p. 33; Dianfang, Longshan): recordings confirm tone 21 after 21 or 53. Tone 44 after 44 or 24 follows Brassett et al. (2006) and requires further evidence. Tone values follow the thesis.'
+});
