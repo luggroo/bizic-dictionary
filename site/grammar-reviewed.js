@@ -19,9 +19,9 @@ function grammarGlossEnglish(zh){
  if(GRAMMAR_GLOSS_EN[zh])return GRAMMAR_GLOSS_EN[zh];
  return zh.replace(/[\p{Script=Han}]+/gu,x=>GRAMMAR_GLOSS_EN[x]||x);
 }
-function grammarPairElement(ipa,d,ye='',enclosure=''){
+function grammarPairElement(ipa,d,ye='',enclosure='',spelling=null){
  const pending=d==='south'&&/^(?:i|y)?æ̃$/.test(ipa);
- const pair=pending?{accent:'（拼音待补充）',poj:'（拼音待补充）'}:grammarSpelling(ipa,d,ye),span=document.createElement('span');
+ const pair=pending?{accent:'（拼音待补充）',poj:'（拼音待补充）'}:spelling||grammarSpelling(ipa,d,ye),span=document.createElement('span');
  if(pending)span.dataset.spellingPending='true';
  span.className='grammar-pair'+(pending?' grammar-pending':'');span.dataset.ipa=ipa;span.dataset.dialect=d;span.dataset.uiContent='';
  const roman=document.createElement('span');roman.className='grammar-spelling';roman.lang=d==='south'?'tjs':'tji';
@@ -33,9 +33,20 @@ function grammarPairElement(ipa,d,ye='',enclosure=''){
 function grammarExample(ipa,glosses,d,pinyin=[],english=[]){
  const figure=document.createElement('figure');figure.className='grammar-interlinear';figure.dataset.dialect=d;
  const line=document.createElement('div');line.className='grammar-word-line';
- ipa.forEach((raw,i)=>{
-  const word=document.createElement('span');word.className='grammar-word';word.append(grammarPairElement(raw,d,pinyin[i]||''));
-  const gloss=document.createElement('span');gloss.className='grammar-gloss';gloss.dataset.uiContent='';gloss.dataset.zh=glosses[i]||'';gloss.dataset.en=english[i]||grammarGlossEnglish(glosses[i]||'');gloss.textContent=gloss.dataset.zh;word.append(gloss);line.append(word);
+ const groups=ipa.map((raw,i)=>({raw,spelling:grammarSpelling(raw,d,pinyin[i]||''),zh:glosses[i]||'',en:english[i]||grammarGlossEnglish(glosses[i]||'')}));
+ const bare=s=>s.replace(/[\[\]［］()（）*]/g,'').trim();
+ if(d==='north')for(let i=1;i<groups.length;i++){
+  if(bare(groups[i].zh)!=='名词化')continue;
+  let start=i-1;
+  while(start>0&&/^(?:状态|不能|未完成|完成)$/.test(bare(groups[start].zh)))start--;
+  const parts=groups.slice(start,i+1),merged={raw:parts.map(p=>p.raw).join(' '),spelling:{}};
+  for(const key of ['ye','accent'])merged.spelling[key]=parts.slice(0,-1).map(p=>p.spelling[key]).join('')+'-'+parts.at(-1).spelling[key];
+  for(const key of ['zh','en'])merged[key]=parts.slice(0,-1).map(p=>p[key]).join('.')+'-'+parts.at(-1)[key];
+  groups.splice(start,parts.length,merged);i=start;
+ }
+ groups.forEach(({raw,spelling,zh,en})=>{
+  const word=document.createElement('span');word.className='grammar-word';word.append(grammarPairElement(raw,d,'','',spelling));
+  const gloss=document.createElement('span');gloss.className='grammar-gloss';gloss.dataset.uiContent='';gloss.dataset.zh=zh;gloss.dataset.en=en;gloss.textContent=zh;word.append(gloss);line.append(word);
  });figure.append(line);return figure;
 }
 function grammarMoveTranslation(figure,node){
@@ -180,7 +191,8 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  // Romanization-only paradigms share the same display selector.
  if(ch.dialect==='north'){
   const accepted=new Set(GRAMMAR_YE_FORMS),w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.grammar-pair,.grammar-gloss,.grammar-spelling,script,style')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});const texts=[];let t;while((t=w.nextNode()))texts.push(t);
-  for(const n of texts){let end=0,frag=document.createDocumentFragment();for(const m of n.nodeValue.matchAll(/\b[a-z]+\b/g)){if(!accepted.has(m[0]))continue;const span=document.createElement('span');span.className='grammar-spelling';span.dataset.uiContent='';span.dataset.ye=m[0].replace(/^angf/,'anf').replace(/^angx/,'anx');span.dataset.accent=yeToAccent(span.dataset.ye);span.textContent=grammarDisplayedSpelling(span.dataset,'north');frag.append(n.nodeValue.slice(end,m.index),span);end=m.index+m[0].length;}if(end){frag.append(n.nodeValue.slice(end));n.replaceWith(frag);}}
+  const labels={niexi:{ye:'niexxi',accent:'niēxi'},gaxica:{ye:'ga-xi ca',accent:'ga-xi ca'},gaci:{ye:'ga-ci',accent:'ga-ci'}};
+  for(const n of texts){let end=0,frag=document.createDocumentFragment();for(const m of n.nodeValue.matchAll(/\b[a-z]+\b/g)){if(!accepted.has(m[0])&&!labels[m[0]])continue;const span=document.createElement('span');span.className='grammar-spelling';span.dataset.uiContent='';span.dataset.ye=labels[m[0]]?.ye||m[0].replace(/^angf/,'anf').replace(/^angx/,'anx');span.dataset.accent=labels[m[0]]?.accent||yeToAccent(span.dataset.ye);span.textContent=grammarDisplayedSpelling(span.dataset,'north');frag.append(n.nodeValue.slice(end,m.index),span);end=m.index+m[0].length;}if(end){frag.append(n.nodeValue.slice(end));n.replaceWith(frag);}}
  }
  // Bare onset/rime inventory cells also receive their matching romanization.
  for(const table of root.querySelectorAll('table')){

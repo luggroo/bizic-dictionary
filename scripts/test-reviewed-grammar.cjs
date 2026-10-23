@@ -10,6 +10,17 @@ const root=path.resolve(__dirname,'../site');
   for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','grammar-notation.js','grammar-reviewed-data.js','grammar-glosses.js','ui-translations.js','content-translations.js','grammar-reviewed-i18n.js','grammar-reviewed.js'])await page.addScriptTag({path:path.join(root,f)});
   const audit=await page.evaluate(()=>{
    const failures=[],results=[],pending=new Set();
+   for(const [ipa,explicit,ye,accent] of [
+    ['ɲie ɕi','','niexi','niexi'],
+    ['ɲie²¹ ɕi²⁴','nierxif','nierxif','niěxí'],
+    ['ɲie⁵⁵ɕi⁵⁵','niexxix','niexxix','niēxī'],
+    ['pʰu-{ɕi／nieɕi}]','pu-{xi／niexi}]','pu-{xi／niexi}]','pu-{xi／niexi}]'],
+    ['tsi²¹ ka³⁵ tsʰi⁵⁵','','zir gaf-cix','zǐ gá-cī'],
+    ['sa⁵⁵ ɕi²¹ ke⁵⁵','','sax-xir gex','sā-xǐ gē'],
+    ['ka³⁵ tso⁵⁵','','gaf-zox','gá-zō'],
+    ['ka³⁵ ɲie⁵⁵ (ɕi²¹)','','gaf-niex(xir)','gá-niē(xǐ)'],
+    ['ɕi³³ ti²¹','','xir dir','xǐ dǐ']
+   ]){const pair=grammarSpelling(ipa,'north',explicit);if(pair.ye!==ye||pair.accent!==accent)failures.push('Nominalizer spelling: '+JSON.stringify({ipa,expected:{ye,accent},actual:pair}));}
    for(const d of ['north','south'])for(const ch of REVIEWED_GRAMMAR[d]){
     try{
      for(const title of [ch.title,...ch.sections.map(s=>s.title)])if(!UI_TRANSLATIONS[title])failures.push(ch.id+': untranslated navigation title '+title);
@@ -24,6 +35,18 @@ const root=path.resolve(__dirname,'../site');
      for(const rendered of [document.querySelector('main'),english]){const words=document.createTreeWalker(rendered,NodeFilter.SHOW_TEXT);let word;while((word=words.nextNode()))if(!word.parentElement.closest('.grammar-pair')&&/[\p{Script=Latin}\p{M}ʰ]+[¹²³⁴⁵]+/u.test(word.nodeValue))failures.push(ch.id+': IPA without romanization '+word.nodeValue);}
      for(const a of english.querySelectorAll('.grammar-citation')){if(!/^\[\d+\]$/.test(a.textContent)||!a.title||/\p{Script=Han}/u.test(a.title)||!english.querySelector('#'+a.dataset.footnoteTarget))failures.push(ch.id+': invalid reference '+a.outerHTML);}
      if(ch.id==='101'&&(![...english.querySelectorAll('.grammar-ipa')].some(n=>n.textContent==='/p/')||![...english.querySelectorAll('.grammar-ipa')].some(n=>n.textContent==='[b]')))failures.push('IPA slashes/brackets missing');
+     if(d==='north')for(const word of document.querySelectorAll('.grammar-word')){
+      const gloss=word.querySelector('.grammar-gloss'),spelling=word.querySelector('.grammar-spelling');
+      if(/NMLZ/.test(gloss.dataset.en)&&(!spelling.dataset.ye.includes('-')||!spelling.dataset.accent.includes('-')))failures.push(ch.id+': unattached nominalizer '+word.textContent);
+     }
+     if(ch.id==='106'){
+      for(const rendered of [document.querySelector('main'),english]){
+       if(rendered.textContent.includes('niēi')||![...rendered.querySelectorAll('h3,h4')].some(h=>h.textContent.includes('niēxi')))failures.push('niexi onset missing from heading');
+       const paired=[...rendered.querySelectorAll('.grammar-word .grammar-pair')].find(p=>p.dataset.ipa==='[tsa²⁴ pɔ²¹ ɕi²⁴]');
+       if(!paired||paired.querySelector('.grammar-spelling').dataset.ye!=='[zafbor-xif]')failures.push('State-marked verb and nominalizer not aligned together');
+       if(![...rendered.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa==='pʰu-{ɕi／nieɕi}]'&&p.querySelector('.grammar-spelling').dataset.accent==='pu-{xi／niexi}]'))failures.push('Unmarked source acquired a tone');
+      }
+     }
      if(ch.id==='104'){
       const overview=[...document.querySelectorAll('table')].find(t=>t.querySelectorAll('th')[1]?.textContent==='形式或组合');
       const forms=[...overview.querySelectorAll('tbody tr')].map(r=>r.cells[1]);

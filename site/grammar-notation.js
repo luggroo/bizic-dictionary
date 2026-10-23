@@ -48,24 +48,47 @@ function grammarSouthSyllable(core,tone=''){
  return out;
 }
 function grammarSpelling(raw,dialect='north',explicitYe=''){
- if(dialect==='north'&&explicitYe){const ye=raw.includes('ã')?explicitYe.replaceAll('ang','an'):explicitYe;return {ye,accent:yeToAccent(ye)};}
+ if(dialect==='north'&&explicitYe){
+  const ye=raw.includes('ã')?explicitYe.replaceAll('ang','an'):explicitYe;
+  // A tone-free source has no tone letters to decode (the x in niexi is an onset).
+  return {ye,accent:/[⁰¹²³⁴⁵⁶⁷⁸⁹0-9]/.test(raw)?yeToAccent(ye):ye};
+ }
  const normalized=grammarIPANormalize(raw),result=dialect==='south'?{accent:'',poj:''}:{ye:'',accent:''};
- let end=0,count=0;
+ const nominalBoundaries=dialect==='north'?grammarNominalBoundaries(normalized):new Set();
+ let end=0,count=0,previous='';
  for(const m of normalized.matchAll(/([\p{L}\p{M}ʔ]+)([0-9]*)/gu)){
   const gap=normalized.slice(end,m.index);
   if(/[A-Za-z0-9]/.test(gap))throw Error('Unparsed IPA: '+raw);
   const syll=dialect==='south'?grammarSouthSyllable(m[1],m[2]):grammarNorthSyllable(m[1],m[2]);
   for(const key of Object.keys(result)){
-   const sep=count&&!gap&&key==='poj'?'-':gap;
+   let sep=count&&!gap&&key==='poj'?'-':gap;
+   if(dialect==='north'){
+    if(nominalBoundaries.has(m.index))sep='-';
+    else if(previous==='ɲie'&&m[1]==='ɕi'&&/^\s*\(?$/.test(gap))sep=gap.replace(/\s/g,'');
+   }
    const boundary=count&&!gap&&key==='accent'&&/^[aeiouüı]/.test(syll[key])?"'":'';
    result[key]+=sep+boundary+syll[key];
   }
-  end=m.index+m[0].length;count++;
+  end=m.index+m[0].length;previous=m[1];count++;
  }
  if(!count)throw Error('No IPA segment: '+raw);
  for(const key of Object.keys(result))result[key]+=normalized.slice(end);
- // Reviewed interlinear spellings retain their word and morpheme boundaries.
- if(dialect==='north'&&explicitYe){result.ye=explicitYe;result.accent=yeToAccent(explicitYe);}
  return result;
+}
+// Reviewed combinations in inline examples. Homophonous lexical words are not
+// inferred to be nominalizers; aligned examples use their explicit glosses below.
+function grammarNominalBoundaries(ipa){
+ const combinations=['ka35 tsʰi55','xu21 tsʰi21','zi55 tsʰi21','ka21 tsʰi55',
+  'zi55 ma21','ka35 ma55','pa55 ma21','ka35 tso55','pʰo55 tso21',
+  'sa55 ɕi21','lo21 ɕi21','ka35 ɲie55','ka55 ɲie21'];
+ const boundaries=new Set();
+ for(const combination of combinations){
+  let from=0,index;while((index=ipa.indexOf(combination,from))!==-1){
+   const end=index+combination.length;
+   if((!index||/[\s[(-]/.test(ipa[index-1]))&&(end===ipa.length||/[\s)\],;=]/.test(ipa[end])))boundaries.add(index+combination.indexOf(' ')+1);
+   from=end;
+  }
+ }
+ return boundaries;
 }
 function grammarDisplayedSpelling(pair,dialect){return pair[dialect==='south'?(southernDisplay==='poj'?'poj':'accent'):(spellingDisplay==='ye'?'ye':'accent')];}
