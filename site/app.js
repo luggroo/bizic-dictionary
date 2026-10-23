@@ -480,4 +480,24 @@ $('#detail').addEventListener('close',()=>{$('#detail').querySelectorAll('audio'
 document.addEventListener('play',e=>{if(e.target.tagName==='AUDIO')document.querySelectorAll('audio').forEach(a=>{if(a!==e.target)a.pause()})},true);
 initializePreparedData();
 
-document.addEventListener('change',e=>{if(!e.target.dataset.spellingDisplay)return;if(e.target.dataset.spellingDisplay==='south'){southernDisplay=e.target.value==='poj'?'poj':'accent';try{localStorage.setItem('tujia-south-spelling-v1',southernDisplay)}catch{}}else{spellingDisplay=e.target.value==='ye'?'ye':'accent';try{localStorage.setItem('tujia-north-spelling-v2',spellingDisplay)}catch{}}const id=currentDetail,isOpen=$('#detail').open;render();$('#detail-spelling-control').innerHTML=spellingSelector();if(isOpen&&id){if(C[id]&&!C[id].survey){const lines=corpusLyricLines(C[id].text);document.querySelectorAll('.lyric-tujia').forEach((el,i)=>el.textContent=displayBrassett(lines[i].text))}else openDetail(id)}else if(isOpen&&currentOverlay)restoreDetailNavigation(currentOverlay)});
+document.addEventListener('change',e=>{
+ if(!e.target.dataset.spellingDisplay)return;
+ const query=$('#query'),draft=query?.value,start=query?.selectionStart,end=query?.selectionEnd;
+ if(e.target.dataset.spellingDisplay==='south'){
+  southernDisplay=e.target.value==='poj'?'poj':'accent';
+  try{localStorage.setItem('tujia-south-spelling-v1',southernDisplay)}catch{}
+ }else{
+  spellingDisplay=e.target.value==='ye'?'ye':'accent';
+  try{localStorage.setItem('tujia-north-spelling-v2',spellingDisplay)}catch{}
+ }
+ const id=currentDetail,isOpen=$('#detail').open;
+ render();
+ // Display preferences must not submit or discard an unfinished query.
+ const nextQuery=$('#query');
+ if(nextQuery&&draft!==undefined){nextQuery.value=draft;if(start!==null&&start!==undefined)nextQuery.setSelectionRange(start,end);}
+ $('#detail-spelling-control').innerHTML=spellingSelector();
+ if(isOpen&&id){
+  if(C[id]&&!C[id].survey){const lines=corpusLyricLines(C[id].text);document.querySelectorAll('.lyric-tujia').forEach((el,i)=>el.textContent=displayBrassett(lines[i].text))}
+  else openDetail(id);
+ }else if(isOpen&&currentOverlay)restoreDetailNavigation(currentOverlay);
+});

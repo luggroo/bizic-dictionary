@@ -36,7 +36,11 @@ async function main(){
   await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
   assert.equal(await page.locator('aside nav .active').getAttribute('data-view'),view);
  };
- const tap=async selector=>{await page.locator(selector).first().tap();};
+ const tap=async selector=>{
+  const target=page.locator(selector).first();
+  if(!await target.evaluate(el=>el.tagName==='SUMMARY'))for(const detail of await target.locator('xpath=ancestor::details').all())if(await detail.getAttribute('open')===null)await detail.locator('summary').first().tap();
+  await target.tap();
+ };
  const nav=async view=>{await tap('aside nav [data-view="'+view+'"]');await ready(view);};
  const closed=async()=>page.waitForFunction(()=>!document.querySelector('#detail').open);
  const close=async()=>{await tap('#close');await closed();};
@@ -97,7 +101,7 @@ async function main(){
  assert(meanings.some(x=>/here/.test(x)));
  assert(meanings.every(x=>/\bhere\b/.test(x)),'every hit has a matching sense');
  assert(!meanings.some(x=>/English.*here/.test(x)),'editorial notes do not create false matches');
- assert.equal(await page.locator('.word-card-meaning .tiny').first().innerText(),'here','exact gloss ranks first');
+ assert.equal(await page.locator('.word-card-english').first().evaluate(el=>[...el.childNodes].filter(n=>n.nodeType===Node.TEXT_NODE).map(n=>n.textContent).join('').trim()),'here','exact gloss ranks first');
  const searchURL=page.url();
  await nav('history');await back('words');
  assert.equal(await page.inputValue('#query'),'here');
@@ -118,6 +122,7 @@ async function main(){
  pass('Back closes details before leaving the list; Forward restores details');
 
  await nav('words');await tap('#browse-all-words');
+ await tap('.filter-disclosure>summary');
  await page.locator('[data-filter="dialect"]').selectOption({index:1});
  await tap('.pager button:last-child');
  await page.waitForFunction(()=>state.page===2);
@@ -160,18 +165,17 @@ async function main(){
  await back('home');assert.equal(await page.inputValue('#query'),'water');
  pass('Historical comparison and cross-page global search');
 
- await visit('#grammar/north/9','grammar');
- const ref=page.locator('.grammar-article a[href^="#ref-"]').first();
- const target=(await ref.getAttribute('href')).slice(1),grammarURL=page.url();
+ await visit('#grammar/north/101/1','grammar');
+ const ref=page.locator('.grammar-article .grammar-citation').first();
+ const target=await ref.getAttribute('data-footnote-target'),grammarURL=page.url();
  await ref.tap();
  assert.equal(await page.locator('[id="'+target+'"]').isVisible(),true);
  assert.equal(page.url(),grammarURL);
  await page.reload();await ready('grammar');
- assert.equal(await page.evaluate(()=>state.chapter),'9');
- await tap('.chapter-pagination button:last-child');
- const nextChapter=await page.evaluate(()=>state.chapter);
- assert.notEqual(nextChapter,'9');
- await back('grammar');assert.equal(await page.evaluate(()=>state.chapter),'9');
+ assert.equal(await page.evaluate(()=>state.grammarSection),'101.1');
+ await tap('.chapter-pagination a[rel="next"]');
+ assert.equal(await page.evaluate(()=>state.grammarSection),'101.2');
+ await back('grammar');assert.equal(await page.evaluate(()=>state.grammarSection),'101.1');
  await tap('[data-grammar-dialect="south"]');
  assert.equal(await page.evaluate(()=>state.grammarDialect),'south');
  await back('grammar');assert.equal(await page.evaluate(()=>state.grammarDialect),'north');
@@ -196,12 +200,11 @@ async function main(){
   await page.reload();await ready('sources');assert.equal(await page.inputValue('#query'),query);
   await back('grammar');
  }
- await visit('#grammar/north/9','grammar');
- await tap('a[href="guides/verbs.html"]');
- await page.waitForURL('**/guides/verbs.html');
- await tap('a[href="../#grammar/north/9"]');await ready('grammar');
- assert.equal(await page.evaluate(()=>state.chapter),'9');
- pass('Grammar source search and continuous-reading guide return link');
+ await visit('#grammar/north/101/1','grammar');
+ await page.goto(new URL('guides/verbs.html',base).href);await ready('grammar');
+ assert.equal(await page.evaluate(()=>state.chapter),'104');
+ await back('grammar');assert.equal(await page.evaluate(()=>state.chapter),'101');
+ pass('Legacy continuous-reading guide redirects to current grammar and Back restores the reading page');
 
  for(const [hash,view] of [['#saved','home'],['#topics','sources'],['#not-a-page','home'],['#grammar/north/999','grammar']]){
   await visit(hash,view);

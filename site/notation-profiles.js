@@ -45,6 +45,13 @@ Object.assign(NOTATION_CONFIG.profiles.find(p=>p.id==='stedt-cb523fc3dc:north'),
 // Same source notation and word already reviewed as taif.
 NOTATION_CONFIG.profiles.find(p=>p.id==='stedt-cb523fc3dc:north').wordOverrides['tha◦i35']={ye:'taif',brassett:'tai2'};
 
+// Keep the source guide consistent with the Xianren palatal-rime exception.
+{
+ const profile=NOTATION_CONFIG.profiles.find(p=>p.id==='zhou-xr');
+ const rule=profile.rules.find(r=>r.kind==='韵母'&&r.raw==='ɛ');
+ rule.condition='j、q、x、y后对应ie（jie、qie、xie、ye）；其他声母后的跨点同源对应为ai（p.26），不是把ɛ读成ai';
+ profile.notes.push('仙仁ɛ在拼音声母j、q、x、y后分别写作jie、qie、xie、ye，原始音标与调值仍按来源保留。');
+}
 // Shared written onset; vowel and tone correspondences remain source-specific.
 for(const profile of NOTATION_CONFIG.profiles){
  if(profile.kind!=='ipa'||!profile.onsetMap)continue;

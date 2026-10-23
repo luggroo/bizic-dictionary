@@ -37,7 +37,7 @@ for(const [d,source,offset] of [['north',northern,100],['south',southern,200]]){
   if(i+1<marks.length)body=body.replace(/(?:<a id="[^"]+"><\/a>\s*)+$/,'');
   const pending=/^\s*(?:<a[^\n]+\n\s*)*本部分暂无现成正文。\s*$/.test(body);
   if(d==='south'&&i===0){
-   const tables='\n\n<details>\n<summary>声母、韵母与声调列表</summary>\n\n'+southAppendix+'\n\n</details>\n';
+   const tables='\n\n'+southAppendix+'\n';
    body=body.includes('<!-- southern-phonology-tables -->')?body.replace('<!-- southern-phonology-tables -->',tables):body+tables;
   }
   if(pending)body=headAnchors;

@@ -1,7 +1,7 @@
 // Run with Playwright installed; CHROMIUM_EXECUTABLE may select a local browser.
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict'), fs=require('node:fs'), path=require('node:path'), http=require('node:http'), zlib=require('node:zlib');
-const root=path.resolve(__dirname,'../site');
+const root=path.resolve(process.env.SITE_ROOT||path.join(__dirname,'../site'));
 const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.json':'application/json'};
 const server=http.createServer((req,res)=>{
   const url=new URL(req.url,'http://localhost'), name=url.pathname==='/'?'index.html':decodeURIComponent(url.pathname.slice(1)), file=path.resolve(root,name);
@@ -16,15 +16,17 @@ const server=http.createServer((req,res)=>{
     page.on('pageerror',e=>errors.push(e.message));
     await page.goto('http://127.0.0.1:'+server.address().port);
     await page.waitForSelector('.hero',{timeout:90000});
-    assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīkǎ áhxī');
+    assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīsǎ áhxī');
     await page.selectOption('#ui-language','en');
     assert.match(await page.title(),/^Overview/);
     assert.equal(await page.locator('nav [data-ui-tujia="words"]').innerText(),'cīcī nī');
+    await page.locator('details:has(#spelling-control)>summary').click();
     await page.selectOption('#spelling-control [data-spelling-display="north"]','ye');
     assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bifzixsar afhxix');
     assert.equal(await page.locator('nav [data-view="saved"]').count(),0);
     await page.locator('nav [data-view="words"]').click();
     assert.equal(await page.locator('.word-card').count(),12);
+    await page.evaluate(()=>loadAllWordEvidence());
     const snapshot=await page.evaluate(()=>JSON.stringify(D.words.map(w=>[w.id,w.zh,w.en,w.term,w.forms,w.attestations])));
     await page.locator('#query').fill('水');
     await page.locator('[data-search-language="zh"]').click();
@@ -53,20 +55,21 @@ const server=http.createServer((req,res)=>{
     await page.locator('.word-card-content').first().click();
     await page.waitForSelector('dialog[open]');
     assert.match(await page.locator('#detail-label').innerText(),/Dictionary entry/);
-    assert.match(await page.locator('#detail-body>h2').innerText(),/水/);
+    assert.match(await page.locator('#detail-body .word-entry-definition h2').innerText(),/水/);
     await page.selectOption('#detail-spelling-control [data-spelling-display="north"]','accent');
-    assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīkǎ áhxī');
+    assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīsǎ áhxī');
     await page.locator('#close').click();
     assert.equal(await page.locator('#note,#save-note').count(),0);
     await page.reload();
     await page.waitForSelector('.word-card',{timeout:90000});
     assert.equal(await page.inputValue('#ui-language'),'en');
-    assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīkǎ áhxī');
+    assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīsǎ áhxī');
     for(const view of ['home','words','corpus','sources','grammar','notation','history']){
       await page.locator('nav [data-view="'+view+'"]').click();
       assert(await page.locator('#main').innerText(),view+' is empty');
       assert(!/未能载入|undefined|NaN/.test(await page.locator('#main').innerText()),view+' failed');
     }
+    await page.evaluate(()=>loadAllWordEvidence());
     assert.equal(await page.evaluate(()=>JSON.stringify(D.words.map(w=>[w.id,w.zh,w.en,w.term,w.forms,w.attestations]))),snapshot);
     for(const width of [390,768,1280]){
       await page.setViewportSize({width,height:844});

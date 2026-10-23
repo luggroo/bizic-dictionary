@@ -195,6 +195,9 @@ function rawSourceSyllableCores(core,p){
  }
  if(!p.mappingMode)return NOTATION_CONFIG.ipaSyllables[core];
  for(const [a,b] of Object.entries(p.symbolNormalization||{}))core=core.replaceAll(a,b);
+ // Xianren /ɛ/ after written j/q/x/y uses jie/qie/xie/ye.
+ // Do not enable unrelated voiced onsets or mix source profiles.
+ if(p.mappingMode==='zhou-xr'&&/^(?:tɕʰ?|dʑ|ɕ|j|ʑ)ɛ$/.test(core))return [{'tɕ':'jie','dʑ':'jie','tɕʰ':'qie','ɕ':'xie','j':'ye','ʑ':'ye'}[core.slice(0,-1)]];
  const on=Object.keys(p.onsetMap).filter(Boolean).sort((a,b)=>b.length-a.length).find(x=>core.startsWith(x))||'', r=core.slice(on.length), mode=p.mappingMode;
  let ons=p.onsetMap[on]||[],rs=p.rhymeMap[r]||[];
  if(r==='ɯ'&&!p.reviewedVowels&&!['k','kʰ','x','ɣ'].includes(on))return [];

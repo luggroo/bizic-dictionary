@@ -3249,3 +3249,7 @@ Object.assign(UI_TRANSLATIONS, {
  "补充材料记 niedigai 为“两倍”；本条 ka 的含义待核。补充形式尚无声调与 IPA。":"Supplementary material records niedigai as ‘twice’; the meaning of ka in this entry remains uncertain. Tones and IPA are not yet available for the supplementary form.",
  "本站借助 AI 推测的词性，可能有误。原文献未标注此词性。":"Part of speech inferred by this site with AI assistance; it may be incorrect. This category is not labelled in the source."
 });
+Object.assign(UI_TRANSLATIONS,{
+ 'j、q、x、y后对应ie（jie、qie、xie、ye）；其他声母后的跨点同源对应为ai（p.26），不是把ɛ读成ai':'After written j, q, x and y, the spelling uses ie: jie, qie, xie and ye. After other onsets, the cross-variety cognate correspondence is ai (p. 26); this does not give ai as the pronunciation of ɛ.',
+ '仙仁ɛ在拼音声母j、q、x、y后分别写作jie、qie、xie、ye，原始音标与调值仍按来源保留。':'Xianren ɛ after written j, q, x and y is spelled jie, qie, xie and ye respectively. The source IPA and tone values are retained.'
+});

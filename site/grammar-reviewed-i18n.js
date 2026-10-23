@@ -1569,3 +1569,29 @@ Object.assign(UI_TRANSLATIONS, {
   "其他材料中的情况并不一致。戴庆厦、田静《仙仁土家语研究》第130页认为，仙仁话没有专门的主格、宾格助词，另有与格助词。中国语保仙仁点第0036句另有/na⁵⁵/和/na³³/，原记录均释为“一”：": "Other sources describe a different situation. On p. 130 of A Study of Xianren Tujia, Dai Qingxia and Tian Jing state that Xianren has no dedicated nominative or accusative particles, but does have a dative particle. Sentence 0036 from the Yubao Xianren survey contains /na⁵⁵/ and /na³³/, both glossed as “one” in the source:",
   "这两处分别位于“你”和“衣服”之后，原记录的释义均为“一”。这条例句没有提供将其判作宾格助词的直接证据，与《简志》/na²¹/的关系仍有待核实。": "These two forms follow “you” and “clothes”, respectively, and both are glossed as “one” in the source. This sentence provides no direct evidence for analysing them as accusative particles; their relationship to /na²¹/ in the Outline remains to be established."
 });
+// Phonology reading guide; technical forms and source transcriptions are unchanged.
+Object.assign(UI_TRANSLATIONS,{
+ "一个音节可以分成声母、韵母和声调。先看音节怎样组成，再查声母、韵母和声调的表格；方言对照和连读变化放在后面。":"A syllable has an onset, a rime and a tone. Start with its structure, then consult the onset, rime and tone tables. Comparisons between varieties and tone changes in connected speech follow.",
+ "本文的北部例句以龙山材料为主。表中同时保留他砂、拉西峒、保靖仙仁和小龙热的资料；不同调查点的音值和转写方式可能不同。拼音随显示设置切换，国际音标保留所引资料的记音。完整对应可查":"Northern examples mainly draw on Longshan materials. The tables also retain data from Tasha, Laxidong, Xianren in Baojing, and Xiaolongre; pronunciation and transcription may differ between sites. The spelling changes with the display setting, while IPA retains the cited source transcription. For the complete correspondences, see ",
+ "本节列出":"This section lists ",
+ "22种声母音值、28项韵母":"22 onset values and 28 rime entries",
+ "，包含表中的变体和借词韵母，零声母另列。各地读音与转写的对照可参看 Zhou（2020），第22—28页。":", including the variants and loanword rimes in the tables. Zero onset is listed separately. For pronunciation and transcription across sites, see Zhou (2020), pp. 22–28.",
+ "读一个音节":"Reading a syllable",
+ "先读懂一个音节":"Start with a syllable",
+ "声母：拼写、音值与词例":"Onsets: spelling, sound values and examples",
+ "查看声母表、词例与方言对照":"Onset tables, examples and comparisons",
+ "韵母：元音、介音与鼻化":"Rimes: vowels, medials and nasalization",
+ "查看韵母表与词例":"Rime tables and examples",
+ "比较各调查点的韵母":"Compare rimes across sites",
+ "声调：调类、调值与调尾":"Tones: categories, pitch values and spelling",
+ "方言差异：音值的分布与变读":"Variety differences: distribution and variants",
+ "查看发音环境与方言差异":"Pronunciation environments and variety differences",
+ "连读中的声调变化":"Tone changes in connected speech",
+ "方言差异":"Variety differences",
+ "连读变化":"Connected speech",
+ "先看音节结构，再依次阅读声母、韵母、声调和前缀变调。调号拼音与白话字可在显示设置中切换；例词的国际音标保留来源中的调值。":"Start with syllable structure, then read about onsets, rimes, tones and prefix tone changes. Switch between accent-marked spelling and POJ in the display settings; the IPA examples retain the source tone values.",
+ "音节":"Syllables",
+ "前缀变调":"Prefix tone changes",
+ "声母、韵母、音节和调值的详细表格见":"For tables of onsets, rimes, syllables and tone values, see ",
+ "本章语音说明":"this chapter’s phonology guide"
+});

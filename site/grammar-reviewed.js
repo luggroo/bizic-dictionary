@@ -215,15 +215,18 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   }
   if(changed){fr.append(raw.slice(pos));n.replaceWith(fr);}
  }
- // Source tables often print Ye spelling immediately before an IPA form.
- // The pair already supplies that spelling in both display modes.
- for(const pair of root.querySelectorAll('td .grammar-pair,th .grammar-pair')){
+ // A source label directly before IPA is already supplied by the switchable
+ // pair. This occurs in prose as well as tables; do not remove separate pairs
+ // in genuine repeated words or examples.
+ for(const pair of root.querySelectorAll('.grammar-pair')){
   const forms=pair.querySelector('.grammar-spelling').dataset;
   const known=new Set([forms.ye,forms.accent,forms.poj].filter(Boolean).map(x=>x.normalize('NFC')));
   let before=pair.previousSibling;
   if(before?.nodeType===Node.TEXT_NODE){
-   const match=before.nodeValue.match(/([\p{L}\p{M}]+)\s*$/u);
-   if(match&&known.has(match[1].normalize('NFC')))before.nodeValue=before.nodeValue.slice(0,match.index);
+   const match=before.nodeValue.match(/([\p{Script=Latin}\p{M}]+)(\s*(?:\(\s*)?)$/u);
+   // In prose, only remove explicit onset labels. An English preposition
+   // such as "in" before /ĩ/ must not be mistaken for its spelling.
+   if(match&&known.has(match[1].normalize('NFC'))&&(pair.closest('td,th')||['ng','hx','r'].includes(match[1])))before.nodeValue=before.nodeValue.slice(0,match.index)+match[2];
   }else if(before?.matches?.('.grammar-spelling')&&known.has(before.textContent.trim().normalize('NFC')))before.remove();
  }
  // Romanization-only paradigms share the same display selector.

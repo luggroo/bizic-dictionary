@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 const { chromium, webkit } = require('playwright');
 (async () => {
   const engine = process.env.BROWSER === 'webkit' ? webkit : chromium;
-  const browser = await engine.launch({ headless: true });
+  const browser = await engine.launch({ headless: true, ...(process.env.BROWSER==='webkit'?{}:{executablePath:process.env.CHROMIUM_EXECUTABLE||undefined}) });
   try {
     for (const width of [320, 390, 1440]) {
       const context = await browser.newContext({ viewport: { width, height: 900 } });
@@ -45,6 +45,7 @@ const { chromium, webkit } = require('playwright');
         await page.locator('#close').click();
       }
       await page.locator('aside>nav [data-view="words"]').click();
+      await page.locator('details:has(#spelling-control)>summary').click();
       await page.locator('[data-spelling-display="north"]').first().selectOption('ye');
       await page.waitForTimeout(100);
       assert.equal(await page.locator('aside>nav [data-view="words"] .tujia-ui').innerText(), 'cixcix nix');

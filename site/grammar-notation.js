@@ -23,7 +23,10 @@ const GRAMMAR_SUPERS='⁰¹²³⁴⁵⁶⁷⁸⁹';
 function grammarIPANormalize(raw){return normalizeIPAAspiration(plainTones(raw).normalize('NFC')).replaceAll('ɡ','g').replaceAll('ɑ','a').replaceAll('ȵ','ɲ').replaceAll('ɲ̟','ɲ').replaceAll('ʦ','ts').replaceAll('ʨ','tɕ').replaceAll('ǳ','dz').replaceAll('ʣ','dz').replaceAll('ʥ','dʑ').replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ');}
 function grammarNorthSyllable(core,tone=''){
  const onset=Object.keys(GRAMMAR_ONSETS).sort((a,b)=>b.length-a.length).find(k=>core.startsWith(k));
- const r=core.slice(onset.length),rime=GRAMMAR_RIMES[r];
+ const r=core.slice(onset.length);
+ // After written j/q/x/y, this rime uses ie (jie/qie/xie/ye).
+ // Preserve other rimes and the original tone digits.
+ const rime=/^(?:tɕʰ?|dʑ|ɕ|j|ʑ)ɛ$/.test(core)?'ie':GRAMMAR_RIMES[r];
  if(rime===undefined){if(!r&&onset)return {ye:GRAMMAR_ONSETS[onset],accent:GRAMMAR_ONSETS[onset]};throw Error('Unmapped northern rime: '+core);}
  const base=normalizeInitialGlides(GRAMMAR_ONSETS[onset]+rime,core),t=GRAMMAR_NORTH_TONES[tone];
  if(tone&&!t)throw Error('Unmapped northern tone: '+core+tone);

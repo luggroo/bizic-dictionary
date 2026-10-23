@@ -46,14 +46,21 @@ const root=path.resolve(__dirname,'../site');
      for(const rendered of [document.querySelector('main'),english]){const words=document.createTreeWalker(rendered,NodeFilter.SHOW_TEXT);let word;while((word=words.nextNode()))if(!word.parentElement.closest('.grammar-pair,.grammar-ipa')&&/[\p{Script=Latin}\p{M}ʰ]+[¹²³⁴⁵]+/u.test(word.nodeValue))failures.push(ch.id+': IPA without romanization '+word.nodeValue);}
      if(ch.id==='101')for(const rendered of [document.querySelector('main'),english]){
       const tables=[...rendered.querySelectorAll('table')],originalTables=[...original.querySelectorAll('table')];
-      for(const [index,columns] of [[4,[0]],[5,[0]],[6,[2,3,4]],[8,[0]],[9,[0]],[10,[0]],[11,[0]]]){
+      let inventories=0;
+      for(const [index,table] of originalTables.entries()){
+       const headers=[...table.querySelectorAll('thead th')].map(n=>n.textContent);
+       if(!headers.includes('叶氏拼音'))continue;
+       const columns=headers[0]==='类别'?[2,3,4]:['IPA','IPA（原表记法）','音值／位置'].includes(headers[0])?[0]:[];
+       if(!columns.length)continue;
+       inventories++;
        for(const [r,row] of [...tables[index].tBodies[0].rows].entries())for(const c of columns){
         const cell=row.cells[c],source=originalTables[index].tBodies[0].rows[r].cells[c];
         const expected=rendered===english?(UI_TRANSLATIONS[source.textContent]||source.textContent):source.textContent;
         if(cell.textContent!==expected||cell.querySelector('.grammar-spelling'))failures.push('Inventory IPA repeated or changed: '+source.textContent);
        }
+       if(headers[2]==='词例（IPA）'&&!tables[index].tBodies[0].rows[0].cells[2].querySelector('.grammar-pair .grammar-spelling'))failures.push('Example word lost its spelling');
       }
-      if(!tables[8].tBodies[0].rows[0].cells[2].querySelector('.grammar-pair .grammar-spelling'))failures.push('Example word lost its spelling');
+      if(inventories<6)failures.push('Missing onset/rime inventories');
      }
      for(const a of english.querySelectorAll('.grammar-citation')){if(!/^\[\d+\]$/.test(a.textContent)||!a.title||/\p{Script=Han}/u.test(a.title)||!english.querySelector('#'+a.dataset.footnoteTarget))failures.push(ch.id+': invalid reference '+a.outerHTML);}
      if(ch.id==='101'&&(![...english.querySelectorAll('.grammar-ipa')].some(n=>n.textContent==='/p/')||![...english.querySelectorAll('.grammar-ipa')].some(n=>n.textContent==='[b]')))failures.push('IPA slashes/brackets missing');
