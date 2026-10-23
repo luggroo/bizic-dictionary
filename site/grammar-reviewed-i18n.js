@@ -1496,7 +1496,7 @@ Object.assign(UI_TRANSLATIONS,{
   "分句之间的因果或条件关系也可由上下文表达，不一定使用相当于“因为”或“如果”的连词。《南部土家语研究》将“天旱了，庄稼没有收成”列为因果复句，将“走累了，你就休息一会儿”列为假设复句。": "Causal or conditional relations between clauses can be conveyed by context, without conjunctions corresponding to “because” or “if”. A Study of Southern Tujia classifies “There was a drought; the crops yielded nothing” as causal and “If you get tired from walking, rest for a while” as conditional.",
   "复句中也可使用汉语借词。《南部土家语研究》的例句中有相当于“就、才、又”的词，表达先后、条件等关系。": "Complex sentences can also use Chinese loans. Examples in A Study of Southern Tujia contain words corresponding to “then”, “only then” and “again”, expressing relations such as sequence and condition.",
   "出处：《土家语三种句式的类型学特征》（2019），第76页，例（28）。": "Source: Typological Features of Three Tujia Sentence Patterns (2019), p. 76, example 28. ",
-  "南部土家语吸收了汉语词汇，如表示“白菜”的 /bɯe²¹ tsʰE³⁵/。": "Southern Tujia has borrowed Chinese words, including /bɯe²¹ tsʰE³⁵/ “Chinese cabbage”.",
+  "南部土家语吸收了汉语词汇，例如 /bɯe²¹ tsʰE³⁵/“白菜”。": "Southern Tujia has borrowed Chinese words, including /bɯe²¹ tsʰE³⁵/ “Chinese cabbage”.",
   "出处：《土家语近义词语义的方言差异》（2011），第41页。E 沿用原文记号。": "Source: Dialect Differences in the Meanings of Tujia Synonyms (2011), p. 41. E retains the source notation.",
   "表中沿用《Proto-Bizic》的记音；/n/ 的括号表示它与 /l/ 的关系需要结合来源阅读。/ʔ/ 是喉塞音，/ħ/、/ʕ/ 沿用原表符号。": "The table follows the notation in Proto-Bizic. Parentheses around /n/ indicate that its relationship with /l/ depends on the source account. /ʔ/ is a glottal stop; /ħ/ and /ʕ/ retain the source table’s symbols.",
   "出处：《Proto-Bizic: A Study of Tujia Historical Phonology》（2020），第30页。": "Source: Proto-Bizic: A Study of Tujia Historical Phonology (2020), p. 30. ",

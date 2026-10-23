@@ -240,6 +240,21 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   }
   const wrap=document.createElement('div');wrap.className='grammar-table-scroll';wrap.tabIndex=0;table.replaceWith(wrap);wrap.append(table);
  }
+ // Prose reads on one line; source tables and interlinear examples remain stacked.
+ const inProse=node=>!node.closest('table,figure,.grammar-example,.example,.grammar-formula');
+ for(const pair of root.querySelectorAll('.grammar-pair')){
+  if(!inProse(pair))continue;
+  pair.classList.add('grammar-pair-inline');
+  pair.querySelector('.grammar-spelling').after(document.createTextNode(' '));
+  const ipa=pair.querySelector('.grammar-ipa');
+  if(!/^[\/\[]/.test(ipa.textContent))ipa.textContent='/'+ipa.textContent+'/';
+ }
+ for(const spelling of root.querySelectorAll('.grammar-spelling')){
+  if(!spelling.closest('.grammar-pair')&&inProse(spelling))spelling.classList.add('grammar-spelling-inline');
+ }
+ for(const note of root.querySelectorAll('sup')){
+  if(note.querySelector('.grammar-citation')&&inProse(note))note.classList.add('grammar-inline-citation');
+ }
  for(const link of root.querySelectorAll('a[href^="#"]')){
   const target=link.getAttribute('href').slice(1),where=GRAMMAR_ANCHORS[target];if(where)link.href='#grammar/'+where.dialect+'/'+where.chapter+'?grammarAnchor='+encodeURIComponent(target);
  }
