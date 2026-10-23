@@ -61,7 +61,7 @@ function grammarMoveTranslation(figure,node){
 }
 function grammarLocalizeSource(root,language){
  if(language!=='en')return;
- const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.grammar-pair,.grammar-gloss,[data-zh][data-en],script,style')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
+ const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.grammar-pair,.grammar-ipa:not([data-source-has-han]),.grammar-gloss,[data-zh][data-en],script,style')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
  let node;while((node=walker.nextNode())){
   const raw=node.nodeValue,key=raw.trim();if(!key)continue;
   let en=UI_TRANSLATIONS[key];
@@ -151,7 +151,16 @@ document.addEventListener('click',event=>{
 function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  const root=document.createElement('div');root.className='reviewed-grammar integrated-grammar';root.dataset.referenceGrammar='';root.dataset.dialect=ch.dialect;root.dataset.chapter=ch.id;root.dataset.uiLanguage=language;root.dataset.uiContent='';root.lang=language==='en'?'en':'zh-CN';root.innerHTML=ch.html;
  let heading=0;for(const h of root.querySelectorAll('h3'))h.id='chapter-'+ch.id+'-'+heading++;
- for(const table of root.querySelectorAll('table')){table.dataset.originalHeaders=JSON.stringify([...table.querySelectorAll('thead th')].map(c=>c.textContent.trim()));for(const cell of table.querySelectorAll('td'))if(/\p{Script=Han}/u.test(cell.textContent))cell.dataset.sourceHasHan='true';}
+ for(const table of root.querySelectorAll('table')){
+  const headers=[...table.querySelectorAll('thead th')].map(c=>c.textContent.trim());table.dataset.originalHeaders=JSON.stringify(headers);
+  // Inventory values already have a corresponding spelling column. Full-word
+  // examples still need their own spelling when that column only names a segment.
+  const separateSpelling=['101','201'].includes(ch.id)&&headers.some(h=>/拼音|拼写|白话字/.test(h));
+  for(const row of table.querySelectorAll('tbody tr'))for(const [i,cell] of [...row.cells].entries()){
+   if(/\p{Script=Han}/u.test(cell.textContent))cell.dataset.sourceHasHan='true';
+   if(separateSpelling&&/IPA|音值|^(?:TS|拉西峒|XR仙仁|XL小龙热|CB|CJ)/.test(headers[i]||'')&&!/词例|读法/.test(headers[i]))cell.classList.add('grammar-ipa');
+  }
+ }
  // Standard interlinear tables already supply authoritative word boundaries.
  for(const table of [...root.querySelectorAll('table')]){
   const rows=[...table.rows].map(r=>[...r.cells].map(c=>c.textContent.trim()));
@@ -185,7 +194,7 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  }
  for(const a of root.querySelectorAll('.grammar-citation')){const body=root.querySelector('#'+a.dataset.footnoteTarget+'>p');if(body){a.title=body.textContent.trim().replace(/^(?:出处：|Source:\s*)/,'');a.setAttribute('aria-label',(language==='en'?'Source ':'出处 ')+a.textContent+': '+a.title);}}
  // Pair every remaining phonetic word/phrase, including inline citations and tables.
- const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('script,style,.grammar-pair,.grammar-gloss')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
+ const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('script,style,.grammar-pair,.grammar-ipa,.grammar-gloss')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
  const nodes=[];let node;while((node=walker.nextNode()))nodes.push(node);
  const letters='a-z'+(ch.dialect==='south'?'E':'')+'ãẽĩõũỹɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰüɡ\u0300-\u036f';
  const token='['+letters+']+';
@@ -219,7 +228,7 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  }
  // Romanization-only paradigms share the same display selector.
  if(ch.dialect==='north'){
-  const accepted=new Set(GRAMMAR_YE_FORMS),w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.grammar-pair,.grammar-gloss,.grammar-spelling,script,style')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});const texts=[];let t;while((t=w.nextNode()))texts.push(t);
+  const accepted=new Set(GRAMMAR_YE_FORMS),w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.grammar-pair,.grammar-ipa,.grammar-gloss,.grammar-spelling,script,style')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});const texts=[];let t;while((t=w.nextNode()))texts.push(t);
   const labels={niexi:{ye:'niexxi',accent:'niēxi'},gaxica:{ye:'ga-xi ca',accent:'ga-xi ca'},gaci:{ye:'ga-ci',accent:'ga-ci'}};
   for(const n of texts){let end=0,frag=document.createDocumentFragment();for(const m of n.nodeValue.matchAll(/\b[a-z]+\b/g)){if(!accepted.has(m[0])&&!labels[m[0]])continue;const span=document.createElement('span');span.className='grammar-spelling';span.dataset.uiContent='';span.dataset.ye=labels[m[0]]?.ye||m[0].replace(/^angf/,'anf').replace(/^angx/,'anx');span.dataset.accent=labels[m[0]]?.accent||yeToAccent(span.dataset.ye);span.textContent=grammarDisplayedSpelling(span.dataset,'north');frag.append(n.nodeValue.slice(end,m.index),span);end=m.index+m[0].length;}if(end){frag.append(n.nodeValue.slice(end));n.replaceWith(frag);}}
  }
@@ -229,7 +238,7 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   if(headers[0]==='问什么'&&headers[1]?.includes('形式'))table.classList.add('grammar-question-forms');
   for(const row of table.querySelectorAll('tbody tr'))for(let i=0;i<row.cells.length;i++){
    const cell=row.cells[i],header=headers[i]||'',raw=cell.textContent.trim();
-   if(!raw||raw==='—')continue;
+   if(!raw||raw==='—'||cell.classList.contains('grammar-ipa'))continue;
    const phoneticHeader=/IPA|声母|韵母|唇部|齿|腭部|软腭|咽|^(?:TS|拉西峒|XR仙仁|XL小龙热|CB|CJ)|音值|符号/.test(header)&&!/叶氏|词例（叶氏）|出现条件|汉义|说明/.test(header);
    if(!['101','201'].includes(ch.id)||!phoneticHeader||cell.dataset.sourceHasHan)continue;
    const w=document.createTreeWalker(cell,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.grammar-pair')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});const remaining=[];let t;while((t=w.nextNode()))remaining.push(t);

@@ -43,7 +43,18 @@ const root=path.resolve(__dirname,'../site');
      if(JSON.stringify(zhIPA)!==JSON.stringify(enIPA))failures.push(ch.id+': IPA changes in English: '+JSON.stringify({zh:zhIPA.filter((x,i)=>zhIPA.indexOf(x)===i&&zhIPA.filter(y=>y===x).length!==enIPA.filter(y=>y===x).length),en:enIPA.filter((x,i)=>enIPA.indexOf(x)===i&&zhIPA.filter(y=>y===x).length!==enIPA.filter(y=>y===x).length),counts:[zhIPA.length,enIPA.length]}));
      if(JSON.stringify(zhRefs)!==JSON.stringify([...english.querySelectorAll('.grammar-citation')].map(n=>[n.textContent,n.dataset.footnoteTarget])))failures.push(ch.id+': citation numbering changes with language');
      const walker=document.createTreeWalker(english,NodeFilter.SHOW_TEXT);let n;while((n=walker.nextNode()))if(!n.parentElement.closest('[data-spelling-pending]')&&/\p{Script=Han}/u.test(n.nodeValue))failures.push(ch.id+': untranslated '+n.nodeValue);
-     for(const rendered of [document.querySelector('main'),english]){const words=document.createTreeWalker(rendered,NodeFilter.SHOW_TEXT);let word;while((word=words.nextNode()))if(!word.parentElement.closest('.grammar-pair')&&/[\p{Script=Latin}\p{M}ʰ]+[¹²³⁴⁵]+/u.test(word.nodeValue))failures.push(ch.id+': IPA without romanization '+word.nodeValue);}
+     for(const rendered of [document.querySelector('main'),english]){const words=document.createTreeWalker(rendered,NodeFilter.SHOW_TEXT);let word;while((word=words.nextNode()))if(!word.parentElement.closest('.grammar-pair,.grammar-ipa')&&/[\p{Script=Latin}\p{M}ʰ]+[¹²³⁴⁵]+/u.test(word.nodeValue))failures.push(ch.id+': IPA without romanization '+word.nodeValue);}
+     if(ch.id==='101')for(const rendered of [document.querySelector('main'),english]){
+      const tables=[...rendered.querySelectorAll('table')],originalTables=[...original.querySelectorAll('table')];
+      for(const [index,columns] of [[4,[0]],[5,[0]],[6,[2,3,4]],[8,[0]],[9,[0]],[10,[0]],[11,[0]]]){
+       for(const [r,row] of [...tables[index].tBodies[0].rows].entries())for(const c of columns){
+        const cell=row.cells[c],source=originalTables[index].tBodies[0].rows[r].cells[c];
+        const expected=rendered===english?(UI_TRANSLATIONS[source.textContent]||source.textContent):source.textContent;
+        if(cell.textContent!==expected||cell.querySelector('.grammar-spelling'))failures.push('Inventory IPA repeated or changed: '+source.textContent);
+       }
+      }
+      if(!tables[8].tBodies[0].rows[0].cells[2].querySelector('.grammar-pair .grammar-spelling'))failures.push('Example word lost its spelling');
+     }
      for(const a of english.querySelectorAll('.grammar-citation')){if(!/^\[\d+\]$/.test(a.textContent)||!a.title||/\p{Script=Han}/u.test(a.title)||!english.querySelector('#'+a.dataset.footnoteTarget))failures.push(ch.id+': invalid reference '+a.outerHTML);}
      if(ch.id==='101'&&(![...english.querySelectorAll('.grammar-ipa')].some(n=>n.textContent==='/p/')||![...english.querySelectorAll('.grammar-ipa')].some(n=>n.textContent==='[b]')))failures.push('IPA slashes/brackets missing');
      if(d==='north')for(const word of document.querySelectorAll('.grammar-word')){
