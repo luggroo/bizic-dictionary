@@ -1502,7 +1502,7 @@ Liu、Ran与Xiang的合著未刊稿将/kʊo²⁴/（变调时为/kʊo⁴⁴/）�
 
 Feng（2025）在靛房附近记录了下面两种“白鸡”的说法：花括号中的nie和nie-xi都可以使用。原文不标声调。
 
-| 拼音 | asi-{nie／nie-xi} | za |
+| 拼音 | asi-{nie／nie-xi} | ra |
 | --- | --- | --- |
 | IPA | asɨ-{nie／nie-ɕi} | za |
 | 中文逐词 | 白-{连接／连接-名词化} | 鸡 |
@@ -3101,7 +3101,7 @@ Feng（2025）把nie-xi分成连接成分nie和名词化成分xi。两者可以�
 
 “昨天下蛋的母鸡”和“昨天下蛋的那只”对xi的要求不同。下面第一句用nie连接修饰从句与“母鸡”：
 
-| 拼音 | [puni | alie | lie-nie] | za-niga | langgadie |
+| 拼音 | [puni | alie | lie-nie] | ra-niga | langgadie |
 | --- | --- | --- | --- | --- | --- |
 | IPA | [pʰuni | alie | lie-nie] | za-nika | laŋkatie |
 | 中文逐词 | 昨天 | 蛋 | 下-连接 | 鸡-雌性 | 黑 |
@@ -3111,7 +3111,7 @@ Feng（2025）把nie-xi分成连接成分nie和名词化成分xi。两者可以�
 
 第二句的从句后面没有中心名词，整个从句表示“昨天下蛋的那只”。在这个nie-xi结构中，末尾的xi必须保留：
 
-| 拼音 | gaidi | za-niga | nou | [puni | za-lie | lie-nie-xi] |
+| 拼音 | gaidi | ra-niga | nou | [puni | ra-lie | lie-nie-xi] |
 | --- | --- | --- | --- | --- | --- | --- |
 | IPA | kaiti | za-nika | nou | [pʰuni | za-lie | lie-nie-ɕi] |
 | 中文逐词 | 这 | 鸡-雌性 | 一.量词 | 昨天 | 鸡-蛋 | 下-连接-名词化 |
