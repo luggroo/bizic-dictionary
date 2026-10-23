@@ -36,6 +36,8 @@ jobs:
         run: node scripts/normalize-ipa-data.cjs site
       - name: Check reader-facing copy
         run: node scripts/test-reader-copy.cjs
+      - name: Audit leading-hyphen suffixes
+        run: node scripts/audit-particle-suffixes.cjs
       - name: Test particle tone notes
         run: node scripts/test-particle-tone-notes.cjs
       - name: Verify merged dictionary IPA and notation rules
