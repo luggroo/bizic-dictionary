@@ -1,0 +1,268 @@
+{
+  "baseCommit": "e1c3817a5a98a2dbba18c8cc1165fcf8dd1af2e4",
+  "decisions": [
+    {
+      "spelling": "liēumùkó",
+      "zh": "柳树",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0147",
+        "wordIds": [
+          "yubao-60824-v-0147"
+        ],
+        "kind": "借词来源",
+        "text": "「柳」部分（第 1 音节）可能借自湘语或西南官话。",
+        "donor": "柳",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "reviewedForms": [
+          {
+            "ipa": "liʉ⁵⁵mu²¹kʰo³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "components-followup-2026-10-23"
+      },
+      "noteEn": "The 柳 component (syllable 1) may be borrowed from Xiang Chinese or Southwestern Mandarin."
+    },
+    {
+      "spelling": "tǎozǐkàpǔ",
+      "zh": "桃花",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1450",
+        "wordIds": [
+          "yubao-60756-v-1450"
+        ],
+        "kind": "借词来源",
+        "text": "「桃子」部分（第 1—2 音节）可能借自西南官话。",
+        "donor": "桃子",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "reviewedForms": [
+          {
+            "ipa": "tʰau³³tsɿ³³kʰa⁵³pʰu³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "components-followup-2026-10-23"
+      },
+      "noteEn": "The 桃子 component (syllables 1–2) may be borrowed from Southwestern Mandarin."
+    },
+    {
+      "spelling": "xiān",
+      "zh": "仙",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2294",
+        "wordIds": [
+          "yubao-60756-v-2294"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话「仙」。",
+        "donor": "仙",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "ɕaŋ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "components-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 仙."
+    },
+    {
+      "spelling": "zihxěhūntiāo",
+      "zh": "米线",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2019",
+        "wordIds": [
+          "yubao-60823-v-2019"
+        ],
+        "kind": "借词来源",
+        "text": "「粉条」部分（第 3—4 音节）可能借自西南官话。",
+        "donor": "粉条",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "reviewedForms": [
+          {
+            "ipa": "tsɿ³³ɣɤe³¹xuɤ̃⁵⁵tʰiau⁵⁵",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "components-followup-2026-10-23"
+      },
+      "noteEn": "The 粉条 component (syllables 3–4) may be borrowed from Southwestern Mandarin."
+    },
+    {
+      "spelling": "únimiǎnzi",
+      "zh": "被面儿",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1923",
+        "wordIds": [
+          "yubao-60824-v-1923"
+        ],
+        "kind": "借词来源",
+        "text": "「面子」部分（第 3—4 音节）可能借自湘语或西南官话。",
+        "donor": "面子",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "reviewedForms": [
+          {
+            "ipa": "u³⁵ni³³miã¹³tsi³³",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "components-followup-2026-10-23"
+      },
+      "noteEn": "The 面子 component (syllables 3–4) may be borrowed from Xiang Chinese or Southwestern Mandarin."
+    },
+    {
+      "spelling": "dānzi sō",
+      "zh": "胆小",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2897",
+        "wordIds": [
+          "yubao-60823-v-2897"
+        ],
+        "kind": "借词来源",
+        "text": "「胆子」部分（第 1—2 音节）可能借自西南官话。",
+        "donor": "胆子",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "reviewedForms": [
+          {
+            "ipa": "tã⁵⁵tsɿ³³so⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "components-followup-2026-10-23"
+      },
+      "noteEn": "The 胆子 component (syllables 1–2) may be borrowed from Southwestern Mandarin."
+    },
+    {
+      "spelling": "gabbo",
+      "zh": "外祖母; 外婆",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289650",
+        "wordIds": [
+          "stedt-rn-289650"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自湘语或西南官话「家婆」。",
+        "donor": "家婆",
+        "donorVariety": "湘语或西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "ka³³bo³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "components-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Xiang Chinese or Southwestern Mandarin 家婆."
+    },
+    {
+      "spelling": "yǎojián",
+      "zh": "医生",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2320",
+        "wordIds": [
+          "yubao-60756-v-2320"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话「药匠」。",
+        "donor": "药匠",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "ʑau³³tɕaŋ³⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "components-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 药匠."
+    }
+  ],
+  "phraseBoundaries": [
+    {
+      "wordIds": [
+        "yubao-60823-v-2897"
+      ],
+      "key": "danziso",
+      "parts": [
+        "danzi",
+        "so"
+      ],
+      "separator": " ",
+      "kind": "phrase",
+      "gloss": "胆小",
+      "sourceForm": "tã55tsɿ33so55"
+    }
+  ],
+  "alreadyAnnotated": [
+    {
+      "id": "yubao-60824-v-2309",
+      "spelling": "niǎnqinnia",
+      "donor": "年轻",
+      "scope": "component",
+      "span": [
+        1,
+        2
+      ]
+    }
+  ],
+  "retainedCandidates": [
+    {
+      "ids": [
+        "yubao-60823-v-1256"
+      ],
+      "spelling": "jīzingai",
+      "candidateDonors": [
+        "鸡子岩",
+        "鸡籽岩",
+        "矶子岩"
+      ],
+      "status": "unmarked-pending-donor-verification",
+      "reason": "Matching regional Chinese lexeme is plausible; exact written form and donor variety remain unverified."
+    },
+    {
+      "ids": [
+        "stedt-rn-288811",
+        "yubao-60757-v-1867"
+      ],
+      "spelling": "gāngzī",
+      "candidateDonors": [
+        "杆子"
+      ],
+      "status": "unmarked-pending-donor-verification",
+      "reason": "Both northern sources mean spear. Exact local Chinese donor pronunciation and spear sense require verification."
+    }
+  ]
+}

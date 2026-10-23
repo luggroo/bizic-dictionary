@@ -62182,6 +62182,195 @@ EDITORIAL_NOTES.push(...[
  }
 ]);
 
+EDITORIAL_NOTES.push({
+ id:'chinese-loan-yubao-60824-v-0793',
+ wordIds:['yubao-60824-v-0793'],kind:'借词来源',
+ text:'借自汉语，可能来自西南官话，具体原词待考。',
+ donorVariety:'汉语（可能为西南官话）',scope:'whole',
+ reviewedForms:[{ipa:'dʑya¹³',span:[1,1]}],
+ reviewBatch:'step-loan-2026-10-23'
+});
+
+EDITORIAL_NOTES.push({
+ id:'chinese-loan-yubao-60756-v-1897',
+ wordIds:['yubao-60756-v-1897'],kind:'借词来源',
+ text:'可能借自西南官话「烟头」。',donor:'烟头',
+ donorVariety:'西南官话',scope:'whole',
+ reviewedForms:[{ipa:'ʑaŋ⁵⁵tʰəu⁵⁵',span:[1,2]}],
+ reviewBatch:'step-cigarette-butt-2026-10-23'
+});
+
+EDITORIAL_NOTES.push(...[
+ {
+  "id": "chinese-loan-yubao-60824-v-0147",
+  "wordIds": [
+   "yubao-60824-v-0147"
+  ],
+  "kind": "借词来源",
+  "text": "「柳」部分（第 1 音节）可能借自湘语或西南官话。",
+  "donor": "柳",
+  "donorVariety": "湘语或西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "liʉ⁵⁵mu²¹kʰo³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "components-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1450",
+  "wordIds": [
+   "yubao-60756-v-1450"
+  ],
+  "kind": "借词来源",
+  "text": "「桃子」部分（第 1—2 音节）可能借自西南官话。",
+  "donor": "桃子",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "tʰau³³tsɿ³³kʰa⁵³pʰu³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "components-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2294",
+  "wordIds": [
+   "yubao-60756-v-2294"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「仙」。",
+  "donor": "仙",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ɕaŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "components-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2019",
+  "wordIds": [
+   "yubao-60823-v-2019"
+  ],
+  "kind": "借词来源",
+  "text": "「粉条」部分（第 3—4 音节）可能借自西南官话。",
+  "donor": "粉条",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ³³ɣɤe³¹xuɤ̃⁵⁵tʰiau⁵⁵",
+    "span": [
+     3,
+     4
+    ]
+   }
+  ],
+  "reviewBatch": "components-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-1923",
+  "wordIds": [
+   "yubao-60824-v-1923"
+  ],
+  "kind": "借词来源",
+  "text": "「面子」部分（第 3—4 音节）可能借自湘语或西南官话。",
+  "donor": "面子",
+  "donorVariety": "湘语或西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "u³⁵ni³³miã¹³tsi³³",
+    "span": [
+     3,
+     4
+    ]
+   }
+  ],
+  "reviewBatch": "components-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2897",
+  "wordIds": [
+   "yubao-60823-v-2897"
+  ],
+  "kind": "借词来源",
+  "text": "「胆子」部分（第 1—2 音节）可能借自西南官话。",
+  "donor": "胆子",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "tã⁵⁵tsɿ³³so⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "components-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289650",
+  "wordIds": [
+   "stedt-rn-289650"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语或西南官话「家婆」。",
+  "donor": "家婆",
+  "donorVariety": "湘语或西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ka³³bo³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "components-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2320",
+  "wordIds": [
+   "yubao-60756-v-2320"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「药匠」。",
+  "donor": "药匠",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ʑau³³tɕaŋ³⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "components-followup-2026-10-23"
+ }
+]);
+
 // Index source IDs once; list filtering visits every merged entry.
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){

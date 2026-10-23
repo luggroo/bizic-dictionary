@@ -57,6 +57,7 @@ SPELLING_BOUNDARY_REVIEWS.push(...[
   "sourceForm": "ɕiã13tsau13"
  }
 ]);
+SPELLING_BOUNDARY_REVIEWS.push({"wordIds": ["yubao-60823-v-2897"], "key": "danziso", "parts": ["danzi", "so"], "separator": " ", "kind": "phrase", "gloss": "胆小", "sourceForm": "tã55tsɿ33so55"});
 function boundaryPlain(text){return String(text).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').normalize('NFC').toLowerCase().replace(/ı/g,'i')}
 function initializeSpellingBoundaries(data){
  const byId=new Map();for(const rule of SPELLING_BOUNDARY_REVIEWS)for(const id of rule.wordIds){if(!byId.has(id))byId.set(id,[]);byId.get(id).push(rule)}

@@ -3208,3 +3208,18 @@ Object.assign(UI_TRANSLATIONS, {
 Object.assign(UI_TRANSLATIONS, {"可能借自西南官话「炮竹」。":"Possibly borrowed from Southwestern Mandarin 炮竹."});
 
 Object.assign(UI_TRANSLATIONS, {"「肝」部分（第 2 音节）可能借自西南官话。": "The 肝 component (syllable 2) may be borrowed from Southwestern Mandarin."});
+
+Object.assign(UI_TRANSLATIONS, {"借自汉语，可能来自西南官话，具体原词待考。": "Borrowed from Chinese, possibly Southwestern Mandarin; the donor word is uncertain."});
+
+Object.assign(UI_TRANSLATIONS, {"可能借自西南官话「烟头」。": "Possibly borrowed from Southwestern Mandarin 烟头 (‘cigarette butt’)."});
+
+Object.assign(UI_TRANSLATIONS, {
+ "「柳」部分（第 1 音节）可能借自湘语或西南官话。": "The 柳 component (syllable 1) may be borrowed from Xiang Chinese or Southwestern Mandarin.",
+ "「桃子」部分（第 1—2 音节）可能借自西南官话。": "The 桃子 component (syllables 1–2) may be borrowed from Southwestern Mandarin.",
+ "可能借自西南官话「仙」。": "Possibly borrowed from Southwestern Mandarin 仙.",
+ "「粉条」部分（第 3—4 音节）可能借自西南官话。": "The 粉条 component (syllables 3–4) may be borrowed from Southwestern Mandarin.",
+ "「面子」部分（第 3—4 音节）可能借自湘语或西南官话。": "The 面子 component (syllables 3–4) may be borrowed from Xiang Chinese or Southwestern Mandarin.",
+ "「胆子」部分（第 1—2 音节）可能借自西南官话。": "The 胆子 component (syllables 1–2) may be borrowed from Southwestern Mandarin.",
+ "可能借自湘语或西南官话「家婆」。": "Possibly borrowed from Xiang Chinese or Southwestern Mandarin 家婆.",
+ "可能借自西南官话「药匠」。": "Possibly borrowed from Southwestern Mandarin 药匠."
+});
