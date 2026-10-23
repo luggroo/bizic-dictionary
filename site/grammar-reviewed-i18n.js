@@ -850,3 +850,34 @@ Object.assign(UI_TRANSLATIONS,{
   "词条2487": "entry 2487",
   "。IPA沿用正文转写；“有”的原拼写 xief 对应正文 /ɕie²⁴/。不规则完成形式及使用缩合词形的说明另见未刊补充材料。": ". IPA follows the transcription used in the main text: xief ‘have’ is written /ɕie²⁴/. The pairing of irregular completed forms and the requirement for contracted forms are also described in unpublished supplementary material."
 });
+
+// Feng (2025): tone and noun modification.
+Object.assign(UI_TRANSLATIONS,{
+  "出处：Feng（2025），": "Source: Feng (2025), ",
+  "，ICSTLL 58摘要，第58—59页。": ", ICSTLL 58 abstract, pp. 58–59.",
+  "整个词的声调": "Tone across a whole word",
+  "Feng（2025）根据靛房材料提出：有些多音节词可以看作共享一个音高走势，例如整个词保持高音，或从高到低。她把这类词的声调概括为H、HL、MH、L，分别表示高、高到低、中到高、低。这种分析主要针对内部不能再分成几个有意义部分的词。": "Drawing on Dianfang data, Feng (2025) proposes that some words with more than one syllable share a single pitch pattern, such as staying high or falling from high to low. She describes these patterns as H, HL, MH and L: high, high-to-low, mid-to-high and low. This analysis mainly concerns words that cannot be divided into smaller meaningful parts.",
+  "展开：这种分析怎样解释变调": "More: how this analysis explains tone changes",
+  "在这种分析中，一个词的音高走势可以延伸到后面的助词，这叫声调扩展。它与两个本来各有声调的成分相遇后改变读法，需要分别考察。H和HL在单音节词中可能听起来相同，在多音节词或后接助词时仍可能有区别。": "In this analysis, a word’s pitch pattern can extend onto a following particle, a process called tone spreading. This needs to be distinguished from changes caused by combining elements that each have their own tone. H and HL may sound alike in a one-syllable word but remain distinguishable in longer words or before particles.",
+  "同一个助词接在不同词后，可能读出不同声调。Feng（2025）提出，这些助词没有自己固定的声调，读法受前面的词和整句话的语调影响。": "The same particle may have different tones after different words. Feng (2025) proposes that these particles have no fixed tone of their own: their pronunciation depends on the preceding word and the intonation of the sentence.",
+  "表中声调随语境变化的成分不单列固定调值；完整词形和例句采用来源记录的调值。拼音可在叶氏拼音和带调号拼音之间切换。完整例句及出处见本章各节和": "Elements whose tones vary with context are listed without a fixed tone; complete word forms and examples use the tones recorded in their sources. Romanization can be switched between Ye spelling and tone-marked spelling. Full examples and references appear in this chapter and in ",
+  "可以作为整个名词短语的中心。下面三例以“狗”为中心名词，领属短语和指示词放在前，描述性质的词和数量短语放在后。描述性质的词也有放在名词前的形式，见": "can form the head of a noun phrase. In the three examples below, ‘dog’ is preceded by a possessor and a demonstrative, and followed by a property word and a quantity phrase. Property words also have forms that precede the noun; see ",
+  "以下例句的顺序：领属短语 → 指示词 → 中心名词 → 性质修饰语 → 数量短语 → 处所词 → 关系标记": "Order in the following examples: possessor → demonstrative → head noun → property modifier → quantity phrase → location word → relation marker",
+  "表示“谁的东西”时，领有者放在名词前。下面用nier连接“我”和“书”，组成“我的书”。": "To say whose something is, the possessor comes before the noun. In the example below, nier links ‘I’ and ‘book’ to form ‘my book’.",
+  "Feng（2025）调查的靛房附近两位说话人，在“姐姐的猫”这类以普通名词表示领有者的短语中使用nie；省去nie或加上xi的形式不成立。原文不标声调。": "For the two speakers near Dianfang consulted by Feng (2025), phrases with a noun as possessor, such as ‘elder sister’s cat’, require nie; omitting it or adding xi is not accepted. The source does not mark tones.",
+  "描述性质的词常放在名词后、数量组前；也有通过nie或nie-xi放在名词前的形式。": "Property words often follow the noun and precede the quantity phrase. They can also precede the noun with nie or nie-xi.",
+  "Feng（2025）在靛房附近记录了下面两种“白鸡”的说法：花括号中的nie和nie-xi都可以使用。原文不标声调。": "Feng (2025) records two ways of saying ‘white chicken’ near Dianfang: either nie or nie-xi can be used in the braces below. The source does not mark tones.",
+  "一些形容词有较长和较短的词形，词形与放在名词前后的习惯有关；Feng也记录了例外。": "Some adjectives have longer and shorter forms whose usual positions differ; Feng also records exceptions.",
+  "Feng（2025）把nie-xi分成两部分：nie连接修饰内容与名词；xi让动作或一句话能够指称一件事、一个人或一样东西，称为“名词化”。两者也可以一起使用。具体搭配见": "Feng (2025) separates nie-xi into two parts: nie links a modifier to a noun, while xi allows an action or a clause to refer to an event, person or thing, a use called nominalization. The two can also occur together. For their distribution, see ",
+  "nie、xi与nie-xi的搭配": "Using nie, xi and nie-xi",
+  "以下例子来自Feng（2025）对龙山靛房附近两位说话人的调查。花括号列出同一位置的不同形式，方括号标出从句范围；星号表示说话人不接受的形式。原文不标声调。": "The examples below come from Feng’s (2025) work with two speakers near Dianfang, Longshan. Braces list alternative forms in the same position; square brackets enclose the clause. An asterisk marks a form the speakers did not accept. The source does not mark tones.",
+  "第5页，例9a—9c": "p. 5, examples 9a–9c",
+  "第7页，例14a—14c": "p. 7, examples 14a–14c",
+  "第7页，例15a—15c": "p. 7, examples 15a–15c",
+  "第7页，例16a—16c": "p. 7, examples 16a–16c",
+  "前三组都允许nie、xi和nie-xi。“破了的碗”把“碗”放在从句内部，末尾需要xi；可以用xi或nie-xi，单独nie不成立。": "The first three groups allow nie, xi and nie-xi. In ‘the broken bowl’, ‘bowl’ is inside the clause and xi is required at the end: xi and nie-xi are accepted, but nie alone is not.",
+  "下面“妈妈喂的猫”允许nie和nie-xi，单独xi不成立。它与前面“扔碗”的例子为何不同，Feng尚未给出统一解释。": "In ‘the cat that Mother fed’ below, nie and nie-xi are accepted, but xi alone is not. Feng does not yet offer a unified explanation of the difference from the ‘throw a bowl’ examples above.",
+  "第3页，例5": "p. 3, example 5",
+  "第4页，例8；第14页，附录A": "p. 4, example 8; p. 14, Appendix A",
+  "第6页，例13a—13c": "p. 6, examples 13a–13c"
+});

@@ -101,6 +101,21 @@
 
 出处：Brassett 等（2006），第14页。
 
+<a id="north-word-tone"></a>
+
+##### 整个词的声调
+
+Feng（2025）根据靛房材料提出：有些多音节词可以看作共享一个音高走势，例如整个词保持高音，或从高到低。她把这类词的声调概括为H、HL、MH、L，分别表示高、高到低、中到高、低。这种分析主要针对内部不能再分成几个有意义部分的词。
+
+出处：Feng（2025），[A reexamination of tone in Northern Tujia](https://www.isw.unibe.ch/unibe/portal/fak_historisch/dsl/isw/content/e41093/e1002331/e1609062/e1727554/files1727555/ICSTLL58_AbstractBook_v3_ger.pdf#page=64)，ICSTLL 58摘要，第58—59页。
+
+<details>
+<summary>展开：这种分析怎样解释变调</summary>
+
+在这种分析中，一个词的音高走势可以延伸到后面的助词，这叫声调扩展。它与两个本来各有声调的成分相遇后改变读法，需要分别考察。H和HL在单音节词中可能听起来相同，在多音节词或后接助词时仍可能有区别。
+
+</details>
+
 ##### 数词“一”的变调
 
 有些音节的声调在语流中会随环境变化。例如《土家语教与学》中，“一”单列为 la³⁵，与量词连用时有以下读法：
@@ -804,9 +819,9 @@
 
 #### 名词与多重修饰的顺序
 
-[名词＋名词的复合名词](#north-8-1)可以作为整个名词短语的中心。领属短语和指示词放在中心名词前，性质修饰语与数量短语放在后。下面三例以“狗”为中心名词，依次加入领属和处所成分。
+[名词＋名词的复合名词](#north-8-1)可以作为整个名词短语的中心。下面三例以“狗”为中心名词，领属短语和指示词放在前，描述性质的词和数量短语放在后。描述性质的词也有放在名词前的形式，见[形容词作定语](#north-13-1)。
 
-结构：领属短语 → 指示词 → 中心名词 → 性质修饰语 → 数量短语 → 处所词 → 关系标记
+以下例句的顺序：领属短语 → 指示词 → 中心名词 → 性质修饰语 → 数量短语 → 处所词 → 关系标记
 
 | 拼音 | aixdix | havlier | langfgax | rex | longr |
 | --- | --- | --- | --- | --- | --- |
@@ -841,6 +856,39 @@
 出处：Brassett 等（2006），第100、106页。
 
 形容词的修饰形式与词形变化集中见[形容词的谓语与修饰用法](#north-6-2)；从句修饰名词见[修饰名词与关系从句](#north-25-101)。
+
+<a id="north-11-2"></a>
+
+<a id="north-13-2"></a>
+
+#### 领属关系
+
+表示“谁的东西”时，领有者放在名词前。下面用nier连接“我”和“书”，组成“我的书”。
+
+结构：领有者＋nier＋被领有者
+
+| 拼音 | ngaf | nier | cixpux |
+| --- | --- | --- | --- |
+| IPA | ŋa²⁴ | ɲie²¹ | tsʰɿ⁵⁵pʰu⁵⁵ |
+| 逐词 | 我 | 领属 | 书 |
+
+译文：我的书。
+
+出处：Brassett 等（2006），第93页，例9。
+
+出处：Brassett 等（2006），第48、93、94页。
+
+Feng（2025）调查的靛房附近两位说话人，在“姐姐的猫”这类以普通名词表示领有者的短语中使用nie；省去nie或加上xi的形式不成立。原文不标声调。
+
+| 拼音 | ada-nie | mo |
+| --- | --- | --- |
+| IPA | ata-nie | mo |
+| 中文逐词 | 姐姐-连接 | 猫 |
+| English | elder.sister-LNK | cat |
+
+译文：姐姐的猫。 / Elder sister’s cat.
+
+出处：[第3页，例5](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=3)。
 
 <a id="north-10-3"></a>
 
@@ -883,26 +931,6 @@
 出处：Brassett 等（2006），第107页，例1。
 
 出处：Brassett 等（2006），第50、51、75、107页。
-
-<a id="north-11-2"></a>
-
-<a id="north-13-2"></a>
-
-#### 领属关系
-
-领有者放在所领有的名词前，中间可用关联成分 nier 连接。下面“我＋nier＋书”表示“我的书”。
-
-结构：领有者＋nier＋被领有者
-
-| 拼音 | ngaf | nier | cixpux |
-| --- | --- | --- | --- |
-| IPA | ŋa²⁴ | ɲie²¹ | tsʰɿ⁵⁵pʰu⁵⁵ |
-| 逐词 | 我 | 领属 | 书 |
-
-译文：我的书。  
-出处：Brassett 等（2006），第93页，例9。
-
-出处：Brassett 等（2006），第48、93、94页。
 
 <a id="north-15-2"></a>
 
@@ -1021,6 +1049,10 @@
 
 后缀属于词的内部构成；后置助词则可以作用于整个动词短语。名词化标记把动词或短语转成名词性表达。三者都可能出现在动词后，句法作用不同。
 
+同一个助词接在不同词后，可能读出不同声调。Feng（2025）提出，这些助词没有自己固定的声调，读法受前面的词和整句话的语调影响。
+
+出处：Feng（2025），[A reexamination of tone in Northern Tujia](https://www.isw.unibe.ch/unibe/portal/fak_historisch/dsl/isw/content/e41093/e1002331/e1609062/e1727554/files1727555/ICSTLL58_AbstractBook_v3_ger.pdf#page=64)，ICSTLL 58摘要，第58—59页。
+
 时说明事情发生在什么时候；体说明动作正在进行、已经完成或曾经发生；情态表达意愿、能力、必要和可能。“昨天在吃”和“明天这个时候在吃”时间不同，都描写吃饭的过程。[^ref-north-9-0-note-2]
 
 [^ref-north-9-0-note-1]: 词形对比：田志慧，第232–234页。Brassett等，第15–17、123–124页，另讨论未然态形式的构成及用法。表中采用田志慧所记调值。
@@ -1033,7 +1065,7 @@
 
 下表列出体、情态、否定、趋向和名词化形式，以及常用组合。各形式的搭配范围有所不同，具体用法见各节例句。
 
-部分词缀没有固定声调，具体声调高低由前后字声调决定。表中这类词缀不标声调，完整词形和例句保留所据材料的调值。拼音可在叶氏拼音和带调号拼音之间切换。完整例句及出处见本章各节和[名词化](#north-24-101)。
+表中声调随语境变化的成分不单列固定调值；完整词形和例句采用来源记录的调值。拼音可在叶氏拼音和带调号拼音之间切换。完整例句及出处见本章各节和[名词化](#north-24-101)。
 
 | 类别 | 形式或组合 | 术语／分析 | 意义 | 适用范围与说明 |
 | --- | --- | --- | --- | --- |
@@ -1183,7 +1215,7 @@
 
 #### 形容词作定语
 
-性质修饰语常放在中心名词后、数量组前。
+描述性质的词常放在名词后、数量组前；也有通过nie或nie-xi放在名词前的形式。
 
 结构：中心名词＋性质名词＋数量量词组
 
@@ -1196,6 +1228,20 @@
 出处：Brassett 等（2006），第101页，例66。
 
 出处：Brassett 等（2006），第100、101、146页。
+
+Feng（2025）在靛房附近记录了下面两种“白鸡”的说法：花括号中的nie和nie-xi都可以使用。原文不标声调。
+
+| 拼音 | asi-{nie／nie-xi} | za |
+| --- | --- | --- |
+| IPA | asɨ-{nie／nie-ɕi} | za |
+| 中文逐词 | 白-{连接／连接-名词化} | 鸡 |
+| English | white-{LNK/LNK-NMLZ} | chicken |
+
+译文：白鸡。 / White chicken.
+
+一些形容词有较长和较短的词形，词形与放在名词前后的习惯有关；Feng也记录了例外。
+
+出处：[第4页，例8；第14页，附录A](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=4)。
 
 <a id="north-6-3"></a>
 
@@ -2204,6 +2250,8 @@ gaxica“吃得好”评价吃这一行为；gaci“吃的东西”指食物。x
 
 niexi常用于修饰短语，如“没做完的作业”“卖糖馓的婆婆”，也可独立指称人、事物或事件。它与xi在部分结构中都能使用，两者的选择与修饰结构有关。
 
+Feng（2025）把nie-xi分成两部分：nie连接修饰内容与名词；xi让动作或一句话能够指称一件事、一个人或一样东西，称为“名词化”。两者也可以一起使用。具体搭配见[nie、xi与nie-xi的搭配](#north-xi-niexi-pairs)。
+
 鲁曼等还记录了同一个“做＋niexi”形式分别指“做工的人”和“所做的事情”。这种意义差别由语境确定。（[第425页，例2f、2g](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=3)）
 
 <a id="north-24-102"></a>
@@ -2481,59 +2529,71 @@ Kang Franco Liu. 2025. Transitive subject extraction restriction in Northern Tuj
 
 <a id="north-xi-niexi-pairs"></a>
 
-#### xi与niexi都能使用的表达
+#### nie、xi与nie-xi的搭配
 
-以下四组来自Feng（2025）对龙山靛房附近两位说话人的调查。花括号内是同一位置可选的两种形式，方括号标出从句范围。原文不标声调。
+以下例子来自Feng（2025）对龙山靛房附近两位说话人的调查。花括号列出同一位置的不同形式，方括号标出从句范围；星号表示说话人不接受的形式。原文不标声调。
 
 **我知道你买了狗的消息。**
 
-| 拼音 | [ni | halie | pu-{xi／niexi}] | sa | nga | haosi |
+| 拼音 | [ni | halie | pu-{nie／xi／nie-xi}] | sa | nga | haosi |
 | --- | --- | --- | --- | --- | --- | --- |
-| IPA | [ni | xalie | pʰu-{ɕi／nieɕi}] | sa | ŋa | xausɨ |
-| 中文逐词 | 你 | 狗 | 买-名词化 | 消息 | 我 | 知道 |
-| English | 2SG | dog | buy-NMLZ | news | 1SG | know |
+| IPA | [ni | xalie | pʰu-{nie／ɕi／nie-ɕi}] | sa | ŋa | xausɨ |
+| 中文逐词 | 你 | 狗 | 买-{连接／名词化／连接-名词化} | 消息 | 我 | 知道 |
+| English | 2SG | dog | buy-{LNK/NMLZ/LNK-NMLZ} | news | 1SG | know |
 
 译文：我知道你买了狗的消息。 / I know about your purchase of a dog.
 
-出处：[第5页，例9b、9c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=5)。
+出处：[第5页，例9a—9c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=5)。
 
 **扔碗的孩子。**
 
-| 拼音 | [qiebi | na-{xi／niexi}] | boli |
+| 拼音 | [qiebi | na-{nie／xi／nie-xi}] | boli |
 | --- | --- | --- | --- |
-| IPA | [tɕʰiepi | na-{ɕi／nieɕi}] | poli |
-| 中文逐词 | 碗 | 扔-名词化 | 孩子 |
-| English | bowl | throw-NMLZ | child |
+| IPA | [tɕʰiepi | na-{nie／ɕi／nie-ɕi}] | poli |
+| 中文逐词 | 碗 | 扔-{连接／名词化／连接-名词化} | 孩子 |
+| English | bowl | throw-{LNK/NMLZ/LNK-NMLZ} | child |
 
 译文：扔碗的孩子。 / The child who threw a bowl.
 
-出处：[第7页，例14b、14c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
+出处：[第7页，例14a—14c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
 
 **他／她扔的碗。**
 
-| 拼音 | [go-go | na-{xi／niexi}] | qiebi |
+| 拼音 | [go-go | na-{nie／xi／nie-xi}] | qiebi |
 | --- | --- | --- | --- |
-| IPA | [ko-ko | na-{ɕi／nieɕi}] | tɕʰiepi |
-| 中文逐词 | 他／她-作格 | 扔-名词化 | 碗 |
-| English | 3SG-ERG | throw-NMLZ | bowl |
+| IPA | [ko-ko | na-{nie／ɕi／nie-ɕi}] | tɕʰiepi |
+| 中文逐词 | 他／她-作格 | 扔-{连接／名词化／连接-名词化} | 碗 |
+| English | 3SG-ERG | throw-{LNK/NMLZ/LNK-NMLZ} | bowl |
 
 译文：他／她扔的碗。 / The bowl thrown by him or her.
 
-出处：[第7页，例15b、15c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
+出处：[第7页，例15a—15c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
 
 **破了的碗。**
 
-| 拼音 | [qiebi | pibo-{xi／niexi}] |
+| 拼音 | [qiebi | pibo-{xi／nie-xi／*nie}] |
 | --- | --- | --- |
-| IPA | [tɕʰiepi | pʰi-po-{ɕi／nieɕi}] |
-| 中文逐词 | 碗 | 破-状态-名词化 |
-| English | bowl | break-STAT-NMLZ |
+| IPA | [tɕʰiepi | pʰi-po-{ɕi／nie-ɕi／*nie}] |
+| 中文逐词 | 碗 | 破-状态-{名词化／连接-名词化／*连接} |
+| English | bowl | break-STAT-{NMLZ/LNK-NMLZ/*LNK} |
 
 译文：破了的碗。 / The broken bowl.
 
-出处：[第7页，例16a、16b](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
+出处：[第7页，例16a—16c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
 
-“扔碗的孩子”和“他／她扔的碗”分别指做动作的人、动作涉及的物，xi和niexi都能使用。“破了的碗”则把“碗”保留在从句内部，由整个短语指称它。
+前三组都允许nie、xi和nie-xi。“破了的碗”把“碗”放在从句内部，末尾需要xi；可以用xi或nie-xi，单独nie不成立。
+
+下面“妈妈喂的猫”允许nie和nie-xi，单独xi不成立。它与前面“扔碗”的例子为何不同，Feng尚未给出统一解释。
+
+| 拼音 | [anie-go | ye | lie-{nie／nie-xi／*xi}] | mo | aseikuli |
+| --- | --- | --- | --- | --- | --- |
+| IPA | [anie-ko | je | lie-{nie／nie-ɕi／*ɕi}] | mo | aseikʰuli |
+| 中文逐词 | 妈妈-作格 | 食物 | 给-{连接／连接-名词化／*名词化} | 猫 | 白 |
+| English | mother-ERG | food | give-{LNK/LNK-NMLZ/*NMLZ} | cat | white |
+
+译文：妈妈喂的猫是白的。 / The cat that Mother fed is white.
+
+出处：[第6页，例13a—13c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=6)。
 
 #### 关系从句的结构限制
 
@@ -3385,7 +3445,7 @@ tai、tao也列入不规则词形变化，按整体词形处理；暂不补写�
 
 ### ɲie ɕi与ɕi的分布
 
-ɲie ɕi统一作为一个分析单位，gloss为名词化。这里讨论整组与单独ɕi的分布，不在例句格内把ɲie和ɕi拆开。
+Brassett例句沿用组合形式的整体标注；Feng例句按其分析把nie-ɕi标为LNK-NMLZ。两类标注对应各自来源，不据一组材料批量改写另一组。
 
 以下为Brassett第143—147页的材料范围。更新的替换判断见“xi、ci、niexi：证据核对”。书中所记ɲie²¹ ɕi²⁴与其他材料的调值不同，不能直接改成同一调值。
 
@@ -3585,7 +3645,7 @@ Markdown 是静态预览，尚未接入 UI 切换。此轮保留现有中文 glo
 
 ## xi、ci、niexi：证据核对
 
-新增的[四组xi／niexi对照](#north-xi-niexi-pairs)按Feng（2025）原页核对。原文将nie-ɕi分标为LNK-NMLZ，稿内仍将niexi整体标为名词化。例15b、15c原文的逐词行均写LNK，与例14的标注不一致；稿内统一标NMLZ，属标注调整。正文第7页顶部也说明，例14—15与前页受限制的例子之间，作者尚无统一解释。
+正文的[nie／xi／nie-xi对照](#north-xi-niexi-pairs)涵盖Feng（2025）例9、13—16的可接受及不接受形式。nie-ɕi按作者分析标为LNK-NMLZ。例15b、15c原文逐词行均写LNK，与例14及正文分析不一致；分别按LNK-NMLZ、NMLZ显示，属标注调整。领属例5列在名词短语一节，形容词例8列在形容词作定语一节。原文未标声调的形式保持无调。正文第7页顶部指出，例14—15与前页受限制的例子之间尚无统一解释。
 
 总表与正文已撤销“xi、ci只是材料间读音不同”的归并。gaxica“吃得好”与gaci“吃的东西”的对立按本轮确认保留。
 

@@ -14,7 +14,7 @@ const root=path.resolve(__dirname,'../site');
     ['ɲie ɕi','','niexi','niexi'],
     ['ɲie²¹ ɕi²⁴','nierxif','nierxif','niěxí'],
     ['ɲie⁵⁵ɕi⁵⁵','niexxix','niexxix','niēxī'],
-    ['pʰu-{ɕi／nieɕi}]','pu-{xi／niexi}]','pu-{xi／niexi}]','pu-{xi／niexi}]'],
+    ['pʰu-{nie／ɕi／nie-ɕi}]','pu-{nie／xi／nie-xi}]','pu-{nie／xi／nie-xi}]','pu-{nie／xi／nie-xi}]'],
     ['tsi²¹ ka³⁵ tsʰi⁵⁵','','zir gaf-cix','zǐ gá-cī'],
     ['sa⁵⁵ ɕi²¹ ke⁵⁵','','sax-xir gex','sā-xǐ gē'],
     ['ka³⁵ tso⁵⁵','','gaf-zox','gá-zō'],
@@ -44,7 +44,7 @@ const root=path.resolve(__dirname,'../site');
        if(rendered.textContent.includes('niēi')||![...rendered.querySelectorAll('h3,h4')].some(h=>h.textContent.includes('niēxi')))failures.push('niexi onset missing from heading');
        const paired=[...rendered.querySelectorAll('.grammar-word .grammar-pair')].find(p=>p.dataset.ipa==='[tsa²⁴ pɔ²¹ ɕi²⁴]');
        if(!paired||paired.querySelector('.grammar-spelling').dataset.ye!=='[zafbor-xif]')failures.push('State-marked verb and nominalizer not aligned together');
-       if(![...rendered.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa==='pʰu-{ɕi／nieɕi}]'&&p.querySelector('.grammar-spelling').dataset.accent==='pu-{xi／niexi}]'))failures.push('Unmarked source acquired a tone');
+       if(![...rendered.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa==='pʰu-{nie／ɕi／nie-ɕi}]'&&p.querySelector('.grammar-spelling').dataset.accent==='pu-{nie／xi／nie-xi}]'))failures.push('Unmarked source acquired a tone');
       }
      }
      if(ch.id==='104'){
