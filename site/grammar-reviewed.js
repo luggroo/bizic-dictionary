@@ -232,6 +232,9 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  // Romanization-only paradigms share the same display selector.
  if(ch.dialect==='north'){
   const accepted=new Set(GRAMMAR_YE_FORMS),w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.grammar-pair,.grammar-ipa,.grammar-gloss,.grammar-spelling,script,style')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});const texts=[];let t;while((t=w.nextNode()))texts.push(t);
+  // Unmarked /aze/ is spelled "are"; English prose also uses this word.
+  // Explicit interlinear spellings are rendered separately above.
+  if(language==='en')accepted.delete('are');
   const labels={niexi:{ye:'niexxi',accent:'niēxi'},gaxica:{ye:'ga-xi ca',accent:'ga-xi ca'},gaci:{ye:'ga-ci',accent:'ga-ci'}};
   for(const n of texts){let end=0,frag=document.createDocumentFragment();for(const m of n.nodeValue.matchAll(/\b[a-z]+\b/g)){if(!accepted.has(m[0])&&!labels[m[0]])continue;const span=document.createElement('span');span.className='grammar-spelling';span.dataset.uiContent='';span.dataset.ye=labels[m[0]]?.ye||m[0].replace(/^angf/,'anf').replace(/^angx/,'anx');span.dataset.accent=labels[m[0]]?.accent||yeToAccent(span.dataset.ye);span.textContent=grammarDisplayedSpelling(span.dataset,'north');frag.append(n.nodeValue.slice(end,m.index),span);end=m.index+m[0].length;}if(end){frag.append(n.nodeValue.slice(end));n.replaceWith(frag);}}
  }

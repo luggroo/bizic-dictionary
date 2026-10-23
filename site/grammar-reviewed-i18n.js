@@ -1819,3 +1819,18 @@ Object.assign(UI_TRANSLATIONS,{
   "程度很高，如“今天好冷”；可有极限程度读法，见": "A high degree, as in “It is so cold today”; an extreme-degree reading is possible; see ",
   "xi＋tai表示高程度": "xi + tai for high degree"
 });
+Object.assign(UI_TRANSLATIONS,{
+ "两个从句共同修饰名词":"Two clauses modifying the same noun",
+ "Feng（2025）的靛房附近材料中，“我听见的”和“邻居吹咚咚喹的”都可以修饰“声音”，两种排列次序都成立：":"In Feng’s (2025) data from near Dianfang, both ‘that I heard’ and ‘of the neighbor playing the dongdongkui’ can modify ‘sound’. Both orders are acceptable:",
+ "［我听见的］［邻居吹咚咚喹的］声音。":"The sound [that I heard] [of the neighbor playing the dongdongkui].",
+ "［邻居吹咚咚喹的］［我听见的］声音。":"The sound [of the neighbor playing the dongdongkui] [that I heard].",
+ "两句都指我听见的、由邻居吹咚咚喹发出的声音。在这组例子中，交代声音来源的从句不必紧挨“声音”。方括号标出两个从句的范围；原文未标声调。":"Both expressions refer to the sound I heard of the neighbor playing the dongdongkui. In these examples, the clause identifying the source of the sound need not be adjacent to ‘sound’. Square brackets mark the two clauses; the source does not transcribe tone.",
+ "第5页，例11a—11b":"p. 5, examples 11a–11b",
+ "修饰名词与独立指称":"Modifying a noun and referring independently",
+ "“昨天下蛋的母鸡”和“昨天下蛋的那只”对xi的要求不同。下面第一句用nie连接修饰从句与“母鸡”：":"‘The hen that laid eggs yesterday’ and ‘the one that laid eggs yesterday’ differ in their requirement for xi. In the first sentence below, nie links the modifying clause to ‘hen’:",
+ "昨天下蛋的母鸡是黑的。":"The hen that laid eggs yesterday is black.",
+ "第二句的从句后面没有中心名词，整个从句表示“昨天下蛋的那只”。在这个nie-xi结构中，末尾的xi必须保留：":"In the second sentence, no head noun follows the clause, which refers to ‘the one that laid eggs yesterday’. In this nie-xi construction, final xi is required:",
+ "这只母鸡是昨天下蛋的那只。":"This hen is the one that laid eggs yesterday.",
+ "第10页，例27b、27a":"p. 10, examples 27b and 27a",
+ "。例27a中，省去末尾ɕi的形式被判为不成立；原文未标声调。":". In example 27a, the form without final ɕi is judged unacceptable; the source does not transcribe tone."
+});
