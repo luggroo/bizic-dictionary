@@ -21,7 +21,7 @@ const SOUTH_RIMES={
 };
 const SOUTH_TONES={'55':'\u0304','33':'','35':'\u0301','21':'\u0300','13':'\u030c'};
 const SOUTH_ORDER=Object.keys(SOUTH_ONSETS).sort((a,b)=>b.length-a.length);
-const SOUTH_PINYIN_RULES='调号拼音 j、q、x（含浊音 jj）后补足 i，如 je → jie、qa → qia、xon → xion；已有 i 或 ü 不重复添加。两套拼写中，y 后的 i 在另一个元音前省去，如 yia → ya、yie → ye、yio → yo、yieu → yeu；yi、yin 保留 i。白话字 /j/ 起首的相应形式写 ia、ie、io、ieu。下表为基础对应，/i、ei、ɨ/ 的来源差异另列。';
+const SOUTH_PINYIN_RULES='调号拼音中，/j/、/ʑ/ 以及元音起首的 /i/、/i…/ 都写 y 声母，如 /i/ → yi、/ie/ → ye、/ia/ → ya。调号拼音 j、q、x（含浊音 jj）后补足 i，如 je → jie、qa → qia、xon → xion；已有 i 或 ü 不重复添加。两套拼写中，y 后的 i 在另一个元音前省去，如 yia → ya、yie → ye、yio → yo、yieu → yeu；yi、yin 保留 i。白话字 /j/ 起首的相应形式写 ia、ie、io、ieu。下表为基础对应，/i、ei、ɨ/ 的来源差异另列。';
 const SOUTH_SOURCE_RIME_RULES='Tian 86 南部：调号拼音与白话字共用韵母，/i/ 写 i，/ei/ 写 ei；/ɨ/ 在 /k、kʰ、g、ŋ、x、ɣ/ 后写 i，其他位置写 ıi。中国语保泸溪：/t、d/ 后的 /ɨ/ 在两套拼写中写 ei；/k、kʰ、g、x、ɣ、ħ、ʕ/ 后写 i，其他位置写 ıi。';
 const SOUTH_APICAL_RULES='舌尖元音在调号拼音中写 i，在白话字中写 rı。例如 /ts、tsʰ、dz、s、z/ 后的舌尖元音，调号拼音写 zi、ci、zzi、si、ri，白话字写 crı、chrı、jrı、srı、rı。白话字的 ı 不带点，声调直接加在 ı 上：rı̄、rı、rı́、rı̀、rı̌；声母 r 与韵母 rı 相接时只写一个 r。Tian 86 的 /i/ 按来源对应，在两套拼写中都写 i。其他来源中，上述声母后记作 /i/ 或直接记作 /ɿ/ 的舌尖元音按此规则拼写；原始 IPA 保留各来源的记法。';
 const SOUTH_DOTLESS_I_RULES='ıi 表示一个元音 /ɨ/，首字母为无点 ı，声调标在第二个 i 上：ıī、ıi、ıí、ıì、ıǐ。白话字的 cıi、chıi、sıi 与 ci、chi、si 区分；ıi 不触发 i、ü 前的腭化读法。搜索时也可输入 ii。';
@@ -82,7 +82,7 @@ function southernSpelling(raw,source='',explicit=false){
   if(onset==='w'&&!sharedRime){pojOnset='';if(!pojRime.startsWith('u'))pojRime='u'+pojRime;}
   pojRime=southYInitialRime(pojOnset,pojRime);
   const pojMarked=m[2]==='?'?pojRime+'⁇':southMark(pojRime,m[2],explicit);
-  const pinyinOnset=nasalOverlap?'n':SOUTH_ONSETS[onset][0];
+  const pinyinOnset=!onset&&/^i/.test(r.normalize('NFD'))?'y':nasalOverlap?'n':SOUTH_ONSETS[onset][0];
   let pinyinBaseRime=rime==='rı'?'i':rime;
   pinyinBaseRime=southYInitialRime(pinyinOnset,pinyinBaseRime);
   const core=pinyinPalatalCore(pinyinOnset+pinyinBaseRime);

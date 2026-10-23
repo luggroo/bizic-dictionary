@@ -44,3 +44,15 @@ Object.assign(NOTATION_CONFIG.profiles.find(p=>p.id==='stedt-cb523fc3dc:north'),
 
 // Same source notation and word already reviewed as taif.
 NOTATION_CONFIG.profiles.find(p=>p.id==='stedt-cb523fc3dc:north').wordOverrides['tha◦i35']={ye:'taif',brassett:'tai2'};
+
+// Shared written onset; vowel and tone correspondences remain source-specific.
+for(const profile of NOTATION_CONFIG.profiles){
+ if(profile.kind!=='ipa'||!profile.onsetMap)continue;
+ for(const onset of ['j','ʑ']){
+  profile.onsetMap[onset]=['y'];
+  for(const rule of profile.rules||[])if(rule.kind==='声母'&&rule.raw===onset){
+   rule.target='y';rule.condition='本站拼音写 y';
+   if(profile.conversionEnabled!==false)rule.status='本站拼写约定';
+  }
+ }
+}

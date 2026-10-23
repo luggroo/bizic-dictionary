@@ -25,7 +25,7 @@ function grammarNorthSyllable(core,tone=''){
  const onset=Object.keys(GRAMMAR_ONSETS).sort((a,b)=>b.length-a.length).find(k=>core.startsWith(k));
  const r=core.slice(onset.length),rime=GRAMMAR_RIMES[r];
  if(rime===undefined){if(!r&&onset)return {ye:GRAMMAR_ONSETS[onset],accent:GRAMMAR_ONSETS[onset]};throw Error('Unmapped northern rime: '+core);}
- const base=normalizeYInitialSyllable(GRAMMAR_ONSETS[onset]+rime),t=GRAMMAR_NORTH_TONES[tone];
+ const base=normalizeYInitialSyllable(GRAMMAR_ONSETS[onset]+rime,core),t=GRAMMAR_NORTH_TONES[tone];
  if(tone&&!t)throw Error('Unmapped northern tone: '+core+tone);
  return {ye:base+(t||''),accent:t?accentSyllable(base,{x:1,f:2,r:3,v:4}[t]):pinyinPalatalCore(base)};
 }
@@ -35,7 +35,6 @@ function grammarSouthSyllable(core,tone=''){
  // Xiang 2011, p. 40 prints only a single 5 on 'stone'. Leave its
  // romanization unmarked rather than inventing a second tone digit.
  if(actual==='lɯ'&&tone==='5')return southernSpelling(core+'33','grammar-source');
- if(core==='iu')return {accent:southMark('iu',tone||'33'),poj:southMark('iu',tone||'33')};
  core=core.replace(/^h/,'x').replaceAll('ɯɛ','ɯe').replaceAll('ɛ','e');
  // These cited sources write oral nasal codas explicitly, unlike the main lexicon.
  core=core.replace(/oŋ$/,'õ').replace(/ian$/,'iã').replace(/an$/,'ã').replace(/en$/,'ẽ');
@@ -52,7 +51,7 @@ function grammarSouthSyllable(core,tone=''){
 }
 function grammarSpelling(raw,dialect='north',explicitYe=''){
  if(dialect==='north'&&explicitYe){
-  const ye=raw.includes('ã')?explicitYe.replaceAll('ang','an'):explicitYe;
+  const ye=normalizeUnmarkedI(raw.includes('ã')?explicitYe.replaceAll('ang','an'):explicitYe);
   // A tone-free source has no tone letters to decode (the x in niexi is an onset).
   return {ye,accent:/[⁰¹²³⁴⁵⁶⁷⁸⁹0-9]/.test(raw)?yeToAccent(ye):ye};
  }

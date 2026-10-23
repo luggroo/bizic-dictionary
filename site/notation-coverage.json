@@ -36,10 +36,10 @@
     },
     "stedt-610ab69a37": {
       "total": 1246,
-      "candidateConverted": 1236,
+      "candidateConverted": 1237,
       "ambiguous": 66,
-      "partialCount": 7,
-      "unresolvedCount": 10,
+      "partialCount": 6,
+      "unresolvedCount": 9,
       "unresolved": [
         {
           "id": "stedt-rn-431565",
@@ -111,14 +111,6 @@
           "zh": "尿",
           "en": "urine",
           "reason": "ɤɯe⁵⁵: 来源 STEDT · Huang and Dai 92 TBL 中的 ɤɯe⁵⁵ 尚无已核映射（音值／韵母或i的条件分布）。原形保持不变。",
-          "partial": true
-        },
-        {
-          "id": "stedt-rn-355028",
-          "term": "ʑie²¹ɣɯe³⁵ma⁵⁵",
-          "zh": "贼",
-          "en": "thief",
-          "reason": "ʑie²¹: 来源 STEDT · Huang and Dai 92 TBL 中的 ʑie²¹ 尚无已核映射（音值／韵母或i的条件分布）。原形保持不变。",
           "partial": true
         }
       ]

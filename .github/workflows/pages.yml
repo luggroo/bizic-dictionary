@@ -42,6 +42,7 @@ jobs:
           node scripts/test-southern-notation.cjs
           node scripts/test-southern-source-rimes.cjs
           node scripts/test-notation-pairs.cjs
+          node scripts/test-y-initial.cjs
           node scripts/test-loanword-review.cjs
       - name: Prepare fast dictionary search
         run: |

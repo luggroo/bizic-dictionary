@@ -76,9 +76,9 @@ function surveySentenceDetail(c){const converted=c.dialect==='南部'?southernSp
 // Wan­mipo surface-tone spelling: 33 and 31 share r, but retain distinct accents.
 const WANMIPO_TONES={'13':['f',2],'33':['r',3],'55':['x',1],'53':['v',4],'31':['r',3]};
 // Avoid duplicated medial i after y in all northern survey spellings.
-function northernYCore(core){return normalizeYInitialSyllable(core)}
+function northernYCore(core,ipaCore=''){return normalizeYInitialSyllable(core,ipaCore)}
 function wanmipoSpelling(raw){
- const onsets={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','ɲ':'n','ȵ':'n','ŋ':'ng','p':'b','t':'d','k':'g','m':'m','n':'n','l':'l','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','':''};
+ const onsets={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','ɲ':'n','ȵ':'n','ŋ':'ng','p':'b','t':'d','k':'g','m':'m','n':'n','l':'l','s':'s','z':'r','ɕ':'x','ʑ':'y','j':'y','x':'h','ɣ':'hx','':''};
  const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','e':'e','ɤ':'e','ɤe':'e','ie':'ie','ai':'ai','au':'ao','iau':'iao','ɤu':'ou','iɤu':'iu','ui':'ui','ua':'ua','uai':'uai','ia':'ia','uo':'o','ũ':'ong','ã':'an','iã':'ian','ĩ':'in','uã':'uan','ɤ̃':'en','uɤ̃':'un','iɚ':'ier','uɚ':'uer'};
  const text=plainTones(surveyIPA(raw,'60823')).normalize('NFC');
  let ye='',accent='',pos=0,previous='';
@@ -87,7 +87,7 @@ function wanmipoSpelling(raw){
   const onset=Object.keys(onsets).sort((a,b)=>b.length-a.length).find(o=>m[1].startsWith(o));
   const rime=m[1].slice(onset.length),vowel=rimes[rime],tone=WANMIPO_TONES[m[2]];
   if(!vowel||!tone)return null;
-  const core=pinyinPalatalCore(northernYCore(onsets[onset]+vowel));
+  const core=pinyinPalatalCore(northernYCore(onsets[onset]+vowel,m[1]));
   const marked=m[2]==='33'?core:accentSyllable(core,tone[1]);
   const separator=!gap&&previous&&(/^[aeiou]/.test(core)||(/n$/.test(previous)&&/^g/.test(core)))?"'":'';
   ye+=gap+core+tone[0];accent+=gap+separator+marked;previous=core;pos=m.index+m[0].length;
@@ -102,7 +102,7 @@ function northernSurveySpelling(raw,point){
  if(!['60756','60757'].includes(point))return null;
  const xr=point==='60756';
  const tones=xr?{'55':['x',1],'35':['f',2],'33':['r',3],'53':['v',4]}:{'55':['x',1],'53':['v',4],'33':['x',1],'24':['f',2],'22':['r',3],'21':['r',3]};
- const onsets={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','ɲ':'n','ȵ':'n','ŋ':'ng','p':'b','t':'d','k':'g','m':'m','n':'n','l':'l','s':'s','z':'r','ɕ':'x','ʑ':'y','x':'h','ɣ':'hx','ɸ':'h','':''};
+ const onsets={'tɕʰ':'q','tsʰ':'c','pʰ':'p','tʰ':'t','kʰ':'k','tɕ':'j','ts':'z','ɲ':'n','ȵ':'n','ŋ':'ng','p':'b','t':'d','k':'g','m':'m','n':'n','l':'l','s':'s','z':'r','ɕ':'x','ʑ':'y','j':'y','x':'h','ɣ':'hx','ɸ':'h','':''};
  const rimes={'a':'a','i':'i','u':'u','ɿ':'i','o':'o','ɔ':'o','ɘ':'e','ə':'e','ɤ':'e','ɯ':'i','e':xr?'ei':'e','ɛ':'ai','ie':'ie','iɘ':'ie','iə':'ie','ai':'ai','ei':'ei','ɘi':'ei','au':'ao','iau':'iao','əu':'ou','ɘu':'ou','iəu':'iu','iɘu':'iu','iu':'iu','ui':'ui','uei':'ui','ua':'ua','uai':'uai','uɛ':'uai','ia':'ia','uo':'o','io':'io','aŋ':xr?'an':'ang','an':'an','ian':'ian','iaŋ':'iang','uan':'uan','uaŋ':'uang','uŋ':'ong','ɔŋ':'ong','ɘn':'en','ən':'en','ɘŋ':'en','əŋ':'en','en':'en','eŋ':'en','in':'in','iŋ':'in','un':'un','uen':'un','iən':'ian','ɚ':'er','iɚ':'ier','uɚ':'uer'};
  const text=plainTones(surveyIPA(raw,point)).normalize('NFC');
  let ye='',accent='',pos=0,previous='';
@@ -111,7 +111,7 @@ function northernSurveySpelling(raw,point){
   const onset=Object.keys(onsets).sort((a,b)=>b.length-a.length).find(o=>m[1].startsWith(o));
   const rime=m[1].slice(onset.length),vowel=rimes[rime],tone=tones[m[2]];
   if(!vowel||!tone)return null;
-  let core=northernYCore(onsets[onset]+vowel);
+  let core=northernYCore(onsets[onset]+vowel,m[1]);
   if(xr&&['ȵ','ɲ'].includes(onset))core='ni'+(rime==='e'?'e':vowel.replace(/^i/,''));
   if(xr&&['e','ɛ'].includes(rime)&&['tɕ','tɕʰ','ɕ','ʑ'].includes(onset))core=({'tɕ':'jie','tɕʰ':'qie','ɕ':'xie','ʑ':'ye'})[onset];
   core=pinyinPalatalCore(core);
