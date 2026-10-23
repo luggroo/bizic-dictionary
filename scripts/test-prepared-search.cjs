@@ -13,6 +13,21 @@ function context(data){
  ctx.initializeSemanticCategories(data.words);return ctx;
 }
 const baseline=context({...core,words:fullWords}),fast=context(core);
+// Alternatives split for reading, while the attested source string stays intact.
+const husk=fullWords.find(w=>w.id==='stedt-rn-288782');
+const huskCore=core.words.find(w=>w.id===husk.id);
+assert(husk.attestations[0].term.includes('~'),'original alternative separator retained');
+assert.deepEqual(Array.from(baseline.wordIPA(husk)),['kʰo⁵⁵tsʰo⁵⁵','pʰɨe⁵⁵tʰa⁵⁵kʰo⁵⁵tsʰo⁵⁵']);
+for(const mode of ['accent','ye']){
+ for(const c of [baseline,fast]){c.mode=mode;vm.runInContext('spellingDisplay=mode;',c);}
+ const pairs=baseline.pairedNotationForms(husk);
+ assert(pairs&&pairs.length===2,'two evidenced spelling/IPA pairs');
+ assert.equal(pairs[0].ipa[0],'kʰo⁵⁵tsʰo⁵⁵');
+ assert.equal(pairs[1].ipa[0],'pʰɨe⁵⁵tʰa⁵⁵kʰo⁵⁵tsʰo⁵⁵');
+ assert.equal(baseline.notationCells(husk),fast.notationCells(huskCore),'lazy and complete alternative display agree');
+ assert(!baseline.notationCells(husk).includes('~'));
+}
+assert.equal(baseline.pairedNotationForms({_ipa:['a⁵⁵','pa⁵⁵'],_display:{ye:[{text:'ax'},{text:'bax'}]}}),null,'do not pair by array order without source links');
 assert.equal(core.words.length,fullWords.length);
 let assertions=0;
 const equal=(a,b,label)=>{assert.equal(JSON.stringify(a),JSON.stringify(b),label);assertions++;};
