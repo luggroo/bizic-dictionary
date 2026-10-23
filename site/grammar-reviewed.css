@@ -23,3 +23,7 @@
 .reviewed-grammar .grammar-footnotes{margin-top:2rem;border-top:1px solid var(--line,#d7dfd9);padding-top:1rem;font-size:.9rem}
 .grammar-footnotes ol{padding-left:2rem}.grammar-footnotes li{margin:1rem 0;scroll-margin-top:5rem}.grammar-footnotes li::marker{content:'[' counter(list-item) '] '}
 .grammar-footnotes p{display:inline;line-height:1.6}.grammar-footnote-return{margin-left:.35rem;white-space:nowrap}
+
+/* Keep source forms intact in the nominal-relation comparison. */
+.grammar-case-overview table{min-width:38rem}
+.grammar-case-overview .grammar-pair{white-space:nowrap}
