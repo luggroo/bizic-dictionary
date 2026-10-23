@@ -87,12 +87,19 @@ const root=path.resolve(__dirname,'../site');
       }
      }
      if(ch.id==='104'){
-      const overview=[...document.querySelectorAll('table')].find(t=>t.querySelectorAll('th')[0]?.textContent==='形式或组合');
-      const forms=[...overview.querySelectorAll('tbody tr')].map(r=>r.cells[0]);
+      const overview=document.querySelector('.grammar-predicate-overview');
+      const headings=[...overview.querySelectorAll('h5')].map(h=>h.textContent);
+      if(JSON.stringify(headings)!==JSON.stringify(['一般否定','体态及其否定','情态及其否定','方向','程度','不规则变化','名词化']))failures.push('Overview: missing or reordered sections');
+      if(overview.querySelectorAll('table').length!==10)failures.push('Overview: missing section or aspect subgroup table');
+      const forms=[...overview.querySelectorAll('tbody td')];
       for(const cell of forms){const w=document.createTreeWalker(cell,NodeFilter.SHOW_TEXT);let n;while((n=w.nextNode()))if(!n.parentElement.closest('.grammar-pair')&&/\/[^/]+\//.test(n.nodeValue))failures.push('Overview: unpaired IPA '+n.nodeValue);}
       const orderTables=[...document.querySelectorAll('table')].filter(t=>['位置','位置组合'].includes(t.rows[0]?.cells[0]?.textContent));
       for(const table of orderTables){const copy=table.cloneNode(true);copy.querySelectorAll('.grammar-pair').forEach(n=>n.remove());if(/\/[^/]+\//.test(copy.textContent))failures.push('Postpredicate order: IPA missing switchable spelling');}
-      for(const ipa of ['la','tɕi','xu','tuɔ','ɕi','tsʰi','ɲie ɕi','ma'])if(!forms.some(c=>[...c.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa===ipa&&!/[¹²³⁴⁵xfrv]$/.test(p.querySelector('.grammar-spelling').dataset.ye))))failures.push('Overview: variable-tone affix not displayed without tone: '+ipa);
+      for(const ipa of ['la','tɕi','po la','po ɕi','liau','tɕi liau','xu','tuɔ','ɕi','tsʰi','ɲie ɕi','ma','ku'])if(!forms.some(c=>[...c.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa===ipa&&!/[¹²³⁴⁵xfrv]$/.test(p.querySelector('.grammar-spelling').dataset.ye))))failures.push('Overview: variable-tone affix not displayed without tone: '+ipa);
+      for(const table of overview.querySelectorAll('table'))if(JSON.stringify([...table.rows[0].cells].map(c=>c.textContent))!==JSON.stringify(['形式或组合','功能','用法与例子']))failures.push('Overview: inconsistent table columns');
+      const modality=[...overview.querySelectorAll('table')].find(t=>t.querySelector('[data-ipa="tɤ ɕi"]'));
+      for(const [positive,negative] of [['tɤ ɕi','tʰa⁵⁵ tʰi⁵⁵'],['ɣɤ⁵⁵','tsʰɿ⁵⁵ ɣɤ⁵⁵'],['tsʰɤ⁵⁵','xɨ⁵⁵ tsʰɤ⁵⁵'],['pie⁵⁵','tʰa⁵⁵ pie⁵⁵'],['tuɔ','tʰa⁵⁵ tuɔ²¹'],['tsʰa²⁴','tsʰa²⁴ ta²⁴'],['tsʰɤ⁵⁵','tʰa⁵⁵ tsʰɤ⁵⁵']])if(![...modality.tBodies[0].rows].some(r=>r.cells[0].querySelector('[data-ipa="'+positive+'"]')&&r.nextElementSibling?.cells[0].querySelector('[data-ipa="'+negative+'"]')))failures.push('Overview: modal negative must follow affirmative '+negative);
+      if(![...document.querySelectorAll('h4')].some(h=>h.textContent==='Brassett的合音分析'))failures.push('Overview: contraction analysis lost its attribution');
       for(const [ipa,ye] of [['ɕie²⁴','xief'],['ɕiau²⁴','xiaof'],['ɜ̃²¹tsɿ²¹','enrzir'],['ɜ̃²¹tsou²⁴','enrzouf'],['tʰai²⁴','taif'],['tʰau²⁴','taof']])if(!forms.some(c=>[...c.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa===ipa&&p.querySelector('.grammar-spelling').dataset.ye===ye)))failures.push('Overview: irregular word missing its tone: '+ipa);
      }
      results.push({id:ch.id,pairs:document.querySelectorAll('.grammar-pair').length,examples:document.querySelectorAll('.grammar-interlinear').length});
