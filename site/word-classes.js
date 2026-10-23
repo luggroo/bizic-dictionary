@@ -15,7 +15,9 @@ const WordClasses=(()=>{
    {id:'verb',zh:'动词',en:'Verb',children:[
     {id:'verb.transitive',zh:'及物动词',en:'Transitive verb'},
     {id:'verb.intransitive',zh:'不及物动词',en:'Intransitive verb'},
-    {id:'verb.auxiliary',zh:'助动词',en:'Auxiliary verb'}]},
+    {id:'verb.auxiliary',zh:'助动词',en:'Auxiliary verb'},
+    {id:'verb.stative',zh:'状态动词',en:'Stative verb'},
+    {id:'verb.copular',zh:'系动词',en:'Copula'}]},
    {id:'adjective',zh:'形容词',en:'Adjective'},
    {id:'adverb',zh:'副词',en:'Adverb'},
    {id:'numeral',zh:'数词',en:'Numeral'},
@@ -43,7 +45,7 @@ const WordClasses=(()=>{
   {id:'other',zh:'其他',en:'Other',children:[
    {id:'interjection',zh:'感叹词',en:'Interjection'},
    {id:'ideophone',zh:'拟声拟态词',en:'Ideophone'},
-   {id:'phrase',zh:'短语与固定表达',en:'Phrase or expression'},
+   {id:'phrase',zh:'短语与表达',en:'Phrase or expression'},
    {id:'unclassified',zh:'词性未定',en:'Unclassified'}]}
  ];
  const byId=new Map(),parent=new Map(),order=new Map();
@@ -53,21 +55,23 @@ const WordClasses=(()=>{
    .replace(/[‐‑‒–—−]/g,'-').replace(/\s+/g,' ').replace(/^(?:part of speech|word class|pos)\s*:\s*/,'').replace(/[\s.]+$/,'').trim();
  const synonyms=new Map();
  function add(id,...names){for(const n of [id,...names])synonyms.set(normalize(n),id);}
- add('noun','n','n.','subst','substantive','nom','名词','名物词','common noun','普通名词','n.common');
+ add('noun','n','n.','subst','substantive','nom','名词','名物词','common noun','普通名词','n.common','nbp','nveg','nanim','nrel');
  add('noun.proper','proper noun','proper name','propn','n.prop','nprop','npr','pn','专名','专有名词','人名','地名');
  add('noun.locative','locative noun','locative','location noun','n.loc','处所名词','方位名词');
  add('noun.temporal','temporal noun','time noun','n.time','时间名词');
  add('pronoun','pron','pron.','pro','pronoun','代词');
  add('pronoun.personal','personal pronoun','pers pron','pers. pron.','人称代词');
- add('pronoun.demonstrative','demonstrative pronoun','dem. pron.','dem pron','指示代词');
- add('pronoun.interrogative','interrogative pronoun','int. pron.','wh pronoun','疑问代词');
+ add('pronoun.demonstrative','demonstrative pronoun','dem. pron.','dem pron','指示代词','dem');
+ add('pronoun.interrogative','interrogative pronoun','int. pron.','wh pronoun','疑问代词','intg');
  add('pronoun.reflexive','reflexive pronoun','refl pron','反身代词');
  add('verb','v','v.','vb','verb','动词');
  add('verb.transitive','vt','v.t','v.t.','vtr','v.tr','tr.v','tr. v.','transitive verb','transitive v','及物动词','他动词');
- add('verb.intransitive','vi','v.i','v.i.','vintr','v.intr','intr.v','intr. v.','intransitive verb','intransitive v','不及物动词','自动词');
- add('verb.auxiliary','aux','aux.','auxiliary','auxiliary verb','aux verb','v.aux','助动词');
+ add('verb.intransitive','vi','v.i','v.i.','vintr','v.intr','intr.v','intr. v.','intransitive verb','intransitive v','不及物动词','自动词','itr.v.');
+ add('verb.auxiliary','aux','aux.','auxiliary','auxiliary verb','aux verb','v.aux','助动词','va.');
+ add('verb.stative','be v.','be','stative verb','be verb','状态动词');
+ add('verb.copular','vc.','copula','copular verb','系动词');
  add('adjective','adj','adj.','a','a.','adjectival','adjective','stative adjective','形容词');
- add('adverb','adv','adv.','adverb','adverbial','副词');
+ add('adverb','adv','adv.','adverb','adverbial','副词','advm.','advt.','advl.','advd.');
  add('numeral','num','num.','numeral','number','number word','数词');
  add('classifier','cl','cl.','clf','clf.','clsf','class','classifier','measure word','measure','mw','量词','名量词','动量词');
  add('adposition','adp','adposition','介词后置词','介词/后置词');
@@ -89,8 +93,8 @@ const WordClasses=(()=>{
  add('affix.suffix.verbal','vsuff','vsuff.','verbal suffix','verb suffix','动词性后缀','动词后缀');
  add('affix.suffix.adjectival','asuff','adjectival suffix','adjective suffix','形容词后缀');
  add('interjection','interj','interj.','intj','interjection','exclamation','叹词','感叹词');
- add('ideophone','ideo','ideophone','onomatopoeia','onomatopoeic','mimetic','拟声词','拟态词','象声词');
- add('phrase','phr','phr.','phrase','expression','idiom','fixed expression','proverb','短语','惯用语','固定搭配','成语','谚语');
+ add('ideophone','ideo','ideophone','onomatopoeia','onomatopoeic','mimetic','拟声词','拟态词','象声词','onom.');
+ add('phrase','phr','phr.','phrase','expression','idiom','fixed expression','proverb','短语','惯用语','固定搭配','成语','谚语','expr.');
  add('unclassified','unknown','unspecified','unclassified','undetermined','未分类','待定','词性未定','?','—','-');
  function one(raw){
    const t=normalize(raw);

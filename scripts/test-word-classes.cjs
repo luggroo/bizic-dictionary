@@ -13,6 +13,7 @@ assert.equal(get('nsuff.','nominal suffix'),'["affix.suffix.nominal"]');
 assert.equal(get('vsuff.','verbal suffix'),'["affix.suffix.verbal"]');
 assert.equal(get('pron.'),'["pronoun"]');
 assert.equal(get('adjective'),'["adjective"]');
+for(const [raw,want] of [["be v.","verb.stative"],["be","verb.stative"],["vc.","verb.copular"],["va.","verb.auxiliary"],["advm.","adverb"],["advt.","adverb"],["advl.","adverb"],["advd.","adverb"],["expr.","phrase"],["onom.","ideophone"],["nbp","noun"],["Nbp","noun"],["nveg","noun"],["Nanim","noun"],["nrel","noun"],["dem","pronoun.demonstrative"],["intg","pronoun.interrogative"],["itr.v.","verb.intransitive"]]){ assert.equal(get(raw),JSON.stringify([want]),'POS abbreviation '+raw); }
 assert.equal(get('unmapped source label'),'["unclassified"]');
 assert.equal(pos.matches({positions:['n.']},'lexical'),true);
 assert.equal(pos.matches({positions:['vt']},'verb'),true);
