@@ -1885,3 +1885,21 @@ Object.assign(UI_TRANSLATIONS,{
   "鲁曼、周雪姣、向鹏辉（2021），《土家语名物化标记ɕi功能扩展研究》，第431–432页，例45。作者把po xi与liao相对照，分别突出饭后保持的状态和吃饭事件的结束；详见": "Lu Man, Zhou Xuejiao and Xiang Penghui (2021), Functional Extensions of the Tujia Nominalizer ɕi, pp. 431–432, example 45. The authors contrast po xi, highlighting the state persisting after eating, with liao, highlighting the end of the eating event; see ",
   "Brassett等（2006），第112页，例30：“没拿完”。终点成分ji后接事实否定；“还没吃完”的形式另见田志慧第526页。": "Brassett et al. (2006), p. 112, example 30: “did not finish taking them”. The endpoint marker ji is followed by factual negation. For “have not finished eating yet”, see Tian Zhihui, p. 526."
 });
+
+// Northern tone inventory and reading order.
+Object.assign(UI_TRANSLATIONS,{
+  "一个音节可以分成声母、韵母和声调。先看音节怎样组成，再查声母、韵母和声调的表格；再了解连读变调和方言差异。": "A syllable has an onset, a rime and a tone. Start with its structure, then consult the onset, rime and tone tables; tone changes in connected speech and dialect differences follow.",
+  "调类是声调的类别，调值表示音高变化。下表对照北部四个调查点的单字调。叶氏拼音用词尾字母x、f、r、v标记调类；同一个调类在不同地点可能有不同调值。": "Tone categories group tones by their pitch patterns. The table compares citation tones at four Northern Tujia survey sites. Ye spelling uses the final letters x, f, r and v for these categories; pitch values can differ between sites.",
+  "仙仁另有变调³¹；表中只列单字调值。": "Xianren also has a ³¹ tone in connected speech; the table lists only citation tones.",
+  "调类": "Tone category",
+  "叶氏调尾": "Ye tone letter",
+  "他砂": "Tasha",
+  "拉西峒": "Laxidong",
+  "仙仁": "Xianren",
+  "小龙热": "Xiaolongre",
+  "他砂调形": "Tasha pitch contour",
+  "他砂词例（IPA）": "Tasha example (IPA)",
+  "汉义": "Meaning",
+  "出处：Brassett 等（2006），第13、24页，表2.6。": "Source: Brassett et al. (2006), pp. 13, 24, Table 2.6.",
+  "Brassett 等（2006），第13、24页，表2.6。": "Brassett et al. (2006), pp. 13, 24, Table 2.6."
+});

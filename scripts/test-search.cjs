@@ -7,6 +7,18 @@ assert.equal(vm.runInContext("contains('lü','lu')",c),false);
 assert.notEqual(vm.runInContext("normalize('miē')",c),vm.runInContext("normalize('mié')",c),'dedup keys retain tones');
 console.log('PASS: toneless searches, v/ü alias, ü/u distinction and tone-sensitive identity');
 vm.runInContext("const state={q:'',exact:false,searchLanguage:''};function wordForms(w){return w.forms||[]}",c);
+const research=fs.readFileSync(require('path').join(__dirname,'../site/research.js'),'utf8');
+vm.runInContext(research.slice(0,research.indexOf('\nfunction reconstructionTable')),c);
+for(const [trad,simp] of [['貓','猫'],['頭髮','头发'],['歷史','历史'],['魚','鱼'],['藥','药'],['龍','龙']]){
+ c.reconstruction={no:'',proto:'',zh:trad,en:'',reflexes:{}};c.query=simp;
+ assert.equal(vm.runInContext('state.q=query;reconstructionMatches(reconstruction)',c),true,trad+' / '+simp);
+ c.reconstruction.zh=simp;c.query=trad;
+ assert.equal(vm.runInContext('state.q=query;reconstructionMatches(reconstruction)',c),true,simp+' / '+trad);
+}
+c.reconstruction={no:'',proto:'',zh:'',en:'',reflexes:{},versions:[{zh:'烏龜',reflexes:{}}]};c.query='乌龟';
+assert.equal(vm.runInContext('state.q=query;reconstructionMatches(reconstruction)',c),true,'merged record variant');
+assert(app.includes('const recon=D.reconstructions.filter(r=>!r.componentOf&&reconstructionMatches(r));'),'global search historical normalization');
+console.log('PASS: traditional/simplified historical comparisons, merged variants, global search');
 vm.runInContext(app.slice(app.indexOf('const wordSearchIndex='),app.indexOf('function wordMatches(')),c);
 function score(w,q,lang='',exact=false){c.w=w;c.query=q;c.lang=lang;c.exact=exact;return vm.runInContext('state.q=query;state.searchLanguage=lang;state.exact=exact;wordSearchScore(w)',c)}
 for(const en of ['first (in time)','paste / glue / stick','Miao (nationality)','mantis','reactionary','hold meeting','intestines; bowels','stir-fry'])assert.equal(score({forms:['ba'],en},'ti'),0,en);

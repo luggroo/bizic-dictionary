@@ -153,6 +153,7 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  let heading=0;for(const h of root.querySelectorAll('h3'))h.id='chapter-'+ch.id+'-'+heading++;
  for(const table of root.querySelectorAll('table')){
   const headers=[...table.querySelectorAll('thead th')].map(c=>c.textContent.trim());table.dataset.originalHeaders=JSON.stringify(headers);
+  if(ch.id==='101'&&headers.includes('他砂词例（IPA）'))table.classList.add('grammar-tone-overview');
   // Inventory values already have a corresponding spelling column. Full-word
   // examples still need their own spelling when that column only names a segment.
   const separateSpelling=['101','201'].includes(ch.id)&&headers.some(h=>/拼音|拼写|白话字/.test(h));
