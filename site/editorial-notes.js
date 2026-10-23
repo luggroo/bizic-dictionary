@@ -62418,6 +62418,8 @@ EDITORIAL_NOTES.push(...[
 ]);
 
 EDITORIAL_NOTES.push(
+ {id:'chinese-loan-yubao-60824-v-0217',wordIds:['yubao-60824-v-0217'],kind:'借词来源',donor:'洋芋',donorVariety:'汉语（方言待核）',scope:'whole',text:'可能借自汉语「洋芋」，具体方言来源待核。',reviewedForms:[{ipa:'jã²¹jy³⁵',span:[1,2]}]},
+ {id:'chinese-loan-yubao-60823-v-0425',wordIds:['yubao-60823-v-0425'],kind:'借词来源',donor:'茶',donorVariety:'汉语（方言待核）',scope:'whole',text:'可能借自汉语「茶」，具体方言来源待核。',reviewedForms:[{ipa:'tsʰa³³',span:[1,1]}]},
  {id:'chinese-loan-yubao-60756-v-0521',wordIds:['yubao-60756-v-0521'],kind:'借词来源',donorVariety:'汉语（方言待核）',scope:'whole',text:'“脉＋抓”的宾谓表达，可能借自汉语。',reviewedForms:[{ipa:'me³³tsa³³'}]},
  {id:'chinese-loan-yubao-60756-v-0740',wordIds:['yubao-60756-v-0740'],kind:'借词来源',donorVariety:'汉语（方言待核）',scope:'whole',text:'“戏＋唱”的宾谓表达，可能借自汉语。',reviewedForms:[{ipa:'ɕi³³tsʰaŋ³³'}]},
  {id:'chinese-loan-yubao-60756-v-1857',wordIds:['yubao-60756-v-1857'],kind:'借词来源',donorVariety:'汉语（方言待核）',scope:'component',text:'“线＋纺”的宾谓表达；表示“纺”的成分可能借自汉语。',reviewedForms:[{ipa:'tʰɔŋ⁵⁵mu⁵⁵xuaŋ⁵⁵',span:[3,3]}]},

@@ -79,7 +79,18 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert(raised.attestations.every(a=>['to provide','provide'].includes(a.en)),'original English remains in source records');
  assert(!raised.en.includes('erroneous'),'correction commentary is not a gloss');
  for(const {wordIds} of followup.phraseBoundaries){c.photoFixture=get(wordIds[0]);assert.equal(vm.runInContext('JSON.stringify(WordClasses.ids(photoFixture))',c),'["phrase.verb"]');}
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2940);
+ for(const [id,ipa,donor] of [['yubao-60824-v-0217','jã²¹jy³⁵','洋芋'],['yubao-60823-v-0425','tsʰa³³','茶']]){
+  const w=get(id),note=c.editorialNotesFor(w).find(n=>n.id==='chinese-loan-'+id);
+  assert(note,id+' missing loan annotation');assert.equal(note.donor,donor);assert.equal(note.reviewedForms[0].ipa,ipa);
+  assert.equal(c.modernChineseLoanInfo(w).scope,'whole',id+' whole-word loan');
+  assert(c.modernChineseLoanBadge(w).includes('data-loan-scope="whole"'),id+' visible loan badge');
+  c.newLoanNote=note.text;assert(vm.runInContext('!!UI_TRANSLATIONS[newLoanNote]',c),id+' bilingual note');
+  assert.equal(sourceFields(w.attestations.find(a=>a.id===id)),surveyBefore.get(id),id+' original source changed');
+  vm.runInContext("state.q='';state.searchLanguage='';state.pos='';state.dialect='';state.hideWholeLoans=true",c);
+  assert.equal(c.wordMatches(w),false,id+' whole-loan filter');
+ }
+ vm.runInContext('state.hideWholeLoans=false',c);
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2942);
  const componentsFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-components-followup-2026-10-23.json'),'utf8'));
  for(const {note} of componentsFollowup.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
@@ -112,7 +123,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  vm.runInContext("state.q='大臣';state.searchLanguage='zh'",c);
  for(const id of ['w351','stedt-rn-289610'])assert.equal(c.wordSearchScore(get(id)),0,'obsolete translation is not searchable');
  vm.runInContext("state.q='';state.searchLanguage=''",c);
- for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,['yubao-60756-v-0521','yubao-60756-v-0740','yubao-60756-v-1857'].includes(id)?'汉语（方言待核）':'西南官话',id+' northern donor variety');}
+ for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,['yubao-60756-v-0521','yubao-60756-v-0740','yubao-60756-v-1857','yubao-60823-v-0425'].includes(id)?'汉语（方言待核）':'西南官话',id+' northern donor variety');}
  for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
  // Exact Southern forms and source aliases receive the accepted donor; native
  // components and other forms with the same Chinese gloss keep their scope.
@@ -183,5 +194,5 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.parseViewHash('#words?hideWholeLoans=false').state.hideWholeLoans,false);
  const counts={};for(const w of data.words){const scope=c.modernChineseLoanInfo(w).scope||'unmarked';counts[scope]=(counts[scope]||0)+1;}
  console.log('Loan badge coverage:',counts);
- console.log('PASS: reviewed glosses, source preservation, 2940 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
+ console.log('PASS: reviewed glosses, source preservation, 2942 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
 })().catch(e=>{console.error(e);process.exit(1)});

@@ -3250,6 +3250,8 @@ Object.assign(UI_TRANSLATIONS, {
  "本站借助 AI 推测的词性，可能有误。原文献未标注此词性。":"Part of speech inferred by this site with AI assistance; it may be incorrect. This category is not labelled in the source."
 });
 Object.assign(UI_TRANSLATIONS,{
+ '可能借自汉语「洋芋」，具体方言来源待核。':'Possibly borrowed from Chinese 洋芋 “potato”; the specific donor variety remains to be established.',
+ '可能借自汉语「茶」，具体方言来源待核。':'Possibly borrowed from Chinese 茶 “tea”; the specific donor variety remains to be established.',
  'j、q、x、y后对应ie（jie、qie、xie、ye）；其他声母后的跨点同源对应为ai（p.26），不是把ɛ读成ai':'After written j, q, x and y, the spelling uses ie: jie, qie, xie and ye. After other onsets, the cross-variety cognate correspondence is ai (p. 26); this does not give ai as the pronunciation of ɛ.',
  '仙仁ɛ在拼音声母j、q、x、y后分别写作jie、qie、xie、ye，原始音标与调值仍按来源保留。':'Xianren ɛ after written j, q, x and y is spelled jie, qie, xie and ye respectively. The source IPA and tone values are retained.'
 });
