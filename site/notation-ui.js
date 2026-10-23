@@ -55,7 +55,7 @@ function yeToAccent(text){return String(text).split(/(⟦[^⟧]*⟧)/g).map(part
 function displayBrassett(text,mode=spellingDisplay){const raw=plainTones(text);if(/^[-\s]*[iu][-\s]*$/.test(raw))return normalizeYeInitials(raw);if(mode==='accent')return accentTagged(raw,/([a-z]+)\s*([1-4])(?![0-9])/gi,(core,tone)=>({core:displayBrassettCore(core.toLowerCase()),tone}));return raw.replace(/([a-z]+)\s*([1-4])(?![0-9])/gi,(_,core,t)=>displayBrassettCore(core.toLowerCase())+{1:'x',2:'f',3:'r',4:'v'}[t])}
 function accentForNotation(w,v){if(v.accent)return v.accent;const b=notationValues(w,'brassett').find(b=>standardBrassettToYe(plainTones(b.text))===v.text);return b?displayBrassett(b.text,'accent').replace(/⟦[^⟧]*⟧/g,'□'):yeToAccent(v.text)}
 function visibleNotationValues(w){if(isSouthernWord(w))return southernNotationValues(w).map(v=>({...v,text:typeof reviewedSpelling==='function'?reviewedSpelling(w,v[southernDisplay==='poj'?'poj':'accent'],southernDisplay):v[southernDisplay==='poj'?'poj':'accent']}));const vals=notationValues(w,'ye');return vals.map(v=>({...v,text:typeof reviewedSpelling==='function'?reviewedSpelling(w,spellingDisplay==='accent'?accentForNotation(w,v):v.text.replace(/⟦[^⟧]*⟧/g,'□'),spellingDisplay):(spellingDisplay==='accent'?accentForNotation(w,v):v.text.replace(/⟦[^⟧]*⟧/g,'□'))})).filter((v,i,a)=>a.findIndex(x=>x.text===v.text)===i)}
-function wordIPA(w){return [...new Set((w._ipa||notationValues(w,'ipa').map(v=>v.text)).flatMap(text=>text.split(/[~～]/)).map(text=>normalizeIPA(text.trim())).filter(Boolean))]}
+function wordIPA(w){return [...new Set((w._ipa||notationValues(w,'ipa').map(v=>v.text)).flatMap(text=>text.split(/[~～]/)).map(text=>normalizeIPA(text.trim())).map(text=>typeof displayReviewedIPA==='function'?displayReviewedIPA(w,text):text).filter(Boolean))]}
 function completeSpellings(w){if(w._display)return w._display[isSouthernWord(w)?southernDisplay:spellingDisplay]||[];return visibleNotationValues(w).filter(v=>v.method!=='source-partial'&&!/[□⟦⟧]/.test(v.text))}
 function notationHead(w){return completeSpellings(w)[0]?.text||wordIPA(w)[0]||phon(w.term)}
 function ipaSubtitle(w){const ipa=wordIPA(w);return completeSpellings(w).length&&ipa.length?`<div class="word-ipa">${ipa.map(E).join(' · ')}</div>`:!ipa.length?'<div class="tiny">IPA 待校核</div>':''}
@@ -64,7 +64,7 @@ function ipaSubtitle(w){const ipa=wordIPA(w);return completeSpellings(w).length&
 function pairedNotationForms(w){
  const values=completeSpellings(w),ipa=wordIPA(w);
  if(ipa.length<2||!values.length)return null;
- const pairs=values.map(v=>({...v,ipa:(v.ipaForms||[]).map(normalizeIPA).filter(p=>ipa.includes(p))}));
+ const pairs=values.map(v=>({...v,ipa:(v.ipaForms||[]).map(normalizeIPA).map(p=>typeof displayReviewedIPA==='function'?displayReviewedIPA(w,p):p).filter(p=>ipa.includes(p))}));
  return pairs.every(v=>v.ipa.length)&&ipa.every(p=>pairs.some(v=>v.ipa.includes(p)))?pairs:null;
 }
 function wordCardNotation(w){

@@ -35,3 +35,7 @@ Installed the explicitly approved góunà-liě (Yangchao 0831) and re-liē (Wanm
 Release integration preserves the latest IPA normalization and Luxi transcription corrections. Seven Luxi boundary keys were updated to the current ii / jjie spellings without changing their reviewed word boundaries. Fusion notes are available in both Chinese and English.
 
 For Wanmipo xiunáo and piunáo, record the working analysis of a suffix -unao whose u is fused with the stem. The user has approved xiu-náo / piu-náo as the surface spellings and xi•unao / pi•unao in the explanatory notes; both exact-entry display rules and notes are installed. The bullet marks the analytical morpheme boundary, while the hyphen marks the surface spelling boundary after fusion. This remains a morphological analysis, not new documentary evidence for independently attested Wanmipo xi / pi. Preserve source letters and tones, do not restore an extra u in the spelling, and do not generalize to every nau-final word.
+
+## POS audit integration (2026-10-23)
+
+`lexical-reviews.js` adds exact-entry nominal–predicate boundaries for 307 entries, with 618 rules across the applicable display modes. The display IPA follows the same boundary while retaining every segment and tone; source notations and attestations remain unchanged. These rules precede older display rules for the same exact form. Ambiguous structures stay tentative, and opaque short variants are not forced into the segmentation of longer forms. Details and checks are in `pos-audit-2026-10-23.md`.

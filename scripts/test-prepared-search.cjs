@@ -6,7 +6,7 @@ const core=read('core');
 const fullWords=fs.readdirSync(path.join(root,'prepared')).filter(n=>/^words-\d+\.json.gz$/.test(n)).sort((a,b)=>parseInt(a.slice(6))-parseInt(b.slice(6))).flatMap(n=>read(n.replace('.json.gz','')));
 function context(data){
  const ctx=vm.createContext({console,URL,URLSearchParams,Map,Set,window:{addEventListener(){}},localStorage:{getItem:()=>null},document:{addEventListener(){}}});
- const files=['brassett-grammar.js','grammar-data.js','comparison-merge.js','research.js','grammar-dialects.js','south-zhou-phonology.js','notation-profiles.js','ipa-normalize.js','notation-ui.js','southern-notation.js','grammar-integrated.js','grammar-evidence.js','yubao.js','semantic-categories.js','word-classes.js','editorial-notes.js','spelling-boundaries.js','notation-pairs.js'];
+ const files=['brassett-grammar.js','grammar-data.js','comparison-merge.js','research.js','grammar-dialects.js','south-zhou-phonology.js','notation-profiles.js','ipa-normalize.js','notation-ui.js','southern-notation.js','grammar-integrated.js','grammar-evidence.js','yubao.js','semantic-categories.js','lexical-reviews.js','word-classes.js','editorial-notes.js','spelling-boundaries.js','notation-pairs.js'];
  for(const f of files)vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
  const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.slice(0,app.indexOf("window.addEventListener('popstate'")),ctx);
  ctx.data=data;vm.runInContext('D=data;S=Object.fromEntries(D.sources.map(s=>[s.id,s]));WordClasses.initialize(D.words);',ctx);
@@ -35,6 +35,9 @@ for(let i=0;i<fullWords.length;i++){
  const a=fullWords[i],b=core.words[i];equal(a.id,b.id,'record order');
  equal(baseline.wordIPA(a),fast.wordIPA(b),a.id+' IPA');
  equal(baseline.modernChineseLoanInfo(a),fast.modernChineseLoanInfo(b),a.id+' loan scope');
+ baseline.posWord=a;fast.posWord=b;
+ equal(vm.runInContext('WordClasses.ids(posWord)',baseline),vm.runInContext('WordClasses.ids(posWord)',fast),a.id+' POS');
+ equal(vm.runInContext('WordClasses.provenance(posWord)',baseline),vm.runInContext('WordClasses.provenance(posWord)',fast),a.id+' POS provenance');
  equal(baseline.wordSemanticCategories(a),fast.wordSemanticCategories(b),a.id+' semantics');
  for(const mode of ['accent',baseline.isSouthernWord(a)?'poj':'ye']){
   for(const c of [baseline,fast]){c.mode=mode;vm.runInContext('spellingDisplay=mode;southernDisplay=mode;',c);}

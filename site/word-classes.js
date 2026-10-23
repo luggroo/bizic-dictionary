@@ -16,6 +16,7 @@ const WordClasses=(()=>{
     {id:'verb.transitive',zh:'及物动词',en:'Transitive verb'},
     {id:'verb.intransitive',zh:'不及物动词',en:'Intransitive verb'},
     {id:'verb.auxiliary',zh:'助动词',en:'Auxiliary verb'},
+    {id:'verb.modal',zh:'情态动词',en:'Modal verb'},
     {id:'verb.stative',zh:'状态动词',en:'Stative verb'},
     {id:'verb.copular',zh:'系动词',en:'Copula'}]},
    {id:'adjective',zh:'形容词',en:'Adjective'},
@@ -23,6 +24,7 @@ const WordClasses=(()=>{
    {id:'numeral',zh:'数词',en:'Numeral'},
    {id:'classifier',zh:'量词',en:'Classifier'}]},
   {id:'function',zh:'虚词',en:'Function words',children:[
+   {id:'interrogative',zh:'疑问词与疑问表达',en:'Interrogative words and expressions'},
    {id:'adposition',zh:'介词与后置词',en:'Adpositions',children:[
     {id:'adposition.preposition',zh:'介词',en:'Preposition'},
     {id:'adposition.postposition',zh:'后置词',en:'Postposition'}]},
@@ -45,7 +47,11 @@ const WordClasses=(()=>{
   {id:'other',zh:'其他',en:'Other',children:[
    {id:'interjection',zh:'感叹词',en:'Interjection'},
    {id:'ideophone',zh:'拟声拟态词',en:'Ideophone'},
-   {id:'phrase',zh:'短语与表达',en:'Phrase or expression'},
+   {id:'phrase',zh:'短语与表达',en:'Phrase or expression',children:[
+    {id:'phrase.verb',zh:'动词短语',en:'Verb phrase'},
+    {id:'phrase.subject_predicate',zh:'主谓短语',en:'Subject–predicate phrase'},
+    {id:'phrase.quantity',zh:'不定量表达',en:'Indefinite quantity expression'}]},
+   {id:'property',zh:'性质词（动／形待定）',en:'Property word (verb/adjective undetermined)'},
    {id:'unclassified',zh:'词性未定',en:'Unclassified'}]}
  ];
  const byId=new Map(),parent=new Map(),order=new Map();
@@ -68,6 +74,12 @@ const WordClasses=(()=>{
  add('verb.transitive','vt','v.t','v.t.','vtr','v.tr','tr.v','tr. v.','transitive verb','transitive v','及物动词','他动词');
  add('verb.intransitive','vi','v.i','v.i.','vintr','v.intr','intr.v','intr. v.','intransitive verb','intransitive v','不及物动词','自动词','itr.v.');
  add('verb.auxiliary','aux','aux.','auxiliary','auxiliary verb','aux verb','v.aux','助动词','va.');
+ add('verb.modal','modal v.','modal verb','情态动词');
+ add('interrogative','interr.','interrogative','疑问词');
+ add('phrase.verb','v. phr.','verb phrase','动词短语');
+ add('phrase.subject_predicate','subject-predicate phrase','主谓短语');
+ add('phrase.quantity','quantity expression','不定量表达');
+ add('property','property word','性质词');
  add('verb.stative','be v.','be','stative verb','be verb','状态动词');
  add('verb.copular','vc.','copula','copular verb','系动词');
  add('adjective','adj','adj.','a','a.','adjectival','adjective','stative adjective','形容词');
@@ -110,11 +122,13 @@ const WordClasses=(()=>{
    return parts.length>1?[...new Set(parts.map(one).filter(Boolean))]:[];
  }
  function sourceLabels(w){
-   return [...new Set([...(Array.isArray(w?.positions)?w.positions:[]),w?.pos]
+   return [...new Set([...(Array.isArray(w?.positions)?w.positions:[]),w?.pos,...(w?.attestations||[]).map(a=>a.pos)]
      .filter(x=>x!==null&&x!==undefined&&String(x).trim()).map(x=>String(x).trim()))];
  }
- const reviewedClasses=new Map([['yubao-60823-v-2790',['phrase']],['yubao-60756-v-2550',['phrase']],['yubao-60823-v-2550',['phrase']],['yubao-60824-v-2550',['phrase']]]);
+ const reviewedClasses=new Map([['yubao-60823-v-2790',['phrase.verb']],['yubao-60756-v-2550',['phrase.verb']],['yubao-60823-v-2550',['phrase.verb']],['yubao-60824-v-2550',['phrase.verb']]]);
+ function review(w){return typeof lexicalReviewFor==='function'?lexicalReviewFor(w):null;}
  function reviewedIds(w){
+   if(review(w))return review(w).classes;
    return [...new Set([w?.id,...(w?.mergedWordIds||[]),...(w?.attestations||[]).map(a=>a.id)]
      .flatMap(id=>reviewedClasses.get(id)||[]))];
  }
@@ -143,6 +157,7 @@ const WordClasses=(()=>{
    'pronoun.interrogative':'interrog. pron.','pronoun.reflexive':'refl. pron.',
    verb:'v.','verb.transitive':'v.t.','verb.intransitive':'v.i.','verb.auxiliary':'aux. v.',
    'verb.stative':'stat. v.','verb.copular':'cop.',adjective:'adj.',adverb:'adv.',numeral:'num.',classifier:'clf.',
+   'verb.modal':'modal v.',interrogative:'interr.','phrase.verb':'v. phr.','phrase.subject_predicate':'phr.','phrase.quantity':'quant. phr.',property:'prop.',
    adposition:'adp.','adposition.preposition':'prep.','adposition.postposition':'postp.',
    conjunction:'conj.',determiner:'det.',particle:'ptcl.','particle.aspect':'asp. ptcl.',
    'particle.modal':'mod. ptcl.','particle.structural':'str. ptcl.','particle.negative':'neg.',
@@ -151,14 +166,33 @@ const WordClasses=(()=>{
    'affix.suffix.adjectival':'adj. suff.',interjection:'interj.',ideophone:'ideo.',phrase:'phr.',unclassified:'uncl.'
  };
  function abbreviation(w){
-   return sourceLabels(w).length||reviewedIds(w).length?ids(w).map(id=>abbreviations[id]).join(', '):'';
+   return shown(w).map(id=>abbreviations[id]).join(', ');
  }
+ function shown(w){return sourceLabels(w).length||reviewedIds(w).length?ids(w).filter(id=>id!=='unclassified'):[];}
  function label(w,language){
    if(!sourceLabels(w).length&&!reviewedIds(w).length)return '';
-   return ids(w).map(id=>language?byId.get(id)[language]:byId.get(id).zh+' / '+byId.get(id).en).join(' · ');
+   return shown(w).map(id=>language?byId.get(id)[language]:byId.get(id).zh+' / '+byId.get(id).en).join(' · ');
  }
+ function provenance(w){
+   return shown(w).map(id=>{
+     const labels=sourceLabels(w).filter(raw=>!raw.includes('+')&&!raw.includes('＋')&&resolve(raw).includes(id));
+     return {id,origin:labels.length?'source':'site-ai-assisted',sourceLabels:labels,
+       ...(review(w)?{analysis:review(w)}:{})};
+   });
+ }
+ function explanation(w,id,language='zh'){
+   const p=provenance(w).find(p=>p.id===id);if(!p)return '';
+   const en=language==='en',raw=sourceLabels(w).join(' / '),r=review(w);
+   let text=p.origin==='source'?(en?'Source label: ':'原文献词性：')+p.sourceLabels.join(' / '):
+     (en?'Part of speech inferred by this site with AI assistance; it may be incorrect.':'本站借助 AI 推测的词性，可能有误。')+
+     (raw?(en?' Original source label: ':'原文献标注：')+raw:(en?' This category is not labelled in the source.':'原文献未标注此词性。'));
+   if(r?.structure)text+=' '+(r.structure==='OV'?(en?'Object + verb (OV).':'宾语＋动词（OV）。'):(en?'Subject + predicate (SV).':'主语＋谓语（SV）。'));
+   if(r?.tentative)text+=' '+(en?'The grammatical analysis remains tentative.':'具体语法分析仍待核。');
+   return text;
+ }
+ function inline(w){return provenance(w).map(p=>'<abbr class="word-class-abbr'+(p.origin==='site-ai-assisted'?' word-class-inferred':'')+'" data-pos-inline="'+escape(p.id)+'" data-pos-word="'+escape(w.id)+'" title="'+escape(explanation(w,p.id,'zh'))+'">&lt;'+escape(abbreviations[p.id])+'&gt;</abbr>').join(' ');}
  function badges(w){
-   return sourceLabels(w).length||reviewedIds(w).length?ids(w).map(id=>'<span class="word-class-badge">'+escape(byId.get(id).zh)+'</span>').join(''):'';
+   return provenance(w).map(p=>'<button type="button" class="word-class-badge'+(p.origin==='site-ai-assisted'?' word-class-inferred':'')+'" data-pos-word="'+escape(w.id)+'" data-pos-class="'+escape(p.id)+'" aria-expanded="false" aria-label="'+escape(byId.get(p.id).zh+'：'+explanation(w,p.id))+'">'+escape(byId.get(p.id).zh)+'</button>').join('');
  }
  function escape(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  let counts=new Map();
@@ -194,5 +228,5 @@ const WordClasses=(()=>{
    for(const w of words)for(const raw of sourceLabels(w))if(!resolve(raw).length)count.set(raw,(count.get(raw)||0)+1);
    return [...count].sort((a,b)=>b[1]-a[1]);
  }
- return {tree,resolve,ids,filterId,matches,label,abbreviation,badges,initialize,selector,unmapped};
+ return {tree,resolve,ids,filterId,matches,label,abbreviation,badges,inline,review,provenance,explanation,sourceLabels,initialize,selector,unmapped};
 })();

@@ -62417,6 +62417,13 @@ EDITORIAL_NOTES.push(...[
  }
 ]);
 
+EDITORIAL_NOTES.push(
+ {id:'chinese-loan-yubao-60756-v-0521',wordIds:['yubao-60756-v-0521'],kind:'借词来源',donorVariety:'汉语（方言待核）',scope:'whole',text:'“脉＋抓”的宾谓表达，可能借自汉语。',reviewedForms:[{ipa:'me³³tsa³³'}]},
+ {id:'chinese-loan-yubao-60756-v-0740',wordIds:['yubao-60756-v-0740'],kind:'借词来源',donorVariety:'汉语（方言待核）',scope:'whole',text:'“戏＋唱”的宾谓表达，可能借自汉语。',reviewedForms:[{ipa:'ɕi³³tsʰaŋ³³'}]},
+ {id:'chinese-loan-yubao-60756-v-1857',wordIds:['yubao-60756-v-1857'],kind:'借词来源',donorVariety:'汉语（方言待核）',scope:'component',text:'“线＋纺”的宾谓表达；表示“纺”的成分可能借自汉语。',reviewedForms:[{ipa:'tʰɔŋ⁵⁵mu⁵⁵xuaŋ⁵⁵',span:[3,3]}]},
+ {id:'lexical-lagapi',wordIds:['w1236','stedt-rn-218712'],text:'laga 表示“裂缝”，lagapi 表示“裂开”。'},
+ {id:'lexical-kadigai',wordIds:['yubao-60757-v-2938'],text:'补充材料记 niedigai 为“两倍”；本条 ka 的含义待核。补充形式尚无声调与 IPA。'}
+);
 // Index source IDs once; list filtering visits every merged entry.
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){
@@ -62425,7 +62432,9 @@ for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){
 }
 function editorialNotesFor(w){
  const ids=new Set([w.id,...(w.mergedWordIds||[]),...(w.attestations||[]).map(a=>a.id)]);
- return [...(w.editorialNotes||[]),...[...ids].flatMap(id=>editorialNotesByWordId.get(id)||[])].filter((n,i,a)=>a.findIndex(x=>x.id===n.id)===i);
+ const inferred=typeof WordClasses!=='undefined'&&WordClasses.provenance(w).some(p=>p.origin==='site-ai-assisted');
+ const posNote=inferred?[{id:'site-pos-inference',kind:'词性',text:'带虚线的词性由本站借助 AI 根据现有释义和资料推测，可能有误。原文献标签保留在词性说明中。'}]:[];
+ return [...(w.editorialNotes||[]),...posNote,...[...ids].flatMap(id=>editorialNotesByWordId.get(id)||[])].filter((n,i,a)=>a.findIndex(x=>x.id===n.id)===i);
 }
 const modernChineseLoanCache=new WeakMap();
 function loanIPAForms(value){

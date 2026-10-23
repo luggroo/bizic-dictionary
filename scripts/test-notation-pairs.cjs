@@ -6,7 +6,7 @@ const read=f=>fs.existsSync(root+'/'+f)?fs.readFileSync(root+'/'+f,'utf8'):zlib.
 const D=JSON.parse(read('data.json'));Object.assign(D,JSON.parse(read('dictionary.json')));
 const context={D,console,localStorage:{getItem(){return null}},document:{addEventListener(){}},E:s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),state:{},pageHeader:()=>'',fetch:async f=>({ok:true,json:async()=>JSON.parse(read(f))})};
 vm.createContext(context);
-for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js','notation-pairs.js','word-merge-groups.js','word-merge.js','comparison-merge.js'])vm.runInContext(read(f),context,{filename:f});
+for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js','notation-pairs.js','word-merge-groups.js','lexical-reviews.js','word-merge.js','comparison-merge.js'])vm.runInContext(read(f),context,{filename:f});
 (async()=>{
  await vm.runInContext('loadYubao(D)',context);
  context.S=Object.fromEntries(D.sources.map(s=>[s.id,s]));

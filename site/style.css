@@ -143,6 +143,12 @@ button.primary:hover,button.primary:focus-visible{background:var(--green);color:
 /* Word classes stay beside English glosses; full labels share the detail metadata row. */
 .filters select[data-filter="pos"]{max-width:min(330px,100%)}
 .word-class-abbr{font:inherit;font-style:italic;text-decoration:none}
+.word-class-abbr.word-class-inferred,.word-class-badge.word-class-inferred{text-decoration-line:underline;text-decoration-style:dashed;text-decoration-thickness:1px;text-underline-offset:.22em;color:#626b68}
+.word-metadata button.word-class-badge{min-height:28px;min-width:24px;border-radius:0;cursor:help;box-shadow:none}
+.word-metadata button.word-class-badge:hover{background:transparent;color:var(--ink)}
+.word-metadata button.word-class-badge:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.pos-explanation{position:fixed;inset:auto;margin:0;box-sizing:border-box;max-width:min(330px,calc(100vw - 24px));padding:12px 14px;border:1px solid var(--line,#d6dcd8);border-radius:6px;background:white;color:#303b35;font:14px/1.65 system-ui,sans-serif;box-shadow:0 3px 14px #0002;z-index:1000;overflow-wrap:anywhere}
+@media(pointer:coarse){.word-metadata button.word-class-badge{min-height:44px}}
 .word-metadata{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;margin:10px 0 18px}
 .word-metadata .word-class-badge,.word-metadata .loan-badge{font-size:12px;line-height:1.65}
 /* Loan scope is neutral so dialect colours keep their existing meaning. */

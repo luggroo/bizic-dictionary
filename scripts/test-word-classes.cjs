@@ -3,7 +3,7 @@
 const fs=require('node:fs'),vm=require('node:vm'),zlib=require('node:zlib'),assert=require('node:assert/strict');
 const source=fs.readFileSync('site/word-classes.js','utf8');
 const context=vm.createContext({});
-vm.runInContext(source+'\nthis.WordClasses=WordClasses;',context);
+vm.runInContext(fs.readFileSync('site/lexical-reviews.js','utf8')+'\n'+source+'\nthis.WordClasses=WordClasses;',context);
 const pos=context.WordClasses;
 const get=(...labels)=>JSON.stringify(pos.ids({positions:labels}));
 assert.equal(get('n.','noun','名词'),'["noun"]');
@@ -21,9 +21,9 @@ assert.equal(pos.matches({positions:['nsuff.']},'morphology'),true);
 assert.equal(pos.matches({positions:['n.']},'verb'),false);
 for(const word of [{id:'yubao-60823-v-2790',pos:''},{id:'merged',mergedWordIds:['yubao-60823-v-2790'],pos:'v.'}]){
  const original=JSON.stringify(word);
- assert.equal(JSON.stringify(pos.ids(word)),'["phrase"]');
+ assert.equal(JSON.stringify(pos.ids(word)),'["phrase.verb"]');
  assert(pos.matches(word,'phrase'));
- assert.match(pos.label(word),/短语与表达/);
+ assert.match(pos.label(word),/动词短语/);
  assert.equal(JSON.stringify(word),original,'review leaves source POS unchanged');
 }
 assert.equal(pos.label({id:'unreviewed',pos:''}),'');

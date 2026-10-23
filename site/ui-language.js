@@ -189,6 +189,7 @@
     translateGrammar();
     window.TujiaTypography?.refresh(node => textMemory.get(node)?.source || node.nodeValue);
     roots.forEach(root => { if (root.isConnected) translateTree(root); });
+    window.refreshWordClassLabels?.();
     document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
     const select = document.getElementById('ui-language');
     if (select) select.value = language;

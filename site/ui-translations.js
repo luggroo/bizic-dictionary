@@ -3232,3 +3232,20 @@ Object.assign(UI_TRANSLATIONS, {
 });
 
 Object.assign(UI_TRANSLATIONS,{"拼音中，元音起首的 /u/ 写 wu，后接其他元音时写 w，如 /ua/ → wa、/uo/ → wo、/uei/ → wei。白话字沿用自己的拼写规则。":"In romanization, vowel-initial /u/ is written wu and becomes w before another vowel: /ua/ → wa, /uo/ → wo, /uei/ → wei. POJ-style spelling follows its own rules."});
+Object.assign(UI_TRANSLATIONS, {
+ "情态动词":"Modal verb",
+ "疑问词与疑问表达":"Interrogative words and expressions",
+ "动词短语":"Verb phrase",
+ "主谓短语":"Subject–predicate phrase",
+ "不定量表达":"Indefinite quantity expression",
+ "性质词（动／形待定）":"Property word (verb/adjective undetermined)",
+ "词性":"Part of speech",
+ "虚线词性为本站借助 AI 推测，可能有误；点按词条中的词性可查看依据。":"Dashed part-of-speech labels are inferred by this site with AI assistance and may be incorrect. Tap a label in an entry for its basis.",
+ "带虚线的词性由本站借助 AI 根据现有释义和资料推测，可能有误。原文献标签保留在词性说明中。":"Dashed part-of-speech labels are inferred by this site with AI assistance from existing glosses and references, and may be incorrect. Original source labels are retained in the label explanations.",
+ "“脉＋抓”的宾谓表达，可能借自汉语。":"An object–verb expression, literally ‘pulse + grasp’, possibly borrowed from Chinese.",
+ "“戏＋唱”的宾谓表达，可能借自汉语。":"An object–verb expression, literally ‘play + sing’, possibly borrowed from Chinese.",
+ "“线＋纺”的宾谓表达；表示“纺”的成分可能借自汉语。":"An object–verb expression, literally ‘thread + spin’; the component meaning ‘spin’ may be borrowed from Chinese.",
+ "laga 表示“裂缝”，lagapi 表示“裂开”。":"Laga means ‘crack (noun)’; lagapi means ‘split open’.",
+ "补充材料记 niedigai 为“两倍”；本条 ka 的含义待核。补充形式尚无声调与 IPA。":"Supplementary material records niedigai as ‘twice’; the meaning of ka in this entry remains uncertain. Tones and IPA are not yet available for the supplementary form.",
+ "本站借助 AI 推测的词性，可能有误。原文献未标注此词性。":"Part of speech inferred by this site with AI assistance; it may be incorrect. This category is not labelled in the source."
+});

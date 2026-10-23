@@ -1,7 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),zlib=require('node:zlib'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
 const root=path.resolve(process.argv[2]||path.join(__dirname,'../site'));
 const c=vm.createContext({console,URLSearchParams,window:{addEventListener(){}},localStorage:{getItem:()=>null},document:{addEventListener(){}},fetch:async f=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'))})});
-for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js','semantic-categories.js','word-merge-groups.js','word-merge.js','spelling-boundaries.js','word-classes.js','editorial-notes.js','ui-translations.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c,{filename:f});
+for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js','semantic-categories.js','word-merge-groups.js','word-merge.js','spelling-boundaries.js','lexical-reviews.js','word-classes.js','editorial-notes.js','ui-translations.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c,{filename:f});
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.slice(0,app.indexOf('document.addEventListener(')),c);
 const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.readFileSync(path.join(root,'dictionary.json'),'utf8')):JSON.parse(execFileSync('python3',['-c',"import gzip,json,pathlib,runpy,sys; r=pathlib.Path(sys.argv[1]); d=json.loads(gzip.decompress((r/'dictionary.json.gz').read_bytes())); x=runpy.run_path(sys.argv[2])['apply_reviews'](d,json.loads((r/'gloss-reviews.json').read_text())['entries']); print(json.dumps(x))",root,path.join(__dirname,'apply-gloss-reviews.py')],{maxBuffer:64*1024*1024}).toString());
 (async()=>{
@@ -51,7 +51,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(get('stedt-rn-289522').notations.ipa[0].text,'dʑio²¹niã³⁵du̵²¹','dragonfly source notation is preserved');
  assert.deepEqual(Array.from(c.editorialNotesFor(get('stedt-rn-289522')).find(n=>n.id==='chinese-loan-stedt-rn-289522').reviewedForms[0].span),[1,2]);
  c.phraseFixture=get('yubao-60823-v-2790');
- assert.equal(vm.runInContext('JSON.stringify(WordClasses.ids(phraseFixture))',c),'["phrase"]');
+ assert.equal(vm.runInContext('JSON.stringify(WordClasses.ids(phraseFixture))',c),'["phrase.verb"]');
  vm.runInContext("state.q='ddeu';state.searchLanguage='tujia';state.exact=false",c);
  assert(c.wordSearchScore(get('stedt-rn-289522'))>0,'actual final-syllable spelling is searchable');
  const matches=c.rankedWords(data.words),dragonflyIndex=matches.findIndex(w=>w.id==='stedt-rn-289522');
@@ -78,8 +78,8 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.deepEqual(Array.from(raised.glosses),['raise; improve']);
  assert(raised.attestations.every(a=>['to provide','provide'].includes(a.en)),'original English remains in source records');
  assert(!raised.en.includes('erroneous'),'correction commentary is not a gloss');
- for(const {wordIds} of followup.phraseBoundaries){c.photoFixture=get(wordIds[0]);assert.equal(vm.runInContext('JSON.stringify(WordClasses.ids(photoFixture))',c),'["phrase"]');}
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2937);
+ for(const {wordIds} of followup.phraseBoundaries){c.photoFixture=get(wordIds[0]);assert.equal(vm.runInContext('JSON.stringify(WordClasses.ids(photoFixture))',c),'["phrase.verb"]');}
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2940);
  const componentsFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-components-followup-2026-10-23.json'),'utf8'));
  for(const {note} of componentsFollowup.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
@@ -112,7 +112,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  vm.runInContext("state.q='大臣';state.searchLanguage='zh'",c);
  for(const id of ['w351','stedt-rn-289610'])assert.equal(c.wordSearchScore(get(id)),0,'obsolete translation is not searchable');
  vm.runInContext("state.q='';state.searchLanguage=''",c);
- for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,'西南官话',id+' northern donor variety');}
+ for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,['yubao-60756-v-0521','yubao-60756-v-0740','yubao-60756-v-1857'].includes(id)?'汉语（方言待核）':'西南官话',id+' northern donor variety');}
  for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
  // Exact Southern forms and source aliases receive the accepted donor; native
  // components and other forms with the same Chinese gloss keep their scope.
@@ -183,5 +183,5 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.parseViewHash('#words?hideWholeLoans=false').state.hideWholeLoans,false);
  const counts={};for(const w of data.words){const scope=c.modernChineseLoanInfo(w).scope||'unmarked';counts[scope]=(counts[scope]||0)+1;}
  console.log('Loan badge coverage:',counts);
- console.log('PASS: reviewed glosses, source preservation, 2937 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
+ console.log('PASS: reviewed glosses, source preservation, 2940 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
 })().catch(e=>{console.error(e);process.exit(1)});
