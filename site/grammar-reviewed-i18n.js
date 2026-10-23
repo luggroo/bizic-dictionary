@@ -2,6 +2,23 @@ Object.assign(UI_TRANSLATIONS,{"语音": "Phonology", "基本语序与句型": "
 Object.assign(UI_TRANSLATIONS,{'其他格与关系标记（待补充）':'Other case and relation markers (to be added)','动词、形容词及其他谓语变化（待补充）':'Other verb, adjective and predicate forms (to be added)'});
 // Reviewed prose translations.
 Object.assign(UI_TRANSLATIONS,{
+  "名词化可以把动作、性质或一句话变成指人、事物、事情或地方的表达，例如“吃的东西”“做工的人”“吃饭的地方”。北部材料中可见以下四种形式：": "Nominalization turns an action, a property or a clause into an expression referring to a person, thing, event or place, such as ‘something to eat’, ‘a person who works’ or ‘a place to eat’. Northern sources record the following four forms:",
+  "主要表示": "Main use",
+  "意思举例": "Examples of meaning",
+  "事情，也可指人或物": "Events; also people or things",
+  "狗叫这件事、吃的东西": "The barking of a dog; something to eat",
+  "动作涉及的东西": "Things involved in an action",
+  "吃的东西、喝的东西": "Something to eat; something to drink",
+  "做事的人": "People who perform an action",
+  "做的人、吃的人": "Someone who does something; someone who eats",
+  "做事的地方": "Places where an action takes place",
+  "吃饭的地方、放东西的地方": "A place to eat; a place to put things",
+  "xi和ci的部分用法有重叠。常见的nie-xi包含连接成分nie和名词化成分xi，下面再说明它们的分工。": "Some uses of xi and ci overlap. The common combination nie-xi contains the linker nie and the nominalizer xi; their roles are explained below.",
+  "例句同上。": "The same example applies.",
+  "出处：向亮（2019），第73—74页，例（12）。": "Source: Xiang Liang (2019), pp. 73–74, example (12).",
+  "出处：Kang Franco Liu. 2025. Transitive subject extraction restriction in Northern Tujia and beyond. WCCFL 43, University of Washington, Seattle, 26 April 2025.": "Source: Kang Franco Liu. 2025. Transitive subject extraction restriction in Northern Tujia and beyond. WCCFL 43, University of Washington, Seattle, 26 April 2025."
+});
+Object.assign(UI_TRANSLATIONS,{
   "逐词：高平｜升｜低降｜高降": "Gloss: high level | rising | low falling | high falling",
   "译文：依次为“饿、写、取、喂”。": "Translation: Respectively: “hungry”, “write”, “take” and “feed”.",
   "出处：Brassett 等（2006），第13页，表2.6。": "Source: Brassett et al. (2006), p. 13; Table 2.6.",

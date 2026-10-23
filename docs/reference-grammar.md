@@ -2242,6 +2242,17 @@ dor 可参与带义务意味的劝行句，第一人称复数主语仍可保留�
 
 ### 6.1 名词化形式与指称
 
+名词化可以把动作、性质或一句话变成指人、事物、事情或地方的表达，例如“吃的东西”“做工的人”“吃饭的地方”。北部材料中可见以下四种形式：
+
+| 形式 | 主要表示 | 意思举例 |
+| --- | --- | --- |
+| [xi](#north-xi-functions) | 事情，也可指人或物 | 狗叫这件事、吃的东西 |
+| [ci](#north-24-102) | 动作涉及的东西 | 吃的东西、喝的东西 |
+| [ma](#north-24-103) | 做事的人 | 做的人、吃的人 |
+| [zo](#north-24-104) | 做事的地方 | 吃饭的地方、放东西的地方 |
+
+xi和ci的部分用法有重叠。常见的nie-xi包含连接成分nie和名词化成分xi，下面再说明它们的分工。
+
 <a id="north-24-101"></a>
 
 #### xi、ci与niexi的分工
@@ -2429,7 +2440,7 @@ xi可以接在小句末尾，使整段内容成为主语或宾语。下例把“
 
 xi可以放在整个陈述之后，对所说的事态加以确认。下例中，完成意义由liao表达，句末xi带有确认语气：
 
-| 拼音 | gof | gavliaor-xir |
+| 拼音 | gof | gav-liaor-xir |
 | --- | --- | --- |
 | IPA | ko³⁵ | ka⁵³liau²¹-ɕi²¹ |
 | 中文逐词 | 他 | 吃.完成体-名词化 |
@@ -2525,7 +2536,7 @@ Liu（2025），WCCFL 43 海报，例（2）。
 
 这组材料的名词化标记写作 /ɕi⁴⁴/；[关系从句中的进行标记](#north-25-202)一节所引例句另有 /ɕi²⁴/。
 
-Kang Franco Liu. 2025. Transitive subject extraction restriction in Northern Tujia and beyond. WCCFL 43, University of Washington, Seattle, 26 April 2025.
+出处：Kang Franco Liu. 2025. Transitive subject extraction restriction in Northern Tujia and beyond. WCCFL 43, University of Washington, Seattle, 26 April 2025.
 
 <a id="north-xi-niexi-pairs"></a>
 
@@ -2665,7 +2676,7 @@ Liu（2025），WCCFL 43 海报，例（7）。
 
 Liu 将内置式分析为较小的从句结构（TP），外置式则为较大的结构（CP），并用句法移动距离的限制解释上述差异。这是该研究提出的理论分析；观察到的限制本身不意味着土家语具有作格配列。
 
-Kang Franco Liu. 2025. Transitive subject extraction restriction in Northern Tujia and beyond. WCCFL 43, University of Washington, Seattle, 26 April 2025.
+出处：Kang Franco Liu. 2025. Transitive subject extraction restriction in Northern Tujia and beyond. WCCFL 43, University of Washington, Seattle, 26 April 2025.
 
 </details>
 
@@ -3102,7 +3113,9 @@ Zhou（2020），第31页。
 
 判断否定采用“否定成分＋判断动词”。下例中，/mɛ²¹/放在 /su⁵³/前，否定“这是我的”这一判断。
 
-例句同上。出处：向亮（2019），第73—74页，例（12）。
+例句同上。
+
+出处：向亮（2019），第73—74页，例（12）。
 
 <p class="grammar-pending">动词、形容词及其他谓语变化（待补充）</p>
 

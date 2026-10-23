@@ -28,6 +28,13 @@ const root=path.resolve(__dirname,'../site');
      const zhIPA=[...document.querySelectorAll('.grammar-pair')].flatMap(n=>n.dataset.ipa.split(/[、,]\s*/)).sort();
      const zhRefs=[...document.querySelectorAll('.grammar-citation')].map(n=>[n.textContent,n.dataset.footnoteTarget]);
      const english=document.createElement('div');english.innerHTML=grammarRenderHTML(ch,'en');
+     const original=document.createElement('div');original.innerHTML=ch.html;
+     const sourceLinks=[...original.querySelectorAll('a[href]')].map(a=>a.getAttribute('href')).filter(h=>/^https?:/.test(h));
+     for(const rendered of [document.querySelector('main'),english]){
+      if([...rendered.querySelectorAll('p')].some(p=>!p.closest('.grammar-footnotes')&&/^(?:说明：|原有说明：|出处：)/.test(p.textContent.trim())))failures.push(ch.id+': note left in the reading text');
+      const links=new Set([...rendered.querySelectorAll('a[href]')].map(a=>a.getAttribute('href')));
+      for(const href of sourceLinks)if(!links.has(href))failures.push(ch.id+': source link lost '+href);
+     }
      const enIPA=[...english.querySelectorAll('.grammar-pair')].flatMap(n=>n.dataset.ipa.split(/[、,]\s*/)).sort();
      if(JSON.stringify(zhIPA)!==JSON.stringify(enIPA))failures.push(ch.id+': IPA changes in English: '+JSON.stringify({zh:zhIPA.filter((x,i)=>zhIPA.indexOf(x)===i&&zhIPA.filter(y=>y===x).length!==enIPA.filter(y=>y===x).length),en:enIPA.filter((x,i)=>enIPA.indexOf(x)===i&&zhIPA.filter(y=>y===x).length!==enIPA.filter(y=>y===x).length),counts:[zhIPA.length,enIPA.length]}));
      if(JSON.stringify(zhRefs)!==JSON.stringify([...english.querySelectorAll('.grammar-citation')].map(n=>[n.textContent,n.dataset.footnoteTarget])))failures.push(ch.id+': citation numbering changes with language');
@@ -41,6 +48,9 @@ const root=path.resolve(__dirname,'../site');
      }
      if(ch.id==='106'){
       for(const rendered of [document.querySelector('main'),english]){
+       const liuNotes=[...rendered.querySelectorAll('.grammar-footnotes li')].filter(n=>n.textContent.includes('Kang Franco Liu. 2025.'));
+       if(liuNotes.length!==1||liuNotes[0].querySelectorAll('.grammar-footnote-return').length!==2)failures.push('Liu bibliography missing, duplicated or disconnected from its citations');
+       if([...rendered.querySelectorAll('p')].some(p=>!p.closest('.grammar-footnotes')&&p.textContent.includes('Kang Franco Liu. 2025.')))failures.push('Full bibliography left in the reading text');
        if(rendered.textContent.includes('niēi')||![...rendered.querySelectorAll('h3,h4')].some(h=>h.textContent.includes('niēxi')))failures.push('niexi onset missing from heading');
        const paired=[...rendered.querySelectorAll('.grammar-word .grammar-pair')].find(p=>p.dataset.ipa==='[tsa²⁴ pɔ²¹ ɕi²⁴]');
        if(!paired||paired.querySelector('.grammar-spelling').dataset.ye!=='[zafbor-xif]')failures.push('State-marked verb and nominalizer not aligned together');

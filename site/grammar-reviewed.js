@@ -74,6 +74,7 @@ function grammarLocalizeSource(root,language){
 }
 function grammarBuildReferences(root,ch,language){
  const en=language==='en',definitions=new Map(),entries=[],byContent=new Map();let serial=0;
+ const sourceParagraph=node=>node?.tagName==='P'&&/^(?:出处：|说明：|原有说明：|(?:Brassett\s*等|Brassett)[，,]|田志慧[，,]|向亮（|Liu（|Zhou（)/.test(node.textContent.trim());
  for(const note of root.querySelectorAll('details.grammar-reference')){
   const body=note.querySelector('p[id]');if(body)definitions.set(body.id,body.cloneNode(true));note.remove();
  }
@@ -83,6 +84,13 @@ function grammarBuildReferences(root,ch,language){
   const sources=[],rest=[];
   for(const html of parts){const q=document.createElement('p');q.innerHTML=html;if(q.textContent.trim().startsWith('出处：'))sources.push(q);else rest.push(html);}
   if(sources.length){p.innerHTML=rest.join('<br>');let after=p;for(const q of sources){after.after(q);after=q;}}
+ }
+ // A separately printed original-source link belongs to the preceding citation.
+ for(const p of [...root.querySelectorAll('p')]){
+  const link=p.children.length===1&&p.firstElementChild;
+  if(!link||link.tagName!=='A'||p.textContent.trim()!==link.textContent.trim()||!/^原(?:文|书)$/.test(link.textContent.trim())||!/^https?:/.test(link.href))continue;
+  const previous=p.previousElementSibling;
+  if(sourceParagraph(previous)){previous.append(' ',...p.childNodes);p.remove();}
  }
  function citation(body,oldId=''){
   const key=body.innerHTML.trim();let entry=byContent.get(key);
@@ -109,7 +117,7 @@ function grammarBuildReferences(root,ch,language){
   if(!root.contains(node)||node.closest('.grammar-footnotes'))continue;
   if(node.tagName==='A'&&node.getAttribute('href').startsWith('#fn-')){
    const oldId=node.getAttribute('href').slice(1),body=definitions.get(oldId);if(body)node.replaceWith(citation(body,oldId));
-  }else if(node.tagName==='P'&&/^(?:出处：|(?:Brassett\s*等|Brassett)[，,]|田志慧[，,]|向亮（|Liu（|Zhou（)/.test(node.textContent.trim())){
+  }else if(sourceParagraph(node)){
    const sup=document.createElement('sup');sup.className='grammar-source-marker';sup.append(citation(node.cloneNode(true)));
    const previous=node.previousElementSibling;
    if(previous?.matches('p,figure,li')){(previous.querySelector('figcaption')||previous).append(' ',sup);node.remove();}else node.replaceWith(sup);
