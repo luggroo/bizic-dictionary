@@ -1,0 +1,631 @@
+{
+  "version": 1,
+  "scope": "Screening constraints, not a native-word training set. Entry aliases resolve before scoring; rejected donors and component boundaries apply separately. Later linguistic review is required to revise these constraints.",
+  "setuScope": "Exclude the five setu-family entries and their merged aliases. The distinct Southern sītī /si⁵⁵tʰi⁵⁵/ is not part of this exclusion.",
+  "rules": [
+    {
+      "id": "stedt-rn-289763",
+      "policy": "reject-donor",
+      "reason": "保留登记义，不采用“锅铲”释义或原词推测。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json",
+      "donor": "锅铲"
+    },
+    {
+      "id": "stedt-rn-288801",
+      "policy": "reject-donor",
+      "reason": "可能借自西南官话，具体原词待考。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json",
+      "donor": "锤子"
+    },
+    {
+      "id": "w2476",
+      "policy": "reject-donor",
+      "reason": "排除该汉语原词推测，保留登记义。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json",
+      "donor": "小伙子"
+    },
+    {
+      "id": "stedt-rn-454791",
+      "policy": "reject-donor",
+      "reason": "排除该汉语原词推测，保留登记义。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json",
+      "donor": "小伙子"
+    },
+    {
+      "id": "yubao-60824-v-1754",
+      "policy": "reject-donor",
+      "reason": "排除该汉语原词推测，保留登记义。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json",
+      "donor": "土墙"
+    },
+    {
+      "id": "w124",
+      "policy": "exclude-entry",
+      "reason": "a²¹kʰuɔ⁵¹「哥哥」不属近代借词。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "w125",
+      "policy": "exclude-entry",
+      "reason": "含 a²¹kʰuɔ⁵¹ 的同根形式，不属近代借词。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "stedt-rn-453901",
+      "policy": "exclude-entry",
+      "reason": "含 a²¹kʰuɔ⁵¹ 的同根形式，不属近代借词。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "w2079",
+      "policy": "exclude-entry",
+      "reason": "sɨ²¹ka²¹「时候」未保留现代汉语鼻音，不属近代借词。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "w42",
+      "policy": "exclude-entry",
+      "reason": "-kʰa²¹「家族」的送气等不直接对应现代汉语，不属近代借词。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "w473",
+      "policy": "exclude-entry",
+      "reason": "tsʰu⁵¹ / tsʰu⁵³「装」存在送气等变化，不属近代借词。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "w50",
+      "policy": "exclude-entry",
+      "reason": "-liau²¹「了＋现在」为语法后缀，不属本轮近代借词。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "w576",
+      "policy": "exclude-entry",
+      "reason": "ti²⁴ / ti³⁵「病、痛」与现代汉语音形不对应。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "w112",
+      "policy": "exclude-entry",
+      "reason": "阿哥 a⁵⁵kuɔ⁵⁵ 不属近代借词。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "w195",
+      "policy": "exclude-entry",
+      "reason": "儿啰啰 au²⁴luɔ⁵⁵luɔ²¹ 疑似拟音／感叹词；原词表标 expr.，不据记音汉字判为汉语借词。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "yubao-60823-v-0687",
+      "policy": "retain-review",
+      "reason": "四音节近「老虎夹子」；中间 ka 与「钳」不直接对应，完整原词待原文／录音核对。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "yubao-60756-v-1927",
+      "policy": "retain-review",
+      "reason": "末音节 pi 尚未确定；仅「水池」对应清楚，不据近音认定为「水池壁」。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "yubao-60823-v-1873",
+      "policy": "component-only",
+      "reason": "末音节送气与「子」不一致，完整原词待核。",
+      "origin": "docs/ma-car-dragonfly-review-2026-10-23.json",
+      "donor": "马",
+      "span": [1, 1]
+    },
+    {
+      "id": "yubao-60756-v-1559",
+      "policy": "retain-review",
+      "reason": "「黄鼠狼」末音节未记鼻音；整词退出本轮现代借词核定，待核原文／录音。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "w972",
+      "policy": "retain-review",
+      "reason": "叽里咕噜为拟音性形式，不依据「里咕」片段判定借词。",
+      "origin": "docs/chinese-loan-review-2026-10-22.json"
+    },
+    {
+      "id": "w1599",
+      "policy": "retain-review",
+      "reason": "Native pronoun: phonetic resemblance to Chinese does not establish borrowing.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": true
+    },
+    {
+      "id": "stedt-rn-289356",
+      "policy": "retain-review",
+      "reason": "Native pronoun: phonetic resemblance to Chinese does not establish borrowing.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": true
+    },
+    {
+      "id": "stedt-rn-290272",
+      "policy": "retain-review",
+      "reason": "Native pronoun: phonetic resemblance to Chinese does not establish borrowing.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": true
+    },
+    {
+      "id": "yubao-60823-v-1130",
+      "policy": "retain-review",
+      "reason": "Native pronoun: phonetic resemblance to Chinese does not establish borrowing.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": true
+    },
+    {
+      "id": "w639",
+      "policy": "retain-review",
+      "reason": "Do not infer modern borrowing from a short shared-looking form.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "stedt-rn-206013",
+      "policy": "retain-review",
+      "reason": "Do not infer modern borrowing from a short shared-looking form.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60756-v-2732",
+      "policy": "retain-review",
+      "reason": "Do not infer modern borrowing from a short shared-looking form.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60823-v-2732",
+      "policy": "retain-review",
+      "reason": "Do not infer modern borrowing from a short shared-looking form.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60824-v-2732",
+      "policy": "retain-review",
+      "reason": "Do not infer modern borrowing from a short shared-looking form.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w112",
+      "policy": "retain-review",
+      "reason": "Previous exclusion from modern-loan annotation remains in force.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w124",
+      "policy": "retain-review",
+      "reason": "Previous exclusion from modern-loan annotation remains in force.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w125",
+      "policy": "retain-review",
+      "reason": "Previous exclusion from modern-loan annotation remains in force.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w2079",
+      "policy": "retain-review",
+      "reason": "Previous exclusion from modern-loan annotation remains in force.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w473",
+      "policy": "retain-review",
+      "reason": "Previous exclusion from modern-loan annotation remains in force.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w50",
+      "policy": "retain-review",
+      "reason": "Previous exclusion from modern-loan annotation remains in force.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w576",
+      "policy": "retain-review",
+      "reason": "Previous exclusion from modern-loan annotation remains in force.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w972",
+      "policy": "retain-review",
+      "reason": "Expressive or onomatopoeic forms are not classified by similarity alone.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "stedt-rn-454700",
+      "policy": "retain-review",
+      "reason": "Expressive or onomatopoeic forms are not classified by similarity alone.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w243",
+      "policy": "retain-review",
+      "reason": "Expressive or onomatopoeic forms are not classified by similarity alone.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w626",
+      "policy": "retain-review",
+      "reason": "Expressive or onomatopoeic forms are not classified by similarity alone.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w643",
+      "policy": "retain-review",
+      "reason": "Expressive or onomatopoeic forms are not classified by similarity alone.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w1062",
+      "policy": "retain-review",
+      "reason": "Donor spelling remains unresolved; do not silently replace the source gloss.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w465",
+      "policy": "retain-review",
+      "reason": "Donor spelling remains unresolved; do not silently replace the source gloss.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60757-v-1282",
+      "policy": "retain-review",
+      "reason": "Different lexical form at another point; do not inherit the loan label from the shared Chinese gloss.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60757-v-1283",
+      "policy": "retain-review",
+      "reason": "Different lexical form at another point; do not inherit the loan label from the shared Chinese gloss.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60757-v-2015",
+      "policy": "retain-review",
+      "reason": "Different lexical form at another point; do not inherit the loan label from the shared Chinese gloss.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60823-v-2015",
+      "policy": "retain-review",
+      "reason": "Different lexical form at another point; do not inherit the loan label from the shared Chinese gloss.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "stedt-rn-454015",
+      "policy": "retain-review",
+      "reason": "Gun-related sense alone is insufficient to identify the donor of this verb.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "stedt-rn-407432",
+      "policy": "retain-review",
+      "reason": "Gun-related sense alone is insufficient to identify the donor of this verb.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60824-v-2830",
+      "policy": "retain-review",
+      "reason": "担心的可能原词仍需比较，暂不落实为着心。",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w4351",
+      "policy": "retain-review",
+      "reason": "送气声母与领导的拟借词对应尚需核实，暂缓。",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w473",
+      "policy": "retain-review",
+      "reason": "tsʰu⁵¹ remains outside the accepted 除 forms.",
+      "origin": "docs/loan-followup-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60824-v-1268",
+      "policy": "retain-review",
+      "reason": "The accepted 泉 form is qian, not tsʰe³⁵.",
+      "origin": "docs/loan-followup-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w5724",
+      "policy": "retain-review",
+      "reason": "The accepted 厉害 form is lihai, not tsa²⁴ɕi⁵⁵.",
+      "origin": "docs/loan-followup-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w1525",
+      "policy": "retain-review",
+      "reason": "Native horse form mɜŋ²¹.",
+      "origin": "docs/ma-car-dragonfly-review-2026-10-23.json",
+      "nativeSeed": true
+    },
+    {
+      "id": "w734",
+      "policy": "retain-review",
+      "reason": "Native horse form kɤ²¹.",
+      "origin": "docs/ma-car-dragonfly-review-2026-10-23.json",
+      "nativeSeed": true
+    },
+    {
+      "id": "yubao-60757-v-0259",
+      "policy": "retain-review",
+      "reason": "Native horse form mnŋ²¹.",
+      "origin": "docs/ma-car-dragonfly-review-2026-10-23.json",
+      "nativeSeed": true
+    },
+    {
+      "id": "w358",
+      "policy": "retain-review",
+      "reason": "Northern ca spinning wheel remains outside the modern-loan classification.",
+      "origin": "docs/ma-car-dragonfly-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "stedt-rn-288798",
+      "policy": "retain-review",
+      "reason": "Northern ca spinning wheel remains outside the modern-loan classification.",
+      "origin": "docs/ma-car-dragonfly-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "stedt-rn-290176",
+      "policy": "retain-review",
+      "reason": "Unrelated homophone tsʰo³³ meaning good.",
+      "origin": "docs/ma-car-dragonfly-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60824-v-0237",
+      "policy": "retain-review",
+      "reason": "Different Southern dragonfly form.",
+      "origin": "docs/ma-car-dragonfly-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60756-v-1477",
+      "policy": "retain-review",
+      "reason": "Gloss bamboo root does not establish a horse component.",
+      "origin": "docs/ma-car-dragonfly-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "yubao-60824-v-2866",
+      "policy": "retain-review",
+      "reason": "The accepted 真 form is tɕĩ³³.",
+      "origin": "docs/xiang-loan-confirmation-2026-10-23.json",
+      "nativeSeed": false,
+      "ipa": "tsẽ³³"
+    },
+    {
+      "id": "stedt-rn-289804",
+      "policy": "retain-review",
+      "reason": "The accepted 船 component is dʑuã³³ in 渡船.",
+      "origin": "docs/xiang-loan-confirmation-2026-10-23.json",
+      "nativeSeed": false,
+      "ipa": "bu¹³"
+    },
+    {
+      "id": "stedt-rn-289969",
+      "policy": "retain-review",
+      "reason": "Unrelated 穿/戴 lexical form.",
+      "origin": "docs/xiang-loan-confirmation-2026-10-23.json",
+      "nativeSeed": false,
+      "ipa": "do²¹"
+    },
+    {
+      "id": "yubao-60824-v-1755",
+      "policy": "reject-form",
+      "reason": "Different recorded onset from the reviewed tɕyã³³ form; not propagated automatically.",
+      "origin": "docs/xiang-loan-confirmation-2026-10-23.json",
+      "nativeSeed": false,
+      "ipa": "tsyã³³dʑiã³³"
+    },
+    {
+      "id": "yubao-60824-v-1721",
+      "policy": "retain-review",
+      "reason": "Different recorded onset from the reviewed tɕyã³³ form; not propagated automatically.",
+      "origin": "docs/xiang-loan-confirmation-2026-10-23.json",
+      "nativeSeed": false,
+      "ipa": "tsyã³³fã²¹tsi²¹"
+    },
+    {
+      "id": "stedt-rn-290110",
+      "policy": "retain-review",
+      "reason": "Different recorded onset from the reviewed dʑyã¹³ form; not propagated automatically.",
+      "origin": "docs/xiang-loan-confirmation-2026-10-23.json",
+      "nativeSeed": false,
+      "ipa": "ɕyã⁵⁵dzyã²¹"
+    },
+    {
+      "id": "yubao-60756-v-2277",
+      "policy": "exclude-entry",
+      "reason": "Reviewed removal of loan annotation; excluded from renewed automated suggestions.",
+      "origin": "docs/loan-review-corrections-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-2277",
+      "policy": "exclude-entry",
+      "reason": "Reviewed removal of loan annotation; excluded from renewed automated suggestions.",
+      "origin": "docs/loan-review-corrections-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-289762",
+      "policy": "exclude-entry",
+      "reason": "Reviewed removal of loan annotation; excluded from renewed automated suggestions.",
+      "origin": "docs/loan-review-corrections-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60824-v-0306",
+      "policy": "exclude-entry",
+      "reason": "Reviewed removal of loan annotation; excluded from renewed automated suggestions.",
+      "origin": "docs/loan-review-corrections-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60824-v-1801",
+      "policy": "exclude-entry",
+      "reason": "Reviewed removal of loan annotation; excluded from renewed automated suggestions.",
+      "origin": "docs/loan-review-corrections-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60823-v-1256",
+      "policy": "retain-review",
+      "reason": "Matching regional Chinese lexeme is plausible; exact written form and donor variety remain unverified.",
+      "origin": "docs/loan-components-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-288811",
+      "policy": "retain-review",
+      "reason": "Both northern sources mean spear. Exact local Chinese donor pronunciation and spear sense require verification.",
+      "origin": "docs/loan-components-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-1867",
+      "policy": "retain-review",
+      "reason": "Both northern sources mean spear. Exact local Chinese donor pronunciation and spear sense require verification.",
+      "origin": "docs/loan-components-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-289901",
+      "policy": "retain-review",
+      "reason": "Different or unreviewed form; do not inherit the accepted annotation.",
+      "origin": "docs/loan-step-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60824-v-2946",
+      "policy": "retain-review",
+      "reason": "Different or unreviewed form; do not inherit the accepted annotation.",
+      "origin": "docs/loan-step-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60824-v-0827",
+      "policy": "retain-review",
+      "reason": "Different or unreviewed form; do not inherit the accepted annotation.",
+      "origin": "docs/loan-step-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-0793",
+      "policy": "retain-review",
+      "reason": "Different or unreviewed form; do not inherit the accepted annotation.",
+      "origin": "docs/loan-step-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60823-v-0793",
+      "policy": "retain-review",
+      "reason": "Different or unreviewed form; do not inherit the accepted annotation.",
+      "origin": "docs/loan-step-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60756-v-0793",
+      "policy": "retain-review",
+      "reason": "Different or unreviewed form; do not inherit the accepted annotation.",
+      "origin": "docs/loan-step-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60823-v-1897",
+      "policy": "retain-review",
+      "reason": "Different or unreviewed form; do not inherit the accepted annotation.",
+      "origin": "docs/loan-cigarette-butt-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60824-v-1897",
+      "policy": "retain-review",
+      "reason": "Different or unreviewed form; do not inherit the accepted annotation.",
+      "origin": "docs/loan-cigarette-butt-review-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-353352",
+      "policy": "exclude-entry",
+      "reason": "尸体 setu 及其同根带前缀形式：明确排除本轮借词筛查。",
+      "origin": "explicit-review-2026-10-23",
+      "family": "setu-corpse"
+    },
+    {
+      "id": "yubao-60757-v-2277",
+      "policy": "exclude-entry",
+      "reason": "尸体 setu 及其同根带前缀形式：明确排除本轮借词筛查。",
+      "origin": "explicit-review-2026-10-23",
+      "family": "setu-corpse"
+    },
+    {
+      "id": "yubao-60756-v-2277",
+      "policy": "exclude-entry",
+      "reason": "尸体 setu 及其同根带前缀形式：明确排除本轮借词筛查。",
+      "origin": "explicit-review-2026-10-23",
+      "family": "setu-corpse"
+    },
+    {
+      "id": "yubao-60823-v-2277",
+      "policy": "exclude-entry",
+      "reason": "尸体 setu 及其同根带前缀形式：明确排除本轮借词筛查。",
+      "origin": "explicit-review-2026-10-23",
+      "family": "setu-corpse"
+    },
+    {
+      "id": "w1449",
+      "policy": "exclude-entry",
+      "reason": "尸体 setu 及其同根带前缀形式：明确排除本轮借词筛查。",
+      "origin": "explicit-review-2026-10-23",
+      "family": "setu-corpse"
+    },
+    {
+      "id": "yubao-60823-v-0411",
+      "policy": "component-only",
+      "reason": "Only 肝, syllable 2, is reviewed as borrowed; do not extend to the whole form.",
+      "origin": "docs/loan-review-corrections-2026-10-23.json",
+      "donor": "肝",
+      "span": [
+        2,
+        2
+      ]
+    },
+    {
+      "id": "stedt-rn-288801",
+      "policy": "reject-donor",
+      "reason": "铲、锹 must not be reinterpreted as 锤子.",
+      "origin": "scripts/test-loanword-review.cjs",
+      "donor": "锤子"
+    },
+    {
+      "id": "w2190",
+      "policy": "retain-review",
+      "reason": "Existing explicit regression guard: remains unmarked.",
+      "origin": "scripts/test-loanword-review.cjs"
+    }
+  ]
+}

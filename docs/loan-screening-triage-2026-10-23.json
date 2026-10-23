@@ -1,0 +1,197 @@
+{
+  "scope": "Follow-up review of retrieval collisions and unresolved forms; these are not native labels or published etymologies.",
+  "decisions": [
+    {
+      "id": "yubao-60823-v-1271",
+      "zh": "草原",
+      "candidateDonor": "草烟",
+      "status": "reject-retrieval",
+      "reason": "同音同调，但登记义为草原；与草烟不相容。",
+      "nextEvidence": "核对语保原表或录音，保留登记释义。"
+    },
+    {
+      "id": "yubao-60824-v-2904",
+      "zh": "麻烦",
+      "candidateDonor": "麻花",
+      "status": "reject-retrieval",
+      "reason": "同音同调，不同词义。",
+      "nextEvidence": "核对麻烦的实际汉语对应形式。"
+    },
+    {
+      "id": "yubao-60756-v-1993",
+      "zh": "围腰帕",
+      "candidateDonor": "围裙／围巾",
+      "status": "pending-donor",
+      "reason": "同点两个汉语候选同音；尚未确定原词。",
+      "nextEvidence": "核对当地汉语读音和物件用途。"
+    },
+    {
+      "id": "yubao-60823-v-1842",
+      "zh": "捞箕",
+      "candidateDonor": "撮箕",
+      "status": "pending-sense",
+      "reason": "同音不能独立证明两种器具同义。",
+      "nextEvidence": "核对图片、用途或原始释义。"
+    },
+    {
+      "id": "yubao-60823-v-1519",
+      "zh": "豆苗",
+      "candidateDonor": "豆芽菜",
+      "status": "pending-sense",
+      "reason": "源注为豆类的幼苗；是否与豆芽菜同指需核实。",
+      "nextEvidence": "核对当地用词。"
+    },
+    {
+      "id": "yubao-60824-v-1592",
+      "zh": "野兔",
+      "candidateDonor": "毛兔子",
+      "status": "pending-sense",
+      "reason": "野兔与既有兔类词条的物种及用法范围不明。",
+      "nextEvidence": "核对当地汉语词义范围。"
+    },
+    {
+      "id": "w2335",
+      "zh": "团员",
+      "candidateDonor": "团圆",
+      "status": "reject-retrieval",
+      "reason": "同音检索命中团圆；登记义为团员。",
+      "nextEvidence": "另按团员的词形及各调值变体核对，不能沿用团圆作为原词。"
+    },
+    {
+      "id": "w2042",
+      "zh": "国民党",
+      "candidateDonor": "",
+      "status": "pending-source",
+      "reason": "模型分数较高；现有音形不足以落实为国民党。",
+      "nextEvidence": "核对 Brassett 原条与各并列形式。"
+    },
+    {
+      "id": "yubao-60756-v-2900",
+      "zh": "节俭",
+      "candidateDonor": "",
+      "status": "pending-donor",
+      "reason": "分数高，尚无可核对的具体汉语原词。",
+      "nextEvidence": "补查当地汉语词形。"
+    },
+    {
+      "id": "w2535",
+      "zh": "马铃薯",
+      "candidateDonor": "洋芋",
+      "status": "pending-local-form",
+      "reason": "不能从南部新确认的词形直接推广到本条不同音形。",
+      "nextEvidence": "逐音节核对当地洋芋读法及来源。"
+    },
+    {
+      "id": "stedt-rn-189948",
+      "zh": "马铃薯；土豆",
+      "candidateDonor": "洋芋",
+      "status": "pending-local-form",
+      "reason": "音形与其他土豆词条有差异，缺少同点汉语音证。",
+      "nextEvidence": "核对来源方言与汉语对应音。"
+    },
+    {
+      "id": "yubao-60756-v-0217",
+      "zh": "马铃薯",
+      "candidateDonor": "洋芋",
+      "status": "pending-local-form",
+      "reason": "保留阳朝的声母、韵母和调值差别。",
+      "nextEvidence": "补查阳朝汉语读音。"
+    },
+    {
+      "id": "yubao-60823-v-0217",
+      "zh": "马铃薯",
+      "candidateDonor": "洋芋",
+      "status": "pending-local-form",
+      "reason": "保留碗米坡的声母、韵母和调值差别。",
+      "nextEvidence": "补查碗米坡汉语读音。"
+    },
+    {
+      "id": "yubao-60823-v-1872",
+      "zh": "箭绳",
+      "candidateDonor": "箭",
+      "status": "pending-local-form",
+      "reason": "与阳朝箭绳构词不同，不能复制弓箭注释。",
+      "nextEvidence": "单独核对箭、杆与绳的构词边界。"
+    },
+    {
+      "id": "yubao-60824-v-1868",
+      "zh": "弓箭",
+      "candidateDonor": "箭",
+      "status": "pending-sense",
+      "reason": "词形与已注箭一致，但本条提示义为弓箭。",
+      "nextEvidence": "核对当地弓、箭名称的词义分布。"
+    },
+    {
+      "id": "yubao-60824-v-1869",
+      "zh": "弓",
+      "candidateDonor": "箭",
+      "status": "pending-sense",
+      "reason": "弓与箭的指称不能仅靠同音判定。",
+      "nextEvidence": "核对当地词义分布及原词。"
+    },
+    {
+      "id": "yubao-60823-v-1868",
+      "zh": "弓箭",
+      "candidateDonor": "箭",
+      "status": "pending-local-form",
+      "reason": "同点形式与阳朝不同。",
+      "nextEvidence": "独立核对本点构词与调值。"
+    },
+    {
+      "id": "yubao-60823-v-1869",
+      "zh": "弓",
+      "candidateDonor": "箭",
+      "status": "pending-sense",
+      "reason": "提示义和可能汉语原词有区别。",
+      "nextEvidence": "核对当地弓、箭名称的词义分布。"
+    },
+    {
+      "id": "yubao-60824-v-1601",
+      "zh": "蛇胆",
+      "candidateDonor": "裤裆",
+      "status": "reject-retrieval",
+      "reason": "相似片段无相容词义；保留胆候选另核。",
+      "nextEvidence": "比较同点胆及蛇胆的独立形式。"
+    },
+    {
+      "id": "yubao-60823-v-1601",
+      "zh": "蛇胆",
+      "candidateDonor": "裤裆",
+      "status": "reject-retrieval",
+      "reason": "相似片段无相容词义。",
+      "nextEvidence": "核对胆的实际构词。"
+    },
+    {
+      "id": "yubao-60756-v-1611",
+      "zh": "虮子",
+      "candidateDonor": "十四／四十",
+      "status": "reject-retrieval",
+      "reason": "数词片段与虫卵义不相容。",
+      "nextEvidence": "不得以连续同音片段落实原词。"
+    },
+    {
+      "id": "yubao-60823-v-1611",
+      "zh": "虮子",
+      "candidateDonor": "十四／四十",
+      "status": "reject-retrieval",
+      "reason": "数词片段与虫卵义不相容。",
+      "nextEvidence": "不得以连续同音片段落实原词。"
+    },
+    {
+      "id": "yubao-60756-v-1430",
+      "zh": "果干",
+      "candidateDonor": "鸽子",
+      "status": "reject-retrieval",
+      "reason": "仅近音，词义不相容。",
+      "nextEvidence": "独立核对果干词根。"
+    },
+    {
+      "id": "yubao-60824-v-2625",
+      "zh": "做鬼脸",
+      "candidateDonor": "哑子",
+      "status": "reject-retrieval",
+      "reason": "片段相似，词义与构词缺少证据。",
+      "nextEvidence": "核对本条动作表达的构词。"
+    }
+  ]
+}

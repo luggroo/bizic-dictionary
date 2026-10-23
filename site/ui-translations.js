@@ -3250,6 +3250,22 @@ Object.assign(UI_TRANSLATIONS, {
  "本站借助 AI 推测的词性，可能有误。原文献未标注此词性。":"Part of speech inferred by this site with AI assistance; it may be incorrect. This category is not labelled in the source."
 });
 Object.assign(UI_TRANSLATIONS,{
+ "「弓箭」部分（第 1—2 音节）可能借自汉语，具体方言来源待核。":"The 弓箭 component (syllables 1–2) may be borrowed from Chinese; the specific donor variety remains to be established.",
+ "可能借自汉语「弓」，具体方言来源待核。":"Possibly borrowed from Chinese 弓; the specific donor variety remains to be established."
+});
+Object.assign(UI_TRANSLATIONS,{
+ "「箱子」部分（第 4—5 音节）可能借自西南官话。":"The 箱子 component (syllables 4–5) may be borrowed from Southwestern Mandarin.",
+ "「荷花」部分（第 1—2 音节）可能借自西南官话或湘语。":"The 荷花 component (syllables 1–2) may be borrowed from Southwestern Mandarin or Xiang.",
+ "「玉米」部分（第 1—2 音节）可能借自西南官话。":"The 玉米 component (syllables 1–2) may be borrowed from Southwestern Mandarin.",
+ "「包谷」部分（第 1—2 音节）可能借自西南官话。":"The 包谷 component (syllables 1–2) may be borrowed from Southwestern Mandarin.",
+ "「驴子」部分（第 1—2 音节）可能借自湘语或西南官话。":"The 驴子 component (syllables 1–2) may be borrowed from Xiang or Southwestern Mandarin.",
+ "「爪子」部分（第 3—4 音节）可能借自西南官话或湘语。":"The 爪子 component (syllables 3–4) may be borrowed from Southwestern Mandarin or Xiang.",
+ "「爪子」部分（第 2—3 音节）可能借自西南官话或湘语。":"The 爪子 component (syllables 2–3) may be borrowed from Southwestern Mandarin or Xiang.",
+ "「铲子」部分（第 2—3 音节）可能借自西南官话或湘语。":"The 铲子 component (syllables 2–3) may be borrowed from Southwestern Mandarin or Xiang.",
+ "「肥料」部分（第 1—2 音节）可能借自西南官话。":"The 肥料 component (syllables 1–2) may be borrowed from Southwestern Mandarin.",
+ "「肥料」部分（第 1—2 音节）可能借自西南官话或湘语。":"The 肥料 component (syllables 1–2) may be borrowed from Southwestern Mandarin or Xiang."
+});
+Object.assign(UI_TRANSLATIONS,{
  '可能借自汉语「洋芋」，具体方言来源待核。':'Possibly borrowed from Chinese 洋芋 “potato”; the specific donor variety remains to be established.',
  '可能借自汉语「茶」，具体方言来源待核。':'Possibly borrowed from Chinese 茶 “tea”; the specific donor variety remains to be established.',
  'j、q、x、y后对应ie（jie、qie、xie、ye）；其他声母后的跨点同源对应为ai（p.26），不是把ɛ读成ai':'After written j, q, x and y, the spelling uses ie: jie, qie, xie and ye. After other onsets, the cross-variety cognate correspondence is ai (p. 26); this does not give ai as the pronunciation of ɛ.',

@@ -1,0 +1,856 @@
+{
+  "baseCommit": "5d95e82ba4f0ce233a54cc3a9eb3135812f7f667",
+  "scope": "Phonotactic screening follow-up; exact-source comparisons and conservative component coverage.",
+  "limits": [
+    "Classifier ranks candidates only. Published annotations below are tentative linguistic analyses checked separately.",
+    "The arrow head form retains component-only coverage; the complete donor expression and borrowing period remain unresolved.",
+    "The 阳朝 bow forms have no established Chinese donor dialect.",
+    "Other-source or different-tone forms do not inherit notes from these decisions."
+  ],
+  "decisions": [
+    {
+      "action": "add-loan-note",
+      "zh": "箭绳",
+      "basis": "Source-aligned component comparison; borrowing period not inferred.",
+      "comparisonIds": [
+        "yubao-60756-v-1869",
+        "yubao-60756-v-0691"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1872",
+        "wordIds": [
+          "yubao-60756-v-1872"
+        ],
+        "kind": "借词来源",
+        "donor": "弓箭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「弓箭」部分（第 1—2 音节）可能借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɔŋ⁵⁵tɕaŋ⁵⁵ɣə³³la³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 弓箭 component (syllables 1–2) may be borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "箭",
+      "basis": "Source-aligned component comparison; borrowing period not inferred.",
+      "comparisonIds": [
+        "yubao-60756-v-1872",
+        "yubao-60756-v-2318"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1870",
+        "wordIds": [
+          "yubao-60756-v-1870"
+        ],
+        "kind": "借词来源",
+        "donor": "弓箭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「弓箭」部分（第 1—2 音节）可能借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɔŋ⁵⁵tɕaŋ⁵⁵tʰəu³³tsɿ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 弓箭 component (syllables 1–2) may be borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "弓箭",
+      "basis": "Exact phonetic and tonal comparison with an existing reviewed form; source gloss retained.",
+      "comparisonIds": [
+        "yubao-60756-v-1869",
+        "stedt-rn-288809"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1868",
+        "wordIds": [
+          "yubao-60756-v-1868"
+        ],
+        "kind": "借词来源",
+        "donor": "弓",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「弓」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɔŋ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 弓; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "弓",
+      "basis": "Exact phonetic and tonal comparison with an existing reviewed form; source gloss retained.",
+      "comparisonIds": [
+        "yubao-60756-v-1868",
+        "stedt-rn-288809"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1869",
+        "wordIds": [
+          "yubao-60756-v-1869"
+        ],
+        "kind": "借词来源",
+        "donor": "弓",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「弓」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɔŋ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 弓; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "碱",
+      "basis": "Exact phonetic and tonal comparison with an existing reviewed form; source gloss retained.",
+      "comparisonIds": [
+        "yubao-60823-v-1328"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1308",
+        "wordIds": [
+          "yubao-60823-v-1308"
+        ],
+        "kind": "借词来源",
+        "donor": "碱水",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "text": "可能借自西南官话「碱水」。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiã⁵⁵sui³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 碱水."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "芝麻油",
+      "basis": "Exact phonetic and tonal comparison with an existing reviewed form; source gloss retained.",
+      "comparisonIds": [
+        "yubao-60756-v-0416"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2050",
+        "wordIds": [
+          "yubao-60756-v-2050"
+        ],
+        "kind": "借词来源",
+        "donor": "香油",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "text": "可能借自西南官话「香油」。",
+        "reviewedForms": [
+          {
+            "ipa": "ɕaŋ⁵⁵ʑu⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 香油."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "柜子",
+      "basis": "Exact phonetic and tonal comparison with an existing reviewed form; source gloss retained.",
+      "comparisonIds": [
+        "yubao-60823-v-1765"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0331",
+        "wordIds": [
+          "yubao-60823-v-0331"
+        ],
+        "kind": "借词来源",
+        "donor": "衣柜",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "text": "可能借自西南官话「衣柜」。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑi⁵⁵kui³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 衣柜."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "飞机",
+      "basis": "Exact phonetic and tonal comparison with an existing reviewed form; source gloss retained.",
+      "comparisonIds": [
+        "w917"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1947",
+        "wordIds": [
+          "yubao-60756-v-1947"
+        ],
+        "kind": "借词来源",
+        "donor": "飞机",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "text": "可能借自西南官话「飞机」。",
+        "reviewedForms": [
+          {
+            "ipa": "xui⁵⁵tɕi⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 飞机."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "玉米包",
+      "basis": "Exact phonetic and tonal comparison with an existing reviewed form; source gloss retained.",
+      "comparisonIds": [
+        "yubao-60756-v-0185"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1501",
+        "wordIds": [
+          "yubao-60756-v-1501"
+        ],
+        "kind": "借词来源",
+        "donor": "玉米",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "text": "可能借自西南官话「玉米」。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑi³³mi³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 玉米."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "撮箕",
+      "basis": "Exact phonetic and tonal comparison with an existing reviewed form; source gloss retained.",
+      "comparisonIds": [
+        "yubao-60824-v-1913"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2445",
+        "wordIds": [
+          "yubao-60824-v-2445"
+        ],
+        "kind": "借词来源",
+        "donor": "筲箕",
+        "donorVariety": "湘语或西南官话",
+        "scope": "whole",
+        "text": "可能借自湘语或西南官话「筲箕」。",
+        "reviewedForms": [
+          {
+            "ipa": "sau³³tɕi³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 筲箕."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "天花板",
+      "basis": "Exact phonetic and tonal comparison with an existing reviewed form; source gloss retained.",
+      "comparisonIds": [
+        "yubao-60824-v-1748"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1750",
+        "wordIds": [
+          "yubao-60824-v-1750"
+        ],
+        "kind": "借词来源",
+        "donor": "楼板",
+        "donorVariety": "湘语或西南官话",
+        "scope": "whole",
+        "text": "可能借自湘语或西南官话「楼板」。",
+        "reviewedForms": [
+          {
+            "ipa": "lʉ¹³pã⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 楼板."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "对岸",
+      "basis": "Exact phonetic and tonal comparison with an existing reviewed form; source gloss retained.",
+      "comparisonIds": [
+        "yubao-60824-v-0125"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1375",
+        "wordIds": [
+          "yubao-60824-v-1375"
+        ],
+        "kind": "借词来源",
+        "donor": "对面",
+        "donorVariety": "西南官话或湘语",
+        "scope": "whole",
+        "text": "可能借自西南官话或湘语「对面」。",
+        "reviewedForms": [
+          {
+            "ipa": "tuei¹³mẽ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 对面."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "皮箱",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60823-v-1762"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1764",
+        "wordIds": [
+          "yubao-60823-v-1764"
+        ],
+        "kind": "借词来源",
+        "donor": "箱子",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "text": "「箱子」部分（第 4—5 音节）可能借自西南官话。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰa⁵⁵pʰa⁵⁵nie³¹ɕiã⁵⁵tsɿ³³",
+            "span": [
+              4,
+              5
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 箱子 component (syllables 4–5) may be borrowed from Southwestern Mandarin."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "荷叶",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60824-v-0155"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1468",
+        "wordIds": [
+          "yubao-60824-v-1468"
+        ],
+        "kind": "借词来源",
+        "donor": "荷花",
+        "donorVariety": "西南官话或湘语",
+        "scope": "component",
+        "text": "「荷花」部分（第 1—2 音节）可能借自西南官话或湘语。",
+        "reviewedForms": [
+          {
+            "ipa": "xo¹³xua³³a²¹ɣe¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 荷花 component (syllables 1–2) may be borrowed from Southwestern Mandarin or Xiang."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "荷叶",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60823-v-0155"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1468",
+        "wordIds": [
+          "yubao-60823-v-1468"
+        ],
+        "kind": "借词来源",
+        "donor": "荷花",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "text": "「荷花」部分（第 1—2 音节）可能借自西南官话。",
+        "reviewedForms": [
+          {
+            "ipa": "xo³³xua⁵⁵ɣɤe⁵³tʰa³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 荷花 component (syllables 1–2) is possibly borrowed from Southwestern Mandarin."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "玉米须",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60756-v-0185"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1503",
+        "wordIds": [
+          "yubao-60756-v-1503"
+        ],
+        "kind": "借词来源",
+        "donor": "玉米",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "text": "「玉米」部分（第 1—2 音节）可能借自西南官话。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑi³³mi³³la⁵⁵pʰa⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 玉米 component (syllables 1–2) may be borrowed from Southwestern Mandarin."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "玉米秆",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60756-v-0185"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1502",
+        "wordIds": [
+          "yubao-60756-v-1502"
+        ],
+        "kind": "借词来源",
+        "donor": "玉米",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "text": "「玉米」部分（第 1—2 音节）可能借自西南官话。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑi³³mi³³tʰa³³la³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 玉米 component (syllables 1–2) may be borrowed from Southwestern Mandarin."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "玉米包",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60823-v-0185"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1501",
+        "wordIds": [
+          "yubao-60823-v-1501"
+        ],
+        "kind": "借词来源",
+        "donor": "包谷",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "text": "「包谷」部分（第 1—2 音节）可能借自西南官话。",
+        "reviewedForms": [
+          {
+            "ipa": "pau⁵⁵ku³³a⁵⁵pʰɤe⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 包谷 component (syllables 1–2) may be borrowed from Southwestern Mandarin."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "玉米须",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60823-v-0185"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1503",
+        "wordIds": [
+          "yubao-60823-v-1503"
+        ],
+        "kind": "借词来源",
+        "donor": "包谷",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "text": "「包谷」部分（第 1—2 音节）可能借自西南官话。",
+        "reviewedForms": [
+          {
+            "ipa": "pau⁵⁵ku³³la⁵⁵pʰa⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 包谷 component (syllables 1–2) may be borrowed from Southwestern Mandarin."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "母驴",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60824-v-0260"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1697",
+        "wordIds": [
+          "yubao-60824-v-1697"
+        ],
+        "kind": "借词来源",
+        "donor": "驴子",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "「驴子」部分（第 1—2 音节）可能借自湘语或西南官话。",
+        "reviewedForms": [
+          {
+            "ipa": "lu²¹tsi²¹a³³ni³⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 驴子 component (syllables 1–2) may be borrowed from Xiang or Southwestern Mandarin."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "公驴",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60824-v-0260"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1696",
+        "wordIds": [
+          "yubao-60824-v-1696"
+        ],
+        "kind": "借词来源",
+        "donor": "驴子",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "「驴子」部分（第 1—2 音节）可能借自湘语或西南官话。",
+        "reviewedForms": [
+          {
+            "ipa": "lu²¹tsi²¹a³³bo³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 驴子 component (syllables 1–2) may be borrowed from Xiang or Southwestern Mandarin."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "桃核",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60824-v-0161"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1415",
+        "wordIds": [
+          "yubao-60824-v-1415"
+        ],
+        "kind": "借词来源",
+        "donor": "桃子",
+        "donorVariety": "西南官话或湘语",
+        "scope": "component",
+        "text": "「桃子」部分（第 1—2 音节）可能借自西南官话或湘语。",
+        "reviewedForms": [
+          {
+            "ipa": "dau¹³tsi⁵⁵a³³le³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 桃子 component (syllables 1–2) is possibly borrowed from Southwestern Mandarin or Xiang."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "鹰爪",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60824-v-0232"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1579",
+        "wordIds": [
+          "yubao-60824-v-1579"
+        ],
+        "kind": "借词来源",
+        "donor": "爪子",
+        "donorVariety": "西南官话或湘语",
+        "scope": "component",
+        "text": "「爪子」部分（第 3—4 音节）可能借自西南官话或湘语。",
+        "reviewedForms": [
+          {
+            "ipa": "ba²¹ŋɨ²¹tsau⁵⁵tsi²¹",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 爪子 component (syllables 3–4) may be borrowed from Southwestern Mandarin or Xiang."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "鸡爪",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60824-v-0232"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1705",
+        "wordIds": [
+          "yubao-60824-v-1705"
+        ],
+        "kind": "借词来源",
+        "donor": "爪子",
+        "donorVariety": "西南官话或湘语",
+        "scope": "component",
+        "text": "「爪子」部分（第 2—3 音节）可能借自西南官话或湘语。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰi⁵⁵tsau⁵⁵tsi²¹",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 爪子 component (syllables 2–3) may be borrowed from Southwestern Mandarin or Xiang."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "火铲",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60824-v-2430"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1322",
+        "wordIds": [
+          "yubao-60824-v-1322"
+        ],
+        "kind": "借词来源",
+        "donor": "铲子",
+        "donorVariety": "西南官话或湘语",
+        "scope": "component",
+        "text": "「铲子」部分（第 2—3 音节）可能借自西南官话或湘语。",
+        "reviewedForms": [
+          {
+            "ipa": "mi⁵⁵tsʰã⁵⁵tsi²¹",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 铲子 component (syllables 2–3) may be borrowed from Southwestern Mandarin or Xiang."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "施肥",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60756-v-2419"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2420",
+        "wordIds": [
+          "yubao-60756-v-2420"
+        ],
+        "kind": "借词来源",
+        "donor": "肥料",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "text": "「肥料」部分（第 1—2 音节）可能借自西南官话。",
+        "reviewedForms": [
+          {
+            "ipa": "xui³³liau³⁵tsui⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 肥料 component (syllables 1–2) may be borrowed from Southwestern Mandarin."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "施肥",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60824-v-2419"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2420",
+        "wordIds": [
+          "yubao-60824-v-2420"
+        ],
+        "kind": "借词来源",
+        "donor": "肥料",
+        "donorVariety": "西南官话或湘语",
+        "scope": "component",
+        "text": "「肥料」部分（第 1—2 音节）可能借自西南官话或湘语。",
+        "reviewedForms": [
+          {
+            "ipa": "xuei²¹liau¹³sã¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 肥料 component (syllables 1–2) may be borrowed from Southwestern Mandarin or Xiang."
+    },
+    {
+      "action": "add-component-note",
+      "zh": "开荒",
+      "basis": "Exact same-source segment and tones compared with a reviewed independent entry; remaining syllables retain their previous annotation status.",
+      "comparisonIds": [
+        "yubao-60756-v-1230"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2417",
+        "wordIds": [
+          "yubao-60756-v-2417"
+        ],
+        "kind": "借词来源",
+        "donor": "荒山",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "text": "「荒山」部分（第 1—2 音节）可能借自西南官话。",
+        "reviewedForms": [
+          {
+            "ipa": "xuaŋ⁵⁵saŋ³³kʰɛ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "phonotactic-screening-2026-10-23"
+      },
+      "noteEn": "The 荒山 component (syllables 1–2) is possibly borrowed from Southwestern Mandarin."
+    }
+  ]
+}
