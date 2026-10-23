@@ -55,7 +55,7 @@ dialog{background:white;border:1px solid var(--line);border-radius:9px;max-width
 }
 
 /* Each pair reads left-to-right, matching keyboard and screen-reader order. */
-.word-card{min-width:0}.word-card-content{height:100%;overflow-wrap:anywhere}.word-card-meaning,.word-card-dialect{min-width:0}.word-class-label{line-height:1.5}.loan-key{font-size:12px;color:var(--muted);margin:8px 0 12px}
+.word-card{min-width:0}.word-card-content{height:100%;overflow-wrap:anywhere}.word-card-meaning,.word-card-dialect{min-width:0}.loan-key{font-size:12px;color:var(--muted);margin:8px 0 12px}
 @media(min-width:1180px){
  .word-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}
  .word-card-content{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:3px 16px;min-height:112px;padding:14px 9px}
@@ -63,7 +63,7 @@ dialog{background:white;border:1px solid var(--line);border-radius:9px;max-width
  body.word-detail-open .word-grid{grid-template-columns:1fr}
 }
 @media(min-width:1600px){.word-grid{column-gap:40px}.word-card-content{padding:16px 12px}}
-@media(max-width:600px){.word-class-label{flex-basis:100%}.word-card-content{align-items:start}.word-card-heading{align-self:center}}
+@media(max-width:600px){.word-card-content{align-items:start}.word-card-heading{align-self:center}}
 
 @media(max-width:900px){aside>nav .bilingual-label>.ui-secondary{white-space:normal;overflow-wrap:anywhere;min-width:0}}
 
