@@ -62477,7 +62477,7 @@ const PARTICLE_TONE_ENTRIES=[
 ];
 function particleToneNotesFor(w){
  if(!w||(w.dialect!=='北部'&&!(w.dialects||[]).includes('北部')))return [];
- const stems=new Set((typeof wordIPA==='function'?wordIPA(w):[]).map(s=>String(s).replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹0-9\s/()[\]]/gu,'').normalize('NFC')));
+ const stems=new Set((typeof wordIPA==='function'?wordIPA(w):[]).map(s=>String(s).replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹0-9\s/()[\]]/gu,'').replace(/^[-‐‑−]/u,'').normalize('NFC')));
  const glosses=[w.zh,w.en,...(w.glosses||[]),...(w.zhVariants||[]),
   ...(w.senses||[]).flatMap(s=>[s.zh,s.en]),
   ...(w.attestations||[]).flatMap(s=>[s.zh,s.en,s.pos])];

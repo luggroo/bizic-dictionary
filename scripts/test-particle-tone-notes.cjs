@@ -24,7 +24,26 @@ for(const [ipa,zh,id] of specs){
  assert.ok(notes[0].text.includes('Feng（2019'));
  assert.equal(note({dialect:'南部',ipa:[ipa],zh,en:''}).length,0,'southern varieties are excluded');
 }
+// A leading hyphen is a bound-morpheme marker, not part of the segmental IPA.
+// w74 is the attested Brassett verbal suffix -xi2 ('that which').
+const suffixW74={id:'w74',dialect:'北部',term:'-xi2',ipa:['-ɕi²⁴'],zh:'的',en:'[that which]',attestations:[{id:'w74',term:'-xi2',pos:'vsuff.'}]};
+assert.equal(note(suffixW74).length,1,'w74 -xi must receive the nominalizer note');
+assert.equal(note(suffixW74)[0].id,'feng-2019-tone-nominalizer-xi');
+assert.equal(vm.runInContext('editorialNotesFor',ctx)(suffixW74).filter(n=>n.id==='feng-2019-tone-nominalizer-xi').length,1,'w74 must show the note in the entry editorial section');
+// Do not propagate the rule to other -xi suffix functions or ordinary -xi-final words.
+for(const [term,ipa,zh,en] of [
+ ['-xi3','-ɕi²¹','只','only'],
+ ['-xi4','-ɕi²⁴','能; 可以','can'],
+ ['-xi2','-ɕi²¹','很; 非常','very'],
+ ['-xi3tai2','-ɕi²¹tʰai²⁴','最高程度','intensifier'],
+ ['lai1xi2','lai⁵⁵ɕi²¹','什么','what'],
+ ['-de1xi3','-tɤ⁵⁵ɕi²¹','可以','can'],
+ ['xi1','ɕi⁵⁵','倍','times']
+]){
+ assert.equal(note({dialect:'北部',term,ipa:[ipa],zh,en}).length,0,'unrelated -xi item '+term+' should have no tone note');
+}
+
 for(const [ipa,zh] of [['pɔ²¹','持续体'],['liɛ²¹','完成体'],['mɔ²¹','猫'],['ma²¹','马']]){
  assert.equal(note({dialect:'北部',ipa:[ipa],zh,en:''}).length,0,'homophone incorrectly annotated: '+ipa+' '+zh);
 }
-console.log('Particle tone notes: six grammatical senses checked; unrelated homophones excluded.');
+console.log('Particle tone notes: six grammatical senses; bound -xi on w74; unrelated homophones excluded.');

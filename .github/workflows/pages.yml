@@ -38,8 +38,6 @@ jobs:
         run: node scripts/test-reader-copy.cjs
       - name: Test particle tone notes
         run: node scripts/test-particle-tone-notes.cjs
-      - name: Audit -xi entries
-        run: node scripts/audit-particle-xi.cjs
       - name: Verify merged dictionary IPA and notation rules
         run: |
           node scripts/test-word-merges.cjs
