@@ -13,7 +13,7 @@ const harness=[
  " const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));",
  " const settle=()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));",
  " const until=async(fn,label)=>{for(let i=0;i<160;i++){if(fn())return;await pause(100)}throw Error('Timeout waiting for '+label)};",
- " const position=()=>{const title=document.querySelector('.grammar-article > h1.grammar-reading-title');return {title:title?.textContent,top:title?Math.round(title.getBoundingClientRect().top):null,y:Math.round(window.scrollY),expanded:document.querySelector('.grammar-toc-wrap')?.dataset.mobileExpanded,route:location.hash}};",
+ " const position=()=>{const title=document.querySelector('.grammar-article > h1.grammar-reading-title');return {title:title?.textContent,top:title?Math.round(title.getBoundingClientRect().top):null,y:Math.round(window.scrollY),expanded:document.querySelector('.grammar-toc-wrap')?.dataset.mobileExpanded,route:location.hash,width:innerWidth,outerWidth:outerWidth,mobileMatch:matchMedia('(max-width: 900px)').matches,menuState:grammarMobileTocExpanded}};",
  " try{",
  "  await until(()=>typeof state!=='undefined'&&typeof D!=='undefined'&&D&&state.view==='grammar'&&document.querySelector('.grammar-toc [data-chapter=\"104\"]'),'initial grammar');",
  "  await document.fonts.ready;",
@@ -68,12 +68,21 @@ const server=http.createServer((req,res)=>{
  let stdout='',stderr='';
  const child=cp.spawn(binary,flags,{stdio:['ignore','pipe','pipe']});
  child.stdout.setEncoding('utf8');child.stderr.setEncoding('utf8');
- child.stdout.on('data',chunk=>{stdout+=chunk;if(stdout.length>20e6)child.kill()});
- child.stderr.on('data',chunk=>stderr+=chunk);
- const exit=await Promise.race([
-  new Promise(resolve=>child.on('close',code=>resolve({code}))),
-  new Promise(resolve=>setTimeout(()=>{child.kill();resolve({code:-1,reason:'timeout'})},120000))
- ]);
+ // --dump-dom can leave Chromium alive after its HTML is printed; finish
+ // as soon as the injected QA result appears, instead of waiting 120 s.
+ const exit=await new Promise(resolve=>{
+  let finished=false;
+  const finish=result=>{if(finished)return;finished=true;clearTimeout(timer);child.kill();resolve(result)};
+  const timer=setTimeout(()=>finish({code:-1,reason:'timeout'}),40000);
+  child.stdout.on('data',chunk=>{
+   stdout+=chunk;
+   if(stdout.includes('<pre id="grammar-scroll-qa">')&&stdout.includes('</pre>'))finish({code:0,reason:'result received'});
+   else if(stdout.length>20e6)finish({code:-1,reason:'too much output'});
+  });
+  child.stderr.on('data',chunk=>stderr+=chunk);
+  child.on('close',code=>finish({code,reason:'chrome exited'}));
+  child.on('error',err=>finish({code:-1,reason:String(err)}));
+ });
  const match=stdout.match(/<pre id="grammar-scroll-qa">([\s\S]*?)<\/pre>/);
  if(!match)throw Error('Chrome produced no QA result: '+JSON.stringify({exit,stderr:stderr.slice(-1000),out:stdout.slice(-1500)}));
  const raw=match[1].replace(/&quot;/g,'"').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>');
