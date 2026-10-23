@@ -137,9 +137,28 @@ const WordClasses=(()=>{
    return byId.has(target)?ids(w).some(id=>ancestors(id).includes(target))
      :sourceLabels(w).some(label=>normalize(label)===normalize(wanted));
  }
- function label(w){
+ const abbreviations={
+   noun:'n.','noun.proper':'prop. n.','noun.locative':'loc. n.','noun.temporal':'temp. n.',
+   pronoun:'pron.','pronoun.personal':'pers. pron.','pronoun.demonstrative':'dem. pron.',
+   'pronoun.interrogative':'interrog. pron.','pronoun.reflexive':'refl. pron.',
+   verb:'v.','verb.transitive':'v.t.','verb.intransitive':'v.i.','verb.auxiliary':'aux. v.',
+   'verb.stative':'stat. v.','verb.copular':'cop.',adjective:'adj.',adverb:'adv.',numeral:'num.',classifier:'clf.',
+   adposition:'adp.','adposition.preposition':'prep.','adposition.postposition':'postp.',
+   conjunction:'conj.',determiner:'det.',particle:'ptcl.','particle.aspect':'asp. ptcl.',
+   'particle.modal':'mod. ptcl.','particle.structural':'str. ptcl.','particle.negative':'neg.',
+   'particle.nominalizer':'nmlz.',affix:'aff.','affix.prefix':'pref.','affix.prefix.nominal':'nom. pref.',
+   'affix.suffix':'suff.','affix.suffix.nominal':'nom. suff.','affix.suffix.verbal':'v. suff.',
+   'affix.suffix.adjectival':'adj. suff.',interjection:'interj.',ideophone:'ideo.',phrase:'phr.',unclassified:'uncl.'
+ };
+ function abbreviation(w){
+   return sourceLabels(w).length||reviewedIds(w).length?ids(w).map(id=>abbreviations[id]).join(', '):'';
+ }
+ function label(w,language){
    if(!sourceLabels(w).length&&!reviewedIds(w).length)return '';
-   return ids(w).map(id=>byId.get(id).zh+' / '+byId.get(id).en).join(' · ');
+   return ids(w).map(id=>language?byId.get(id)[language]:byId.get(id).zh+' / '+byId.get(id).en).join(' · ');
+ }
+ function badges(w){
+   return sourceLabels(w).length||reviewedIds(w).length?ids(w).map(id=>'<span class="word-class-badge">'+escape(byId.get(id).zh)+'</span>').join(''):'';
  }
  function escape(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  let counts=new Map();
@@ -175,5 +194,5 @@ const WordClasses=(()=>{
    for(const w of words)for(const raw of sourceLabels(w))if(!resolve(raw).length)count.set(raw,(count.get(raw)||0)+1);
    return [...count].sort((a,b)=>b[1]-a[1]);
  }
- return {tree,resolve,ids,filterId,matches,label,initialize,selector,unmapped};
+ return {tree,resolve,ids,filterId,matches,label,abbreviation,badges,initialize,selector,unmapped};
 })();
