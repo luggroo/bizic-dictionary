@@ -40,3 +40,21 @@ if(fs.existsSync(file)){
   console.log('Unmapped POS labels ('+notMapped.length+'): '+JSON.stringify(notMapped.slice(0,100)));
  }
 }
+
+/* Source examples for ambiguous inherited abbreviations; diagnostics only. */
+{
+ const data=JSON.parse(zlib.gunzipSync(fs.readFileSync('site/dictionary.json.gz')).toString('utf8'));
+ const watch=new Set(['be v.','advm.','expr.','advt.','onom.','nbp','advl.','advd.','dem','nveg','intg','va.','be','vc.','Nanim','itr.v.','nrel','Nbp']);
+ const examples={};
+ for(const w of data.words||[]){
+  const tags=[...(Array.isArray(w.positions)?w.positions:[]),w.pos].filter(Boolean);
+  for(const tag of tags){
+   if(!watch.has(String(tag)))continue;
+   const key=String(tag);
+   if(!examples[key])examples[key]=[];
+   if(examples[key].length>=4||examples[key].some(x=>x.term===w.term))continue;
+   examples[key].push({term:w.term,zh:w.zh,en:w.en});
+  }
+ }
+ console.log('Source POS examples: '+JSON.stringify(examples));
+}
