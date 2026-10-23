@@ -125,19 +125,11 @@
     },
     "stedt-24cc5bbb03": {
       "total": 151,
-      "candidateConverted": 149,
+      "candidateConverted": 150,
       "ambiguous": 33,
-      "partialCount": 2,
-      "unresolvedCount": 2,
+      "partialCount": 1,
+      "unresolvedCount": 1,
       "unresolved": [
-        {
-          "id": "stedt-rn-127242",
-          "term": "tɕe³⁵ mi⁵⁵ tʰi²¹ kʰo⁵⁵ tʰ",
-          "zh": "指甲",
-          "en": "fingernail",
-          "reason": " tʰ: 无调、残缺或未解析片段",
-          "partial": true
-        },
         {
           "id": "stedt-rn-127243",
           "term": "tɕi³⁵ mi⁵⁵ tʰi²¹ kʰo⁵⁵ tʰ",
