@@ -49,7 +49,7 @@ anchors['north-part-5']={dialect:'north',chapter:'106'};
 // Historic chapter bookmarks point to the new primary home of each subject.
 Object.assign(legacy.north,{'1':'101','2':'101','3':'101','4':'101','5':'101','6':'104','7':'103','8':'103','9':'104','10':'103','11':'103','12':'103','13':'103','14':'103','15':'103','16':'104','17':'104','18':'102','19':'102','20':'105','21':'104','22':'105','23':'104','24':'106','25':'106','26':'106','27':'107','28':'107','29':'104','30':'106'});
 Object.assign(legacy.south,{'1':'201','2':'201','3':'201','4':'201','5':'201','6':'203','7':'202','8':'202','9':'203','10':'202','11':'202','12':'202','13':'202','14':'202','15':'202','16':'203','17':'203','18':'203','19':'206','20':'204','21':'203','22':'204','23':'203','24':'205','25':'205','26':'205','27':'206','28':'206','29':'203','30':'205'});
-const predicateTable=md.split('#### 谓词变化总表')[1]?.split('#### ')[0]||'';
+const predicateTable=md.split('#### 动词和形容词的变化总表')[1]?.split('#### ')[0]||'';
 const paradigmForms=[...predicateTable.matchAll(/^\|[^|]+\|([^|]+)\|/gm)].flatMap(m=>m[1].match(/\b[a-z]+[xfrv]\b/g)||[]);
 const lexiconForms=[...md.matchAll(/\[([a-z]+[xfrv])\]\(\?id=[^)]*#words\)/g)].map(m=>m[1]);
 const yeForms=[...new Set([...md.matchAll(/^\| 拼音 \| (.+)$/gm)].flatMap(m=>m[1].match(/[a-z]+/g)||[]).concat(paradigmForms,lexiconForms,['ngafdor','angfdor','nifdor','sefdor','gofdor','gexdor','angfnix','angf','gexzex','gex']))];

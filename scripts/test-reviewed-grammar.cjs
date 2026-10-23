@@ -32,6 +32,10 @@ const root=path.resolve(__dirname,'../site');
      const sourceLinks=[...original.querySelectorAll('a[href]')].map(a=>a.getAttribute('href')).filter(h=>/^https?:/.test(h));
      for(const rendered of [document.querySelector('main'),english]){
       if([...rendered.querySelectorAll('p')].some(p=>!p.closest('.grammar-footnotes')&&/^(?:说明：|原有说明：|出处：)/.test(p.textContent.trim())))failures.push(ch.id+': note left in the reading text');
+      for(const citation of rendered.querySelectorAll('.grammar-citation')){
+       const marker=citation.parentElement.tagName==='SUP'?citation.parentElement:citation;
+       if(/[（(]\s*$/.test(marker.previousSibling?.textContent||'')&&/^\s*[）)]/.test(marker.nextSibling?.textContent||''))failures.push(ch.id+': redundant parentheses around citation '+citation.textContent);
+      }
       const links=new Set([...rendered.querySelectorAll('a[href]')].map(a=>a.getAttribute('href')));
       for(const href of sourceLinks)if(!links.has(href))failures.push(ch.id+': source link lost '+href);
      }
@@ -52,6 +56,8 @@ const root=path.resolve(__dirname,'../site');
        if(liuNotes.length!==1||liuNotes[0].querySelectorAll('.grammar-footnote-return').length!==2)failures.push('Liu bibliography missing, duplicated or disconnected from its citations');
        if([...rendered.querySelectorAll('p')].some(p=>!p.closest('.grammar-footnotes')&&p.textContent.includes('Kang Franco Liu. 2025.')))failures.push('Full bibliography left in the reading text');
        if(rendered.textContent.includes('niēi')||![...rendered.querySelectorAll('h3,h4')].some(h=>h.textContent.includes('niēxi')))failures.push('niexi onset missing from heading');
+       const see=[...rendered.querySelectorAll('.grammar-word .grammar-pair')].find(p=>p.dataset.ipa==='pai⁵³')?.querySelector('.grammar-spelling');
+       if(see?.dataset.ye!=='baiv'||see?.dataset.accent!=='bài')failures.push('Unaspirated /p/ in bai must be spelled b');
        const paired=[...rendered.querySelectorAll('.grammar-word .grammar-pair')].find(p=>p.dataset.ipa==='[tsa²⁴ pɔ²¹ ɕi²⁴]');
        if(!paired||paired.querySelector('.grammar-spelling').dataset.ye!=='[zafbor-xif]')failures.push('State-marked verb and nominalizer not aligned together');
        if(![...rendered.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa==='pʰu-{nie／ɕi／nie-ɕi}]'&&p.querySelector('.grammar-spelling').dataset.accent==='pu-{nie／xi／nie-xi}]'))failures.push('Unmarked source acquired a tone');

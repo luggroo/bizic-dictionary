@@ -173,6 +173,16 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  for(const n of root.querySelectorAll('[data-zh][data-en]'))n.textContent=n.dataset[language==='en'?'en':'zh'];
  grammarBuildReferences(root,ch,language);
  grammarLocalizeSource(root,language);
+ // A source already has a superscript number; remove parentheses enclosing only it.
+ for(const citation of root.querySelectorAll('.grammar-citation')){
+  const marker=citation.parentElement.tagName==='SUP'?citation.parentElement:citation;
+  const before=marker.previousSibling,after=marker.nextSibling;
+  if(before?.nodeType!==Node.TEXT_NODE||after?.nodeType!==Node.TEXT_NODE)continue;
+  const open=before.nodeValue.match(/([（(])\s*$/),close=after.nodeValue.match(/^\s*([）)])/);
+  if(open&&close&&((open[1]==='（'&&close[1]==='）')||(open[1]==='('&&close[1]===')'))){
+   before.nodeValue=before.nodeValue.slice(0,open.index);after.nodeValue=after.nodeValue.slice(close[0].length);
+  }
+ }
  for(const a of root.querySelectorAll('.grammar-citation')){const body=root.querySelector('#'+a.dataset.footnoteTarget+'>p');if(body){a.title=body.textContent.trim().replace(/^(?:出处：|Source:\s*)/,'');a.setAttribute('aria-label',(language==='en'?'Source ':'出处 ')+a.textContent+': '+a.title);}}
  // Pair every remaining phonetic word/phrase, including inline citations and tables.
  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('script,style,.grammar-pair,.grammar-gloss')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});
