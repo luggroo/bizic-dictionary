@@ -126,3 +126,6 @@ main a:not(.metric):visited,#detail-body a:visited,.site-footer a:visited{color:
  .grammar-toc-wrap>.grammar-toc{max-height:min(52dvh,350px)}
 }
 @media (prefers-reduced-motion:reduce){.grammar-toc-chevron{transition:none}}
+
+/* Let selected grammar reading titles land with a little breathing room. */
+@media(max-width:900px){.grammar-article > .grammar-reading-title{scroll-margin-top:14px}}

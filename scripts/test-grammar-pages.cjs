@@ -71,6 +71,22 @@ const result=vm.runInContext(`(()=>{
   document.querySelector('main').innerHTML=grammarView();
   if(document.querySelector('.grammar-toc-wrap')?.dataset.mobileExpanded!=='true')failures.push('Reentering grammar does not reopen chapters');
  }
+ // The mobile title jump targets the actual reading heading, never the TOC.
+ const heading=document.querySelector('.grammar-article > h1.grammar-reading-title');
+ const scrolls=[],originalScroll=Element.prototype.scrollIntoView;
+ Element.prototype.scrollIntoView=function(options){scrolls.push({node:this,options})};
+ const originalMatchMedia=window.matchMedia;
+ window.matchMedia=()=>({matches:true});
+ grammarSetMobileTocExpanded(false);
+ if(!grammarJumpToReadingTitle())failures.push('Collapsed mobile chapter does not jump to title');
+ if(scrolls.length!==1||scrolls[0].node!==heading||scrolls[0].options.block!=='start')failures.push('Mobile chapter jump did not target reading h1');
+ grammarSetMobileTocExpanded(true);
+ if(grammarJumpToReadingTitle()||scrolls.length!==1)failures.push('Expanded menu unexpectedly triggered title jump');
+ grammarSetMobileTocExpanded(false);
+ window.matchMedia=()=>({matches:false});
+ if(grammarJumpToReadingTitle()||scrolls.length!==1)failures.push('Desktop chapter jump should be disabled');
+ if(originalMatchMedia===undefined)delete window.matchMedia;else window.matchMedia=originalMatchMedia;
+ if(originalScroll===undefined)delete Element.prototype.scrollIntoView;else Element.prototype.scrollIntoView=originalScroll;
  // A genuinely different source spelling remains visible.
  const alternate=root(grammarRenderHTML({id:'999',dialect:'north',html:'<table><tr><td>other /tsʰa²⁴/</td></tr></table>'}));if(!alternate.textContent.includes('other'))failures.push('different source form removed');
  return {failures,pages,citations};

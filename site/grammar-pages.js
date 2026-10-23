@@ -13,6 +13,17 @@ function grammarSetMobileTocExpanded(expanded){
  wrap.dataset.mobileExpanded=String(expanded);
  wrap.querySelector('.grammar-toc-toggle')?.setAttribute('aria-expanded',String(expanded));
 }
+// On mobile, a chosen reading page begins at its heading, just below the top edge.
+function grammarShouldJumpToReadingTitle(){
+ return grammarTocMobileViewport()&&!grammarMobileTocExpanded;
+}
+function grammarJumpToReadingTitle(){
+ if(!grammarShouldJumpToReadingTitle())return false;
+ const title=document.querySelector('.grammar-article > h1.grammar-reading-title');
+ if(!title)return false;
+ title.scrollIntoView({block:'start',behavior:'instant'});
+ return true;
+}
 document.addEventListener('click',event=>{
  const target=event.target;
  if(!(target instanceof Element))return;
