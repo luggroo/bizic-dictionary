@@ -12,10 +12,43 @@
           "yubao-60756-v-1681"
         ],
         "kind": "借词来源",
-        "donor": "筋",
+        "donor": "牛筋",
         "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「牛筋」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ȵu³³tɕiŋ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 牛筋; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1681",
+          "zh": "牛筋",
+          "ipa": "ȵu³³tɕiŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "牛筋",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "牛筋两个音节均为借入；原记音与调值保留。",
+          "group": "筋"
+        }
+      ],
+      "previousScopeReview": {
+        "donor": "筋",
         "scope": "component",
-        "text": "「筋」部分（第 2 音节）借自汉语，具体方言来源待核。",
         "reviewedForms": [
           {
             "ipa": "ȵu³³tɕiŋ⁵⁵",
@@ -24,28 +57,8 @@
               2
             ]
           }
-        ],
-        "reviewBatch": "hotcell-confirmed-2026-10-23"
-      },
-      "noteEn": "The 筋 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established.",
-      "lexicalDecisions": [
-        {
-          "id": "yubao-60756-v-1681",
-          "zh": "牛筋",
-          "ipa": "ȵu³³tɕiŋ⁵⁵",
-          "proposals": [
-            {
-              "donor": "筋",
-              "span": [
-                2,
-                2
-              ]
-            }
-          ],
-          "reason": "登记义为牛筋或抽筋，所选音节可与同点已标“筋”比较；南部牛筋的两次 tɕĩ 重叠均在范围内。",
-          "group": "筋"
-        }
-      ]
+        ]
+      }
     },
     {
       "action": "add-loan-note",

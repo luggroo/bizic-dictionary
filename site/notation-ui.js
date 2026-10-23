@@ -57,7 +57,83 @@ function accentForNotation(w,v){if(v.accent)return v.accent;const b=notationValu
 function visibleNotationValues(w){if(isSouthernWord(w))return southernNotationValues(w).map(v=>({...v,text:typeof reviewedSpelling==='function'?reviewedSpelling(w,v[southernDisplay==='poj'?'poj':'accent'],southernDisplay):v[southernDisplay==='poj'?'poj':'accent']}));const vals=notationValues(w,'ye');return vals.map(v=>({...v,text:typeof reviewedSpelling==='function'?reviewedSpelling(w,spellingDisplay==='accent'?accentForNotation(w,v):v.text.replace(/⟦[^⟧]*⟧/g,'□'),spellingDisplay):(spellingDisplay==='accent'?accentForNotation(w,v):v.text.replace(/⟦[^⟧]*⟧/g,'□'))})).filter((v,i,a)=>a.findIndex(x=>x.text===v.text)===i)}
 function wordIPA(w){return [...new Set((w._ipa||notationValues(w,'ipa').map(v=>v.text)).flatMap(text=>text.split(/[~～]/)).map(text=>normalizeIPA(text.trim())).map(text=>typeof displayReviewedIPA==='function'?displayReviewedIPA(w,text):text).filter(Boolean))]}
 function completeSpellings(w){if(w._display)return w._display[isSouthernWord(w)?southernDisplay:spellingDisplay]||[];return visibleNotationValues(w).filter(v=>v.method!=='source-partial'&&!/[□⟦⟧]/.test(v.text))}
+const spellingLoanRangeCache=new WeakMap();
+function spellingLoanRanges(w,value,mode=isSouthernWord(w)?southernDisplay:spellingDisplay){
+ if(Array.isArray(value.loanRanges))return value.loanRanges;
+ const text=String(value.text||'').normalize('NFC');
+ if(!text||typeof editorialNotesFor!=='function')return [];
+ let cache=spellingLoanRangeCache.get(w);if(!cache){cache=new Map();spellingLoanRangeCache.set(w,cache);}
+ const cacheKey=mode+'\0'+text+'\0'+JSON.stringify(value.ipaForms||[]);if(cache.has(cacheKey))return cache.get(cacheKey);
+ const finish=ranges=>{cache.set(cacheKey,ranges);return ranges;};
+ const notes=editorialNotesFor(w).filter(n=>n.id?.startsWith('chinese-loan-')||n.borrowingPeriod);
+ if(!notes.length)return finish([]);
+ const key=s=>normalizeIPA(s).replace(/[\s|｜◦]/gu,'').normalize('NFC');
+ const forms=wordIPA(w).map(ipa=>({ipa,key:key(ipa),units:ipa.match(/[^⁰¹²³⁴⁵⁶⁷⁸⁹]+[⁰¹²³⁴⁵⁶⁷⁸⁹]+/gu)||[],borrowed:new Set(),whole:false}));
+ for(const form of forms)for(const note of notes)for(const reviewed of note.reviewedForms||[]){
+  if(!loanIPAForms(reviewed.ipa).some(ipa=>key(ipa)===form.key))continue;
+  if(note.scope==='whole')form.whole=true;
+  const [a,b]=reviewed.span||(note.scope==='whole'?[1,form.units.length]:[]);
+  if(Number.isInteger(a)&&Number.isInteger(b))for(let i=a-1;i<b;i++)form.borrowed.add(i);
+ }
+ let choices=forms;
+ if(value.ipaForms?.length){const linked=new Set(value.ipaForms.flatMap(loanIPAForms).map(key));choices=forms.filter(f=>linked.has(f.key));}
+ if(!choices.length)return finish([]);
+ if(choices.every(f=>f.whole))return finish([[0,text.length]]);
+ if(!choices.some(f=>f.borrowed.size))return finish([]);
+ // Match the actual displayed letters and tone marks to source-specific syllable
+ // conversions. Spaces, apostrophes and hyphens keep their original positions.
+ const compact=s=>String(s).normalize('NFC').replace(/[\s'’\-~～/／|｜()（）]/gu,'').toLowerCase();
+ let letters='',offset=0;const positions=[];
+ for(const char of text){if(compact(char)){for(let i=0;i<char.length;i++)positions.push([offset,offset+char.length]);letters+=char.toLowerCase();}offset+=char.length;}
+ const matches=[];
+ function align(form,options){
+  if(options.length!==form.units.length||options.some(o=>!o.length))return;
+  const walk=(i,start,mask)=>{
+   if(i===options.length){if(start===letters.length)matches.push(mask);return;}
+   for(const token of options[i]){
+    const part=compact(token);if(!part||!letters.startsWith(part,start))continue;
+    const next=new Set(mask);if(form.borrowed.has(i))for(let j=start;j<start+part.length;j++)next.add(j);
+    walk(i+1,start+part.length,next);
+   }
+  };
+  walk(0,0,new Set());
+ }
+ const sources=[...new Set([value.profile,...w.sourceIds||[],...(w.attestations||[]).map(a=>a.source),w.source].filter(Boolean))];
+ for(const form of choices){
+  // Brassett's stored spelling supplies its own syllable boundaries and IPA link.
+  for(const b of w.notations?.brassett||[]){
+   if(key(standardBrassettIPA(plainTones(b.text))||'')!==form.key)continue;
+   const units=normalizedBrassettText(b.text).match(/[a-z]+\s*[1-4](?![0-9])/gi)||[];
+   align(form,units.map(unit=>[displayBrassett(unit,mode)]));
+  }
+  for(const source of sources){
+   if(isSouthernWord(w)){
+    align(form,form.units.map(unit=>{const r=southernSpelling(unit.trim(),source);return r?[r[mode==='poj'?'poj':'accent']]:[];}));
+   }else if(/^yubao-(60756|60757|60823)$/.test(source)){
+    align(form,form.units.map(unit=>{const r=northernSurveySpelling(unit.trim(),source.slice(6));return r?[r[mode==='ye'?'ye':'accent']]:[];}));
+   }else{
+    const profile=NOTATION_CONFIG.profiles.find(p=>p.id===source);
+    if(!profile?.mappingMode||profile.kind!=='ipa'||profile.conversionEnabled===false)continue;
+    align(form,form.units.map(unit=>{
+     const r=convertNotation(unit.trim(),source);if(r.error)return [];
+     return [...new Set(r.rows.flatMap(row=>mode==='ye'?[row.ye]:[yeToAccent(row.ye),row.brassett?displayBrassett(row.brassett,'accent'):'']).filter(Boolean))];
+    }));
+   }
+  }
+ }
+ if(!matches.length)return finish([]);
+ // Ambiguous spellings fade only letters covered in every matching analysis.
+ const agreed=[...matches[0]].filter(i=>matches.every(mask=>mask.has(i))).sort((a,b)=>a-b),ranges=[];
+ for(const i of agreed){const [a,b]=positions[i];if(ranges.length&&ranges.at(-1)[1]===a)ranges.at(-1)[1]=b;else if(!ranges.length||ranges.at(-1)[1]<b)ranges.push([a,b]);}
+ return finish(ranges);
+}
+function loanSpellingHTML(w,value){
+ const text=String(value.text||'').normalize('NFC'),ranges=spellingLoanRanges(w,value);let start=0,html='';
+ for(const [a,b] of ranges){html+=E(text.slice(start,a))+'<span class="loan-spelling">'+E(text.slice(a,b))+'</span>';start=b;}
+ return html+E(text.slice(start));
+}
 function notationHead(w){return completeSpellings(w)[0]?.text||wordIPA(w)[0]||phon(w.term)}
+function notationHeadHTML(w){const value=completeSpellings(w)[0];return value?'<span data-script="transliteration">'+loanSpellingHTML(w,value)+'</span>':E(notationHead(w));}
 function ipaSubtitle(w){const ipa=wordIPA(w);return completeSpellings(w).length&&ipa.length?`<div class="word-ipa">${ipa.map(E).join(' · ')}</div>`:!ipa.length?'<div class="tiny">IPA 待校核</div>':''}
 // Pair alternatives only when the same source conversion supplies the link.
 // Array order alone is not evidence that two notations describe the same form.
@@ -69,13 +145,13 @@ function pairedNotationForms(w){
 }
 function wordCardNotation(w){
  const pairs=pairedNotationForms(w);
- const row=(text,ipa)=>`<span class="word word-card-title">${E(phon(text))}</span>${ipa.length?`<span class="word-ipa">${ipa.map(v=>'/'+E(v.replace(/^\/|\/$/g,''))+'/').join(' · ')}</span>`:''}`;
- return pairs?pairs.map(v=>row(v.text,v.ipa)).join(''):row(notationHead(w),completeSpellings(w).length?wordIPA(w):[]);
+ const row=(value,ipa)=>`<span class="word word-card-title">${value?loanSpellingHTML(w,value):E(phon(notationHead(w)))}</span>${ipa.length?`<span class="word-ipa">${ipa.map(v=>'/'+E(v.replace(/^\/|\/$/g,''))+'/').join(' · ')}</span>`:''}`;
+ return pairs?pairs.map(v=>row(v,v.ipa)).join(''):row(completeSpellings(w)[0],completeSpellings(w).length?wordIPA(w):[]);
 }
 function notationCells(w,compact=false){
  const values=completeSpellings(w),ipa=wordIPA(w),shown=compact?values.slice(1,3):values.slice(1),pairs=pairedNotationForms(w);
  const ipaLine=forms=>`<div class="word-ipa">${forms.map(E).join(' · ')}</div>`;
- const forms=pairs?ipaLine(pairs[0].ipa)+(compact?pairs.slice(1,3):pairs.slice(1)).map(v=>`<div class="notation-alternative"><div class="notation-form">${E(v.text)}</div>${ipaLine(v.ipa)}</div>`).join(''):ipaSubtitle(w)+(!values.length&&ipa.length>1?ipaLine(ipa.slice(1)):'')+shown.map(v=>`<div class="notation-form">${E(v.text)}</div>`).join('');
+ const forms=pairs?ipaLine(pairs[0].ipa)+(compact?pairs.slice(1,3):pairs.slice(1)).map(v=>`<div class="notation-alternative"><div class="notation-form">${loanSpellingHTML(w,v)}</div>${ipaLine(v.ipa)}</div>`).join(''):ipaSubtitle(w)+(!values.length&&ipa.length>1?ipaLine(ipa.slice(1)):'')+shown.map(v=>`<div class="notation-form">${loanSpellingHTML(w,v)}</div>`).join('');
  return forms+(values.some(v=>v.ambiguous)?'<small class="tiny">多种候选</small>':'')+(compact&&values.length>3?`<small class="tiny">另 ${values.length-3} 种</small>`:'');
 }
 

@@ -1,0 +1,351 @@
+{
+  "scope": "Only cir retains the modern-loan label for 尺; other reviewed tones have undated loan etymologies.",
+  "retainedModern": [
+    {
+      "id": "w441",
+      "ipa": [
+        "tsʰɨ²¹"
+      ],
+      "ye": "cir"
+    },
+    {
+      "id": "yubao-60823-v-2955",
+      "ipa": [
+        "tsʰɿ³³"
+      ],
+      "ye": "cir"
+    }
+  ],
+  "reclassifiedModernNoteIds": [
+    "chinese-loan-stedt-rn-390713",
+    "chinese-loan-stedt-rn-229065",
+    "chinese-loan-yubao-60756-v-2955",
+    "chinese-loan-yubao-60824-v-2955"
+  ],
+  "decisions": [
+    {
+      "action": "add-undated-etymology",
+      "zh": "尺子",
+      "previousNotes": [],
+      "note": {
+        "id": "loan-etymology-stedt-rn-454698",
+        "wordIds": [
+          "stedt-rn-454698"
+        ],
+        "kind": "借词来源",
+        "donor": "尺",
+        "donorVariety": "汉语（方言待核）",
+        "borrowingPeriod": "undetermined",
+        "scope": "whole",
+        "text": "借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɨ²⁴",
+            "span": [
+              1,
+              1
+            ]
+          },
+          {
+            "ipa": "tsʰi³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "chi-period-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 尺; its tone does not match Southwestern Mandarin. The borrowing period is undetermined and may predate modern loans."
+    },
+    {
+      "action": "reclassify-undated",
+      "zh": "尺",
+      "previousNotes": [
+        {
+          "id": "chinese-loan-stedt-rn-390713",
+          "wordIds": [
+            "stedt-rn-390713"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「尺」。",
+          "donor": "尺",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "tsʰi³⁵",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reviewBatch": "coverage-pass-2026-10-23"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-stedt-rn-390713",
+        "wordIds": [
+          "stedt-rn-390713"
+        ],
+        "kind": "借词来源",
+        "donor": "尺",
+        "donorVariety": "汉语（方言待核）",
+        "borrowingPeriod": "undetermined",
+        "scope": "whole",
+        "text": "借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰi³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "chi-period-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 尺; its tone does not match Southwestern Mandarin. The borrowing period is undetermined and may predate modern loans."
+    },
+    {
+      "action": "reclassify-undated",
+      "zh": "尺",
+      "previousNotes": [
+        {
+          "id": "chinese-loan-stedt-rn-229065",
+          "wordIds": [
+            "stedt-rn-229065"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「尺」。",
+          "donor": "尺",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "tsʰi³⁵",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reviewBatch": "coverage-pass-2026-10-23"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-stedt-rn-229065",
+        "wordIds": [
+          "stedt-rn-229065"
+        ],
+        "kind": "借词来源",
+        "donor": "尺",
+        "donorVariety": "汉语（方言待核）",
+        "borrowingPeriod": "undetermined",
+        "scope": "whole",
+        "text": "借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰi³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "chi-period-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 尺; its tone does not match Southwestern Mandarin. The borrowing period is undetermined and may predate modern loans."
+    },
+    {
+      "action": "add-undated-etymology",
+      "zh": "尺子",
+      "previousNotes": [],
+      "note": {
+        "id": "loan-etymology-yubao-60756-v-1853",
+        "wordIds": [
+          "yubao-60756-v-1853"
+        ],
+        "kind": "借词来源",
+        "donor": "尺",
+        "donorVariety": "汉语（方言待核）",
+        "borrowingPeriod": "undetermined",
+        "scope": "whole",
+        "text": "借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɿ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "chi-period-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 尺; its tone does not match Southwestern Mandarin. The borrowing period is undetermined and may predate modern loans."
+    },
+    {
+      "action": "reclassify-undated",
+      "zh": "尺",
+      "previousNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2955",
+          "wordIds": [
+            "yubao-60756-v-2955"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「尺」。",
+          "donor": "尺",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "tsʰɿ⁵⁵",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reviewBatch": "coverage-pass-2026-10-23"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-yubao-60756-v-2955",
+        "wordIds": [
+          "yubao-60756-v-2955"
+        ],
+        "kind": "借词来源",
+        "donor": "尺",
+        "donorVariety": "汉语（方言待核）",
+        "borrowingPeriod": "undetermined",
+        "scope": "whole",
+        "text": "借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɿ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "chi-period-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 尺; its tone does not match Southwestern Mandarin. The borrowing period is undetermined and may predate modern loans."
+    },
+    {
+      "action": "add-undated-etymology",
+      "zh": "尺子",
+      "previousNotes": [],
+      "note": {
+        "id": "loan-etymology-yubao-60823-v-1853",
+        "wordIds": [
+          "yubao-60823-v-1853"
+        ],
+        "kind": "借词来源",
+        "donor": "尺",
+        "donorVariety": "汉语（方言待核）",
+        "borrowingPeriod": "undetermined",
+        "scope": "component",
+        "text": "「尺」部分（第 2 音节）借自汉语，声调与西南官话不符，借入年代未定，可能不是近代借词。",
+        "reviewedForms": [
+          {
+            "ipa": "u³¹tsʰɿ¹³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "chi-period-2026-10-23"
+      },
+      "noteEn": "The 尺 component (syllable 2) is borrowed from Chinese; its tone does not match Southwestern Mandarin. The borrowing period is undetermined and may predate modern loans."
+    },
+    {
+      "action": "add-undated-etymology",
+      "zh": "尺子",
+      "previousNotes": [],
+      "note": {
+        "id": "loan-etymology-yubao-60824-v-1853",
+        "wordIds": [
+          "yubao-60824-v-1853"
+        ],
+        "kind": "借词来源",
+        "donor": "尺",
+        "donorVariety": "汉语（方言待核）",
+        "borrowingPeriod": "undetermined",
+        "scope": "whole",
+        "text": "借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰi²¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "chi-period-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 尺; its tone does not match Southwestern Mandarin. The borrowing period is undetermined and may predate modern loans."
+    },
+    {
+      "action": "reclassify-undated",
+      "zh": "尺",
+      "previousNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2955",
+          "wordIds": [
+            "yubao-60824-v-2955"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自湘语或西南官话「尺」。",
+          "donor": "尺",
+          "donorVariety": "湘语或西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "tsʰi²¹",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reviewBatch": "coverage-pass-2026-10-23"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-yubao-60824-v-2955",
+        "wordIds": [
+          "yubao-60824-v-2955"
+        ],
+        "kind": "借词来源",
+        "donor": "尺",
+        "donorVariety": "汉语（方言待核）",
+        "borrowingPeriod": "undetermined",
+        "scope": "whole",
+        "text": "借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰi²¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "chi-period-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 尺; its tone does not match Southwestern Mandarin. The borrowing period is undetermined and may predate modern loans."
+    }
+  ],
+  "limits": [
+    "Borrowing period remains uncertain; tone mismatch does not establish a specific historical date.",
+    "IPA, recorded tone values and source glosses are retained.",
+    "No separate change is made to /kau/."
+  ]
+}

@@ -3445,3 +3445,10 @@ Object.assign(UI_TRANSLATIONS,{
  "可能借自西南官话或湘语「校堂」。": "Possibly borrowed from Southwestern Mandarin or Xiang 校堂.",
  "借自西南官话「唱歌」。": "Borrowed from Southwestern Mandarin 唱歌."
 });
+
+Object.assign(UI_TRANSLATIONS,{"借自汉语「牛筋」，具体方言来源待核。": "Borrowed from Chinese 牛筋; the specific donor variety remains to be established."});
+
+Object.assign(UI_TRANSLATIONS,{
+ "借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。": "Borrowed from Chinese 尺; its tone does not match Southwestern Mandarin. The borrowing period is undetermined and may predate modern loans.",
+ "「尺」部分（第 2 音节）借自汉语，声调与西南官话不符，借入年代未定，可能不是近代借词。": "The 尺 component (syllable 2) is borrowed from Chinese; its tone does not match Southwestern Mandarin. The borrowing period is undetermined and may predate modern loans."
+});

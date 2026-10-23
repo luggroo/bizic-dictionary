@@ -28,7 +28,7 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
   ctx.currentWord=w;
   for(const mode of (ctx.isSouthernWord(w)?['accent','poj']:['accent','ye'])){
    ctx.mode=mode;vm.runInContext('spellingDisplay=mode;southernDisplay=mode;',ctx);
-   mini._display[mode]=ctx.completeSpellings(w).map(v=>({text:v.text,...(v.ambiguous?{ambiguous:true}:{}),...(v.ipaForms?{ipaForms:v.ipaForms}:{})}));
+   mini._display[mode]=ctx.completeSpellings(w).map(v=>({text:v.text,loanRanges:ctx.spellingLoanRanges(w,v,mode),...(v.ambiguous?{ambiguous:true}:{}),...(v.ipaForms?{ipaForms:v.ipaForms}:{})}));
   }
   mini._chunk=Math.floor(i/chunkSize);coreWords.push(mini);
  }

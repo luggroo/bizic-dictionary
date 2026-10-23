@@ -22,7 +22,7 @@ const guards=['stedt-rn-353352','yubao-60756-v-2277','yubao-60757-v-2277','yubao
     assert.equal(await page.locator('#detail-body .word-metadata .loan-badge').getAttribute('data-loan-scope'),expectedBadgeScope||note.scope,id);
     assert((await page.locator('#detail-body .editorial-notes').innerText()).includes(language==='en'?noteEn:note.text),id+' translated note');
     const original=await page.evaluate(id=>JSON.stringify(W[id].attestations),id);
-    const area=id.includes('60824')?'south':'north',modes=area==='south'?['accent','poj']:['accent','ye'];
+    const area=await page.evaluate(id=>isSouthernWord(W[id])?'south':'north',id),modes=area==='south'?['accent','poj']:['accent','ye'];
     for(const mode of modes){
      await page.locator('#detail-spelling-control [data-spelling-display="'+area+'"]').selectOption(mode);
      assert.equal(await page.evaluate(id=>JSON.stringify(W[id].attestations),id),original,id+' source after spelling change');

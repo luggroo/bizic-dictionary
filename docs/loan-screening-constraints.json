@@ -2372,6 +2372,141 @@
           ]
         }
       ]
+    },
+    {
+      "id": "stedt-rn-454698",
+      "policy": "exclude-component",
+      "family": "chi-undated",
+      "reason": "尺的此声调与西南官话不符，借入时代未定；只有已审 cir 形式保留新借标签。",
+      "origin": "docs/loan-chi-period-review-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰɨ²⁴",
+          "span": [
+            1,
+            1
+          ]
+        },
+        {
+          "ipa": "tsʰi³⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-390713",
+      "policy": "exclude-component",
+      "family": "chi-undated",
+      "reason": "尺的此声调与西南官话不符，借入时代未定；只有已审 cir 形式保留新借标签。",
+      "origin": "docs/loan-chi-period-review-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰi³⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-229065",
+      "policy": "exclude-component",
+      "family": "chi-undated",
+      "reason": "尺的此声调与西南官话不符，借入时代未定；只有已审 cir 形式保留新借标签。",
+      "origin": "docs/loan-chi-period-review-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰi³⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-1853",
+      "policy": "exclude-component",
+      "family": "chi-undated",
+      "reason": "尺的此声调与西南官话不符，借入时代未定；只有已审 cir 形式保留新借标签。",
+      "origin": "docs/loan-chi-period-review-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰɿ⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2955",
+      "policy": "exclude-component",
+      "family": "chi-undated",
+      "reason": "尺的此声调与西南官话不符，借入时代未定；只有已审 cir 形式保留新借标签。",
+      "origin": "docs/loan-chi-period-review-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰɿ⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1853",
+      "policy": "exclude-component",
+      "family": "chi-undated",
+      "reason": "尺的此声调与西南官话不符，借入时代未定；只有已审 cir 形式保留新借标签。",
+      "origin": "docs/loan-chi-period-review-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "u³¹tsʰɿ¹³",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-1853",
+      "policy": "exclude-component",
+      "family": "chi-undated",
+      "reason": "尺的此声调与西南官话不符，借入时代未定；只有已审 cir 形式保留新借标签。",
+      "origin": "docs/loan-chi-period-review-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰi²¹",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2955",
+      "policy": "exclude-component",
+      "family": "chi-undated",
+      "reason": "尺的此声调与西南官话不符，借入时代未定；只有已审 cir 形式保留新借标签。",
+      "origin": "docs/loan-chi-period-review-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰi²¹",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
     }
   ],
   "phonologicalComparison": {

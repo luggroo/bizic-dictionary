@@ -65,11 +65,15 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  const raised=get('w2258');assert.equal(raised.en,'raise; improve');
  const coverage=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-coverage-review-2026-10-23.json'),'utf8'));
+ const chiPeriod=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-chi-period-review-2026-10-23.json'),'utf8'));
+ const chiReplacements=new Map(chiPeriod.decisions.flatMap(d=>d.previousNotes.map(n=>[n.id,d])));
+ coverage.decisions=coverage.decisions.map(d=>chiReplacements.has(d.note.id)?{...d,...chiReplacements.get(d.note.id)}:d);
  for(const {note,noteEn} of coverage.decisions)for(const id of note.wordIds){
   const w=get(id),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
   assert(actual,id+' reviewed coverage note exists');
   assert.equal(JSON.stringify(actual),JSON.stringify(note),id+' exact reviewed forms and syllable scope');
-  assert.equal(c.modernChineseLoanInfo(w).scope,note.scope,id+' complete or partial loan');
+  if(note.id.startsWith('chinese-loan-'))assert.equal(c.modernChineseLoanInfo(w).scope,note.scope,id+' complete or partial loan');
+  else assert.equal(c.modernChineseLoanBadge(w),'',id+' undated etymology has no modern-loan badge');
   c.coverageText=note.text;assert.equal(vm.runInContext('UI_TRANSLATIONS[coverageText]',c),noteEn,id+' bilingual note');
  }
  for(const {id} of coverage.retainedUnmarked)assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' uncertain or native form stays unmarked');
@@ -127,7 +131,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  for(const id of ['yubao-60757-v-2988','w2438'])assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' xilan stays unmarked');
  const rimeFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-rime-followup-2026-10-23.json'),'utf8'));
  const hotcell=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-hotcell-confirmed-2026-10-23.json'),'utf8'));
- for(const decision of [...rimeFollowup.decisions,...rimeFollowup.corrections,...hotcell.decisions,...hotcell.corrections]){
+ for(const decision of [...rimeFollowup.decisions,...rimeFollowup.corrections,...hotcell.decisions,...hotcell.corrections,...chiPeriod.decisions]){
   const {note,noteEn}=decision,w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
   assert.equal(JSON.stringify(actual),JSON.stringify(note),note.id+' exact lexical review');
   c.newLoanNote=actual.text;assert.equal(vm.runInContext('UI_TRANSLATIONS[newLoanNote]',c),noteEn,note.id+' bilingual note');
@@ -137,6 +141,41 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.modernChineseLoanBadge(get('w2532')),'','early key loan has no modern-loan badge');
  assert.equal(c.modernChineseLoanBadge(get('stedt-rn-345864')),'','undated ice loan has no modern-loan badge');
  assert.equal(c.modernChineseLoanBadge(get('w50')),'','grammatical liao stays unmarked');
+ for(const {id} of chiPeriod.retainedModern){
+  assert(c.notationValues(get(id),'ye').some(v=>v.text==='cir'),id+' retained modern form is exactly cir');
+  assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole',id+' cir retains its modern-loan badge');
+ }
+ for(const {note} of chiPeriod.decisions)for(const id of note.wordIds)assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' other 尺 tones are undated');
+ // Check actual spelling boundaries in each regional display system. The
+ // source text and IPA stay plain; only the rendered loan spans get markup.
+ const shading=[
+  ['yubao-60756-v-1681','accent',['niǔjīn'],[['niǔjīn']]],
+  ['yubao-60756-v-1681','ye',['niurjinx'],[['niurjinx']]],
+  ['yubao-60756-v-2215','accent',['jīnpǐ'],[['jīn']]],
+  ['yubao-60756-v-2215','ye',['jinxpir'],[['jinx']]],
+  ['yubao-60824-v-1681','accent',['òjinjin'],[['jinjin']]],
+  ['yubao-60824-v-1681','poj',['ò-cin-cin'],[['cin','cin']]],
+  ['yubao-60824-v-1811','accent',['dèugèusuàbà'],[['suàbà']]],
+  ['yubao-60824-v-1811','poj',['tèu-kèu-suà-pà'],[['suà','pà']]],
+  ['yubao-60756-v-0594','accent',['kùbǎtǐmǎ','tītōujiàn'],[[],['tītōujiàn']]],
+  ['yubao-60756-v-0594','ye',['kuvbartirmar','tixtouxjianv'],[[],['tixtouxjianv']]],
+  ['yubao-60823-v-1853','accent',['wǔcí'],[['cí']]],
+  ['yubao-60823-v-1853','ye',['wurcif'],[['cif']]],
+  ['stedt-rn-185103','accent',['yísīrǐ'],[['sīrǐ']]],
+  ['stedt-rn-185103','ye',['ifsixrir'],[['sixrir']]],
+  ['w50','accent',['-liǎo'],[[]]],
+  ['w50','ye',['-liaor'],[[]]]
+ ];
+ const escapeSpelling=vm.runInContext('E',c);
+ for(const [id,mode,texts,gray] of shading){
+  c.mode=mode;vm.runInContext('spellingDisplay=mode;southernDisplay=mode',c);
+  const w=get(id),before=JSON.stringify(w),values=c.completeSpellings(w);
+  assert.deepEqual(Array.from(values,v=>v.text),texts,id+' '+mode+' spelling');
+  assert.deepEqual(Array.from(values,v=>Array.from(c.spellingLoanRanges(w,v),([a,b])=>v.text.slice(a,b))),gray,id+' '+mode+' gray loan syllables');
+  for(const value of values)assert.equal(c.loanSpellingHTML(w,value).replace(/<\/?span[^>]*>/g,''),escapeSpelling(value.text),id+' rendered text unchanged');
+  assert.equal(JSON.stringify(w),before,id+' source data unchanged by shading');
+ }
+ vm.runInContext("spellingDisplay='accent';southernDisplay='accent'",c);
  for(const id of ['w73','w337'])assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole',id+' lexical liao exception');
  assert(!c.editorialNotesFor(get('yubao-60757-v-1743')).find(n=>n.id==='chinese-loan-yubao-60757-v-1743').donor,'unknown stair-step character is not invented');
  for(const [id,review] of Object.entries(hotcell.parallelForms)){
@@ -146,7 +185,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  for(const id of ['stedt-rn-289453','yubao-60824-v-1339'])assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole',id+' 二月 is fully borrowed');
  for(const id of ['w2480','yubao-60756-v-0718','stedt-rn-289871','yubao-60824-v-0718','yubao-60824-v-0719'])assert(c.editorialNotesFor(get(id)).some(n=>n.donor==='校堂'),id+' 校堂 donor');
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996+[...rimeFollowup.decisions,...hotcell.decisions].filter(d=>d.note.id.startsWith('chinese-loan-')).length);
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996-chiPeriod.reclassifiedModernNoteIds.length+[...rimeFollowup.decisions,...hotcell.decisions].filter(d=>d.note.id.startsWith('chinese-loan-')).length);
  const componentsFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-components-followup-2026-10-23.json'),'utf8'));
  for(const {note} of componentsFollowup.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
@@ -240,7 +279,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.wordMatches(get('yubao-60824-v-1887')),false,'modern ce axle is hidden');
  assert.equal(c.wordMatches(get('stedt-rn-289522')),true,'dragonfly half-loan remains visible');
  for(const {note} of followup.decisions)for(const id of note.wordIds)assert.equal(c.wordMatches(get(id)),false,id+' whole-loan filter includes reanalysed phrases');
- for(const {note} of coverage.decisions)for(const id of note.wordIds)assert.equal(c.wordMatches(get(id)),note.scope!=='whole',id+' coverage-pass loan filter');
+ for(const {note} of coverage.decisions)for(const id of note.wordIds)assert.equal(c.wordMatches(get(id)),!note.id.startsWith('chinese-loan-')||note.scope!=='whole',id+' coverage-pass loan filter');
  for(const id of xiangWhole)assert.equal(c.wordMatches(get(id)),false,id+' whole-loan filter');
  for(const id of xiangParts)assert.equal(c.wordMatches(get(id)),true,id+' mixed compound remains visible');
  c.loanPosFixture=get('yubao-60756-v-0747');

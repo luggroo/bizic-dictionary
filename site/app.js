@@ -383,10 +383,10 @@ function wordDetail(w){
  const related=D.words.filter(x=>x.id!==w.id&&((w.zh&&normalize(x.zh)===normalize(w.zh))||(w.en&&normalize(x.en)===normalize(w.en)))).slice(0,10);
  const metadata=WordClasses.badges(w)+modernChineseLoanBadge(w);
  return `<div class="word-entry-summary">
- <div class="word-entry-form"><div class="chips">${wordVarietyPill(w)}</div><h1 class="word">${E(notationHead(w))}</h1>${notationCells(w)}</div>
+ <div class="word-entry-form"><div class="chips">${wordVarietyPill(w)}</div><h1 class="word">${notationHeadHTML(w)}</h1>${notationCells(w)}</div>
  <div class="word-entry-definition"><h2 data-ui-content>${E(w.zh||w.en)}</h2>${w.en?`<p class="sub word-detail-english" lang="en" data-ui-content>${E(w.en)}</p>`:''}${metadata?`<div class="word-metadata">${metadata}</div>`:''}${w.zhReviewEvidence?`<details class="gloss-evidence"><summary>释义说明</summary><p>${E(w.zhReviewEvidence)}</p></details>`:''}</div>
  <div class="detail-actions"><button data-copy="${w.id}">复制引用</button><button data-word-search="${E(w.en||w.zh)}">查找同义词</button></div>
- </div><details><summary>出处与原记音</summary>${dictionaryProvenance(w)}</details>${typeof editorialNotesHTML==='function'?editorialNotesHTML(w):''}${related.length?`<h3>同义词条</h3><div class="stack">${related.map(x=>`<button data-open="${x.id}">${E(notationHead(x))} · ${E(wordVarietyInfo(x).label)} · ${E(x.zh||x.en)}</button>`).join('')}</div>`:''}`
+ </div><details><summary>出处与原记音</summary>${dictionaryProvenance(w)}</details>${typeof editorialNotesHTML==='function'?editorialNotesHTML(w):''}${related.length?`<h3>同义词条</h3><div class="stack">${related.map(x=>`<button data-open="${x.id}">${notationHeadHTML(x)} · ${E(wordVarietyInfo(x).label)} · ${E(x.zh||x.en)}</button>`).join('')}</div>`:''}`
 }
 
 function sourceVariantPanel(s){if(s.canonicalSource)return `<div class="notice">本文件属于 <button data-open="${s.canonicalSource}">${E(S[s.canonicalSource].title)}</button>。</div>`;if(!s.variantIds)return '';return `<h3>原著与文件版本</h3><p>${E(s.originalTitle)}</p>${s.variantIds.map(id=>{const v=S[id];return `<article class="card"><button data-open="${id}">${E(v.title)}</button>${sourceLink(id)}</article>`}).join('')}`}

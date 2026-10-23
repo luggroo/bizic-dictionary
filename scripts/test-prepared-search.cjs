@@ -42,6 +42,8 @@ for(let i=0;i<fullWords.length;i++){
  for(const mode of ['accent',baseline.isSouthernWord(a)?'poj':'ye']){
   for(const c of [baseline,fast]){c.mode=mode;vm.runInContext('spellingDisplay=mode;southernDisplay=mode;',c);}
   equal(baseline.notationHead(a),fast.notationHead(b),a.id+' '+mode);
+  equal(baseline.wordCardNotation(a),fast.wordCardNotation(b),a.id+' '+mode+' loan shading and paired forms');
+  equal(baseline.notationCells(a),fast.notationCells(b),a.id+' '+mode+' alternative loan shading');
  }
 }
 const searches=[['水',''],['water','en'],["'",'tujia'],['’','tujia'],['ce','tujia'],['here','en'],['there','en'],['否定','zh'],['ıi','tujia'],['','']];

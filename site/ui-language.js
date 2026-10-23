@@ -158,7 +158,7 @@
   function translateGrammar() {
     // Keep complete prose runs together across IPA font decoration. Switching
     // languages restores the run before typography marks its phonetic spans.
-    for (const root of document.querySelectorAll('.grammar-article,[data-reference-grammar]')) {
+    for (const root of document.querySelectorAll('.grammar-article,[data-reference-grammar],.editorial-notes')) {
       for (const span of root.querySelectorAll('[data-grammar-localized]')) {
         const memory = grammarMemory.get(span);
         if (!memory || memory.language === language) continue;

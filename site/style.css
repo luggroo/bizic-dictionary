@@ -33,6 +33,7 @@
 @media(max-width:600px){.media-switch{margin-left:auto}.shell>header{height:auto;min-height:56px;padding-top:10px;padding-bottom:10px}}
 
 .word-ipa{font-size:13px;line-height:1.6;color:var(--muted,#626b68);font-family:"Charis SIL","Doulos SIL",Georgia,serif;overflow-wrap:anywhere;margin:3px 0 8px}
+.loan-spelling{color:#737b76}
 
 .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;align-items:stretch}
 .word-card{min-width:0;display:flex;flex-direction:column;background:white;border:1px solid var(--line);border-radius:9px;padding:20px;overflow-wrap:anywhere}
