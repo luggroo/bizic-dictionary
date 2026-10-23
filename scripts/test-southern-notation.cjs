@@ -144,8 +144,8 @@ const translations=vm.runInNewContext(fs.readFileSync(path.join(root,'ui-transla
 assert(translations[run('SOUTH_PINYIN_RULES')].includes('yio → yo'));
 console.log('PASS: y + medial i across all rimes, tones, sources, '+rows.length+' Southern records, display and conversion; yi/yin and syllable boundaries preserved');
 assert.equal(ctx.northernSurveySpelling('ʑia55phiã33','60823').accent,'yāpian');
-assert.equal(ctx.northernSurveySpelling('sɿ33sɿ33ui55ʑia33','60823').accent,"sisi'uīya");
+assert.equal(ctx.northernSurveySpelling('sɿ33sɿ33ui55ʑia33','60823').accent,'sisiwēiya');
 assert.equal(ctx.northernSurveySpelling('ʑia55phiã33','60823').ye,'yaxpianr');
 for(const [core,expected] of [['yia','ya'],['yio','yo'],['yier','yer'],['yiu','you'],['yi','yi'],['yin','yin'],['yu','yu']]){
- assert.equal(ctx.northernYCore(core),expected);assert.equal(ctx.normalizeYInitialSyllable(core),expected);
+ assert.equal(ctx.northernInitialCore(core),expected);assert.equal(ctx.normalizeYInitialSyllable(core),expected);
 }

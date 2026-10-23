@@ -43,6 +43,7 @@ jobs:
           node scripts/test-southern-source-rimes.cjs
           node scripts/test-notation-pairs.cjs
           node scripts/test-y-initial.cjs
+          node scripts/test-w-initial.cjs
           node scripts/test-loanword-review.cjs
       - name: Prepare fast dictionary search
         run: |

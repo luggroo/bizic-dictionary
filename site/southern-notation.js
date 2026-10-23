@@ -82,9 +82,10 @@ function southernSpelling(raw,source='',explicit=false){
   if(onset==='w'&&!sharedRime){pojOnset='';if(!pojRime.startsWith('u'))pojRime='u'+pojRime;}
   pojRime=southYInitialRime(pojOnset,pojRime);
   const pojMarked=m[2]==='?'?pojRime+'⁇':southMark(pojRime,m[2],explicit);
-  const pinyinOnset=!onset&&/^i/.test(r.normalize('NFD'))?'y':nasalOverlap?'n':SOUTH_ONSETS[onset][0];
+  const pinyinOnset=!onset&&/^i/.test(r.normalize('NFD'))?'y':!onset&&/^u/.test(r.normalize('NFD'))?'w':nasalOverlap?'n':SOUTH_ONSETS[onset][0];
   let pinyinBaseRime=rime==='rı'?'i':rime;
   pinyinBaseRime=southYInitialRime(pinyinOnset,pinyinBaseRime);
+  if(pinyinOnset==='w')pinyinBaseRime=pinyinBaseRime.replace(/^u(?=[aeiouüı])/,'');
   const core=pinyinPalatalCore(pinyinOnset+pinyinBaseRime);
   const pinyinRime=core.slice(pinyinOnset.length);
   const marked=m[2]==='?'?pinyinRime+'⁇':southMark(pinyinRime,m[2],explicit);if(marked===null)return null;
@@ -112,6 +113,6 @@ function southernMappingHTML(){
  mappingTable('声母',['IPA','调号拼音','白话字拼音'],Object.entries(SOUTH_ONSETS).filter(([k])=>k).map(([k,v])=>['/'+k+'/',...v]))+
  mappingTable('韵母',['IPA','调号拼音','白话字'],southernRimeRows().filter(([r])=>r!=='ɨ').map(([k,...v])=>['/'+k+'/',...v]))+
  mappingTable('分来源韵母',['来源','IPA','声母环境','调号拼音','白话字'],southernSourceRimeRows())+
- '<p>'+SOUTH_PINYIN_RULES+'</p><p>'+SOUTH_SOURCE_RIME_RULES+'</p><p>'+SOUTH_DOTLESS_I_RULES+'</p><p>南部白话字将 /dz, dʑ/ 写 j，/z/ 写 r；/ts, tɕ/ 统一写 c，/tsʰ, tɕʰ/ 统一写 ch，/s, ɕ/ 统一写 s。前元音 i、ü 前通常读为腭化音；这仅是正字法合并，不代表这些音在全部材料中已证明互补分布，原始 IPA 仍可在词条出处查看。</p><p>'+SOUTH_APICAL_RULES+'</p><p>田德生“鼻涕”的 /ɨ̃/ 写 en。原始音标可在词条出处中查看。</p></details>';
+ '<p>'+SOUTH_PINYIN_RULES+'</p><p>'+W_INITIAL_RULES+'</p><p>'+SOUTH_SOURCE_RIME_RULES+'</p><p>'+SOUTH_DOTLESS_I_RULES+'</p><p>南部白话字将 /dz, dʑ/ 写 j，/z/ 写 r；/ts, tɕ/ 统一写 c，/tsʰ, tɕʰ/ 统一写 ch，/s, ɕ/ 统一写 s。前元音 i、ü 前通常读为腭化音；这仅是正字法合并，不代表这些音在全部材料中已证明互补分布，原始 IPA 仍可在词条出处查看。</p><p>'+SOUTH_APICAL_RULES+'</p><p>田德生“鼻涕”的 /ɨ̃/ 写 en。原始音标可在词条出处中查看。</p></details>';
 }
 NOTATION_CONFIG.profiles.push({id:'yubao-60824',source:'yubao-60824',title:'中国语保 · 南部潭溪',kind:'south',count:2884,dialects:['南部'],status:'南部双方案',notes:[]});

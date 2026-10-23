@@ -32,11 +32,11 @@ function sourceNotationValues(w){
  }
  if(!(w.notations?.ye||[]).length)for(const v of w.notations?.brassett||[]){
   const raw=normalizedBrassettText(v.text);
-  if(standardBrassettIPA(raw))values.ye.push({text:standardBrassettToYe(raw),method:'derived',profile:'brassett-to-ye',attestationIds:[...(v.attestationIds||[])]});
+  if(standardBrassettIPA(raw))values.ye.push({text:displayBrassettYe(raw),method:'derived',profile:'brassett-to-ye',attestationIds:[...(v.attestationIds||[])]});
  }
  sourceNotationCache.set(w,values);return values;
 }
-function notationValues(w,kind){const values=[...(w.notations?.[kind]||[]),...sourceNotationValues(w)[kind].filter(v=>!(w.notations?.[kind]||[]).some(x=>x.text===v.text))];return kind==='ipa'?mergeIPANotations(values):kind==='ye'?values.map(v=>({...v,text:normalizeUnmarkedI(v.text)})):values}
+function notationValues(w,kind){const values=[...(w.notations?.[kind]||[]),...sourceNotationValues(w)[kind].filter(v=>!(w.notations?.[kind]||[]).some(x=>x.text===v.text))];return kind==='ipa'?mergeIPANotations(values):kind==='ye'?values.map(v=>{const b=(w.notations?.brassett||[]).find(b=>standardBrassettToYe(normalizedBrassettText(b.text))===v.text);return {...v,text:b?displayBrassettYe(normalizedBrassettText(b.text)):normalizeYeInitials(v.text,v.ipaForms?.length===1?v.ipaForms[0]:'')};}):values}
 let spellingDisplay='accent';try{if(localStorage.getItem('tujia-north-spelling-v2')==='ye')spellingDisplay='ye'}catch{}
 const TONE_MARKS={1:'\u0304',2:'\u0301',3:'\u030c',4:'\u0300'};
 // Apply to one decoded syllable, never to source IPA or tone-letter strings.
@@ -52,7 +52,7 @@ function accentSyllable(core,tone){
 // Keep word spacing; use an apostrophe at ambiguous syllable boundaries.
 function accentTagged(text,pattern,decode){let end=-1,previous='';return String(text).replace(pattern,(match,core,tone,offset)=>{const part=decode(core,tone),boundary=offset===end&&(/^[aeiouüê]/i.test(part.core)||(/n$/i.test(previous)&&/^g/i.test(part.core)));end=offset+match.length;previous=part.core;return (boundary?"'":'')+accentSyllable(part.core,part.tone)})}
 function yeToAccent(text){return String(text).split(/(⟦[^⟧]*⟧)/g).map(part=>part.startsWith('⟦')?'□':accentTagged(part,/([a-züê]*?[aeiouüê][a-züê]*?)([xfrv])/gi,(core,t)=>({core,tone:{x:1,f:2,r:3,v:4}[t.toLowerCase()]}))).join('')}
-function displayBrassett(text,mode=spellingDisplay){const raw=plainTones(text);if(/^[-\s]*i[-\s]*$/.test(raw))return normalizeUnmarkedI(raw);if(mode==='accent')return accentTagged(raw,/([a-z]+)\s*([1-4])(?![0-9])/gi,(core,tone)=>({core:displayBrassettCore(core.toLowerCase()),tone}));return raw.replace(/([a-z]+)\s*([1-4])(?![0-9])/gi,(_,core,t)=>displayBrassettCore(core.toLowerCase())+{1:'x',2:'f',3:'r',4:'v'}[t])}
+function displayBrassett(text,mode=spellingDisplay){const raw=plainTones(text);if(/^[-\s]*[iu][-\s]*$/.test(raw))return normalizeYeInitials(raw);if(mode==='accent')return accentTagged(raw,/([a-z]+)\s*([1-4])(?![0-9])/gi,(core,tone)=>({core:displayBrassettCore(core.toLowerCase()),tone}));return raw.replace(/([a-z]+)\s*([1-4])(?![0-9])/gi,(_,core,t)=>displayBrassettCore(core.toLowerCase())+{1:'x',2:'f',3:'r',4:'v'}[t])}
 function accentForNotation(w,v){if(v.accent)return v.accent;const b=notationValues(w,'brassett').find(b=>standardBrassettToYe(plainTones(b.text))===v.text);return b?displayBrassett(b.text,'accent').replace(/⟦[^⟧]*⟧/g,'□'):yeToAccent(v.text)}
 function visibleNotationValues(w){if(isSouthernWord(w))return southernNotationValues(w).map(v=>({...v,text:typeof reviewedSpelling==='function'?reviewedSpelling(w,v[southernDisplay==='poj'?'poj':'accent'],southernDisplay):v[southernDisplay==='poj'?'poj':'accent']}));const vals=notationValues(w,'ye');return vals.map(v=>({...v,text:typeof reviewedSpelling==='function'?reviewedSpelling(w,spellingDisplay==='accent'?accentForNotation(w,v):v.text.replace(/⟦[^⟧]*⟧/g,'□'),spellingDisplay):(spellingDisplay==='accent'?accentForNotation(w,v):v.text.replace(/⟦[^⟧]*⟧/g,'□'))})).filter((v,i,a)=>a.findIndex(x=>x.text===v.text)===i)}
 function wordIPA(w){return [...new Set((w._ipa||notationValues(w,'ipa').map(v=>v.text)).flatMap(text=>text.split(/[~～]/)).map(text=>normalizeIPA(text.trim())).filter(Boolean))]}
@@ -86,8 +86,20 @@ function spellingSelector(item=null){
  return (!south?select('north','北部',spellingDisplay,[['accent','调号拼音'],['ye','叶式拼音']]):'')+(!north?select('south','南部',southernDisplay,[['accent','调号拼音'],['poj','白话字拼音']]):'');
 }
 function normalizeUnmarkedI(text){return String(text).replace(/(^|[\s-])i(?=$|[\s-])/g,'$1yi')}
-function displayBrassettCore(core){return standardBrassettToYe(normalizeYInitialSyllable(core,standardSyllableIPA(core)||''))}
-function displayBrassettYe(text){return text.replace(/([a-z]+)([1-4]?)/g,(_,core,tone)=>displayBrassettCore(core)+({1:'x',2:'f',3:'r',4:'v'}[tone]||''))}
+function normalizeYeInitials(text,ipa=''){
+ const value=normalizeUnmarkedI(text),raw=plainTones(ipa),pattern=/([a-züê]*?[aeiouüê][a-züê]*?)([xfrv])/g;
+ // A supplied source form preserves a reduced written medial: /uo/ + or → wor.
+ const cores=[...raw.matchAll(/([\p{L}\p{M}ʔ]+)[0-9]+/gu)].map(m=>m[1]);
+ const aligned=cores.length>0&&cores.length===[...value.matchAll(pattern)].length&&!value.includes('⟦');let index=0;
+ if(/^[\p{L}\p{M}ʔ]+$/u.test(raw)&&/^[a-züê]+$/.test(value))return normalizeWInitialSyllable(value,raw);
+ return value.split(/(⟦[^⟧]*⟧)/g).map(part=>part.startsWith('⟦')?part:part.replace(pattern,(_,core,tone)=>normalizeWInitialSyllable(core,aligned?cores[index++]:(core.startsWith('u')?'u':''))+tone).replace(/(^|[\s-])u(?=$|[\s-])/g,'$1wu')).join('');
+}
+function displayBrassettCore(core,ipaCore=standardSyllableIPA(core)||''){return standardBrassettToYe(normalizeInitialGlides(core,ipaCore))}
+function displayBrassettYe(text,ipa=''){
+ const cores=[...plainTones(ipa).matchAll(/([^0-9]+)([0-9]+)/g)].map(m=>m[1]),pattern=/([a-z]+)([1-4]?)/g;
+ const aligned=cores.length>0&&cores.length===[...text.matchAll(pattern)].length;let index=0;
+ return text.replace(pattern,(_,core,tone)=>displayBrassettCore(core,aligned?cores[index++]:undefined)+({1:'x',2:'f',3:'r',4:'v'}[tone]||''));
+}
 function standardBrassettToYe(text){return text.replaceAll('hh','hx').replaceAll('eng','en').replaceAll('ing','in').replaceAll('uo','o').replace(/[1-4]/g,c=>({1:'x',2:'f',3:'r',4:'v'}[c]))}
 function standardSyllableIPA(core){
  const onset=Object.keys(NOTATION_CONFIG.onsets).filter(Boolean).sort((a,b)=>b.length-a.length).find(k=>core.startsWith(k))||'',rhyme=core.slice(onset.length);
@@ -155,6 +167,18 @@ function normalizeYInitialSyllable(core,ipaCore=''){
  if(core==='yiu')return 'you'; // Northern iu uses ou after y; y+u stays yu.
  return core.replace(/^yi(?=[aeiouüêı])/,'y');
 }
+function normalizeWInitialSyllable(core,ipaCore=''){
+ // A nasal coda does not remove the syllable's vowel: /u, ũ/ → wu, wun.
+ // Northern ui contracts uei; un can also contract a medial plus nasal rime.
+ if(/^[uʊ]/.test(ipaCore.normalize('NFD'))&&!core.startsWith('w')){
+  if(core==='un'&&/^u[əɤɜɛe]/.test(ipaCore))core='uen';
+  core='w'+core;
+ }
+ if(core==='wui')return 'wei';
+ return core.replace(/^wu(?=[aeiouüêı])/,'w');
+}
+function normalizeInitialGlides(core,ipaCore=''){return normalizeWInitialSyllable(normalizeYInitialSyllable(core,ipaCore),ipaCore)}
+const W_INITIAL_RULES='拼音中，元音起首的 /u/ 写 wu，后接其他元音时写 w，如 /ua/ → wa、/uo/ → wo、/uei/ → wei。白话字沿用自己的拼写规则。';
 function sourceSyllableCores(core,p){
  return rawSourceSyllableCores(core,p)?.map(value=>normalizeYInitialSyllable(value,core));
 }
@@ -184,7 +208,7 @@ function rawSourceSyllableCores(core,p){
  if(mode==='chen'&&r==='e'&&['tɕ','tɕʰ','ɕ','ɲ̟'].includes(on))rs=['ie'];
  return [...new Set(ons.flatMap(o=>rs.map(v=>o==='y'?normalizeYInitialSyllable(o+v):o+v)))];
 }
-function convertNotationAtomic(input,pid){const profile=NOTATION_CONFIG.profiles.find(p=>p.id===pid);if(!profile)return {error:'尚无此来源的独立规则。'};if(profile.conversionEnabled===false)return {error:profile.status+'。原始输入：'+phon(input)};if(['legacy','south'].includes(profile.kind))return {error:profile.status+'。'+(profile.notes||[]).join(' ')};let s=plainTones(input).normalize('NFC').trim().replaceAll('\\u2009','').replace(/\s+/g,''),options=[];if(profile.kind==='brassett'){s=s.toLowerCase().replace(/[|｜◦]/g,'');const normalized=s.replace(/[1-4]/g,c=>profile.toneMap[c]?.[0]||c);if(!standardBrassettIPA(normalized))return {error:'声韵或调号无法解析，保留原文。无调音节可直接转写。'};options=[normalized]}else if(profile.kind==='ye'){options=reverseYe(s.toLowerCase());if(!options.length)return {error:'无法识别完整音节，请检查分词和声调标记。'}}else{s=s.replace(/^\[/,'').replace(/\]$/,'').replace(/^\//,'').replace(/\/$/,'').replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ').replaceAll('ʦ','ts').replaceAll('ʨ','tɕ').replaceAll('ȵ','ɲ̟');s=normalizeIPAAspiration(s);let pos=0;options=[''];for(const m of s.matchAll(/([^0-9]+)([0-9]+)/g)){if(m.index!==pos)return {error:'音节边界未解析，保留原文。'};const cores=sourceSyllableCores(m[1],profile),tones=profile.toneMap?.[m[2]];if(!cores?.length||!tones?.length)return {error:`来源 ${profile.title} 中的 ${phon(m[0])} 尚无已核映射（${!cores?.length?'音值／韵母或i的条件分布':'调值'}）。原形保持不变。`};options=options.flatMap(prefix=>cores.flatMap(core=>tones.map(t=>prefix+core+t))).slice(0,16);pos=m.index+m[0].length}if(!pos||pos!==s.length)return {error:'请输入每个音节都带数字调值的IPA，例如 kɨ²¹。'}}options=[...new Set(options)];return {profile:profile.title,status:profile.status,candidate:profile.kind==='ipa'&&profile.id!=='brassett-phonetic',ambiguous:options.length>1,original:input,rows:options.map(b=>({brassett:phon(b),ye:displayBrassettYe(b),ipa:standardBrassettIPA(b)}))}}
+function convertNotationAtomic(input,pid){const profile=NOTATION_CONFIG.profiles.find(p=>p.id===pid);if(!profile)return {error:'尚无此来源的独立规则。'};if(profile.conversionEnabled===false)return {error:profile.status+'。原始输入：'+phon(input)};if(['legacy','south'].includes(profile.kind))return {error:profile.status+'。'+(profile.notes||[]).join(' ')};let s=plainTones(input).normalize('NFC').trim().replaceAll('\\u2009','').replace(/\s+/g,''),options=[];if(profile.kind==='brassett'){s=s.toLowerCase().replace(/[|｜◦]/g,'');const normalized=s.replace(/[1-4]/g,c=>profile.toneMap[c]?.[0]||c);if(!standardBrassettIPA(normalized))return {error:'声韵或调号无法解析，保留原文。无调音节可直接转写。'};options=[normalized]}else if(profile.kind==='ye'){options=reverseYe(s.toLowerCase());if(!options.length)return {error:'无法识别完整音节，请检查分词和声调标记。'}}else{s=s.replace(/^\[/,'').replace(/\]$/,'').replace(/^\//,'').replace(/\/$/,'').replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ').replaceAll('ʦ','ts').replaceAll('ʨ','tɕ').replaceAll('ȵ','ɲ̟');s=normalizeIPAAspiration(s);let pos=0;options=[''];for(const m of s.matchAll(/([^0-9]+)([0-9]+)/g)){if(m.index!==pos)return {error:'音节边界未解析，保留原文。'};const cores=sourceSyllableCores(m[1],profile),tones=profile.toneMap?.[m[2]];if(!cores?.length||!tones?.length)return {error:`来源 ${profile.title} 中的 ${phon(m[0])} 尚无已核映射（${!cores?.length?'音值／韵母或i的条件分布':'调值'}）。原形保持不变。`};options=options.flatMap(prefix=>cores.flatMap(core=>tones.map(t=>prefix+core+t))).slice(0,16);pos=m.index+m[0].length}if(!pos||pos!==s.length)return {error:'请输入每个音节都带数字调值的IPA，例如 kɨ²¹。'}}options=[...new Set(options)];return {profile:profile.title,status:profile.status,candidate:profile.kind==='ipa'&&profile.id!=='brassett-phonetic',ambiguous:options.length>1,original:input,rows:options.map(b=>({brassett:phon(b),ye:displayBrassettYe(b,profile.kind==='ipa'?s:''),ipa:standardBrassettIPA(b)}))}}
 function convertNotation(input,pid){if(NOTATION_CONFIG.profiles.find(p=>p.id===pid)?.kind==='south'){const r=southernSpelling(input,pid);return r?{profile:pid,reviewed:true,southern:true,rows:[{...r,ipa:phon(input)}]}:{error:'此词尚无完整映射，保留国际音标。'}}if(['yubao-60756','yubao-60757','yubao-60823'].includes(pid)){const r=northernSurveySpelling(input,pid.slice(6));return r?{profile:NOTATION_CONFIG.profiles.find(p=>p.id===pid)?.title,reviewed:true,rows:[{ye:r.ye,accent:r.accent,brassett:'',ipa:phon(input)}]}:{error:'此词包含尚未确定的声韵或缺失调值，保留国际音标。'}}const p=NOTATION_CONFIG.profiles.find(p=>p.id===pid),override=p?.conversionEnabled!==false&&p?.wordOverrides?.[plainTones(input).normalize('NFC').replace(/\s+/g,'').trim()];if(override)return {profile:p.title,status:'词例补充记音',candidate:false,reviewed:true,original:input,rows:[{ye:override.ye,brassett:phon(override.brassett),ipa:null}]};const full=convertNotationAtomic(input,pid);if(!full.error||!p||p.kind!=='ipa'||p.conversionEnabled===false)return full;const raw=plainTones(input).normalize('NFC'),unresolved=[],segments=[];let pos=0,converted=0;function literal(text){if(!text)return;const unknown=/[\p{L}\p{M}0-9]/u.test(text);if(unknown)unresolved.push({text:phon(text),reason:'无调、残缺或未解析片段'});segments.push({original:phon(text),rows:[{ye:unknown?'⟦'+phon(text)+'⟧':text,brassett:unknown?'⟦'+phon(text)+'⟧':text}],unresolved:unknown})}for(const m of raw.matchAll(/([\p{L}\p{M}]+)([0-9]+)/gu)){literal(raw.slice(pos,m.index));const result=convertNotationAtomic(m[0],pid);if(result.error){unresolved.push({text:phon(m[0]),reason:result.error});segments.push({original:phon(m[0]),rows:[{ye:'⟦'+phon(m[0])+'⟧',brassett:'⟦'+phon(m[0])+'⟧'}],unresolved:true})}else{segments.push({original:phon(m[0]),rows:result.rows});converted++}pos=m.index+m[0].length}literal(raw.slice(pos));if(!converted)return {...full,unresolved};let rows=[{ye:'',brassett:'',ipa:null}];for(const seg of segments)rows=rows.flatMap(a=>seg.rows.map(b=>({ye:a.ye+b.ye,brassett:a.brassett+b.brassett,ipa:null}))).slice(0,16);return {profile:p.title,status:p.status,candidate:true,original:input,ambiguous:rows.length>1,partial:unresolved.length>0,segmented:true,unresolved,segments,rows}}
 function mappingTable(title,headers,rows){return `<h3>${E(title)}</h3><div class="table-wrap"><table><thead><tr>${headers.map(x=>`<th>${E(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(x=>`<td>${E(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
 const BRASSETT_GROUPS={
@@ -254,7 +278,7 @@ function notationGuide(){
  const profiles=NOTATION_CONFIG.profiles;
  const get=id=>profiles.find(p=>p.id===id);
  const southTones=[['55','ā','高平'],['33','a（可标 a̱）','中平'],['35','á','上升'],['21','à','低降'],['13','ǎ','低升']];
- return `<details class="panel notation-section"><summary><h2>拼音与调查点</h2></summary><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p><p>各调查点的调号拼音和叶式拼音都用 y 表示音节起首的 /j/、/ʑ/，以及元音起首的 /i/、/i…/。例如 /i/ → yi、/ie/ → ye、/ia/ → ya；yi、yin 保留 i。白话字沿用自己的拼写规则。</p></details>
+ return `<details class="panel notation-section"><summary><h2>拼音与调查点</h2></summary><p>按调查点查看各份材料的声母、韵母和声调对应。龙山提供叶式拼音和调号拼音；保靖各点及泸溪分别列出各自的规则。原始 IPA 可在词条出处查看。</p><p>各调查点的调号拼音和叶式拼音都用 y 表示音节起首的 /j/、/ʑ/，以及元音起首的 /i/、/i…/。例如 /i/ → yi、/ie/ → ye、/ia/ → ya；yi、yin 保留 i。白话字沿用自己的拼写规则。</p><p>${W_INITIAL_RULES}</p></details>
  <details class="panel notation-section"><summary><h2>龙山</h2></summary><p>Brassett 2004、2006 共用一列拼音。各来源的原记音分别对照叶式与调号拼音。</p>
  <details><summary>Brassett 拼音与 IPA</summary>${notationSourceTables(get('1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE'))}</details>
  ${notationMatrix('longshan')}</details>

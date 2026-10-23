@@ -3230,3 +3230,5 @@ Object.assign(UI_TRANSLATIONS, {
  "可能借自西南官话「造孽」。": "Possibly borrowed from Southwestern Mandarin 造孽 (used to mean pitiful).",
  "当代湘语借词，原词为「造孽」。": "Contemporary loan from Xiang 造孽 (used to mean pitiful)."
 });
+
+Object.assign(UI_TRANSLATIONS,{"拼音中，元音起首的 /u/ 写 wu，后接其他元音时写 w，如 /ua/ → wa、/uo/ → wo、/uei/ → wei。白话字沿用自己的拼写规则。":"In romanization, vowel-initial /u/ is written wu and becomes w before another vowel: /ua/ → wa, /uo/ → wo, /uei/ → wei. POJ-style spelling follows its own rules."});
