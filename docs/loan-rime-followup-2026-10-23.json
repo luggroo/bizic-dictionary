@@ -1,0 +1,4934 @@
+{
+  "baseCommit": "2b5ff6e",
+  "scope": "Explicit syllable-level follow-up, uai/iau/ɛn/ən/ui screening guards, and separation of early/undated loans from modern loans.",
+  "limits": [
+    "The graph remains outside the repository.",
+    "Unreviewed hot cells are retrieval leads, not loan classifications.",
+    "Grammatical liao is excluded; lexical 完了 and 不得了 are explicit exceptions.",
+    "For ui, possible native stem + i must be checked separately; no blanket rime-based loan rule is applied.",
+    "The rare donor character 㩆 is retained. Unresolved donor characters and varieties remain unresolved."
+  ],
+  "decisions": [
+    {
+      "action": "add-loan-note",
+      "zh": "阉割; 阉鸡",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-43458",
+          "source": "stedt-cb523fc3dc",
+          "term": "ɕiɑ̃³⁵",
+          "zh": "阉割；阉鸡",
+          "en": "castrate (caponize)",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 43458 · 原文定位 未标明",
+          "citation": "Tian 86"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-43458",
+        "wordIds": [
+          "stedt-rn-43458"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语，具体原词与方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɕiɑ̃³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese; the original donor form and specific variety remain to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "旋转",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-2594",
+          "source": "yubao-60756",
+          "term": "tsuaŋ33tsuɚ33xa33",
+          "zh": "旋转",
+          "en": "spin",
+          "locator": "词汇 2594"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2594",
+        "wordIds": [
+          "yubao-60756-v-2594"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "前两个音节为汉语借入部分，具体原词与方言来源待核；末音节 /xa³³/ 不在此范围内。",
+        "reviewedForms": [
+          {
+            "ipa": "tsuaŋ³³tsuɚ³³xa³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The first two syllables are borrowed from Chinese; the original donor form and specific variety remain to be established. Final /xa³³/ is outside this component."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "顶针",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60757-v-1860",
+          "source": "yubao-60757",
+          "term": "ti53tsɘn55ku33li33",
+          "zh": "顶针",
+          "en": "thimble",
+          "locator": "词汇 1860"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-1860",
+        "wordIds": [
+          "yubao-60757-v-1860"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「顶针」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ti⁵³tsɘn⁵⁵ku³³li³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "顶针"
+      },
+      "noteEn": "The 顶针 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "拧; 拧湿布等",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-288954",
+          "source": "stedt-cb523fc3dc",
+          "term": "tɕiu⁵⁵",
+          "zh": "拧",
+          "en": "wring",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 288954 · 原文定位 未标明",
+          "citation": "Tian 86"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-288954",
+        "wordIds": [
+          "stedt-rn-288954"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "whole",
+        "text": "借自湘语或西南官话「㩆」（拧湿布等），具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiəu⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "㩆"
+      },
+      "noteEn": "Borrowed from Xiang or Southwestern Mandarin 㩆 (wring, for example a wet cloth); the specific donor variety remains to be established.",
+      "expectedBadgeScope": "mixed"
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "酒曲",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60757-v-2063",
+          "source": "yubao-60757",
+          "term": "tɕhiəu24tsɿ33",
+          "zh": "酒曲",
+          "en": "fermentation starter",
+          "locator": "词汇 2063"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-2063",
+        "wordIds": [
+          "yubao-60757-v-2063"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「曲子」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰiəu²⁴tsɿ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "曲子"
+      },
+      "noteEn": "Borrowed from Chinese 曲子; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "花生",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60757-v-0192",
+          "source": "yubao-60757",
+          "term": "luo22kan22sɘn33",
+          "zh": "花生",
+          "en": "peanut",
+          "notice": "指果实，注意婉称",
+          "locator": "词汇 0192"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-0192",
+        "wordIds": [
+          "yubao-60757-v-0192"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语，具体原词与方言来源待核。原调查注明“指果实，注意婉称”。",
+        "reviewedForms": [
+          {
+            "ipa": "luo²²kan²²sɘn³³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese; the original donor form and specific variety remain to be established. The survey specifies the peanut fruit and notes euphemistic usage."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "级",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60757-v-1743",
+          "source": "yubao-60757",
+          "term": "thɘn24tsɿ55",
+          "zh": "级",
+          "en": "stair step",
+          "notice": "楼梯的～",
+          "locator": "词汇 1743"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-1743",
+        "wordIds": [
+          "yubao-60757-v-1743"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "text": "可能借自西南官话，汉字本字待考；原调查义为楼梯的一级。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰɘn²⁴tsɿ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin; the original Chinese character is unknown. The survey sense is a stair step."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "毕业",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-2525",
+          "source": "yubao-60756",
+          "term": "pi35ȵɛ55",
+          "zh": "毕业",
+          "en": "graduate",
+          "locator": "词汇 2525"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2525",
+        "wordIds": [
+          "yubao-60756-v-2525"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「毕业」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "pi³⁵ȵɛ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "毕业"
+      },
+      "noteEn": "Borrowed from Chinese 毕业; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "卖",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w1471",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "mai2",
+          "zh": "卖",
+          "en": "to sell",
+          "locator": "词条 1471"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w1471",
+        "wordIds": [
+          "w1471"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「卖」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "mai²⁴",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "卖"
+      },
+      "noteEn": "Borrowed from Chinese 卖; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "溶化（溶化了）",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-423788",
+          "source": "stedt-610ab69a37",
+          "term": "joŋ²¹ xua³⁵",
+          "zh": "溶化（溶化了）",
+          "en": "dissolve",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 423788 · 原文定位 1592.49",
+          "citation": "Huang and Dai 92 TBL"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-423788",
+        "wordIds": [
+          "stedt-rn-423788"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「溶化」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "joŋ²¹ xua³⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "溶化"
+      },
+      "noteEn": "Borrowed from Chinese 溶化; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "使溶解",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-423829",
+          "source": "stedt-610ab69a37",
+          "term": "joŋ²¹ xua³⁵",
+          "zh": "使溶解",
+          "en": "dissolve (cause to)",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 423829 · 原文定位 1593.49",
+          "citation": "Huang and Dai 92 TBL"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-423829",
+        "wordIds": [
+          "stedt-rn-423829"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「溶化」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "joŋ²¹ xua³⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "溶化"
+      },
+      "noteEn": "Borrowed from Chinese 溶化; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "坏",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w897",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "huai2",
+          "zh": "坏",
+          "en": "to be bad",
+          "locator": "词条 897"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w897",
+        "wordIds": [
+          "w897"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「坏」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "fai²⁴",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "坏"
+      },
+      "noteEn": "Borrowed from Chinese 坏; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "再",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w2626",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "zai2",
+          "zh": "再",
+          "en": "again",
+          "locator": "词条 2626"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w2626",
+        "wordIds": [
+          "w2626"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「再」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsai²⁴",
+            "span": [
+              1,
+              1
+            ]
+          },
+          {
+            "ipa": "tsai³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "再"
+      },
+      "noteEn": "Borrowed from Chinese 再; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "在",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w2627",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "zai2",
+          "zh": "在",
+          "en": "to be at",
+          "locator": "词条 2627"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w2627",
+        "wordIds": [
+          "w2627"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「在」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsai²⁴",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "在"
+      },
+      "noteEn": "Borrowed from Chinese 在; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "山寨",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60823-v-1729",
+          "source": "yubao-60823",
+          "term": "tsai13tsɿ55",
+          "zh": "山寨",
+          "en": "mountain village",
+          "locator": "词汇 1729"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1729",
+        "wordIds": [
+          "yubao-60823-v-1729"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「寨子」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsai¹³tsɿ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "寨子"
+      },
+      "noteEn": "Borrowed from Chinese 寨子; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "肾",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w2539",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "yao1zi1",
+          "zh": "肾",
+          "en": "kidney",
+          "locator": "词条 2539"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w2539",
+        "wordIds": [
+          "w2539"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「腰子」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "jau⁵⁵tsɨ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "腰子"
+      },
+      "noteEn": "Borrowed from Chinese 腰子; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "认识",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60823-v-0910",
+          "source": "yubao-60823",
+          "term": "zɤ̃31tuai55",
+          "zh": "认识",
+          "en": "know; recognize",
+          "notice": "我～他",
+          "locator": "词汇 0910"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0910",
+        "wordIds": [
+          "yubao-60823-v-0910"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「认得」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zɤ̃³¹tuai⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "认得"
+      },
+      "noteEn": "Borrowed from Chinese 认得; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "熟人",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60823-v-2312",
+          "source": "yubao-60823",
+          "term": "zɤ̃33tuai55",
+          "zh": "熟人",
+          "en": "acquaintance",
+          "locator": "词汇 2312"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2312",
+        "wordIds": [
+          "yubao-60823-v-2312"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「认得」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zɤ̃³³tuai⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "认得"
+      },
+      "noteEn": "Borrowed from Chinese 认得; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "认得",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60823-v-2823",
+          "source": "yubao-60823",
+          "term": "zɤ̃33tuai55",
+          "zh": "认得",
+          "en": "recognize",
+          "locator": "词汇 2823"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2823",
+        "wordIds": [
+          "yubao-60823-v-2823"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「认得」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zɤ̃³³tuai⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "认得"
+      },
+      "noteEn": "Borrowed from Chinese 认得; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "摔",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w2171",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "suai4",
+          "zh": "摔",
+          "en": "to fling",
+          "locator": "词条 2171"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w2171",
+        "wordIds": [
+          "w2171"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「摔」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "suai⁵¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "摔"
+      },
+      "noteEn": "Borrowed from Chinese 摔; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "完了",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w73",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "-wan3liao1",
+          "zh": "完了",
+          "en": "[completed]",
+          "locator": "词条 73"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w73",
+        "wordIds": [
+          "w73"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「完了」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "-wɛn²¹liau⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "完了"
+      },
+      "noteEn": "Borrowed from Chinese 完了; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "表",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w293",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "biao4",
+          "zh": "表",
+          "en": "watch",
+          "locator": "词条 293"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w293",
+        "wordIds": [
+          "w293"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「表」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "piau⁵¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "表"
+      },
+      "noteEn": "Borrowed from Chinese 表; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "表扬",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w294",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "biao1yan3",
+          "zh": "表扬",
+          "en": "to praise",
+          "locator": "词条 294"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w294",
+        "wordIds": [
+          "w294"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「表扬」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "piau⁵⁵jɛn²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "表扬"
+      },
+      "noteEn": "Borrowed from Chinese 表扬; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "不得了",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w337",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "bu2die1liao1",
+          "zh": "不得了",
+          "en": "terrible",
+          "locator": "词条 337"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w337",
+        "wordIds": [
+          "w337"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「不得了」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "pu²⁴tiɛ⁵⁵liau⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "不得了"
+      },
+      "noteEn": "Borrowed from Chinese 不得了; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "雕",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w610",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "diao1",
+          "zh": "雕",
+          "en": "to carve",
+          "locator": "词条 610"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w610",
+        "wordIds": [
+          "w610"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「雕」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tiau⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "雕"
+      },
+      "noteEn": "Borrowed from Chinese 雕; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "寨门",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60823-v-1737",
+          "source": "yubao-60823",
+          "term": "tsai13sã55nie33lã55mi55",
+          "zh": "寨门",
+          "en": "village gate",
+          "locator": "词汇 1737"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1737",
+        "wordIds": [
+          "yubao-60823-v-1737"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「寨」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsai¹³sã⁵⁵nie³³lã⁵⁵mi⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "寨"
+      },
+      "noteEn": "The 寨 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "开玩笑",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-0930",
+          "source": "yubao-60756",
+          "term": "uaŋ33ɕau35khɛ55",
+          "zh": "开玩笑",
+          "en": "joke; jest",
+          "locator": "词汇 0930"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0930",
+        "wordIds": [
+          "yubao-60756-v-0930"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "各成分借自汉语“开”“玩笑”，本条依所录词序为“玩笑—开”。",
+        "reviewedForms": [
+          {
+            "ipa": "uaŋ³³ɕau³⁵kʰɛ⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "开玩笑"
+      },
+      "noteEn": "The components are borrowed from Chinese 开 and 玩笑; their recorded order in this entry is 玩笑–开."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "搓",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w1947",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "rua3",
+          "zh": "搓",
+          "en": "to rub (with the fingers)",
+          "locator": "词条 1947"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-w1947",
+        "wordIds": [
+          "w1947"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "text": "借自西南官话，汉字本字待考。",
+        "reviewedForms": [
+          {
+            "ipa": "zua²¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "Borrowed from Southwestern Mandarin; the original Chinese character remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "正直; 公正",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-222180",
+          "source": "stedt-7fd6565400",
+          "term": "tsən³⁵",
+          "zh": "正直；公正",
+          "en": "right, just, upright",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 222180 · 原文定位 827.38",
+          "citation": "Sun H 91 ZMYY"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-222180",
+        "wordIds": [
+          "stedt-rn-222180"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「正」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsən³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "正"
+      },
+      "noteEn": "Borrowed from Chinese 正; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "医治; 治疗",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-215754",
+          "source": "stedt-7fd6565400",
+          "term": "tsən⁵⁵",
+          "zh": "医治；治疗",
+          "en": "treat / cure",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 215754 · 原文定位 701.38",
+          "citation": "Sun H 91 ZMYY"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-215754",
+        "wordIds": [
+          "stedt-rn-215754"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语，具体原词与方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsən⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese; the original donor form and specific variety remain to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "打滚",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60757-v-2804",
+          "source": "yubao-60757",
+          "term": "kən55təu55xa21",
+          "zh": "打滚",
+          "en": "roll about",
+          "locator": "词汇 2804"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-2804",
+        "wordIds": [
+          "yubao-60757-v-2804"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "前两个音节借自汉语「跟斗」，与“打跟斗”相应；末音节 /xa²¹/ 不在此范围内。",
+        "reviewedForms": [
+          {
+            "ipa": "kən⁵⁵təu⁵⁵xa²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "跟斗"
+      },
+      "noteEn": "The first two syllables are borrowed from Chinese 跟斗, as in 打跟斗 (turn a somersault); final /xa²¹/ is outside this component."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "右边",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-0120",
+          "source": "yubao-60824",
+          "term": "jiʉ13sʉ55miã13",
+          "zh": "右边",
+          "en": "right (side)",
+          "locator": "词汇 0120"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0120",
+        "wordIds": [
+          "yubao-60824-v-0120"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「右手面」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "jiʉ¹³sʉ⁵⁵miã¹³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "右手面"
+      },
+      "noteEn": "Borrowed from Chinese 右手面; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "理解",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-290047",
+          "source": "stedt-cb523fc3dc",
+          "term": "liaɨ³³kai³³",
+          "zh": "理解",
+          "en": "understand / comprehend",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 290047 · 原文定位 未标明",
+          "citation": "Tian 86"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-290047",
+        "wordIds": [
+          "stedt-rn-290047"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「了解」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "liaɨ³³kai³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "了解"
+      },
+      "noteEn": "Borrowed from Chinese 了解; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "葡萄",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-289581",
+          "source": "stedt-cb523fc3dc",
+          "term": "bu¹³daɨ³³",
+          "zh": "葡萄",
+          "en": "grape",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 289581 · 原文定位 未标明",
+          "citation": "Tian 86"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-289581",
+        "wordIds": [
+          "stedt-rn-289581"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「葡萄」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "bu¹³daɨ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "葡萄"
+      },
+      "noteEn": "Borrowed from Chinese 葡萄; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "钥匙",
+      "basis": "Explicit lexical review; source form and registered sense retained. No borrowing date inferred.",
+      "sourceEvidence": [
+        {
+          "id": "w2532",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "yan1si1",
+          "zh": "钥匙",
+          "en": "key",
+          "locator": "词条 2532"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-w2532",
+        "wordIds": [
+          "w2532"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "早期汉语借词，与「钥匙」相应；具体借入时期与方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "jɛn⁵⁵sɨ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "donor": "钥匙",
+        "borrowingPeriod": "early"
+      },
+      "noteEn": "An early Chinese loan corresponding to 钥匙 (key); its specific date and donor variety remain to be established."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "冰块",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "w1323",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "leng2bang1",
+          "zh": "冰块",
+          "en": "block of ice",
+          "locator": "词条 1323"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-w1323",
+        "wordIds": [
+          "w1323"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lɜŋ²⁴paŋ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "冰棍",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "w1324",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "leng2gou1zi1",
+          "zh": "冰棍",
+          "en": "ice lolly",
+          "locator": "词条 1324"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-w1324",
+        "wordIds": [
+          "w1324"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lɜŋ²⁴kou⁵⁵tsɨ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "雹子",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "w1326",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "term": "leng2sai1",
+          "zh": "雹子",
+          "en": "hail",
+          "locator": "词条 1326"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-w1326",
+        "wordIds": [
+          "w1326"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lɜŋ²⁴sai⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          },
+          {
+            "ipa": "lən³⁵sai⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "冰",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-180564",
+          "source": "stedt-7fd6565400",
+          "term": "lan³⁵pin⁵⁵tsi⁵⁵",
+          "zh": "冰",
+          "en": "ice",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 180564 · 原文定位 11.38",
+          "citation": "Sun H 91 ZMYY"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-stedt-rn-180564",
+        "wordIds": [
+          "stedt-rn-180564"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lan³⁵pin⁵⁵tsi⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "冰",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-288459",
+          "source": "stedt-cb523fc3dc",
+          "term": "lã³⁵kɨu⁵⁵tsi⁵⁵",
+          "zh": "冰",
+          "en": "ice",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 288459 · 原文定位 未标明",
+          "citation": "Tian 86"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-stedt-rn-288459",
+        "wordIds": [
+          "stedt-rn-288459"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lã³⁵kɨu⁵⁵tsi⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "雹子",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-288463",
+          "source": "stedt-cb523fc3dc",
+          "term": "lẽ³⁵sai⁵⁵",
+          "zh": "雹子",
+          "en": "hail",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 288463 · 原文定位 未标明",
+          "citation": "Tian 86"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-stedt-rn-288463",
+        "wordIds": [
+          "stedt-rn-288463"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lẽ³⁵sai⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "冰",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-345864",
+          "source": "stedt-610ab69a37",
+          "term": "lən³⁵pin⁵⁵tsi⁵⁵",
+          "zh": "冰",
+          "en": "ice",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 345864 · 原文定位 0017.49",
+          "citation": "Huang and Dai 92 TBL"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-stedt-rn-345864",
+        "wordIds": [
+          "stedt-rn-345864"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lən³⁵pin⁵⁵tsi⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "冰",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-289400",
+          "source": "stedt-cb523fc3dc",
+          "term": "su²¹su²¹lẽ¹³",
+          "zh": "冰",
+          "en": "ice",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 289400 · 原文定位 未标明",
+          "citation": "Tian 86"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-stedt-rn-289400",
+        "wordIds": [
+          "stedt-rn-289400"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 3 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "su²¹su²¹lẽ¹³",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 3) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "雹子",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-289404",
+          "source": "stedt-cb523fc3dc",
+          "term": "su²¹su²¹lẽ¹³phaɨ¹³tsi³³",
+          "zh": "雹子",
+          "en": "hail",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 289404 · 原文定位 未标明",
+          "citation": "Tian 86"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-stedt-rn-289404",
+        "wordIds": [
+          "stedt-rn-289404"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 3 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "su²¹su²¹lẽ¹³pʰaɨ¹³tsi³³",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 3) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "冰",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60757-v-0014",
+          "source": "yubao-60757",
+          "term": "lən24kəu55tsɿ53",
+          "zh": "冰",
+          "en": "ice",
+          "locator": "词汇 0014"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-yubao-60757-v-0014",
+        "wordIds": [
+          "yubao-60757-v-0014"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lən²⁴kəu⁵⁵tsɿ⁵³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "冰雹",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60757-v-0015",
+          "source": "yubao-60757",
+          "term": "lɘn24sai55pu24li55",
+          "zh": "冰雹",
+          "en": "hail",
+          "locator": "词汇 0015"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-yubao-60757-v-0015",
+        "wordIds": [
+          "yubao-60757-v-0015"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lɘn²⁴sai⁵⁵pu²⁴li⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "冰",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-0014",
+          "source": "yubao-60756",
+          "term": "leŋ33",
+          "zh": "冰",
+          "en": "ice",
+          "locator": "词汇 0014"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-yubao-60756-v-0014",
+        "wordIds": [
+          "yubao-60756-v-0014"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "whole",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "leŋ³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "结冰",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-1222",
+          "source": "yubao-60756",
+          "term": "leŋ33paŋ33",
+          "zh": "结冰",
+          "en": "freeze",
+          "locator": "词汇 1222"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-yubao-60756-v-1222",
+        "wordIds": [
+          "yubao-60756-v-1222"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "leŋ³³paŋ³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "结冰",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60823-v-1222",
+          "source": "yubao-60823",
+          "term": "lɤ̃13pã55tsɿ33",
+          "zh": "结冰",
+          "en": "freeze",
+          "locator": "词汇 1222"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-yubao-60823-v-1222",
+        "wordIds": [
+          "yubao-60823-v-1222"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lɤ̃¹³pã⁵⁵tsɿ³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "冰",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-0014",
+          "source": "yubao-60824",
+          "term": "lẽ35kẽ21tsi55",
+          "zh": "冰",
+          "en": "ice",
+          "locator": "词汇 0014"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-yubao-60824-v-0014",
+        "wordIds": [
+          "yubao-60824-v-0014"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lẽ³⁵kẽ²¹tsi⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-etymology-note",
+      "zh": "结冰",
+      "basis": "Ice-related len family, including source-specific nasal-vowel and n/l correspondences; borrowing period explicitly undetermined. Other components are not included.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-1222",
+          "source": "yubao-60824",
+          "term": "nẽ13",
+          "zh": "结冰",
+          "en": "freeze",
+          "locator": "词汇 1222"
+        }
+      ],
+      "note": {
+        "id": "loan-etymology-yubao-60824-v-1222",
+        "wordIds": [
+          "yubao-60824-v-1222"
+        ],
+        "kind": "借词来源",
+        "donorVariety": "湘语或西南官话",
+        "scope": "whole",
+        "text": "冰、雹相关的借入成分（第 1 音节）来自湘语或西南官话，借入年代未定；具体汉语原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "nẽ¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23",
+        "borrowingPeriod": "undetermined"
+      },
+      "noteEn": "The ice/hail-related component (syllable 1) is borrowed from Xiang or Southwestern Mandarin. Its borrowing period and exact Chinese donor form remain undetermined."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "stedt-rn-289673",
+          "term": "tsha³³mẽ³³",
+          "zh": "门",
+          "en": "door",
+          "notice": "英语释义来自STEDT，汉语释义由本站译写。来源仅标注Tujia时，具体方言不明。",
+          "locator": "STEDT rn 289673 · 原文定位 未标明",
+          "citation": "Tian 86"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-289673",
+        "wordIds": [
+          "stedt-rn-289673"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "寨门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60757-v-1737",
+          "term": "tsa24men33 tsa24mai33",
+          "zh": "寨门",
+          "en": "village gate",
+          "locator": "词汇 1737"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-1737",
+        "wordIds": [
+          "yubao-60757-v-1737"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsa²⁴men³³ tsa²⁴mai³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "门槛儿",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-0313",
+          "term": "tshɔ55meŋ55khaŋ53",
+          "zh": "门槛儿",
+          "en": "threshold",
+          "locator": "词汇 0313"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0313",
+        "wordIds": [
+          "yubao-60756-v-0313"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵kʰaŋ⁵³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "门上",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-1376",
+          "term": "tshɔ55mi55ka55",
+          "zh": "门上",
+          "en": "on the door",
+          "notice": "挂在～",
+          "locator": "词汇 1376"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1376",
+        "wordIds": [
+          "yubao-60756-v-1376"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵mi⁵⁵ka⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-1736",
+          "term": "tshɔ55meŋ55",
+          "zh": "门",
+          "en": "door",
+          "locator": "词汇 1736"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1736",
+        "wordIds": [
+          "yubao-60756-v-1736"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "寨门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-1737",
+          "term": "tshau33meŋ33",
+          "zh": "寨门",
+          "en": "village gate",
+          "locator": "词汇 1737"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1737",
+        "wordIds": [
+          "yubao-60756-v-1737"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰau³³meŋ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "门口",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-1738",
+          "term": "tshɔ55meŋ55tha33pie55",
+          "zh": "门口",
+          "en": "doorway",
+          "locator": "词汇 1738"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1738",
+        "wordIds": [
+          "yubao-60756-v-1738"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵tʰa³³pie⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "开门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-2621",
+          "term": "tshɔ55meŋ55thɔŋ33",
+          "zh": "开门",
+          "en": "open (a door)",
+          "locator": "词汇 2621"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2621",
+        "wordIds": [
+          "yubao-60756-v-2621"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵ tʰɔŋ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "关门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-2622",
+          "term": "tshɔ55meŋ55ɕe33",
+          "zh": "关门",
+          "en": "shut the door",
+          "locator": "词汇 2622"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2622",
+        "wordIds": [
+          "yubao-60756-v-2622"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵ ɕe³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "闩门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60756-v-2778",
+          "term": "tshɔ55meŋ55suaŋ55",
+          "zh": "闩门",
+          "en": "bolt the door",
+          "locator": "词汇 2778"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2778",
+        "wordIds": [
+          "yubao-60756-v-2778"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵ suaŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "门上",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60823-v-1376",
+          "term": "tsho55mi55ka55xa33",
+          "zh": "门上",
+          "en": "on the door",
+          "notice": "挂在～",
+          "locator": "词汇 1376"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1376",
+        "wordIds": [
+          "yubao-60823-v-1376"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰo⁵⁵mi⁵⁵ka⁵⁵xa³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "门口",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60823-v-1738",
+          "term": "tsho55mi53tha33",
+          "zh": "门口",
+          "en": "doorway",
+          "locator": "词汇 1738"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1738",
+        "wordIds": [
+          "yubao-60823-v-1738"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰo⁵⁵mi⁵³tʰa³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "大门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-0312",
+          "term": "tsha33mẽ33",
+          "zh": "大门",
+          "en": "main door",
+          "locator": "词汇 0312"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0312",
+        "wordIds": [
+          "yubao-60824-v-0312"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "门槛儿",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-0313",
+          "term": "tsha33mẽ33thã55",
+          "zh": "门槛儿",
+          "en": "threshold",
+          "locator": "词汇 0313"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0313",
+        "wordIds": [
+          "yubao-60824-v-0313"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³tʰã⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "串门儿",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-0752",
+          "term": "tshã33mẽ33do35",
+          "zh": "串门儿",
+          "en": "visit neighbors",
+          "locator": "词汇 0752"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0752",
+        "wordIds": [
+          "yubao-60824-v-0752"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰã³³mẽ³³do³⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "门上",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-1376",
+          "term": "tsha33mẽ33a33lo35",
+          "zh": "门上",
+          "en": "on the door",
+          "notice": "挂在～",
+          "locator": "词汇 1376"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1376",
+        "wordIds": [
+          "yubao-60824-v-1376"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³a³³lo³⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "寨门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-1737",
+          "term": "ji33tsha33mẽ21",
+          "zh": "寨门",
+          "en": "village gate",
+          "locator": "词汇 1737"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1737",
+        "wordIds": [
+          "yubao-60824-v-1737"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ji³³tsʰa³³mẽ²¹",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "门板",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-1751",
+          "term": "tsha33mẽ33to55",
+          "zh": "门板",
+          "en": "door panel",
+          "locator": "词汇 1751"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1751",
+        "wordIds": [
+          "yubao-60824-v-1751"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³to⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "开门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-2621",
+          "term": "tsha33mẽ33thʉ21",
+          "zh": "开门",
+          "en": "open (a door)",
+          "locator": "词汇 2621"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2621",
+        "wordIds": [
+          "yubao-60824-v-2621"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³ tʰʉ²¹",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "关门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-2622",
+          "term": "tsha35mẽ33xa55",
+          "zh": "关门",
+          "en": "shut the door",
+          "locator": "词汇 2622"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2622",
+        "wordIds": [
+          "yubao-60824-v-2622"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³⁵mẽ³³ xa⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "闩门",
+      "basis": "Lexical-shape review of 门: retain la-men/la-min correspondences as exceptions; annotate the reviewed non-la-men 门 component. Other components keep their separate scope.",
+      "sourceEvidence": [
+        {
+          "id": "yubao-60824-v-2778",
+          "term": "tsha33mẽ33suã33",
+          "zh": "闩门",
+          "en": "bolt the door",
+          "locator": "词汇 2778"
+        }
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2778",
+        "wordIds": [
+          "yubao-60824-v-2778"
+        ],
+        "kind": "借词来源",
+        "donor": "门",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「门」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³suã³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 门 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    }
+  ],
+  "screeningGuards": [
+    {
+      "id": "yubao-60823-v-2239",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w1187",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w1188",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-0962",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-1293",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-288842",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-454229",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-0334",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60823-v-0962",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w1192",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-363610",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-288598",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-0242",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-289274",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-289384",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60823-v-0074",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60823-v-0075",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-2866",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-1178",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w29",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "-tuɔ²¹liau²¹",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w371",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰa²⁴liau⁵¹",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-455053",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "liau⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-408831",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tʰi²¹ liau²¹",
+          "span": [
+            2,
+            2
+          ]
+        },
+        {
+          "ipa": "tʰi²¹liau²¹",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-404413",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "jie³⁵liau⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-407684",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "xa²¹mo²¹ kʰua⁵⁵liau⁵⁵",
+          "span": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-428086",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "zu²¹liau⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0026",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "mɤe³³tsɤ⁵⁵zɿ³¹liau¹³",
+          "span": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0554",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "sɿ¹³sɿ⁵⁵liau¹³",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0697",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tʰũ³³tɕʰiã³¹zɿ³³liau¹³",
+          "span": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0701",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "ta³³ɕi³¹zɿ⁵⁵liau¹³",
+          "span": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1033",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "ɕi¹³la⁵⁵zɿ³³liau³³",
+          "span": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1034",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "ɕi¹³la⁵⁵pu⁵⁵tsʰɿ⁵⁵liau⁵⁵",
+          "span": [
+            5,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2640",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tɕʰi⁵⁵liau⁵⁵ɕie³³",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2651",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "xuai³³liau⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2646",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰo³³liau⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2526",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "jɛn²¹kuɔ²⁴tsʰɤ²¹",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2529",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "jɛn⁵¹tɕi²¹luɔ⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w4263",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lau²⁴tsɨ⁵⁵fɛn⁵⁵",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-454173",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰuɔ⁵¹jɛn²¹ku²⁴",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w505",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰuɔ⁵¹jɛn²¹ku²⁴",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2525",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "jɛn²¹ku²⁴",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1319",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lei⁵⁵fɛn⁵⁵laŋ⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-455264",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lai²⁴fɛn²¹lai²⁴fɛn²¹",
+          "span": [
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1277",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lai²⁴fɛn²¹lai²⁴fɛn²¹ɣɨ²⁴",
+          "span": [
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2532",
+      "policy": "exclude-entry",
+      "family": "early-key",
+      "reason": "早期借词；单独保留词源注，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w1323",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lɜŋ²⁴paŋ⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1324",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lɜŋ²⁴kou⁵⁵tsɨ⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1326",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lɜŋ²⁴sai⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        },
+        {
+          "ipa": "lən³⁵sai⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-180564",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lan³⁵pin⁵⁵tsi⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-288459",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lã³⁵kɨu⁵⁵tsi⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-288463",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lẽ³⁵sai⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-345864",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lən³⁵pin⁵⁵tsi⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-289400",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "su²¹su²¹lẽ¹³",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-289404",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "su²¹su²¹lẽ¹³pʰaɨ¹³tsi³³",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0014",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lən²⁴kəu⁵⁵tsɿ⁵³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0015",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lɘn²⁴sai⁵⁵pu²⁴li⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0014",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "leŋ³³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-1222",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "leŋ³³paŋ³³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1222",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lɤ̃¹³pã⁵⁵tsɿ³³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-0014",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lẽ³⁵kẽ²¹tsi⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-1222",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "nẽ¹³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2495",
+      "policy": "retain-review",
+      "family": "inherited-lexical-exclusion",
+      "reason": "卯，原注“属兔”；继承野兔词根排除。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-384071",
+      "policy": "retain-review",
+      "family": "inherited-lexical-exclusion",
+      "reason": "兔年；继承野兔词根排除。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w2634",
+      "policy": "retain-review",
+      "family": "inherited-lexical-exclusion",
+      "reason": "节约，与暂不标注的节俭近义同形组一并暂缓。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w1948",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "zuɛn²⁴",
+          "span": [
+            1,
+            1
+          ]
+        },
+        {
+          "ipa": "zuan³⁵",
+          "span": [
+            1,
+            1
+          ]
+        },
+        {
+          "ipa": "zuã³⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2173",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "suɛn⁵¹",
+          "span": [
+            1,
+            1
+          ]
+        },
+        {
+          "ipa": "suan⁵³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-289206",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "suã⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0936",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "suan³³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1215",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "mɘ²⁴tsɘ²²suan⁵⁵",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1675",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "zua²⁴",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-1675",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "zuaŋ³⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1675",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "zuã¹³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-1811",
+      "policy": "exclude-component",
+      "family": "native-pot",
+      "reason": "锅刷前两音节对应既有的锅词根，不采用“大锅”现代汉语原词分析；仅后两音节刷把计借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tʉ²¹kʉ²¹sua²¹pa²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1247",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1248",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹kʰa⁵⁵ma⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1249",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹kʰa⁵⁵sɨ⁵⁵pa⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1250",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹ tʰɔŋ²⁴",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1251",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹wɔ⁵¹tʰa²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1252",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹ ɕiɛn²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w4173",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵miŋ²¹",
+          "span": [
+            1,
+            2
+          ]
+        },
+        {
+          "ipa": "la⁵⁵min²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-453968",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹kʰa⁵⁵ma⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-288734",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi²¹",
+          "span": [
+            1,
+            2
+          ]
+        },
+        {
+          "ipa": "la⁵⁵mĩ²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0312",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la³³mən³³tsʰɿ³³pa³³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0313",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la³³mən³³tʰɘn²⁴tʰɘn³³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1376",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵men²²ka²²",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1736",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵men³³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1738",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɘn³³tʰa²²",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1751",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɘn²²",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2621",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɘn³³tʰuŋ²⁴",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2622",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mən³³ɕie²⁴",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0312",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi⁵⁵tɕʰi⁵³pa³³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0313",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi⁵⁵tɕi³¹kʰa¹³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1736",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lã⁵⁵mi⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1737",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsai¹³sã⁵⁵nie³³lã⁵⁵mi⁵⁵",
+          "span": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2621",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi⁵⁵ tʰũ¹³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2622",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi⁵⁵ ɕie¹³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2778",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi⁵⁵suã⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  ],
+  "verifiedExisting": [
+    {
+      "id": "stedt-rn-431784",
+      "donor": "拥抱",
+      "span": [
+        1,
+        2
+      ],
+      "action": "already wholly annotated; no duplicate"
+    }
+  ],
+  "corrections": [
+    {
+      "action": "narrow-loan-span",
+      "zh": "锅刷",
+      "before": {
+        "id": "chinese-loan-yubao-60824-v-1811",
+        "wordIds": [
+          "yubao-60824-v-1811"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自湘语或西南官话「大锅刷把」。",
+        "donor": "大锅刷把",
+        "donorVariety": "湘语或西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "tʉ²¹kʉ²¹sua²¹pa²¹",
+            "span": [
+              1,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      },
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1811",
+        "wordIds": [
+          "yubao-60824-v-1811"
+        ],
+        "kind": "借词来源",
+        "text": "「刷把」部分（第 3—4 音节）可能借自湘语或西南官话；前两个音节为“锅”词根。",
+        "donor": "刷把",
+        "donorVariety": "湘语或西南官话",
+        "scope": "component",
+        "reviewedForms": [
+          {
+            "ipa": "tʉ²¹kʉ²¹sua²¹pa²¹",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "rime-followup-2026-10-23"
+      },
+      "noteEn": "The 刷把 component (syllables 3–4) may be borrowed from Xiang or Southwestern Mandarin; the first two syllables are the word for pot.",
+      "basis": "tʉ²¹kʉ²¹ matches the explicitly protected pot root tʉ²¹kʉ¹³, also in 小锅 and 锅盖; no evidence for interpreting tʉ as Chinese 大.",
+      "comparisonIds": [
+        "yubao-60824-v-0306",
+        "yubao-60824-v-1804",
+        "yubao-60824-v-1805",
+        "yubao-60824-v-1810"
+      ]
+    }
+  ],
+  "auditThresholds": {
+    "baselineCommit": "c23c050bb4e61070e384b080ff91cb8fdcf3e727",
+    "north": {
+      "rime": "iŋ",
+      "borrowed": 147,
+      "total": 280,
+      "comparison": "strictly-greater"
+    },
+    "south": {
+      "rime": "uei",
+      "borrowed": 48,
+      "total": 88,
+      "comparison": "greater-than-or-equal"
+    },
+    "southAdditionalRimes": [
+      "iaɨ",
+      "iau",
+      "iaɯ",
+      "iɑu",
+      "uĩ",
+      "uai",
+      "uo",
+      "ua",
+      "uẽ"
+    ],
+    "southAdditionalSyllables": "Any segment containing /y/; original spellings preserved.",
+    "southStatisticalAlias": {
+      "iaɨ": "iau",
+      "iaɯ": "iau",
+      "iɑu": "iau"
+    }
+  },
+  "validation": "Per request, no website/PR QA is run for this revision. Source identities and reviewed span bounds are checked while constructing the lexical review.",
+  "uiMorphologyReview": [
+    {
+      "id": "stedt-rn-396774",
+      "zh": "弯曲; 弯的; 歪",
+      "ipa": [
+        "kʰu³⁵kʰui⁵⁵"
+      ],
+      "reason": "kʰu³⁵kʰui⁵⁵ 中 u／ui 的交替可能有形态作用；先查 kʰu 词干。",
+      "decision": "暂缓；不按 ui 自动标借入"
+    },
+    {
+      "id": "stedt-rn-396720",
+      "zh": "直",
+      "ipa": [
+        "tsʰu²¹tsʰui⁵⁵"
+      ],
+      "reason": "tsʰu²¹tsʰui⁵⁵ 中 u／ui 的交替须先作词干与附加成分核对。",
+      "decision": "暂缓；不按 ui 自动标借入"
+    },
+    {
+      "id": "yubao-60756-v-0938",
+      "zh": "细",
+      "ipa": [
+        "sə³³tʰui³³ ɕi³³ɕi³⁵ti⁵³"
+      ],
+      "reason": "细的一组记录与另一组 ɕiɕiti 并列；tʰui 不因韵母直接标汉借。",
+      "decision": "暂缓；不按 ui 自动标借入"
+    },
+    {
+      "id": "yubao-60823-v-2985",
+      "zh": "够",
+      "ipa": [
+        "tsui¹³"
+      ],
+      "reason": "够 tsui¹³：核对 tsu 与 -i 关系后再判断，不自动采用“最”作供体。",
+      "decision": "暂缓；不按 ui 自动标借入"
+    },
+    {
+      "id": "yubao-60756-v-2431",
+      "zh": "犁头",
+      "ipa": [
+        "tsɿ⁵³ɕɔŋ⁵⁵tsui³³"
+      ],
+      "reason": "犁头 tsɿ⁵³ɕɔŋ⁵⁵tsui³³：未落实 tsui 的具体汉语原词，保留形态分析可能。",
+      "decision": "暂缓；不按 ui 自动标借入"
+    }
+  ],
+  "acceptedExistingSources": [
+    {
+      "id": "stedt-rn-455009",
+      "zh": "那边",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-stedt-rn-455009",
+          "wordIds": [
+            "stedt-rn-455009"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「那边」。",
+          "donor": "那边",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "la²⁴piɛn⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "w1060",
+      "zh": "经验",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-w1060",
+          "wordIds": [
+            "w1060"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「经验」。",
+          "donor": "经验",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "tɕiŋ⁵⁵liɛn⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "w1366",
+      "zh": "凉水",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-w1366",
+          "wordIds": [
+            "w1366"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「冷水」。",
+          "donor": "冷水",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "liɛn²¹suei²¹",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "w2450",
+      "zh": "香; 香（气味香）; 开胃",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-w2450",
+          "wordIds": [
+            "w2450"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「鲜」。",
+          "donor": "鲜",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "ɕiɛn⁵⁵",
+              "span": [
+                1,
+                1
+              ]
+            },
+            {
+              "ipa": "ɕian⁵⁵",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-0657",
+      "zh": "外甥",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-0657",
+          "wordIds": [
+            "yubao-60824-v-0657"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话或湘语「外孙」。",
+          "donor": "外孙",
+          "donorVariety": "西南官话或湘语",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "wai¹³suẽ³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w536",
+      "zh": "大门",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-w536",
+          "wordIds": [
+            "w536"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「大门」。",
+          "donor": "大门",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "ta²⁴mɜŋ⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "w2752",
+      "zh": "专门",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-w2752",
+          "wordIds": [
+            "w2752"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「专门」。",
+          "donor": "专门",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "tsuɛn⁵⁵mɜŋ²¹",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0312",
+      "zh": "大门",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-0312",
+          "wordIds": [
+            "yubao-60756-v-0312"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「大门」。",
+          "donor": "大门",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "ta⁵⁵meŋ⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0752",
+      "zh": "串门儿",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-0752",
+          "wordIds": [
+            "yubao-60756-v-0752"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「串门」。",
+          "donor": "串门",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "tsʰuaŋ⁵⁵meŋ⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-1751",
+      "zh": "门板",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-1751",
+          "wordIds": [
+            "yubao-60756-v-1751"
+          ],
+          "kind": "借词来源",
+          "text": "「门板」部分（第 2—3 音节）可能借自西南官话。",
+          "donor": "门板",
+          "donorVariety": "西南官话",
+          "scope": "component",
+          "reviewedForms": [
+            {
+              "ipa": "tsʰɔ⁵⁵meŋ⁵⁵paŋ⁵³",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-1933",
+      "zh": "门帘",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-1933",
+          "wordIds": [
+            "yubao-60756-v-1933"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「门帘子」。",
+          "donor": "门帘子",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "meŋ³³liaŋ⁵⁵tsɿ⁵⁵",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2133",
+      "zh": "门牙",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2133",
+          "wordIds": [
+            "yubao-60756-v-2133"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话「门牙」。",
+          "donor": "门牙",
+          "donorVariety": "西南官话",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "meŋ³³ŋa³⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-1933",
+      "zh": "门帘",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-1933",
+          "wordIds": [
+            "yubao-60824-v-1933"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话或湘语「门帘」。",
+          "donor": "门帘",
+          "donorVariety": "西南官话或湘语",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "mẽ¹³liã³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2133",
+      "zh": "门牙",
+      "action": "retain-existing-loan-source-and-span",
+      "notes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2133",
+          "wordIds": [
+            "yubao-60824-v-2133"
+          ],
+          "kind": "借词来源",
+          "text": "可能借自西南官话或湘语「门牙」。",
+          "donor": "门牙",
+          "donorVariety": "西南官话或湘语",
+          "scope": "whole",
+          "reviewedForms": [
+            {
+              "ipa": "mẽ¹³ŋa²¹",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reviewBatch": "complete-components-4"
+        }
+      ]
+    }
+  ],
+  "doorShapePolicy": {
+    "scope": "门 lexical family; classify exact recorded shapes, not all words containing the Chinese character 门.",
+    "exception": "la-men/la-min and directly attested corresponding forms, including la-mi; compounds protect only that root.",
+    "acceptedExistingCompounds": [
+      "专门",
+      "大门",
+      "串门",
+      "门帘",
+      "门板",
+      "门牙"
+    ],
+    "loanComponent": "Recorded 门 components outside the protected la-men/la-min shapes remain loans.",
+    "newLoanForms": [
+      {
+        "id": "stedt-rn-289673",
+        "zh": "门",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60757-v-1737",
+        "zh": "寨门",
+        "reviewedForms": [
+          {
+            "ipa": "tsa²⁴men³³ tsa²⁴mai³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60756-v-0313",
+        "zh": "门槛儿",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵kʰaŋ⁵³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60756-v-1376",
+        "zh": "门上",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵mi⁵⁵ka⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60756-v-1736",
+        "zh": "门",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60756-v-1737",
+        "zh": "寨门",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰau³³meŋ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60756-v-1738",
+        "zh": "门口",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵tʰa³³pie⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60756-v-2621",
+        "zh": "开门",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵ tʰɔŋ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60756-v-2622",
+        "zh": "关门",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵ ɕe³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60756-v-2778",
+        "zh": "闩门",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵ suaŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60823-v-1376",
+        "zh": "门上",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰo⁵⁵mi⁵⁵ka⁵⁵xa³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60823-v-1738",
+        "zh": "门口",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰo⁵⁵mi⁵³tʰa³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60824-v-0312",
+        "zh": "大门",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60824-v-0313",
+        "zh": "门槛儿",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³tʰã⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60824-v-0752",
+        "zh": "串门儿",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰã³³mẽ³³do³⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60824-v-1376",
+        "zh": "门上",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³a³³lo³⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60824-v-1737",
+        "zh": "寨门",
+        "reviewedForms": [
+          {
+            "ipa": "ji³³tsʰa³³mẽ²¹",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60824-v-1751",
+        "zh": "门板",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³to⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60824-v-2621",
+        "zh": "开门",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³ tʰʉ²¹",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60824-v-2622",
+        "zh": "关门",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³⁵mẽ³³ xa⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "id": "yubao-60824-v-2778",
+        "zh": "闩门",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰa³³mẽ³³suã³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      }
+    ],
+    "limits": "No n/l merger, nasalization rewrite, tone substitution, or change to recorded Chinese senses is made."
+  }
+}

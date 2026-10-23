@@ -125,7 +125,28 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  for(const id of ['w2335','w5408','w6901','stedt-rn-457979'])assert(c.editorialNotesFor(get(id)).some(n=>n.donor==='团员'),id+' 团员 donor survives merging');
  for(const id of ['yubao-60757-v-2988','w2438'])assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' xilan stays unmarked');
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996);
+ const rimeFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-rime-followup-2026-10-23.json'),'utf8'));
+ const hotcell=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-hotcell-confirmed-2026-10-23.json'),'utf8'));
+ for(const decision of [...rimeFollowup.decisions,...rimeFollowup.corrections,...hotcell.decisions,...hotcell.corrections]){
+  const {note,noteEn}=decision,w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
+  assert.equal(JSON.stringify(actual),JSON.stringify(note),note.id+' exact lexical review');
+  c.newLoanNote=actual.text;assert.equal(vm.runInContext('UI_TRANSLATIONS[newLoanNote]',c),noteEn,note.id+' bilingual note');
+  if(note.id.startsWith('chinese-loan-'))assert.equal(c.modernChineseLoanInfo(w).scope,decision.expectedBadgeScope||note.scope,note.id+' exact variant coverage');
+  else assert(!actual.id.startsWith('chinese-loan-'),note.id+' early/undated source is separate from modern loans');
+ }
+ assert.equal(c.modernChineseLoanBadge(get('w2532')),'','early key loan has no modern-loan badge');
+ assert.equal(c.modernChineseLoanBadge(get('stedt-rn-345864')),'','undated ice loan has no modern-loan badge');
+ assert.equal(c.modernChineseLoanBadge(get('w50')),'','grammatical liao stays unmarked');
+ for(const id of ['w73','w337'])assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole',id+' lexical liao exception');
+ assert(!c.editorialNotesFor(get('yubao-60757-v-1743')).find(n=>n.id==='chinese-loan-yubao-60757-v-1743').donor,'unknown stair-step character is not invented');
+ for(const [id,review] of Object.entries(hotcell.parallelForms)){
+  const w=get(id);assert.deepEqual(Array.from(c.wordIPA(w)),review.forms,id+' parallel IPA forms');
+  assert.equal(w.attestations.find(a=>a.id===id).term,review.raw,id+' original combined source');
+  assert(c.pairedNotationForms(w)?.length===2,id+' each spelling pairs with its own IPA');
+ }
+ for(const id of ['stedt-rn-289453','yubao-60824-v-1339'])assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole',id+' 二月 is fully borrowed');
+ for(const id of ['w2480','yubao-60756-v-0718','stedt-rn-289871','yubao-60824-v-0718','yubao-60824-v-0719'])assert(c.editorialNotesFor(get(id)).some(n=>n.donor==='校堂'),id+' 校堂 donor');
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996+[...rimeFollowup.decisions,...hotcell.decisions].filter(d=>d.note.id.startsWith('chinese-loan-')).length);
  const componentsFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-components-followup-2026-10-23.json'),'utf8'));
  for(const {note} of componentsFollowup.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
@@ -159,7 +180,8 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  for(const id of ['w351','stedt-rn-289610'])assert.equal(c.wordSearchScore(get(id)),0,'obsolete translation is not searchable');
  vm.runInContext("state.q='';state.searchLanguage=''",c);
  const unspecifiedNorthernDonors=new Set(['yubao-60756-v-0521','yubao-60756-v-0740','yubao-60756-v-1857','yubao-60823-v-0425',...screening.decisions.filter(d=>d.note.donorVariety==='汉语（方言待核）').flatMap(d=>d.note.wordIds)]);
- for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,unspecifiedNorthernDonors.has(id)?'汉语（方言待核）':'西南官话',id+' northern donor variety');}
+ const reviewedDonorVarieties=new Map([...rimeFollowup.decisions,...rimeFollowup.corrections,...hotcell.decisions,...hotcell.corrections].filter(d=>d.note.id.startsWith('chinese-loan-')).map(d=>[d.note.id,d.note.donorVariety]));
+ for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,reviewedDonorVarieties.get(n.id)||(unspecifiedNorthernDonors.has(id)?'汉语（方言待核）':'西南官话'),id+' northern donor variety');}
  for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
  // Exact Southern forms and source aliases receive the accepted donor; native
  // components and other forms with the same Chinese gloss keep their scope.
