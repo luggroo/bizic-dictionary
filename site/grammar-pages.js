@@ -1,5 +1,37 @@
 /* Numbered grammar sections are independently addressable reading pages. */
 const grammarPageMaps=new Map();
+/* Mobile chapter navigation starts expanded and folds away after a selection.
+ * The desktop chapter rail remains visible independently of this state. */
+let grammarMobileTocExpanded=true;
+function grammarTocMobileViewport(){
+ return typeof window.matchMedia!=='function'||window.matchMedia('(max-width: 900px)').matches;
+}
+function grammarSetMobileTocExpanded(expanded){
+ grammarMobileTocExpanded=expanded;
+ const wrap=document.querySelector('.grammar-toc-wrap');
+ if(!wrap)return;
+ wrap.dataset.mobileExpanded=String(expanded);
+ wrap.querySelector('.grammar-toc-toggle')?.setAttribute('aria-expanded',String(expanded));
+}
+document.addEventListener('click',event=>{
+ const target=event.target;
+ if(!(target instanceof Element))return;
+ if(target.closest('.grammar-toc-toggle')){
+  grammarSetMobileTocExpanded(!grammarMobileTocExpanded);
+  return;
+ }
+ // Arriving from navigation opens the index for choosing a chapter.
+ if(target.closest('[data-view="grammar"],.grammar-switch [data-grammar-dialect]') ||
+    (target.closest('[data-grammar-dialect]')&&!target.closest('[data-chapter]')&&!target.closest('.grammar-toc'))){
+  grammarSetMobileTocExpanded(true);
+  return;
+ }
+ // After choosing a chapter, subchapter, or next/previous page, return to reading.
+ if(grammarTocMobileViewport()&&target.closest('.grammar-toc [data-chapter],.grammar-toc a[href^="#grammar/"],.grammar-article a[href^="#grammar/"],[data-chapter][data-grammar-dialect]')){
+  grammarSetMobileTocExpanded(false);
+ }
+},true);
+
 // Reading numbers may change while published chapter and section URLs stay stable.
 const GRAMMAR_PAGE_REDIRECTS={south:{'201.1':'207.1','201.3':'201.4','202.2':'207.1','202.6':'202.3','203.1':'207.2','203.7':'207.3','204.2':'204.1','204.4':'207.4','205.4':'205.3'}};
 function grammarResolvePage(state){
@@ -87,5 +119,5 @@ grammarView=function(){
   const holder=document.createElement('div');holder.innerHTML=grammarPageHTML(p.ch,p.section?.id||'');return contains(p.ch.title+' '+(p.section?.title||'')+' '+holder.textContent,term);
  }):[];
  const found=term?'<h1>检索结果</h1><div class="grammar-page-results">'+results.map(p=>`<a href="${grammarPageURL(p.ch,p.section)}">${grammarPageNumber(p.ch,p.section)}. <span>${E(p.section?.title||p.ch.title)}</span></a>`).join('')+'</div>':grammarChapter(ch);
- return pageHeader('grammar')+grammarSwitch()+search('在本套语法中检索规则、章节与例句…')+`<div class="grammar-layout"><nav class="grammar-toc" aria-label="语法目录">${toc}</nav><article class="grammar-article grammar-reading">${found}</article></div>`;
+ return pageHeader('grammar')+grammarSwitch()+search('在本套语法中检索规则、章节与例句…')+`<div class="grammar-layout"><div class="grammar-toc-wrap" data-mobile-expanded="${grammarMobileTocExpanded}"><button class="grammar-toc-toggle" type="button" aria-controls="grammar-toc-nav" aria-expanded="${grammarMobileTocExpanded}"><span class="grammar-toc-toggle-label">章节目录 <span class="grammar-toc-current">${ch.number}. ${E(ch.title)}</span></span><span class="grammar-toc-chevron" aria-hidden="true"></span></button><nav class="grammar-toc" id="grammar-toc-nav" aria-label="语法目录">${toc}</nav></div><article class="grammar-article grammar-reading">${found}</article></div>`;
 };

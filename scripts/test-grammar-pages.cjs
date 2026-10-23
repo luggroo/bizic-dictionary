@@ -45,6 +45,32 @@ const result=vm.runInContext(`(()=>{
  const pairs=[...q.querySelectorAll('.grammar-pair')];if(pairs.length!==15||pairs.some(p=>!p.dataset.ipa||!p.querySelector('[data-ye][data-accent]')))failures.push('question notation missing');
  const what=[...q.tBodies[0].rows].find(r=>r.cells[0].textContent==='什么');if(what.querySelectorAll('.grammar-pair').length!==3)failures.push('what variants lost');
  const how=[...q.tBodies[0].rows].find(r=>r.cells[0].textContent.includes('怎么样'));if(how.querySelectorAll('.grammar-pair').length!==4)failures.push('how variants lost');
+ // Mobile chapter list opens on entry, supports manual toggling, and
+ // collapses after choosing a chapter or subchapter without changing routes.
+ document.querySelector('main').innerHTML=grammarView();
+ let toc=document.querySelector('.grammar-toc-wrap');
+ const toggle=toc?.querySelector('.grammar-toc-toggle');
+ if(!toc||!toggle)failures.push('Missing mobile chapter toggle');
+ else{
+  if(toc.dataset.mobileExpanded!=='true'||toggle.getAttribute('aria-expanded')!=='true')failures.push('Mobile TOC not expanded on entry');
+  toggle.click();
+  if(toc.dataset.mobileExpanded!=='false'||toggle.getAttribute('aria-expanded')!=='false')failures.push('Mobile TOC cannot be manually collapsed');
+  toggle.click();
+  if(toc.dataset.mobileExpanded!=='true')failures.push('Mobile TOC cannot reopen');
+  const chapter=toc.querySelector('button[data-chapter]');
+  chapter.click();
+  if(toc.dataset.mobileExpanded!=='false')failures.push('Mobile TOC does not collapse after chapter click');
+  document.querySelector('main').innerHTML=grammarView();
+  toc=document.querySelector('.grammar-toc-wrap');
+  if(toc.dataset.mobileExpanded!=='false')failures.push('Mobile TOC reopened on page render');
+  toc.querySelector('.grammar-toc-toggle').click();
+  toc.querySelector('.grammar-toc-sections a[href^="#grammar/"]')?.click();
+  if(toc.dataset.mobileExpanded!=='false')failures.push('Mobile TOC does not collapse after subsection click');
+  // Visiting the Reference Grammar tab again starts with its list expanded.
+  const open=document.createElement('button');open.dataset.view='grammar';document.querySelector('main').append(open);open.click();
+  document.querySelector('main').innerHTML=grammarView();
+  if(document.querySelector('.grammar-toc-wrap')?.dataset.mobileExpanded!=='true')failures.push('Reentering grammar does not reopen chapters');
+ }
  // A genuinely different source spelling remains visible.
  const alternate=root(grammarRenderHTML({id:'999',dialect:'north',html:'<table><tr><td>other /tsʰa²⁴/</td></tr></table>'}));if(!alternate.textContent.includes('other'))failures.push('different source form removed');
  return {failures,pages,citations};

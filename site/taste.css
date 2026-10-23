@@ -101,3 +101,28 @@ main a:not(.metric):visited,#detail-body a:visited,.site-footer a:visited{color:
 .word-entry-definition>.gloss-evidence>summary{cursor:pointer;font-weight:600}
 .word-entry-definition>.gloss-evidence p{margin:8px 0 0;font-size:13px}
 @media(max-width:600px){#detail-body .word-entry-summary .detail-actions button{min-height:44px}}
+
+/* Accessible mobile chapter picker. Desktop keeps its persistent reading rail. */
+.grammar-toc-toggle{display:none}
+@media (min-width:901px){
+ .grammar-toc-wrap>.grammar-toc{display:block}
+}
+@media (max-width:900px){
+ .grammar-toc-wrap>.grammar-toc-toggle{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:44px;
+  padding:10px 3px;text-align:left;color:var(--ink,#263d36);background:transparent;
+  border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  border-radius:0;cursor:pointer;font-family:inherit;font-size:14px;font-weight:600;line-height:1.5
+ }
+ .grammar-toc-toggle:focus-visible{outline:2px solid var(--green,#35695c);outline-offset:3px}
+ .grammar-toc-toggle-label{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;min-width:0}
+ .grammar-toc-current{font-size:12px;color:#65756c;font-weight:400}
+ .grammar-toc-chevron{flex:none;width:9px;height:9px;margin:0 5px;
+  border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;
+  transform:rotate(45deg);transition:transform .15s ease}
+ .grammar-toc-wrap[data-mobile-expanded="true"] .grammar-toc-chevron{transform:rotate(225deg)}
+ .grammar-toc-wrap:not([open])[data-mobile-expanded="true"]>.grammar-toc{display:block}
+ .grammar-toc-wrap:not([open])[data-mobile-expanded="false"]>.grammar-toc{display:none}
+ .grammar-toc-wrap>.grammar-toc{max-height:min(52dvh,350px)}
+}
+@media (prefers-reduced-motion:reduce){.grammar-toc-chevron{transition:none}}

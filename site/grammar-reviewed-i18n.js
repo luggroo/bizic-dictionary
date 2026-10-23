@@ -1903,3 +1903,6 @@ Object.assign(UI_TRANSLATIONS,{
   "出处：Brassett 等（2006），第13、24页，表2.6。": "Source: Brassett et al. (2006), pp. 13, 24, Table 2.6.",
   "Brassett 等（2006），第13、24页，表2.6。": "Brassett et al. (2006), pp. 13, 24, Table 2.6."
 });
+
+// Navigation of the mobile reference-grammar chapter list.
+Object.assign(UI_TRANSLATIONS,{"章节目录":"Chapter contents"});
