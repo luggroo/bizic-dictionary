@@ -19,6 +19,15 @@ assert.equal(pos.matches({positions:['n.']},'lexical'),true);
 assert.equal(pos.matches({positions:['vt']},'verb'),true);
 assert.equal(pos.matches({positions:['nsuff.']},'morphology'),true);
 assert.equal(pos.matches({positions:['n.']},'verb'),false);
+for(const word of [{id:'yubao-60823-v-2790',pos:''},{id:'merged',mergedWordIds:['yubao-60823-v-2790'],pos:'v.'}]){
+ const original=JSON.stringify(word);
+ assert.equal(JSON.stringify(pos.ids(word)),'["phrase"]');
+ assert(pos.matches(word,'phrase'));
+ assert.match(pos.label(word),/短语与表达/);
+ assert.equal(JSON.stringify(word),original,'review leaves source POS unchanged');
+}
+assert.equal(pos.label({id:'unreviewed',pos:''}),'');
+assert.equal(pos.label(null),'');
 assert.equal(pos.filterId('adj.'),'adjective');
 assert.equal(pos.matches({positions:['unmapped source label']},'unmapped source label'),true);
 pos.initialize([{positions:['n.']},{positions:['noun']},{positions:['vt']},{positions:['nsuff.']}]);

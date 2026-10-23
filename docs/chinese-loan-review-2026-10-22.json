@@ -244,10 +244,10 @@
       "originalTarget": "火车",
       "action": "annotate-loan",
       "target": "火车",
-      "note": "可能借自西南官话或湘语「火车」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 火车 (‘train’).",
+      "note": "可能借自湘语「火车」。",
+      "noteEn": "Possibly borrowed from Xiang 火车.",
       "status": "释义已核定",
-      "donorVariety": "西南官话或湘语",
+      "donorVariety": "湘语",
       "scope": "whole",
       "reviewedForms": [
         {
@@ -6987,6 +6987,13 @@
       "scope": "whole",
       "reviewedForms": [
         {
+          "ipa": "tɕʰi²⁴tsʰɤ⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        },
+        {
           "ipa": "tɕʰi³⁵tsʰe⁵⁵",
           "span": [
             1,
@@ -6996,8 +7003,8 @@
       ],
       "status": "可能借词已注",
       "donorVariety": "西南官话",
-      "note": "/tɕʰi³⁵tsʰe⁵⁵/ 可能借自西南官话「汽车」。",
-      "noteEn": "/tɕʰi³⁵tsʰe⁵⁵/ Possibly borrowed from Southwestern Mandarin 汽车.",
+      "note": "可能借自西南官话「汽车」。",
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 汽车.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -16375,9 +16382,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "西南官话或湘语",
-      "note": "可能借自西南官话或湘语「车子」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 车子.",
+      "donorVariety": "湘语",
+      "note": "可能借自湘语「车子」。",
+      "noteEn": "Possibly borrowed from Xiang 车子.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -17243,9 +17250,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "西南官话或湘语",
-      "note": "可能借自西南官话或湘语「汽车」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 汽车.",
+      "donorVariety": "湘语",
+      "note": "可能借自湘语「汽车」。",
+      "noteEn": "Possibly borrowed from Xiang 汽车.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -41414,9 +41421,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "西南官话或湘语",
-      "note": "可能借自西南官话或湘语「火车」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 火车.",
+      "donorVariety": "湘语",
+      "note": "可能借自湘语「火车」。",
+      "noteEn": "Possibly borrowed from Xiang 火车.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -41435,9 +41442,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "西南官话或湘语",
-      "note": "可能借自西南官话或湘语「汽车」。",
-      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 汽车.",
+      "donorVariety": "湘语",
+      "note": "可能借自湘语「汽车」。",
+      "noteEn": "Possibly borrowed from Xiang 汽车.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },

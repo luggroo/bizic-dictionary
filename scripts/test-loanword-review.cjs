@@ -36,7 +36,29 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  assert(c.editorialNotesFor(get('stedt-rn-288801')).some(n=>n.text==='可能借自西南官话，具体原词待考。'));
  for(const w of data.words)for(const a of w.attestations||[])if(surveyBefore.has(a.id))assert.equal(sourceFields(a),surveyBefore.get(a.id),a.id+' survey source changed');
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2359);
+ const batch=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/ma-car-dragonfly-review-2026-10-23.json'),'utf8'));
+ for(const decision of batch.decisions){
+  const expected=decision.note;
+  for(const id of expected.wordIds){
+   const w=get(id),note=c.editorialNotesFor(w).find(n=>n.id===expected.id);
+   assert(note,id+' reviewed note exists');assert.equal(note.text,expected.text);
+   c.noteText=note.text;assert.equal(vm.runInContext('UI_TRANSLATIONS[noteText]',c),decision.noteEn);
+   if(note.id.startsWith('chinese-loan-'))assert.equal(c.modernChineseLoanInfo(w).scope,note.scope,id+' whole/component coverage');
+  }
+ }
+ for(const item of batch.excludedForms)assert.equal(c.modernChineseLoanBadge(get(item.id)),'',item.id+' unrelated or undated form');
+ assert.equal(c.modernChineseLoanBadge(get('stedt-rn-289737')),'','undated Xiang loan has no modern-loan badge');
+ assert.equal(get('stedt-rn-289522').notations.ipa[0].text,'dʑio²¹niã³⁵du̵²¹','dragonfly source notation is preserved');
+ assert.deepEqual(Array.from(c.editorialNotesFor(get('stedt-rn-289522')).find(n=>n.id==='chinese-loan-stedt-rn-289522').reviewedForms[0].span),[1,2]);
+ c.phraseFixture=get('yubao-60823-v-2790');
+ assert.equal(vm.runInContext('JSON.stringify(WordClasses.ids(phraseFixture))',c),'["phrase"]');
+ vm.runInContext("state.q='ddeu';state.searchLanguage='tujia';state.exact=false",c);
+ assert(c.wordSearchScore(get('stedt-rn-289522'))>0,'actual final-syllable spelling is searchable');
+ const matches=c.rankedWords(data.words),dragonflyIndex=matches.findIndex(w=>w.id==='stedt-rn-289522');
+ assert(dragonflyIndex>=0);
+ for(const [index,w] of matches.entries())if(c.wordSearchScore(w)>=50)assert(index<dragonflyIndex,'prefix and full matches precede dragonfly');
+ vm.runInContext("state.q='';state.searchLanguage=''",c);
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2407);
  for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,'西南官话',id+' northern donor variety');}
  for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
  // Exact Southern forms and source aliases receive the accepted donor; native
@@ -87,6 +109,9 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.wordMatches(get('yubao-60756-v-0747')),true);
  assert.equal(c.wordMatches(get('stedt-rn-288498')),true);
  assert.equal(c.wordMatches(get('w576')),true);
+ assert.equal(c.wordMatches(get('stedt-rn-289737')),true,'undated co remains visible');
+ assert.equal(c.wordMatches(get('yubao-60824-v-1887')),false,'modern ce axle is hidden');
+ assert.equal(c.wordMatches(get('stedt-rn-289522')),true,'dragonfly half-loan remains visible');
  for(const id of xiangWhole)assert.equal(c.wordMatches(get(id)),false,id+' whole-loan filter');
  for(const id of xiangParts)assert.equal(c.wordMatches(get(id)),true,id+' mixed compound remains visible');
  c.loanPosFixture=get('yubao-60756-v-0747');
@@ -98,5 +123,5 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.parseViewHash('#words?hideWholeLoans=false').state.hideWholeLoans,false);
  const counts={};for(const w of data.words){const scope=c.modernChineseLoanInfo(w).scope||'unmarked';counts[scope]=(counts[scope]||0)+1;}
  console.log('Loan badge coverage:',counts);
- console.log('PASS: reviewed glosses, source preservation, 2359 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
+ console.log('PASS: reviewed glosses, source preservation, 2407 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
 })().catch(e=>{console.error(e);process.exit(1)});

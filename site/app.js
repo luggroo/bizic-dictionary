@@ -96,7 +96,8 @@ function wordSearchScore(w,language=state.searchLanguage){
   if(index.forms.some(f=>f===q||(compactQuery&&compact(f)===compactQuery)))score=100;
   if(!state.exact&&!score){
    if(index.forms.some(f=>f.split(quoted?/[\s\-0-9]+/:/[\s'\-0-9]+/).includes(q)))score=80;
-   else if(q.length>=2&&index.forms.some(f=>quoted?f.includes(q):f.startsWith(q)))score=50;
+   else if(q.length>=2&&index.forms.some(f=>f.startsWith(q)))score=50;
+   else if(q.length>=2&&index.forms.some(f=>f.includes(q)))score=40;
   }
  }
  if(!lang||lang==='zh'){
