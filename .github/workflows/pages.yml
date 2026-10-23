@@ -70,8 +70,12 @@ jobs:
           html = re.sub(r'(src="|href=")([^"?]+\.(?:js|css))(?:\?[^" ]*)?"', version, page.read_text())
           page.write_text(html)
           PYCODE
-      - name: Test mobile grammar chapter scrolling in Chrome
-        run: node scripts/test-grammar-scroll-chrome.cjs
+      - name: Install mobile browser QA driver
+        run: PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install --prefix /tmp/bizic-grammar-qa --no-save --ignore-scripts --silent playwright@1.58.2
+      - name: Test mobile grammar navigation in Chrome
+        env:
+          NODE_PATH: /tmp/bizic-grammar-qa/node_modules
+        run: node scripts/test-grammar-scroll-playwright.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
