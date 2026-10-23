@@ -906,6 +906,25 @@ Feng（2025）调查的靛房附近两位说话人，在“姐姐的猫”这类
 
 出处：Brassett 等（2006），第106、160、101页。
 
+<a id="north-coordination"></a>
+
+<a id="north-27-1"></a>
+
+#### 名词短语的并列
+
+/ɲie⁵⁵/ 可以连接两个名词短语，相当于“和”。
+
+| 拼音 | angfnix | cux | wuf | niex | rof | xief |
+| --- | --- | --- | --- | --- | --- | --- |
+| IPA | ã²⁴ɲi⁵⁵ | tsʰu⁵⁵ | wu²⁴ | ɲie⁵⁵ | zuɔ²⁴ | ɕie²⁴ |
+| 逐词 | 我们 | 家 | 牛 | 和 | 羊 | 有 |
+
+译文：我们家有牛和羊。
+
+出处：Brassett 等（2006），第68页，例82。
+
+出处：Brassett 等（2006），第68、69、70页。
+
 ### 3.5 格与关系标记
 
 <a id="north-15-1"></a>
@@ -1324,7 +1343,23 @@ Feng（2025）在靛房附近记录了下面两种“白鸡”的说法：花括
 | /sa⁵⁵ si²¹ liau²¹/ | 冷死了（冷＋死＋了）。 |
 
 
-性质词后加xi，再接tai“没有”，也可加强程度，如“今天好冷”。例句与分析见[xi＋tai表示高程度](#north-xi-degree)。
+<a id="north-xi-degree"></a>
+
+#### xi＋tai表示高程度
+
+性质词后加xi，再接tai“没有”，也可加强程度：
+
+| 拼音 | naiv | sav-xir | taif |
+| --- | --- | --- | --- |
+| IPA | nai⁵³ | sa⁵³-ɕi²¹ | tʰai³⁵ |
+| 中文逐词 | 今天 | 冷-名词化 | 没有 |
+| English | today | cold-NMLZ | not.exist |
+
+译文：今天好冷。 / It is very cold today.
+
+出处：鲁曼等（2021），[第426页，例15](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=4)。
+
+鲁曼等将这一构式分析为“名词化短语＋否定存在”，由“没有同样……的”引出程度很高的意思。该文列举的译文包括“最好”“太小”“很臭”“好冷”；“最高级”和“高程度”是文献中对它的不同概括。（[第426—427页，例12—15及分析](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=4)）
 
 <a id="north-23-2"></a>
 
@@ -2228,46 +2263,49 @@ dor 可参与带义务意味的劝行句，第一人称复数主语仍可保留�
 
 ### 5.3 陈述的确认语气
 
-陈述句末的xi可以加强确认语气，如“他吃过了的”。例句及其与po、liao的搭配见[句末xi与陈述语气](#north-final-xi)。
+<a id="north-final-xi"></a>
+
+#### 句末xi与陈述语气
+
+xi可以放在整个陈述之后，对所说的事态加以确认。下例中，完成意义由liao表达，句末xi带有确认语气：
+
+| 拼音 | gof | gav-liaor-xir |
+| --- | --- | --- |
+| IPA | ko³⁵ | ka⁵³liau²¹-ɕi²¹ |
+| 中文逐词 | 他 | 吃.完成体-名词化 |
+| English | 3SG | eat.PRF-NMLZ |
+
+译文：他吃过了的。 / He has indeed eaten.
+
+出处：鲁曼等（2021），[第431页，例42](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=9)。
+
+鲁曼等还讨论了po xi与liao的区别：在“我刚刚吃饭”的对照中，前者突出吃饭后保持的状态，后者陈述吃饭事件已经结束。po表示状态，xi对整个陈述起作用。（[第431—432页，例45](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=9)）
+
+
+该文也用句末xi描写静止的空间关系，如小路通向山坡、小桥穿过村庄。句中虽用了“爬”“穿过”等动词，整句描述的是小路、桥的走向。作者将这种用法分析为把动态情状表达为状态。（[第432页，例46—48](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=10)）
 
 <a id="north-part-5"></a>
 
 ## 6. 名词化、从句与复句
 
-本章先介绍名词化形式，再看动作、小句和句末用法，随后介绍修饰名词、连接动作与组织复句的结构。
-
-[名词化形式](#north-nominal-forms) · [xi与niexi的用法](#north-xi-functions) · [修饰名词与关系从句](#north-relative-clauses) · [连动](#north-serial-verbs) · [时间、条件与让步](#north-time-condition) · [并列](#north-coordination)
-
 <a id="north-nominal-forms"></a>
 
-### 6.1 名词化形式与指称
+### 6.1 名词化的基本形式
 
 名词化可以把动作、性质或一句话变成指人、事物、事情或地方的表达，例如“吃的东西”“做工的人”“吃饭的地方”。北部材料中可见以下四种形式：
 
 | 形式 | 主要表示 | 意思举例 |
 | --- | --- | --- |
-| [xi](#north-xi-functions) | 事情，也可指人或物 | 狗叫这件事、吃的东西 |
 | [ci](#north-24-102) | 动作涉及的东西 | 吃的东西、喝的东西 |
 | [ma](#north-24-103) | 做事的人 | 做的人、吃的人 |
 | [zo](#north-24-104) | 做事的地方 | 吃饭的地方、放东西的地方 |
+| [xi](#north-24-101) | 事情，也可指人或物 | 狗叫这件事、吃的东西 |
 
-xi和ci的部分用法有重叠。常见的nie-xi包含连接成分nie和名词化成分xi，下面再说明它们的分工。
-
-<a id="north-24-101"></a>
-
-#### xi、ci与niexi的分工
-
-gaxica“吃得好”评价吃这一行为；gaci“吃的东西”指食物。xi的动作评价和小句用法见[下一节](#north-xi-functions)。
-
-niexi常用于修饰短语，如“没做完的作业”“卖糖馓的婆婆”，也可独立指称人、事物或事件。它与xi在部分结构中都能使用，两者的选择与修饰结构有关。
-
-Feng（2025）把nie-xi分成两部分：nie连接修饰内容与名词；xi让动作或一句话能够指称一件事、一个人或一样东西，称为“名词化”。两者也可以一起使用。具体搭配见[nie、xi与nie-xi的搭配](#north-xi-niexi-pairs)。
-
-鲁曼等还记录了同一个“做＋niexi”形式分别指“做工的人”和“所做的事情”。这种意义差别由语境确定。（[第425页，例2f、2g](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=3)）
+xi的用途较广；ci、ma、zo分别侧重事物、人和地方。常见的nie-xi由连接成分nie和名词化成分xi组成。
 
 <a id="north-24-102"></a>
 
-#### 事物名词化：吃的、喝的与可做的事
+#### ci：指事物
 
 动词短语加ci，可以指吃的、喝的或可做的事。这样的名词性表达可独立使用，也可接/ɕie³⁵/“有”、/tʰai³⁵/“没有”，组成存在句。
 
@@ -2295,7 +2333,7 @@ Feng（2025）把nie-xi分成两部分：nie连接修饰内容与名词；xi让�
 
 <a id="north-24-103"></a>
 
-#### 指人的名词化
+#### ma：指人
 
 /ma⁵⁵/ 把动作或性质转成指人的名词，如“做某事的人”。Brassett 将它列为指人的名词化标记；田志慧的例句还记录了 /ma²¹/。以下从田书例句中取出名词性部分：[^ref-north-24-3-note-36]
 
@@ -2311,7 +2349,7 @@ Feng（2025）把nie-xi分成两部分：nie连接修饰内容与名词；xi让�
 
 <a id="north-24-104"></a>
 
-#### 处所名词化
+#### zo：指地方
 
 动词加处所名词化标记即可表示做某事的地方，如 /ka³⁵ tso⁵⁵/“吃饭的地方”、/pʰo⁵⁵ tso²¹/“放东西的地方”。它们可以独立作名词性成分；再接“有／没有”，才构成下面的存在句。
 
@@ -2327,30 +2365,31 @@ Feng（2025）把nie-xi分成两部分：nie连接修饰内容与名词；xi让�
 
 [^ref-north-place-nmlz]: Brassett等（2006），第141—142页，§8.1；田志慧，第541页。
 
-### 6.2 xi与niexi的动作、小句及句末用法
+<a id="north-24-101"></a>
+
+#### xi与niexi：指人、事物或事情
+
+xi也可以指人或事物，如“做工的人”“吃的、用的”。niexi既可用于“没做完的作业”“卖糖馓的婆婆”一类修饰语，也可独立指称人、事物或事件。
+
+鲁曼等还记录了同一个“做＋niexi”形式分别指“做工的人”和“所做的事情”。这种意义差别由语境确定。（[第425页，例2f、2g](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=3)）
+
+两者在修饰名词时怎样选择，见[nie、xi与nie-xi的搭配](#north-xi-niexi-pairs)。
 
 <a id="north-xi-functions"></a>
 
-#### xi的用法：从词语到小句
+### 6.2 把动作或小句作为主语、宾语
 
-xi既能把词语或动作转成名词性表达，也能作用于整个小句。鲁曼等（2021）从名词化出发解释以下用法；其中部分例子使用niexi或po xi。该文自采材料主要来自龙山靛房镇报鸽村、坡脚村，另引有其他文献的例句。
+名词化也可以指一件事。例如，“看［哭嫁］”把哭嫁当作观看的对象；“［耕地］好”则评价耕地这件事。xi可以接在动作短语后，也可以接在整个小句后。
 
-| 用法 | 例句表达的意思 | 原文页码与例号 |
-| --- | --- | --- |
-| 指人或事物 | 做工的人、吃的、用的 | 第425页，例2—4 |
-| 评价动作或事件 | 土家话讲得好、地耕得好、摆手舞跳得好 | 第425—426页，例6—8 |
-| 将行为作为另一动作的对象 | 学做鞋子、看哭嫁 | 第426页，例9—11 |
-| 构成关系从句 | 煮的饭、刚买的笔、我说的话 | 第429页，例24、27—28 |
-| 标记主语或宾语小句 | 时间过得慢、害怕某人跑掉 | 第430页，例35—37 |
-| 表示目的或方式 | 邀请某人吃饭、按照爷爷说的做 | 第431页，例40—41 |
-| 在句末确认事态 | 他吃过了的、我是从长沙来的 | 第431页，例42—45 |
-| 描写静止的空间关系 | 小路通向山坡、桥穿过村庄 | 第432页，例46—48 |
+鲁曼等（2021）从名词化出发解释这些用法；其中部分例子使用niexi或po xi。该文自采材料主要来自龙山靛房镇报鸽村、坡脚村，另引有其他文献的例句。
 
 出处：[鲁曼等（2021），第424—432页](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=2)。
 
 <a id="north-xi-evaluation"></a>
 
 #### 评价动作的表现
+
+gaxica“吃得好”评价吃这一行为；gaci“吃的东西”指食物。
 
 | 拼音 | gof | gaf-xif | caf |
 | --- | --- | --- | --- |
@@ -2360,7 +2399,7 @@ xi既能把词语或动作转成名词性表达，也能作用于整个小句。
 
 译文：他吃得好。 / He eats well.
 
-在“吃得好”这类表达中，xi接在动词后，后面的“好、干净”等性质词说明动作做得怎样。同样的结构还可表达“手洗得干净”“土家话说得好”。传统语法将这类xi称为补语标记，也有研究将其分析为动作名词化。[^ref-north-24-1-note-35]
+在“吃得好”这类表达中，xi接在动词后，后面的“好、干净”等性质词说明动作做得怎样。同样的结构还可表达“手洗得干净”“土家话说得好”“摆手舞跳得好”。传统语法将这类xi称为补语标记，也有研究将其分析为动作名词化。[^ref-north-24-1-note-35]
 
 [^ref-north-24-1-note-35]: 本例音形见Brassett等（2006），第143页例10第一分句；该书另有“吃的东西好”的解释，与这里采用的用法判断有出入。补语分析见陈康《土家语研究》第123—124页；动作名词化分析见鲁曼等（2021）第425—426页，例6—8。各材料的差异见文末“xi、ci、niexi：证据核对”。
 
@@ -2378,7 +2417,7 @@ xi既能把词语或动作转成名词性表达，也能作用于整个小句。
 
 #### 把动作作为宾语
 
-名词化表达也能作宾语。下例中，“哭嫁＋niexi”是“看”的宾语：
+名词化表达也能作宾语，如“学［做鞋子］”“看［哭嫁］”。下例中，“哭嫁＋niexi”是“看”的宾语：
 
 | 拼音 | anf | tavhar | zir-niexxix | paiv |
 | --- | --- | --- | --- | --- |
@@ -2389,8 +2428,6 @@ xi既能把词语或动作转成名词性表达，也能作用于整个小句。
 译文：我们一起去看哭嫁。 / We will go together to watch the bridal lament.
 
 出处：鲁曼等（2021），[第426页，例11](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=4)。
-
-这两种结构分别相当于“［耕地］好”和“看［哭嫁］”。鲁曼等用动作或事件名词化解释它们。
 
 <a id="north-xi-clause"></a>
 
@@ -2410,58 +2447,17 @@ xi可以接在小句末尾，使整段内容成为主语或宾语。下例把“
 
 表示害怕、知道等心理或认知活动时，xi还可标记所涉及的内容。鲁曼等的“狼外婆害怕习里跑掉”中，“习里跑掉＋xi”是“怕”的宾语。（[第430页，例35](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=8)）同类用法见[名词化＋怕](#north-17-105)。
 
-<a id="north-xi-degree"></a>
-
-#### xi＋tai表示高程度
-
-性质词后加xi，再接tai“没有”，也可加强程度：
-
-| 拼音 | naiv | sav-xir | taif |
-| --- | --- | --- | --- |
-| IPA | nai⁵³ | sa⁵³-ɕi²¹ | tʰai³⁵ |
-| 中文逐词 | 今天 | 冷-名词化 | 没有 |
-| English | today | cold-NMLZ | not.exist |
-
-译文：今天好冷。 / It is very cold today.
-
-出处：鲁曼等（2021），[第426页，例15](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=4)。
-
-鲁曼等将这一构式分析为“名词化短语＋否定存在”，由“没有同样……的”引出程度很高的意思。该文列举的译文包括“最好”“太小”“很臭”“好冷”；“最高级”和“高程度”是文献中对它的不同概括。（[第426—427页，例12—15及分析](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=4)）
-
-<a id="north-xi-purpose-manner"></a>
-
-#### xi从句表示目的和方式
-
-在鲁曼等的材料中，“邀请某人吃午饭”把“吃午饭＋xi”放在“邀请”前；“按照爷爷说的那样做”则把“爷爷说＋po xi”作为后面动作的依据。作者分别将它们分析为目的和方式从句，并报告这两个例子省去xi后意思不变，这类用法已较少见。（[第431页，例40—41](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=9)）
-
-<a id="north-final-xi"></a>
-
-#### 句末xi与陈述语气
-
-xi可以放在整个陈述之后，对所说的事态加以确认。下例中，完成意义由liao表达，句末xi带有确认语气：
-
-| 拼音 | gof | gav-liaor-xir |
-| --- | --- | --- |
-| IPA | ko³⁵ | ka⁵³liau²¹-ɕi²¹ |
-| 中文逐词 | 他 | 吃.完成体-名词化 |
-| English | 3SG | eat.PRF-NMLZ |
-
-译文：他吃过了的。 / He has indeed eaten.
-
-出处：鲁曼等（2021），[第431页，例42](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=9)。
-
-鲁曼等还讨论了po xi与liao的区别：在“我刚刚吃饭”的对照中，前者突出吃饭后保持的状态，后者陈述吃饭事件已经结束。po表示状态，xi对整个陈述起作用。（[第431—432页，例45](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=9)）
-
-
-该文也用句末xi描写静止的空间关系，如小路通向山坡、小桥穿过村庄。句中虽用了“爬”“穿过”等动词，整句描述的是小路、桥的走向。作者将这种用法分析为把动态情状表达为状态。（[第432页，例46—48](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=10)）
+xi的其他用法：[程度表达](#north-xi-degree)；[句末确认语气](#north-final-xi)。
 
 <a id="north-relative-clauses"></a>
 
-### 6.3 修饰名词与关系从句
+### 6.3 用短语或从句修饰名词
+
+“吃的东西”可以独立指称事物；“吃饭的碗”则用“吃饭的”说明碗的用途。修饰内容也可以是一整句，例如“我说的话”“刚买的笔”“煮的饭”。这样的从句叫关系从句，被修饰的名词叫中心名词。
 
 <a id="north-25-101"></a>
 
-#### 修饰名词的短语
+#### 修饰内容放在名词前
 
 动词短语还可以放在名词前，说明事物的用途。修饰成分紧接动词短语，名词放在最后。
 
@@ -2480,11 +2476,9 @@ xi可以放在整个陈述之后，对所说的事态加以确认。下例中，
 
 <a id="north-25-1"></a>
 
-#### 前置修饰结构
+同样，下例用“买柴的”说明是哪一个人。
 
-名词修饰结构有不同的中心语位置。下例“买柴的”在“人”前；Brassett 也记录了名词后接名词化动词短语的形式，见下一节。
-
-结构：前置：动词短语＋nier＋中心名词；后置例型：中心名词＋〔动词 bor xif〕
+结构：动词短语＋nier＋中心名词
 
 | 拼音 | kar | pux | nier | lov |
 | --- | --- | --- | --- | --- |
@@ -2496,27 +2490,11 @@ xi可以放在整个陈述之后，对所说的事态加以确认。下例中，
 
 出处：Brassett 等（2006），第95、147、148页。
 
-<a id="north-25-2"></a>
-
-#### 后置修饰结构
-
-关系从句可放在被修饰名词之后。下例先说“衣服”，再用带 xif 的“洗着／洗过”结构限定它，最后以“干净”作全句谓语。
-
-| 拼音 | sixbax | [zaf | bor | xif] | soflix |
-| --- | --- | --- | --- | --- | --- |
-| IPA | sɿ⁵⁵pa⁵⁵ | [tsa²⁴ | pɔ²¹ | ɕi²⁴] | suɔ²⁴li⁵⁵ |
-| 逐词 | 衣服 | 洗 | 状态 | 名词化 | 干净 |
-
-译文：洗过的衣服很干净。  
-出处：Brassett 等（2006），第147页，例36。
-
-出处：Brassett 等（2006），第147、148页。
-
 <a id="north-25-3"></a>
 
-#### 中心语外置与内置
+#### 名词在从句外或从句内
 
-关系从句可以把所指的名词放在从句外，也可以把它保留在从句内原有的位置。下面两句都表示“我要吃金花不能吃的东西”：外置式的“东西”在关系从句之后，内置式的“东西”在“吃”之前，仍占宾语位置。方括号划出关系从句。
+下面两句都表示“我要吃金花不能吃的东西”，区别在“东西”的位置。第一句把它放在从句之后，称为中心语外置；第二句把它留在从句内部、动词“吃”之前，称为中心语内置。方括号划出从句范围。
 
 /ŋa²⁴ [tɕĩ⁴⁴ xʊa⁴⁴ ka²⁴ tʰi⁴⁴ ɕi⁴⁴] ie²¹ ka²⁴=i⁴⁴/
 
@@ -2538,75 +2516,27 @@ Liu（2025），WCCFL 43 海报，例（2）。
 
 出处：Kang Franco Liu. 2025. Transitive subject extraction restriction in Northern Tujia and beyond. WCCFL 43, University of Washington, Seattle, 26 April 2025.
 
-<a id="north-xi-niexi-pairs"></a>
+<details>
+<summary>补充：Brassett对“洗过的衣服”的描述</summary>
 
-#### nie、xi与nie-xi的搭配
+<a id="north-25-2"></a>
 
-以下例子来自Feng（2025）对龙山靛房附近两位说话人的调查。花括号列出同一位置的不同形式，方括号标出从句范围；星号表示说话人不接受的形式。原文不标声调。
+##### 名词后接修饰语的描述
 
-**我知道你买了狗的消息。**
+Brassett将下面的形式描述为名词后接修饰语：先说“衣服”，再用带xif的“洗着／洗过”结构限定它，最后以“干净”作全句谓语。
 
-| 拼音 | [ni | halie | pu-{nie／xi／nie-xi}] | sa | nga | haosi |
-| --- | --- | --- | --- | --- | --- | --- |
-| IPA | [ni | xalie | pʰu-{nie／ɕi／nie-ɕi}] | sa | ŋa | xausɨ |
-| 中文逐词 | 你 | 狗 | 买-{连接／名词化／连接-名词化} | 消息 | 我 | 知道 |
-| English | 2SG | dog | buy-{LNK/NMLZ/LNK-NMLZ} | news | 1SG | know |
-
-译文：我知道你买了狗的消息。 / I know about your purchase of a dog.
-
-出处：[第5页，例9a—9c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=5)。
-
-**扔碗的孩子。**
-
-| 拼音 | [qiebi | na-{nie／xi／nie-xi}] | boli |
-| --- | --- | --- | --- |
-| IPA | [tɕʰiepi | na-{nie／ɕi／nie-ɕi}] | poli |
-| 中文逐词 | 碗 | 扔-{连接／名词化／连接-名词化} | 孩子 |
-| English | bowl | throw-{LNK/NMLZ/LNK-NMLZ} | child |
-
-译文：扔碗的孩子。 / The child who threw a bowl.
-
-出处：[第7页，例14a—14c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
-
-**他／她扔的碗。**
-
-| 拼音 | [go-go | na-{nie／xi／nie-xi}] | qiebi |
-| --- | --- | --- | --- |
-| IPA | [ko-ko | na-{nie／ɕi／nie-ɕi}] | tɕʰiepi |
-| 中文逐词 | 他／她-作格 | 扔-{连接／名词化／连接-名词化} | 碗 |
-| English | 3SG-ERG | throw-{LNK/NMLZ/LNK-NMLZ} | bowl |
-
-译文：他／她扔的碗。 / The bowl thrown by him or her.
-
-出处：[第7页，例15a—15c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
-
-**破了的碗。**
-
-| 拼音 | [qiebi | pibo-{xi／nie-xi／*nie}] |
-| --- | --- | --- |
-| IPA | [tɕʰiepi | pʰi-po-{ɕi／nie-ɕi／*nie}] |
-| 中文逐词 | 碗 | 破-状态-{名词化／连接-名词化／*连接} |
-| English | bowl | break-STAT-{NMLZ/LNK-NMLZ/*LNK} |
-
-译文：破了的碗。 / The broken bowl.
-
-出处：[第7页，例16a—16c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
-
-前三组都允许nie、xi和nie-xi。“破了的碗”把“碗”放在从句内部，末尾需要xi；可以用xi或nie-xi，单独nie不成立。
-
-下面“妈妈喂的猫”允许nie和nie-xi，单独xi不成立。它与前面“扔碗”的例子为何不同，Feng尚未给出统一解释。
-
-| 拼音 | [anie-go | ye | lie-{nie／nie-xi／*xi}] | mo | aseikuli |
+| 拼音 | sixbax | [zaf | bor | xif] | soflix |
 | --- | --- | --- | --- | --- | --- |
-| IPA | [anie-ko | je | lie-{nie／nie-ɕi／*ɕi}] | mo | aseikʰuli |
-| 中文逐词 | 妈妈-作格 | 食物 | 给-{连接／连接-名词化／*名词化} | 猫 | 白 |
-| English | mother-ERG | food | give-{LNK/LNK-NMLZ/*NMLZ} | cat | white |
+| IPA | sɿ⁵⁵pa⁵⁵ | [tsa²⁴ | pɔ²¹ | ɕi²⁴] | suɔ²⁴li⁵⁵ |
+| 逐词 | 衣服 | 洗 | 状态 | 名词化 | 干净 |
 
-译文：妈妈喂的猫是白的。 / The cat that Mother fed is white.
+译文：洗过的衣服很干净。
 
-出处：[第6页，例13a—13c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=6)。
+出处：Brassett 等（2006），第147页，例36。
 
-#### 关系从句的结构限制
+出处：Brassett 等（2006），第147、148页。
+
+</details>
 
 <details>
 <summary>展开：内置关系从句的限制与分析</summary>
@@ -2682,15 +2612,89 @@ Liu 将内置式分析为较小的从句结构（TP），外置式则为较大�
 
 </details>
 
+<a id="north-xi-niexi-pairs"></a>
+
+#### nie、xi与nie-xi的搭配
+
+Feng（2025）把nie-xi分成连接成分nie和名词化成分xi。两者可以一起使用，也有只用其中一个的形式；具体选择与修饰结构有关。
+
+以下例子来自Feng（2025）对龙山靛房附近两位说话人的调查。花括号列出同一位置的不同形式，方括号标出从句范围；星号表示说话人不接受的形式。原文不标声调。
+
+下面三组都允许nie、xi和nie-xi。
+
+**我知道你买了狗的消息。**
+
+| 拼音 | [ni | halie | pu-{nie／xi／nie-xi}] | sa | nga | haosi |
+| --- | --- | --- | --- | --- | --- | --- |
+| IPA | [ni | xalie | pʰu-{nie／ɕi／nie-ɕi}] | sa | ŋa | xausɨ |
+| 中文逐词 | 你 | 狗 | 买-{连接／名词化／连接-名词化} | 消息 | 我 | 知道 |
+| English | 2SG | dog | buy-{LNK/NMLZ/LNK-NMLZ} | news | 1SG | know |
+
+译文：我知道你买了狗的消息。 / I know about your purchase of a dog.
+
+出处：[第5页，例9a—9c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=5)。
+
+**扔碗的孩子。**
+
+| 拼音 | [qiebi | na-{nie／xi／nie-xi}] | boli |
+| --- | --- | --- | --- |
+| IPA | [tɕʰiepi | na-{nie／ɕi／nie-ɕi}] | poli |
+| 中文逐词 | 碗 | 扔-{连接／名词化／连接-名词化} | 孩子 |
+| English | bowl | throw-{LNK/NMLZ/LNK-NMLZ} | child |
+
+译文：扔碗的孩子。 / The child who threw a bowl.
+
+出处：[第7页，例14a—14c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
+
+**他／她扔的碗。**
+
+| 拼音 | [go-go | na-{nie／xi／nie-xi}] | qiebi |
+| --- | --- | --- | --- |
+| IPA | [ko-ko | na-{nie／ɕi／nie-ɕi}] | tɕʰiepi |
+| 中文逐词 | 他／她-作格 | 扔-{连接／名词化／连接-名词化} | 碗 |
+| English | 3SG-ERG | throw-{LNK/NMLZ/LNK-NMLZ} | bowl |
+
+译文：他／她扔的碗。 / The bowl thrown by him or her.
+
+出处：[第7页，例15a—15c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
+
+“破了的碗”把“碗”放在从句内部，末尾需要xi：可以用xi或nie-xi，单独nie不成立。
+
+**破了的碗。**
+
+| 拼音 | [qiebi | pibo-{xi／nie-xi／*nie}] |
+| --- | --- | --- |
+| IPA | [tɕʰiepi | pʰi-po-{ɕi／nie-ɕi／*nie}] |
+| 中文逐词 | 碗 | 破-状态-{名词化／连接-名词化／*连接} |
+| English | bowl | break-STAT-{NMLZ/LNK-NMLZ/*LNK} |
+
+译文：破了的碗。 / The broken bowl.
+
+出处：[第7页，例16a—16c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=7)。
+
+下面“妈妈喂的猫”允许nie和nie-xi，单独xi不成立。它与前面“扔碗”的例子为何不同，Feng尚未给出统一解释。
+
+| 拼音 | [anie-go | ye | lie-{nie／nie-xi／*xi}] | mo | aseikuli |
+| --- | --- | --- | --- | --- | --- |
+| IPA | [anie-ko | je | lie-{nie／nie-ɕi／*ɕi}] | mo | aseikʰuli |
+| 中文逐词 | 妈妈-作格 | 食物 | 给-{连接／连接-名词化／*名词化} | 猫 | 白 |
+| English | mother-ERG | food | give-{LNK/LNK-NMLZ/*NMLZ} | cat | white |
+
+译文：妈妈喂的猫是白的。 / The cat that Mother fed is white.
+
+出处：[第6页，例13a—13c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=6)。
+
 <a id="north-serial-verbs"></a>
 
-### 6.4 连动：方式、伴随与先后
+### 6.4 连接动作：方式与先后
+
+几个动作可以连在一起，说明一边做什么、一边做什么，或先做什么、再做什么。这类表达称为连动。
 
 <a id="north-30-101"></a>
 
 #### 方式与伴随
 
-/mɔ²¹/ 和 /lie⁵⁵/ 都能让前一段动词短语接着后面的动作，功能上可以与日语连用形作有限比较。两者的重点不同：/mɔ²¹/ 标记方式、手段或伴随情形；/lie⁵⁵/ 保留完成意义，常把前一动作作为后续行动的前提。[^ref-north-30-0-note-33]
+/mɔ²¹/ 标记做事的方式、手段或伴随情形，如“笑着走”“坐着吃饭”。[^ref-north-30-0-note-33]
 
 [^ref-north-30-0-note-33]: Brassett等，第152–154页，§9.3.2–9.3.3。正文取例32（他笑着走了）、31（坐着吃饭）与25（打好糍粑后分着吃）；音标由原拼写转换。mor的短语作用范围另见§4.6.3。liex的完成意义见第118–119页。与日语连用形的比较只针对连接功能，不主张形态类别相同。
 
@@ -2701,11 +2705,13 @@ Liu 将内置式分析为较小的从句结构（TP），外置式则为较大�
 
 第二例突出吃饭时采取的姿势。/mɔ²¹/ 的作用范围是前面的整个短语；它不只连接单个动词，也可以接方式词或数量短语。
 
-xi引出的目的、方式从句见[xi从句表示目的和方式](#north-xi-purpose-manner)。
+并行动作还可用状态性的V bor作背景，或用V mor表动态方式；V bor mor则把状态作为方式呈现。
 
 <a id="north-30-102"></a>
 
 #### 完成与先后动作
+
+/lie⁵⁵/ 保留完成意义，常把前一动作作为后续行动的前提。
 
 /pa⁵⁵ pa⁵⁵ pu²⁴ lie⁵⁵, tɕiu⁵⁵ ta⁵¹ pʰi²¹ mɔ²¹ ka²⁴/
 
@@ -2715,15 +2721,25 @@ xi引出的目的、方式从句见[xi从句表示目的和方式](#north-xi-pur
 
 这句话同时用了两种连接：打糍粑在先，吃在后；分给大家是吃的方式。前一部分用 /lie⁵⁵/，后一部分用 /mɔ²¹/。/lie⁵⁵/ 在这里仍是完成标记，也能出现在独立句末，并非专门的连接后缀。
 
+#### 用“接着”连接步骤
+
+/ai⁵⁵ lie⁵⁵/ 连接先后事件，表示“接着”。
+
+“洗好后再蒸，接着泡一夜”中的 /ai⁵⁵ lie⁵⁵/ 连接先后步骤，完整例句见[叙事中的时间衔接](#north-27-2)。
+
+出处：Brassett 等（2006），第68、69、70页。
+
 <a id="north-time-condition"></a>
 
-### 6.5 时间、条件与让步
+### 6.5 连接小句：时间、目的与条件
+
+一个小句可以为另一个小句说明时间、目的或条件。例如，“你来时，他已经回家了”用“你来时”交代后一句的时间背景。
 
 <a id="north-26-1"></a>
 
-#### 时间背景与并行动作
+#### 时间：当……时
 
-zuf 可在背景小句末尾引出“当……时”的时间关系。并行动作还可用状态性的 V bor 作背景，或用 V mor 表动态方式；V bor mor 则把状态作为方式呈现。
+zuf放在背景小句末尾，表示“当……时”。
 
 结构：背景小句＋zuf，主句
 
@@ -2745,9 +2761,15 @@ zuf 可在背景小句末尾引出“当……时”的时间关系。并行动�
 
 出处：Brassett 等（2006），第150、151、153页。
 
+<a id="north-xi-purpose-manner"></a>
+
+#### 目的与方式：xi从句
+
+在鲁曼等的材料中，“邀请某人吃午饭”把“吃午饭＋xi”放在“邀请”前；“按照爷爷说的那样做”则把“爷爷说＋po xi”作为后面动作的依据。作者分别将它们分析为目的和方式从句，并报告这两个例子省去xi后意思不变，这类用法已较少见。（[第431页，例40—41](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=9)）
+
 <a id="north-26-2"></a>
 
-#### 条件与让步
+#### 条件与让步：不加连词的小句
 
 相邻小句可以不加连词，由上下文表达条件、原因或让步。下例中，前一句表达条件，后一句表达让步。
 
@@ -2768,28 +2790,6 @@ zuf 可在背景小句末尾引出“当……时”的时间关系。并行动�
 出处：Brassett 等（2006），第150页，例9。
 
 出处：Brassett 等（2006），第149、150页。
-
-<a id="north-coordination"></a>
-
-### 6.6 并列与连接
-
-<a id="north-27-1"></a>
-
-#### 名词并列与事件连接
-
-/ɲie⁵⁵/连接名词短语；/ai⁵⁵ lie⁵⁵/连接先后事件，表示“接着”。二者分别用于名词并列和小句衔接。
-
-| 拼音 | angfnix | cux | wuf | niex | rof | xief |
-| --- | --- | --- | --- | --- | --- | --- |
-| IPA | ã²⁴ɲi⁵⁵ | tsʰu⁵⁵ | wu²⁴ | ɲie⁵⁵ | zuɔ²⁴ | ɕie²⁴ |
-| 逐词 | 我们 | 家 | 牛 | 和 | 羊 | 有 |
-
-译文：我们家有牛和羊。  
-出处：Brassett 等（2006），第68页，例82。
-
-“洗好后再蒸，接着泡一夜”中的 /ai⁵⁵ lie⁵⁵/ 连接先后步骤，完整例句见[叙事中的时间衔接](#north-27-2)。
-
-出处：Brassett 等（2006），第68、69、70页。
 
 <a id="north-part-6"></a>
 

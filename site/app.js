@@ -216,6 +216,10 @@ function parseViewHash(hash){
   const target=path.startsWith('section-')?path.slice(8).replaceAll('.','-'):'fn-'+path;
   const where=GRAMMAR_ANCHORS[target];if(where){next.chapter=where.chapter;next.grammarAnchor=target;}
  }
+ if(next.view==='grammar'&&next.grammarAnchor&&typeof GRAMMAR_ANCHORS!=='undefined'){
+  const where=GRAMMAR_ANCHORS[next.grammarAnchor];
+  if(where){next.chapter=where.chapter;next.grammarDialect=where.dialect;}
+ }
  return {state:cleanViewState(next),anchor:next.grammarAnchor||(oldAnchor?path:'')};
 }
 function resolveDetailId(value){
