@@ -3206,3 +3206,5 @@ Object.assign(UI_TRANSLATIONS, {
 });
 
 Object.assign(UI_TRANSLATIONS, {"可能借自西南官话「炮竹」。":"Possibly borrowed from Southwestern Mandarin 炮竹."});
+
+Object.assign(UI_TRANSLATIONS, {"「肝」部分（第 2 音节）可能借自西南官话。": "The 肝 component (syllable 2) may be borrowed from Southwestern Mandarin."});

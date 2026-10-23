@@ -1,5 +1,5 @@
 {
-  "reviewedAt": "2026-10-22",
+  "reviewedAt": "2026-10-23",
   "entries": {
     "w90": {
       "zh": "外祖母",
@@ -2331,6 +2331,34 @@
       "en": "claw",
       "reviewedAt": "2026-10-22",
       "reviewEvidence": "tsau⁵⁵tsau⁵⁵ 保留叠词「爪爪」的完整词形。"
+    },
+    "w351": {
+      "zh": "部长",
+      "status": "confirmed",
+      "previousZh": "部长",
+      "term": "bu2zang1",
+      "en": "leader",
+      "reviewedAt": "2026-10-23",
+      "reviewEvidence": "汉语借词「部长」；minister 在此对应部长。补译「大臣」扩大了词义。",
+      "correctedEn": "minister"
+    },
+    "stedt-rn-288669": {
+      "zh": "部长",
+      "status": "confirmed",
+      "previousZh": "大臣；部长",
+      "term": "pu³⁵tsã⁵⁵",
+      "en": "minister",
+      "reviewedAt": "2026-10-23",
+      "reviewEvidence": "汉语借词「部长」；minister 在此对应部长。补译「大臣」扩大了词义。"
+    },
+    "stedt-rn-289610": {
+      "zh": "部长",
+      "status": "confirmed",
+      "previousZh": "大臣；部长",
+      "term": "bu³⁵tsã⁵⁵",
+      "en": "minister",
+      "reviewedAt": "2026-10-23",
+      "reviewEvidence": "汉语借词「部长」；minister 在此对应部长。补译「大臣」扩大了词义。"
     }
   }
 }

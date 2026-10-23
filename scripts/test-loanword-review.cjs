@@ -79,7 +79,22 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert(raised.attestations.every(a=>['to provide','provide'].includes(a.en)),'original English remains in source records');
  assert(!raised.en.includes('erroneous'),'correction commentary is not a gloss');
  for(const {wordIds} of followup.phraseBoundaries){c.photoFixture=get(wordIds[0]);assert.equal(vm.runInContext('JSON.stringify(WordClasses.ids(photoFixture))',c),'["phrase"]');}
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2930);
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2925);
+ const correctedNonLoans=['yubao-60756-v-2277','yubao-60757-v-2277','stedt-rn-289762','yubao-60824-v-0306','yubao-60824-v-1801'];
+ for(const id of correctedNonLoans)assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' reviewed non-loan');
+ const pigLiver=get('yubao-60823-v-0411'),liverNote=c.editorialNotesFor(pigLiver).find(n=>n.id==='chinese-loan-yubao-60823-v-0411');
+ assert.equal(c.modernChineseLoanInfo(pigLiver).scope,'component');
+ assert.equal(liverNote.donor,'肝');assert.deepEqual(Array.from(liverNote.reviewedForms[0].span),[2,2]);
+ assert.equal(c.modernChineseLoanInfo(get('stedt-rn-288809')).scope,'whole','bow remains a loan');
+ for(const id of ['w351','stedt-rn-288669','stedt-rn-289610']){
+  const w=get(id);assert.equal(w.zh,'部长');assert.equal(w.en,'minister');
+  assert((w.zhVariants||[]).every(s=>!s.includes('大臣')));
+  assert((w.senses||[]).every(s=>!s.zh.includes('大臣')));
+ }
+ assert(get('w351').attestations.some(a=>a.en==='leader'),'source English stays in evidence');
+ vm.runInContext("state.q='大臣';state.searchLanguage='zh'",c);
+ for(const id of ['w351','stedt-rn-289610'])assert.equal(c.wordSearchScore(get(id)),0,'obsolete translation is not searchable');
+ vm.runInContext("state.q='';state.searchLanguage=''",c);
  for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,'西南官话',id+' northern donor variety');}
  for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
  // Exact Southern forms and source aliases receive the accepted donor; native
@@ -126,6 +141,8 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.modernChineseLoanInfo(synthetic('ma³³tɕaŋ³³; ma³³tɕaŋ²¹')).scope,'mixed','tone distinctions survive');
  assert.equal(c.modernChineseLoanInfo(synthetic('ma³³tɕaŋ³³','component')).scope,'component');
  vm.runInContext("state={...DEFAULT_STATE,view:'words',hideWholeLoans:true}",c);
+ for(const id of [...correctedNonLoans,'yubao-60823-v-0411'])assert.equal(c.wordMatches(get(id)),true,id+' survives hiding whole loans');
+ assert.equal(c.wordMatches(get('stedt-rn-288809')),false,'confirmed whole loan is hidden');
  assert.equal(c.wordMatches(get('yubao-60756-v-0727')),false);
  assert.equal(c.wordMatches(get('yubao-60756-v-0747')),true);
  assert.equal(c.wordMatches(get('stedt-rn-288498')),true);
@@ -146,5 +163,5 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.parseViewHash('#words?hideWholeLoans=false').state.hideWholeLoans,false);
  const counts={};for(const w of data.words){const scope=c.modernChineseLoanInfo(w).scope||'unmarked';counts[scope]=(counts[scope]||0)+1;}
  console.log('Loan badge coverage:',counts);
- console.log('PASS: reviewed glosses, source preservation, 2930 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
+ console.log('PASS: reviewed glosses, source preservation, 2925 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
 })().catch(e=>{console.error(e);process.exit(1)});

@@ -16405,27 +16405,6 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "complete-components-4"
  },
  {
-  "id": "chinese-loan-stedt-rn-289762",
-  "wordIds": [
-   "stedt-rn-289762"
-  ],
-  "kind": "借词来源",
-  "text": "可能借自湘语或西南官话「大锅」。",
-  "donor": "大锅",
-  "donorVariety": "湘语或西南官话",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "tu̵²¹ku̵²¹",
-    "span": [
-     1,
-     2
-    ]
-   }
-  ],
-  "reviewBatch": "complete-components-4"
- },
- {
   "id": "chinese-loan-stedt-rn-288509",
   "wordIds": [
    "stedt-rn-288509"
@@ -18184,27 +18163,6 @@ EDITORIAL_NOTES.push(...[
     "span": [
      1,
      1
-    ]
-   }
-  ],
-  "reviewBatch": "complete-components-4"
- },
- {
-  "id": "chinese-loan-yubao-60757-v-2277",
-  "wordIds": [
-   "yubao-60757-v-2277"
-  ],
-  "kind": "借词来源",
-  "text": "可能借自西南官话「尸体」。",
-  "donor": "尸体",
-  "donorVariety": "西南官话",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "sɘ²⁴tʰu⁵⁵",
-    "span": [
-     1,
-     2
     ]
    }
   ],
@@ -24952,27 +24910,6 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "complete-components-4"
  },
  {
-  "id": "chinese-loan-yubao-60756-v-2277",
-  "wordIds": [
-   "yubao-60756-v-2277"
-  ],
-  "kind": "借词来源",
-  "text": "可能借自西南官话「尸体」。",
-  "donor": "尸体",
-  "donorVariety": "西南官话",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "sə³³tʰu³³",
-    "span": [
-     1,
-     2
-    ]
-   }
-  ],
-  "reviewBatch": "complete-components-4"
- },
- {
   "id": "chinese-loan-yubao-60756-v-2282",
   "wordIds": [
    "yubao-60756-v-2282"
@@ -28422,15 +28359,15 @@ EDITORIAL_NOTES.push(...[
    "yubao-60823-v-0411"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话「猪肝」。",
-  "donor": "猪肝",
+  "text": "「肝」部分（第 2 音节）可能借自西南官话。",
+  "donor": "肝",
   "donorVariety": "西南官话",
-  "scope": "whole",
+  "scope": "component",
   "reviewedForms": [
    {
     "ipa": "tsɿ⁵⁵kã⁵⁵",
     "span": [
-     1,
+     2,
      2
     ]
    }
@@ -33478,27 +33415,6 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "complete-components-4"
  },
  {
-  "id": "chinese-loan-yubao-60824-v-0306",
-  "wordIds": [
-   "yubao-60824-v-0306"
-  ],
-  "kind": "借词来源",
-  "text": "可能借自湘语或西南官话「大锅」。",
-  "donor": "大锅",
-  "donorVariety": "湘语或西南官话",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "tʉ²¹kʉ¹³",
-    "span": [
-     1,
-     2
-    ]
-   }
-  ],
-  "reviewBatch": "complete-components-4"
- },
- {
   "id": "chinese-loan-yubao-60824-v-0314",
   "wordIds": [
    "yubao-60824-v-0314"
@@ -37837,27 +37753,6 @@ EDITORIAL_NOTES.push(...[
   "reviewedForms": [
    {
     "ipa": "tʰie²¹ka²¹",
-    "span": [
-     1,
-     2
-    ]
-   }
-  ],
-  "reviewBatch": "complete-components-4"
- },
- {
-  "id": "chinese-loan-yubao-60824-v-1801",
-  "wordIds": [
-   "yubao-60824-v-1801"
-  ],
-  "kind": "借词来源",
-  "text": "可能借自湘语或西南官话「大锅」。",
-  "donor": "大锅",
-  "donorVariety": "湘语或西南官话",
-  "scope": "whole",
-  "reviewedForms": [
-   {
-    "ipa": "tʉ²¹ku¹³",
     "span": [
      1,
      2

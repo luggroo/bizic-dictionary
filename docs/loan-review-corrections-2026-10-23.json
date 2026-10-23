@@ -1,0 +1,203 @@
+{
+  "baseCommit": "de6c6b6",
+  "reviewedAt": "2026-10-23",
+  "source": "Corrections to numbered compact loan review.",
+  "decisions": [
+    {
+      "reviewRow": "Q01",
+      "action": "remove-loan-note",
+      "wordId": "yubao-60756-v-2277",
+      "previousNote": {
+        "id": "chinese-loan-yubao-60756-v-2277",
+        "wordIds": [
+          "yubao-60756-v-2277"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话「尸体」。",
+        "donor": "尸体",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "sə³³tʰu³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      }
+    },
+    {
+      "reviewRow": "Q01",
+      "action": "remove-loan-note",
+      "wordId": "yubao-60757-v-2277",
+      "previousNote": {
+        "id": "chinese-loan-yubao-60757-v-2277",
+        "wordIds": [
+          "yubao-60757-v-2277"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话「尸体」。",
+        "donor": "尸体",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "sɘ²⁴tʰu⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      }
+    },
+    {
+      "reviewRow": "Q02",
+      "action": "remove-loan-note",
+      "wordId": "stedt-rn-289762",
+      "previousNote": {
+        "id": "chinese-loan-stedt-rn-289762",
+        "wordIds": [
+          "stedt-rn-289762"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自湘语或西南官话「大锅」。",
+        "donor": "大锅",
+        "donorVariety": "湘语或西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "tu̵²¹ku̵²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      }
+    },
+    {
+      "reviewRow": "Q02",
+      "action": "remove-loan-note",
+      "wordId": "yubao-60824-v-0306",
+      "previousNote": {
+        "id": "chinese-loan-yubao-60824-v-0306",
+        "wordIds": [
+          "yubao-60824-v-0306"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自湘语或西南官话「大锅」。",
+        "donor": "大锅",
+        "donorVariety": "湘语或西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "tʉ²¹kʉ¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      }
+    },
+    {
+      "reviewRow": "Q02",
+      "action": "remove-loan-note",
+      "wordId": "yubao-60824-v-1801",
+      "previousNote": {
+        "id": "chinese-loan-yubao-60824-v-1801",
+        "wordIds": [
+          "yubao-60824-v-1801"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自湘语或西南官话「大锅」。",
+        "donor": "大锅",
+        "donorVariety": "湘语或西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "tʉ²¹ku¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      }
+    },
+    {
+      "reviewRow": "Q05",
+      "action": "component-only",
+      "wordId": "yubao-60823-v-0411",
+      "previousNote": {
+        "id": "chinese-loan-yubao-60823-v-0411",
+        "wordIds": [
+          "yubao-60823-v-0411"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话「猪肝」。",
+        "donor": "猪肝",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "tsɿ⁵⁵kã⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      },
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0411",
+        "wordIds": [
+          "yubao-60823-v-0411"
+        ],
+        "kind": "借词来源",
+        "text": "「肝」部分（第 2 音节）可能借自西南官话。",
+        "donor": "肝",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "reviewedForms": [
+          {
+            "ipa": "tsɿ⁵⁵kã⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      },
+      "noteEn": "The 肝 component (syllable 2) may be borrowed from Southwestern Mandarin."
+    },
+    {
+      "reviewRow": "Q06",
+      "action": "confirm-loan",
+      "wordId": "stedt-rn-288809",
+      "noteUnchanged": true,
+      "borrowingPeriodNotNewlyInferred": true
+    },
+    {
+      "action": "narrow-gloss",
+      "wordIds": [
+        "w351",
+        "stedt-rn-288669",
+        "stedt-rn-289610"
+      ],
+      "zh": "部长",
+      "en": "minister",
+      "removeDisplayAndSearchGloss": "大臣"
+    }
+  ]
+}
