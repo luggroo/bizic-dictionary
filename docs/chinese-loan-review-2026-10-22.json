@@ -3,9 +3,18 @@
   "dictionaryBase": "b8040dc2ef737cd5cde3a15cc5e7a7218177e5e2",
   "phoneticSource": "https://github.com/osfans/MCPDict/tree/d3e58dc3fbe83d07c2aa80dcad281b41e7a34161/tools/tables/output",
   "sourceAttribution": {
-    "stedt-rn-290103": "Luxi Xinglongchang di24 kaɯ33 closely matches di13 kaɨ33; compare Jishou di11 kau55.",
+    "stedt-rn-290103": "Xiang or Southwestern Mandarin; the comparison does not establish an exclusive Xiang source.",
     "yubao-60824-v-2438": "Luxi Wuxi li24 po42 matches li13 po55; compare Jishou li11 pa42.",
-    "otherSouthern": "Use Southwestern Mandarin or Xiang where the donor variety is not distinguishable."
+    "otherSouthern": "Use Southwestern Mandarin or Xiang where the donor variety is not distinguishable.",
+    "donorRevision20261023": {
+      "xiangOnly": [
+        "yubao-60824-v-2438",
+        "yubao-60824-v-0200",
+        "stedt-rn-289703"
+      ],
+      "broadenedCount": 37,
+      "publicExplanation": "Short donor attribution only."
+    }
   },
   "glossChanges": [
     "stedt-rn-289609",
@@ -826,10 +835,10 @@
       "originalTarget": "提高",
       "action": "annotate-loan",
       "target": "提高",
-      "note": "可能借自湘语「提高」。",
-      "noteEn": "Possibly borrowed from Xiang 提高 (‘raise; improve’).",
+      "note": "可能借自湘语或西南官话「提高」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 提高 (‘raise; improve’).",
       "status": "释义已核定",
-      "donorVariety": "湘语",
+      "donorVariety": "湘语或西南官话",
       "scope": "whole",
       "reviewedForms": [
         {
@@ -17065,9 +17074,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「大锅」。",
-      "noteEn": "Possibly borrowed from Xiang 大锅.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「大锅」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 大锅.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -34138,9 +34147,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「大锅」。",
-      "noteEn": "Possibly borrowed from Xiang 大锅.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「大锅」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 大锅.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -38506,9 +38515,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「大锅」。",
-      "noteEn": "Possibly borrowed from Xiang 大锅.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「大锅」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 大锅.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -40795,9 +40804,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「屠夫」。",
-      "noteEn": "Possibly borrowed from Xiang 屠夫.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「屠夫」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 屠夫.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -44617,9 +44626,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「豆芽菜」。",
-      "noteEn": "Possibly borrowed from Xiang 豆芽菜.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「豆芽菜」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 豆芽菜.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -44701,9 +44710,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「哈巴狗」。",
-      "noteEn": "Possibly borrowed from Xiang 哈巴狗.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「哈巴狗」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 哈巴狗.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -44722,9 +44731,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「大锅刷把」。",
-      "noteEn": "Possibly borrowed from Xiang 大锅刷把.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「大锅刷把」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 大锅刷把.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -44743,9 +44752,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「子弹头子」。",
-      "noteEn": "Possibly borrowed from Xiang 子弹头子.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「子弹头子」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 子弹头子.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -44785,9 +44794,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「收音机」。",
-      "noteEn": "Possibly borrowed from Xiang 收音机.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「收音机」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 收音机.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -44827,9 +44836,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「六指头」。",
-      "noteEn": "Possibly borrowed from Xiang 六指头.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「六指头」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 六指头.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -45121,9 +45130,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「斗争」。",
-      "noteEn": "Possibly borrowed from Xiang 斗争.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「斗争」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 斗争.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46192,9 +46201,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「绿豆」。",
-      "noteEn": "Possibly borrowed from Xiang 绿豆.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「绿豆」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 绿豆.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46234,9 +46243,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「枕头」。",
-      "noteEn": "Possibly borrowed from Xiang 枕头.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「枕头」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 枕头.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46255,9 +46264,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「抽屉」。",
-      "noteEn": "Possibly borrowed from Xiang 抽屉.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「抽屉」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 抽屉.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46276,9 +46285,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「扣子」。",
-      "noteEn": "Possibly borrowed from Xiang 扣子.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「扣子」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 扣子.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46297,9 +46306,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「豆浆」。",
-      "noteEn": "Possibly borrowed from Xiang 豆浆.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「豆浆」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 豆浆.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46318,9 +46327,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「左手」。",
-      "noteEn": "Possibly borrowed from Xiang 左手.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「左手」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 左手.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46339,9 +46348,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「右手」。",
-      "noteEn": "Possibly borrowed from Xiang 右手.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「右手」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 右手.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46360,9 +46369,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「拳头」。",
-      "noteEn": "Possibly borrowed from Xiang 拳头.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「拳头」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 拳头.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46444,9 +46453,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「洞口」。",
-      "noteEn": "Possibly borrowed from Xiang 洞口.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「洞口」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 洞口.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46633,9 +46642,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「狗熊」。",
-      "noteEn": "Possibly borrowed from Xiang 狗熊.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「狗熊」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 狗熊.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46654,9 +46663,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「臭虫」。",
-      "noteEn": "Possibly borrowed from Xiang 臭虫.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「臭虫」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 臭虫.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46675,9 +46684,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「榫头」。",
-      "noteEn": "Possibly borrowed from Xiang 榫头.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「榫头」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 榫头.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46717,9 +46726,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「楼板」。",
-      "noteEn": "Possibly borrowed from Xiang 楼板.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「楼板」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 楼板.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46759,9 +46768,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「墨斗」。",
-      "noteEn": "Possibly borrowed from Xiang 墨斗.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「墨斗」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 墨斗.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46780,9 +46789,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「手表」。",
-      "noteEn": "Possibly borrowed from Xiang 手表.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「手表」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 手表.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46801,9 +46810,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「手机」。",
-      "noteEn": "Possibly borrowed from Xiang 手机.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「手机」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 手机.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46822,9 +46831,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「绸子」。",
-      "noteEn": "Possibly borrowed from Xiang 绸子.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「绸子」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 绸子.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46843,9 +46852,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「手套」。",
-      "noteEn": "Possibly borrowed from Xiang 手套.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「手套」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 手套.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46864,9 +46873,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「扣肉」。",
-      "noteEn": "Possibly borrowed from Xiang 扣肉.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「扣肉」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 扣肉.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46906,9 +46915,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「豆豉」。",
-      "noteEn": "Possibly borrowed from Xiang 豆豉.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「豆豉」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 豆豉.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46927,9 +46936,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「豆腐渣」。",
-      "noteEn": "Possibly borrowed from Xiang 豆腐渣.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「豆腐渣」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 豆腐渣.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46948,9 +46957,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「手背」。",
-      "noteEn": "Possibly borrowed from Xiang 手背.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「手背」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 手背.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -46969,9 +46978,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「虎口」。",
-      "noteEn": "Possibly borrowed from Xiang 虎口.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「虎口」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 虎口.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -47011,9 +47020,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「寿命」。",
-      "noteEn": "Possibly borrowed from Xiang 寿命.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「寿命」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 寿命.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },
@@ -47032,9 +47041,9 @@
         }
       ],
       "status": "可能借词已注",
-      "donorVariety": "湘语",
-      "note": "可能借自湘语「光头」。",
-      "noteEn": "Possibly borrowed from Xiang 光头.",
+      "donorVariety": "湘语或西南官话",
+      "note": "可能借自湘语或西南官话「光头」。",
+      "noteEn": "Possibly borrowed from Xiang or Southwestern Mandarin 光头.",
       "reason": "逐音节核对音形和词义；保留来源释义，以编者注说明可能的汉语原词。",
       "reviewBatch": "complete-components-4"
     },

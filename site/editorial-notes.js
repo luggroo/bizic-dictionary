@@ -455,9 +455,9 @@ EDITORIAL_NOTES.push(...[
    "stedt-rn-290103"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「提高」。",
+  "text": "可能借自湘语或西南官话「提高」。",
   "donor": "提高",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -16290,9 +16290,9 @@ EDITORIAL_NOTES.push(...[
    "stedt-rn-289762"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「大锅」。",
+  "text": "可能借自湘语或西南官话「大锅」。",
   "donor": "大锅",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -33363,9 +33363,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0306"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「大锅」。",
+  "text": "可能借自湘语或西南官话「大锅」。",
   "donor": "大锅",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -37731,9 +37731,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1801"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「大锅」。",
+  "text": "可能借自湘语或西南官话「大锅」。",
   "donor": "大锅",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -40020,9 +40020,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2322"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「屠夫」。",
+  "text": "可能借自湘语或西南官话「屠夫」。",
   "donor": "屠夫",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43842,9 +43842,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1517"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「豆芽菜」。",
+  "text": "可能借自湘语或西南官话「豆芽菜」。",
   "donor": "豆芽菜",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43926,9 +43926,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1699"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「哈巴狗」。",
+  "text": "可能借自湘语或西南官话「哈巴狗」。",
   "donor": "哈巴狗",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43947,9 +43947,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1811"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「大锅刷把」。",
+  "text": "可能借自湘语或西南官话「大锅刷把」。",
   "donor": "大锅刷把",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -43968,9 +43968,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1863"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「子弹头子」。",
+  "text": "可能借自湘语或西南官话「子弹头子」。",
   "donor": "子弹头子",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -44010,9 +44010,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1945"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「收音机」。",
+  "text": "可能借自湘语或西南官话「收音机」。",
   "donor": "收音机",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -44052,9 +44052,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2255"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「六指头」。",
+  "text": "可能借自湘语或西南官话「六指头」。",
   "donor": "六指头",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -44346,9 +44346,9 @@ EDITORIAL_NOTES.push(...[
    "stedt-rn-290119"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「斗争」。",
+  "text": "可能借自湘语或西南官话「斗争」。",
   "donor": "斗争",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45417,9 +45417,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0194"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「绿豆」。",
+  "text": "可能借自湘语或西南官话「绿豆」。",
   "donor": "绿豆",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45459,9 +45459,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0323"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「枕头」。",
+  "text": "可能借自湘语或西南官话「枕头」。",
   "donor": "枕头",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45480,9 +45480,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0332"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「抽屉」。",
+  "text": "可能借自湘语或西南官话「抽屉」。",
   "donor": "抽屉",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45501,9 +45501,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0382"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「扣子」。",
+  "text": "可能借自湘语或西南官话「扣子」。",
   "donor": "扣子",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45522,9 +45522,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0399"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「豆浆」。",
+  "text": "可能借自湘语或西南官话「豆浆」。",
   "donor": "豆浆",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45543,9 +45543,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0476"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「左手」。",
+  "text": "可能借自湘语或西南官话「左手」。",
   "donor": "左手",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45564,9 +45564,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0477"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「右手」。",
+  "text": "可能借自湘语或西南官话「右手」。",
   "donor": "右手",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45585,9 +45585,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0478"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「拳头」。",
+  "text": "可能借自湘语或西南官话「拳头」。",
   "donor": "拳头",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45669,9 +45669,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1276"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「洞口」。",
+  "text": "可能借自湘语或西南官话「洞口」。",
   "donor": "洞口",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45858,9 +45858,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1547"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「狗熊」。",
+  "text": "可能借自湘语或西南官话「狗熊」。",
   "donor": "狗熊",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45879,9 +45879,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1633"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「臭虫」。",
+  "text": "可能借自湘语或西南官话「臭虫」。",
   "donor": "臭虫",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45900,9 +45900,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1735"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「榫头」。",
+  "text": "可能借自湘语或西南官话「榫头」。",
   "donor": "榫头",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45942,9 +45942,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1748"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「楼板」。",
+  "text": "可能借自湘语或西南官话「楼板」。",
   "donor": "楼板",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -45984,9 +45984,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1852"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「墨斗」。",
+  "text": "可能借自湘语或西南官话「墨斗」。",
   "donor": "墨斗",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46005,9 +46005,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1890"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「手表」。",
+  "text": "可能借自湘语或西南官话「手表」。",
   "donor": "手表",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46026,9 +46026,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1946"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「手机」。",
+  "text": "可能借自湘语或西南官话「手机」。",
   "donor": "手机",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46047,9 +46047,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1957"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「绸子」。",
+  "text": "可能借自湘语或西南官话「绸子」。",
   "donor": "绸子",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46068,9 +46068,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-1991"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「手套」。",
+  "text": "可能借自湘语或西南官话「手套」。",
   "donor": "手套",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46089,9 +46089,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2010"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「扣肉」。",
+  "text": "可能借自湘语或西南官话「扣肉」。",
   "donor": "扣肉",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46131,9 +46131,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2030"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「豆豉」。",
+  "text": "可能借自湘语或西南官话「豆豉」。",
   "donor": "豆豉",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46152,9 +46152,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2056"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「豆腐渣」。",
+  "text": "可能借自湘语或西南官话「豆腐渣」。",
   "donor": "豆腐渣",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46173,9 +46173,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2152"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「手背」。",
+  "text": "可能借自湘语或西南官话「手背」。",
   "donor": "手背",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46194,9 +46194,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2160"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「虎口」。",
+  "text": "可能借自湘语或西南官话「虎口」。",
   "donor": "虎口",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46236,9 +46236,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2274"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「寿命」。",
+  "text": "可能借自湘语或西南官话「寿命」。",
   "donor": "寿命",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -46257,9 +46257,9 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-2306"
   ],
   "kind": "借词来源",
-  "text": "可能借自湘语「光头」。",
+  "text": "可能借自湘语或西南官话「光头」。",
   "donor": "光头",
-  "donorVariety": "湘语",
+  "donorVariety": "湘语或西南官话",
   "scope": "whole",
   "reviewedForms": [
    {
@@ -49431,7 +49431,7 @@ EDITORIAL_NOTES.push(...[
    "yubao-60824-v-0200"
   ],
   "kind": "借词来源",
-  "text": "可能借自泸溪一带湘语「莴笋」。「笋」可比较武溪 suẽ⁴²、辰溪 suei³¹、古丈死客子话 sueĩ⁵¹；具体来源点尚待核实。",
+  "text": "可能借自湘语「莴笋」。",
   "donor": "莴笋",
   "donorVariety": "湘语",
   "scope": "whole",
@@ -49704,7 +49704,7 @@ EDITORIAL_NOTES.push(...[
    "stedt-rn-289703"
   ],
   "kind": "借词来源",
-  "text": "疑借自泸溪一带湘语「袜」。可比较武溪 βo²⁴、古丈死客子话 vo²³、溆浦 uɒ¹³。土家语 ʔo³⁵ 的声母和声调对应仍需更多词例支持，借入年代待考。",
+  "text": "可能借自湘语「袜」。",
   "donor": "袜",
   "donorVariety": "湘语",
   "evidenceStatus": "tentative",

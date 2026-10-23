@@ -38,7 +38,8 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  for(const w of data.words)for(const a of w.attestations||[])if(surveyBefore.has(a.id))assert.equal(sourceFields(a),surveyBefore.get(a.id),a.id+' survey source changed');
  const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2345);
  for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,'西南官话',id+' northern donor variety');}
- for(const id of ['stedt-rn-290103','yubao-60824-v-2438'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang vowel correspondence');
+ for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
+ for(const id of ['stedt-rn-290103','yubao-60824-v-1748'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语或西南官话'),id+' qualified donor');
  assert(c.editorialNotesFor(get('yubao-60824-v-2053')).some(n=>n.text==='可能借自西南官话或湘语「桂花」。'));
  const timed=c.editorialNotesFor(get('stedt-rn-288498')).find(n=>n.id==='chinese-loan-stedt-rn-288498');assert(timed.text.includes('/si²¹tɕe³⁵/')&&!timed.text.includes('si²¹ka³⁵'));
  for(const id of ['w112','w195','w124','w125','stedt-rn-453901','w2079','w42','w473','w50','w576'])assert(!c.editorialNotesFor(get(id)).some(n=>n.id.startsWith('chinese-loan-')),id+' excluded modern loan');
