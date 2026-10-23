@@ -23,7 +23,7 @@ assert.equal(c.convertNotation('ŋɨ33','stedt-cb523fc3dc:south').rows[0].accent
 assert.equal(c.surveyWordCorrection('other','60824','0363'),null);assert.equal(c.surveyWordCorrection('ɕi35di55','60757','0363'),null);
 (async()=>{
  const data={words:[],wordAliases:{},sources:[],corpus:[]};await c.loadYubao(data);
- const expected=[['0363','ɕi55ti35','xīdí','sī-tí'],['0435','tia21','dià','tià'],['1287','xuei33dzẽ33','hueizzen','huei-jen'],['0502','li21tɕi21pa35','lìjìbá','lì-cì-pá'],['0751','li33ɣɨ35','lihxí','li-ghí'],['2168','li21tɕi21','lìjì','lì-cì']];
+ const expected=[['0363','ɕi55ti35','xīdí','sī-tí'],['0435','tia21','dià','tià'],['1287','xuei33dzẽ33','hueizzen','huei-jen'],['0502','li21tɕi21pa35','lìjìbá','lì-cì-pá'],['0751','li33ɣɨ35','lihxí','li-ghí'],['2168','li21tɕi21','lìjì','lì-cì'],['0916','kho55ji21','kōyì','khō-ì']];
  for(const [serial,raw,accent,poj] of expected){
   const id=luxi+'-v-'+serial,w=data.words.find(w=>w.attestations.some(a=>a.id===id));assert(w,id);
   const a=w.attestations.find(a=>a.id===id);assert.equal(a.correctedTerm,raw);assert.notEqual(a.term,raw);
@@ -32,7 +32,7 @@ assert.equal(c.surveyWordCorrection('other','60824','0363'),null);assert.equal(c
   const note=c.editorialNotesFor(w).find(n=>n.id==='luxi-transcription-'+serial);assert(note,id);
   c.noteText=note.text;assert(vm.runInContext('UI_TRANSLATIONS[noteText]',c),id+' missing English note');
  }
- assert.equal(data.words.flatMap(w=>w.attestations).filter(a=>a.correctedTerm).length,6);
+ assert.equal(data.words.flatMap(w=>w.attestations).filter(a=>a.correctedTerm).length,expected.length);
  const you=data.words.find(w=>w.id===luxi+'-v-1130');assert.equal(you.attestations[0].term,'ni33');assert(!you.attestations[0].correctedTerm);
  const straw=data.words.find(w=>w.id===luxi+'-v-0182');assert(straw);
  assert.equal(straw.attestations[0].term,'ɨ21mo21kẽ55tsi21');
@@ -43,5 +43,5 @@ assert.equal(c.surveyWordCorrection('other','60824','0363'),null);assert.equal(c
   const translated=vm.runInContext('UI_TRANSLATIONS['+name+']',c);
   assert(translated?.includes(name==='SOUTH_APICAL_RULES'?'rı':'ıi'),name+' needs an English translation');
  }
- console.log('PASS: source-specific rimes, Tian matching romanizations, Luxi six corrections, original forms, notes and unchanged ni.');
+ console.log('PASS: source-specific rimes, Tian matching romanizations, Luxi seven corrections, original forms, notes and unchanged ni.');
 })().catch(e=>{console.error(e);process.exit(1)});

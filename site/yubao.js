@@ -1,5 +1,6 @@
 // Corrections are keyed by survey item and preserve the original recording transcript.
 const YUBAO_LUXI_CORRECTIONS={
+ '0916':{"original": "ko55ji21", "corrected": "kho55ji21", "note": "原记音 ko⁵⁵ji²¹；首音节声母校订为送气音 [kʰ]，读作 kʰo⁵⁵ji²¹。"},
  '1287':{original:'xei33dzẽ33',corrected:'xuei33dzẽ33',note:'原记音 xei³³dzẽ³³；据录音校订为 xuei³³dzẽ³³，首音节补记介音 u。'},
  '0363':{original:'ɕi35di55',corrected:'ɕi55ti35',note:'原记音 ɕi³⁵di⁵⁵；据录音校订为 ɕi⁵⁵ti³⁵。第二音节声母为清不送气音 [t]，两音节声调分别为 55、35。'},
  '0435':{original:'dia21',corrected:'tia21',note:'原记音 dia²¹；据录音，声母为清不送气音 [t]，校订为 tia²¹。'},

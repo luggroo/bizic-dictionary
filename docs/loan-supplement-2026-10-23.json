@@ -1,0 +1,385 @@
+{
+  "baseCommit": "ae93932",
+  "scope": "User-requested lexical corrections and loan notes; exact IPA variants and components only.",
+  "provenance": {
+    "requests": "Conversation: sock/Luxi comparison, lettuce, shoulder, earhole (眼眼), regret, filter, aspirated 可以, embroider, northern pi skin, Yangchao liang in brew.",
+    "comparisonTable": "Supplied readings were independently checked against MCPDict TSV tables and their tone-category metadata at commit d3e58dc3fbe83d07c2aa80dcad281b41e7a34161. Metadata attributes the tables to the Language Protection Project and named dialect studies; original publications were not inspected.",
+    "transcriptionCorrection": "User identified 可以 ko55ji21 as a transcription error for aspirated onset. No recording verification is claimed. Original survey attestation remains intact."
+  },
+  "decisions": [
+    {
+      "id": "chinese-loan-yubao-60824-v-0200",
+      "wordIds": [
+        "yubao-60824-v-0200"
+      ],
+      "kind": "借词来源",
+      "text": "可能借自泸溪一带湘语「莴笋」。「笋」可比较武溪 suẽ⁴²、辰溪 suei³¹、古丈死客子话 sueĩ⁵¹；具体来源点尚待核实。",
+      "donor": "莴笋",
+      "donorVariety": "湘语",
+      "scope": "whole",
+      "reviewedForms": [
+        {
+          "ipa": "o⁵⁵suei²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-yubao-60824-v-0473",
+      "wordIds": [
+        "yubao-60824-v-0473"
+      ],
+      "kind": "借词来源",
+      "text": "可能借自西南官话或湘语「肩膀」。",
+      "donor": "肩膀",
+      "donorVariety": "西南官话或湘语",
+      "scope": "whole",
+      "reviewedForms": [
+        {
+          "ipa": "tɕiã³³po³³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-stedt-rn-127351",
+      "wordIds": [
+        "stedt-rn-127351"
+      ],
+      "kind": "借词来源",
+      "text": "可能借自西南官话或湘语「肩膀」。",
+      "donor": "肩膀",
+      "donorVariety": "西南官话或湘语",
+      "scope": "whole",
+      "reviewedForms": [
+        {
+          "ipa": "tɕiã⁵⁵ po²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-yubao-60824-v-2124",
+      "wordIds": [
+        "yubao-60824-v-2124"
+      ],
+      "kind": "借词来源",
+      "text": "「眼眼」部分（第 3—4 音节）可能借自西南官话或湘语。",
+      "donor": "眼眼",
+      "donorVariety": "西南官话或湘语",
+      "scope": "component",
+      "reviewedForms": [
+        {
+          "ipa": "tsa¹³po⁵⁵ŋã⁵⁵ŋã²¹",
+          "span": [
+            3,
+            4
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-yubao-60824-v-0890",
+      "wordIds": [
+        "yubao-60824-v-0890"
+      ],
+      "kind": "借词来源",
+      "text": "可能借自西南官话或湘语「悔」。",
+      "donor": "悔",
+      "donorVariety": "西南官话或湘语",
+      "scope": "whole",
+      "reviewedForms": [
+        {
+          "ipa": "xuei⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-yubao-60824-v-2838",
+      "wordIds": [
+        "yubao-60824-v-2838"
+      ],
+      "kind": "借词来源",
+      "text": "可能借自西南官话或湘语「悔」。",
+      "donor": "悔",
+      "donorVariety": "西南官话或湘语",
+      "scope": "whole",
+      "reviewedForms": [
+        {
+          "ipa": "xuei⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-yubao-60824-v-0916",
+      "wordIds": [
+        "yubao-60824-v-0916"
+      ],
+      "kind": "借词来源",
+      "text": "可能借自西南官话或湘语「可以」。",
+      "donor": "可以",
+      "donorVariety": "西南官话或湘语",
+      "scope": "whole",
+      "reviewedForms": [
+        {
+          "ipa": "kʰo⁵⁵ji²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-yubao-60824-v-2754",
+      "wordIds": [
+        "yubao-60824-v-2754"
+      ],
+      "kind": "借词来源",
+      "text": "可能借自西南官话或湘语「过滤」。",
+      "donor": "过滤",
+      "donorVariety": "西南官话或湘语",
+      "scope": "whole",
+      "reviewedForms": [
+        {
+          "ipa": "ko²¹ly¹³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-yubao-60824-v-2773",
+      "wordIds": [
+        "yubao-60824-v-2773"
+      ],
+      "kind": "借词来源",
+      "text": "「绣」部分（第 3 音节）可能借自西南官话或湘语。",
+      "donor": "绣",
+      "donorVariety": "西南官话或湘语",
+      "scope": "component",
+      "reviewedForms": [
+        {
+          "ipa": "tsu³³pu³⁵xe¹³",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-yubao-60756-v-2773",
+      "wordIds": [
+        "yubao-60756-v-2773"
+      ],
+      "kind": "借词来源",
+      "text": "「绣」部分（第 3 音节）可能借自西南官话。",
+      "donor": "绣",
+      "donorVariety": "西南官话",
+      "scope": "component",
+      "reviewedForms": [
+        {
+          "ipa": "kʰa⁵³pʰu³³xə³³",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-yubao-60756-v-1974",
+      "wordIds": [
+        "yubao-60756-v-1974"
+      ],
+      "kind": "借词来源",
+      "text": "「绣」部分（第 3 音节）可能借自西南官话。",
+      "donor": "绣",
+      "donorVariety": "西南官话",
+      "scope": "component",
+      "reviewedForms": [
+        {
+          "ipa": "kʰa⁵³pʰu³³ɕu⁵⁵lɛ⁵⁵ɕi⁵⁵",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-w1721",
+      "wordIds": [
+        "w1721"
+      ],
+      "kind": "借词来源",
+      "text": "可能借自西南官话「皮」。",
+      "donor": "皮",
+      "donorVariety": "西南官话",
+      "scope": "whole",
+      "reviewedForms": [
+        {
+          "ipa": "pʰi²¹",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "chinese-loan-yubao-60756-v-2618",
+      "wordIds": [
+        "yubao-60756-v-2618"
+      ],
+      "kind": "借词来源",
+      "text": "「酿」部分（第 2 音节）可能借自西南官话。",
+      "donor": "酿",
+      "donorVariety": "西南官话",
+      "scope": "component",
+      "reviewedForms": [
+        {
+          "ipa": "zə⁵⁵liaŋ⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
+    },
+    {
+      "id": "luxi-sock-etymology",
+      "wordIds": [
+        "stedt-rn-289703"
+      ],
+      "kind": "借词来源",
+      "text": "疑借自泸溪一带湘语「袜」。可比较武溪 βo²⁴、古丈死客子话 vo²³、溆浦 uɒ¹³。土家语 ʔo³⁵ 的声母和声调对应仍需更多词例支持，借入年代待考。",
+      "donor": "袜",
+      "donorVariety": "湘语",
+      "evidenceStatus": "tentative",
+      "borrowingPeriod": "undetermined"
+    }
+  ],
+  "limits": [
+    "Sock comparison supports an etymological hypothesis, not a borrowing date or a regular β > ʔ sound law.",
+    "The 笋 comparisons support a regional Xiang source; no exact locality is established.",
+    "Embroidery notes cover xe13, xə33 and the ɕu55 component. The unrelated tsha35 entry is not assigned the same etymology.",
+    "Northern pi3 is Brassett spelling corresponding to pʰi21. Native skin terms are not relabelled."
+  ],
+  "comparisonSources": [
+    {
+      "point": "漵浦",
+      "url": "https://github.com/osfans/MCPDict/blob/d3e58dc3fbe83d07c2aa80dcad281b41e7a34161/tools/tables/output/漵浦.tsv",
+      "metadataSource": "#语保工程采录展示平台#《溆浦方言研究》",
+      "rows": [
+        {
+          "character": "筍",
+          "tableReading": "suə̃3",
+          "toneValue": "23"
+        },
+        {
+          "character": "襪",
+          "tableReading": "uɒ2",
+          "toneValue": "13"
+        }
+      ]
+    },
+    {
+      "point": "辰谿",
+      "url": "https://github.com/osfans/MCPDict/blob/d3e58dc3fbe83d07c2aa80dcad281b41e7a34161/tools/tables/output/辰谿.tsv",
+      "metadataSource": "《湖南辰溪方言音系》",
+      "rows": [
+        {
+          "character": "筍",
+          "tableReading": "suei3",
+          "toneValue": "31"
+        }
+      ]
+    },
+    {
+      "point": "瀘溪武溪",
+      "url": "https://github.com/osfans/MCPDict/blob/d3e58dc3fbe83d07c2aa80dcad281b41e7a34161/tools/tables/output/瀘溪武溪.tsv",
+      "metadataSource": "#语保工程采录展示平台#《湘语辰溆片语音研究》",
+      "rows": [
+        {
+          "character": "筍",
+          "tableReading": "suẽ3",
+          "toneValue": "42"
+        },
+        {
+          "character": "襪",
+          "tableReading": "βo2",
+          "toneValue": "24"
+        }
+      ]
+    },
+    {
+      "point": "瀘溪興隆場",
+      "url": "https://github.com/osfans/MCPDict/blob/d3e58dc3fbe83d07c2aa80dcad281b41e7a34161/tools/tables/output/瀘溪興隆場.tsv",
+      "metadataSource": "《湖南省泸溪县兴隆场方言语音研究》",
+      "rows": [
+        {
+          "character": "筍",
+          "tableReading": "ʂuen2",
+          "toneValue": "24"
+        }
+      ]
+    },
+    {
+      "point": "古丈死客子話",
+      "url": "https://github.com/osfans/MCPDict/blob/d3e58dc3fbe83d07c2aa80dcad281b41e7a34161/tools/tables/output/古丈死客子話.tsv",
+      "metadataSource": "#语保工程采录展示平台#",
+      "rows": [
+        {
+          "character": "筍",
+          "tableReading": "sueĩ3",
+          "toneValue": "51"
+        },
+        {
+          "character": "襪",
+          "tableReading": "vo2",
+          "toneValue": "23"
+        }
+      ]
+    }
+  ],
+  "integratedBaseCommit": "a9ad98c",
+  "validation": [
+    "Publishing checks passed: IPA, Brassett IPA, word classes, merged entries, southern notation/source rimes, notation pairs, reader copy and loan review.",
+    "Prepared search: 99,512 checks across 16,577 entries; gzip and fallback loading passed.",
+    "Rendered all 14 affected entries at 390px and 1280px in Chinese and English; no horizontal dialog overflow or browser errors. Inspected screenshots of corrected 可以, partial-loan 耳孔 and tentative 袜子 notes."
+  ]
+}

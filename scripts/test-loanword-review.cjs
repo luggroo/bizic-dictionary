@@ -16,6 +16,17 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
   const w=get(id);assert(!(w.zhVariants||[]).some(s=>s.includes(wrong)),id+' obsolete translation in search');
   assert(!(w.senses||[]).some(s=>s.zh.includes(wrong)),id+' obsolete translation in merged senses');
  }
+
+ // Supplementary loans use corrected display forms while retaining source attestations.
+ const keyi=get('yubao-60824-v-0916');
+ assert.equal(keyi.term,'kʰo⁵⁵ji²¹');
+ assert.equal(keyi.attestations.find(a=>a.id==='yubao-60824-v-0916').term,'ko55ji21');
+ assert.equal(c.southernSpelling(keyi.term,'yubao-60824').accent,'kōyì');
+ for(const id of ['yubao-60824-v-0200','yubao-60824-v-0473','stedt-rn-127351','yubao-60824-v-0890','yubao-60824-v-2838','yubao-60824-v-0916','yubao-60824-v-2754','w1721'])assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole',id);
+ for(const id of ['yubao-60824-v-2124','yubao-60824-v-2773','yubao-60756-v-2773','yubao-60756-v-1974','yubao-60756-v-2618'])assert.equal(c.modernChineseLoanInfo(get(id)).scope,'component',id);
+ assert.equal(c.modernChineseLoanBadge(get('stedt-rn-289703')),'','undated sock etymology is not a recent-loan classification');
+ assert(c.editorialNotesFor(get('stedt-rn-289703')).some(n=>n.id==='luxi-sock-etymology'));
+ for(const id of ['yubao-60824-v-1665','yubao-60824-v-2618','yubao-60757-v-2618','yubao-60823-v-2618','stedt-rn-430818'])assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' other lexical form');
  assert.equal(vm.runInContext("UI_TRANSLATIONS['新借']",c),'Loan');
  assert.equal(vm.runInContext("UI_TRANSLATIONS['半借']",c),'Pt. loan');
  assert(!c.modernChineseLoanBadge(get('stedt-rn-289609')).includes('title='),'loan explanation must not depend on hover');
@@ -25,7 +36,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  assert(c.editorialNotesFor(get('stedt-rn-288801')).some(n=>n.text==='可能借自西南官话，具体原词待考。'));
  for(const w of data.words)for(const a of w.attestations||[])if(surveyBefore.has(a.id))assert.equal(sourceFields(a),surveyBefore.get(a.id),a.id+' survey source changed');
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2331);
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2344);
  for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,'西南官话',id+' northern donor variety');}
  for(const id of ['stedt-rn-290103','yubao-60824-v-2438'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang vowel correspondence');
  assert(c.editorialNotesFor(get('yubao-60824-v-2053')).some(n=>n.text==='可能借自西南官话或湘语「桂花」。'));
@@ -75,5 +86,5 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.parseViewHash('#words?hideWholeLoans=false').state.hideWholeLoans,false);
  const counts={};for(const w of data.words){const scope=c.modernChineseLoanInfo(w).scope||'unmarked';counts[scope]=(counts[scope]||0)+1;}
  console.log('Loan badge coverage:',counts);
- console.log('PASS: reviewed glosses, source preservation, 2331 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
+ console.log('PASS: reviewed glosses, source preservation, 2344 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
 })().catch(e=>{console.error(e);process.exit(1)});

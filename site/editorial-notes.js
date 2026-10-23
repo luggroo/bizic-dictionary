@@ -49423,6 +49423,294 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "complete-components-4"
  }
 ]);
+// Supplementary word and component analyses; exact forms preserve dialect scope.
+EDITORIAL_NOTES.push(...[
+ {
+  "id": "chinese-loan-yubao-60824-v-0200",
+  "wordIds": [
+   "yubao-60824-v-0200"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自泸溪一带湘语「莴笋」。「笋」可比较武溪 suẽ⁴²、辰溪 suei³¹、古丈死客子话 sueĩ⁵¹；具体来源点尚待核实。",
+  "donor": "莴笋",
+  "donorVariety": "湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "o⁵⁵suei²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-0473",
+  "wordIds": [
+   "yubao-60824-v-0473"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话或湘语「肩膀」。",
+  "donor": "肩膀",
+  "donorVariety": "西南官话或湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiã³³po³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-127351",
+  "wordIds": [
+   "stedt-rn-127351"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话或湘语「肩膀」。",
+  "donor": "肩膀",
+  "donorVariety": "西南官话或湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiã⁵⁵ po²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2124",
+  "wordIds": [
+   "yubao-60824-v-2124"
+  ],
+  "kind": "借词来源",
+  "text": "「眼眼」部分（第 3—4 音节）可能借自西南官话或湘语。",
+  "donor": "眼眼",
+  "donorVariety": "西南官话或湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "tsa¹³po⁵⁵ŋã⁵⁵ŋã²¹",
+    "span": [
+     3,
+     4
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-0890",
+  "wordIds": [
+   "yubao-60824-v-0890"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话或湘语「悔」。",
+  "donor": "悔",
+  "donorVariety": "西南官话或湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "xuei⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2838",
+  "wordIds": [
+   "yubao-60824-v-2838"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话或湘语「悔」。",
+  "donor": "悔",
+  "donorVariety": "西南官话或湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "xuei⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-0916",
+  "wordIds": [
+   "yubao-60824-v-0916"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话或湘语「可以」。",
+  "donor": "可以",
+  "donorVariety": "西南官话或湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "kʰo⁵⁵ji²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2754",
+  "wordIds": [
+   "yubao-60824-v-2754"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话或湘语「过滤」。",
+  "donor": "过滤",
+  "donorVariety": "西南官话或湘语",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ko²¹ly¹³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2773",
+  "wordIds": [
+   "yubao-60824-v-2773"
+  ],
+  "kind": "借词来源",
+  "text": "「绣」部分（第 3 音节）可能借自西南官话或湘语。",
+  "donor": "绣",
+  "donorVariety": "西南官话或湘语",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "tsu³³pu³⁵xe¹³",
+    "span": [
+     3,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2773",
+  "wordIds": [
+   "yubao-60756-v-2773"
+  ],
+  "kind": "借词来源",
+  "text": "「绣」部分（第 3 音节）可能借自西南官话。",
+  "donor": "绣",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "kʰa⁵³pʰu³³xə³³",
+    "span": [
+     3,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1974",
+  "wordIds": [
+   "yubao-60756-v-1974"
+  ],
+  "kind": "借词来源",
+  "text": "「绣」部分（第 3 音节）可能借自西南官话。",
+  "donor": "绣",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "kʰa⁵³pʰu³³ɕu⁵⁵lɛ⁵⁵ɕi⁵⁵",
+    "span": [
+     3,
+     3
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-w1721",
+  "wordIds": [
+   "w1721"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「皮」。",
+  "donor": "皮",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "pʰi²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2618",
+  "wordIds": [
+   "yubao-60756-v-2618"
+  ],
+  "kind": "借词来源",
+  "text": "「酿」部分（第 2 音节）可能借自西南官话。",
+  "donor": "酿",
+  "donorVariety": "西南官话",
+  "scope": "component",
+  "reviewedForms": [
+   {
+    "ipa": "zə⁵⁵liaŋ⁵⁵",
+    "span": [
+     2,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-supplement-2026-10-23"
+ },
+ {
+  "id": "luxi-sock-etymology",
+  "wordIds": [
+   "stedt-rn-289703"
+  ],
+  "kind": "借词来源",
+  "text": "疑借自泸溪一带湘语「袜」。可比较武溪 βo²⁴、古丈死客子话 vo²³、溆浦 uɒ¹³。土家语 ʔo³⁵ 的声母和声调对应仍需更多词例支持，借入年代待考。",
+  "donor": "袜",
+  "donorVariety": "湘语",
+  "evidenceStatus": "tentative",
+  "borrowingPeriod": "undetermined"
+ }
+]);
 // Index source IDs once; list filtering visits every merged entry.
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){

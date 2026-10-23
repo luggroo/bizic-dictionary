@@ -1,5 +1,17 @@
 /* Reviewed interface copy; source texts and dictionary glosses stay in their source language. */
 const UI_TRANSLATIONS={
+  "原记音 ko⁵⁵ji²¹；首音节声母校订为送气音 [kʰ]，读作 kʰo⁵⁵ji²¹。": "Originally transcribed ko⁵⁵ji²¹; the first onset is corrected to aspirated [kʰ], giving kʰo⁵⁵ji²¹.",
+  "可能借自泸溪一带湘语「莴笋」。「笋」可比较武溪 suẽ⁴²、辰溪 suei³¹、古丈死客子话 sueĩ⁵¹；具体来源点尚待核实。": "Possibly borrowed from Xiang in the Luxi area, 莴笋. For 笋, compare Wuxi suẽ⁴², Chenxi suei³¹ and Guzhang Sikezihua sueĩ⁵¹; the exact donor locality remains uncertain.",
+  "可能借自西南官话或湘语「肩膀」。": "Possibly borrowed from Southwestern Mandarin or Xiang 肩膀.",
+  "「眼眼」部分（第 3—4 音节）可能借自西南官话或湘语。": "The 眼眼 component (syllables 3–4) may be borrowed from Southwestern Mandarin or Xiang.",
+  "可能借自西南官话或湘语「悔」。": "Possibly borrowed from Southwestern Mandarin or Xiang 悔.",
+  "可能借自西南官话或湘语「可以」。": "Possibly borrowed from Southwestern Mandarin or Xiang 可以.",
+  "可能借自西南官话或湘语「过滤」。": "Possibly borrowed from Southwestern Mandarin or Xiang 过滤.",
+  "「绣」部分（第 3 音节）可能借自西南官话或湘语。": "The 绣 component (syllable 3) may be borrowed from Southwestern Mandarin or Xiang.",
+  "「绣」部分（第 3 音节）可能借自西南官话。": "The 绣 component (syllable 3) may be borrowed from Southwestern Mandarin.",
+  "可能借自西南官话「皮」。": "Possibly borrowed from Southwestern Mandarin 皮.",
+  "「酿」部分（第 2 音节）可能借自西南官话。": "The 酿 component (syllable 2) may be borrowed from Southwestern Mandarin.",
+  "疑借自泸溪一带湘语「袜」。可比较武溪 βo²⁴、古丈死客子话 vo²³、溆浦 uɒ¹³。土家语 ʔo³⁵ 的声母和声调对应仍需更多词例支持，借入年代待考。": "Possibly borrowed from Xiang in the Luxi area, 襪. Compare Wuxi βo²⁴, Guzhang Sikezihua vo²³ and Xupu uɒ¹³. More word comparisons are needed to establish the onset and tone correspondences with Tujia ʔo³⁵; the borrowing date is unknown.",
   "{name}，查看词条，可能整词借自汉语": "View entry: {name}. Possibly a recent whole-word Chinese loan.",
   "{name}，查看词条，部分音节可能借自汉语": "View entry: {name}. Possibly contains a recently borrowed Chinese component.",
   "{name}，查看词条，部分词形可能借自汉语": "View entry: {name}. Some variants may be recent Chinese loans.",
