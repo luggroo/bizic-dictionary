@@ -1054,3 +1054,11 @@ Object.assign(UI_TRANSLATIONS,{
   "一个词中表示基本意义的部分叫": "The part of a word that carries its basic meaning is called the ",
   "比较时，可以先说拿谁或什么来比较，再说明另一方有什么不同、相差多少。下例先说“我”，再说“他一点胖”，末尾加比较成分，意思是“他比我胖一点”。": "A comparison can begin with the person or thing used for comparison, followed by how the other one differs and by how much. The example starts with ‘me’, then ‘he a little fat’, and ends with a comparison marker: ‘He is a little fatter than me’."
 });
+
+Object.assign(UI_TRANSLATIONS,{
+ '常用疑问词':'Common question words',
+ '形式（拼音／IPA）':'Forms (romanization / IPA)',
+ '词表另列':'also listed in the wordlist',
+ '怎么；怎么样；为什么':'How; how things are; why',
+ '出处：疑问词用法见Brassett等（2006），第84—89页；词表形式见Brassett词库。词表形式的IPA依照词库的声韵和调类对应转写。':'For question-word usage, see Brassett et al. (2006), pp. 84–89; additional forms are listed in the Brassett lexicon. IPA for the wordlist forms follows its segment and tone-class correspondences.'
+});

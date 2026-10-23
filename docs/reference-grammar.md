@@ -2138,23 +2138,21 @@ Brassett，第119页，例76；制作米食的步骤说明。
 
 疑问词一般留在所询问成分的位置。例如询问年龄时，“几”放在“岁”前；询问做法或状况时，“怎么”在谓语前。/tɕʰĩ²¹ mɔ⁵⁵/既能问做法和近况，也能问原因。
 
-**常用疑问词（叶氏拼音）**
+**常用疑问词**
 
-| 形式 | 问什么 |
+| 问什么 | 形式（拼音／IPA） |
 | --- | --- |
-| avser | 谁；哪一个 |
-| qievxir（qiev） | 什么 |
-| keirdux（keir） | 哪里 |
-| keifjiux | 什么时候 |
-| gav＋量词／计量词 | 几个；几岁；几年 |
-| gaix | 多少；多大、多长等程度 |
-| gaixjiux | 多久 |
-| qinrmox | 怎么、怎么样；为什么 |
-| qifdux | 什么日期（农历） |
-| laxxir | 什么（词表另列） |
-| leivqier | 怎么 |
-| qinrlief | 怎么 |
-| qinrmoxnier | 为什么；怎么 |
+| 谁；哪一个 | avser /a⁵¹sɤ²¹/ |
+| 什么 | qievxir /tɕʰiɛ⁵¹ɕi²¹/（qiev /tɕʰiɛ⁵¹/）<br>laxxir /la⁵⁵ɕi²¹/<span data-zh="（词表另列）" data-en="(also listed in the wordlist)">（词表另列）</span> |
+| 哪里 | keirdux /kʰei²¹tu⁵⁵/（keir /kʰei²¹/） |
+| 什么时候 | keifjiux /kʰei²⁴tɕiu⁵⁵/ |
+| 几个；几岁；几年 | gav /ka⁵¹/<span data-zh="＋量词／计量词" data-en=" + classifier / measure word">＋量词／计量词</span> |
+| 多少；多大、多长等程度 | gaix /kai⁵⁵/ |
+| 多久 | gaixjiux /kai⁵⁵tɕiu⁵⁵/ |
+| 怎么；怎么样；为什么 | qinrmox /tɕʰĩ²¹mɔ⁵⁵/<span data-zh="：怎么、怎么样；为什么" data-en=": how, how things are; why">：怎么、怎么样；为什么</span><br>leivqier /lei⁵¹tɕʰiɛ²¹/<span data-zh="：怎么" data-en=": how">：怎么</span><br>qinrlief /tɕʰiŋ²¹liɛ²⁴/<span data-zh="：怎么" data-en=": how">：怎么</span><br>qinrmoxnier /tɕʰiŋ²¹mɔ⁵⁵ȵiɛ²¹/<span data-zh="：为什么；怎么" data-en=": why; how">：为什么；怎么</span> |
+| 什么日期（农历） | qifdux /tɕʰi²⁴tu⁵⁵/ |
+
+出处：疑问词用法见Brassett等（2006），第84—89页；词表形式见Brassett词库。词表形式的IPA依照词库的声韵和调类对应转写。
 
 | 拼音 | gof | avser | o |
 | --- | --- | --- | --- |

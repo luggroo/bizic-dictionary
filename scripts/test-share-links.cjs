@@ -17,11 +17,14 @@ async function page(url,{stored='zh',file='index.html',historyState=null,storage
  w.localStorage.setItem('tujia-ui-language',stored);
  if(storageBlocked)Object.defineProperty(w,'localStorage',{get(){throw Error('Storage blocked')}});
  if(historyState)w.history.replaceState(historyState,'',url);
- w.scrollTo=()=>{};w.HTMLElement.prototype.scrollIntoView=()=>{};
+ w.matchMedia=()=>({matches:false,addEventListener(){}});w.scrollTo=()=>{};w.HTMLElement.prototype.scrollIntoView=()=>{};
  w.HTMLMediaElement.prototype.pause=()=>{};w.HTMLMediaElement.prototype.load=()=>{};
- w.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','')};
+ w.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');this._modal=true};
+ w.HTMLDialogElement.prototype.show=function(){this.setAttribute('open','');this._modal=false};
+ w.HTMLDialogElement.prototype.matches=function(selector){return selector===':modal'?!!this._modal:w.HTMLElement.prototype.matches.call(this,selector)};
+ w.Response=Response;w.Blob=Blob;w.DecompressionStream=DecompressionStream;
  w.HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');this.dispatchEvent(new w.Event('close'))};
- w.fetch=async name=>({ok:true,json:async()=>JSON.parse(read(name))});
+ w.fetch=async name=>({ok:true,json:async()=>JSON.parse(read(name)),arrayBuffer:async()=>{const b=fs.readFileSync(path.join(root,name.split('?')[0]));return b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength)}});
  for(const [,src]of read(file).matchAll(/<script src="([^"?]+)(?:\?[^" ]*)?" defer><\/script>/g)){
   const asset=path.posix.normalize(path.posix.join(path.posix.dirname(file),src));
   run(read(asset));
@@ -82,11 +85,25 @@ async function travel(p,direction){
  expectLanguage(corpusRecipient,'zh');assert.equal(corpusRecipient.run('currentDetail'),corpus);corpusRecipient.close();
  p.run('setView("grammar",false,{grammarDialect:"north",chapter:"9"})');await tick();
  assert(!new URL(p.w.location.href).searchParams.has('id'),'leaving a detail removes its ID');
- assert.equal(p.w.location.hash,'#grammar/north/9');
- const guideLink=p.w.document.querySelector('a[href*="guides/verbs.html"]').href;
- assert.equal(new URL(guideLink).searchParams.get('lang'),'zh');
+ // The reviewed grammar maps the former chapter 9 to chapter 104.
+ assert.equal(p.w.location.hash,'#grammar/north/104');
+ // Section pages survive direct links, language changes and browser history.
+ p.run('setView("grammar",false,{grammarDialect:"north",chapter:"103",grammarSection:"103.1"})');await tick();
+ assert.equal(p.w.location.hash,'#grammar/north/103/1');
+ assert.equal(p.w.document.querySelectorAll('.reviewed-grammar h3').length,0);
+ assert.match(p.w.document.querySelector('.grammar-reading-title').textContent,/3\.1/);
+ const sectionIPA=[...p.w.document.querySelectorAll('.grammar-ipa')].map(n=>n.textContent);
  p.w.TujiaUI.setLanguage('en');
- assert.equal(new URL(p.w.document.querySelector('a[href*="guides/verbs.html"]').href).searchParams.get('lang'),'en');
+ assert.equal(p.w.document.querySelector('.reviewed-grammar').dataset.section,'103.1');
+ assert.deepEqual([...p.w.document.querySelectorAll('.grammar-ipa')].map(n=>n.textContent),sectionIPA);
+ p.w.document.querySelector('.grammar-page-next').click();await until(()=>p.w.location.hash==='#grammar/north/103/2');await tick();
+ assert.equal(p.w.document.querySelector('.reviewed-grammar').dataset.section,'103.2');
+ await travel(p,'back');assert.equal(p.w.document.querySelector('.reviewed-grammar').dataset.section,'103.1');
+ await travel(p,'forward');assert.equal(p.w.document.querySelector('.reviewed-grammar').dataset.section,'103.2');
+ const sectionPage=await page(p.w.location.href);assert.equal(sectionPage.w.document.querySelector('.reviewed-grammar').dataset.section,'103.2');sectionPage.close();
+ const anchored=await page(base+'?lang=zh#grammar/north/103?grammarAnchor=chapter-103-1');
+ assert.equal(anchored.w.document.querySelector('.reviewed-grammar').dataset.section,'103.2');anchored.close();
+ for(const view of ['words','sources','corpus']){p.run('setView("home")');p.w.document.querySelector('.metrics a[href="#'+view+'"]').click();assert.equal(p.run('state.view'),view);}
  // Existing non-record overlays still round-trip without an ID query parameter.
  p.run('setView("notation");npShowEvidence("zhou-ts","onset","n")');await tick();
  assert.equal(p.run('currentOverlay.type'),'notation-pair');
@@ -106,16 +123,18 @@ async function travel(p,direction){
  assert(!invalid.w.document.querySelector('#detail').open);
  assert.equal(invalid.w.document.querySelector('#toast').textContent,'Entry not found.');
  assert(!new URL(invalid.w.location.href).searchParams.has('id'));invalid.close();
- for(const [query,stored,expected]of [['?lang=zh','en','zh'],['','en','en'],['?lang=invalid','en','en'],['','zh','zh']]){
-  const guide=await page(base+'guides/verbs.html'+query+'#nominalization',{stored,file:'guides/verbs.html'});
-  expectLanguage(guide,expected);assert.equal(guide.w.location.hash,'#nominalization');
-  assert.equal(new URL(guide.w.document.querySelector('.site-return').href).searchParams.get('lang'),expected);
-  assert.equal(new URL(guide.w.document.querySelector('.site-return').href).hash,'#grammar/north/9');
-  assert.equal(guide.w.document.querySelector('a[href="#note-1"]').getAttribute('href'),'#note-1');
-  assert.deepEqual(guide.errors,[]);guide.close();
- }
- const blocked=await page(base+'guides/verbs.html?lang=en',{file:'guides/verbs.html',storageBlocked:true});
- expectLanguage(blocked,'en');blocked.w.TujiaUI.setLanguage('zh');expectLanguage(blocked,'zh');blocked.close();
+ const blocked=await page(base+'?lang=en#words',{stored:'zh',storageBlocked:true});
+ expectLanguage(blocked,'en');blocked.w.TujiaUI.setLanguage('zh');expectLanguage(blocked,'zh');assert.deepEqual(blocked.errors,[]);blocked.close();
+ await p.run('loadAllSourceTexts()');
+ const rendered=p.run(`(()=>{const counts={};for(const [kind,fn]of [['sources',sourceDetail],['corpus',corpusDetail],['reconstructions',reconstructionDetail]]){for(const record of D[kind]){const html=fn(record);if(!html||html.includes('undefined'))throw Error(kind+': '+record.id);}counts[kind]=D[kind].length;}return counts;})()`);
+ await p.run('loadAllWordEvidence()');
+ p.run('setView("words",false,{q:"water",searchLanguage:"en"});download=(name,rows)=>{window.testExport={name,rows}}');
+ await p.w.document.querySelector('#export-words').onclick();
+ const exported=p.w.testExport;
+ assert(exported.rows.length>0);assert(exported.rows.some(w=>w.attestations?.length));
+ assert(exported.rows.every(w=>!Object.keys(w).some(k=>k.startsWith('_'))));
+ assert(exported.rows.every(w=>Array.isArray(w.canonicalPos)&&w.source_url!==undefined));
+ console.log('PASS: complete source/corpus/comparison detail rendering '+JSON.stringify(rendered)+'; lazy export includes evidence and excludes internal caches.');
  assert.deepEqual(p.errors,[]);p.close();
- console.log('PASS: shared languages, fresh word/corpus links, reload, Back/Forward/Close, route/filter preservation, merged IDs, invalid IDs, standalone guide links and blocked storage.');
+ console.log('PASS: shared languages, fresh word/corpus links, reload, Back/Forward/Close, route/filter preservation, merged IDs, invalid IDs and blocked storage.');
 })().catch(error=>{console.error(error);process.exitCode=1}).finally(()=>{for(const dom of openPages)dom.window.close()});

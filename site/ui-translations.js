@@ -2734,3 +2734,10 @@ Object.assign(UI_TRANSLATIONS, {
   "Brassett等，第141–142页，§8.1，指人名物化ma¹（转写/ma⁵⁵/）；田志慧第443页列zi⁵⁵ ma²¹、ka³⁵ ma⁵⁵、pa⁵⁵ ma²¹等与后续谓语搭配的例句，本文截取名词性部分。第444、541页的对象与处所名物化同样分开列出名词性部分和完整存在句；独立使用的用法另见未刊补充材料。": "Brassett et al., pp. 141–142, §8.1, describes the person nominalizer ma¹, transcribed /ma⁵⁵/. Tian Zhihui, p. 443, gives zi⁵⁵ ma²¹, ka³⁵ ma⁵⁵ and pa⁵⁵ ma²¹ with following predicates; only the nominal parts are quoted here. For object and locative nominalization on pp. 444 and 541, the nominal parts and complete existential sentences are likewise listed separately. Independent uses are also described in unpublished supplementary material.",
   "暨南大学硕士学位论文。本文引用其中北部土家语的否定及语序材料。": "Master’s thesis, Jinan University. This guide draws on its Northern Tujia data on negation and word order."
 });
+
+Object.assign(UI_TRANSLATIONS, {
+  '{count} 篇 · 查看篇目 →': '{count} texts · View titles →',
+  '{count} 篇匹配语料 · 查看篇目 →': '{count} matching texts · View titles →'
+});
+
+Object.assign(UI_TRANSLATIONS, {'第 {page} / {pages} 页':'Page {page} of {pages}', '语法分页':'Grammar pagination'});

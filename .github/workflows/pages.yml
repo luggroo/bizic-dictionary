@@ -2,7 +2,7 @@ name: Publish Tujia knowledge index
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/apply-gloss-reviews.py', 'scripts/test-reader-copy.cjs', 'scripts/test-loanword-review.cjs', 'scripts/normalize-ipa-data.cjs', 'scripts/refresh-brassett-ipa.cjs', 'scripts/test-brassett-ipa.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-word-classes.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', '.github/workflows/pages.yml']
+    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/prepare-search-data.cjs', 'scripts/test-prepared-search.cjs', 'scripts/test-prepared-loader.cjs', 'scripts/apply-gloss-reviews.py', 'scripts/test-reader-copy.cjs', 'scripts/test-loanword-review.cjs', 'scripts/normalize-ipa-data.cjs', 'scripts/refresh-brassett-ipa.cjs', 'scripts/test-brassett-ipa.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-word-classes.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -43,6 +43,11 @@ jobs:
           node scripts/test-southern-source-rimes.cjs
           node scripts/test-notation-pairs.cjs
           node scripts/test-loanword-review.cjs
+      - name: Prepare fast dictionary search
+        run: |
+          node scripts/prepare-search-data.cjs site
+          node scripts/test-prepared-search.cjs site
+          node scripts/test-prepared-loader.cjs site
       - name: Version browser assets
         run: |
           python3 - <<'PYCODE'

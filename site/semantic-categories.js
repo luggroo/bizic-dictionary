@@ -31,7 +31,7 @@ const SEMANTIC_GROUPS={
 const SEMANTIC_GROUP_ORDER=[...Object.keys(SEMANTIC_GROUPS),'未分类'];
 const SEMANTIC_LOOKUP=new Map(Object.entries(SEMANTIC_GROUPS).flatMap(([group,list])=>list.split('|').map(label=>[label,group])));
 const semanticCache=new WeakMap();
-function wordSemanticCategories(w){return semanticCache.get(w)||['未分类']}
+function wordSemanticCategories(w){return w._semantic||semanticCache.get(w)||['未分类']}
 function initializeSemanticCategories(words){
  const byGloss=new Map();
  const glossKey=w=>String(w.zh||'').trim();

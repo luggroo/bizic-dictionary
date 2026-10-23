@@ -206,6 +206,17 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   }
   if(changed){fr.append(raw.slice(pos));n.replaceWith(fr);}
  }
+ // Source tables often print Ye spelling immediately before an IPA form.
+ // The pair already supplies that spelling in both display modes.
+ for(const pair of root.querySelectorAll('td .grammar-pair,th .grammar-pair')){
+  const forms=pair.querySelector('.grammar-spelling').dataset;
+  const known=new Set([forms.ye,forms.accent,forms.poj].filter(Boolean).map(x=>x.normalize('NFC')));
+  let before=pair.previousSibling;
+  if(before?.nodeType===Node.TEXT_NODE){
+   const match=before.nodeValue.match(/([\p{L}\p{M}]+)\s*$/u);
+   if(match&&known.has(match[1].normalize('NFC')))before.nodeValue=before.nodeValue.slice(0,match.index);
+  }else if(before?.matches?.('.grammar-spelling')&&known.has(before.textContent.trim().normalize('NFC')))before.remove();
+ }
  // Romanization-only paradigms share the same display selector.
  if(ch.dialect==='north'){
   const accepted=new Set(GRAMMAR_YE_FORMS),w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.grammar-pair,.grammar-gloss,.grammar-spelling,script,style')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});const texts=[];let t;while((t=w.nextNode()))texts.push(t);
@@ -215,6 +226,7 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  // Bare onset/rime inventory cells also receive their matching romanization.
  for(const table of root.querySelectorAll('table')){
   const headers=JSON.parse(table.dataset.originalHeaders||'[]');delete table.dataset.originalHeaders;
+  if(headers[0]==='问什么'&&headers[1]?.includes('形式'))table.classList.add('grammar-question-forms');
   for(const row of table.querySelectorAll('tbody tr'))for(let i=0;i<row.cells.length;i++){
    const cell=row.cells[i],header=headers[i]||'',raw=cell.textContent.trim();
    if(!raw||raw==='—')continue;
@@ -248,10 +260,12 @@ grammarChapter=function(ch){
 };
 window.ReviewedGrammar={refresh(){
  const language=window.TujiaUI?.language||'zh',en=language==='en';
+ const position=document.querySelector('.grammar-page-position');
+ if(position){const values=position.textContent.match(/\d+/g);if(values?.length===2)position.textContent=en?'Page '+values[0]+' of '+values[1]:'第 '+values[0]+' / '+values[1]+' 页';}
  for(const root of document.querySelectorAll('.reviewed-grammar')){
   if(root.dataset.uiLanguage===language)continue;
   const ch=REVIEWED_GRAMMAR[root.dataset.dialect].find(c=>c.id===root.dataset.chapter);if(!ch)continue;
-  const opened=[...root.querySelectorAll('details')].map(n=>n.open),holder=document.createElement('template');holder.innerHTML=grammarRenderHTML(ch,language);
+  const opened=[...root.querySelectorAll('details')].map(n=>n.open),holder=document.createElement('template');holder.innerHTML=root.dataset.readingPage==='true'?grammarPageHTML(ch,root.dataset.section,language):grammarRenderHTML(ch,language);
   const replacement=holder.content.firstElementChild;[...replacement.querySelectorAll('details')].forEach((n,i)=>n.open=opened[i]||false);root.replaceWith(replacement);
  }
  for(const n of document.querySelectorAll('.reviewed-grammar .grammar-spelling')){const d=n.closest('[data-dialect]').dataset.dialect,value=n.closest('[data-spelling-pending]')?(en?'(spelling pending)':'（拼音待补充）'):grammarDisplayedSpelling(n.dataset,d);if(n.textContent!==value)n.textContent=value;}
