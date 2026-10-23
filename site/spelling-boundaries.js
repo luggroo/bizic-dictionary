@@ -13,6 +13,50 @@ SPELLING_BOUNDARY_REVIEWS.push(
 // Chinese noun component followed by the native verb ‘hit/play’.
 SPELLING_BOUNDARY_REVIEWS.push({wordIds:['yubao-60756-v-0747','yubao-60823-v-0747'],key:'majianha',parts:['majian','ha'],separator:' ',kind:'phrase',gloss:'打麻将',basis:'Chinese loan component 麻将 followed by a native verb'});
 SPELLING_BOUNDARY_REVIEWS.push({"wordIds": ["yubao-60823-v-2790"], "key": "nobu", "parts": ["no", "bu"], "separator": " ", "kind": "phrase", "gloss": "杀人", "sourceForm": "no55pu13"});
+SPELLING_BOUNDARY_REVIEWS.push(...[
+ {
+  "wordIds": [
+   "yubao-60756-v-2550"
+  ],
+  "key": "xianzao",
+  "parts": [
+   "xian",
+   "zao"
+  ],
+  "separator": " ",
+  "kind": "phrase",
+  "gloss": "照相",
+  "sourceForm": "ɕaŋ35tsau55"
+ },
+ {
+  "wordIds": [
+   "yubao-60823-v-2550"
+  ],
+  "key": "xianzao",
+  "parts": [
+   "xian",
+   "zao"
+  ],
+  "separator": " ",
+  "kind": "phrase",
+  "gloss": "照相",
+  "sourceForm": "ɕiã13tsau13"
+ },
+ {
+  "wordIds": [
+   "yubao-60824-v-2550"
+  ],
+  "key": "xianzau",
+  "parts": [
+   "xian",
+   "zau"
+  ],
+  "separator": " ",
+  "kind": "phrase",
+  "gloss": "照相",
+  "sourceForm": "ɕiã13tsau13"
+ }
+]);
 function boundaryPlain(text){return String(text).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').normalize('NFC').toLowerCase().replace(/ı/g,'i')}
 function initializeSpellingBoundaries(data){
  const byId=new Map();for(const rule of SPELLING_BOUNDARY_REVIEWS)for(const id of rule.wordIds){if(!byId.has(id))byId.set(id,[]);byId.get(id).push(rule)}

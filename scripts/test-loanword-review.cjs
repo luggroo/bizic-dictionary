@@ -58,7 +58,17 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert(dragonflyIndex>=0);
  for(const [index,w] of matches.entries())if(c.wordSearchScore(w)>=50)assert(index<dragonflyIndex,'prefix and full matches precede dragonfly');
  vm.runInContext("state.q='';state.searchLanguage=''",c);
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2407);
+ const followup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-followup-2026-10-23.json'),'utf8'));
+ for(const {note} of followup.decisions)for(const id of note.wordIds){
+  const w=get(id);assert.equal(c.modernChineseLoanInfo(w).scope,'whole',id+' entire form is borrowed');
+  assert(c.editorialNotesFor(w).some(n=>n.id===note.id&&n.text===note.text));
+ }
+ const raised=get('w2258');assert.equal(raised.en,'raise; improve');
+ assert.deepEqual(Array.from(raised.glosses),['raise; improve']);
+ assert(raised.attestations.every(a=>['to provide','provide'].includes(a.en)),'original English remains in source records');
+ assert(!raised.en.includes('erroneous'),'correction commentary is not a gloss');
+ for(const {wordIds} of followup.phraseBoundaries){c.photoFixture=get(wordIds[0]);assert.equal(vm.runInContext('JSON.stringify(WordClasses.ids(photoFixture))',c),'["phrase"]');}
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2419);
  for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,'西南官话',id+' northern donor variety');}
  for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
  // Exact Southern forms and source aliases receive the accepted donor; native
@@ -112,6 +122,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.wordMatches(get('stedt-rn-289737')),true,'undated co remains visible');
  assert.equal(c.wordMatches(get('yubao-60824-v-1887')),false,'modern ce axle is hidden');
  assert.equal(c.wordMatches(get('stedt-rn-289522')),true,'dragonfly half-loan remains visible');
+ for(const {note} of followup.decisions)for(const id of note.wordIds)assert.equal(c.wordMatches(get(id)),false,id+' whole-loan filter includes reanalysed phrases');
  for(const id of xiangWhole)assert.equal(c.wordMatches(get(id)),false,id+' whole-loan filter');
  for(const id of xiangParts)assert.equal(c.wordMatches(get(id)),true,id+' mixed compound remains visible');
  c.loanPosFixture=get('yubao-60756-v-0747');
@@ -123,5 +134,5 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.parseViewHash('#words?hideWholeLoans=false').state.hideWholeLoans,false);
  const counts={};for(const w of data.words){const scope=c.modernChineseLoanInfo(w).scope||'unmarked';counts[scope]=(counts[scope]||0)+1;}
  console.log('Loan badge coverage:',counts);
- console.log('PASS: reviewed glosses, source preservation, 2407 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
+ console.log('PASS: reviewed glosses, source preservation, 2419 bilingual notes, loan badges, whole/component/variant filtering, URL state and export metadata');
 })().catch(e=>{console.error(e);process.exit(1)});

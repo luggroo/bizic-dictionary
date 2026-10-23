@@ -51065,6 +51065,260 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "ma-car-dragonfly-2026-10-23"
  }
 ]);
+EDITORIAL_NOTES.push({
+ "id": "chinese-loan-yubao-60824-v-2903",
+ "wordIds": [
+  "yubao-60824-v-2903"
+ ],
+ "kind": "借词来源",
+ "text": "当代湘语借词。",
+ "donorVariety": "湘语",
+ "borrowingPeriod": "contemporary",
+ "scope": "whole",
+ "reviewedForms": [
+  {
+   "ipa": "tsau³⁵nie²¹",
+   "span": [
+    1,
+    2
+   ]
+  }
+ ],
+ "reviewBatch": "xiang-contemporary-2026-10-23"
+});
+EDITORIAL_NOTES.push(...[
+ {
+  "id": "chinese-loan-w2258",
+  "wordIds": [
+   "w2258"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「提高」。",
+  "donor": "提高",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi²¹kau⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289187",
+  "wordIds": [
+   "stedt-rn-289187"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「提高」。",
+  "donor": "提高",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi²¹kau⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-181176",
+  "wordIds": [
+   "stedt-rn-181176"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「泉」。",
+  "donor": "泉",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰian²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2901",
+  "wordIds": [
+   "yubao-60756-v-2901"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「厉害」。",
+  "donor": "厉害",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "li³³xɛ³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-w472",
+  "wordIds": [
+   "w472"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「除」。",
+  "donor": "除",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2566",
+  "wordIds": [
+   "yubao-60756-v-2566"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「除」。",
+  "donor": "除",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2566",
+  "wordIds": [
+   "yubao-60823-v-2566"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「除」。",
+  "donor": "除",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2566",
+  "wordIds": [
+   "yubao-60824-v-2566"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语或西南官话「除」。",
+  "donor": "除",
+  "donorVariety": "湘语或西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "zu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2550",
+  "wordIds": [
+   "yubao-60756-v-2550"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「照相」。按宾动语序重组为「相 照」，两个成分均为借词。",
+  "donor": "照相",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ɕaŋ³⁵tsau⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2550",
+  "wordIds": [
+   "yubao-60823-v-2550"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自西南官话「照相」。按宾动语序重组为「相 照」，两个成分均为借词。",
+  "donor": "照相",
+  "donorVariety": "西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã¹³tsau¹³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ },
+ {
+  "id": "chinese-loan-yubao-60824-v-2550",
+  "wordIds": [
+   "yubao-60824-v-2550"
+  ],
+  "kind": "借词来源",
+  "text": "可能借自湘语或西南官话「照相」。按宾动语序重组为「相 照」，两个成分均为借词。",
+  "donor": "照相",
+  "donorVariety": "湘语或西南官话",
+  "scope": "whole",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã¹³tsau¹³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "loan-followup-2026-10-23"
+ }
+]);
 // Index source IDs once; list filtering visits every merged entry.
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){

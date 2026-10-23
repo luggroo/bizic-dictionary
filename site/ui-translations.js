@@ -1,5 +1,13 @@
 /* Reviewed interface copy; source texts and dictionary glosses stay in their source language. */
 const UI_TRANSLATIONS={
+  "可能借自西南官话「提高」。": "Possibly borrowed from Southwestern Mandarin 提高.",
+  "可能借自西南官话「泉」。": "Possibly borrowed from Southwestern Mandarin 泉.",
+  "可能借自西南官话「厉害」。": "Possibly borrowed from Southwestern Mandarin 厉害.",
+  "可能借自西南官话「除」。": "Possibly borrowed from Southwestern Mandarin 除.",
+  "可能借自湘语或西南官话「除」。": "Possibly borrowed from Xiang or Southwestern Mandarin 除.",
+  "可能借自西南官话「照相」。按宾动语序重组为「相 照」，两个成分均为借词。": "Possibly borrowed from Southwestern Mandarin 照相. Reordered as the object–verb phrase 相 照; both components are borrowed.",
+  "可能借自湘语或西南官话「照相」。按宾动语序重组为「相 照」，两个成分均为借词。": "Possibly borrowed from Xiang or Southwestern Mandarin 照相. Reordered as the object–verb phrase 相 照; both components are borrowed.",
+  "当代湘语借词。": "Contemporary loan from Xiang.",
   "可能借自西南官话「马」。": "Possibly borrowed from Southwestern Mandarin 马.",
   "「马」部分（第 1 音节）可能借自西南官话。": "The 马 component (syllable 1) may be borrowed from Southwestern Mandarin.",
   "可能借自湘语。": "Possibly borrowed from Xiang.",

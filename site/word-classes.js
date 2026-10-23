@@ -113,7 +113,7 @@ const WordClasses=(()=>{
    return [...new Set([...(Array.isArray(w?.positions)?w.positions:[]),w?.pos]
      .filter(x=>x!==null&&x!==undefined&&String(x).trim()).map(x=>String(x).trim()))];
  }
- const reviewedClasses=new Map([['yubao-60823-v-2790',['phrase']]]);
+ const reviewedClasses=new Map([['yubao-60823-v-2790',['phrase']],['yubao-60756-v-2550',['phrase']],['yubao-60823-v-2550',['phrase']],['yubao-60824-v-2550',['phrase']]]);
  function reviewedIds(w){
    return [...new Set([w?.id,...(w?.mergedWordIds||[]),...(w?.attestations||[]).map(a=>a.id)]
      .flatMap(id=>reviewedClasses.get(id)||[]))];

@@ -32,7 +32,12 @@ def apply_reviews(data, reviews):
         if review.get('reviewEvidence'):
             word['zhReviewEvidence'] = review['reviewEvidence']
             word['zhReviewedAt'] = review.get('reviewedAt', '')
-        if review.get('enNote'):
+        if review.get('correctedEn'):
+            word.setdefault('enBeforeReview', word.get('en', ''))
+            word.setdefault('glossesBeforeReview', word.get('glosses', []))
+            word['en'] = review['correctedEn']
+            word['glosses'] = [review['correctedEn']]
+        elif review.get('enNote'):
             word.setdefault('enBeforeReview', word.get('en', ''))
             word.setdefault('glossesBeforeReview', word.get('glosses', []))
             word['en'] = word['enBeforeReview'] + ' (' + review['enNote'] + ')'
@@ -43,7 +48,11 @@ def apply_reviews(data, reviews):
             attestation['zhReviewStatus'] = review['status']
             if review.get('reviewEvidence'):
                 attestation['zhReviewEvidence'] = review['reviewEvidence']
-            if review.get('enNote'):
+            if review.get('correctedEn'):
+                # Restore any old display annotation; retain the source English.
+                if 'enBeforeReview' in attestation:
+                    attestation['en'] = attestation['enBeforeReview']
+            elif review.get('enNote'):
                 attestation.setdefault('enBeforeReview', attestation.get('en', ''))
                 attestation['en'] = attestation['enBeforeReview'] + ' (' + review['enNote'] + ')'
     return data
