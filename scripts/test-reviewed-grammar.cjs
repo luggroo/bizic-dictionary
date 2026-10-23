@@ -28,6 +28,11 @@ const root=path.resolve(__dirname,'../site');
      const zhIPA=[...document.querySelectorAll('.grammar-pair')].flatMap(n=>n.dataset.ipa.split(/[、,]\s*/)).sort();
      const zhRefs=[...document.querySelectorAll('.grammar-citation')].map(n=>[n.textContent,n.dataset.footnoteTarget]);
      const english=document.createElement('div');english.innerHTML=grammarRenderHTML(ch,'en');
+     if(ch.id==='103'){
+      if(!english.textContent.includes('Both orders are acceptable:'))failures.push('English are was converted to Tujia spelling');
+      const sound=[...english.querySelectorAll('.grammar-pair')].filter(p=>p.dataset.ipa==='aze');
+      if(sound.length!==2||sound.some(p=>p.querySelector('.grammar-spelling').dataset.ye!=='are'))failures.push('Unmarked sound examples lost their spelling');
+     }
      const original=document.createElement('div');original.innerHTML=ch.html;
      const sourceLinks=[...original.querySelectorAll('a[href]')].map(a=>a.getAttribute('href')).filter(h=>/^https?:/.test(h));
      for(const rendered of [document.querySelector('main'),english]){

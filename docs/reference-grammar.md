@@ -837,6 +837,32 @@ Feng（2025）根据靛房材料提出：有些多音节词可以看作共享一
 
 形容词的修饰形式与词形变化集中见[形容词的谓语与修饰用法](#north-6-2)；从句修饰名词见[修饰名词与关系从句](#north-25-101)。
 
+<a id="north-two-clausal-modifiers"></a>
+
+#### 两个从句共同修饰名词
+
+Feng（2025）的靛房附近材料中，“我听见的”和“邻居吹咚咚喹的”都可以修饰“声音”，两种排列次序都成立：
+
+| 拼音 | [nga | xi-nie] | [seta | tongtongkuei | mie-nie] | are |
+| --- | --- | --- | --- | --- | --- | --- |
+| IPA | [ŋa | ɕi-nie] | [setʰa | tõtõkʰuei | mie-nie] | aze |
+| 中文逐词 | 我 | 听-连接 | 邻居 | 咚咚喹 | 吹-连接 | 声音 |
+| English | 1SG | hear-LNK | neighbor | dongdongkui | blow-LNK | sound |
+
+译文：［我听见的］［邻居吹咚咚喹的］声音。
+
+| 拼音 | [seta | tongtongkuei | mie-nie] | [nga | xi-nie] | are |
+| --- | --- | --- | --- | --- | --- | --- |
+| IPA | [setʰa | tõtõkʰuei | mie-nie] | [ŋa | ɕi-nie] | aze |
+| 中文逐词 | 邻居 | 咚咚喹 | 吹-连接 | 我 | 听-连接 | 声音 |
+| English | neighbor | dongdongkui | blow-LNK | 1SG | hear-LNK | sound |
+
+译文：［邻居吹咚咚喹的］［我听见的］声音。
+
+两句都指我听见的、由邻居吹咚咚喹发出的声音。在这组例子中，交代声音来源的从句不必紧挨“声音”。方括号标出两个从句的范围；原文未标声调。
+
+出处：Feng（2025），[第5页，例11a—11b](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=5)。
+
 <a id="north-11-2"></a>
 
 <a id="north-13-2"></a>
@@ -3068,6 +3094,32 @@ Feng（2025）把nie-xi分成连接成分nie和名词化成分xi。两者可以�
 译文：妈妈喂的猫是白的。 / The cat that Mother fed is white.
 
 出处：[第6页，例13a—13c](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=6)。
+
+<a id="north-modifier-and-independent-reference"></a>
+
+##### 修饰名词与独立指称
+
+“昨天下蛋的母鸡”和“昨天下蛋的那只”对xi的要求不同。下面第一句用nie连接修饰从句与“母鸡”：
+
+| 拼音 | [puni | alie | lie-nie] | za-niga | langgadie |
+| --- | --- | --- | --- | --- | --- |
+| IPA | [pʰuni | alie | lie-nie] | za-nika | laŋkatie |
+| 中文逐词 | 昨天 | 蛋 | 下-连接 | 鸡-雌性 | 黑 |
+| English | yesterday | egg | lay-LNK | chicken-FEM | black |
+
+译文：昨天下蛋的母鸡是黑的。
+
+第二句的从句后面没有中心名词，整个从句表示“昨天下蛋的那只”。在这个nie-xi结构中，末尾的xi必须保留：
+
+| 拼音 | gaidi | za-niga | nou | [puni | za-lie | lie-nie-xi] |
+| --- | --- | --- | --- | --- | --- | --- |
+| IPA | kaiti | za-nika | nou | [pʰuni | za-lie | lie-nie-ɕi] |
+| 中文逐词 | 这 | 鸡-雌性 | 一.量词 | 昨天 | 鸡-蛋 | 下-连接-名词化 |
+| English | this | chicken-FEM | ONE.CLF | yesterday | chicken-egg | lay-LNK-NMLZ |
+
+译文：这只母鸡是昨天下蛋的那只。
+
+出处：Feng（2025），[第10页，例27b、27a](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=10)。例27a中，省去末尾ɕi的形式被判为不成立；原文未标声调。
 
 <a id="north-serial-verbs"></a>
 
