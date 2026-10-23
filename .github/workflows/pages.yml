@@ -70,6 +70,8 @@ jobs:
           html = re.sub(r'(src="|href=")([^"?]+\.(?:js|css))(?:\?[^" ]*)?"', version, page.read_text())
           page.write_text(html)
           PYCODE
+      - name: Test mobile grammar chapter scrolling in Chrome
+        run: node scripts/test-grammar-scroll-chrome.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -320,7 +320,7 @@ function restoreNavigation(){
  // New mobile chapter selections should open at the reading title. Back/Forward
  // still restores their own saved scroll position; explicit anchors take priority.
  const jumpToChapter=!entry&&!parsed.anchor&&state.view==='grammar'&&typeof grammarShouldJumpToReadingTitle==='function'&&grammarShouldJumpToReadingTitle();
- requestAnimationFrame(()=>{if(token===navigationToken()){window.scrollTo({top:restored.scrollY,behavior:'instant'});if(parsed.anchor)revealPageAnchor(parsed.anchor);else if(jumpToChapter)grammarJumpToReadingTitle();}});
+ requestAnimationFrame(()=>{if(token===navigationToken()){window.scrollTo({top:restored.scrollY,behavior:'instant'});if(parsed.anchor)revealPageAnchor(parsed.anchor);else if(jumpToChapter&&grammarJumpToReadingTitle())grammarQueueReadingTitleScroll();}});
  restoringNavigation=false;
  if(requestedId&&!sharedId)toast('未找到该条目。');
 }
@@ -377,10 +377,11 @@ function setView(v,keep=false,patch={}){
   if(!changedNotation){closeDetail();return}
   closeDetailSilently();
  }
- // The chapter picker has already collapsed in the capturing click handler.
+ // The mobile chapter picker was collapsed by the capturing click handler.
  const jumpToChapter=v==='grammar'&&typeof grammarShouldJumpToReadingTitle==='function'&&grammarShouldJumpToReadingTitle();
  render();
- if(!jumpToChapter||!grammarJumpToReadingTitle())window.scrollTo({top:0,behavior:'instant'});
+ if(jumpToChapter&&grammarJumpToReadingTitle())grammarQueueReadingTitleScroll();
+ else window.scrollTo({top:0,behavior:'instant'});
 }
 function bindMain(){document.querySelectorAll('[data-corpus-collection]').forEach(b=>b.onclick=()=>{state.corpusCollection=b.dataset.corpusCollection;state.page=1;state.genre="";render();window.scrollTo({top:0,behavior:"smooth"})});if($('#shuffle-words'))$('#shuffle-words').onclick=()=>{randomWordItems(D.words.filter(wordMatches),true);render()};if($('#browse-all-words'))$('#browse-all-words').onclick=()=>{state.browseWords=true;state.page=1;render()};if($('#discover-words'))$('#discover-words').onclick=()=>{state.browseWords=false;state.q='';state.page=1;render()};const form=$('#search-form');if(form){const search=language=>{state.q=$('#query').value.trim();state.searchLanguage=state.view==='words'?language:'';state.page=1;render()};form.onsubmit=e=>{e.preventDefault();search(e.submitter?.dataset.searchLanguage||'')};form.onkeydown=e=>{if(e.key==='Enter'&&e.target.id==='query'&&!e.isComposing){e.preventDefault();search('')}};document.querySelectorAll('#search-form button,[data-search-language]').forEach(button=>button.onclick=e=>{e.preventDefault();search(button.dataset.searchLanguage||'')})};document.querySelectorAll('[data-filter]').forEach(el=>el.onchange=()=>{state[el.dataset.filter]=el.value;state.page=1;render()});if($('#hide-whole-loans'))$('#hide-whole-loans').onchange=e=>{state.hideWholeLoans=e.target.checked;state.page=1;render()};if($('#exact'))$('#exact').onchange=e=>{state.exact=e.target.checked;state.page=1;render()};if($('#reset'))$('#reset').onclick=()=>{if(state.view==='corpus'){state.q='';state.genre='';state.dialect='';state.page=1;render()}else setView(state.view)};if($('#export-words'))$('#export-words').onclick=async()=>{await loadAllWordEvidence();download('tujia-words.json',D.words.filter(wordMatches).map(w=>({...Object.fromEntries(Object.entries(w).filter(([key])=>!key.startsWith('_'))),canonicalPos:WordClasses.ids(w),posProvenance:WordClasses.provenance(w),sitePosAnalysis:WordClasses.review(w),modernChineseLoanScope:modernChineseLoanInfo(w).scope,editorialNotes:typeof editorialNotesFor==='function'?editorialNotesFor(w):(w.editorialNotes||[]),source_title:S[w.source].title,source_url:S[w.source].url})));};if($('#export-sources'))$('#export-sources').onclick=()=>download('tujia-catalogue.json',D.sources.filter(sourceMatches).map(({text,...s})=>s));if($('#export-reconstructions'))$('#export-reconstructions').onclick=()=>download('proto-bizic-comparison.json',D.reconstructions.filter(reconstructionMatches));}
 function download(name,obj){const u=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
@@ -449,6 +450,21 @@ function closeDetail(){
 }
 document.addEventListener('click',async e=>{
  const b=e.target.closest('button,a');if(!b)return;
+ // Route grammar section links through the same navigation path as chapter
+ // buttons. Native #hash scrolling competes with the reading-title scroll.
+ if(b.matches('a[href^="#grammar/"]')&&b.closest('.grammar-toc,.grammar-page-navigation,.grammar-page-results')){
+  const destination=parseViewHash(b.getAttribute('href')).state;
+  if(destination.view==='grammar'){
+   e.preventDefault();
+   setView('grammar',false,{
+    grammarDialect:destination.grammarDialect,
+    chapter:destination.chapter,
+    grammarSection:destination.grammarSection,
+    grammarAnchor:destination.grammarAnchor
+   });
+   return;
+  }
+ }
  if(b.tagName==='A'&&b.getAttribute('href')?.startsWith('#')&&!b.dataset.view){
   let id;try{id=decodeURIComponent(b.getAttribute('href').slice(1))}catch{return}
   if(document.getElementById(id)){e.preventDefault();revealPageAnchor(id);return}

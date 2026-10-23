@@ -21,7 +21,21 @@ function grammarJumpToReadingTitle(){
  if(!grammarShouldJumpToReadingTitle())return false;
  const title=document.querySelector('.grammar-article > h1.grammar-reading-title');
  if(!title)return false;
- title.scrollIntoView({block:'start',behavior:'instant'});
+ // A concrete document offset works on mobile Safari, including after an
+ // expanded menu disappears and changes the layout above this heading.
+ const top=window.scrollY+title.getBoundingClientRect().top-14;
+ window.scrollTo({top:Math.max(0,top),behavior:'auto'});
+ return true;
+}
+function grammarQueueReadingTitleScroll(){
+ if(!grammarShouldJumpToReadingTitle())return false;
+ const destination=location.hash;
+ // Navigation and localization rebuild the article. Scroll once immediately
+ // and again after the browser has laid out the new heading, not the old TOC.
+ requestAnimationFrame(()=>requestAnimationFrame(()=>{
+  if(location.hash!==destination||!grammarShouldJumpToReadingTitle())return;
+  if(grammarJumpToReadingTitle()&&typeof saveNavigationPosition==='function')saveNavigationPosition();
+ }));
  return true;
 }
 document.addEventListener('click',event=>{
