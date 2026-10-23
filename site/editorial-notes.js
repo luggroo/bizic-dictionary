@@ -49699,7 +49699,7 @@ EDITORIAL_NOTES.push(...[
   "reviewBatch": "loan-supplement-2026-10-23"
  },
  {
-  "id": "luxi-sock-etymology",
+  "id": "chinese-loan-stedt-rn-289703",
   "wordIds": [
    "stedt-rn-289703"
   ],
@@ -49708,7 +49708,10 @@ EDITORIAL_NOTES.push(...[
   "donor": "袜",
   "donorVariety": "湘语",
   "evidenceStatus": "tentative",
-  "borrowingPeriod": "undetermined"
+  "borrowingPeriod": "undetermined",
+  "scope": "whole",
+  "reviewedForms": [{"ipa": "ʔo³⁵", "span": [1, 1]}],
+  "reviewBatch": "loan-supplement-2026-10-23"
  }
 ]);
 // Index source IDs once; list filtering visits every merged entry.

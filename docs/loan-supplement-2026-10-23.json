@@ -281,7 +281,7 @@
       "reviewBatch": "loan-supplement-2026-10-23"
     },
     {
-      "id": "luxi-sock-etymology",
+      "id": "chinese-loan-stedt-rn-289703",
       "wordIds": [
         "stedt-rn-289703"
       ],
@@ -290,7 +290,18 @@
       "donor": "袜",
       "donorVariety": "湘语",
       "evidenceStatus": "tentative",
-      "borrowingPeriod": "undetermined"
+      "borrowingPeriod": "undetermined",
+      "scope": "whole",
+      "reviewedForms": [
+        {
+          "ipa": "ʔo³⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ],
+      "reviewBatch": "loan-supplement-2026-10-23"
     }
   ],
   "limits": [
@@ -381,5 +392,9 @@
     "Publishing checks passed: IPA, Brassett IPA, word classes, merged entries, southern notation/source rimes, notation pairs, reader copy and loan review.",
     "Prepared search: 99,512 checks across 16,577 entries; gzip and fallback loading passed.",
     "Rendered all 14 affected entries at 390px and 1280px in Chinese and English; no horizontal dialog overflow or browser errors. Inspected screenshots of corrected 可以, partial-loan 耳孔 and tentative 袜子 notes."
-  ]
+  ],
+  "followUp": {
+    "request": "Classify sock ʔo35 as a recent whole-word loan.",
+    "action": "Add 新借 / Loan badge and include this exact form in the whole-loan filter. Retain the qualified donor comparison and undetermined borrowing date."
+  }
 }
