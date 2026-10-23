@@ -150,7 +150,7 @@ const WordClasses=(()=>{
    let result='<select data-filter="pos" aria-label="词性 / Part of speech"><option value="">全部词性 / All parts of speech</option>';
    function option(n,depth){
      if(!count(n.id))return '';
-     const title=(depth?'　↳ ':'')+n.zh+' / '+n.en+' ('+count(n.id)+')';
+     const title=(depth?'　↳ ':'')+n.zh+' / '+n.en;
      let out='<option value="'+escape(n.id)+'"'+(chosen===n.id?' selected':'')+'>'+escape(title)+'</option>';
      for(const child of n.children||[])out+=option(child,depth+1);
      return out;
