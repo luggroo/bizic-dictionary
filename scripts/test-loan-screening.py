@@ -51,6 +51,44 @@ class ScreeningGuards(unittest.TestCase):
         self.assertEqual(groups[0], groups[2])
         self.assertNotEqual(groups[0], groups[3])
 
+    def test_loan_adaptation_retrieval(self):
+        registry = {'rules': [], 'phonologicalComparison': {
+            'north': ['y-to-i', 'nasal-coda-to-nasal-vowel'],
+            'south': ['nasal-coda-to-nasal-vowel']}}
+        rounded, adapted = screen.syllables('tɕʰyn³³'), screen.syllables('tɕʰĩ³³')
+        self.assertNotEqual(screen.features(rounded), screen.features(adapted))
+        self.assertEqual(screen.comparison_key(rounded, 'north', registry, True),
+                         screen.comparison_key(adapted, 'north', registry, True))
+        self.assertNotEqual(screen.comparison_key(rounded, 'south', registry, True),
+                            screen.comparison_key(adapted, 'south', registry, True))
+        self.assertNotEqual(screen.comparison_key(screen.syllables('n³³'), 'north', registry, True),
+                            screen.comparison_key(screen.syllables('ŋ³³'), 'north', registry, True))
+        reference = {'id': 'gall-reference', 'aliases': ['gall-reference'], 'zh': '苦胆',
+                     'source': 'northern-point', 'dialect': '北部', 'notes': [{
+                         'donor': '苦胆', 'reviewedForms': [{'ipa': 'kʰu⁵³tan³³', 'span': [1, 2]}]}]}
+        word = {'id': 'snake-gall', 'aliases': ['snake-gall'], 'zh': '蛇胆', 'source': 'northern-point'}
+        row = {'word': word, 'parts': screen.syllables('ɣo⁵⁵kʰu⁵³tã³³'), 'region': 'north'}
+        refs = screen.matches(row, screen.reference_bank([reference], registry), registry)
+        self.assertEqual(refs[0]['donor'], '苦胆')
+        self.assertEqual(refs[0]['candidateSpan'], [2, 3])
+        self.assertEqual(refs[0]['matchType'], 'adaptation')
+        self.assertTrue(refs[0]['sameTones'])
+        # Oral vowels, aspiration and the recorded tones remain distinct.
+        self.assertNotEqual(screen.comparison_key(screen.syllables('kʰu⁵³ta³³'), 'north', registry, True),
+                            screen.comparison_key(screen.syllables('kʰu⁵³tã³³'), 'north', registry, True))
+        self.assertNotEqual(screen.comparison_key(screen.syllables('ku⁵³tã³³'), 'north', registry, True),
+                            screen.comparison_key(screen.syllables('kʰu⁵³tã³³'), 'north', registry, True))
+        row['parts'] = screen.syllables('ɣo⁵⁵kʰu⁵³tã⁵⁵')
+        self.assertFalse(screen.matches(row, screen.reference_bank([reference], registry), registry)[0]['sameTones'])
+
+    def test_explicit_followup_exclusions(self):
+        root = Path(__file__).resolve().parents[1]
+        review = json.loads((root / 'docs/loan-adaptation-review-2026-10-23.json').read_text())
+        registry = json.loads((root / 'docs/loan-screening-constraints.json').read_text())
+        for word in review['excluded']:
+            for alias in word['aliases']:
+                self.assertTrue(screen.blocked({'aliases': [alias, word['id']]}, registry))
+
 
 if __name__ == '__main__':
     unittest.main()

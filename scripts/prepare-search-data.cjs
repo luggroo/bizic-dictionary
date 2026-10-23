@@ -40,7 +40,9 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
  for(let i=0;i<data.words.length;i+=chunkSize){write('words-'+Math.floor(i/chunkSize),data.words.slice(i,i+chunkSize).map(w=>{const out={...w};delete out._search;delete out._semantic;return out;}));}
  write('core',core);
  ctx.data=data;vm.runInContext('D=data;',ctx);
- const version=crypto.createHash('sha256').update(JSON.stringify(data)).digest('hex').slice(0,16);
+ // Loan scopes and precomputed spellings live in coreWords, not data.words.
+ // Include them so returning readers request the refreshed prepared payload.
+ const version=crypto.createHash('sha256').update(JSON.stringify(core)).update(JSON.stringify(data)).digest('hex').slice(0,16);
  const index=path.join(root,'index.html');
  let html=fs.readFileSync(index,'utf8').replace(/<main id="main">[\s\S]*?<\/main>/,'<main id="main">'+ctx.overview()+'</main>');
  html=html.replace(/<meta name="prepared-data-version"[^>]*>/g,'').replace(/<link[^>]*data-prepared-preload[^>]*>/g,'');

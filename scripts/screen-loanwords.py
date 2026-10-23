@@ -86,6 +86,24 @@ def rejected_form(word, ipa, registry):
                for r in rules_for(word, registry))
 
 
+def comparison_key(parts, area, registry, adapted=False):
+    """A retrieval key, never a replacement IPA or classifier feature."""
+    policies = registry.get('phonologicalComparison', {}).get(area, []) if adapted else []
+    segments = []
+    for onset, rime, _ in parts:
+        value = unicodedata.normalize('NFD', rime)
+        if 'y-to-i' in policies:
+            value = value.replace('y', 'i')
+        if 'nasal-coda-to-nasal-vowel' in policies and any(ch in VOWELS for ch in value):
+            nasal = '\u0303' in value or value.endswith(('n', 'ŋ'))
+            value = value.replace('\u0303', '')
+            if value.endswith(('n', 'ŋ')):
+                value = value[:-1]
+            value += '~nasal' if nasal else '~oral'
+        segments.append(onset + '|' + unicodedata.normalize('NFC', value))
+    return tuple(segments)
+
+
 def group_ids(rows):
     """Put identical segmental forms OR identical glosses in one CV fold."""
     parents = list(range(len(rows)))
@@ -144,10 +162,13 @@ def reference_bank(words, registry):
                 selected = parts[start - 1:end]
                 if not selected or end > len(parts):
                     continue
-                key = (region(w), tuple(o + r for o, r, _ in selected))
-                bank[key].append({'id': w['id'], 'donor': donor, 'source': w['source'],
-                                  'ipa': form['ipa'], 'span': [start, end],
-                                  'tones': [t for _, _, t in selected]})
+                ref = {'id': w['id'], 'donor': donor, 'source': w['source'],
+                       'ipa': form['ipa'], 'span': [start, end],
+                       'tones': [t for _, _, t in selected],
+                       'segments': comparison_key(selected, region(w), registry)}
+                for mode in ('exact', 'adaptation'):
+                    key = (mode, region(w), comparison_key(selected, region(w), registry, mode == 'adaptation'))
+                    bank[key].append(ref)
     return bank
 
 
@@ -157,10 +178,16 @@ def matches(row, bank, registry):
     found = []
     for start in range(len(parts)):
         for end in range(start + 1, len(parts) + 1):
-            key = (row['region'], tuple(o + r for o, r, _ in parts[start:end]))
-            for ref in bank.get(key, []):
+            exact_key = comparison_key(parts[start:end], row['region'], registry)
+            refs = []
+            for mode in ('exact', 'adaptation'):
+                key = (mode, row['region'], comparison_key(parts[start:end], row['region'], registry, mode == 'adaptation'))
+                refs.extend((mode, ref) for ref in bank.get(key, []))
+            for mode, ref in refs:
                 if ref['id'] == w['id'] or ref['donor'] in prohibited:
                     continue
+                if mode == 'adaptation' and tuple(ref['segments']) == exact_key:
+                    continue  # already present as an exact segment match
                 same_tones = ref['tones'] == [t for _, _, t in parts[start:end]]
                 overlap = ''.join(sorted(set(ref['donor']) & set(w['zh']) - set('子儿的（）；; ')))
                 # A single unrelated homophone is not a useful retrieval result.
@@ -168,8 +195,8 @@ def matches(row, bank, registry):
                     continue
                 found.append({**ref, 'candidateSpan': [start + 1, end],
                               'sameTones': same_tones, 'sameSource': ref['source'] == w['source'],
-                              'glossOverlap': overlap})
-    found.sort(key=lambda x: (bool(x['glossOverlap']), x['sameTones'], x['sameSource'],
+                              'glossOverlap': overlap, 'matchType': mode})
+    found.sort(key=lambda x: (bool(x['glossOverlap']), x['matchType'] == 'exact', x['sameTones'], x['sameSource'],
                               x['candidateSpan'][1] - x['candidateSpan'][0]), reverse=True)
     unique = {}
     for ref in found:
@@ -236,9 +263,10 @@ def run(input_path, constraints_path, output):
             continue
         w = r['word']
         refs = matches(r, bank, registry)
-        exact_semantic = any(ref['sameTones'] and ref['glossOverlap'] for ref in refs)
-        segmental_semantic = any(ref['glossOverlap'] for ref in refs)
-        tier = 'A-exact-reference' if exact_semantic else 'B-segmental-reference' if segmental_semantic else 'C-pattern-only'
+        exact_semantic = any(ref['matchType'] == 'exact' and ref['sameTones'] and ref['glossOverlap'] for ref in refs)
+        segmental_semantic = any(ref['matchType'] == 'exact' and ref['glossOverlap'] for ref in refs)
+        adapted_semantic = any(ref['matchType'] == 'adaptation' and ref['glossOverlap'] for ref in refs)
+        tier = 'A-exact-reference' if exact_semantic else 'B-segmental-reference' if segmental_semantic else 'C-adaptation-reference' if adapted_semantic else 'D-pattern-only'
         candidates.append({'id': w['id'], 'zh': w['zh'], 'en': w['en'], 'ipa': r['ipa'],
                            'spelling': ' / '.join(v['text'] for v in w['spelling'].get('accent', [])),
                            'location': w['location'] or w['dialect'], 'source': w['source'],
@@ -279,6 +307,7 @@ def run(input_path, constraints_path, output):
                'seed': 20261023, 'bags': 8, 'pythonDependencies': {'numpy': np.__version__, 'sklearn': sklearn.__version__},
                'inputSHA256': hashlib.sha256(input_path.read_bytes()).hexdigest(),
                'constraintsSHA256': hashlib.sha256(constraints_path.read_bytes()).hexdigest(),
+               'phonologicalComparison': registry.get('phonologicalComparison', {}),
                'limitations': ['Unlabeled entries are not certified native negatives.',
                                'Scores are not calibrated borrowing probabilities.',
                                'Grouped label AUC measures known-label separation, not etymological precision.',
@@ -296,7 +325,7 @@ def run(input_path, constraints_path, output):
         writer = csv.writer(handle, delimiter='\t', lineterminator='\n')
         writer.writerow(['id', '汉义', '拼音', 'IPA', '调查点', '整词排序分数（非概率）', '最高片段分数', '片段音节', '检索级别', '对照词／音节／声调相同'])
         for r in candidates:
-            refs = '; '.join(f"{x['donor']} [{','.join(map(str,x['candidateSpan']))}] {x['sameTones']} ({x['id']})" for x in r['references'])
+            refs = '; '.join(f"{x['donor']} [{','.join(map(str,x['candidateSpan']))}] {x['sameTones']} {x['matchType']} ({x['id']})" for x in r['references'])
             writer.writerow([r['id'], r['zh'], r['spelling'], r['ipa'], r['location'], r['priority'], r['bestSpanPriority'], r['bestSpan'], r['tier'], refs])
     print(json.dumps({k: summary[k] for k in ('totalEntries', 'counts', 'rankedForms', 'diagnostics')}, ensure_ascii=False))
 

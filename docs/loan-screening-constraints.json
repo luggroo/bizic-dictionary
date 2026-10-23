@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "scope": "Screening constraints, not a native-word training set. Entry aliases resolve before scoring; rejected donors and component boundaries apply separately. Later linguistic review is required to revise these constraints.",
   "setuScope": "Exclude the five setu-family entries and their merged aliases. The distinct Southern sītī /si⁵⁵tʰi⁵⁵/ is not part of this exclusion.",
   "rules": [
@@ -116,7 +116,10 @@
       "reason": "末音节送气与「子」不一致，完整原词待核。",
       "origin": "docs/ma-car-dragonfly-review-2026-10-23.json",
       "donor": "马",
-      "span": [1, 1]
+      "span": [
+        1,
+        1
+      ]
     },
     {
       "id": "yubao-60756-v-1559",
@@ -626,6 +629,191 @@
       "policy": "retain-review",
       "reason": "Existing explicit regression guard: remains unmarked.",
       "origin": "scripts/test-loanword-review.cjs"
+    },
+    {
+      "id": "w2042",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 国民党。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "explicit-no-loan"
+    },
+    {
+      "id": "w2121",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 虮子。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "虮子"
+    },
+    {
+      "id": "stedt-rn-363299",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 虮子。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "虮子"
+    },
+    {
+      "id": "stedt-rn-289535",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 虮子。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "虮子"
+    },
+    {
+      "id": "stedt-rn-288594",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 虮子。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "虮子"
+    },
+    {
+      "id": "yubao-60757-v-1592",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 野兔。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "野兔"
+    },
+    {
+      "id": "yubao-60757-v-2625",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 做鬼脸。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "做鬼脸"
+    },
+    {
+      "id": "yubao-60756-v-1592",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 野兔。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "野兔"
+    },
+    {
+      "id": "yubao-60756-v-1611",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 虮子。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "虮子"
+    },
+    {
+      "id": "yubao-60756-v-2625",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 做鬼脸。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "做鬼脸"
+    },
+    {
+      "id": "yubao-60756-v-2900",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 节俭。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "explicit-no-loan"
+    },
+    {
+      "id": "yubao-60823-v-1592",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 野兔。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "野兔"
+    },
+    {
+      "id": "yubao-60823-v-1611",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 虮子。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "虮子"
+    },
+    {
+      "id": "yubao-60823-v-2625",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 做鬼脸。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "做鬼脸"
+    },
+    {
+      "id": "yubao-60824-v-1592",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 野兔。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "野兔"
+    },
+    {
+      "id": "yubao-60824-v-1611",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 虮子。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "虮子"
+    },
+    {
+      "id": "yubao-60824-v-2625",
+      "policy": "exclude-entry",
+      "reason": "Reviewed exclusion from loan annotation and automated suggestions: 做鬼脸。",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json",
+      "family": "做鬼脸"
+    },
+    {
+      "id": "yubao-60823-v-1271",
+      "policy": "reject-donor",
+      "donor": "草烟",
+      "reason": "Homophonic retrieval replaced by the reviewed donor matching the registered sense and loan adaptation.",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60824-v-2904",
+      "policy": "reject-donor",
+      "donor": "麻花",
+      "reason": "Homophonic retrieval replaced by the reviewed donor matching the registered sense and loan adaptation.",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60756-v-1993",
+      "policy": "reject-donor",
+      "donor": "围巾",
+      "reason": "Homophonic retrieval replaced by the reviewed donor matching the registered sense and loan adaptation.",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json"
+    },
+    {
+      "id": "w2335",
+      "policy": "reject-donor",
+      "donor": "团圆",
+      "reason": "Homophonic retrieval replaced by the reviewed donor matching the registered sense and loan adaptation.",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60824-v-1601",
+      "policy": "reject-donor",
+      "donor": "裤裆",
+      "reason": "Homophonic retrieval replaced by the reviewed donor matching the registered sense and loan adaptation.",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60823-v-1601",
+      "policy": "reject-donor",
+      "donor": "裤裆",
+      "reason": "Homophonic retrieval replaced by the reviewed donor matching the registered sense and loan adaptation.",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60756-v-1430",
+      "policy": "reject-donor",
+      "donor": "鸽子",
+      "reason": "Homophonic retrieval replaced by the reviewed donor matching the registered sense and loan adaptation.",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60824-v-2062",
+      "policy": "reject-donor",
+      "donor": "裤裆",
+      "reason": "Homophonic retrieval replaced by the reviewed donor matching the registered sense and loan adaptation.",
+      "origin": "docs/loan-adaptation-review-2026-10-23.json"
     }
-  ]
+  ],
+  "phonologicalComparison": {
+    "north": [
+      "y-to-i",
+      "nasal-coda-to-nasal-vowel"
+    ],
+    "south": [
+      "nasal-coda-to-nasal-vowel"
+    ],
+    "effect": "Secondary candidate retrieval only; preserve original segments, aspiration, nasality and tones in model features and source data. The y-to-i comparison is restricted to Northern forms."
+  }
 }

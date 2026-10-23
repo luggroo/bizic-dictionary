@@ -3266,6 +3266,16 @@ Object.assign(UI_TRANSLATIONS,{
  "「肥料」部分（第 1—2 音节）可能借自西南官话或湘语。":"The 肥料 component (syllables 1–2) may be borrowed from Southwestern Mandarin or Xiang."
 });
 Object.assign(UI_TRANSLATIONS,{
+ "可能借自汉语「草原」，具体方言来源待核。":"Possibly borrowed from Chinese 草原; the specific donor variety remains to be established.",
+ "可能借自汉语「麻烦」，具体方言来源待核。":"Possibly borrowed from Chinese 麻烦; the specific donor variety remains to be established.",
+ "可能借自汉语「团员」，具体方言来源待核。":"Possibly borrowed from Chinese 团员; the specific donor variety remains to be established.",
+ "「箭」部分（第 1 音节）可能借自汉语，具体方言来源待核。":"The 箭 component (syllable 1) may be borrowed from Chinese; the specific donor variety remains to be established.",
+ "可能借自汉语「箭」，具体方言来源待核。":"Possibly borrowed from Chinese 箭; the specific donor variety remains to be established.",
+ "「苦胆」部分（第 3—4 音节）可能借自汉语，具体方言来源待核。":"The 苦胆 component (syllables 3–4) may be borrowed from Chinese; the specific donor variety remains to be established.",
+ "「苦胆」部分（第 2—3 音节）可能借自汉语，具体方言来源待核。":"The 苦胆 component (syllables 2–3) may be borrowed from Chinese; the specific donor variety remains to be established.",
+ "「果子」部分（第 1—2 音节）可能借自汉语，具体方言来源待核。":"The 果子 component (syllables 1–2) may be borrowed from Chinese; the specific donor variety remains to be established."
+});
+Object.assign(UI_TRANSLATIONS,{
  '可能借自汉语「洋芋」，具体方言来源待核。':'Possibly borrowed from Chinese 洋芋 “potato”; the specific donor variety remains to be established.',
  '可能借自汉语「茶」，具体方言来源待核。':'Possibly borrowed from Chinese 茶 “tea”; the specific donor variety remains to be established.',
  'j、q、x、y后对应ie（jie、qie、xie、ye）；其他声母后的跨点同源对应为ai（p.26），不是把ɛ读成ai':'After written j, q, x and y, the spelling uses ie: jie, qie, xie and ye. After other onsets, the cross-variety cognate correspondence is ai (p. 26); this does not give ai as the pronunciation of ɛ.',

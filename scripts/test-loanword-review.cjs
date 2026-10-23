@@ -91,6 +91,8 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  vm.runInContext('state.hideWholeLoans=false',c);
  const screening=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-phonotactic-review-2026-10-23.json'),'utf8'));
+ const adaptation=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-adaptation-review-2026-10-23.json'),'utf8'));
+ screening.decisions.push(...adaptation.decisions);
  for(const {note,noteEn} of screening.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
   assert.equal(JSON.stringify(actual),JSON.stringify(note),note.id+' reviewed form and scope');
@@ -108,8 +110,13 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  for(const id of ['stedt-rn-353352','yubao-60756-v-2277','yubao-60757-v-2277','yubao-60823-v-2277','w1449'])assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' setu family excluded');
  assert.equal(c.modernChineseLoanInfo(get('yubao-60824-v-2277')).scope,'whole','distinct Southern siti is outside setu exclusion');
- for(const id of ['yubao-60756-v-0691','yubao-60757-v-1872','yubao-60823-v-1872','yubao-60823-v-1271','yubao-60824-v-2904'])assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' other forms and conflicting senses remain unmarked');
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2970);
+ for(const id of ['yubao-60756-v-0691','yubao-60757-v-1872'])assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' other forms remain unmarked');
+ for(const row of adaptation.excluded){
+  assert.equal(c.modernChineseLoanBadge(get(row.id)),'',row.id+' explicit exclusion');
+  for(const alias of row.aliases)assert.equal(c.modernChineseLoanBadge(get(alias)),'',alias+' exclusion survives merging');
+ }
+ for(const id of ['w2335','w5408','w6901','stedt-rn-457979'])assert(c.editorialNotesFor(get(id)).some(n=>n.donor==='团员'),id+' 团员 donor survives merging');
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2991);
  const componentsFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-components-followup-2026-10-23.json'),'utf8'));
  for(const {note} of componentsFollowup.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
@@ -142,7 +149,8 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  vm.runInContext("state.q='大臣';state.searchLanguage='zh'",c);
  for(const id of ['w351','stedt-rn-289610'])assert.equal(c.wordSearchScore(get(id)),0,'obsolete translation is not searchable');
  vm.runInContext("state.q='';state.searchLanguage=''",c);
- for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,['yubao-60756-v-0521','yubao-60756-v-0740','yubao-60756-v-1857','yubao-60823-v-0425','yubao-60756-v-1868','yubao-60756-v-1869','yubao-60756-v-1870','yubao-60756-v-1872'].includes(id)?'汉语（方言待核）':'西南官话',id+' northern donor variety');}
+ const unspecifiedNorthernDonors=new Set(['yubao-60756-v-0521','yubao-60756-v-0740','yubao-60756-v-1857','yubao-60823-v-0425',...screening.decisions.filter(d=>d.note.donorVariety==='汉语（方言待核）').flatMap(d=>d.note.wordIds)]);
+ for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,unspecifiedNorthernDonors.has(id)?'汉语（方言待核）':'西南官话',id+' northern donor variety');}
  for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
  // Exact Southern forms and source aliases receive the accepted donor; native
  // components and other forms with the same Chinese gloss keep their scope.

@@ -6,8 +6,18 @@
     "numpy": "2.3.5",
     "sklearn": "1.8.0"
   },
-  "inputSHA256": "d3303defe7ff0d17625f62113456d8ee50536c1172d91abed9e314166722095a",
-  "constraintsSHA256": "b65f0e6651dee1869e59debaf40c0b1933e36c0c4b1147512fb3a04db8bfb03f",
+  "inputSHA256": "e2d21ff40b59788542f6c412a5f16c7a8d0fd58268362b0be347469f72b9d0e0",
+  "constraintsSHA256": "f708d1f003768e1300959a5a21fcd91166f70f43f9e37553f7a28f28d8c82e7c",
+  "phonologicalComparison": {
+    "north": [
+      "y-to-i",
+      "nasal-coda-to-nasal-vowel"
+    ],
+    "south": [
+      "nasal-coda-to-nasal-vowel"
+    ],
+    "effect": "Secondary candidate retrieval only; preserve original segments, aspiration, nasality and tones in model features and source data. The y-to-i comparison is restricted to Northern forms."
+  },
   "limitations": [
     "Unlabeled entries are not certified native negatives.",
     "Scores are not calibrated borrowing probabilities.",
@@ -18,53 +28,53 @@
     "Same donor/gloss character overlap supports retrieval only; it does not prove etymology."
   ],
   "counts": {
-    "ranked": 13455,
+    "ranked": 13410,
     "unparsed": 124,
-    "excluded": 71,
-    "already-annotated": 2927
+    "excluded": 88,
+    "already-annotated": 2955
   },
   "totalEntries": 16577,
   "existingScopes": {
-    "unmarked": 13635,
-    "whole": 2706,
-    "component": 214,
+    "unmarked": 13607,
+    "whole": 2716,
+    "component": 232,
     "mixed": 22
   },
-  "rankedForms": 14562,
+  "rankedForms": 14516,
   "diagnostics": {
     "north": {
-      "reviewedWholeForms": 1982,
-      "unlabeledForms": 11585,
-      "groups": 2580,
-      "groupedLabelAUC": 0.8604
+      "reviewedWholeForms": 1989,
+      "unlabeledForms": 11554,
+      "groups": 2577,
+      "groupedLabelAUC": 0.864
     },
     "south": {
-      "reviewedWholeForms": 815,
-      "unlabeledForms": 2977,
-      "groups": 2341,
-      "groupedLabelAUC": 0.8631
+      "reviewedWholeForms": 818,
+      "unlabeledForms": 2962,
+      "groups": 2331,
+      "groupedLabelAUC": 0.8646
     }
   },
   "profiles": {
     "reviewedWhole": {
-      "entries": 2692,
+      "entries": 2702,
       "ids": null,
       "north": {
         "onset": {
           "ts": 469,
-          "s": 356,
+          "s": 357,
           "t": 250,
           "p": 236,
-          "tɕ": 230,
-          "x": 216,
+          "tɕ": 232,
+          "k": 218,
+          "x": 217,
           "tsʰ": 216,
-          "k": 215,
           "l": 206,
-          "m": 190,
-          "ɕ": 177,
+          "m": 191,
+          "ɕ": 178,
           "tɕʰ": 168,
           "tʰ": 155,
-          "ʑ": 137,
+          "ʑ": 140,
           "j": 118,
           "pʰ": 101,
           "kʰ": 72,
@@ -77,25 +87,25 @@
           "ŋ": 17
         },
         "rime": {
-          "i": 426,
-          "u": 336,
-          "aŋ": 300,
+          "i": 430,
+          "u": 337,
+          "aŋ": 301,
           "ɿ": 240,
           "a": 204,
           "au": 184,
           "iŋ": 144,
+          "ɔŋ": 104,
           "iɛn": 103,
           "ɨ": 102,
-          "ɔŋ": 102,
-          "iã": 89,
+          "iã": 90,
           "e": 83,
           "ɜŋ": 82,
           "ã": 78,
           "iau": 69,
+          "ui": 68,
           "ɔ": 68,
           "ua": 68,
           "eŋ": 66,
-          "ui": 65,
           "uaŋ": 58,
           "iaŋ": 55,
           "ai": 54,
@@ -109,8 +119,8 @@
           "an": 36
         },
         "tone": {
-          "⁵⁵": 1652,
-          "³³": 884,
+          "⁵⁵": 1660,
+          "³³": 888,
           "²¹": 463,
           "²⁴": 262,
           "³⁵": 258,
@@ -125,44 +135,44 @@
           "ts|ɨ|⁵⁵": 40,
           "s|ɿ|³³": 38,
           "tsʰ|u|⁵⁵": 30,
-          "tɕ|i|⁵⁵": 27,
+          "tɕ|i|⁵⁵": 28,
           "ts|i|²¹": 25,
           "s|ɿ|⁵⁵": 25,
           "s|aŋ|⁵⁵": 24,
           "ts|i|⁵⁵": 22,
           "tɕ|iŋ|⁵⁵": 22,
           "x|u|⁵⁵": 20,
+          "ʑ|i|⁵⁵": 20,
           "ts|aŋ|⁵⁵": 19,
           "ts|u|⁵⁵": 19,
-          "ʑ|i|⁵⁵": 19,
-          "ʑ|i|³³": 18,
+          "ʑ|i|³³": 19,
           "s|ɨ|²⁴": 17,
           "p|a|³³": 17,
           "s|ã|⁵⁵": 16,
+          "k|ɔŋ|⁵⁵": 15,
           "tʰ|aŋ|⁵⁵": 15,
           "x|ua|⁵⁵": 15,
           "s|ɨ|²¹": 14,
           "ts|au|⁵⁵": 14,
+          "ɕ|aŋ|⁵⁵": 14,
           "x|u|³³": 14,
           "j|ɤ|⁵⁵": 13,
           "w|u|⁵⁵": 13,
           "j|i|⁵⁵": 13,
-          "tɕ|ia|⁵⁵": 13,
-          "k|aŋ|⁵⁵": 13,
-          "k|ɔŋ|⁵⁵": 13
+          "tɕ|ia|⁵⁵": 13
         }
       },
       "south": {
         "onset": {
           "ts": 199,
-          "s": 155,
+          "s": 156,
           "j": 128,
-          "tɕ": 109,
-          "t": 106,
-          "p": 93,
+          "tɕ": 110,
+          "t": 107,
+          "p": 94,
           "k": 79,
-          "m": 78,
-          "l": 75,
+          "m": 79,
+          "l": 76,
           "x": 64,
           "tsʰ": 62,
           "ɕ": 61,
@@ -186,20 +196,20 @@
           "g": 1
         },
         "rime": {
-          "i": 320,
-          "ã": 149,
+          "i": 321,
+          "ã": 150,
           "u": 142,
           "iã": 120,
-          "ẽ": 94,
+          "ẽ": 95,
           "a": 72,
           "ĩ": 68,
           "o": 67,
-          "au": 61,
+          "au": 62,
           "õ": 58,
           "e": 46,
-          "uei": 44,
+          "uei": 45,
           "ua": 42,
-          "ʉ": 40,
+          "ʉ": 41,
           "ai": 38,
           "uã": 35,
           "iʉ": 30,
@@ -218,10 +228,10 @@
           "iõ": 5
         },
         "tone": {
-          "³³": 519,
+          "³³": 522,
           "²¹": 384,
-          "¹³": 343,
-          "⁵⁵": 291,
+          "¹³": 345,
+          "⁵⁵": 292,
           "³⁵": 77,
           "³¹": 1
         },
@@ -231,9 +241,9 @@
           "ts|i|⁵⁵": 28,
           "s|i|²¹": 26,
           "x|ua|³³": 22,
+          "tɕ|i|³³": 15,
           "s|ã|³³": 15,
           "tsʰ|u|³³": 15,
-          "tɕ|i|³³": 14,
           "tɕ|ĩ|³³": 13,
           "j|i|³³": 12,
           "w|u|⁵⁵": 12,
@@ -260,31 +270,31 @@
       }
     },
     "unlabeled": {
-      "entries": 13455,
+      "entries": 13410,
       "ids": null,
       "north": {
         "onset": {
-          "l": 2469,
-          "p": 1907,
-          "s": 1803,
-          "tʰ": 1742,
-          "kʰ": 1680,
+          "l": 2455,
+          "p": 1904,
+          "s": 1791,
+          "tʰ": 1733,
+          "kʰ": 1679,
           "tsʰ": 1574,
-          "k": 1453,
-          "ts": 1353,
-          "∅": 1346,
-          "m": 1324,
-          "pʰ": 1232,
+          "k": 1443,
+          "ts": 1348,
+          "∅": 1339,
+          "m": 1318,
+          "pʰ": 1227,
           "t": 1143,
-          "x": 977,
+          "x": 972,
           "tɕʰ": 804,
-          "ɕ": 779,
-          "tɕ": 749,
-          "n": 690,
-          "z": 682,
+          "ɕ": 776,
+          "tɕ": 744,
+          "n": 688,
+          "z": 680,
           "ȵ": 477,
-          "ʑ": 357,
-          "ɣ": 300,
+          "ʑ": 350,
+          "ɣ": 298,
           "j": 240,
           "ŋ": 169,
           "w": 155,
@@ -296,164 +306,164 @@
           "g": 1
         },
         "rime": {
-          "a": 5381,
-          "i": 3499,
-          "u": 2490,
-          "ie": 1342,
-          "ɿ": 1210,
-          "o": 1036,
+          "a": 5362,
+          "i": 3488,
+          "u": 2485,
+          "ie": 1336,
+          "ɿ": 1199,
+          "o": 1034,
           "ɤ": 668,
-          "au": 620,
-          "e": 597,
+          "au": 616,
+          "e": 596,
           "ɔ": 545,
-          "ɨ": 524,
-          "ai": 482,
-          "aŋ": 448,
-          "ɤe": 429,
-          "iɛ": 423,
-          "ɔŋ": 418,
+          "ɨ": 522,
+          "ai": 480,
+          "aŋ": 442,
+          "ɤe": 427,
+          "iɛ": 422,
+          "ɔŋ": 414,
           "ɘ": 374,
-          "ũ": 345,
+          "ũ": 344,
           "uɔ": 331,
-          "ã": 250,
-          "ə": 246,
-          "uo": 222,
-          "iau": 220,
-          "ɛ": 204,
+          "ã": 249,
+          "ə": 245,
+          "uo": 221,
+          "iau": 219,
+          "ɛ": 202,
           "uŋ": 196,
-          "iã": 196,
+          "iã": 194,
           "ɯ": 175,
           "an": 169,
           "ɯe": 156,
-          "iŋ": 132
+          "iŋ": 131
         },
         "tone": {
-          "⁵⁵": 10180,
-          "³³": 4923,
-          "²¹": 3350,
-          "²⁴": 2142,
-          "³⁵": 1306,
+          "⁵⁵": 10131,
+          "³³": 4891,
+          "²¹": 3346,
+          "²⁴": 2139,
+          "³⁵": 1303,
           "¹³": 1138,
-          "⁵³": 1054,
+          "⁵³": 1049,
           "⁵¹": 498,
           "²²": 494,
-          "³¹": 434,
+          "³¹": 432,
           "²²¹": 5,
           "⁵": 2,
           "²": 2,
           "¹⁵": 1
         },
         "combination": {
-          "l|a|⁵⁵": 394,
-          "l|i|⁵⁵": 263,
-          "tʰ|a|⁵⁵": 261,
+          "l|a|⁵⁵": 392,
+          "l|i|⁵⁵": 261,
+          "tʰ|a|⁵⁵": 260,
           "tɕʰ|i|⁵⁵": 220,
-          "p|a|⁵⁵": 214,
-          "k|a|⁵⁵": 209,
-          "∅|a|⁵⁵": 195,
+          "p|a|⁵⁵": 213,
+          "k|a|⁵⁵": 208,
+          "∅|a|⁵⁵": 191,
           "p|u|⁵⁵": 190,
           "tsʰ|ɿ|⁵⁵": 187,
-          "ts|ɿ|³³": 182,
+          "ts|ɿ|³³": 179,
           "p|a|³³": 174,
           "kʰ|a|⁵⁵": 167,
           "kʰ|u|⁵⁵": 165,
           "k|a|³³": 157,
           "tʰ|i|⁵⁵": 147,
           "kʰ|a|²¹": 140,
-          "s|ɿ|⁵⁵": 135,
           "ts|ɿ|⁵⁵": 135,
           "m|a|⁵⁵": 134,
+          "s|ɿ|⁵⁵": 132,
           "m|i|⁵⁵": 129,
-          "s|ɿ|³³": 120,
+          "s|ɿ|³³": 118,
           "∅|a|³³": 116,
           "∅|a|²¹": 113,
-          "pʰ|a|⁵⁵": 106,
           "t|a|⁵⁵": 103,
+          "pʰ|a|⁵⁵": 103,
           "ɕ|i|⁵⁵": 103,
           "x|a|⁵⁵": 102,
           "t|i|⁵⁵": 96,
           "k|a|²¹": 92,
-          "s|ɨ|⁵⁵": 87
+          "ɕ|i|³³": 87
         }
       },
       "south": {
         "onset": {
-          "s": 451,
-          "l": 426,
-          "∅": 403,
-          "b": 387,
-          "m": 359,
-          "n": 318,
-          "t": 318,
+          "s": 448,
+          "l": 420,
+          "∅": 395,
+          "b": 385,
+          "m": 355,
+          "n": 317,
+          "t": 317,
           "k": 312,
-          "d": 263,
-          "tsʰ": 261,
-          "tɕ": 212,
-          "ts": 208,
+          "d": 262,
+          "tsʰ": 260,
+          "tɕ": 211,
+          "ts": 198,
           "kʰ": 196,
-          "z": 184,
-          "p": 183,
+          "z": 183,
+          "p": 181,
           "j": 175,
           "ɕ": 166,
-          "dz": 160,
-          "x": 154,
+          "dz": 159,
+          "x": 151,
           "dʑ": 144,
           "pʰ": 137,
-          "tʰ": 119,
-          "ŋ": 115,
+          "tʰ": 118,
+          "ŋ": 114,
           "ʔ": 109,
-          "tɕʰ": 109,
-          "ɣ": 75,
+          "tɕʰ": 108,
+          "ɣ": 74,
           "w": 60,
           "f": 59,
           "ɡ": 57,
           "h̄": 41
         },
         "rime": {
-          "a": 1017,
-          "i": 967,
-          "o": 761,
-          "e": 654,
-          "u": 536,
-          "ɨ": 266,
-          "ʉ": 244,
-          "ie": 189,
-          "ã": 168,
-          "ẽ": 152,
+          "a": 1008,
+          "i": 952,
+          "o": 759,
+          "e": 651,
+          "u": 533,
+          "ɨ": 265,
+          "ʉ": 243,
+          "ie": 188,
+          "ã": 165,
+          "ẽ": 151,
           "iã": 136,
-          "au": 125,
           "õ": 120,
+          "au": 120,
           "ai": 113,
           "u̵": 98,
           "ia": 75,
           "ɨe": 64,
           "ĩ": 56,
           "iʉ": 42,
-          "uei": 41,
-          "ua": 39,
-          "iau": 37,
+          "uei": 39,
+          "ua": 38,
+          "iau": 36,
           "io": 29,
           "uã": 26,
           "y": 25,
           "ei": 23,
-          "aɨ": 22,
           "yã": 22,
+          "aɨ": 21,
           "iõ": 20,
           "ɯe": 19
         },
         "tone": {
-          "²¹": 1781,
-          "³³": 1372,
-          "⁵⁵": 1181,
-          "¹³": 1009,
-          "³⁵": 852,
+          "²¹": 1767,
+          "³³": 1361,
+          "⁵⁵": 1171,
+          "¹³": 997,
+          "³⁵": 850,
           "²²¹": 1,
           "³¹": 1
         },
         "combination": {
-          "∅|a|²¹": 129,
-          "∅|a|³³": 91,
-          "∅|a|¹³": 88,
+          "∅|a|²¹": 128,
+          "∅|a|³³": 86,
+          "∅|a|¹³": 86,
           "tsʰ|e|³⁵": 55,
           "ʔ|a|²¹": 54,
           "b|u|²¹": 51,
@@ -464,9 +474,8 @@
           "kʰ|o|³⁵": 36,
           "l|o|²¹": 34,
           "k|a|²¹": 34,
-          "ts|i|²¹": 34,
-          "z|i|¹³": 34,
           "s|i|¹³": 34,
+          "z|i|¹³": 33,
           "tɕ|i|⁵⁵": 33,
           "s|o|²¹": 32,
           "l|a|²¹": 32,
@@ -474,13 +483,14 @@
           "b|o|⁵⁵": 31,
           "tɕʰ|i|³³": 31,
           "t|a|²¹": 31,
-          "ŋ|ɨ|²¹": 30,
+          "ŋ|ɨ|²¹": 29,
+          "ts|i|²¹": 28,
           "tsʰ|a|³³": 28,
           "m|u|³³": 28,
-          "ts|i|⁵⁵": 28,
           "n|ia|³³": 27,
           "ʔ|a|³³": 26,
-          "n|õ|²¹": 26
+          "n|õ|²¹": 26,
+          "b|u|¹³": 26
         }
       }
     },
@@ -543,8 +553,8 @@
   },
   "phonotacticEnrichment": {
     "north": {
-      "reviewedSyllables": 3799,
-      "unlabeledSyllables": 25529,
+      "reviewedSyllables": 3811,
+      "unlabeledSyllables": 25431,
       "minimumReviewedCount": 8,
       "smoothing": 0.5,
       "combinations": [
@@ -552,351 +562,351 @@
           "combination": "z|ɜŋ|²¹",
           "reviewedCount": 11,
           "unlabeledCount": 0,
-          "frequencyRatio": 115.786
+          "frequencyRatio": 115.128
         },
         {
           "combination": "ts|ɜŋ|²⁴",
           "reviewedCount": 9,
           "unlabeledCount": 0,
-          "frequencyRatio": 95.649
+          "frequencyRatio": 95.106
         },
         {
           "combination": "tsʰ|un|⁵⁵",
           "reviewedCount": 8,
           "unlabeledCount": 0,
-          "frequencyRatio": 85.581
+          "frequencyRatio": 85.094
         },
         {
           "combination": "ts|aŋ|⁵⁵",
           "reviewedCount": 19,
-          "unlabeledCount": 2,
-          "frequencyRatio": 39.266
+          "unlabeledCount": 1,
+          "frequencyRatio": 65.072
         },
         {
           "combination": "z|eŋ|⁵⁵",
           "reviewedCount": 11,
           "unlabeledCount": 1,
-          "frequencyRatio": 38.595
+          "frequencyRatio": 38.376
+        },
+        {
+          "combination": "ʑ|u|⁵⁵",
+          "reviewedCount": 10,
+          "unlabeledCount": 2,
+          "frequencyRatio": 21.023
         },
         {
           "combination": "k|ua|³³",
           "reviewedCount": 9,
           "unlabeledCount": 2,
-          "frequencyRatio": 19.13
+          "frequencyRatio": 19.021
         },
         {
           "combination": "p|iŋ|⁵⁵",
           "reviewedCount": 8,
           "unlabeledCount": 2,
-          "frequencyRatio": 17.116
+          "frequencyRatio": 17.019
         },
         {
           "combination": "tɕ|iɛn|⁵⁵",
           "reviewedCount": 11,
           "unlabeledCount": 3,
-          "frequencyRatio": 16.541
+          "frequencyRatio": 16.447
         },
         {
           "combination": "ts|ɔŋ|⁵⁵",
           "reviewedCount": 12,
           "unlabeledCount": 4,
-          "frequencyRatio": 13.984
+          "frequencyRatio": 13.904
         },
         {
           "combination": "f|a|⁵⁵",
           "reviewedCount": 9,
           "unlabeledCount": 3,
-          "frequencyRatio": 13.664
+          "frequencyRatio": 13.587
+        },
+        {
+          "combination": "s|ɜŋ|⁵⁵",
+          "reviewedCount": 9,
+          "unlabeledCount": 3,
+          "frequencyRatio": 13.587
         },
         {
           "combination": "ȵ|iɛn|²¹",
           "reviewedCount": 9,
           "unlabeledCount": 3,
-          "frequencyRatio": 13.664
+          "frequencyRatio": 13.587
         },
         {
-          "combination": "ʑ|u|⁵⁵",
-          "reviewedCount": 9,
-          "unlabeledCount": 3,
-          "frequencyRatio": 13.664
+          "combination": "ɕ|aŋ|⁵⁵",
+          "reviewedCount": 14,
+          "unlabeledCount": 5,
+          "frequencyRatio": 13.196
         },
         {
           "combination": "s|aŋ|⁵⁵",
           "reviewedCount": 24,
           "unlabeledCount": 9,
-          "frequencyRatio": 12.983
+          "frequencyRatio": 12.909
+        },
+        {
+          "combination": "s|aŋ|³³",
+          "reviewedCount": 8,
+          "unlabeledCount": 3,
+          "frequencyRatio": 12.156
         },
         {
           "combination": "tɕʰ|iŋ|³³",
           "reviewedCount": 10,
           "unlabeledCount": 4,
-          "frequencyRatio": 11.746
-        },
-        {
-          "combination": "s|ɜŋ|⁵⁵",
-          "reviewedCount": 9,
-          "unlabeledCount": 4,
-          "frequencyRatio": 10.628
+          "frequencyRatio": 11.68
         },
         {
           "combination": "w|u|⁵⁵",
           "reviewedCount": 13,
           "unlabeledCount": 6,
-          "frequencyRatio": 10.456
-        },
-        {
-          "combination": "ɕ|aŋ|⁵⁵",
-          "reviewedCount": 13,
-          "unlabeledCount": 6,
-          "frequencyRatio": 10.456
+          "frequencyRatio": 10.396
         },
         {
           "combination": "ɕ|iɛn|⁵⁵",
           "reviewedCount": 12,
           "unlabeledCount": 6,
-          "frequencyRatio": 9.681
+          "frequencyRatio": 9.626
         },
         {
           "combination": "tsʰ|aŋ|⁵⁵",
           "reviewedCount": 8,
           "unlabeledCount": 4,
-          "frequencyRatio": 9.509
-        },
-        {
-          "combination": "s|aŋ|³³",
-          "reviewedCount": 8,
-          "unlabeledCount": 4,
-          "frequencyRatio": 9.509
+          "frequencyRatio": 9.455
         },
         {
           "combination": "j|i|⁵⁵",
           "reviewedCount": 13,
           "unlabeledCount": 7,
-          "frequencyRatio": 9.061
+          "frequencyRatio": 9.01
         },
         {
           "combination": "x|ua|³³",
           "reviewedCount": 11,
           "unlabeledCount": 6,
-          "frequencyRatio": 8.907
+          "frequencyRatio": 8.856
         },
         {
           "combination": "s|ã|⁵⁵",
           "reviewedCount": 16,
           "unlabeledCount": 9,
-          "frequencyRatio": 8.744
+          "frequencyRatio": 8.694
         },
         {
           "combination": "ts|ɜŋ|⁵⁵",
           "reviewedCount": 9,
           "unlabeledCount": 5,
-          "frequencyRatio": 8.695
+          "frequencyRatio": 8.646
+        },
+        {
+          "combination": "k|ɔŋ|⁵⁵",
+          "reviewedCount": 15,
+          "unlabeledCount": 9,
+          "frequencyRatio": 8.167
         },
         {
           "combination": "tʰ|aŋ|⁵⁵",
           "reviewedCount": 15,
           "unlabeledCount": 9,
-          "frequencyRatio": 8.214
+          "frequencyRatio": 8.167
+        },
+        {
+          "combination": "tɕ|iã|⁵⁵",
+          "reviewedCount": 10,
+          "unlabeledCount": 6,
+          "frequencyRatio": 8.086
+        },
+        {
+          "combination": "tɕ|iŋ|⁵⁵",
+          "reviewedCount": 22,
+          "unlabeledCount": 16,
+          "frequencyRatio": 6.826
         },
         {
           "combination": "j|ie|⁵⁵",
           "reviewedCount": 11,
           "unlabeledCount": 8,
-          "frequencyRatio": 6.811
-        },
-        {
-          "combination": "tɕ|iŋ|⁵⁵",
-          "reviewedCount": 22,
-          "unlabeledCount": 17,
-          "frequencyRatio": 6.472
-        },
-        {
-          "combination": "tɕ|iã|⁵⁵",
-          "reviewedCount": 9,
-          "unlabeledCount": 7,
-          "frequencyRatio": 6.377
+          "frequencyRatio": 6.772
         },
         {
           "combination": "ts|ɨ|⁵⁵",
           "reviewedCount": 40,
           "unlabeledCount": 32,
-          "frequencyRatio": 6.273
-        },
-        {
-          "combination": "j|ɤ|⁵⁵",
-          "reviewedCount": 13,
-          "unlabeledCount": 11,
-          "frequencyRatio": 5.91
+          "frequencyRatio": 6.238
         }
       ]
     },
     "south": {
-      "reviewedSyllables": 1615,
-      "unlabeledSyllables": 6197,
+      "reviewedSyllables": 1621,
+      "unlabeledSyllables": 6148,
       "minimumReviewedCount": 8,
       "smoothing": 0.5,
       "combinations": [
         {
+          "combination": "x|ua|³³",
+          "reviewedCount": 22,
+          "unlabeledCount": 3,
+          "frequencyRatio": 18.703
+        },
+        {
           "combination": "ts|ẽ|¹³",
           "reviewedCount": 9,
           "unlabeledCount": 1,
-          "frequencyRatio": 18.601
+          "frequencyRatio": 18.426
         },
         {
           "combination": "j|ĩ|³³",
           "reviewedCount": 8,
           "unlabeledCount": 1,
-          "frequencyRatio": 16.643
-        },
-        {
-          "combination": "x|ua|³³",
-          "reviewedCount": 22,
-          "unlabeledCount": 4,
-          "frequencyRatio": 14.685
+          "frequencyRatio": 16.486
         },
         {
           "combination": "s|ã|³³",
           "reviewedCount": 15,
           "unlabeledCount": 4,
-          "frequencyRatio": 10.116
+          "frequencyRatio": 10.021
         },
         {
           "combination": "s|uei|⁵⁵",
           "reviewedCount": 12,
           "unlabeledCount": 4,
-          "frequencyRatio": 8.158
+          "frequencyRatio": 8.081
+        },
+        {
+          "combination": "p|i|²¹",
+          "reviewedCount": 9,
+          "unlabeledCount": 3,
+          "frequencyRatio": 7.897
         },
         {
           "combination": "f|ẽ|⁵⁵",
           "reviewedCount": 10,
           "unlabeledCount": 4,
-          "frequencyRatio": 6.853
-        },
-        {
-          "combination": "p|i|²¹",
-          "reviewedCount": 9,
-          "unlabeledCount": 4,
-          "frequencyRatio": 6.2
+          "frequencyRatio": 6.788
         },
         {
           "combination": "tsʰ|u|³³",
           "reviewedCount": 15,
           "unlabeledCount": 7,
-          "frequencyRatio": 6.07
+          "frequencyRatio": 6.013
         },
         {
           "combination": "x|o|⁵⁵",
           "reviewedCount": 8,
           "unlabeledCount": 4,
-          "frequencyRatio": 5.548
+          "frequencyRatio": 5.495
+        },
+        {
+          "combination": "tɕ|i|³³",
+          "reviewedCount": 15,
+          "unlabeledCount": 8,
+          "frequencyRatio": 5.305
         },
         {
           "combination": "k|õ|³³",
           "reviewedCount": 9,
           "unlabeledCount": 5,
-          "frequencyRatio": 5.073
+          "frequencyRatio": 5.025
+        },
+        {
+          "combination": "ts|i|²¹",
+          "reviewedCount": 47,
+          "unlabeledCount": 28,
+          "frequencyRatio": 4.849
         },
         {
           "combination": "j|i|²¹",
           "reviewedCount": 10,
           "unlabeledCount": 6,
-          "frequencyRatio": 4.744
-        },
-        {
-          "combination": "tɕ|i|³³",
-          "reviewedCount": 14,
-          "unlabeledCount": 9,
-          "frequencyRatio": 4.483
+          "frequencyRatio": 4.7
         },
         {
           "combination": "ts|i|³³",
           "reviewedCount": 32,
           "unlabeledCount": 22,
-          "frequencyRatio": 4.242
+          "frequencyRatio": 4.202
         },
         {
           "combination": "tɕ|ĩ|³³",
           "reviewedCount": 13,
           "unlabeledCount": 9,
-          "frequencyRatio": 4.174
-        },
-        {
-          "combination": "ts|i|²¹",
-          "reviewedCount": 47,
-          "unlabeledCount": 34,
-          "frequencyRatio": 4.044
+          "frequencyRatio": 4.134
         },
         {
           "combination": "j|ye|²¹",
           "reviewedCount": 11,
           "unlabeledCount": 8,
-          "frequencyRatio": 3.974
+          "frequencyRatio": 3.936
         },
         {
           "combination": "t|ẽ|³³",
           "reviewedCount": 9,
           "unlabeledCount": 7,
-          "frequencyRatio": 3.72
+          "frequencyRatio": 3.685
         },
         {
           "combination": "w|u|⁵⁵",
           "reviewedCount": 12,
           "unlabeledCount": 10,
-          "frequencyRatio": 3.496
+          "frequencyRatio": 3.463
         },
         {
           "combination": "ts|i|⁵⁵",
           "reviewedCount": 28,
-          "unlabeledCount": 28,
-          "frequencyRatio": 2.937
+          "unlabeledCount": 26,
+          "frequencyRatio": 3.129
         },
         {
           "combination": "ɕ|iã|³³",
           "reviewedCount": 12,
           "unlabeledCount": 12,
-          "frequencyRatio": 2.937
+          "frequencyRatio": 2.909
+        },
+        {
+          "combination": "l|u|²¹",
+          "reviewedCount": 8,
+          "unlabeledCount": 10,
+          "frequencyRatio": 2.355
         },
         {
           "combination": "p|a|²¹",
           "reviewedCount": 11,
           "unlabeledCount": 14,
-          "frequencyRatio": 2.329
-        },
-        {
-          "combination": "l|u|²¹",
-          "reviewedCount": 8,
-          "unlabeledCount": 12,
-          "frequencyRatio": 1.997
+          "frequencyRatio": 2.307
         },
         {
           "combination": "tsʰ|e|³³",
           "reviewedCount": 9,
           "unlabeledCount": 14,
-          "frequencyRatio": 1.924
+          "frequencyRatio": 1.906
         },
         {
           "combination": "s|ẽ|³³",
           "reviewedCount": 10,
           "unlabeledCount": 16,
-          "frequencyRatio": 1.869
+          "frequencyRatio": 1.851
         },
         {
           "combination": "j|i|³³",
           "reviewedCount": 12,
           "unlabeledCount": 22,
-          "frequencyRatio": 1.632
+          "frequencyRatio": 1.616
         },
         {
           "combination": "s|i|²¹",
           "reviewedCount": 26,
           "unlabeledCount": 50,
-          "frequencyRatio": 1.541
+          "frequencyRatio": 1.527
         },
         {
           "combination": "s|i|³³",
           "reviewedCount": 11,
           "unlabeledCount": 44,
-          "frequencyRatio": 0.759
+          "frequencyRatio": 0.752
         }
       ]
     }

@@ -1,0 +1,841 @@
+{
+  "baseCommit": "c343a61445746d292ab171321284052e1a71be50",
+  "scope": "Resolution of the 24-row triage table and three directly related source forms.",
+  "phonology": "Compare Chinese rounded-vowel adaptation in the relevant Northern forms, and nasal-coda/nasal-vowel correspondences. These comparisons do not rewrite the source IPA. The Southern 麻烦 record ma¹³xua³³ has no nasalization mark in its original record.",
+  "limits": [
+    "Specific donor varieties and borrowing dates remain unspecified where not established.",
+    "Only the reviewed borrowed syllables are covered in compounds.",
+    "The distinct original registered senses, including 弓 and 箭, remain unchanged."
+  ],
+  "decisions": [
+    {
+      "action": "add-loan-note",
+      "zh": "草原",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60824-v-1271"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1271",
+        "wordIds": [
+          "yubao-60823-v-1271"
+        ],
+        "kind": "借词来源",
+        "donor": "草原",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「草原」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰau⁵⁵ʑiã³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 草原; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "麻烦",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60756-v-2904"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2904",
+        "wordIds": [
+          "yubao-60824-v-2904"
+        ],
+        "kind": "借词来源",
+        "donor": "麻烦",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「麻烦」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ma¹³xua³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 麻烦; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "围腰帕",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60756-v-0380"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1993",
+        "wordIds": [
+          "yubao-60756-v-1993"
+        ],
+        "kind": "借词来源",
+        "donor": "围裙",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "text": "可能借自西南官话「围裙」。",
+        "reviewedForms": [
+          {
+            "ipa": "ui³³tɕʰiŋ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 围裙."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "捞箕",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60823-v-2445"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1842",
+        "wordIds": [
+          "yubao-60823-v-1842"
+        ],
+        "kind": "借词来源",
+        "donor": "撮箕",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "text": "可能借自西南官话「撮箕」。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰo³³tɕi⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 撮箕."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "豆苗",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60823-v-1517"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1519",
+        "wordIds": [
+          "yubao-60823-v-1519"
+        ],
+        "kind": "借词来源",
+        "donor": "豆芽菜",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "text": "可能借自西南官话「豆芽菜」。",
+        "reviewedForms": [
+          {
+            "ipa": "tɤu³³ŋa⁵⁵tsʰai³³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin 豆芽菜."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "团员",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "w2336"
+      ],
+      "note": {
+        "id": "chinese-loan-w2335",
+        "wordIds": [
+          "w2335"
+        ],
+        "kind": "借词来源",
+        "donor": "团员",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「团员」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰuɛn²¹jɛn²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 团员; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "马铃薯",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60824-v-0217"
+      ],
+      "note": {
+        "id": "chinese-loan-w2535",
+        "wordIds": [
+          "w2535"
+        ],
+        "kind": "借词来源",
+        "donor": "洋芋",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「洋芋」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "jɛn²¹ji⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 洋芋 “potato”; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "马铃薯; 土豆",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60824-v-0217"
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-189948",
+        "wordIds": [
+          "stedt-rn-189948"
+        ],
+        "kind": "借词来源",
+        "donor": "洋芋",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「洋芋」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "jian²¹jiu⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 洋芋 “potato”; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "马铃薯",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60824-v-0217"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0217",
+        "wordIds": [
+          "yubao-60756-v-0217"
+        ],
+        "kind": "借词来源",
+        "donor": "洋芋",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「洋芋」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑaŋ³³ʑi³⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 洋芋 “potato”; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "马铃薯",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60824-v-0217"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0217",
+        "wordIds": [
+          "yubao-60823-v-0217"
+        ],
+        "kind": "借词来源",
+        "donor": "洋芋",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「洋芋」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑiã³¹ʑi⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 洋芋 “potato”; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "箭绳",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60823-v-1870",
+        "yubao-60823-v-1868"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1872",
+        "wordIds": [
+          "yubao-60823-v-1872"
+        ],
+        "kind": "借词来源",
+        "donor": "箭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「箭」部分（第 1 音节）可能借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiã¹³kã⁵⁵ɣɤ¹³la⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "The 箭 component (syllable 1) may be borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "弓箭",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "stedt-rn-289749"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1868",
+        "wordIds": [
+          "yubao-60824-v-1868"
+        ],
+        "kind": "借词来源",
+        "donor": "箭",
+        "donorVariety": "西南官话或湘语",
+        "scope": "whole",
+        "text": "可能借自西南官话或湘语「箭」。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiã¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 箭."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "弓",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "stedt-rn-289749"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1869",
+        "wordIds": [
+          "yubao-60824-v-1869"
+        ],
+        "kind": "借词来源",
+        "donor": "箭",
+        "donorVariety": "西南官话或湘语",
+        "scope": "whole",
+        "text": "可能借自西南官话或湘语「箭」。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiã¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 箭."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "弓箭",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60823-v-1870"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1868",
+        "wordIds": [
+          "yubao-60823-v-1868"
+        ],
+        "kind": "借词来源",
+        "donor": "箭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「箭」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiã¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 箭; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "弓",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60823-v-1870"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1869",
+        "wordIds": [
+          "yubao-60823-v-1869"
+        ],
+        "kind": "借词来源",
+        "donor": "箭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「箭」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiã¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 箭; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蛇胆",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60824-v-2096"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1601",
+        "wordIds": [
+          "yubao-60824-v-1601"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「苦胆」部分（第 3—4 音节）可能借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɨ³³pʰe³⁵kʰu⁵⁵tã³³",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "The 苦胆 component (syllables 3–4) may be borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蛇胆",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60823-v-2096"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1601",
+        "wordIds": [
+          "yubao-60823-v-1601"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「苦胆」部分（第 2—3 音节）可能借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɣo⁵⁵kʰu⁵³tã³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "The 苦胆 component (syllables 2–3) may be borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "果干",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1430",
+        "wordIds": [
+          "yubao-60756-v-1430"
+        ],
+        "kind": "借词来源",
+        "donor": "果子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「果子」部分（第 1—2 音节）可能借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɔ³³tsɿ³³a⁵³ka³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "The 果子 component (syllables 1–2) may be borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蛇胆酒",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60824-v-1601"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2062",
+        "wordIds": [
+          "yubao-60824-v-2062"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「苦胆」部分（第 3—4 音节）可能借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "dɨ¹³pʰe³⁵kʰu⁵⁵tã³³ze²¹",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "The 苦胆 component (syllables 3–4) may be borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "草原",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60823-v-1271",
+        "yubao-60824-v-1271"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1271",
+        "wordIds": [
+          "yubao-60756-v-1271"
+        ],
+        "kind": "借词来源",
+        "donor": "草原",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「草原」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰau⁵⁵ʑaŋ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 草原; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "麻烦",
+      "basis": "Reviewed lexical analysis allowing loan adaptation; source IPA, tone and registered sense retained. Comparison IDs refer to dictionary records, not additional donor-language recordings.",
+      "comparisonIds": [
+        "yubao-60824-v-2904"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2904",
+        "wordIds": [
+          "yubao-60756-v-2904"
+        ],
+        "kind": "借词来源",
+        "donor": "麻烦",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「麻烦」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ma³³xuaŋ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "adaptation-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 麻烦; the specific donor variety remains to be established."
+    }
+  ],
+  "excluded": [
+    {
+      "id": "w2042",
+      "zh": "国民党",
+      "aliases": [
+        "w2042",
+        "w5091",
+        "stedt-rn-457666",
+        "w7030"
+      ],
+      "ipa": [
+        "sɜŋ⁵⁵tɕiŋ⁵⁵"
+      ],
+      "family": "explicit-no-loan"
+    },
+    {
+      "id": "w2121",
+      "zh": "虮子",
+      "aliases": [
+        "w2121",
+        "yubao-60757-v-1611",
+        "w5134",
+        "stedt-rn-457752",
+        "stedt-rn-453606",
+        "w7987"
+      ],
+      "ipa": [
+        "sɨ⁵⁵sɨ⁵⁵a⁵⁵liɛ⁵⁵",
+        "sɿ⁵⁵sɿ⁵⁵a⁵⁵lie⁵⁵"
+      ],
+      "family": "虮子"
+    },
+    {
+      "id": "stedt-rn-363299",
+      "zh": "虮子",
+      "aliases": [
+        "stedt-rn-363299",
+        "stedt-rn-188316"
+      ],
+      "ipa": [
+        "lie³⁵ka⁵⁵li⁵⁵"
+      ],
+      "family": "虮子"
+    },
+    {
+      "id": "stedt-rn-289535",
+      "zh": "虮子",
+      "aliases": [
+        "stedt-rn-289535"
+      ],
+      "ipa": [
+        "maɨ²¹pi²¹"
+      ],
+      "family": "虮子"
+    },
+    {
+      "id": "stedt-rn-288594",
+      "zh": "虮子",
+      "aliases": [
+        "stedt-rn-288594"
+      ],
+      "ipa": [
+        "tʰu³⁵lũ⁵⁵pʰɨe²¹"
+      ],
+      "family": "虮子"
+    },
+    {
+      "id": "yubao-60757-v-1592",
+      "zh": "野兔",
+      "aliases": [
+        "yubao-60757-v-1592"
+      ],
+      "ipa": [
+        "si²¹lai²⁴ mo²¹tʰuo³³li⁵⁵"
+      ],
+      "family": "野兔"
+    },
+    {
+      "id": "yubao-60757-v-2625",
+      "zh": "做鬼脸",
+      "aliases": [
+        "yubao-60757-v-2625"
+      ],
+      "ipa": [
+        "a⁵⁵ie²¹ku²⁴tʰa²⁴zɿ⁵⁵"
+      ],
+      "family": "做鬼脸"
+    },
+    {
+      "id": "yubao-60756-v-1592",
+      "zh": "野兔",
+      "aliases": [
+        "yubao-60756-v-1592"
+      ],
+      "ipa": [
+        "ʑe⁵⁵mau⁵⁵tʰɛ⁵⁵"
+      ],
+      "family": "野兔"
+    },
+    {
+      "id": "yubao-60756-v-1611",
+      "zh": "虮子",
+      "aliases": [
+        "yubao-60756-v-1611"
+      ],
+      "ipa": [
+        "sɿ⁵³sɿ³³a⁵³lie³³"
+      ],
+      "family": "虮子"
+    },
+    {
+      "id": "yubao-60756-v-2625",
+      "zh": "做鬼脸",
+      "aliases": [
+        "yubao-60756-v-2625"
+      ],
+      "ipa": [
+        "kuɛ³³ʑaŋ³³tsɿ³³zɿ⁵³"
+      ],
+      "family": "做鬼脸"
+    },
+    {
+      "id": "yubao-60756-v-2900",
+      "zh": "节俭",
+      "aliases": [
+        "yubao-60756-v-2900"
+      ],
+      "ipa": [
+        "tsaŋ⁵⁵"
+      ],
+      "family": "explicit-no-loan"
+    },
+    {
+      "id": "yubao-60823-v-1592",
+      "zh": "野兔",
+      "aliases": [
+        "yubao-60823-v-1592"
+      ],
+      "ipa": [
+        "mau³¹tʰai⁵⁵"
+      ],
+      "family": "野兔"
+    },
+    {
+      "id": "yubao-60823-v-1611",
+      "zh": "虮子",
+      "aliases": [
+        "yubao-60823-v-1611"
+      ],
+      "ipa": [
+        "sɿ⁵⁵sɿ³³a⁵³lie³³"
+      ],
+      "family": "虮子"
+    },
+    {
+      "id": "yubao-60823-v-2625",
+      "zh": "做鬼脸",
+      "aliases": [
+        "yubao-60823-v-2625"
+      ],
+      "ipa": [
+        "pa⁵⁵ɕĩ³³nã³³"
+      ],
+      "family": "做鬼脸"
+    },
+    {
+      "id": "yubao-60824-v-1592",
+      "zh": "野兔",
+      "aliases": [
+        "yubao-60824-v-1592"
+      ],
+      "ipa": [
+        "mau¹³tʰu¹³tsi⁵⁵"
+      ],
+      "family": "野兔"
+    },
+    {
+      "id": "yubao-60824-v-1611",
+      "zh": "虮子",
+      "aliases": [
+        "yubao-60824-v-1611"
+      ],
+      "ipa": [
+        "a¹³si⁵⁵a¹³lie⁵⁵"
+      ],
+      "family": "虮子"
+    },
+    {
+      "id": "yubao-60824-v-2625",
+      "zh": "做鬼脸",
+      "aliases": [
+        "yubao-60824-v-2625"
+      ],
+      "ipa": [
+        "a³³dze³⁵a³³tsi²¹zi¹³"
+      ],
+      "family": "做鬼脸"
+    }
+  ]
+}

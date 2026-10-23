@@ -2,6 +2,9 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const base=process.env.BASE_URL;if(!base)throw Error('Set BASE_URL to a prepared site.');
 const review=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-phonotactic-review-2026-10-23.json')));
+const adaptation=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-adaptation-review-2026-10-23.json')));
+review.decisions.push(...adaptation.decisions);
+const guards=['stedt-rn-353352','yubao-60756-v-2277','yubao-60757-v-2277','yubao-60823-v-2277','w1449','yubao-60756-v-0691',...adaptation.excluded.map(w=>w.id)];
 (async()=>{
  const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_EXECUTABLE,args:['--no-sandbox']});
  try{for(const width of [390,1440]){
@@ -25,12 +28,12 @@ const review=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-phonot
     assert.equal(filterResult,note.scope!=='whole',id+' whole-loan filter');
     await page.locator('#close').click();
    }
-   for(const id of ['stedt-rn-353352','yubao-60756-v-2277','yubao-60757-v-2277','yubao-60823-v-2277','w1449','yubao-60756-v-0691']){
+   for(const id of guards){
     await page.evaluate(id=>openPreparedDetail(id),id);await page.waitForSelector('dialog[open] #detail-body h1');
     assert.equal(await page.locator('#detail-body .word-metadata .loan-badge').count(),0,id+' excluded or rope');
     await page.locator('#close').click();
    }
   }
-  assert.deepEqual(errors,[]);await context.close();console.log('PASS '+width+'px: '+review.decisions.length+' notes, two languages, spelling modes, provenance, filters and six unmarked guards');
+  assert.deepEqual(errors,[]);await context.close();console.log('PASS '+width+'px: '+review.decisions.length+' notes, two languages, spelling modes, provenance, filters and '+guards.length+' unmarked guards');
  }}finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1});
