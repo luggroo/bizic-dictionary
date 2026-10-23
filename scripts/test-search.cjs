@@ -80,3 +80,5 @@ assert.equal((buttons.match(/<svg /g)||[]).length,3);
 assert(!buttons.includes('aria-pressed'));
 assert(buttons.includes('只逻土话')&&buttons.includes('只逻客话')&&buttons.includes('只逻英语'));
 console.log('PASS: three independent submit actions search current input, with icons and no selection state');
+
+assert.equal(score({forms:['óngqìsě'],en:"snivel (The source word 'snivel' is ambiguous; here the gloss is 鼻涕 ('nasal mucus; snot').)"},'here','en'),0);

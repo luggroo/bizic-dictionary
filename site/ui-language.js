@@ -28,7 +28,7 @@
     }
   }
   const labels = Object.freeze({
-    brand: 'bifzixkar afhxix', home: 'ger laix xief', words: 'cixcix nix', grammar: 'sar qifmox lir',
+    brand: 'bifzixsar afhxix', home: 'ger laix xief', words: 'cixcix nix', grammar: 'sar qifmox lir',
     notation: 'sar qifmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
     // Search action wording approved for this interface; not a source quotation.
     searchEn: 'yinxyiv niv-xivsour', searchZh: 'pavsar niv-xivsour', searchTujia: 'bifsar niv-xivsour',

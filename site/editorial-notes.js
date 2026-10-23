@@ -49439,6 +49439,7 @@ function loanIPAForms(value){
  return normalizeIPA(value).split(/[~～/／;；]/u).map(s=>s.replace(/[\s|｜◦]/gu,'').normalize('NFC')).filter(Boolean);
 }
 function modernChineseLoanInfo(w){
+ if(w._loan)return w._loan;
  if(modernChineseLoanCache.has(w))return modernChineseLoanCache.get(w);
  const notes=editorialNotesFor(w).filter(n=>n.id?.startsWith('chinese-loan-'));
  let scope='';
