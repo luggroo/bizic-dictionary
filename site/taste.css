@@ -66,3 +66,22 @@ dialog{background:white;border:1px solid var(--line);border-radius:9px;max-width
 @media(max-width:600px){.word-class-label{flex-basis:100%}.word-card-content{align-items:start}.word-card-heading{align-self:center}}
 
 @media(max-width:900px){aside>nav .bilingual-label>.ui-secondary{white-space:normal;overflow-wrap:anywhere;min-width:0}}
+
+/* Links remain recognizable within continuous reading text. */
+main a:not(.metric),#detail-body a,.site-footer a{color:#195d8c;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em}
+main a:not(.metric):hover,#detail-body a:hover,.site-footer a:hover{color:#103e65;text-decoration-thickness:2px;background:#edf5fa}
+main a:not(.metric):visited,#detail-body a:visited,.site-footer a:visited{color:#604e86}
+.metrics{flex-wrap:wrap;gap:8px 24px}.metrics a.metric{min-height:44px;padding:5px 0!important;text-decoration:none;color:#195d8c;gap:7px}.metrics a.metric b,.metrics a.metric span{color:inherit}.metrics a.metric::after{content:'→';font-size:13px}.metrics a.metric:hover{color:#103e65;text-decoration:underline;text-underline-offset:5px}
+.grammar-reading .grammar-page-parent{font-size:13px;color:var(--muted);margin:0 0 8px;line-height:1.6}
+.grammar-reading h1.grammar-reading-title{font-size:30px;line-height:1.4;font-weight:650;letter-spacing:0;margin:0 0 28px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.grammar-reading .reviewed-grammar h2{font-size:19px;line-height:1.55;font-weight:600;margin:30px 0 12px;color:#35483b}
+.grammar-page-anchor{display:block;scroll-margin-top:5rem}.grammar-toc-sections{display:grid;gap:3px;margin:3px 0 15px 10px;padding-left:9px;border-left:1px solid var(--line)}
+.grammar-toc-sections a{display:block;font-size:13px;line-height:1.6;padding:7px 8px;border-radius:4px}.grammar-toc-sections a[aria-current="page"]{background:#eaf0e5;font-weight:600;color:#234d3d}
+.grammar-reading .grammar-page-position{font-size:13px;color:var(--muted);margin:36px 0 10px;text-align:right}
+.grammar-reading .grammar-page-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;padding-top:14px;border-top:1px solid var(--line)}
+.grammar-reading .grammar-page-navigation a{display:flex;flex-direction:column;justify-content:center;gap:8px;min-width:0;min-height:100px;padding:16px 18px;border:1px solid #b9cbd7;border-radius:6px;text-decoration:none;color:#195d8c;background:#f5f9fc}
+.grammar-reading .grammar-page-navigation a:hover{background:#e8f2f8;border-color:#5385a5}.grammar-page-direction{font-size:19px;font-weight:650;line-height:1.4}.grammar-page-target{font-size:14px;line-height:1.6;overflow-wrap:anywhere}.grammar-page-next{text-align:right}
+.grammar-page-results{display:grid;gap:12px}.grammar-page-results a{padding:12px 0;border-bottom:1px solid var(--line)}
+@media(max-width:600px){.metrics{gap:4px 16px}.metrics a.metric{gap:5px}.metrics a.metric::after{font-size:11px}.grammar-reading h1.grammar-reading-title{font-size:27px;margin-bottom:24px;padding-bottom:17px}.grammar-reading .reviewed-grammar h2{font-size:18px;margin-top:28px}.grammar-reading .grammar-page-navigation{gap:10px}.grammar-reading .grammar-page-navigation a{padding:15px 12px;min-height:108px}.grammar-page-direction{font-size:18px}.grammar-page-target{font-size:13px}}
+
+.grammar-question-forms td:first-child,.grammar-question-forms th:first-child{width:30%;min-width:6em}.grammar-question-forms td{vertical-align:top}.grammar-question-forms .grammar-pair{margin:.18em .15em}

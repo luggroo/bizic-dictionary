@@ -87,6 +87,23 @@ async function travel(p,direction){
  assert(!new URL(p.w.location.href).searchParams.has('id'),'leaving a detail removes its ID');
  // The reviewed grammar maps the former chapter 9 to chapter 104.
  assert.equal(p.w.location.hash,'#grammar/north/104');
+ // Section pages survive direct links, language changes and browser history.
+ p.run('setView("grammar",false,{grammarDialect:"north",chapter:"103",grammarSection:"103.1"})');await tick();
+ assert.equal(p.w.location.hash,'#grammar/north/103/1');
+ assert.equal(p.w.document.querySelectorAll('.reviewed-grammar h3').length,0);
+ assert.match(p.w.document.querySelector('.grammar-reading-title').textContent,/3\.1/);
+ const sectionIPA=[...p.w.document.querySelectorAll('.grammar-ipa')].map(n=>n.textContent);
+ p.w.TujiaUI.setLanguage('en');
+ assert.equal(p.w.document.querySelector('.reviewed-grammar').dataset.section,'103.1');
+ assert.deepEqual([...p.w.document.querySelectorAll('.grammar-ipa')].map(n=>n.textContent),sectionIPA);
+ p.w.document.querySelector('.grammar-page-next').click();await until(()=>p.w.location.hash==='#grammar/north/103/2');await tick();
+ assert.equal(p.w.document.querySelector('.reviewed-grammar').dataset.section,'103.2');
+ await travel(p,'back');assert.equal(p.w.document.querySelector('.reviewed-grammar').dataset.section,'103.1');
+ await travel(p,'forward');assert.equal(p.w.document.querySelector('.reviewed-grammar').dataset.section,'103.2');
+ const sectionPage=await page(p.w.location.href);assert.equal(sectionPage.w.document.querySelector('.reviewed-grammar').dataset.section,'103.2');sectionPage.close();
+ const anchored=await page(base+'?lang=zh#grammar/north/103?grammarAnchor=chapter-103-1');
+ assert.equal(anchored.w.document.querySelector('.reviewed-grammar').dataset.section,'103.2');anchored.close();
+ for(const view of ['words','sources','corpus']){p.run('setView("home")');p.w.document.querySelector('.metrics a[href="#'+view+'"]').click();assert.equal(p.run('state.view'),view);}
  // Existing non-record overlays still round-trip without an ID query parameter.
  p.run('setView("notation");npShowEvidence("zhou-ts","onset","n")');await tick();
  assert.equal(p.run('currentOverlay.type'),'notation-pair');

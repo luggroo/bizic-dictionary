@@ -2739,3 +2739,5 @@ Object.assign(UI_TRANSLATIONS, {
   '{count} 篇 · 查看篇目 →': '{count} texts · View titles →',
   '{count} 篇匹配语料 · 查看篇目 →': '{count} matching texts · View titles →'
 });
+
+Object.assign(UI_TRANSLATIONS, {'第 {page} / {pages} 页':'Page {page} of {pages}', '语法分页':'Grammar pagination'});

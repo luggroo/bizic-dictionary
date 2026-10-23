@@ -4,7 +4,7 @@ const $=s=>document.querySelector(s), E=s=>String(s??'').replace(/[&<>"']/g,c=>(
 const normalize=s=>String(s??'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').trim();
 const searchNormalize=s=>normalize(s).normalize('NFD').replace(/[\u0300\u0301\u0302\u0304\u030c\u0331]/g,'').replace(/a\u0308/g,'a').normalize('NFC').replace(/v/g,'ü').replace(/ı/g,'i').replace(/[ʔ‘’ʼʻʹ′]/g,"'");
 const contains=(s,q)=>searchNormalize(s).includes(searchNormalize(q));
-const DEFAULT_STATE={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarAnchor:'',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,hideWholeLoans:false,searchLanguage:'',browseWords:false,corpusCollection:''};
+const DEFAULT_STATE={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarAnchor:'',grammarSection:'',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,hideWholeLoans:false,searchLanguage:'',browseWords:false,corpusCollection:''};
 let state={...DEFAULT_STATE}, currentDetail=null,currentOverlay=null;
 const titles={notation:'记音对应与补全',home:'知识总览',words:'词汇检索',topics:'语法与专题',corpus:'例句语料',sources:'全部文献',history:'历史比较',grammar:'参考语法'};
 const descriptions={notation:'',words:'',topics:'按主题浏览研究文献。',corpus:'阅读故事、民歌与日常对话。',sources:'',history:'比较各方言的词形与历史重建。',grammar:''};
@@ -23,7 +23,7 @@ function topicCards(topics){return `<div class="grid">${topics.map((t,i)=>`<arti
 function corpusMetadataLabels(values){return values.filter(Boolean).map(value=>`<span>${E(value)}</span>`).join(' · ')}
 function corpusCards(items){return `<div class="grid corpus-grid">${items.map(c=>`<article class="card corpus-card"><div class="row"><span class="num grow">${corpusMetadataLabels([...(c.locations||[]),c.genre])}</span></div><button class="corpus-card-content" data-open="${E(c.id)}" aria-label="阅读：${E(c.title)}"><span class="card-title">${E(c.title)}</span>${c.survey?`<span class="survey-ipa">/${E(c.ipa)}/</span>`:''}<span class="tiny">阅读 →</span></button>${S[c.audio]?.media?`<audio controls preload="none" hidden data-media-src="${E(S[c.audio].media)}" aria-label="${E(c.title)}录音"></audio>`:''}</article>`).join('')}</div>`}
 
-function overview(){return `<section class="hero"><h1>知识总览</h1><p class="sub">查词、读语法、看语料。</p>${search('词形、汉语、英语或研究主题…')}<div class="chips">${['水','否定','他砂','哭嫁歌'].map(x=>`<button data-query="${x}">${x}</button>`).join('')}</div></section><div class="metrics"><div class="metric"><b>${D.words.length.toLocaleString()}</b><span>词条</span></div><div class="metric"><b>${D.sources.length}</b><span>文献</span></div><div class="metric"><b>${D.corpus.length}</b><span>语料</span></div></div><div class="section-head"><h2>参考语法</h2></div>${grammarEntryCards()}<div class="section-head"><h2>读土家语</h2><button data-view="corpus">全部语料 →</button></div>${corpusCards(D.corpus.filter(c=>['1.1','3.2','6.3'].includes(c.code)))}` }
+function overview(){return `<section class="hero"><h1>知识总览</h1><p class="sub">查词、读语法、看语料。</p>${search('词形、汉语、英语或研究主题…')}<div class="chips">${['水','否定','他砂','哭嫁歌'].map(x=>`<button data-query="${x}">${x}</button>`).join('')}</div></section><div class="metrics"><a class="metric" href="#words" data-view="words"><b>${D.words.length.toLocaleString()}</b><span>词条</span></a><a class="metric" href="#sources" data-view="sources"><b>${D.sources.length}</b><span>文献</span></a><a class="metric" href="#corpus" data-view="corpus"><b>${D.corpus.length}</b><span>语料</span></a></div><div class="section-head"><h2>参考语法</h2></div>${grammarEntryCards()}<div class="section-head"><h2>读土家语</h2><button data-view="corpus">全部语料 →</button></div>${corpusCards(D.corpus.filter(c=>['1.1','3.2','6.3'].includes(c.code)))}` }
 
 function removeExcludedSource(data){
  const id='1a5k-8h7ZWLI2nZtJGIec5JWSznl4e9Tk';
@@ -189,6 +189,7 @@ function cleanViewState(value){
  for(const key of Object.keys(next))if(typeof DEFAULT_STATE[key]==='string')next[key]=String(next[key]??'').slice(0,2000);
  next.grammarDialect=next.grammarDialect==='south'?'south':'north';
  next.chapter=typeof normalizeGrammarChapter==='function'?normalizeGrammarChapter(next.chapter,next.grammarDialect):next.chapter;
+ if(typeof normalizeGrammarSection==='function')next.grammarSection=normalizeGrammarSection(next.chapter,next.grammarDialect,next.grammarSection,next.grammarAnchor);
  if(D&&next.pos)next.pos=WordClasses.filterId(next.pos);
  next.page=Number.isFinite(Number(next.page))?Math.max(1,Math.floor(Number(next.page)||1)):1;
  next.exact=next.exact===true||next.exact==='1';
@@ -205,14 +206,14 @@ function viewHash(value=state){
   const v=value[key];
   if(v!==DEFAULT_STATE[key]&&v!==''&&v!=null)params.set(key,typeof v==='boolean'?(v?'1':'0'):String(v));
  }
- const route=value.view==='grammar'?'grammar/'+value.grammarDialect+'/'+value.chapter:value.view;
+ const route=value.view==='grammar'?'grammar/'+value.grammarDialect+'/'+value.chapter+(value.grammarSection?'/'+value.grammarSection.split('.').at(-1):''):value.view;
  return '#'+route+(params.size?'?'+params:'');
 }
 function parseViewHash(hash){
  const [path,query='']=hash.replace(/^#/,'').split('?'),next={...DEFAULT_STATE};
- const grammar=path.match(/^grammar\/(north|south)\/(\d+)$/);
+ const grammar=path.match(/^grammar\/(north|south)\/(\d+)(?:\/(\d+))?$/);
  const oldAnchor=path.match(/^(?:ref|section)-(north|south)-(\d+)[.-]/);
- if(grammar||oldAnchor){const match=grammar||oldAnchor;next.view='grammar';next.grammarDialect=match[1];next.chapter=match[2]}
+ if(grammar||oldAnchor){const match=grammar||oldAnchor;next.view='grammar';next.grammarDialect=match[1];next.chapter=match[2];if(grammar?.[3])next.grammarSection=next.chapter+'.'+grammar[3]}
  else next.view=path||'home';
  const params=new URLSearchParams(query);
  for(const key of ROUTE_FIELDS[next.view]||[])if(params.has(key))next[key]=params.get(key);
