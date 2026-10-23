@@ -35,3 +35,8 @@
 /* Keep source forms intact in the nominal-relation comparison. */
 .grammar-case-overview table{min-width:38rem}
 .grammar-case-overview .grammar-pair{white-space:nowrap}
+
+/* Give each part of the predicate overview a visible reading boundary. */
+.grammar-predicate-overview h5{font-size:1.05rem;line-height:1.5;margin:1.6rem 0 .7rem;padding-top:.8rem;border-top:1px solid var(--line,#d7dfd9);color:var(--ink,#263d36)}
+.grammar-predicate-overview .grammar-table-scroll{margin:.65rem 0 1.4rem}
+@media(max-width:650px){.grammar-predicate-overview table{min-width:32rem}.grammar-predicate-overview td,.grammar-predicate-overview th{overflow-wrap:normal;word-break:normal}}

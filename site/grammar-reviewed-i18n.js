@@ -1841,3 +1841,27 @@ Object.assign(UI_TRANSLATIONS, {
   "英语里的 the book that I bought（我买的书）包含一个定语从句：that I bought 修饰 book，说明是哪一本书。定语从句也叫关系从句；book 在中学英语语法里叫先行词，从整个名词短语的结构看，它是中心名词。": "In the book that I bought, the relative clause that I bought modifies book, identifying which book is meant. In school grammar, book is called the antecedent; within the noun phrase, it is the head noun.",
   "英语把这个从句放在名词后，汉语“我买的书”则把“我买的”放在“书”前。土家语的关系从句也放在中心名词前，修饰语与名词之间常见 nie、xi 或 nie-xi。": "English places this clause after the noun; Chinese puts the equivalent of ‘that I bought’ before ‘book’. Tujia relative clauses also precede the head noun, with nie, xi or nie-xi commonly occurring between the modifier and the noun."
 });
+
+// Predicate overview sections and the source-attributed gu analysis.
+Object.assign(UI_TRANSLATIONS,{
+  "一般否定": "General negation",
+  "体态及其否定": "Aspect and its negation",
+  "情态及其否定": "Modality and its negation",
+  "方向": "Direction",
+  "程度": "Degree",
+  "不规则变化": "Irregular forms",
+  "名词化": "Nominalization",
+  "肯定形式与用法": "Affirmative forms and uses",
+  "对应否定": "Corresponding negatives",
+  "当前相关 PRESR": "Present relevance PRESR",
+  "表示与当前情况相关；用于命令句时强调“现在就做”，如“现在就把那个给我”。": "Marks relevance to the current situation; in commands, emphasizes immediate action, as in “Give that to me now.”",
+  "完结的否定": "Negated completion",
+  "还没做完；如“还没吃完”": "Not finished yet, as in “have not finished eating yet”",
+  "“—”表示所引材料未列对应否定形式。能力、许可等形式的搭配范围因材料而异，详见": "“—” means that the cited material does not list a corresponding negative. The uses of ability and permission forms vary between sources; see ",
+  "情态": "modality",
+  "Brassett等（2006），第135–136页，§7.2.6，例190–195；命令句“现在就把那个给我”见例191。该书把/ku/归入相关性助词。": "Brassett et al. (2006), pp. 135–136, §7.2.6, examples 190–195; “Give that to me now” is example 191. The book classifies /ku/ as a relevance particle.",
+  "Brassett的合音分析": "Brassett’s contraction analysis",
+  "Brassett将下列形式分析为前面的成分与第10位/ku/合音，并用这一分析解释它们与当前情况的关联，例如/liau/表示动作完成后与当前有关的状态。": "Brassett analyzes the following forms as contractions of a preceding element with /ku/ in position 10. He uses this analysis to explain their relevance to the current situation: for example, /liau/ marks a currently relevant state after an action is complete.",
+  "现在不能做、已经不能做了": "Cannot do it now; can no longer do it",
+  "出处：Brassett等（2006），第120、131–132、135–137页。": "Source: Brassett et al. (2006), pp. 120, 131–132, 135–137."
+});
