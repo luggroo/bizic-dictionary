@@ -918,7 +918,7 @@ Object.assign(UI_TRANSLATIONS,{
   "xi的其他用法：": "Other uses of xi: ",
   "句末确认语气": "sentence-final affirmation",
   "用短语或从句修饰名词": "Modifying nouns with phrases or clauses",
-  "“吃的东西”可以独立指称事物；“吃饭的碗”则用“吃饭的”说明碗的用途。修饰内容也可以是一整句，例如“我说的话”“刚买的笔”“煮的饭”。这样的从句叫关系从句，被修饰的名词叫中心名词。": "‘Things to eat’ can refer to things independently; in ‘a bowl for eating’, the modifier describes the bowl’s purpose. A modifier can also be a clause, as in ‘the words I said’, ‘the pen just bought’ or ‘the rice that was cooked’. Such a clause is called a relative clause, and the noun it modifies is called the head noun.",
+  "在“我说的话”中，“我说的”修饰“话”。这样的修饰从句叫关系从句，被修饰的“话”叫中心名词。": "In ‘the words that I said’, ‘that I said’ modifies ‘words’. A modifying clause like this is called a relative clause; the noun it modifies, ‘words’, is called the head noun.",
   "修饰内容放在名词前": "Modifiers before the noun",
   "同样，下例用“买柴的”说明是哪一个人。": "Likewise, ‘who buys firewood’ below identifies the person being referred to.",
   "结构：动词短语＋nier＋中心名词": "Pattern: verb phrase + nier + head noun",
