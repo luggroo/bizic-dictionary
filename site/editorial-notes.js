@@ -62467,13 +62467,15 @@ EDITORIAL_NOTES.push(
 const PARTICLE_TONE_GROUP1='Feng（2019，第39页，龙山典房）：前一音节为44、24或53调时，此助词通常读44调；前一音节为21调时读21调。个别多音节词后有例外。（调值按原文）';
 const PARTICLE_TONE_GOAL='Feng（2019，第25—26页，龙山典房）：前一音节为44或24调时读44，21或53调时读21。表示目标、接受者或受益者时，变调规律相同。（调值按原文）';
 const PARTICLE_TONE_MANNER='Feng（2019，第33页，龙山典房）：前一音节为21或53调时，实录读21；44或24调后读44的规则沿用Brassett等（2006），尚需更多例证。（调值按原文）';
+const PARTICLE_TONE_LOCATIVE='Feng（2019，第30—31页，龙山典房）：处所名词化助词在所录例句中，前接24或53调读44，前接21调读21；44调后的读法尚无例证，变调归类仍属推测。';
 const PARTICLE_TONE_ENTRIES=[
  {key:'goal-po', forms:['pɔ','po'], meanings:/(?:目标|方向|目的地|去往|往|向|给|接受者|受益者|间接宾语|与格|goal|destination|recipient|beneficiar|toward|dative|indirect object)/iu, text:PARTICLE_TONE_GOAL},
  {key:'source-lie', forms:['lie','liɛ'], meanings:/(?:来源|起点|从|由|源格|from|source|ablative)/iu, text:PARTICLE_TONE_GROUP1},
  {key:'nominalizer-xi', forms:['ɕi'], meanings:/(?:名词化|关系从句|定语从句|名词后缀|的|nominali[sz]|relativiz|nmlz)/iu, text:PARTICLE_TONE_GROUP1},
  {key:'agent-ma', forms:['ma'], meanings:/(?:施事|名词化|的人|者|agentive|agent nominal|one who|person who|nominali[sz]|doer)/iu, text:PARTICLE_TONE_GROUP1},
  {key:'associative-nie', forms:['ɲie','ȵie','nie','ɲiɛ','ȵiɛ'], meanings:/(?:领属|属格|所属|所有|修饰|结构助词|的|possessiv|associativ|genitiv|attributiv)/iu, text:PARTICLE_TONE_GROUP1},
- {key:'adverbial-mo', forms:['mɔ','mo'], meanings:/(?:方式|状语|副词|伴随|地|adverb|manner|instrumental)/iu, text:PARTICLE_TONE_MANNER}
+ {key:'adverbial-mo', forms:['mɔ','mo'], meanings:/(?:方式|状语|副词|伴随|地|adverb|manner|instrumental)/iu, text:PARTICLE_TONE_MANNER},
+ {key:'locative-tsuo', forms:['tsuɔ','tsuo','tso','tsɔ'], meanings:/(?:处所|地方|地点|locative|place|location)/iu, needsAffix:true, text:PARTICLE_TONE_LOCATIVE}
 ];
 function particleToneNotesFor(w){
  if(!w||(w.dialect!=='北部'&&!(w.dialects||[]).includes('北部')))return [];
@@ -62482,7 +62484,9 @@ function particleToneNotesFor(w){
   ...(w.senses||[]).flatMap(s=>[s.zh,s.en]),
   ...(w.attestations||[]).flatMap(s=>[s.zh,s.en,s.pos])];
  const meaning=glosses.filter(v=>typeof v==='string').join(' ');
- return PARTICLE_TONE_ENTRIES.filter(p=>p.forms.some(f=>stems.has(f))&&p.meanings.test(meaning))
+ const markedAffix=[w.term,...(w.forms||[]),...(w.attestations||[]).map(a=>a.term)]
+  .some(t=>/^\s*[-‐‑−]/u.test(String(t||'')));
+ return PARTICLE_TONE_ENTRIES.filter(p=>(!p.needsAffix||markedAffix)&&p.forms.some(f=>stems.has(f))&&p.meanings.test(meaning))
   .map(p=>({id:'feng-2019-tone-'+p.key,kind:'语流变调',text:p.text}));
 }
 

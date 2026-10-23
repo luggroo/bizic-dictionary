@@ -30,9 +30,85 @@ const suffixW74={id:'w74',dialect:'北部',term:'-xi2',ipa:['-ɕi²⁴'],zh:'的
 assert.equal(note(suffixW74).length,1,'w74 -xi must receive the nominalizer note');
 assert.equal(note(suffixW74)[0].id,'feng-2019-tone-nominalizer-xi');
 assert.equal(vm.runInContext('editorialNotesFor',ctx)(suffixW74).filter(n=>n.id==='feng-2019-tone-nominalizer-xi').length,1,'w74 must show the note in the entry editorial section');
+
+// Every relevant hyphenated morpheme receives its own grammatical-sense note.
+// Forms and IDs of the first six rows are from the merged Northern dictionary.
+const grammaticalAffixes=[
+ [
+  "w4",
+  "-bo3",
+  "-pɔ²¹",
+  "去",
+  "[towards]",
+  "goal-po"
+ ],
+ [
+  "w51",
+  "-lie1",
+  "-liɛ⁵⁵",
+  "在; 从",
+  "[at, from]",
+  "source-lie"
+ ],
+ [
+  "w55",
+  "-ma1",
+  "-ma⁵⁵",
+  "人",
+  "[doer]",
+  "agent-ma"
+ ],
+ [
+  "w59",
+  "-nie3",
+  "-ȵiɛ²¹",
+  "的",
+  "['s]",
+  "associative-nie"
+ ],
+ [
+  "w74",
+  "-xi2",
+  "-ɕi²⁴",
+  "的",
+  "[that which]",
+  "nominalizer-xi"
+ ],
+ [
+  "w80",
+  "-zuo3",
+  "-tsuɔ²¹",
+  "地方",
+  "[place]",
+  "locative-tsuo"
+ ],
+ [
+  "fixture-manner",
+  "-mo3",
+  "-mɔ²¹",
+  "方式状语",
+  "[manner]",
+  "adverbial-mo"
+ ]
+];
+for(const [id,term,ipa,zh,en,key] of grammaticalAffixes){
+ const w={id,term,ipa:[ipa],zh,en,dialect:'北部',attestations:[{term,zh,en,pos:'vsuff.'}]};
+ const found=note(w);
+ assert.deepEqual(Array.from(found,n=>n.id),['feng-2019-tone-'+key],id+' expected a single relevant note');
+ assert.equal(vm.runInContext('editorialNotesFor',ctx)(w).filter(n=>n.id==='feng-2019-tone-'+key).length,1,id+' editor note should be rendered once');
+ assert.equal(note({...w,dialect:'南部'}).length,0,id+' Southern entries are outside the study');
+}
+const locative=note({id:'w80',term:'-zuo3',ipa:['-tsuɔ²¹'],zh:'地方',en:'[place]',dialect:'北部'})[0];
+assert.match(locative.text,/推测|尚无例证/,'locative sandhi must retain evidential limitation');
+assert.equal(note({id:'no-hyphen-place',term:'zuo3',ipa:['tsuɔ²¹'],zh:'地方',en:'place',dialect:'北部'}).length,0,'unmarked place words are not assumed to be locative suffixes');
+
 // Do not propagate the rule to other -xi suffix functions or ordinary -xi-final words.
 for(const [term,ipa,zh,en] of [
  ['-xi3','-ɕi²¹','只','only'],
+ ['-zu2','-tsu²⁴','时候','when'],
+ ['-lie3','-liɛ²¹','了','[past]'],
+ ['-lie3','-liɛ²¹','去','[go]'],
+ ['-bo3','-pɔ²¹','着','[stative]'],
  ['-xi4','-ɕi²⁴','能; 可以','can'],
  ['-xi2','-ɕi²¹','很; 非常','very'],
  ['-xi3tai2','-ɕi²¹tʰai²⁴','最高程度','intensifier'],

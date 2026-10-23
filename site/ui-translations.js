@@ -3289,3 +3289,7 @@ Object.assign(UI_TRANSLATIONS,{
  'Feng（2019，第25—26页，龙山典房）：前一音节为44或24调时读44，21或53调时读21。表示目标、接受者或受益者时，变调规律相同。（调值按原文）':'Feng (2019, pp. 25–26; Dianfang, Longshan): the particle is pronounced 44 after 44 or 24, and 21 after 21 or 53. The same pattern occurs for goal, recipient, and beneficiary uses. Tone values follow the thesis.',
  'Feng（2019，第33页，龙山典房）：前一音节为21或53调时，实录读21；44或24调后读44的规则沿用Brassett等（2006），尚需更多例证。（调值按原文）':'Feng (2019, p. 33; Dianfang, Longshan): recordings confirm tone 21 after 21 or 53. Tone 44 after 44 or 24 follows Brassett et al. (2006) and requires further evidence. Tone values follow the thesis.'
 });
+
+Object.assign(UI_TRANSLATIONS,{
+ 'Feng（2019，第30—31页，龙山典房）：处所名词化助词在所录例句中，前接24或53调读44，前接21调读21；44调后的读法尚无例证，变调归类仍属推测。':'Feng (2019, pp. 30–31; Dianfang, Longshan): in the recorded examples, this locative nominalizer has tone 44 after 24 or 53 and tone 21 after 21. Its realization after tone 44 is unattested, so the proposed grouping remains tentative.'
+});
