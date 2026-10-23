@@ -82,8 +82,8 @@ const root=path.resolve(__dirname,'../site');
       }
      }
      if(ch.id==='104'){
-      const overview=[...document.querySelectorAll('table')].find(t=>t.querySelectorAll('th')[1]?.textContent==='形式或组合');
-      const forms=[...overview.querySelectorAll('tbody tr')].map(r=>r.cells[1]);
+      const overview=[...document.querySelectorAll('table')].find(t=>t.querySelectorAll('th')[0]?.textContent==='形式或组合');
+      const forms=[...overview.querySelectorAll('tbody tr')].map(r=>r.cells[0]);
       for(const cell of forms){const w=document.createTreeWalker(cell,NodeFilter.SHOW_TEXT);let n;while((n=w.nextNode()))if(!n.parentElement.closest('.grammar-pair')&&/\/[^/]+\//.test(n.nodeValue))failures.push('Overview: unpaired IPA '+n.nodeValue);}
       const orderTables=[...document.querySelectorAll('table')].filter(t=>['位置','位置组合'].includes(t.rows[0]?.cells[0]?.textContent));
       for(const table of orderTables){const copy=table.cloneNode(true);copy.querySelectorAll('.grammar-pair').forEach(n=>n.remove());if(/\/[^/]+\//.test(copy.textContent))failures.push('Postpredicate order: IPA missing switchable spelling');}
