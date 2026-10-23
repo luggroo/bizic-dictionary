@@ -1527,3 +1527,43 @@ Object.assign(UI_TRANSLATIONS, {
   "袜子": "socks",
   "纺车": "spinning wheel"
 });
+
+// Highlighting with de and function-specific Japanese comparisons.
+Object.assign(UI_TRANSLATIONS, {
+  "副助词": "Focus and discourse particles",
+  "出处：张伟权《土家语汉语词典》（2002），第210页，摘录原例后半句；逐词释义据原句补列。": "Source: Zhang Weiquan, Tujia–Chinese Dictionary (2002), p. 210, second clause. Word-by-word glosses have been added.",
+  "话题还可以用/lɤ/、/mɤ/标示；宾语话题、时间话题及其与提示、强调助词/te/的区别，见": "Topics can also be marked by /lɤ/ and /mɤ/. For object and temporal topics and their relation to the highlighting and emphatic particle /te/, see ",
+  "/te/；文献亦记/tiɛ⁵⁵/": "/te/; also recorded as /tiɛ⁵⁵/",
+  "が ga /ɡa/（突出主语身份）；さえ sae /sae/、まで made /made/、も mo /mo/（“连……都……”）": "が ga /ɡa/ (highlighting the subject’s identity); さえ sae /sae/, まで made /made/, も mo /mo/ (“even”)",
+  "日语列按具体用法对照，兼列格助词和话题、强调、追加等相关形式；各项的搭配范围和句法分析见下文。": "The Japanese column compares particular uses, including case particles and forms marking topics, emphasis or addition. Their distribution and syntactic analysis are discussed below.",
+  "/te/：提示与强调": "/te/: highlighting and emphasis",
+  "/te/是无声调助词，接在名词性成分后，突出说话人所强调的对象，可以用于主语，也可以用于宾语。文献中记有/te²¹/、/te⁵³/等读音；李启群等《土家语汉语词典》记作/tiɛ⁵⁵/。例句保留各书记录的调值。": "/te/ is a toneless particle that follows a nominal expression and highlights its referent. It can occur with both subjects and objects. Sources record pronunciations including /te²¹/ and /te⁵³/; Li Qiqun et al.’s Tujia–Chinese Dictionary transcribes it as /tiɛ⁵⁵/. The examples retain each source’s recorded tones.",
+  "这里询问的是“谁”说了这句话。张伟权词典中的另一例则确认动作是否由“你”完成：": "The question asks who said it. Another example in Zhang Weiquan’s dictionary asks whether the person addressed performed the action:",
+  "出处：张伟权《土家语汉语词典》（2002），第55页。原书接着给出回答“我没吃”；逐词释义据原句补列。": "Source: Zhang Weiquan, Tujia–Chinese Dictionary (2002), p. 55. The source gives the reply “I didn’t eat it”. Word-by-word glosses have been added.",
+  "被强调的成分也可以是宾语。李启群等《土家语汉语词典》说明，这个助词可以接在作主语或宾语的名词性词语后，汉译时通常不必单独译出。下面一句中的/tiɛ⁵⁵/就跟在宾语“奥梯桔的儿子”之后：": "An object can also be highlighted. Li Qiqun et al.’s Tujia–Chinese Dictionary states that the particle follows nominal expressions serving as subjects or objects and usually needs no separate Chinese translation. In the following sentence, /tiɛ⁵⁵/ follows the object “Aotiju’s son”:",
+  "有些宾语后的用例还带有“连……都……”的意思。张伟权词典先说“那家伙很蠢”，接着说：": "Some occurrences after objects also have an “even” reading. An example in Zhang Weiquan’s dictionary begins “That fellow is very foolish” and continues:",
+  "这里突出的是连自己的姐姐也包括在内。同书还有“他连他父亲都不管了”，以及助词接在“刚才”之后的用例。这些材料显示，/te/的提示、强调作用不限于主语。": "The point is that even his own elder sister is included. The same dictionary has “He no longer cares even about his father” and an example with the particle following “just now”. These examples show that highlighting with /te/ extends beyond subjects.",
+  "与日语比较时，可以按这些具体用法分别对照：": "The Japanese comparison differs with the use:",
+  "/te/的用法": "Use of /te/",
+  "例句的意思": "Meaning of the example",
+  "日语中功能相近的形式": "Functionally similar Japanese forms",
+  "突出被询问或确认的主语": "Highlighting a subject whose identity is being asked about or confirmed",
+  "“谁说的啊？”“这萝卜是你吃的？”": "“Who said it?” “Was it you who ate this radish?”",
+  "が ga /ɡa/，用于询问或确认动作由谁完成": "が ga /ɡa/, in questions asking or confirming who performed an action",
+  "突出超出通常预期的对象": "Highlighting someone beyond the usual expectation",
+  "“连他姐姐都要打。”“他连他父亲都不管了。”": "“He would even hit his own elder sister.” “He no longer cares even about his father.”",
+  "さえ sae /sae/、まで made /made/，以及表示“甚至”的も mo /mo/": "さえ sae /sae/, まで made /made/, and も mo /mo/ in its “even” use",
+  "强调某个宾语": "Highlighting an object",
+  "“你别打奥梯桔的儿子。”": "“Don’t hit Aotiju’s son.”",
+  "需结合上下文选择表达；现有例句没有显示明确的“也”“甚至”或对比意义": "The choice depends on context; the example shows no explicit additive, scalar or contrastive meaning",
+  "前一类句子把动作参与者的身份作为信息重点，与日语が ga /ɡa/的相关用法相近。日语が同时承担主语标记的作用，句子是否突出“谁”，还取决于疑问词、语境和重音。这种比较说明的是信息重点上的相似性。": "The first type focuses on the identity of the participant, resembling related uses of Japanese が ga /ɡa/. Japanese が also marks the subject; whether a sentence highlights who performed the action depends on the question word, context and prominence. The comparison concerns this shared information focus.",
+  "“连……都……”则突出一个出乎预期的对象，更接近日语さえ sae /sae/、まで made /made/和も mo /mo/的相关用法。其中，も既能表示“甚至”，也能表示“也”；后一种追加义可与下文的/pai⁵¹/比较。日语は wa /wa/主要用于提出话题或形成对比，与前文的话题标记放在一起比较更清楚。": "The “even” examples highlight an unexpected participant and are closer to the relevant uses of Japanese さえ sae /sae/, まで made /made/ and も mo /mo/. Japanese も can mean both “even” and “also”; its additive use is compared below with /pai⁵¹/. Japanese は wa /wa/ mainly introduces a topic or a contrast and is more closely comparable to the topic markers discussed above.",
+  "，贵阳：贵州民族出版社，第37、41、55、124、210页。": ", Guiyang: Guizhou Nationalities Press, pp. 37, 41, 55, 124, 210.",
+  "日语が的主语用法见东京外国语大学": "For Japanese ga as a subject marker, see Tokyo University of Foreign Studies, ",
+  "；信息重点与语境的关系参见アルク": "; for information focus and context, see ALC, ",
+  "《日本语的文法Ⅰ》问答": "Japanese Grammar I: questions and answers",
+  "，第54、56页相关说明。": ", explanations for pp. 54 and 56.",
+  "京都大学日本语学习系统": "Kyoto University Japanese Learning System, ",
+  "；东京外国语大学": "; Tokyo University of Foreign Studies, ",
+  "，は、も各节。比较依据上述土家语例句的用法和译文。": ", sections on wa and mo. The comparison is based on the uses and translations of the Tujia examples above."
+});

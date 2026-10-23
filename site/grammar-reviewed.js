@@ -194,7 +194,7 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   const raw=n.nodeValue,fr=document.createDocumentFragment();let pos=0,changed=false;
   for(const m of raw.matchAll(pattern)){
    const ipa=m[1]||m[2]||m[0],enclosedMatch=m[1]!==undefined||m[2]!==undefined;
-   if(enclosedMatch&&!/[¹²³⁴⁵ɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰ\u0300-\u036f]/u.test(ipa)&&!ipa.split(/[ ,、;+~～]+/).every(s=>/^(?:p|b|t|d|k|g|m|n|l|s|z|f|h|w|j|r|ts|dz|i|u|y|e|o|a|ai|au|ei|ou|ia|ie|iu|ua|uo|ui|an|en|in|un|po|xu|kau|la|lu|lie|liau|ti|tiu|to|tso|ma|ta)$/.test(s)))continue;
+   if(enclosedMatch&&!/[¹²³⁴⁵ɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰ\u0300-\u036f]/u.test(ipa)&&!ipa.split(/[ ,、;+~～]+/).every(s=>/^(?:p|b|t|d|k|g|m|n|l|s|z|f|h|w|j|r|ts|dz|i|u|y|e|o|a|ai|au|ei|ou|ia|ie|iu|ua|uo|ui|an|en|in|un|po|xu|kau|la|lu|lie|liau|te|ti|tiu|to|tso|ma|ta)$/.test(s)))continue;
    if(!enclosedMatch&&!/[¹²³⁴⁵ɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰ\u0303\u0329]/u.test(ipa))continue;
    if(!/[a-zãẽĩõũỹɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥ]/u.test(ipa))continue;
    // Uppercase labels are excluded, except for the source vowel notation E.
