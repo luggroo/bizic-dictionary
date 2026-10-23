@@ -1,0 +1,6242 @@
+{
+  "baseCommit": "2b5ff6e",
+  "sourceSnapshot": "c23c050bb4e61070e384b080ff91cb8fdcf3e727",
+  "scope": "Accepted hot-cell and rime-screening lexical decisions, corrected 校堂 and 二月 analyses, and three pairs of parallel survey forms.",
+  "decisions": [
+    {
+      "action": "add-loan-note",
+      "zh": "牛筋",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1681",
+        "wordIds": [
+          "yubao-60756-v-1681"
+        ],
+        "kind": "借词来源",
+        "donor": "筋",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「筋」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ȵu³³tɕiŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 筋 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1681",
+          "zh": "牛筋",
+          "ipa": "ȵu³³tɕiŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "筋",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义为牛筋或抽筋，所选音节可与同点已标“筋”比较；南部牛筋的两次 tɕĩ 重叠均在范围内。",
+          "group": "筋"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "抽筋",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2215",
+        "wordIds": [
+          "yubao-60756-v-2215"
+        ],
+        "kind": "借词来源",
+        "donor": "筋",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「筋」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiŋ⁵⁵pʰi³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 筋 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2215",
+          "zh": "抽筋",
+          "ipa": "tɕiŋ⁵⁵pʰi³³",
+          "proposals": [
+            {
+              "donor": "筋",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义为牛筋或抽筋，所选音节可与同点已标“筋”比较；南部牛筋的两次 tɕĩ 重叠均在范围内。",
+          "group": "筋"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "抽筋",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2215",
+        "wordIds": [
+          "yubao-60823-v-2215"
+        ],
+        "kind": "借词来源",
+        "donor": "筋",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「筋」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕĩ⁵⁵tsʰɤe⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 筋 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-2215",
+          "zh": "抽筋",
+          "ipa": "tɕĩ⁵⁵tsʰɤe⁵⁵",
+          "proposals": [
+            {
+              "donor": "筋",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义为牛筋或抽筋，所选音节可与同点已标“筋”比较；南部牛筋的两次 tɕĩ 重叠均在范围内。",
+          "group": "筋"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "牛筋",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1681",
+        "wordIds": [
+          "yubao-60824-v-1681"
+        ],
+        "kind": "借词来源",
+        "donor": "筋",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「筋」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "o²¹tɕĩ³³tɕĩ³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 筋 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1681",
+          "zh": "牛筋",
+          "ipa": "o²¹tɕĩ³³tɕĩ³³",
+          "proposals": [
+            {
+              "donor": "筋",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "登记义为牛筋或抽筋，所选音节可与同点已标“筋”比较；南部牛筋的两次 tɕĩ 重叠均在范围内。",
+          "group": "筋"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "抽筋",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2215",
+        "wordIds": [
+          "yubao-60824-v-2215"
+        ],
+        "kind": "借词来源",
+        "donor": "筋",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「筋」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕĩ³³tsʰa³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 筋 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-2215",
+          "zh": "抽筋",
+          "ipa": "tɕĩ³³tsʰa³⁵",
+          "proposals": [
+            {
+              "donor": "筋",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义为牛筋或抽筋，所选音节可与同点已标“筋”比较；南部牛筋的两次 tɕĩ 重叠均在范围内。",
+          "group": "筋"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蚊帐",
+      "note": {
+        "id": "chinese-loan-w2637",
+        "wordIds": [
+          "w2637"
+        ],
+        "kind": "借词来源",
+        "donor": "帐",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「帐」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsaŋ²⁴tsɨ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 帐 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w2637",
+          "zh": "蚊帐",
+          "ipa": "tsaŋ²⁴tsɨ⁵⁵",
+          "proposals": [
+            {
+              "donor": "帐",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "蚊帐中的帐成分可与已标 /tsaŋ²⁴/“帐”比较；保留词首其他成分和词尾未分析状态，不沿用同音“章子”。",
+          "group": "帐"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蚊帐",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0329",
+        "wordIds": [
+          "yubao-60756-v-0329"
+        ],
+        "kind": "借词来源",
+        "donor": "帐",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「帐」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "sa⁵⁵lɔŋ⁵⁵tsaŋ⁵³tsɿ³³",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 帐 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0329",
+          "zh": "蚊帐",
+          "ipa": "sa⁵⁵lɔŋ⁵⁵tsaŋ⁵³tsɿ³³",
+          "proposals": [
+            {
+              "donor": "帐",
+              "span": [
+                3,
+                3
+              ]
+            }
+          ],
+          "reason": "蚊帐中的帐成分可与已标 /tsaŋ²⁴/“帐”比较；保留词首其他成分和词尾未分析状态，不沿用同音“章子”。",
+          "group": "帐"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蚊帐",
+      "note": {
+        "id": "chinese-loan-stedt-rn-288765",
+        "wordIds": [
+          "stedt-rn-288765"
+        ],
+        "kind": "借词来源",
+        "donor": "帐",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「帐」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsã³⁵tsi⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 帐 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-288765",
+          "zh": "蚊帐",
+          "ipa": "tsã³⁵tsi⁵⁵",
+          "proposals": [
+            {
+              "donor": "帐",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "蚊帐中的帐成分可与已标 /tsaŋ²⁴/“帐”比较；保留词首其他成分和词尾未分析状态，不沿用同音“章子”。",
+          "group": "帐"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "当兵",
+      "note": {
+        "id": "chinese-loan-w301",
+        "wordIds": [
+          "w301"
+        ],
+        "kind": "借词来源",
+        "donor": "兵／当",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "各成分借自汉语「兵」「当」，所录次序为兵—当；具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "piŋ⁵⁵ taŋ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23",
+        "components": [
+          {
+            "ipa": "piŋ⁵⁵ taŋ⁵⁵",
+            "donor": "兵",
+            "span": [
+              1,
+              1
+            ]
+          },
+          {
+            "ipa": "piŋ⁵⁵ taŋ⁵⁵",
+            "donor": "当",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      "noteEn": "The components are borrowed from Chinese 兵, 当 in the recorded order 兵–当; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w301",
+          "zh": "当兵",
+          "ipa": "piŋ⁵⁵ taŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "兵",
+              "span": [
+                1,
+                1
+              ]
+            },
+            {
+              "donor": "当",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ],
+          "reason": "两音节分别与已标兵 /piŋ⁵⁵/、当 /taŋ⁵⁵/ 同音同调；本条按宾—动次序组合，保持原词序，分别讨论借入成分。",
+          "group": "当兵"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "算命",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0571",
+        "wordIds": [
+          "yubao-60756-v-0571"
+        ],
+        "kind": "借词来源",
+        "donor": "命／算",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "各成分借自汉语「命」「算」，所录次序为命—算；具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "miŋ³⁵suaŋ⁵³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23",
+        "components": [
+          {
+            "ipa": "miŋ³⁵suaŋ⁵³",
+            "donor": "命",
+            "span": [
+              1,
+              1
+            ]
+          },
+          {
+            "ipa": "miŋ³⁵suaŋ⁵³",
+            "donor": "算",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ]
+      },
+      "noteEn": "The components are borrowed from Chinese 命, 算 in the recorded order 命–算; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0571",
+          "zh": "算命",
+          "ipa": "miŋ³⁵suaŋ⁵³",
+          "proposals": [
+            {
+              "donor": "命",
+              "span": [
+                1,
+                1
+              ]
+            },
+            {
+              "donor": "算",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义算命，词形按“命—算”次序；两个成分分别与已标命、算比较。调值与独立词条有别，保留原记音。",
+          "group": "算命"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "苦命",
+      "note": {
+        "id": "chinese-loan-w1560",
+        "wordIds": [
+          "w1560"
+        ],
+        "kind": "借词来源",
+        "donor": "命",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「命」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "miŋ²⁴ɕiŋ⁵⁵laŋ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 命 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w1560",
+          "zh": "苦命",
+          "ipa": "miŋ²⁴ɕiŋ⁵⁵laŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "命",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "苦命／命苦只提出第一个 miŋ 的“命”来源；其后的 xílān 情绪词根继续排除。寿命的单音节另与命比较，保留 35 调。",
+          "group": "命"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "命苦; 命运不佳",
+      "note": {
+        "id": "chinese-loan-stedt-rn-454821",
+        "wordIds": [
+          "stedt-rn-454821"
+        ],
+        "kind": "借词来源",
+        "donor": "命",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「命」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "miŋ²⁴ɕiŋ⁵⁵laŋ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 命 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-454821",
+          "zh": "命苦; 命运不佳",
+          "ipa": "miŋ²⁴ɕiŋ⁵⁵laŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "命",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "苦命／命苦只提出第一个 miŋ 的“命”来源；其后的 xílān 情绪词根继续排除。寿命的单音节另与命比较，保留 35 调。",
+          "group": "命"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "寿命",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2274",
+        "wordIds": [
+          "yubao-60756-v-2274"
+        ],
+        "kind": "借词来源",
+        "donor": "命",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「命」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "miŋ³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 命; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2274",
+          "zh": "寿命",
+          "ipa": "miŋ³⁵",
+          "proposals": [
+            {
+              "donor": "命",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "苦命／命苦只提出第一个 miŋ 的“命”来源；其后的 xílān 情绪词根继续排除。寿命的单音节另与命比较，保留 35 调。",
+          "group": "命"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "取名",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2599",
+        "wordIds": [
+          "yubao-60823-v-2599"
+        ],
+        "kind": "借词来源",
+        "donor": "名字",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「名字」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "mĩ³¹tsɿ³³nau⁵⁵a⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 名字 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-2599",
+          "zh": "取名",
+          "ipa": "mĩ³¹tsɿ³³nau⁵⁵a⁵⁵",
+          "proposals": [
+            {
+              "donor": "名字",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "取名和绰号中有完整“名字”音形 /mĩ tsɿ/，并可与同点名字条比较；其他音节不扩大标注。",
+          "group": "名字"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "绰号",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0663",
+        "wordIds": [
+          "yubao-60823-v-0663"
+        ],
+        "kind": "借词来源",
+        "donor": "名字",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「名字」部分（第 3—4 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "a⁵⁵ʑie⁵⁵mĩ³³tsɿ¹³",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 名字 component (syllables 3–4) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-0663",
+          "zh": "绰号",
+          "ipa": "a⁵⁵ʑie⁵⁵mĩ³³tsɿ¹³",
+          "proposals": [
+            {
+              "donor": "名字",
+              "span": [
+                3,
+                4
+              ]
+            }
+          ],
+          "reason": "取名和绰号中有完整“名字”音形 /mĩ tsɿ/，并可与同点名字条比较；其他音节不扩大标注。",
+          "group": "名字"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "看病",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0520",
+        "wordIds": [
+          "yubao-60756-v-0520"
+        ],
+        "kind": "借词来源",
+        "donor": "病",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「病」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "piŋ³⁵pa⁵³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 病 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0520",
+          "zh": "看病",
+          "ipa": "piŋ³⁵pa⁵³",
+          "proposals": [
+            {
+              "donor": "病",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "看病和病轻了共用 /piŋ³⁵/，语义和已标“病”一致；只核对第一个音节。",
+          "group": "看病与病轻"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "病轻了",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0527",
+        "wordIds": [
+          "yubao-60756-v-0527"
+        ],
+        "kind": "借词来源",
+        "donor": "病",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「病」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "piŋ³⁵pia⁵⁵tsʰa³³ȵe³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 病 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0527",
+          "zh": "病轻了",
+          "ipa": "piŋ³⁵pia⁵⁵tsʰa³³ȵe³³",
+          "proposals": [
+            {
+              "donor": "病",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "看病和病轻了共用 /piŋ³⁵/，语义和已标“病”一致；只核对第一个音节。",
+          "group": "看病与病轻"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "木箱",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1763",
+        "wordIds": [
+          "yubao-60824-v-1763"
+        ],
+        "kind": "借词来源",
+        "donor": "箱子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「箱子」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰo³⁵ɕiã³³tsi³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 箱子 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1763",
+          "zh": "木箱",
+          "ipa": "kʰo³⁵ɕiã³³tsi³³",
+          "proposals": [
+            {
+              "donor": "箱子",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "木箱、蜂箱中的“箱子”与相应调查点的已标箱子同形；复合词前部不随之判作借词。",
+          "group": "箱子"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "木箱",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1763",
+        "wordIds": [
+          "yubao-60823-v-1763"
+        ],
+        "kind": "借词来源",
+        "donor": "箱子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「箱子」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰa⁵³ɕiã⁵⁵tsɿ³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 箱子 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-1763",
+          "zh": "木箱",
+          "ipa": "kʰa⁵³ɕiã⁵⁵tsɿ³³",
+          "proposals": [
+            {
+              "donor": "箱子",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "木箱、蜂箱中的“箱子”与相应调查点的已标箱子同形；复合词前部不随之判作借词。",
+          "group": "箱子"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蜂箱",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1622",
+        "wordIds": [
+          "yubao-60823-v-1622"
+        ],
+        "kind": "借词来源",
+        "donor": "箱子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「箱子」部分（第 3—4 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑĩ⁵⁵ma³³ɕiã⁵⁵tsɿ³³",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 箱子 component (syllables 3–4) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-1622",
+          "zh": "蜂箱",
+          "ipa": "ʑĩ⁵⁵ma³³ɕiã⁵⁵tsɿ³³",
+          "proposals": [
+            {
+              "donor": "箱子",
+              "span": [
+                3,
+                4
+              ]
+            }
+          ],
+          "reason": "木箱、蜂箱中的“箱子”与相应调查点的已标箱子同形；复合词前部不随之判作借词。",
+          "group": "箱子"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "草帽",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1988",
+        "wordIds": [
+          "yubao-60824-v-1988"
+        ],
+        "kind": "借词来源",
+        "donor": "帽子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「帽子」部分（第 3—4 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ma²¹ka²¹mau⁵⁵tsi³³",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 帽子 component (syllables 3–4) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1988",
+          "zh": "草帽",
+          "ipa": "ma²¹ka²¹mau⁵⁵tsi³³",
+          "proposals": [
+            {
+              "donor": "帽子",
+              "span": [
+                3,
+                4
+              ]
+            }
+          ],
+          "reason": "末两音节 /mau⁵⁵tsi³³/ 对应帽子，前面的草类成分未纳入。",
+          "group": "草帽"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "枕巾",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1925",
+        "wordIds": [
+          "yubao-60756-v-1925"
+        ],
+        "kind": "借词来源",
+        "donor": "枕头",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「枕头」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tseŋ⁵⁵tʰəu⁵⁵pʰa⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 枕头 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1925",
+          "zh": "枕巾",
+          "ipa": "tseŋ⁵⁵tʰəu⁵⁵pʰa⁵⁵",
+          "proposals": [
+            {
+              "donor": "枕头",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "枕巾和南部枕芯的起始词形可与同点枕头直接比较；南部头的原调 21 与独立条 35 有差异，保持原记录，登记义枕芯不更名。",
+          "group": "枕头派生词"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "枕巾",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1925",
+        "wordIds": [
+          "yubao-60824-v-1925"
+        ],
+        "kind": "借词来源",
+        "donor": "枕头",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「枕头」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsẽ⁵⁵dʉ²¹pʰa¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 枕头 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1925",
+          "zh": "枕巾",
+          "ipa": "tsẽ⁵⁵dʉ²¹pʰa¹³",
+          "proposals": [
+            {
+              "donor": "枕头",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "枕巾和南部枕芯的起始词形可与同点枕头直接比较；南部头的原调 21 与独立条 35 有差异，保持原记录，登记义枕芯不更名。",
+          "group": "枕头派生词"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "枕芯",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1926",
+        "wordIds": [
+          "yubao-60824-v-1926"
+        ],
+        "kind": "借词来源",
+        "donor": "枕头",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「枕头」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsẽ⁵⁵dʉ²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 枕头; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1926",
+          "zh": "枕芯",
+          "ipa": "tsẽ⁵⁵dʉ²¹",
+          "proposals": [
+            {
+              "donor": "枕头",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "枕巾和南部枕芯的起始词形可与同点枕头直接比较；南部头的原调 21 与独立条 35 有差异，保持原记录，登记义枕芯不更名。",
+          "group": "枕头派生词"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "熊胆",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1549",
+        "wordIds": [
+          "yubao-60756-v-1549"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「苦胆」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɕɔŋ³³kʰu⁵⁵taŋ³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 苦胆 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1549",
+          "zh": "熊胆",
+          "ipa": "ɕɔŋ³³kʰu⁵⁵taŋ³³",
+          "proposals": [
+            {
+              "donor": "苦胆",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "依“苦胆”分析核对 /kʰu taŋ／tã/，与已标的蛇胆、蛇胆酒中同一成分对应；不采用同音原词裤裆，也不将蛇、熊或酒等成分随之覆盖。",
+          "group": "苦胆"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蛇胆",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1601",
+        "wordIds": [
+          "yubao-60756-v-1601"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「苦胆」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɣɔ⁵³kʰu⁵³taŋ³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 苦胆 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1601",
+          "zh": "蛇胆",
+          "ipa": "ɣɔ⁵³kʰu⁵³taŋ³³",
+          "proposals": [
+            {
+              "donor": "苦胆",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "依“苦胆”分析核对 /kʰu taŋ／tã/，与已标的蛇胆、蛇胆酒中同一成分对应；不采用同音原词裤裆，也不将蛇、熊或酒等成分随之覆盖。",
+          "group": "苦胆"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蛇胆酒",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2062",
+        "wordIds": [
+          "yubao-60756-v-2062"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「苦胆」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɣɔ⁵³kʰu³³taŋ³³tɕu³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 苦胆 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2062",
+          "zh": "蛇胆酒",
+          "ipa": "ɣɔ⁵³kʰu³³taŋ³³tɕu³³",
+          "proposals": [
+            {
+              "donor": "苦胆",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "依“苦胆”分析核对 /kʰu taŋ／tã/，与已标的蛇胆、蛇胆酒中同一成分对应；不采用同音原词裤裆，也不将蛇、熊或酒等成分随之覆盖。",
+          "group": "苦胆"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "胆",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2096",
+        "wordIds": [
+          "yubao-60756-v-2096"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「苦胆」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰu⁵⁵taŋ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 苦胆; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2096",
+          "zh": "胆",
+          "ipa": "kʰu⁵⁵taŋ³³",
+          "proposals": [
+            {
+              "donor": "苦胆",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "依“苦胆”分析核对 /kʰu taŋ／tã/，与已标的蛇胆、蛇胆酒中同一成分对应；不采用同音原词裤裆，也不将蛇、熊或酒等成分随之覆盖。",
+          "group": "苦胆"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "胆汁",
+      "note": {
+        "id": "chinese-loan-w1171",
+        "wordIds": [
+          "w1171"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「苦胆」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰu⁵⁵taŋ⁵⁵tsʰɤ²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 苦胆 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w1171",
+          "zh": "胆汁",
+          "ipa": "kʰu⁵⁵taŋ⁵⁵tsʰɤ²¹",
+          "proposals": [
+            {
+              "donor": "苦胆",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "依“苦胆”分析核对 /kʰu taŋ／tã/，与已标的蛇胆、蛇胆酒中同一成分对应；不采用同音原词裤裆，也不将蛇、熊或酒等成分随之覆盖。",
+          "group": "苦胆"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "胆; 胆汁",
+      "note": {
+        "id": "chinese-loan-stedt-rn-194028",
+        "wordIds": [
+          "stedt-rn-194028"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「苦胆」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰu⁵⁵taŋ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 苦胆; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-194028",
+          "zh": "胆; 胆汁",
+          "ipa": "kʰu⁵⁵taŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "苦胆",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "依“苦胆”分析核对 /kʰu taŋ／tã/，与已标的蛇胆、蛇胆酒中同一成分对应；不采用同音原词裤裆，也不将蛇、熊或酒等成分随之覆盖。",
+          "group": "苦胆"
+        }
+      ],
+      "expectedBadgeScope": "mixed"
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "胆",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2096",
+        "wordIds": [
+          "yubao-60823-v-2096"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「苦胆」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰu⁵³tã³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 苦胆; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-2096",
+          "zh": "胆",
+          "ipa": "kʰu⁵³tã³³",
+          "proposals": [
+            {
+              "donor": "苦胆",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "依“苦胆”分析核对 /kʰu taŋ／tã/，与已标的蛇胆、蛇胆酒中同一成分对应；不采用同音原词裤裆，也不将蛇、熊或酒等成分随之覆盖。",
+          "group": "苦胆"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "熊胆",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1549",
+        "wordIds": [
+          "yubao-60824-v-1549"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「苦胆」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɕiõ¹³kʰu⁵⁵tã³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 苦胆 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1549",
+          "zh": "熊胆",
+          "ipa": "ɕiõ¹³kʰu⁵⁵tã³³",
+          "proposals": [
+            {
+              "donor": "苦胆",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "依“苦胆”分析核对 /kʰu taŋ／tã/，与已标的蛇胆、蛇胆酒中同一成分对应；不采用同音原词裤裆，也不将蛇、熊或酒等成分随之覆盖。",
+          "group": "苦胆"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "胆",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2096",
+        "wordIds": [
+          "yubao-60824-v-2096"
+        ],
+        "kind": "借词来源",
+        "donor": "苦胆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「苦胆」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰu⁵⁵tã²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 苦胆; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-2096",
+          "zh": "胆",
+          "ipa": "kʰu⁵⁵tã²¹",
+          "proposals": [
+            {
+              "donor": "苦胆",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "依“苦胆”分析核对 /kʰu taŋ／tã/，与已标的蛇胆、蛇胆酒中同一成分对应；不采用同音原词裤裆，也不将蛇、熊或酒等成分随之覆盖。",
+          "group": "苦胆"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "大胆",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2896",
+        "wordIds": [
+          "yubao-60756-v-2896"
+        ],
+        "kind": "借词来源",
+        "donor": "胆子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「胆子」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "taŋ⁵⁵tsɿ³³tɕʰi³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 胆子 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2896",
+          "zh": "大胆",
+          "ipa": "taŋ⁵⁵tsɿ³³tɕʰi³³",
+          "proposals": [
+            {
+              "donor": "胆子",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "大胆／胆小前两音节为“胆子”音形，同点已标胆小可作对照；形容词尾保留未分析状态。",
+          "group": "胆子"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "胆小",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2897",
+        "wordIds": [
+          "yubao-60756-v-2897"
+        ],
+        "kind": "借词来源",
+        "donor": "胆子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「胆子」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "taŋ⁵⁵tsɿ³³sɔ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 胆子 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2897",
+          "zh": "胆小",
+          "ipa": "taŋ⁵⁵tsɿ³³sɔ³³",
+          "proposals": [
+            {
+              "donor": "胆子",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "大胆／胆小前两音节为“胆子”音形，同点已标胆小可作对照；形容词尾保留未分析状态。",
+          "group": "胆子"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "大胆",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2896",
+        "wordIds": [
+          "yubao-60823-v-2896"
+        ],
+        "kind": "借词来源",
+        "donor": "胆子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「胆子」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tã⁵⁵tsɿ³³tɕʰi⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 胆子 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-2896",
+          "zh": "大胆",
+          "ipa": "tã⁵⁵tsɿ³³tɕʰi⁵⁵",
+          "proposals": [
+            {
+              "donor": "胆子",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "大胆／胆小前两音节为“胆子”音形，同点已标胆小可作对照；形容词尾保留未分析状态。",
+          "group": "胆子"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "革命",
+      "note": {
+        "id": "chinese-loan-stedt-rn-288923",
+        "wordIds": [
+          "stedt-rn-288923"
+        ],
+        "kind": "借词来源",
+        "donor": "革命",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「革命」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɨe²¹mĩ³⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 革命; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-288923",
+          "zh": "革命",
+          "ipa": "kɨe²¹mĩ³⁵",
+          "proposals": [
+            {
+              "donor": "革命",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与两音节音形对应汉语革命，可与已标革命 /kɤ²¹miŋ²⁴/ 比较。南北分别保留原始韵母、调值。",
+          "group": "革命"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "革命",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289850",
+        "wordIds": [
+          "stedt-rn-289850"
+        ],
+        "kind": "借词来源",
+        "donor": "革命",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「革命」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɨe³³mĩ¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 革命; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-289850",
+          "zh": "革命",
+          "ipa": "kɨe³³mĩ¹³",
+          "proposals": [
+            {
+              "donor": "革命",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与两音节音形对应汉语革命，可与已标革命 /kɤ²¹miŋ²⁴/ 比较。南北分别保留原始韵母、调值。",
+          "group": "革命"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "银行",
+      "note": {
+        "id": "chinese-loan-w2600",
+        "wordIds": [
+          "w2600"
+        ],
+        "kind": "借词来源",
+        "donor": "银行",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「银行」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "jiŋ²¹xaŋ²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 银行; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w2600",
+          "zh": "银行",
+          "ipa": "jiŋ²¹xaŋ²¹",
+          "proposals": [
+            {
+              "donor": "银行",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义银行，/jiŋ²¹xaŋ²¹/ 与汉语银、行对应；词典另有已标的北部、南部银行词形。",
+          "group": "银行"
+        }
+      ],
+      "expectedBadgeScope": "mixed"
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "解放军",
+      "note": {
+        "id": "chinese-loan-w710",
+        "wordIds": [
+          "w710"
+        ],
+        "kind": "借词来源",
+        "donor": "解放军",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「解放军」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kai⁵⁵fɛn²¹tɕiŋ⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 解放军; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w710",
+          "zh": "解放军",
+          "ipa": "kai⁵⁵fɛn²¹tɕiŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "解放军",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "登记义解放军与三音节词形对应，前两音节已有解放条可对照；军的 /i/ 保留为实际记音，不补写 /y/。",
+          "group": "解放军"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "工业",
+      "note": {
+        "id": "chinese-loan-w770",
+        "wordIds": [
+          "w770"
+        ],
+        "kind": "借词来源",
+        "donor": "工业",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「工业」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɔŋ⁵⁵ȵiɛ²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 工业; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w770",
+          "zh": "工业",
+          "ipa": "kɔŋ⁵⁵ȵiɛ²¹",
+          "proposals": [
+            {
+              "donor": "工业",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义工业，/kɔŋ⁵⁵ȵiɛ²¹/ 与工、业对应；具体供体方言与借入时期尚未确定。",
+          "group": "现代机构与人群"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "群众",
+      "note": {
+        "id": "chinese-loan-w1869",
+        "wordIds": [
+          "w1869"
+        ],
+        "kind": "借词来源",
+        "donor": "群众",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「群众」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰiŋ²¹tsɔŋ²⁴",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 群众; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w1869",
+          "zh": "群众",
+          "ipa": "tɕʰiŋ²¹tsɔŋ²⁴",
+          "proposals": [
+            {
+              "donor": "群众",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义群众，两音节与汉语对应；保留 /tɕʰiŋ/，不因汉语拼音 qun 改写源韵母。",
+          "group": "现代机构与人群"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "农民",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0588",
+        "wordIds": [
+          "yubao-60824-v-0588"
+        ],
+        "kind": "借词来源",
+        "donor": "农民",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「农民」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "nõ¹³mĩ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 农民; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0588",
+          "zh": "农民",
+          "ipa": "nõ¹³mĩ³³",
+          "proposals": [
+            {
+              "donor": "农民",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义农民，/nõ¹³mĩ³³/ 与农、民对应；鼻化按原记录保存。",
+          "group": "现代机构与人群"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "学校",
+      "note": {
+        "id": "chinese-loan-w2480",
+        "wordIds": [
+          "w2480"
+        ],
+        "kind": "借词来源",
+        "donor": "校堂",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「校堂」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɕiau²⁴tʰaŋ²¹",
+            "span": [
+              1,
+              2
+            ]
+          },
+          {
+            "ipa": "ɕiau³⁵tʰan²¹",
+            "span": [
+              1,
+              2
+            ]
+          },
+          {
+            "ipa": "ɕiau³⁵tʰã²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 校堂; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w2480",
+          "zh": "学校",
+          "ipa": "ɕiau²⁴tʰaŋ²¹",
+          "proposals": [
+            {
+              "donor": "校堂",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "供体为校堂；中学、小学中的学另按各自词项处理。",
+          "group": "学堂"
+        },
+        {
+          "id": "w2480",
+          "zh": "学校",
+          "ipa": "ɕiau³⁵tʰan²¹",
+          "proposals": [
+            {
+              "donor": "校堂",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "供体为校堂；中学、小学中的学另按各自词项处理。",
+          "group": "学堂"
+        },
+        {
+          "id": "w2480",
+          "zh": "学校",
+          "ipa": "ɕiau³⁵tʰã²¹",
+          "proposals": [
+            {
+              "donor": "校堂",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "供体为校堂；中学、小学中的学另按各自词项处理。",
+          "group": "学堂"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "学校",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0718",
+        "wordIds": [
+          "yubao-60756-v-0718"
+        ],
+        "kind": "借词来源",
+        "donor": "校堂",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「校堂」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɕau³³tʰaŋ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 校堂; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0718",
+          "zh": "学校",
+          "ipa": "ɕau³³tʰaŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "校堂",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "供体为校堂；中学、小学中的学另按各自词项处理。",
+          "group": "学堂"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "学校",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289871",
+        "wordIds": [
+          "stedt-rn-289871"
+        ],
+        "kind": "借词来源",
+        "donor": "校堂",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「校堂」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɕiaɨ²¹dã⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 校堂; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-289871",
+          "zh": "学校",
+          "ipa": "ɕiaɨ²¹dã⁵⁵",
+          "proposals": [
+            {
+              "donor": "校堂",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "供体为校堂；中学、小学中的学另按各自词项处理。",
+          "group": "学堂"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "中学",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2521",
+        "wordIds": [
+          "yubao-60756-v-2521"
+        ],
+        "kind": "借词来源",
+        "donor": "中学",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「中学」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsɔŋ⁵⁵ɕau⁵³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 中学; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2521",
+          "zh": "中学",
+          "ipa": "tsɔŋ⁵⁵ɕau⁵³",
+          "proposals": [
+            {
+              "donor": "中学",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义中学与两音节词形对应，分别保留鼻尾／鼻化记法和学的原调。",
+          "group": "中小学"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "中学",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2521",
+        "wordIds": [
+          "yubao-60823-v-2521"
+        ],
+        "kind": "借词来源",
+        "donor": "中学",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「中学」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsũ⁵⁵ɕiau³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 中学; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-2521",
+          "zh": "中学",
+          "ipa": "tsũ⁵⁵ɕiau³³",
+          "proposals": [
+            {
+              "donor": "中学",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义中学与两音节词形对应，分别保留鼻尾／鼻化记法和学的原调。",
+          "group": "中小学"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "小学",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2520",
+        "wordIds": [
+          "yubao-60756-v-2520"
+        ],
+        "kind": "借词来源",
+        "donor": "小学",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「小学」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɕau⁵⁵ɕau⁵³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 小学; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2520",
+          "zh": "小学",
+          "ipa": "ɕau⁵⁵ɕau⁵³",
+          "proposals": [
+            {
+              "donor": "小学",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "两次 /ɕau/ 在本条分别对应小、学，音同而调值不同；登记义小学与整个词形对应。",
+          "group": "中小学"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "粉末",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1289",
+        "wordIds": [
+          "yubao-60824-v-1289"
+        ],
+        "kind": "借词来源",
+        "donor": "粉",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「粉」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "fẽ⁵⁵fẽ²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 粉; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1289",
+          "zh": "粉末",
+          "ipa": "fẽ⁵⁵fẽ²¹",
+          "proposals": [
+            {
+              "donor": "粉",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "南部粉末、面儿的 /fẽ⁵⁵fẽ²¹/ 为粉的重叠形；面粉复合词只提出末音节粉。",
+          "group": "粉末"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "面儿",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0392",
+        "wordIds": [
+          "yubao-60824-v-0392"
+        ],
+        "kind": "借词来源",
+        "donor": "粉",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「粉」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "fẽ⁵⁵fẽ²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 粉; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0392",
+          "zh": "面儿",
+          "ipa": "fẽ⁵⁵fẽ²¹",
+          "proposals": [
+            {
+              "donor": "粉",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "南部粉末、面儿的 /fẽ⁵⁵fẽ²¹/ 为粉的重叠形；面粉复合词只提出末音节粉。",
+          "group": "粉末"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "面粉",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289710",
+        "wordIds": [
+          "stedt-rn-289710"
+        ],
+        "kind": "借词来源",
+        "donor": "粉",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「粉」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "dʑia¹³mẽ²¹fẽ⁵⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 粉 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-289710",
+          "zh": "面粉",
+          "ipa": "dʑia¹³mẽ²¹fẽ⁵⁵",
+          "proposals": [
+            {
+              "donor": "粉",
+              "span": [
+                3,
+                3
+              ]
+            }
+          ],
+          "reason": "南部粉末、面儿的 /fẽ⁵⁵fẽ²¹/ 为粉的重叠形；面粉复合词只提出末音节粉。",
+          "group": "粉末"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "平地",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1232",
+        "wordIds": [
+          "yubao-60756-v-1232"
+        ],
+        "kind": "借词来源",
+        "donor": "平",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「平」部分（第 3—4 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "pʰɔ³³tʰi³³pʰiŋ⁵⁵pʰiŋ⁵⁵",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 平 component (syllables 3–4) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1232",
+          "zh": "平地",
+          "ipa": "pʰɔ³³tʰi³³pʰiŋ⁵⁵pʰiŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "平",
+              "span": [
+                3,
+                4
+              ]
+            }
+          ],
+          "reason": "末尾 /pʰiŋ⁵⁵pʰiŋ⁵⁵/ 与平坦语义及同点已标平相合，重叠两音节均应单独核对；前两音节未扩大。",
+          "group": "平地"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "说媒",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0528",
+        "wordIds": [
+          "yubao-60756-v-0528"
+        ],
+        "kind": "借词来源",
+        "donor": "媒人",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「媒人」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "me³³zeŋ³³zɿ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 媒人 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0528",
+          "zh": "说媒",
+          "ipa": "me³³zeŋ³³zɿ³³",
+          "proposals": [
+            {
+              "donor": "媒人",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "首两音节与同点媒人 /me³³zeŋ⁵⁵/ 比较；末尾做事成分不纳入，第二音节原为 33 调不改成 55。",
+          "group": "说媒"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "七月十五",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0103",
+        "wordIds": [
+          "yubao-60824-v-0103"
+        ],
+        "kind": "借词来源",
+        "donor": "七月半",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「七月半」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰi²¹jye²¹pã¹³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 七月半; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0103",
+          "zh": "七月十五",
+          "ipa": "tɕʰi²¹jye²¹pã¹³",
+          "proposals": [
+            {
+              "donor": "七月半",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "来源注明农历七月十五的节日；三个音节可比较汉语七月半，末字半的鼻尾／鼻化保留。",
+          "group": "七月半"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "七月十五",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0103",
+        "wordIds": [
+          "yubao-60756-v-0103"
+        ],
+        "kind": "借词来源",
+        "donor": "七月半",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「七月半」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰi³³ʑe⁵⁵paŋ⁵³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 七月半; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0103",
+          "zh": "七月十五",
+          "ipa": "tɕʰi³³ʑe⁵⁵paŋ⁵³",
+          "proposals": [
+            {
+              "donor": "七月半",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "来源注明农历七月十五的节日；三个音节可比较汉语七月半，末字半的鼻尾／鼻化保留。",
+          "group": "七月半"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "正月",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0098",
+        "wordIds": [
+          "yubao-60824-v-0098"
+        ],
+        "kind": "借词来源",
+        "donor": "正月",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「正月」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsẽ³³jye²¹ka²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 正月 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0098",
+          "zh": "正月",
+          "ipa": "tsẽ³³jye²¹ka²¹",
+          "proposals": [
+            {
+              "donor": "正月",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "来源注明农历；前两音节对应正月，词尾 ka 不纳入。",
+          "group": "正月"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "元宵节",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0100",
+        "wordIds": [
+          "yubao-60824-v-0100"
+        ],
+        "kind": "借词来源",
+        "donor": "正月十五",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「正月十五」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsẽ³³jye²¹si¹³wu⁵⁵",
+            "span": [
+              1,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 正月十五; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0100",
+          "zh": "元宵节",
+          "ipa": "tsẽ³³jye²¹si¹³wu⁵⁵",
+          "proposals": [
+            {
+              "donor": "正月十五",
+              "span": [
+                1,
+                4
+              ]
+            }
+          ],
+          "reason": "元宵节条实记 /tsẽ³³jye²¹si¹³wu⁵⁵/，对应正月十五，四个音节均需复核。",
+          "group": "正月十五"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "除夕",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0107",
+        "wordIds": [
+          "yubao-60824-v-0107"
+        ],
+        "kind": "借词来源",
+        "donor": "三十夜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「三十夜」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "sã³³si²¹je³⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 三十夜; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0107",
+          "zh": "除夕",
+          "ipa": "sã³³si²¹je³⁵",
+          "proposals": [
+            {
+              "donor": "三十夜",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "来源注明农历除夕，/sã³³si²¹je³⁵/ 可比较汉语三十夜；不是按除夕两字配音。",
+          "group": "三十夜"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "腊月",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0106",
+        "wordIds": [
+          "yubao-60824-v-0106"
+        ],
+        "kind": "借词来源",
+        "donor": "腊月",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「腊月」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "la²¹jye²¹kã²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 腊月 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0106",
+          "zh": "腊月",
+          "ipa": "la²¹jye²¹kã²¹",
+          "proposals": [
+            {
+              "donor": "腊月",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "来源义农历十二月，前两音节对应腊月；本条多出的 ka 留在范围外。",
+          "group": "腊月"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "十二月",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289463",
+        "wordIds": [
+          "stedt-rn-289463"
+        ],
+        "kind": "借词来源",
+        "donor": "腊月",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「腊月」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "la²¹jye²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 腊月; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-289463",
+          "zh": "十二月",
+          "ipa": "la²¹jye²¹",
+          "proposals": [
+            {
+              "donor": "腊月",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "来源义农历十二月，前两音节对应腊月；本条多出的 ka 留在范围外。",
+          "group": "腊月"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "十一月",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289462",
+        "wordIds": [
+          "stedt-rn-289462"
+        ],
+        "kind": "借词来源",
+        "donor": "冬月",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「冬月」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tõ³³jye²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 冬月; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-289462",
+          "zh": "十一月",
+          "ipa": "tõ³³jye²¹",
+          "proposals": [
+            {
+              "donor": "冬月",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义十一月，/tõ³³jye²¹/ 对应冬月，符合农历月份称呼。",
+          "group": "冬月"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "二月",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289453",
+        "wordIds": [
+          "stedt-rn-289453"
+        ],
+        "kind": "借词来源",
+        "donor": "二月",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「二月」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "h̄aɨ¹³jye²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 二月; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-289453",
+          "zh": "二月",
+          "ipa": "h̄aɨ¹³jye²¹",
+          "proposals": [
+            {
+              "donor": "二月",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "两个音节均为借入；保留各来源中二的原记音。",
+          "group": "二月中的月"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "二月",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1339",
+        "wordIds": [
+          "yubao-60824-v-1339"
+        ],
+        "kind": "借词来源",
+        "donor": "二月",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「二月」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "au¹³jye²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 二月; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1339",
+          "zh": "二月",
+          "ipa": "au¹³jye²¹",
+          "proposals": [
+            {
+              "donor": "二月",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "两个音节均为借入；保留各来源中二的原记音。",
+          "group": "二月中的月"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "香菜",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0202",
+        "wordIds": [
+          "yubao-60824-v-0202"
+        ],
+        "kind": "借词来源",
+        "donor": "芫荽",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「芫荽」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "jyã¹³suei³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 芫荽; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0202",
+          "zh": "香菜",
+          "ipa": "jyã¹³suei³³",
+          "proposals": [
+            {
+              "donor": "芫荽",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "来源备注直接写“芫荽”，/jyã¹³suei³³/ 与该称呼对应，登记义香菜保持原样。",
+          "group": "芫荽"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "肾",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2094",
+        "wordIds": [
+          "yubao-60824-v-2094"
+        ],
+        "kind": "借词来源",
+        "donor": "腰子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「腰子」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "jau⁵⁵tsi²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 腰子; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-2094",
+          "zh": "肾",
+          "ipa": "jau⁵⁵tsi²¹",
+          "proposals": [
+            {
+              "donor": "腰子",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "来源备注直接写“腰子”，原形 /jau⁵⁵tsi²¹/ 与之对应；同点猪腰子条已标腰子，保留本条登记义肾。",
+          "group": "腰子"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "大烟",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1896",
+        "wordIds": [
+          "yubao-60824-v-1896"
+        ],
+        "kind": "借词来源",
+        "donor": "鸦片",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「鸦片」，具体方言来源待核。原调查义为罂粟（植物）。",
+        "reviewedForms": [
+          {
+            "ipa": "ja³³piã¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 鸦片; the specific donor variety remains to be established. The original survey sense is the opium poppy (plant).",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1896",
+          "zh": "大烟",
+          "ipa": "ja³³piã¹³",
+          "proposals": [
+            {
+              "donor": "鸦片",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义大烟，来源备注罂粟、英语 opium poppy；音形可对应鸦片并转指罂粟植物，保留植物义，不改作成品鸦片。",
+          "group": "鸦片"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "花蕾",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0152",
+        "wordIds": [
+          "yubao-60824-v-0152"
+        ],
+        "kind": "借词来源",
+        "donor": "花苞",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「花苞」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xua³³pau³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 花苞; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0152",
+          "zh": "花蕾",
+          "ipa": "xua³³pau³³",
+          "proposals": [
+            {
+              "donor": "花苞",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义花蕾，来源释注花骨朵；实际两音节 /xua³³pau³³/ 应比较花苞，不按花骨朵三个音节配音。",
+          "group": "花苞"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "手电筒",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0360",
+        "wordIds": [
+          "yubao-60756-v-0360"
+        ],
+        "kind": "借词来源",
+        "donor": "电筒",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「电筒」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tiaŋ⁵⁵tʰɔŋ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 电筒; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0360",
+          "zh": "手电筒",
+          "ipa": "tiaŋ⁵⁵tʰɔŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "电筒",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义手电筒，实记两个音节 /tiaŋ⁵⁵tʰɔŋ⁵⁵/，对应常用简称电筒。",
+          "group": "电筒"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "工具",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1846",
+        "wordIds": [
+          "yubao-60756-v-1846"
+        ],
+        "kind": "借词来源",
+        "donor": "家什",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「家什」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕa⁵⁵sɿ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 家什; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1846",
+          "zh": "工具",
+          "ipa": "tɕa⁵⁵sɿ³³",
+          "proposals": [
+            {
+              "donor": "家什",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "工具义与 /tɕa⁵⁵sɿ³³/ 可比较汉语家什；具体地方读法尚需核对。",
+          "group": "家什"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "向日葵",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0189",
+        "wordIds": [
+          "yubao-60756-v-0189"
+        ],
+        "kind": "借词来源",
+        "donor": "太阳花",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「太阳花」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰɛ⁵⁵ʑaŋ⁵⁵xua⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 太阳花; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0189",
+          "zh": "向日葵",
+          "ipa": "tʰɛ⁵⁵ʑaŋ⁵⁵xua⁵⁵",
+          "proposals": [
+            {
+              "donor": "太阳花",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "太阳花是向日葵的通行别称；词首三音节与太、阳、花对应。葵花籽／瓜子儿按来源登记义保留，不补造籽音节；复合词其他成分不纳入。",
+          "group": "太阳花"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "葵花籽",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1432",
+        "wordIds": [
+          "yubao-60756-v-1432"
+        ],
+        "kind": "借词来源",
+        "donor": "太阳花",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「太阳花」部分（第 1—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰɛ⁵⁵ʑaŋ⁵⁵xua⁵⁵pu³³lɛ³³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 太阳花 component (syllables 1–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1432",
+          "zh": "葵花籽",
+          "ipa": "tʰɛ⁵⁵ʑaŋ⁵⁵xua⁵⁵pu³³lɛ³³",
+          "proposals": [
+            {
+              "donor": "太阳花",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "太阳花是向日葵的通行别称；词首三音节与太、阳、花对应。葵花籽／瓜子儿按来源登记义保留，不补造籽音节；复合词其他成分不纳入。",
+          "group": "太阳花"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "葵花",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1449",
+        "wordIds": [
+          "yubao-60756-v-1449"
+        ],
+        "kind": "借词来源",
+        "donor": "太阳花",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「太阳花」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰɛ⁵⁵ʑaŋ⁵⁵xua⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 太阳花; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1449",
+          "zh": "葵花",
+          "ipa": "tʰɛ⁵⁵ʑaŋ⁵⁵xua⁵⁵",
+          "proposals": [
+            {
+              "donor": "太阳花",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "太阳花是向日葵的通行别称；词首三音节与太、阳、花对应。葵花籽／瓜子儿按来源登记义保留，不补造籽音节；复合词其他成分不纳入。",
+          "group": "太阳花"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "向日葵",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0189",
+        "wordIds": [
+          "yubao-60823-v-0189"
+        ],
+        "kind": "借词来源",
+        "donor": "太阳花",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「太阳花」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰã³³ʑiã⁵⁵xua⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 太阳花; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-0189",
+          "zh": "向日葵",
+          "ipa": "tʰã³³ʑiã⁵⁵xua⁵⁵",
+          "proposals": [
+            {
+              "donor": "太阳花",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "太阳花是向日葵的通行别称；词首三音节与太、阳、花对应。葵花籽／瓜子儿按来源登记义保留，不补造籽音节；复合词其他成分不纳入。",
+          "group": "太阳花"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "葵花",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1449",
+        "wordIds": [
+          "yubao-60823-v-1449"
+        ],
+        "kind": "借词来源",
+        "donor": "太阳花",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「太阳花」部分（第 1—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰã³³ʑiã⁵⁵xua⁵⁵kʰa⁵⁵pʰu³³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 太阳花 component (syllables 1–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-1449",
+          "zh": "葵花",
+          "ipa": "tʰã³³ʑiã⁵⁵xua⁵⁵kʰa⁵⁵pʰu³³",
+          "proposals": [
+            {
+              "donor": "太阳花",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "太阳花是向日葵的通行别称；词首三音节与太、阳、花对应。葵花籽／瓜子儿按来源登记义保留，不补造籽音节；复合词其他成分不纳入。",
+          "group": "太阳花"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "葵花籽",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1432",
+        "wordIds": [
+          "yubao-60823-v-1432"
+        ],
+        "kind": "借词来源",
+        "donor": "太阳花",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「太阳花」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰã³³ʑiã⁵⁵xua⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 太阳花; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-1432",
+          "zh": "葵花籽",
+          "ipa": "tʰã³³ʑiã⁵⁵xua⁵⁵",
+          "proposals": [
+            {
+              "donor": "太阳花",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "太阳花是向日葵的通行别称；词首三音节与太、阳、花对应。葵花籽／瓜子儿按来源登记义保留，不补造籽音节；复合词其他成分不纳入。",
+          "group": "太阳花"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "瓜子儿",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2042",
+        "wordIds": [
+          "yubao-60823-v-2042"
+        ],
+        "kind": "借词来源",
+        "donor": "太阳花",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「太阳花」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰã³³ʑiã⁵⁵xua⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 太阳花; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-2042",
+          "zh": "瓜子儿",
+          "ipa": "tʰã³³ʑiã⁵⁵xua⁵⁵",
+          "proposals": [
+            {
+              "donor": "太阳花",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "太阳花是向日葵的通行别称；词首三音节与太、阳、花对应。葵花籽／瓜子儿按来源登记义保留，不补造籽音节；复合词其他成分不纳入。",
+          "group": "太阳花"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "上坟",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0560",
+        "wordIds": [
+          "yubao-60756-v-0560"
+        ],
+        "kind": "借词来源",
+        "donor": "清明",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「清明」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰiŋ⁵⁵miŋ⁵⁵tɕe⁵³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 清明 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0560",
+          "zh": "上坟",
+          "ipa": "tɕʰiŋ⁵⁵miŋ⁵⁵tɕe⁵³",
+          "proposals": [
+            {
+              "donor": "清明",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "上坟条的前两音节 /tɕʰiŋ⁵⁵miŋ⁵⁵/ 对应清明；与本地清明节条的音形及丧葬语义一并核对，后部不扩大。",
+          "group": "清明派生"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "开水",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0065",
+        "wordIds": [
+          "yubao-60756-v-0065"
+        ],
+        "kind": "借词来源",
+        "donor": "开水",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「开水」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰə⁵⁵kʰɛ⁵⁵sui³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 开水 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0065",
+          "zh": "开水",
+          "ipa": "tsʰə⁵⁵kʰɛ⁵⁵sui³³",
+          "proposals": [
+            {
+              "donor": "开水",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "相关水温／烧水名词和短语中有 /kʰɛ／kʰai sui/，对应开水；只覆盖此两音节，不连带水类前缀或动词。",
+          "group": "开水"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "烧开水",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2719",
+        "wordIds": [
+          "yubao-60756-v-2719"
+        ],
+        "kind": "借词来源",
+        "donor": "开水",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「开水」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰɛ⁵⁵sui³³sɿ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 开水 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2719",
+          "zh": "烧开水",
+          "ipa": "kʰɛ⁵⁵sui³³sɿ³³",
+          "proposals": [
+            {
+              "donor": "开水",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "相关水温／烧水名词和短语中有 /kʰɛ／kʰai sui/，对应开水；只覆盖此两音节，不连带水类前缀或动词。",
+          "group": "开水"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "暖水瓶",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0350",
+        "wordIds": [
+          "yubao-60823-v-0350"
+        ],
+        "kind": "借词来源",
+        "donor": "开水",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「开水」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɤ³³kʰai⁵⁵sui³¹tsʰu⁵⁵tsʰɿ⁵⁵",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 开水 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-0350",
+          "zh": "暖水瓶",
+          "ipa": "tsʰɤ³³kʰai⁵⁵sui³¹tsʰu⁵⁵tsʰɿ⁵⁵",
+          "proposals": [
+            {
+              "donor": "开水",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "相关水温／烧水名词和短语中有 /kʰɛ／kʰai sui/，对应开水；只覆盖此两音节，不连带水类前缀或动词。",
+          "group": "开水"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "温水",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1327",
+        "wordIds": [
+          "yubao-60823-v-1327"
+        ],
+        "kind": "借词来源",
+        "donor": "开水",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「开水」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "uɤ̃⁵⁵kʰai⁵³sui³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 开水 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-1327",
+          "zh": "温水",
+          "ipa": "uɤ̃⁵⁵kʰai⁵³sui³³",
+          "proposals": [
+            {
+              "donor": "开水",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "相关水温／烧水名词和短语中有 /kʰɛ／kʰai sui/，对应开水；只覆盖此两音节，不连带水类前缀或动词。",
+          "group": "开水"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "手艺人",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0590",
+        "wordIds": [
+          "yubao-60756-v-0590"
+        ],
+        "kind": "借词来源",
+        "donor": "手艺",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「手艺」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "səu⁵⁵ʑi⁵⁵ɕe³³ma³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 手艺 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0590",
+          "zh": "手艺人",
+          "ipa": "səu⁵⁵ʑi⁵⁵ɕe³³ma³³",
+          "proposals": [
+            {
+              "donor": "手艺",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "手艺人前两音节 /səu⁵⁵ʑi⁵⁵/ 可比较汉语手艺；人称及其他后续成分未扩大。",
+          "group": "手艺"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "理发师",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0594",
+        "wordIds": [
+          "yubao-60824-v-0594"
+        ],
+        "kind": "借词来源",
+        "donor": "剃头匠",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「剃头匠」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰi¹³dʉ³³tɕiã¹³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 剃头匠; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0594",
+          "zh": "理发师",
+          "ipa": "tʰi¹³dʉ³³tɕiã¹³",
+          "proposals": [
+            {
+              "donor": "剃头匠",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "理发师实记 /tʰi¹³dʉ³³tɕiã¹³/，三个音节对应剃头匠。",
+          "group": "剃头匠"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "发汗",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2213",
+        "wordIds": [
+          "yubao-60823-v-2213"
+        ],
+        "kind": "借词来源",
+        "donor": "汗水",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「汗水」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xã¹³sui⁵⁵tsu¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 汗水 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-2213",
+          "zh": "发汗",
+          "ipa": "xã¹³sui⁵⁵tsu¹³",
+          "proposals": [
+            {
+              "donor": "汗水",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "发汗条的前两音节 /xã¹³sui⁵⁵/ 对应汗水，保留鼻化；末音节不纳入。",
+          "group": "汗水"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "年纪",
+      "note": {
+        "id": "chinese-loan-stedt-rn-380264",
+        "wordIds": [
+          "stedt-rn-380264"
+        ],
+        "kind": "借词来源",
+        "donor": "岁",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「岁」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "loŋ²¹sui³⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 岁 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-380264",
+          "zh": "年纪",
+          "ipa": "loŋ²¹sui³⁵",
+          "proposals": [
+            {
+              "donor": "岁",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ],
+          "reason": "北部年纪词形中 /sui³⁵/ 与南部年龄 /suei¹³/ 可比较汉语岁；北部本土年词根 loŋ 保持范围外。",
+          "group": "岁"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "年; 年龄",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289441",
+        "wordIds": [
+          "stedt-rn-289441"
+        ],
+        "kind": "借词来源",
+        "donor": "岁",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「岁」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "suei¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 岁; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-289441",
+          "zh": "年; 年龄",
+          "ipa": "suei¹³",
+          "proposals": [
+            {
+              "donor": "岁",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "北部年纪词形中 /sui³⁵/ 与南部年龄 /suei¹³/ 可比较汉语岁；北部本土年词根 loŋ 保持范围外。",
+          "group": "岁"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "顺利",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2893",
+        "wordIds": [
+          "yubao-60756-v-2893"
+        ],
+        "kind": "借词来源",
+        "donor": "顺坦",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「顺坦」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "sun³³tʰaŋ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 顺坦; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2893",
+          "zh": "顺利",
+          "ipa": "sun³³tʰaŋ³³",
+          "proposals": [
+            {
+              "donor": "顺坦",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "完整命中既有顺坦对照，但顺利的地方汉语对应词仍需确认；不能只据近音排除顺当等其他原词。",
+          "group": "顺利"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "唱丧歌",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2279",
+        "wordIds": [
+          "yubao-60824-v-2279"
+        ],
+        "kind": "借词来源",
+        "donor": "老人歌",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「老人歌」部分（第 1—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "nau⁵⁵zẽ²¹ko³³tsʰo⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 老人歌 component (syllables 1–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-2279",
+          "zh": "唱丧歌",
+          "ipa": "nau⁵⁵zẽ²¹ko³³tsʰo⁵⁵",
+          "proposals": [
+            {
+              "donor": "老人歌",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "/nau⁵⁵zẽ²¹ko³³/ 可按 n／l 对应比较老人歌；还需核实当地葬歌称呼，词尾唱的成分不纳入。",
+          "group": "唱丧歌"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "镜子",
+      "note": {
+        "id": "chinese-loan-w2646",
+        "wordIds": [
+          "w2646"
+        ],
+        "kind": "借词来源",
+        "donor": "照镜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「照镜」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsau²⁴tɕiŋ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          },
+          {
+            "ipa": "tsau³⁵tɕĩ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 照镜; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w2646",
+          "zh": "镜子",
+          "ipa": "tsau²⁴tɕiŋ⁵⁵",
+          "proposals": [
+            {
+              "donor": "照镜",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义镜子，/tsau tɕiŋ／tɕĩ/ 可比较方言名词照镜；须落实具体供体词形，保留各调查点的调值。",
+          "group": "镜子"
+        },
+        {
+          "id": "w2646",
+          "zh": "镜子",
+          "ipa": "tsau³⁵tɕĩ⁵⁵",
+          "proposals": [
+            {
+              "donor": "照镜",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义镜子，/tsau tɕiŋ／tɕĩ/ 可比较方言名词照镜；须落实具体供体词形，保留各调查点的调值。",
+          "group": "镜子"
+        }
+      ],
+      "expectedBadgeScope": "mixed"
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "镜子",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1785",
+        "wordIds": [
+          "yubao-60756-v-1785"
+        ],
+        "kind": "借词来源",
+        "donor": "照镜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「照镜」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsau³³tɕiŋ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 照镜; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1785",
+          "zh": "镜子",
+          "ipa": "tsau³³tɕiŋ³³",
+          "proposals": [
+            {
+              "donor": "照镜",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义镜子，/tsau tɕiŋ／tɕĩ/ 可比较方言名词照镜；须落实具体供体词形，保留各调查点的调值。",
+          "group": "镜子"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "镜子",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289784",
+        "wordIds": [
+          "stedt-rn-289784"
+        ],
+        "kind": "借词来源",
+        "donor": "照镜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「照镜」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsau¹³tɕĩ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 照镜; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "stedt-rn-289784",
+          "zh": "镜子",
+          "ipa": "tsau¹³tɕĩ³³",
+          "proposals": [
+            {
+              "donor": "照镜",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义镜子，/tsau tɕiŋ／tɕĩ/ 可比较方言名词照镜；须落实具体供体词形，保留各调查点的调值。",
+          "group": "镜子"
+        }
+      ],
+      "expectedBadgeScope": "mixed"
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "理发师",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0594",
+        "wordIds": [
+          "yubao-60756-v-0594"
+        ],
+        "kind": "借词来源",
+        "donor": "剃头匠",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「剃头匠」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰi⁵⁵tʰəu⁵⁵tɕaŋ⁵³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 剃头匠; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0594",
+          "zh": "理发师",
+          "ipa": "tʰi⁵⁵tʰəu⁵⁵tɕaŋ⁵³",
+          "proposals": [
+            {
+              "donor": "剃头匠",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "并列第二个词形剃头匠；前一个四音节称呼另列。",
+          "group": "候选边界"
+        }
+      ],
+      "expectedBadgeScope": "mixed"
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "唱歌",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0739-followup",
+        "wordIds": [
+          "yubao-60756-v-0739"
+        ],
+        "kind": "借词来源",
+        "donor": "歌唱",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「歌唱」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɔ³⁵tsʰaŋ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 歌唱; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0739",
+          "zh": "唱歌",
+          "ipa": "kɔ³⁵tsʰaŋ³³",
+          "proposals": [
+            {
+              "donor": "歌唱",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "并列第二个词形歌唱，独立于前一个唱歌。",
+          "group": "候选边界"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "棉衣",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0370",
+        "wordIds": [
+          "yubao-60756-v-0370"
+        ],
+        "kind": "借词来源",
+        "donor": "棉衣／袍子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "两个词形分别借自汉语「棉衣」、「袍子」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "miaŋ³³ʑi³³",
+            "span": [
+              1,
+              2
+            ]
+          },
+          {
+            "ipa": "pʰau³³tsɿ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23",
+        "components": [
+          {
+            "ipa": "miaŋ³³ʑi³³",
+            "donor": "棉衣",
+            "span": [
+              1,
+              2
+            ]
+          },
+          {
+            "ipa": "pʰau³³tsɿ³³",
+            "donor": "袍子",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      "noteEn": "The two forms are borrowed from Chinese 棉衣 and 袍子 respectively; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0370",
+          "zh": "棉衣",
+          "ipa": "miaŋ³³ʑi³³",
+          "proposals": [
+            {
+              "donor": "棉衣",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "两个并列称呼分别为棉衣、袍子，各自为一个词形。",
+          "group": "候选边界"
+        },
+        {
+          "id": "yubao-60756-v-0370",
+          "zh": "棉衣",
+          "ipa": "pʰau³³tsɿ³³",
+          "proposals": [
+            {
+              "donor": "袍子",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "group": "并列词形",
+          "reason": "并列第二个称呼袍子，独立于棉衣。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "夹袄",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1962",
+        "wordIds": [
+          "yubao-60756-v-1962"
+        ],
+        "kind": "借词来源",
+        "donor": "棉衣",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「棉衣」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "miaŋ³³ʑi³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 棉衣; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1962",
+          "zh": "夹袄",
+          "ipa": "miaŋ³³ʑi³³",
+          "proposals": [
+            {
+              "donor": "棉衣",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "夹袄条与棉衣条前段同形，需核对原词和两者语义范围，不改登记义。",
+          "group": "候选边界"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "流氓",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0600",
+        "wordIds": [
+          "yubao-60823-v-0600"
+        ],
+        "kind": "借词来源",
+        "donor": "水里水气",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「水里水气」部分（第 1—4 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "sui⁵⁵li³³sui⁵⁵tɕʰi³¹nie³³no⁵⁵",
+            "span": [
+              1,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 水里水气 component (syllables 1–4) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-0600",
+          "zh": "流氓",
+          "ipa": "sui⁵⁵li³³sui⁵⁵tɕʰi³¹nie³³no⁵⁵",
+          "proposals": [
+            {
+              "donor": "水里水气",
+              "span": [
+                1,
+                4
+              ]
+            }
+          ],
+          "reason": "前四音节 /sui⁵⁵li³³sui⁵⁵tɕʰi³¹/ 可比较水里水气；需当地汉语语义和词形资料，仍不采用错误检索项水泥。",
+          "group": "流氓"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "方向",
+      "note": {
+        "id": "chinese-loan-w910",
+        "wordIds": [
+          "w910"
+        ],
+        "kind": "借词来源",
+        "donor": "方向",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「方向」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "fɛn⁵⁵ɕiɛn⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 方向; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w910",
+          "zh": "方向",
+          "ipa": "fɛn⁵⁵ɕiɛn⁵⁵",
+          "proposals": [
+            {
+              "donor": "方向",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义方向，原始数字调拼写与两音节语音均支持汉语方、向；具体方言来源待核。",
+          "group": "方向"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "皇上",
+      "note": {
+        "id": "chinese-loan-w907",
+        "wordIds": [
+          "w907"
+        ],
+        "kind": "借词来源",
+        "donor": "皇上",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「皇上」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "fɛn²¹saŋ²⁴",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 皇上; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w907",
+          "zh": "皇上",
+          "ipa": "fɛn²¹saŋ²⁴",
+          "proposals": [
+            {
+              "donor": "皇上",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义皇上与两音节词形相合；保持北部原始元音和 21／24 调，不改成普通话读音。",
+          "group": "皇上"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "整齐",
+      "note": {
+        "id": "chinese-loan-w5779",
+        "wordIds": [
+          "w5779"
+        ],
+        "kind": "借词来源",
+        "donor": "整整齐齐",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「整整齐齐」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsɜŋ⁵⁵tsɜŋ⁵⁵tɕʰi²¹tɕʰi²¹",
+            "span": [
+              1,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 整整齐齐; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w5779",
+          "zh": "整齐",
+          "ipa": "tsɜŋ⁵⁵tsɜŋ⁵⁵tɕʰi²¹tɕʰi²¹",
+          "proposals": [
+            {
+              "donor": "整整齐齐",
+              "span": [
+                1,
+                4
+              ]
+            }
+          ],
+          "reason": "四音节为整齐的 AABB 重叠形式；与已标整齐 /tsɜŋ⁵⁵tɕʰi²¹/ 同音同调。整体借入还是借后重叠尚不确定。",
+          "group": "整齐重叠"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "观音",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0564",
+        "wordIds": [
+          "yubao-60756-v-0564"
+        ],
+        "kind": "借词来源",
+        "donor": "观音菩萨",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「观音菩萨」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kuaŋ⁵⁵ʑiŋ⁵⁵pʰu³³sa³³",
+            "span": [
+              1,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 观音菩萨; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0564",
+          "zh": "观音",
+          "ipa": "kuaŋ⁵⁵ʑiŋ⁵⁵pʰu³³sa³³",
+          "proposals": [
+            {
+              "donor": "观音菩萨",
+              "span": [
+                1,
+                4
+              ]
+            }
+          ],
+          "reason": "登记神名与四音节观音菩萨对应；不用错误的近音检索项光荣，借入年代仍待考。",
+          "group": "观音菩萨"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "流浪汉",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2353",
+        "wordIds": [
+          "yubao-60824-v-2353"
+        ],
+        "kind": "借词来源",
+        "donor": "叫花子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「叫花子」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kau¹³xua¹³tsi³³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 叫花子; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-2353",
+          "zh": "流浪汉",
+          "ipa": "kau¹³xua¹³tsi³³",
+          "proposals": [
+            {
+              "donor": "叫花子",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ],
+          "reason": "/kau¹³xua¹³tsi³³/ 可比较叫花子／叫化子；还需当地汉语词形及乞丐、流浪者之间的具体语义核对。",
+          "group": "流浪汉"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "块",
+      "note": {
+        "id": "chinese-loan-w1185",
+        "wordIds": [
+          "w1185"
+        ],
+        "kind": "借词来源",
+        "donor": "块",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「块」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰuai⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 块; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w1185",
+          "zh": "块",
+          "ipa": "kʰuai⁵⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "块",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "快",
+      "note": {
+        "id": "chinese-loan-w1186",
+        "wordIds": [
+          "w1186"
+        ],
+        "kind": "借词来源",
+        "donor": "快",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「快」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰuai²⁴",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 快; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w1186",
+          "zh": "快",
+          "ipa": "kʰuai²⁴",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "快",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "聪明",
+      "note": {
+        "id": "chinese-loan-w788",
+        "wordIds": [
+          "w788"
+        ],
+        "kind": "借词来源",
+        "donor": "乖",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「乖」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kuai⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 乖; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "w788",
+          "zh": "聪明",
+          "ipa": "kuai⁵⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "乖",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "责怪",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0889",
+        "wordIds": [
+          "yubao-60823-v-0889"
+        ],
+        "kind": "借词来源",
+        "donor": "怪",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「怪」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "no⁵⁵kuai¹³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 怪 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-0889",
+          "zh": "责怪",
+          "ipa": "no⁵⁵kuai¹³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "怪",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "责怪",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0889",
+        "wordIds": [
+          "yubao-60824-v-0889"
+        ],
+        "kind": "借词来源",
+        "donor": "怪",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「怪」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kuai¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 怪; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0889",
+          "zh": "责怪",
+          "ipa": "kuai¹³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "怪",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "槐树",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1393",
+        "wordIds": [
+          "yubao-60823-v-1393"
+        ],
+        "kind": "借词来源",
+        "donor": "槐",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「槐」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xuai³³kʰa⁵⁵mu⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 槐 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-1393",
+          "zh": "槐树",
+          "ipa": "xuai³³kʰa⁵⁵mu⁵⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "槐",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "槐树",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1393",
+        "wordIds": [
+          "yubao-60824-v-1393"
+        ],
+        "kind": "借词来源",
+        "donor": "槐",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「槐」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰi³⁵xuai²¹",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 槐 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1393",
+          "zh": "槐树",
+          "ipa": "tsʰi³⁵xuai²¹",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "槐",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "筷子筒",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1821",
+        "wordIds": [
+          "yubao-60824-v-1821"
+        ],
+        "kind": "借词来源",
+        "donor": "筷",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「筷」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰuai³⁵lo²¹dzo³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 筷 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1821",
+          "zh": "筷子筒",
+          "ipa": "kʰuai³⁵lo²¹dzo³⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "筷",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "最",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1164",
+        "wordIds": [
+          "yubao-60756-v-1164"
+        ],
+        "kind": "借词来源",
+        "donor": "最",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「最」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsui³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 最; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1164",
+          "zh": "最",
+          "ipa": "tsui³⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "最",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "对",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1047",
+        "wordIds": [
+          "yubao-60756-v-1047"
+        ],
+        "kind": "借词来源",
+        "donor": "对",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「对」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tui³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 对; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1047",
+          "zh": "对",
+          "ipa": "tui³³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "对",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "脆",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2887",
+        "wordIds": [
+          "yubao-60756-v-2887"
+        ],
+        "kind": "借词来源",
+        "donor": "脆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「脆」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰui⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 脆; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2887",
+          "zh": "脆",
+          "ipa": "tsʰui⁵⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "脆",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "脆",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2887",
+        "wordIds": [
+          "yubao-60823-v-2887"
+        ],
+        "kind": "借词来源",
+        "donor": "脆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「脆」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰui³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 脆; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-2887",
+          "zh": "脆",
+          "ipa": "tsʰui³³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "脆",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蛔虫",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1635",
+        "wordIds": [
+          "yubao-60756-v-1635"
+        ],
+        "kind": "借词来源",
+        "donor": "蛔虫",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「蛔虫」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xui³³tɕʰɔŋ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 蛔虫; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1635",
+          "zh": "蛔虫",
+          "ipa": "xui³³tɕʰɔŋ³³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "蛔虫",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "土匪",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2325",
+        "wordIds": [
+          "yubao-60756-v-2325"
+        ],
+        "kind": "借词来源",
+        "donor": "土匪",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「土匪」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰu⁵³xui³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 土匪; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2325",
+          "zh": "土匪",
+          "ipa": "tʰu⁵³xui³³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "土匪",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "犯法",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2651",
+        "wordIds": [
+          "yubao-60756-v-2651"
+        ],
+        "kind": "借词来源",
+        "donor": "犯罪",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「犯罪」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xuaŋ³³tsui³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 犯罪; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2651",
+          "zh": "犯法",
+          "ipa": "xuaŋ³³tsui³³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "犯罪",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "推刨",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1849",
+        "wordIds": [
+          "yubao-60756-v-1849"
+        ],
+        "kind": "借词来源",
+        "donor": "推刨",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「推刨」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰui⁵⁵pʰɔ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 推刨; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1849",
+          "zh": "推刨",
+          "ipa": "tʰui⁵⁵pʰɔ⁵⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "推刨",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "推刨",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1849",
+        "wordIds": [
+          "yubao-60823-v-1849"
+        ],
+        "kind": "借词来源",
+        "donor": "推刨",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「推刨」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰa³³tʰui⁵⁵pʰau⁵⁵",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 推刨 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-1849",
+          "zh": "推刨",
+          "ipa": "kʰa³³tʰui⁵⁵pʰau⁵⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "推刨",
+              "span": [
+                2,
+                3
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "木料",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1744",
+        "wordIds": [
+          "yubao-60756-v-1744"
+        ],
+        "kind": "借词来源",
+        "donor": "料",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「料」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "liau³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 料; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1744",
+          "zh": "木料",
+          "ipa": "liau³⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "料",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "木料",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1744",
+        "wordIds": [
+          "yubao-60824-v-1744"
+        ],
+        "kind": "借词来源",
+        "donor": "料",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「料」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰo³⁵liau¹³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 料 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1744",
+          "zh": "木料",
+          "ipa": "kʰo³⁵liau¹³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "料",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "沤肥",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2421",
+        "wordIds": [
+          "yubao-60756-v-2421"
+        ],
+        "kind": "借词来源",
+        "donor": "肥料",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「肥料」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xui³³liau³⁵əu⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 肥料 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-2421",
+          "zh": "沤肥",
+          "ipa": "xui³³liau³⁵əu⁵⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "肥料",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "沤肥",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2421",
+        "wordIds": [
+          "yubao-60824-v-2421"
+        ],
+        "kind": "借词来源",
+        "donor": "肥料",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「肥料」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "fei²¹liau¹³dʉ²¹bʉ¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 肥料 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-2421",
+          "zh": "沤肥",
+          "ipa": "fei²¹liau¹³dʉ²¹bʉ¹³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "肥料",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "寺庙",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0566",
+        "wordIds": [
+          "yubao-60756-v-0566"
+        ],
+        "kind": "借词来源",
+        "donor": "庙",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「庙」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "miau³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 庙; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-0566",
+          "zh": "寺庙",
+          "ipa": "miau³⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "庙",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "寺庙",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0566",
+        "wordIds": [
+          "yubao-60823-v-0566"
+        ],
+        "kind": "借词来源",
+        "donor": "庙",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「庙」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "miau¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 庙; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60823-v-0566",
+          "zh": "寺庙",
+          "ipa": "miau¹³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "庙",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "寺庙",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0566",
+        "wordIds": [
+          "yubao-60824-v-0566"
+        ],
+        "kind": "借词来源",
+        "donor": "庙",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「庙」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "miau¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 庙; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-0566",
+          "zh": "寺庙",
+          "ipa": "miau¹³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "庙",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "碉楼",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1728",
+        "wordIds": [
+          "yubao-60756-v-1728"
+        ],
+        "kind": "借词来源",
+        "donor": "碉堡",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「碉堡」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tiau⁵⁵pau³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 碉堡; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60756-v-1728",
+          "zh": "碉楼",
+          "ipa": "tiau⁵⁵pau³³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "碉堡",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "碉楼",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1728",
+        "wordIds": [
+          "yubao-60824-v-1728"
+        ],
+        "kind": "借词来源",
+        "donor": "碉堡",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「碉堡」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tiau³³pau³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 碉堡; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1728",
+          "zh": "碉楼",
+          "ipa": "tiau³³pau³³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "碉堡",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "调羮",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1812",
+        "wordIds": [
+          "yubao-60824-v-1812"
+        ],
+        "kind": "借词来源",
+        "donor": "调羹",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「调羹」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰiau¹³kẽ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 调羹; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1812",
+          "zh": "调羮",
+          "ipa": "tʰiau¹³kẽ³³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "调羹",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "鱼鳔",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1661",
+        "wordIds": [
+          "yubao-60824-v-1661"
+        ],
+        "kind": "借词来源",
+        "donor": "鳔",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「鳔」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "si²¹ŋɨ²¹piau⁵⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 鳔 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1661",
+          "zh": "鱼鳔",
+          "ipa": "si²¹ŋɨ²¹piau⁵⁵",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "鳔",
+              "span": [
+                3,
+                3
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "浇水",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2418",
+        "wordIds": [
+          "yubao-60824-v-2418"
+        ],
+        "kind": "借词来源",
+        "donor": "浇",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「浇」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰe³⁵tɕiau³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "The 浇 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-2418",
+          "zh": "浇水",
+          "ipa": "tsʰe³⁵tɕiau³³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "浇",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "焦",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2880",
+        "wordIds": [
+          "yubao-60824-v-2880"
+        ],
+        "kind": "借词来源",
+        "donor": "焦",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「焦」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiau²¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 焦; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-2880",
+          "zh": "焦",
+          "ipa": "tɕiau²¹",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "焦",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "最",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1164",
+        "wordIds": [
+          "yubao-60824-v-1164"
+        ],
+        "kind": "借词来源",
+        "donor": "最",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「最」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsuei¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 最; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1164",
+          "zh": "最",
+          "ipa": "tsuei¹³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "最",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "对",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1047",
+        "wordIds": [
+          "yubao-60824-v-1047"
+        ],
+        "kind": "借词来源",
+        "donor": "对",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「对」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tuei¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Chinese 对; the specific donor variety remains to be established.",
+      "lexicalDecisions": [
+        {
+          "id": "yubao-60824-v-1047",
+          "zh": "对",
+          "ipa": "tuei¹³",
+          "group": "韵母补充",
+          "proposals": [
+            {
+              "donor": "对",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ],
+          "reason": "登记义与所选音节支持具体汉语原词；仍需逐点核对供体音形和借入时层，未凭韵母比例直接标注。"
+        }
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "action": "correct-donor",
+      "zh": "学校",
+      "before": {
+        "id": "chinese-loan-yubao-60824-v-0718",
+        "wordIds": [
+          "yubao-60824-v-0718"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话或湘语「学堂」。",
+        "donor": "学堂",
+        "donorVariety": "西南官话或湘语",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "ɕio¹³dã³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      },
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0718",
+        "wordIds": [
+          "yubao-60824-v-0718"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话或湘语「校堂」。",
+        "donor": "校堂",
+        "donorVariety": "西南官话或湘语",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "ɕio¹³dã³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 校堂."
+    },
+    {
+      "action": "correct-donor",
+      "zh": "教室",
+      "before": {
+        "id": "chinese-loan-yubao-60824-v-0719",
+        "wordIds": [
+          "yubao-60824-v-0719"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话或湘语「学堂」。",
+        "donor": "学堂",
+        "donorVariety": "西南官话或湘语",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "ɕio¹³dã³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      },
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0719",
+        "wordIds": [
+          "yubao-60824-v-0719"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话或湘语「校堂」。",
+        "donor": "校堂",
+        "donorVariety": "西南官话或湘语",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "ɕio¹³dã³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Southwestern Mandarin or Xiang 校堂."
+    },
+    {
+      "action": "separate-parallel-form",
+      "zh": "唱歌",
+      "before": {
+        "id": "chinese-loan-yubao-60756-v-0739",
+        "wordIds": [
+          "yubao-60756-v-0739"
+        ],
+        "kind": "借词来源",
+        "text": "「唱歌」部分（第 1—2 音节）可能借自西南官话。",
+        "donor": "唱歌",
+        "donorVariety": "西南官话",
+        "scope": "component",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰaŋ³³kɔ³³ kɔ³⁵tsʰaŋ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      },
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0739",
+        "wordIds": [
+          "yubao-60756-v-0739"
+        ],
+        "kind": "借词来源",
+        "text": "借自西南官话「唱歌」。",
+        "donor": "唱歌",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰaŋ³³kɔ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "hotcell-confirmed-2026-10-23"
+      },
+      "noteEn": "Borrowed from Southwestern Mandarin 唱歌."
+    }
+  ],
+  "parallelForms": {
+    "yubao-60756-v-0594": {
+      "raw": "khu53pa33thi33ma33 thi55thəu55tɕaŋ53",
+      "forms": [
+        "kʰu⁵³pa³³tʰi³³ma³³",
+        "tʰi⁵⁵tʰəu⁵⁵tɕaŋ⁵³"
+      ]
+    },
+    "yubao-60756-v-0739": {
+      "raw": "tshaŋ33kɔ33 kɔ35tshaŋ33",
+      "forms": [
+        "tsʰaŋ³³kɔ³³",
+        "kɔ³⁵tsʰaŋ³³"
+      ]
+    },
+    "yubao-60756-v-0370": {
+      "raw": "miaŋ33ʑi33 phau33tsɿ33",
+      "forms": [
+        "miaŋ³³ʑi³³",
+        "pʰau³³tsɿ³³"
+      ]
+    }
+  },
+  "acceptedReviewRows": 138,
+  "limits": [
+    "Original survey attestations, IPA segments, tones and glosses are retained.",
+    "校堂 applies to the reviewed school/学堂 forms; 学 in 中学 and 小学 remains 学.",
+    "The first four-syllable barber term remains independently unannotated.",
+    "Grammatical liao, ruan/suan, setu, xilan and other established exclusions remain in force.",
+    "No website or PR QA is run for this revision."
+  ]
+}

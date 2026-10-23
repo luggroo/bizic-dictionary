@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "scope": "Screening constraints, not a native-word training set. Entry aliases resolve before scoring; rejected donors and component boundaries apply separately. Later linguistic review is required to revise these constraints.",
   "setuScope": "Exclude the five setu-family entries and their merged aliases. The distinct Southern sītī /si⁵⁵tʰi⁵⁵/ is not part of this exclusion.",
   "rules": [
@@ -978,6 +978,1400 @@
           ]
         }
       ]
+    },
+    {
+      "id": "yubao-60823-v-2239",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w1187",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w1188",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-0962",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-1293",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-288842",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-454229",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-0334",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60823-v-0962",
+      "policy": "retain-review",
+      "family": "uai-deferred",
+      "reason": "uai 审核暂缓；与伤痕、挂、椅子、瘦、金及同根调查形式对应，不能仅据高借入比例标注。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w1192",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-363610",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-288598",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-0242",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-289274",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-289384",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60823-v-0074",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60823-v-0075",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-2866",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "yubao-60757-v-1178",
+      "policy": "exclude-entry",
+      "family": "uai-native",
+      "reason": "明确排除的 uai 固有词及直接对应形式；不按韵母整体推定借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w29",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "-tuɔ²¹liau²¹",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w371",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰa²⁴liau⁵¹",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-455053",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "liau⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-408831",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tʰi²¹ liau²¹",
+          "span": [
+            2,
+            2
+          ]
+        },
+        {
+          "ipa": "tʰi²¹liau²¹",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-404413",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "jie³⁵liau⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-407684",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "xa²¹mo²¹ kʰua⁵⁵liau⁵⁵",
+          "span": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-428086",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "zu²¹liau⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0026",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "mɤe³³tsɤ⁵⁵zɿ³¹liau¹³",
+          "span": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0554",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "sɿ¹³sɿ⁵⁵liau¹³",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0697",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tʰũ³³tɕʰiã³¹zɿ³³liau¹³",
+          "span": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0701",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "ta³³ɕi³¹zɿ⁵⁵liau¹³",
+          "span": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1033",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "ɕi¹³la⁵⁵zɿ³³liau³³",
+          "span": [
+            4,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1034",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "ɕi¹³la⁵⁵pu⁵⁵tsʰɿ⁵⁵liau⁵⁵",
+          "span": [
+            5,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2640",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tɕʰi⁵⁵liau⁵⁵ɕie³³",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2651",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "xuai³³liau⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2646",
+      "policy": "exclude-component",
+      "family": "grammatical-liao",
+      "reason": "完成体／结果表达中的 liao 不标借入；其他词汇性成分独立审核。“完了”“不得了”另按明确词汇判断处理。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰo³³liau⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2526",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "jɛn²¹kuɔ²⁴tsʰɤ²¹",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2529",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "jɛn⁵¹tɕi²¹luɔ⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w4263",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lau²⁴tsɨ⁵⁵fɛn⁵⁵",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-454173",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰuɔ⁵¹jɛn²¹ku²⁴",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w505",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰuɔ⁵¹jɛn²¹ku²⁴",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2525",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "jɛn²¹ku²⁴",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1319",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lei⁵⁵fɛn⁵⁵laŋ⁵⁵",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-455264",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lai²⁴fɛn²¹lai²⁴fɛn²¹",
+          "span": [
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1277",
+      "policy": "exclude-component",
+      "family": "en-open-exception",
+      "reason": "ɛn 例外及同根成分，不从该韵母的高借入比例反推近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lai²⁴fɛn²¹lai²⁴fɛn²¹ɣɨ²⁴",
+          "span": [
+            1,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2532",
+      "policy": "exclude-entry",
+      "family": "early-key",
+      "reason": "早期借词；单独保留词源注，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w1323",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lɜŋ²⁴paŋ⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1324",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lɜŋ²⁴kou⁵⁵tsɨ⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1326",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lɜŋ²⁴sai⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        },
+        {
+          "ipa": "lən³⁵sai⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-180564",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lan³⁵pin⁵⁵tsi⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-288459",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lã³⁵kɨu⁵⁵tsi⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-288463",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lẽ³⁵sai⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-345864",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lən³⁵pin⁵⁵tsi⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-289400",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "su²¹su²¹lẽ¹³",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-289404",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "su²¹su²¹lẽ¹³pʰaɨ¹³tsi³³",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0014",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lən²⁴kəu⁵⁵tsɿ⁵³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0015",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lɘn²⁴sai⁵⁵pu²⁴li⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0014",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "leŋ³³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-1222",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "leŋ³³paŋ³³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1222",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lɤ̃¹³pã⁵⁵tsɿ³³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-0014",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lẽ³⁵kẽ²¹tsi⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-1222",
+      "policy": "exclude-component",
+      "family": "ice-loan-undated",
+      "reason": "冰相关 len 词根借自湘语或西南官话，时代未定，不标近代借词。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "nẽ¹³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2495",
+      "policy": "retain-review",
+      "family": "inherited-lexical-exclusion",
+      "reason": "卯，原注“属兔”；继承野兔词根排除。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "stedt-rn-384071",
+      "policy": "retain-review",
+      "family": "inherited-lexical-exclusion",
+      "reason": "兔年；继承野兔词根排除。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w2634",
+      "policy": "retain-review",
+      "family": "inherited-lexical-exclusion",
+      "reason": "节约，与暂不标注的节俭近义同形组一并暂缓。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json"
+    },
+    {
+      "id": "w1948",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "zuɛn²⁴",
+          "span": [
+            1,
+            1
+          ]
+        },
+        {
+          "ipa": "zuan³⁵",
+          "span": [
+            1,
+            1
+          ]
+        },
+        {
+          "ipa": "zuã³⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2173",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "suɛn⁵¹",
+          "span": [
+            1,
+            1
+          ]
+        },
+        {
+          "ipa": "suan⁵³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-289206",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "suã⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0936",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "suan³³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1215",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "mɘ²⁴tsɘ²²suan⁵⁵",
+          "span": [
+            3,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1675",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "zua²⁴",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-1675",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "zuaŋ³⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1675",
+      "policy": "exclude-component",
+      "family": "native-ruan-suan",
+      "reason": "保护 ruan 水牛、suan 小及其跨点对应和复合词中的同根成分；不与汉语算、蒜等按近音合并。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "zuã¹³",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-1811",
+      "policy": "exclude-component",
+      "family": "native-pot",
+      "reason": "锅刷前两音节对应既有的锅词根，不采用“大锅”现代汉语原词分析；仅后两音节刷把计借入。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tʉ²¹kʉ²¹sua²¹pa²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1247",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1248",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹kʰa⁵⁵ma⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1249",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹kʰa⁵⁵sɨ⁵⁵pa⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1250",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹ tʰɔŋ²⁴",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1251",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹wɔ⁵¹tʰa²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1252",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹ ɕiɛn²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w4173",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵miŋ²¹",
+          "span": [
+            1,
+            2
+          ]
+        },
+        {
+          "ipa": "la⁵⁵min²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-453968",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɜŋ²¹kʰa⁵⁵ma⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-288734",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi²¹",
+          "span": [
+            1,
+            2
+          ]
+        },
+        {
+          "ipa": "la⁵⁵mĩ²¹",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0312",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la³³mən³³tsʰɿ³³pa³³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0313",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la³³mən³³tʰɘn²⁴tʰɘn³³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1376",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵men²²ka²²",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1736",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵men³³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1738",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɘn³³tʰa²²",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-1751",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɘn²²",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2621",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mɘn³³tʰuŋ²⁴",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2622",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mən³³ɕie²⁴",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0312",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi⁵⁵tɕʰi⁵³pa³³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0313",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi⁵⁵tɕi³¹kʰa¹³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1736",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "lã⁵⁵mi⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1737",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsai¹³sã⁵⁵nie³³lã⁵⁵mi⁵⁵",
+          "span": [
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2621",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi⁵⁵ tʰũ¹³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2622",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi⁵⁵ ɕie¹³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2778",
+      "policy": "exclude-component",
+      "family": "door-lamen-not-modern",
+      "reason": "la-men／la-min“门”及有直接词形依据的对应形式不标近代借入；保护该词根范围，其他成分独立审核。",
+      "origin": "docs/loan-rime-followup-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "la⁵⁵mi⁵⁵suã⁵⁵",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
     }
   ],
   "phonologicalComparison": {
@@ -992,5 +2386,10 @@
       "n-l-onset"
     ],
     "effect": "Secondary candidate retrieval only. n/l comparison applies to onsets; Northern palatal n is compared before i/y. Original consonants, syllabic nasals, codas, aspiration, nasality and tones remain distinct in source data and classifier features."
+  },
+  "doorShapePolicy": {
+    "review": "docs/loan-rime-followup-2026-10-23.json",
+    "exceptionFamily": "door-lamen-not-modern",
+    "scope": "Exclude only reviewed la-men/la-min correspondences; other reviewed 门 components are loans."
   }
 }

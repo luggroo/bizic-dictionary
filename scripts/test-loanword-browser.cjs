@@ -4,7 +4,9 @@ const base=process.env.BASE_URL;if(!base)throw Error('Set BASE_URL to a prepared
 const review=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-phonotactic-review-2026-10-23.json')));
 const adaptation=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-adaptation-review-2026-10-23.json')));
 const nl=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-nl-review-2026-10-23.json')));
-review.decisions.push(...adaptation.decisions,...nl.decisions);
+const rimes=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-rime-followup-2026-10-23.json')));
+const hotcell=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-hotcell-confirmed-2026-10-23.json')));
+review.decisions.push(...adaptation.decisions,...nl.decisions,...rimes.decisions.filter(d=>d.note.id.startsWith('chinese-loan-')),...rimes.corrections,...hotcell.decisions,...hotcell.corrections);
 const guards=['stedt-rn-353352','yubao-60756-v-2277','yubao-60757-v-2277','yubao-60823-v-2277','w1449','yubao-60756-v-0691',...adaptation.excluded.map(w=>w.id),'yubao-60757-v-2988','w2438'];
 (async()=>{
  const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_EXECUTABLE,args:['--no-sandbox']});
@@ -14,10 +16,10 @@ const guards=['stedt-rn-353352','yubao-60756-v-2277','yubao-60757-v-2277','yubao
   await page.goto(base+'#words');await page.waitForFunction(()=>typeof D!=='undefined'&&D&&D.words.length);
   for(const language of ['zh','en']){
    await page.evaluate(language=>TujiaUI.setLanguage(language),language);
-   for(const {note,noteEn} of review.decisions){
+   for(const {note,noteEn,expectedBadgeScope} of review.decisions){
     const id=note.wordIds[0];await page.evaluate(id=>openPreparedDetail(id),id);
     await page.waitForSelector('dialog[open] #detail-body h1');
-    assert.equal(await page.locator('#detail-body .word-metadata .loan-badge').getAttribute('data-loan-scope'),note.scope,id);
+    assert.equal(await page.locator('#detail-body .word-metadata .loan-badge').getAttribute('data-loan-scope'),expectedBadgeScope||note.scope,id);
     assert((await page.locator('#detail-body .editorial-notes').innerText()).includes(language==='en'?noteEn:note.text),id+' translated note');
     const original=await page.evaluate(id=>JSON.stringify(W[id].attestations),id);
     const area=id.includes('60824')?'south':'north',modes=area==='south'?['accent','poj']:['accent','ye'];
@@ -26,7 +28,7 @@ const guards=['stedt-rn-353352','yubao-60756-v-2277','yubao-60757-v-2277','yubao
      assert.equal(await page.evaluate(id=>JSON.stringify(W[id].attestations),id),original,id+' source after spelling change');
     }
     const filterResult=await page.evaluate(id=>{const saved=state;state={...DEFAULT_STATE,view:'words',hideWholeLoans:true};const result=wordMatches(W[id]);state=saved;return result},id);
-    assert.equal(filterResult,note.scope!=='whole',id+' whole-loan filter');
+    assert.equal(filterResult,(expectedBadgeScope||note.scope)!=='whole',id+' whole-loan filter');
     await page.locator('#close').click();
    }
    for(const id of guards){

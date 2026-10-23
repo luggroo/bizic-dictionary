@@ -42,6 +42,12 @@ function dialectMatches(item){return !state.dialect||dialectTags(item).has(state
 function wordVarietyInfo(w){const tags=dialectTags(w),loc=String(w.location||'').trim();if(tags.has('保靖阳朝'))return {label:'北部 · 保靖阳朝',kind:'yangchao'};if(tags.has('保靖碗米坡'))return {label:'北部 · 保靖碗米坡',kind:'wanmipo'};if(tags.has('保靖'))return {label:loc||'保靖',kind:'baojing'};if(tags.has('龙山')||tags.has('北部'))return {label:'北部 · 龙山',kind:'longshan'};if(tags.has('南部'))return {label:'南部 · 泸溪潭溪',kind:'south'};return {label:loc||w.dialect||'未标明',kind:'other'}}
 function wordVarietyPill(w){const v=wordVarietyInfo(w);return `<span class="pill variety-pill variety-${v.kind}">${E(v.label)}</span>`}
 function corpusCitation(c){return [c.title,S[c.source]?.title,'编号 '+c.code,c.page?'PDF 第 '+c.page+' 页':'',S[c.source]?.url,S[c.audio]?.url?'录音：'+S[c.audio].url:''].filter(Boolean).join('；')}
+// Parallel lexical alternatives recorded together; spaces elsewhere retain their phrase meaning.
+const YUBAO_PARALLEL_FORMS={
+ 'yubao-60756-v-0594':['khu53pa33thi33ma33','thi55thəu55tɕaŋ53'],
+ 'yubao-60756-v-0739':['tshaŋ33kɔ33','kɔ35tshaŋ33'],
+ 'yubao-60756-v-0370':['miaŋ33ʑi33','phau33tsɿ33']
+};
 async function loadYubao(data){
  const manifest=await fetch('yubao-manifest.json').then(r=>{if(!r.ok)throw Error('Survey manifest unavailable');return r.json()});
  const parts=await Promise.all(manifest.map(f=>fetch(f).then(r=>{if(!r.ok)throw Error('Survey data unavailable');return r.json()})));
@@ -63,9 +69,16 @@ async function loadYubao(data){
    if(correction)a.correctedTerm=correction.corrected;
    const key=source+'|'+zh+'|'+ipa.replace(/\s/g,'');
    if(seen.has(key)){const w=seen.get(key);w.attestations.push(a);if(!w.glosses.includes(en))w.glosses.push(en);w.notations.ipa[0].attestationIds.push(id);data.wordAliases[id]=w.id;continue}
-   const w={...a,term:ipa,location:p.location,attestations:[a],sourceIds:[source],schemes:['IPA'],dialects:[p.dialect],collections:['中国语保'],positions:[''],categories:[''],forms:[ipa,raw],glosses:[en],zhVariants:[zh],notations:{ye:[],brassett:[],accent:[],ipa:[{text:ipa,method:'source',profile:source,attestationIds:[id]}]}};
+   const parallel=YUBAO_PARALLEL_FORMS[id],rawForms=parallel||[raw],ipaForms=parallel?rawForms.map(form=>surveyIPA(form,p.point)):[ipa];
+   const w={...a,term:ipaForms.join(' ~ '),location:p.location,attestations:[a],sourceIds:[source],schemes:['IPA'],dialects:[p.dialect],collections:['中国语保'],positions:[''],categories:[''],forms:parallel?[...new Set([...ipaForms,...rawForms,raw])]:[ipa,raw],glosses:[en],zhVariants:[zh],notations:{ye:[],brassett:[],accent:[],ipa:ipaForms.map(text=>({text,method:'source',profile:source,attestationIds:[id]}))}};
+   if(parallel)w.parallelFormReview={method:'editorial-segmentation',parts:[...parallel]};
    if(correction)w.notations.ipa[0].method='editorial-correction';
-   if(['60756','60757','60823'].includes(p.point)){const converted=northernSurveySpelling(raw,p.point);if(converted){w.notations.ye=[{text:converted.ye,accent:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id]}];w.notations.accent=[{text:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id]}]}}
+   if(['60756','60757','60823'].includes(p.point))for(const [index,form] of rawForms.entries()){
+    const converted=northernSurveySpelling(form,p.point);if(!converted)continue;
+    const pairing=parallel?{ipaForms:[ipaForms[index]]}:{};
+    w.notations.ye.push({text:converted.ye,accent:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id],...pairing});
+    w.notations.accent.push({text:converted.accent,method:'user-reviewed',profile:source,attestationIds:[id],...pairing});
+   }
    data.words.push(w);seen.set(key,w);
   }
   for(const [serial,zh,raw,annotation] of p.sentences){const ipa=surveyIPA(raw,p.point);data.corpus.push({id:source+'-s-'+serial,source,survey:true,code:serial,title:zh,ipa,text:zh+'\n/'+ipa+'/',annotation,locations:[p.location],people:[],genre:'调查例句',dialect:p.dialect,audio:'',page:null})}
