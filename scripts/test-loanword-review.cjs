@@ -92,7 +92,8 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  vm.runInContext('state.hideWholeLoans=false',c);
  const screening=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-phonotactic-review-2026-10-23.json'),'utf8'));
  const adaptation=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-adaptation-review-2026-10-23.json'),'utf8'));
- screening.decisions.push(...adaptation.decisions);
+ const nl=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-nl-review-2026-10-23.json'),'utf8'));
+ screening.decisions.push(...adaptation.decisions,...nl.decisions);
  for(const {note,noteEn} of screening.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
   assert.equal(JSON.stringify(actual),JSON.stringify(note),note.id+' reviewed form and scope');
@@ -107,6 +108,13 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
   const w=get(rule.id);assert(w,rule.id+' constraint resolves merged alias');
   if(rule.policy==='exclude-entry')assert.equal(c.modernChineseLoanBadge(w),'',rule.id+' explicit exclusion');
   if(rule.policy==='reject-donor')assert(!c.editorialNotesFor(w).some(n=>n.donor===rule.donor),rule.id+' rejected donor');
+  if(rule.policy==='exclude-component')for(const nativeForm of rule.reviewedForms){
+   for(const note of c.editorialNotesFor(w).filter(n=>n.id.startsWith('chinese-loan-')))for(const loanForm of note.reviewedForms||[]){
+    if(!c.loanIPAForms(nativeForm.ipa).some(ipa=>c.loanIPAForms(loanForm.ipa).includes(ipa)))continue;
+    const [a,b]=nativeForm.span,[x,y]=loanForm.span;
+    assert(!(x<=b&&y>=a),rule.id+' native xilan component must not be annotated');
+   }
+  }
  }
  for(const id of ['stedt-rn-353352','yubao-60756-v-2277','yubao-60757-v-2277','yubao-60823-v-2277','w1449'])assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' setu family excluded');
  assert.equal(c.modernChineseLoanInfo(get('yubao-60824-v-2277')).scope,'whole','distinct Southern siti is outside setu exclusion');
@@ -116,7 +124,8 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
   for(const alias of row.aliases)assert.equal(c.modernChineseLoanBadge(get(alias)),'',alias+' exclusion survives merging');
  }
  for(const id of ['w2335','w5408','w6901','stedt-rn-457979'])assert(c.editorialNotesFor(get(id)).some(n=>n.donor==='团员'),id+' 团员 donor survives merging');
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2991);
+ for(const id of ['yubao-60757-v-2988','w2438'])assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' xilan stays unmarked');
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996);
  const componentsFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-components-followup-2026-10-23.json'),'utf8'));
  for(const {note} of componentsFollowup.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);

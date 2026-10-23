@@ -62513,6 +62513,13 @@ EDITORIAL_NOTES.push(
 {"id":"chinese-loan-yubao-60756-v-1271","wordIds":["yubao-60756-v-1271"],"kind":"借词来源","donor":"草原","donorVariety":"汉语（方言待核）","scope":"whole","text":"可能借自汉语「草原」，具体方言来源待核。","reviewedForms":[{"ipa":"tsʰau⁵⁵ʑaŋ⁵⁵","span":[1,2]}],"reviewBatch":"adaptation-followup-2026-10-23"},
 {"id":"chinese-loan-yubao-60756-v-2904","wordIds":["yubao-60756-v-2904"],"kind":"借词来源","donor":"麻烦","donorVariety":"汉语（方言待核）","scope":"whole","text":"可能借自汉语「麻烦」，具体方言来源待核。","reviewedForms":[{"ipa":"ma³³xuaŋ³³","span":[1,2]}],"reviewBatch":"adaptation-followup-2026-10-23"}
 );
+EDITORIAL_NOTES.push(
+{"id":"chinese-loan-stedt-rn-43419","wordIds":["stedt-rn-43419"],"kind":"借词来源","donor":"聋","donorVariety":"汉语（方言待核）","scope":"component","text":"「聋」部分（第 1 音节）可能借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"nõ⁵⁵ tʰũ⁵⁵","span":[1,1]}],"reviewBatch":"n-l-followup-2026-10-23"},
+{"id":"chinese-loan-yubao-60824-v-1732","wordIds":["yubao-60824-v-1732"],"kind":"借词来源","donor":"梁","donorVariety":"汉语（方言待核）","scope":"component","text":"「梁」部分（第 1 音节）可能借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"niã¹³mu³³","span":[1,1]}],"reviewBatch":"n-l-followup-2026-10-23"},
+{"id":"chinese-loan-yubao-60823-v-1368","wordIds":["yubao-60823-v-1368"],"kind":"借词来源","donor":"南","donorVariety":"汉语（方言待核）","scope":"component","text":"「南」部分（第 1 音节）可能借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"nã³³xuã⁵⁵","span":[1,1]}],"reviewBatch":"n-l-followup-2026-10-23"},
+{"id":"chinese-loan-yubao-60824-v-1368","wordIds":["yubao-60824-v-1368"],"kind":"借词来源","donor":"南","donorVariety":"汉语（方言待核）","scope":"whole","text":"可能借自汉语「南」，具体方言来源待核。","reviewedForms":[{"ipa":"nã²¹","span":[1,1]}],"reviewBatch":"n-l-followup-2026-10-23"},
+{"id":"chinese-loan-yubao-60824-v-2296","wordIds":["yubao-60824-v-2296"],"kind":"借词来源","donor":"仙娘","donorVariety":"汉语（方言待核）","scope":"whole","text":"可能借自汉语「仙娘」（女巫），具体方言来源待核。","reviewedForms":[{"ipa":"ɕiã³³niã²¹","span":[1,2]}],"reviewBatch":"n-l-followup-2026-10-23"}
+);
 // Index source IDs once; list filtering visits every merged entry.
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){

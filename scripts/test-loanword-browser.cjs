@@ -3,8 +3,9 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=r
 const base=process.env.BASE_URL;if(!base)throw Error('Set BASE_URL to a prepared site.');
 const review=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-phonotactic-review-2026-10-23.json')));
 const adaptation=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-adaptation-review-2026-10-23.json')));
-review.decisions.push(...adaptation.decisions);
-const guards=['stedt-rn-353352','yubao-60756-v-2277','yubao-60757-v-2277','yubao-60823-v-2277','w1449','yubao-60756-v-0691',...adaptation.excluded.map(w=>w.id)];
+const nl=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-nl-review-2026-10-23.json')));
+review.decisions.push(...adaptation.decisions,...nl.decisions);
+const guards=['stedt-rn-353352','yubao-60756-v-2277','yubao-60757-v-2277','yubao-60823-v-2277','w1449','yubao-60756-v-0691',...adaptation.excluded.map(w=>w.id),'yubao-60757-v-2988','w2438'];
 (async()=>{
  const browser=await chromium.launch({headless:true,executablePath:process.env.CHROMIUM_EXECUTABLE,args:['--no-sandbox']});
  try{for(const width of [390,1440]){

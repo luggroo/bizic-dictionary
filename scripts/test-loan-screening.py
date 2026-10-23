@@ -89,6 +89,43 @@ class ScreeningGuards(unittest.TestCase):
             for alias in word['aliases']:
                 self.assertTrue(screen.blocked({'aliases': [alias, word['id']]}, registry))
 
+    def test_nl_correspondence_does_not_rewrite_features(self):
+        registry = {'rules': [], 'phonologicalComparison': {
+            'north': ['n-l-onset', 'palatal-n-before-i', 'nasal-coda-to-nasal-vowel'],
+            'south': ['n-l-onset', 'nasal-coda-to-nasal-vowel']}}
+        key = lambda ipa, area='north': screen.comparison_key(screen.syllables(ipa), area, registry, True)
+        self.assertEqual(key('nõ⁵⁵'), key('loŋ⁵⁵'))
+        self.assertEqual(key('niã¹³'), key('liã³³'))
+        self.assertEqual(key('ɲi³³'), key('li³³'))
+        self.assertNotEqual(key('ɲa³³'), key('la³³'))
+        self.assertNotEqual(key('ɲi³³', 'south'), key('li³³', 'south'))
+        self.assertNotEqual(key('ŋa³³'), key('la³³'))
+        self.assertNotEqual(key('pan³³'), key('pal³³'))
+        self.assertEqual(key('n³³'), ('∅|n',))  # syllabic n is a rime, not an onset
+        self.assertIsNone(screen.syllables('l³³'))
+        self.assertNotEqual(screen.features(screen.syllables('niã¹³')),
+                            screen.features(screen.syllables('liã³³')))
+
+    def test_native_component_does_not_block_other_loans(self):
+        word = {'id': 'compound', 'aliases': ['compound', 'source-alias'], 'zh': '苦命'}
+        ipa = 'miŋ²⁴ɕiŋ⁵⁵laŋ⁵⁵'
+        registry = {'rules': [{'id': 'source-alias', 'policy': 'exclude-component',
+                              'reviewedForms': [{'ipa': ipa, 'span': [2, 3]}]}]}
+        self.assertFalse(screen.blocked(word, registry))
+        self.assertFalse(screen.component_excluded(word, ipa, [1, 1], registry))
+        self.assertTrue(screen.component_excluded(word, ipa, [3, 3], registry))
+        self.assertTrue(screen.component_excluded(word, ipa, [1, 3], registry))
+
+    def test_xilan_family_constraints(self):
+        root = Path(__file__).resolve().parents[1]
+        registry = json.loads((root / 'docs/loan-screening-constraints.json').read_text())
+        self.assertTrue(screen.blocked({'aliases': ['yubao-60757-v-2988']}, registry))
+        self.assertTrue(screen.blocked({'aliases': ['w2438']}, registry))
+        for rule in registry['rules']:
+            if rule['policy'] == 'exclude-component':
+                for form in rule['reviewedForms']:
+                    self.assertTrue(screen.component_excluded({'aliases': [rule['id']]}, form['ipa'], form['span'], registry))
+
 
 if __name__ == '__main__':
     unittest.main()

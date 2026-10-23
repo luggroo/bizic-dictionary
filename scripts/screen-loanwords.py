@@ -86,11 +86,31 @@ def rejected_form(word, ipa, registry):
                for r in rules_for(word, registry))
 
 
+def component_excluded(word, ipa, span, registry):
+    """Protect reviewed native material while allowing other loan components."""
+    canonical = lambda s: SEPARATORS.sub('', unicodedata.normalize('NFC', s))
+    for rule in rules_for(word, registry):
+        if rule['policy'] != 'exclude-component':
+            continue
+        for form in rule['reviewedForms']:
+            if canonical(form['ipa']) != canonical(ipa):
+                continue
+            start, end = form['span']
+            if span[0] <= end and span[1] >= start:
+                return True
+    return False
+
+
 def comparison_key(parts, area, registry, adapted=False):
     """A retrieval key, never a replacement IPA or classifier feature."""
     policies = registry.get('phonologicalComparison', {}).get(area, []) if adapted else []
     segments = []
     for onset, rime, _ in parts:
+        if ('palatal-n-before-i' in policies and onset in ('ɲ', 'ȵ', 'nʲ')
+                and unicodedata.normalize('NFD', rime).startswith(('i', 'y'))):
+            onset = 'n'
+        if 'n-l-onset' in policies and onset in ('n', 'l'):
+            onset = 'n/l'
         value = unicodedata.normalize('NFD', rime)
         if 'y-to-i' in policies:
             value = value.replace('y', 'i')
@@ -159,6 +179,8 @@ def reference_bank(words, registry):
                 if not parts:
                     continue
                 start, end = form['span']
+                if component_excluded(w, form['ipa'], [start, end], registry):
+                    continue
                 selected = parts[start - 1:end]
                 if not selected or end > len(parts):
                     continue
@@ -178,6 +200,9 @@ def matches(row, bank, registry):
     found = []
     for start in range(len(parts)):
         for end in range(start + 1, len(parts) + 1):
+            ipa = row.get('ipa') or ''.join(('' if o == '∅' else o) + r + t for o, r, t in parts)
+            if component_excluded(w, ipa, [start + 1, end], registry):
+                continue
             exact_key = comparison_key(parts[start:end], row['region'], registry)
             refs = []
             for mode in ('exact', 'adaptation'):
@@ -195,7 +220,10 @@ def matches(row, bank, registry):
                     continue
                 found.append({**ref, 'candidateSpan': [start + 1, end],
                               'sameTones': same_tones, 'sameSource': ref['source'] == w['source'],
-                              'glossOverlap': overlap, 'matchType': mode})
+                              'glossOverlap': overlap, 'matchType': mode,
+                              'nlSyllables': [start + 1 + i for i, ((o, _, _), segment) in enumerate(zip(parts[start:end], ref['segments']))
+                                              if (o in ('n', 'ɲ', 'ȵ', 'nʲ') and segment.split('|')[0] == 'l')
+                                              or (o == 'l' and segment.split('|')[0] in ('n', 'ɲ', 'ȵ', 'nʲ'))]})
     found.sort(key=lambda x: (bool(x['glossOverlap']), x['matchType'] == 'exact', x['sameTones'], x['sameSource'],
                               x['candidateSpan'][1] - x['candidateSpan'][0]), reverse=True)
     unique = {}
@@ -229,7 +257,8 @@ def run(input_path, constraints_path, output):
         area_rows = [r for r in rows if r['region'] == area]
         # Partial/mixed entries and excluded cases are not negative examples.
         train = [r for r in area_rows if r['word']['scope'] in ('', 'whole')
-                 and not blocked(r['word'], registry) and r['status'] != 'excluded-form']
+                 and not blocked(r['word'], registry) and r['status'] != 'excluded-form'
+                 and not component_excluded(r['word'], r['ipa'], [1, len(r['parts'])], registry)]
         groups = group_ids(train)
         y = np.array([r['label'] for r in train])
         oof = np.zeros(len(train))

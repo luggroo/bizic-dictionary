@@ -3276,6 +3276,13 @@ Object.assign(UI_TRANSLATIONS,{
  "「果子」部分（第 1—2 音节）可能借自汉语，具体方言来源待核。":"The 果子 component (syllables 1–2) may be borrowed from Chinese; the specific donor variety remains to be established."
 });
 Object.assign(UI_TRANSLATIONS,{
+ "「聋」部分（第 1 音节）可能借自汉语，具体方言来源待核。":"The 聋 component (syllable 1) may be borrowed from Chinese; the specific donor variety remains to be established.",
+ "「梁」部分（第 1 音节）可能借自汉语，具体方言来源待核。":"The 梁 component (syllable 1) may be borrowed from Chinese; the specific donor variety remains to be established.",
+ "「南」部分（第 1 音节）可能借自汉语，具体方言来源待核。":"The 南 component (syllable 1) may be borrowed from Chinese; the specific donor variety remains to be established.",
+ "可能借自汉语「南」，具体方言来源待核。":"Possibly borrowed from Chinese 南; the specific donor variety remains to be established.",
+ "可能借自汉语「仙娘」（女巫），具体方言来源待核。":"Possibly borrowed from Chinese 仙娘 (female shaman); the specific donor variety remains to be established."
+});
+Object.assign(UI_TRANSLATIONS,{
  '可能借自汉语「洋芋」，具体方言来源待核。':'Possibly borrowed from Chinese 洋芋 “potato”; the specific donor variety remains to be established.',
  '可能借自汉语「茶」，具体方言来源待核。':'Possibly borrowed from Chinese 茶 “tea”; the specific donor variety remains to be established.',
  'j、q、x、y后对应ie（jie、qie、xie、ye）；其他声母后的跨点同源对应为ai（p.26），不是把ɛ读成ai':'After written j, q, x and y, the spelling uses ie: jie, qie, xie and ye. After other onsets, the cross-variety cognate correspondence is ai (p. 26); this does not give ai as the pronunciation of ɛ.',

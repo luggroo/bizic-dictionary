@@ -1,0 +1,350 @@
+{
+  "baseCommit": "211cc71",
+  "scope": "n/l loanword follow-up: onset correspondence, source-specific lexical comparison and protection of xilan native material.",
+  "phonologicalEvidence": [
+    {
+      "source": "陈康《土家语研究》",
+      "pages": "5–6",
+      "repositoryReference": "docs/reference-grammar.md#north-2-1",
+      "finding": "Older Longshan and Xianren distinguish n/l; some younger Longshan speakers show variation associated with local Chinese. Palatal nasals occur before front-vowel/glide environments."
+    }
+  ],
+  "limits": [
+    "The comparison key does not merge n/l in published spelling or source transcriptions.",
+    "The 仙娘 proposal follows source sense and syllable-by-syllable lexical analysis; no new donor-dialect recording or external dictionary reading is claimed.",
+    "No borrowing dates are assigned."
+  ],
+  "decisions": [
+    {
+      "action": "add-loan-note",
+      "zh": "聋子",
+      "basis": "Registered source sense and original transcription compared with the proposed Chinese donor. n/l is a retrieval correspondence, not a change to source IPA; donor variety and borrowing date are not established.",
+      "discovery": "n-l-reference",
+      "comparisonIds": [
+        "stedt-rn-419673"
+      ],
+      "note": {
+        "id": "chinese-loan-stedt-rn-43419",
+        "wordIds": [
+          "stedt-rn-43419"
+        ],
+        "kind": "借词来源",
+        "donor": "聋",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「聋」部分（第 1 音节）可能借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "nõ⁵⁵ tʰũ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "n-l-followup-2026-10-23"
+      },
+      "noteEn": "The 聋 component (syllable 1) may be borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "梁",
+      "basis": "Registered source sense and original transcription compared with the proposed Chinese donor. n/l is a retrieval correspondence, not a change to source IPA; donor variety and borrowing date are not established.",
+      "discovery": "n-l-reference",
+      "comparisonIds": [
+        "stedt-rn-289672"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1732",
+        "wordIds": [
+          "yubao-60824-v-1732"
+        ],
+        "kind": "借词来源",
+        "donor": "梁",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「梁」部分（第 1 音节）可能借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "niã¹³mu³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "n-l-followup-2026-10-23"
+      },
+      "noteEn": "The 梁 component (syllable 1) may be borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "南",
+      "basis": "Registered source sense and original transcription compared with the proposed Chinese donor. n/l is a retrieval correspondence, not a change to source IPA; donor variety and borrowing date are not established.",
+      "discovery": "reference-enrichment",
+      "comparisonIds": [
+        "yubao-60756-v-1368",
+        "stedt-rn-381307"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1368",
+        "wordIds": [
+          "yubao-60823-v-1368"
+        ],
+        "kind": "借词来源",
+        "donor": "南",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「南」部分（第 1 音节）可能借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "nã³³xuã⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "n-l-followup-2026-10-23"
+      },
+      "noteEn": "The 南 component (syllable 1) may be borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "南",
+      "basis": "Registered source sense and original transcription compared with the proposed Chinese donor. n/l is a retrieval correspondence, not a change to source IPA; donor variety and borrowing date are not established.",
+      "discovery": "related-form",
+      "comparisonIds": [
+        "stedt-rn-381307",
+        "yubao-60756-v-1368"
+      ],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-1368",
+        "wordIds": [
+          "yubao-60824-v-1368"
+        ],
+        "kind": "借词来源",
+        "donor": "南",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「南」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "nã²¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "n-l-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 南; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "巫婆",
+      "basis": "Registered source sense and original transcription compared with the proposed Chinese donor. n/l is a retrieval correspondence, not a change to source IPA; donor variety and borrowing date are not established.",
+      "discovery": "lexical-followup",
+      "comparisonIds": [],
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2296",
+        "wordIds": [
+          "yubao-60824-v-2296"
+        ],
+        "kind": "借词来源",
+        "donor": "仙娘",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "可能借自汉语「仙娘」（女巫），具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɕiã³³niã²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "n-l-followup-2026-10-23"
+      },
+      "noteEn": "Possibly borrowed from Chinese 仙娘 (female shaman); the specific donor variety remains to be established."
+    }
+  ],
+  "xilanConstraints": [
+    {
+      "id": "yubao-60757-v-2988",
+      "policy": "exclude-entry",
+      "reason": "xílān emotional-state root: explicitly excluded from loan annotation.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native"
+    },
+    {
+      "id": "w2438",
+      "policy": "exclude-entry",
+      "reason": "xílān emotional-state root: explicitly excluded from loan annotation.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native"
+    },
+    {
+      "id": "yubao-60757-v-0886",
+      "policy": "exclude-component",
+      "reason": "Protect the xilan-related emotional-state component; same-point 闻/臭 also has naŋ³³ or nã³³. Other components remain independently reviewable.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native",
+      "reviewedForms": [
+        {
+          "ipa": "kʰa³³ɕi²⁴lan³³",
+          "span": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-0891",
+      "policy": "exclude-component",
+      "reason": "Protect the xilan-related emotional-state component; same-point 闻/臭 also has naŋ³³ or nã³³. Other components remain independently reviewable.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native",
+      "reviewedForms": [
+        {
+          "ipa": "lo²⁴pu³³ɕi³³lan³³",
+          "span": [
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0885",
+      "policy": "exclude-component",
+      "reason": "Protect the xilan-related emotional-state component; same-point 闻/臭 also has naŋ³³ or nã³³. Other components remain independently reviewable.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native",
+      "reviewedForms": [
+        {
+          "ipa": "ɔŋ³⁵ɕiŋ⁵⁵naŋ³³",
+          "span": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0886",
+      "policy": "exclude-component",
+      "reason": "Protect the xilan-related emotional-state component; same-point 闻/臭 also has naŋ³³ or nã³³. Other components remain independently reviewable.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native",
+      "reviewedForms": [
+        {
+          "ipa": "tie³³ɕiŋ³³naŋ³³",
+          "span": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2988",
+      "policy": "exclude-component",
+      "reason": "Protect the xilan-related emotional-state component; same-point 闻/臭 also has naŋ³³ or nã³³. Other components remain independently reviewable.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native",
+      "reviewedForms": [
+        {
+          "ipa": "ɕiŋ⁵⁵naŋ³³",
+          "span": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0885",
+      "policy": "exclude-component",
+      "reason": "Protect the xilan-related emotional-state component; same-point 闻/臭 also has naŋ³³ or nã³³. Other components remain independently reviewable.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native",
+      "reviewedForms": [
+        {
+          "ipa": "kʰa⁵³ɕi³³nã³³",
+          "span": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-1010",
+      "policy": "exclude-component",
+      "reason": "Protect the xilan-related emotional-state component; same-point 闻/臭 also has naŋ³³ or nã³³. Other components remain independently reviewable.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native",
+      "reviewedForms": [
+        {
+          "ipa": "zɿ⁵⁵ɕĩ³³nã³³",
+          "span": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2904",
+      "policy": "exclude-component",
+      "reason": "Protect the xilan-related emotional-state component; same-point 闻/臭 also has naŋ³³ or nã³³. Other components remain independently reviewable.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native",
+      "reviewedForms": [
+        {
+          "ipa": "zɿ⁵⁵ɕi³³nã³³",
+          "span": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1560",
+      "policy": "exclude-component",
+      "reason": "Protect the xilan-related emotional-state component; same-point 闻/臭 also has naŋ³³ or nã³³. Other components remain independently reviewable.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native",
+      "reviewedForms": [
+        {
+          "ipa": "miŋ²⁴ɕiŋ⁵⁵laŋ⁵⁵",
+          "span": [
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-454821",
+      "policy": "exclude-component",
+      "reason": "Protect the xilan-related emotional-state component; same-point 闻/臭 also has naŋ³³ or nã³³. Other components remain independently reviewable.",
+      "origin": "docs/loan-nl-review-2026-10-23.json",
+      "family": "xilan-native",
+      "reviewedForms": [
+        {
+          "ipa": "miŋ²⁴ɕiŋ⁵⁵laŋ⁵⁵",
+          "span": [
+            2,
+            3
+          ]
+        }
+      ]
+    }
+  ]
+}
