@@ -62929,6 +62929,7 @@ EDITORIAL_NOTES.push(
 {"id":"chinese-loan-yubao-60756-v-0522","wordIds":["yubao-60756-v-0522"],"kind":"借词来源","donor":"银针","donorVariety":"汉语（方言待核）","scope":"component","text":"「银针」部分（第 1—2 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"ȵiŋ³³tseŋ³³xa³³","span":[1,2]}],"reviewBatch":"named-supplement-2026-10-24"},
 {"id":"chinese-loan-yubao-60756-v-1185","wordIds":["yubao-60756-v-1185"],"kind":"借词来源","donor":"宁愿","donorVariety":"汉语（方言待核）","scope":"whole","text":"借自汉语「宁愿」，具体方言来源待核。","reviewedForms":[{"ipa":"ȵiŋ³³ʑaŋ³⁵","span":[1,2]}],"reviewBatch":"named-supplement-2026-10-24"}
 );
+EDITORIAL_NOTES.push({"id":"chinese-loan-w2695","wordIds":["w2695"],"kind":"借词来源","donor":"","donorVariety":"汉语（方言待核）","scope":"whole","text":"整词借自汉语，具体方言来源和原词写法待核。","reviewedForms":[{"ipa":"tsɨ²⁴ai⁵⁵tsɨ²¹","span":[1,3]}],"reviewBatch":"named-supplement-2026-10-24"});
 // Index source IDs once; list filtering visits every merged entry.
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){

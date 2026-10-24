@@ -547,6 +547,33 @@
         "reviewBatch": "named-supplement-2026-10-24"
       },
       "noteEn": "Borrowed from Chinese 宁愿; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "侄子",
+      "note": {
+        "id": "chinese-loan-w2695",
+        "wordIds": [
+          "w2695"
+        ],
+        "kind": "借词来源",
+        "donor": "",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "整词借自汉语，具体方言来源和原词写法待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsɨ²⁴ai⁵⁵tsɨ²¹",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The full form is borrowed from Chinese; the specific donor variety and Chinese spelling remain to be established.",
+      "rationale": "Cover the full three-syllable Brassett form without reconstructing an unverified Chinese donor spelling or extending the annotation to other nephew forms."
     }
   ],
   "phrases": [

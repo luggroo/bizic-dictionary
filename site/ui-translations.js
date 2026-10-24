@@ -3599,5 +3599,6 @@ Object.assign(UI_TRANSLATIONS,{
  "借自汉语「邮电所」，具体方言来源待核。": "Borrowed from Chinese 邮电所; the specific donor variety remains to be established.",
  "借自汉语「领导」，具体方言来源待核。": "Borrowed from Chinese 领导; the specific donor variety remains to be established.",
  "「银针」部分（第 1—2 音节）借自汉语，具体方言来源待核。": "The 银针 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established.",
- "借自汉语「宁愿」，具体方言来源待核。": "Borrowed from Chinese 宁愿; the specific donor variety remains to be established."
+ "借自汉语「宁愿」，具体方言来源待核。": "Borrowed from Chinese 宁愿; the specific donor variety remains to be established.",
+ "整词借自汉语，具体方言来源和原词写法待核。": "The full form is borrowed from Chinese; the specific donor variety and Chinese spelling remain to be established."
 });
