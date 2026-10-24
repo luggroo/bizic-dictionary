@@ -2130,6 +2130,25 @@
           ]
         }
       ]
+    },
+    {
+      "id": "yubao-60824-v-2650",
+      "split": 1,
+      "basis": "状＋告 noun–verb phrase, corresponding to the Northern phrase; both syllables are borrowed from Chinese.",
+      "zh": "告状",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "tsuã13kau13",
+      "ipa": "tsuã¹³kau¹³",
+      "displayIPA": "tsuã¹³ kau¹³",
+      "pinyinParts": [
+        "zuan",
+        "gau"
+      ],
+      "originalSpellings": [
+        "zuǎn'gǎu"
+      ],
+      "loanNotes": []
     }
   ]
 }

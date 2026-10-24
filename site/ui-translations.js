@@ -3607,3 +3607,7 @@ Object.assign(UI_TRANSLATIONS,{
  "借自汉语「媒婆」，具体方言来源待核。": "Borrowed from Chinese 媒婆; the specific donor variety remains to be established.",
  "「针」部分（第 1 音节）借自汉语，具体方言来源待核。": "The 针 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
 });
+
+Object.assign(UI_TRANSLATIONS,{
+ "两音节均借自汉语，分别对应「状」「告」；具体方言来源待核。": "Both syllables are borrowed from Chinese, corresponding to 状 and 告; the specific donor variety remains to be established."
+});

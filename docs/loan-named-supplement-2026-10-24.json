@@ -678,6 +678,81 @@
         "reviewBatch": "named-supplement-2026-10-24"
       },
       "noteEn": "The 针 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "replace-loan-note",
+      "zh": "告状",
+      "previousNote": {
+        "id": "chinese-loan-yubao-60756-v-2650",
+        "wordIds": [
+          "yubao-60756-v-2650"
+        ],
+        "kind": "借词来源",
+        "donor": "状",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「状」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsuaŋ³⁵kau⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2650",
+        "wordIds": [
+          "yubao-60756-v-2650"
+        ],
+        "kind": "借词来源",
+        "donor": "状、告",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "两音节均借自汉语，分别对应「状」「告」；具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsuaŋ³⁵kau⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Both syllables are borrowed from Chinese, corresponding to 状 and 告; the specific donor variety remains to be established.",
+      "rationale": "The Northern and Southern 状＋告 forms are fully borrowed. Preserve word boundaries and do not extend this review by gloss alone to other recorded forms."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "告状",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-2650",
+        "wordIds": [
+          "yubao-60824-v-2650"
+        ],
+        "kind": "借词来源",
+        "donor": "状、告",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "两音节均借自汉语，分别对应「状」「告」；具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsuã¹³kau¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Both syllables are borrowed from Chinese, corresponding to 状 and 告; the specific donor variety remains to be established.",
+      "rationale": "The Northern and Southern 状＋告 forms are fully borrowed. Preserve word boundaries and do not extend this review by gloss alone to other recorded forms."
     }
   ],
   "phrases": [
@@ -1216,6 +1291,14 @@
         "bbuhxe"
       ],
       "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-2650",
+      "parts": [
+        "zuan",
+        "gau"
+      ],
+      "splitAfter": 1
     }
   ],
   "supersededConstraints": [

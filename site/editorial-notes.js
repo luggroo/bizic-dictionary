@@ -62841,7 +62841,7 @@ EDITORIAL_NOTES.push(
 {"id":"chinese-loan-yubao-60756-v-2449","wordIds":["yubao-60756-v-2449"],"kind":"借词来源","donor":"筐","donorVariety":"汉语（方言待核）","scope":"component","text":"「筐」部分（第 2 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"lɔ³³kʰuaŋ⁵⁵","span":[2,2]}],"reviewBatch":"rime-supplement-2026-10-24"},
 {"id":"chinese-loan-yubao-60756-v-2487","wordIds":["yubao-60756-v-2487"],"kind":"借词来源","donor":"船","donorVariety":"汉语（方言待核）","scope":"component","text":"「船」部分（第 1 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"tsʰuaŋ³³xua³⁵","span":[1,1]}],"reviewBatch":"rime-supplement-2026-10-24"},
 {"id":"chinese-loan-yubao-60756-v-2532","wordIds":["yubao-60756-v-2532"],"kind":"借词来源","donor":"翻","donorVariety":"汉语（方言待核）","scope":"component","text":"「翻」部分（第 5 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"keŋ⁵⁵tʰəu⁵⁵pu⁵⁵lɛ⁵⁵xuaŋ⁵⁵","span":[5,5]}],"reviewBatch":"rime-supplement-2026-10-24"},
-{"id":"chinese-loan-yubao-60756-v-2650","wordIds":["yubao-60756-v-2650"],"kind":"借词来源","donor":"状","donorVariety":"汉语（方言待核）","scope":"component","text":"「状」部分（第 1 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"tsuaŋ³⁵kau⁵⁵","span":[1,1]}],"reviewBatch":"rime-supplement-2026-10-24"},
+{"id":"chinese-loan-yubao-60756-v-2650","wordIds":["yubao-60756-v-2650"],"kind":"借词来源","donor":"状、告","donorVariety":"汉语（方言待核）","scope":"whole","text":"两音节均借自汉语，分别对应「状」「告」；具体方言来源待核。","reviewedForms":[{"ipa":"tsuaŋ³⁵kau⁵⁵","span":[1,2]}],"reviewBatch":"named-supplement-2026-10-24"},
 {"id":"chinese-loan-yubao-60756-v-2653","wordIds":["yubao-60756-v-2653"],"kind":"借词来源","donor":"房","donorVariety":"汉语（方言待核）","scope":"component","text":"「房」部分（第 2 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"lau³³xuaŋ³³tɔŋ⁵⁵","span":[2,2]}],"reviewBatch":"rime-supplement-2026-10-24"},
 {"id":"chinese-loan-yubao-60756-v-2680","wordIds":["yubao-60756-v-2680"],"kind":"借词来源","donor":"挼","donorVariety":"汉语（方言待核）","scope":"whole","text":"借自汉语「挼」，具体方言来源待核。","reviewedForms":[{"ipa":"zua³³","span":[1,1]}],"reviewBatch":"rime-supplement-2026-10-24"},
 {"id":"chinese-loan-yubao-60756-v-2695","wordIds":["yubao-60756-v-2695"],"kind":"借词来源","donor":"刮","donorVariety":"汉语（方言待核）","scope":"whole","text":"借自汉语「刮」，具体方言来源待核。","reviewedForms":[{"ipa":"kua³⁵","span":[1,1]}],"reviewBatch":"rime-supplement-2026-10-24"},
@@ -62936,6 +62936,7 @@ EDITORIAL_NOTES.push(
 {"id":"chinese-loan-yubao-60823-v-0523","wordIds":["yubao-60823-v-0523"],"kind":"借词来源","donor":"针","donorVariety":"汉语（方言待核）","scope":"component","text":"「针」部分（第 1 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"tsɤ̃⁵⁵xa⁵⁵","span":[1,1]}],"reviewBatch":"named-supplement-2026-10-24"},
 {"id":"chinese-loan-yubao-60824-v-0523","wordIds":["yubao-60824-v-0523"],"kind":"借词来源","donor":"针","donorVariety":"汉语（方言待核）","scope":"component","text":"「针」部分（第 1 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"tsẽ³³bu¹³","span":[1,1]}],"reviewBatch":"named-supplement-2026-10-24"}
 );
+EDITORIAL_NOTES.push({"id":"chinese-loan-yubao-60824-v-2650","wordIds":["yubao-60824-v-2650"],"kind":"借词来源","donor":"状、告","donorVariety":"汉语（方言待核）","scope":"whole","text":"两音节均借自汉语，分别对应「状」「告」；具体方言来源待核。","reviewedForms":[{"ipa":"tsuã¹³kau¹³","span":[1,2]}],"reviewBatch":"named-supplement-2026-10-24"});
 // Index source IDs once; list filtering visits every merged entry.
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){
