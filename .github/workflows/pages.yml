@@ -79,12 +79,20 @@ jobs:
         env:
           NODE_PATH: /tmp/bizic-grammar-qa/node_modules
         run: |
-          node scripts/test-web-loading.cjs
-          node scripts/test-word-export-browser.cjs
-          node scripts/test-language-recovery-browser.cjs
-          node scripts/test-corpus-timing-browser.cjs
-          node scripts/test-mobile-navigation.cjs
-          node scripts/test-grammar-scroll-playwright.cjs
+          node - <<'JSCODE'
+          const {spawnSync}=require('node:child_process');
+          let failed=false;
+          for(const test of ['test-web-loading','test-word-export-browser','test-language-recovery-browser','test-corpus-timing-browser','test-mobile-navigation','test-grammar-scroll-playwright']){
+            const result=spawnSync(process.execPath,['scripts/'+test+'.cjs'],{encoding:'utf8',maxBuffer:16*1024*1024});
+            process.stdout.write(result.stdout||'');process.stderr.write(result.stderr||'');
+            if(result.status!==0){
+              failed=true;
+              const detail=(result.stderr||result.stdout||String(result.error||result.signal)).slice(-12000).replace(/%/g,'%25').replace(/\r/g,'%0D').replace(/\n/g,'%0A');
+              console.log('::error title='+test+'::'+detail);
+            }
+          }
+          process.exitCode=failed?1:0;
+          JSCODE
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
