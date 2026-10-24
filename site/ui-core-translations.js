@@ -132,3 +132,5 @@ var UI_TRANSLATIONS={
  "页面未能载入，请重试。": "The page could not be loaded. Please try again.",
  "资料未能载入，请检查网络后重试。": "The data could not be loaded. Check your connection and try again."
 };
+
+Object.assign(UI_TRANSLATIONS,{"毕兹学堂":"Bizic Academy","土家语词典、语法与语料":"Tujia dictionary, grammar & texts"});
