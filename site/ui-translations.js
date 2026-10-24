@@ -3602,3 +3602,8 @@ Object.assign(UI_TRANSLATIONS,{
  "借自汉语「宁愿」，具体方言来源待核。": "Borrowed from Chinese 宁愿; the specific donor variety remains to be established.",
  "整词借自汉语，具体方言来源和原词写法待核。": "The full form is borrowed from Chinese; the specific donor variety and Chinese spelling remain to be established."
 });
+
+Object.assign(UI_TRANSLATIONS,{
+ "借自汉语「媒婆」，具体方言来源待核。": "Borrowed from Chinese 媒婆; the specific donor variety remains to be established.",
+ "「针」部分（第 1 音节）借自汉语，具体方言来源待核。": "The 针 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+});

@@ -1,0 +1,2135 @@
+{
+  "date": "2026-10-24",
+  "scope": "Individual source forms; original IPA, tone values and attestations retained.",
+  "decisions": [
+    {
+      "id": "yubao-60756-v-0436",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "吃早饭",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "tsau55xuaŋ53ka33",
+      "ipa": "tsau⁵⁵xuaŋ⁵³ka³³",
+      "displayIPA": "tsau⁵⁵xuaŋ⁵³ ka³³",
+      "pinyinParts": [
+        "zaohuang",
+        "ga"
+      ],
+      "originalSpellings": [
+        "zāohuànggǎ"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-0436",
+          "donor": "早饭",
+          "reviewedForms": [
+            {
+              "ipa": "tsau⁵⁵xuaŋ⁵³ka³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0438",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "吃晚饭",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "ʑe33xuaŋ33ka33",
+      "ipa": "ʑe³³xuaŋ³³ka³³",
+      "displayIPA": "ʑe³³xuaŋ³³ ka³³",
+      "pinyinParts": [
+        "yehuang",
+        "ga"
+      ],
+      "originalSpellings": [
+        "yěhuǎnggǎ"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-0438",
+          "donor": "饭",
+          "reviewedForms": [
+            {
+              "ipa": "ʑe³³xuaŋ³³ka³³",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0520",
+      "split": 1,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "看病",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "piŋ35pa53",
+      "ipa": "piŋ³⁵pa⁵³",
+      "displayIPA": "piŋ³⁵ pa⁵³",
+      "pinyinParts": [
+        "bin",
+        "ba"
+      ],
+      "originalSpellings": [
+        "bínbà"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-0520",
+          "donor": "病",
+          "reviewedForms": [
+            {
+              "ipa": "piŋ³⁵pa⁵³",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0524",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "打吊针",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "tiau55tseŋ55xa55",
+      "ipa": "tiau⁵⁵tseŋ⁵⁵xa⁵⁵",
+      "displayIPA": "tiau⁵⁵tseŋ⁵⁵ xa⁵⁵",
+      "pinyinParts": [
+        "diaozen",
+        "ha"
+      ],
+      "originalSpellings": [
+        "diāozēnhā"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-0524",
+          "donor": "吊针",
+          "reviewedForms": [
+            {
+              "ipa": "tiau⁵⁵tseŋ⁵⁵xa⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0528",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "说媒",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "me33zeŋ33zɿ33",
+      "ipa": "me³³zeŋ³³zɿ³³",
+      "displayIPA": "me³³zeŋ³³ zɿ³³",
+      "pinyinParts": [
+        "meiren",
+        "ri"
+      ],
+      "originalSpellings": [
+        "měirěnrǐ"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-0528",
+          "donor": "媒人",
+          "reviewedForms": [
+            {
+              "ipa": "me³³zeŋ³³zɿ³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0748",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "变魔术",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "mɔ33su33uaŋ33",
+      "ipa": "mɔ³³su³³uaŋ³³",
+      "displayIPA": "mɔ³³su³³ uaŋ³³",
+      "pinyinParts": [
+        "mosu",
+        "wang"
+      ],
+      "originalSpellings": [
+        "mǒsǔwǎng"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-0748",
+          "donor": "魔术",
+          "reviewedForms": [
+            {
+              "ipa": "mɔ³³su³³uaŋ³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-0749",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "讲故事",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "ku55sɿ55li55",
+      "ipa": "ku⁵⁵sɿ⁵⁵li⁵⁵",
+      "displayIPA": "ku⁵⁵sɿ⁵⁵ li⁵⁵",
+      "pinyinParts": [
+        "gusi",
+        "li"
+      ],
+      "originalSpellings": [
+        "gūsīlī"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-0749",
+          "donor": "故事",
+          "reviewedForms": [
+            {
+              "ipa": "ku⁵⁵sɿ⁵⁵li⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2012",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "熏腊肉",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "la33zu55khu53",
+      "ipa": "la³³zu⁵⁵kʰu⁵³",
+      "displayIPA": "la³³zu⁵⁵ kʰu⁵³",
+      "pinyinParts": [
+        "laru",
+        "ku"
+      ],
+      "originalSpellings": [
+        "lǎrūkù"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2012",
+          "donor": "腊肉",
+          "reviewedForms": [
+            {
+              "ipa": "la³³zu⁵⁵kʰu⁵³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2199",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "动手术",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "səu55su53zɿ33",
+      "ipa": "səu⁵⁵su⁵³zɿ³³",
+      "displayIPA": "səu⁵⁵su⁵³ zɿ³³",
+      "pinyinParts": [
+        "sousu",
+        "ri"
+      ],
+      "originalSpellings": [
+        "sōusùrǐ"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2199",
+          "donor": "手术",
+          "reviewedForms": [
+            {
+              "ipa": "səu⁵⁵su⁵³zɿ³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2417",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "开荒",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "xuaŋ55saŋ33khɛ33",
+      "ipa": "xuaŋ⁵⁵saŋ³³kʰɛ³³",
+      "displayIPA": "xuaŋ⁵⁵saŋ³³ kʰɛ³³",
+      "pinyinParts": [
+        "huangsan",
+        "kai"
+      ],
+      "originalSpellings": [
+        "huāngsǎnkǎi"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2417",
+          "donor": "荒山",
+          "reviewedForms": [
+            {
+              "ipa": "xuaŋ⁵⁵saŋ³³kʰɛ³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2420",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "施肥",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "xui33liau35tsui55",
+      "ipa": "xui³³liau³⁵tsui⁵⁵",
+      "displayIPA": "xui³³liau³⁵ tsui⁵⁵",
+      "pinyinParts": [
+        "huiliao",
+        "zui"
+      ],
+      "originalSpellings": [
+        "huǐliáozuī"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2420",
+          "donor": "肥料",
+          "reviewedForms": [
+            {
+              "ipa": "xui³³liau³⁵tsui⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2421",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "沤肥",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "xui33liau35əu55",
+      "ipa": "xui³³liau³⁵əu⁵⁵",
+      "displayIPA": "xui³³liau³⁵ əu⁵⁵",
+      "pinyinParts": [
+        "huiliao",
+        "ou"
+      ],
+      "originalSpellings": [
+        "huǐliáo'ōu"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2421",
+          "donor": "肥料",
+          "reviewedForms": [
+            {
+              "ipa": "xui³³liau³⁵əu⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2487",
+      "split": 1,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "划船",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "tshuaŋ33xua35",
+      "ipa": "tsʰuaŋ³³xua³⁵",
+      "displayIPA": "tsʰuaŋ³³ xua³⁵",
+      "pinyinParts": [
+        "cuang",
+        "hua"
+      ],
+      "originalSpellings": [
+        "cuǎnghuá"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2487",
+          "donor": "船",
+          "reviewedForms": [
+            {
+              "ipa": "tsʰuaŋ³³xua³⁵",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2530",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "练武术",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "u55su53liaŋ35",
+      "ipa": "u⁵⁵su⁵³liaŋ³⁵",
+      "displayIPA": "u⁵⁵su⁵³ liaŋ³⁵",
+      "pinyinParts": [
+        "wusu",
+        "liang"
+      ],
+      "originalSpellings": [
+        "wūsùliáng"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2530",
+          "donor": "武术",
+          "reviewedForms": [
+            {
+              "ipa": "u⁵⁵su⁵³liaŋ³⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2531",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "打弹弓",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "taŋ33kɔŋ33xa55",
+      "ipa": "taŋ³³kɔŋ³³xa⁵⁵",
+      "displayIPA": "taŋ³³kɔŋ³³ xa⁵⁵",
+      "pinyinParts": [
+        "dangong",
+        "ha"
+      ],
+      "originalSpellings": [
+        "dǎn'gǒnghā"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2531",
+          "donor": "弹弓",
+          "reviewedForms": [
+            {
+              "ipa": "taŋ³³kɔŋ³³xa⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2570",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "唱山歌",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "saŋ35kɔ53tshaŋ33",
+      "ipa": "saŋ³⁵kɔ⁵³tsʰaŋ³³",
+      "displayIPA": "saŋ³⁵kɔ⁵³ tsʰaŋ³³",
+      "pinyinParts": [
+        "sango",
+        "can"
+      ],
+      "originalSpellings": [
+        "sán'gòcǎn"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2570",
+          "donor": "山歌",
+          "reviewedForms": [
+            {
+              "ipa": "saŋ³⁵kɔ⁵³tsʰaŋ³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2650",
+      "split": 1,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "告状",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "tsuaŋ35kau55",
+      "ipa": "tsuaŋ³⁵kau⁵⁵",
+      "displayIPA": "tsuaŋ³⁵ kau⁵⁵",
+      "pinyinParts": [
+        "zuang",
+        "gao"
+      ],
+      "originalSpellings": [
+        "zuánggāo"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2650",
+          "donor": "状",
+          "reviewedForms": [
+            {
+              "ipa": "tsuaŋ³⁵kau⁵⁵",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2719",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "烧开水",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "khɛ55sui33sɿ33",
+      "ipa": "kʰɛ⁵⁵sui³³sɿ³³",
+      "displayIPA": "kʰɛ⁵⁵sui³³ sɿ³³",
+      "pinyinParts": [
+        "kaisui",
+        "si"
+      ],
+      "originalSpellings": [
+        "kāisuǐsǐ"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2719",
+          "donor": "开水",
+          "reviewedForms": [
+            {
+              "ipa": "kʰɛ⁵⁵sui³³sɿ³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2770",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "烧石灰",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "sɿ33xui55u55",
+      "ipa": "sɿ³³xui⁵⁵u⁵⁵",
+      "displayIPA": "sɿ³³xui⁵⁵ u⁵⁵",
+      "pinyinParts": [
+        "sihui",
+        "wu"
+      ],
+      "originalSpellings": [
+        "sǐhuīwū"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2770",
+          "donor": "石灰",
+          "reviewedForms": [
+            {
+              "ipa": "sɿ³³xui⁵⁵u⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60756-v-2771",
+      "split": 1,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "刷墙",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "tɕhaŋ33sua35",
+      "ipa": "tɕʰaŋ³³sua³⁵",
+      "displayIPA": "tɕʰaŋ³³ sua³⁵",
+      "pinyinParts": [
+        "qian",
+        "sua"
+      ],
+      "originalSpellings": [
+        "qiǎnsuá"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-2771",
+          "donor": "刷",
+          "reviewedForms": [
+            {
+              "ipa": "tɕʰaŋ³³sua³⁵",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2012",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "熏腊肉",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "la55zu55khu55",
+      "ipa": "la⁵⁵zu⁵⁵kʰu⁵⁵",
+      "displayIPA": "la⁵⁵zu⁵⁵ kʰu⁵⁵",
+      "pinyinParts": [
+        "laru",
+        "ku"
+      ],
+      "originalSpellings": [
+        "lārūkū"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60757-v-2012",
+          "donor": "腊肉",
+          "reviewedForms": [
+            {
+              "ipa": "la⁵⁵zu⁵⁵kʰu⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2570",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "唱山歌",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "san55kuo55san53",
+      "ipa": "san⁵⁵kuo⁵⁵san⁵³",
+      "displayIPA": "san⁵⁵kuo⁵⁵ san⁵³",
+      "pinyinParts": [
+        "sango",
+        "san"
+      ],
+      "originalSpellings": [
+        "sān'gōsàn"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60757-v-2570",
+          "donor": "山歌",
+          "reviewedForms": [
+            {
+              "ipa": "san⁵⁵kuo⁵⁵san⁵³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2770",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "烧石灰",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "sɿ24xuei33u24",
+      "ipa": "sɿ²⁴xuei³³u²⁴",
+      "displayIPA": "sɿ²⁴xuei³³ u²⁴",
+      "pinyinParts": [
+        "sihui",
+        "wu"
+      ],
+      "originalSpellings": [
+        "síhuīwú"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60757-v-2770",
+          "donor": "石灰",
+          "reviewedForms": [
+            {
+              "ipa": "sɿ²⁴xuei³³u²⁴",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2804",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "打滚",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "kən55təu55xa21",
+      "ipa": "kən⁵⁵təu⁵⁵xa²¹",
+      "displayIPA": "kən⁵⁵təu⁵⁵ xa²¹",
+      "pinyinParts": [
+        "gendou",
+        "ha"
+      ],
+      "originalSpellings": [
+        "gēndōuhǎ"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60757-v-2804",
+          "donor": "跟斗",
+          "reviewedForms": [
+            {
+              "ipa": "kən⁵⁵təu⁵⁵xa²¹",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0436",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "吃早饭",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "tsau55xuã31ka13",
+      "ipa": "tsau⁵⁵xuã³¹ka¹³",
+      "displayIPA": "tsau⁵⁵xuã³¹ ka¹³",
+      "pinyinParts": [
+        "zaohuan",
+        "ga"
+      ],
+      "originalSpellings": [
+        "zāohuǎn'gá"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60823-v-0436",
+          "donor": "早饭",
+          "reviewedForms": [
+            {
+              "ipa": "tsau⁵⁵xuã³¹ka¹³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0524",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "打吊针",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "tiau13tsɤ̃55xa55",
+      "ipa": "tiau¹³tsɤ̃⁵⁵xa⁵⁵",
+      "displayIPA": "tiau¹³tsɤ̃⁵⁵ xa⁵⁵",
+      "pinyinParts": [
+        "diaozen",
+        "ha"
+      ],
+      "originalSpellings": [
+        "diáozēnhā"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60823-v-0524",
+          "donor": "吊针",
+          "reviewedForms": [
+            {
+              "ipa": "tiau¹³tsɤ̃⁵⁵xa⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2289",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "打卦",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "kua13tsɿ55xa55",
+      "ipa": "kua¹³tsɿ⁵⁵xa⁵⁵",
+      "displayIPA": "kua¹³tsɿ⁵⁵ xa⁵⁵",
+      "pinyinParts": [
+        "guazi",
+        "ha"
+      ],
+      "originalSpellings": [
+        "guázīhā"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60823-v-2289",
+          "donor": "卦",
+          "reviewedForms": [
+            {
+              "ipa": "kua¹³tsɿ⁵⁵xa⁵⁵",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2530",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "练武术",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "u55su31a13ɣɤe55",
+      "ipa": "u⁵⁵su³¹a¹³ɣɤe⁵⁵",
+      "displayIPA": "u⁵⁵su³¹ a¹³ɣɤe⁵⁵",
+      "pinyinParts": [
+        "wusu",
+        "ahxe"
+      ],
+      "originalSpellings": [
+        "wūsǔ'áhxē"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60823-v-2530",
+          "donor": "武术",
+          "reviewedForms": [
+            {
+              "ipa": "u⁵⁵su³¹a¹³ɣɤe⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2570",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "唱山歌",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "sã55ko33tshã13",
+      "ipa": "sã⁵⁵ko³³tsʰã¹³",
+      "displayIPA": "sã⁵⁵ko³³ tsʰã¹³",
+      "pinyinParts": [
+        "sango",
+        "can"
+      ],
+      "originalSpellings": [
+        "sān'gocán"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60823-v-2570",
+          "donor": "山歌",
+          "reviewedForms": [
+            {
+              "ipa": "sã⁵⁵ko³³tsʰã¹³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2599",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "取名",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "mĩ31tsɿ33nau55a55",
+      "ipa": "mĩ³¹tsɿ³³nau⁵⁵a⁵⁵",
+      "displayIPA": "mĩ³¹tsɿ³³ nau⁵⁵a⁵⁵",
+      "pinyinParts": [
+        "minzi",
+        "naoa"
+      ],
+      "originalSpellings": [
+        "mǐnzināo'ā"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60823-v-2599",
+          "donor": "名字",
+          "reviewedForms": [
+            {
+              "ipa": "mĩ³¹tsɿ³³nau⁵⁵a⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2770",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "烧石灰",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "sɿ33xui55u13",
+      "ipa": "sɿ³³xui⁵⁵u¹³",
+      "displayIPA": "sɿ³³xui⁵⁵ u¹³",
+      "pinyinParts": [
+        "sihui",
+        "wu"
+      ],
+      "originalSpellings": [
+        "sihuīwú"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60823-v-2770",
+          "donor": "石灰",
+          "reviewedForms": [
+            {
+              "ipa": "sɿ³³xui⁵⁵u¹³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2821",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "系围裙",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "ui33tɕhĩ31pu13",
+      "ipa": "ui³³tɕʰĩ³¹pu¹³",
+      "displayIPA": "ui³³tɕʰĩ³¹ pu¹³",
+      "pinyinParts": [
+        "weiqin",
+        "bu"
+      ],
+      "originalSpellings": [
+        "weiqǐnbú"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60823-v-2821",
+          "donor": "围裙",
+          "reviewedForms": [
+            {
+              "ipa": "ui³³tɕʰĩ³¹pu¹³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-0746",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "打扑克",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "pho55khei21bu13",
+      "ipa": "pʰo⁵⁵kʰei²¹bu¹³",
+      "displayIPA": "pʰo⁵⁵kʰei²¹ bu¹³",
+      "pinyinParts": [
+        "pokei",
+        "bbu"
+      ],
+      "originalSpellings": [
+        "pōkèibbǔ"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-0746",
+          "donor": "扑克",
+          "reviewedForms": [
+            {
+              "ipa": "pʰo⁵⁵kʰei²¹bu¹³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-0747",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "打麻将",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "ma21tɕiã13bu13",
+      "ipa": "ma²¹tɕiã¹³bu¹³",
+      "displayIPA": "ma²¹tɕiã¹³ bu¹³",
+      "pinyinParts": [
+        "majian",
+        "bbu"
+      ],
+      "originalSpellings": [
+        "màjiǎnbbǔ"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-0747",
+          "donor": "麻将",
+          "reviewedForms": [
+            {
+              "ipa": "ma²¹tɕiã¹³bu¹³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-0748",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "变魔术",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "mo21su21wã13",
+      "ipa": "mo²¹su²¹wã¹³",
+      "displayIPA": "mo²¹su²¹ wã¹³",
+      "pinyinParts": [
+        "mosu",
+        "wan"
+      ],
+      "originalSpellings": [
+        "mòsùwǎn"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-0748",
+          "donor": "魔术",
+          "reviewedForms": [
+            {
+              "ipa": "mo²¹su²¹wã¹³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-0929",
+      "split": 3,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "拍马屁",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "mo13phie13ku55phe21",
+      "ipa": "mo¹³pʰie¹³ku⁵⁵pʰe²¹",
+      "displayIPA": "mo¹³pʰie¹³ku⁵⁵ pʰe²¹",
+      "pinyinParts": [
+        "mopiegu",
+        "pe"
+      ],
+      "originalSpellings": [
+        "mǒpiěgūpè"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-0929",
+          "donor": "马屁股",
+          "reviewedForms": [
+            {
+              "ipa": "mo¹³pʰie¹³ku⁵⁵pʰe²¹",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-0930",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "开玩笑",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "wã21ɕiau13khai33",
+      "ipa": "wã²¹ɕiau¹³kʰai³³",
+      "displayIPA": "wã²¹ɕiau¹³ kʰai³³",
+      "pinyinParts": [
+        "wanxiau",
+        "kai"
+      ],
+      "originalSpellings": [
+        "wànxiǎukai"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-0930",
+          "donor": "玩笑",
+          "reviewedForms": [
+            {
+              "ipa": "wã²¹ɕiau¹³kʰai³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2012",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "熏腊肉",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "la13zu33suẽ33",
+      "ipa": "la¹³zu³³suẽ³³",
+      "displayIPA": "la¹³zu³³ suẽ³³",
+      "pinyinParts": [
+        "laru",
+        "suen"
+      ],
+      "originalSpellings": [
+        "lǎrusuen"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2012",
+          "donor": "腊肉",
+          "reviewedForms": [
+            {
+              "ipa": "la¹³zu³³suẽ³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2279",
+      "split": 3,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "唱丧歌",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "nau55zẽ21ko33tsho55",
+      "ipa": "nau⁵⁵zẽ²¹ko³³tsʰo⁵⁵",
+      "displayIPA": "nau⁵⁵zẽ²¹ko³³ tsʰo⁵⁵",
+      "pinyinParts": [
+        "naurengo",
+        "co"
+      ],
+      "originalSpellings": [
+        "nāurèn'gocō"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2279",
+          "donor": "老人歌",
+          "reviewedForms": [
+            {
+              "ipa": "nau⁵⁵zẽ²¹ko³³tsʰo⁵⁵",
+              "span": [
+                1,
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2418",
+      "split": 1,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "浇水",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "tshe35tɕiau33",
+      "ipa": "tsʰe³⁵tɕiau³³",
+      "displayIPA": "tsʰe³⁵ tɕiau³³",
+      "pinyinParts": [
+        "ce",
+        "jiau"
+      ],
+      "originalSpellings": [
+        "céjiau"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2418",
+          "donor": "浇",
+          "reviewedForms": [
+            {
+              "ipa": "tsʰe³⁵tɕiau³³",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2420",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "施肥",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "xuei21liau13sã13",
+      "ipa": "xuei²¹liau¹³sã¹³",
+      "displayIPA": "xuei²¹liau¹³ sã¹³",
+      "pinyinParts": [
+        "hueiliau",
+        "san"
+      ],
+      "originalSpellings": [
+        "huèiliǎusǎn"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2420",
+          "donor": "肥料",
+          "reviewedForms": [
+            {
+              "ipa": "xuei²¹liau¹³sã¹³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2421",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "沤肥",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "fei21liau13dʉ21bʉ13",
+      "ipa": "fei²¹liau¹³dʉ²¹bʉ¹³",
+      "displayIPA": "fei²¹liau¹³ dʉ²¹bʉ¹³",
+      "pinyinParts": [
+        "feiliau",
+        "ddeubbeu"
+      ],
+      "originalSpellings": [
+        "fèiliǎuddèubběu"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2421",
+          "donor": "肥料",
+          "reviewedForms": [
+            {
+              "ipa": "fei²¹liau¹³dʉ²¹bʉ¹³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2574",
+      "split": 1,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "骑马",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "mo21dʑi13",
+      "ipa": "mo²¹dʑi¹³",
+      "displayIPA": "mo²¹ dʑi¹³",
+      "pinyinParts": [
+        "mo",
+        "jji"
+      ],
+      "originalSpellings": [
+        "mòjjǐ"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2574",
+          "donor": "马",
+          "reviewedForms": [
+            {
+              "ipa": "mo²¹dʑi¹³",
+              "span": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2626",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "伸懒腰",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "nã55jau33tshẽ33",
+      "ipa": "nã⁵⁵jau³³tsʰẽ³³",
+      "displayIPA": "nã⁵⁵jau³³ tsʰẽ³³",
+      "pinyinParts": [
+        "nanyau",
+        "cen"
+      ],
+      "originalSpellings": [
+        "nānyaucen"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2626",
+          "donor": "懒腰",
+          "reviewedForms": [
+            {
+              "ipa": "nã⁵⁵jau³³tsʰẽ³³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2770",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "烧石灰",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "si13xuei33ʉ55",
+      "ipa": "si¹³xuei³³ʉ⁵⁵",
+      "displayIPA": "si¹³xuei³³ ʉ⁵⁵",
+      "pinyinParts": [
+        "sihuei",
+        "eu"
+      ],
+      "originalSpellings": [
+        "sǐhuei'ēu"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2770",
+          "donor": "石灰",
+          "reviewedForms": [
+            {
+              "ipa": "si¹³xuei³³ʉ⁵⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2772",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "穿针",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "a13ɣe55tɕhyã33",
+      "ipa": "a¹³ɣe⁵⁵tɕʰyã³³",
+      "displayIPA": "a¹³ɣe⁵⁵ tɕʰyã³³",
+      "pinyinParts": [
+        "ahxe",
+        "qüan"
+      ],
+      "originalSpellings": [
+        "ǎhxēqüan"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2772",
+          "donor": "穿",
+          "reviewedForms": [
+            {
+              "ipa": "a¹³ɣe⁵⁵tɕʰyã³³",
+              "span": [
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2773",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "绣花",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "tsu33pu35xe13",
+      "ipa": "tsu³³pu³⁵xe¹³",
+      "displayIPA": "tsu³³pu³⁵ xe¹³",
+      "pinyinParts": [
+        "zubu",
+        "he"
+      ],
+      "originalSpellings": [
+        "zubúhě"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2773",
+          "donor": "绣",
+          "reviewedForms": [
+            {
+              "ipa": "tsu³³pu³⁵xe¹³",
+              "span": [
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2778",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "闩门",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "tsha33mẽ33suã33",
+      "ipa": "tsʰa³³mẽ³³suã³³",
+      "displayIPA": "tsʰa³³mẽ³³ suã³³",
+      "pinyinParts": [
+        "camen",
+        "suan"
+      ],
+      "originalSpellings": [
+        "camensuan"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2778",
+          "donor": "门",
+          "reviewedForms": [
+            {
+              "ipa": "tsʰa³³mẽ³³suã³³",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-2816",
+      "split": 2,
+      "basis": "Reviewed nominal component and the following action; retain existing borrowing spans.",
+      "zh": "发脾气",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "pi21tɕhi33fa35",
+      "ipa": "pi²¹tɕʰi³³fa³⁵",
+      "displayIPA": "pi²¹tɕʰi³³ fa³⁵",
+      "pinyinParts": [
+        "biqi",
+        "fa"
+      ],
+      "originalSpellings": [
+        "bìqifá"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-2816",
+          "donor": "脾气",
+          "reviewedForms": [
+            {
+              "ipa": "pi²¹tɕʰi³³fa³⁵",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2629",
+      "split": 2,
+      "basis": "Dream-talk expression followed by the independently attested Northern verb li “say”.",
+      "zh": "说梦话",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "mu22sa22li21",
+      "ipa": "mu²²sa²²li²¹",
+      "displayIPA": "mu²²sa²² li²¹",
+      "pinyinParts": [
+        "musa",
+        "li"
+      ],
+      "originalSpellings": [
+        "mǔsǎlǐ"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60756-v-2629",
+      "split": 3,
+      "basis": "Dream-talk expression followed by the independently attested Northern verb li “say”.",
+      "zh": "说梦话",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "mu33tɕi33sa33li33",
+      "ipa": "mu³³tɕi³³sa³³li³³",
+      "displayIPA": "mu³³tɕi³³sa³³ li³³",
+      "pinyinParts": [
+        "mujisa",
+        "li"
+      ],
+      "originalSpellings": [
+        "mǔjǐsǎlǐ"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60823-v-2629",
+      "split": 2,
+      "basis": "Dream-talk expression followed by the independently attested Northern verb li “say”.",
+      "zh": "说梦话",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "mu33sa31li55",
+      "ipa": "mu³³sa³¹li⁵⁵",
+      "displayIPA": "mu³³sa³¹ li⁵⁵",
+      "pinyinParts": [
+        "musa",
+        "li"
+      ],
+      "originalSpellings": [
+        "musǎlī"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60756-v-0523",
+      "split": 1,
+      "basis": "Chinese needle component followed by the local action verb; only the needle syllable is borrowed.",
+      "zh": "打针",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "tseŋ55xa55",
+      "ipa": "tseŋ⁵⁵xa⁵⁵",
+      "displayIPA": "tseŋ⁵⁵ xa⁵⁵",
+      "pinyinParts": [
+        "zen",
+        "ha"
+      ],
+      "originalSpellings": [
+        "zēnhā"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60823-v-0523",
+      "split": 1,
+      "basis": "Chinese needle component followed by the local action verb; only the needle syllable is borrowed.",
+      "zh": "打针",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "tsɤ̃55xa55",
+      "ipa": "tsɤ̃⁵⁵xa⁵⁵",
+      "displayIPA": "tsɤ̃⁵⁵ xa⁵⁵",
+      "pinyinParts": [
+        "zen",
+        "ha"
+      ],
+      "originalSpellings": [
+        "zēnhā"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60824-v-0523",
+      "split": 1,
+      "basis": "Chinese needle component followed by the local action verb; only the needle syllable is borrowed.",
+      "zh": "打针",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "tsẽ33bu13",
+      "ipa": "tsẽ³³bu¹³",
+      "displayIPA": "tsẽ³³ bu¹³",
+      "pinyinParts": [
+        "zen",
+        "bbu"
+      ],
+      "originalSpellings": [
+        "zenbbǔ"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60757-v-1663",
+      "split": 1,
+      "basis": "Independent noun and verb roots attested in the same survey variety; tone differences retained.",
+      "rootEvidence": {
+        "nouns": [
+          {
+            "id": "w2139",
+            "zh": "鱼",
+            "ipa": "suŋ²⁴",
+            "cls": [
+              "noun"
+            ]
+          }
+        ],
+        "verbs": [
+          {
+            "id": "yubao-60757-v-2807",
+            "zh": "剖",
+            "ipa": "xa²⁴",
+            "cls": [
+              "verb"
+            ]
+          }
+        ]
+      },
+      "zh": "剖鱼",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "suŋ24xa24",
+      "ipa": "suŋ²⁴xa²⁴",
+      "displayIPA": "suŋ²⁴ xa²⁴",
+      "pinyinParts": [
+        "song",
+        "ha"
+      ],
+      "originalSpellings": [
+        "sónghá"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60757-v-2606",
+      "split": 1,
+      "basis": "Independent noun and verb roots attested in the same survey variety; tone differences retained.",
+      "rootEvidence": {
+        "nouns": [
+          {
+            "id": "w1076",
+            "zh": "柴; 木; 柴火; 木头",
+            "ipa": "kʰa²¹",
+            "cls": [
+              "noun"
+            ]
+          }
+        ],
+        "verbs": [
+          {
+            "id": "yubao-60757-v-0823",
+            "zh": "砍",
+            "ipa": "tʰa⁵⁵",
+            "cls": [
+              "verb"
+            ]
+          }
+        ]
+      },
+      "zh": "砍柴",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "kha21tha55",
+      "ipa": "kʰa²¹tʰa⁵⁵",
+      "displayIPA": "kʰa²¹ tʰa⁵⁵",
+      "pinyinParts": [
+        "ka",
+        "ta"
+      ],
+      "originalSpellings": [
+        "kǎtā"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60757-v-2635",
+      "split": 1,
+      "basis": "Independent noun and verb roots attested in the same survey variety; tone differences retained.",
+      "rootEvidence": {
+        "nouns": [
+          {
+            "id": "stedt-rn-288861",
+            "zh": "路; 道路",
+            "ipa": "la⁵⁵",
+            "cls": [
+              "noun"
+            ]
+          }
+        ],
+        "verbs": [
+          {
+            "id": "yubao-60757-v-0800",
+            "zh": "走",
+            "ipa": "ɯ²⁴",
+            "cls": [
+              "verb"
+            ]
+          }
+        ]
+      },
+      "zh": "走路",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "la55ɯ24",
+      "ipa": "la⁵⁵ɯ²⁴",
+      "displayIPA": "la⁵⁵ ɯ²⁴",
+      "pinyinParts": [
+        "la",
+        "i"
+      ],
+      "originalSpellings": [
+        "lā'í"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60757-v-2803",
+      "split": 1,
+      "basis": "Independent noun and verb roots attested in the same survey variety; tone differences retained.",
+      "rootEvidence": {
+        "nouns": [
+          {
+            "id": "w957",
+            "zh": "脚; 步",
+            "ipa": "tɕi²²",
+            "cls": [
+              "noun",
+              "classifier"
+            ]
+          }
+        ],
+        "verbs": [
+          {
+            "id": "w2616",
+            "zh": "踩; 踏; 跺",
+            "ipa": "tsa²⁴",
+            "cls": [
+              "verb.transitive"
+            ]
+          }
+        ]
+      },
+      "zh": "跺脚",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "tɕi22tsa24",
+      "ipa": "tɕi²²tsa²⁴",
+      "displayIPA": "tɕi²² tsa²⁴",
+      "pinyinParts": [
+        "ji",
+        "za"
+      ],
+      "originalSpellings": [
+        "jǐzá"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60824-v-0525",
+      "split": 1,
+      "basis": "Independent noun and verb roots attested in the same survey variety; tone differences retained.",
+      "rootEvidence": {
+        "nouns": [
+          {
+            "id": "stedt-rn-289831",
+            "zh": "药",
+            "ipa": "se³⁵",
+            "cls": [
+              "noun"
+            ]
+          }
+        ],
+        "verbs": [
+          {
+            "id": "stedt-rn-43584",
+            "zh": "吃",
+            "ipa": "ɣe³⁵",
+            "cls": [
+              "verb"
+            ]
+          }
+        ]
+      },
+      "zh": "吃药",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "se33ɣe35",
+      "ipa": "se³³ɣe³⁵",
+      "displayIPA": "se³³ ɣe³⁵",
+      "pinyinParts": [
+        "se",
+        "hxe"
+      ],
+      "originalSpellings": [
+        "sehxé"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60824-v-2412",
+      "split": 2,
+      "basis": "Independent noun and verb roots attested in the same survey variety; tone differences retained.",
+      "rootEvidence": {
+        "nouns": [
+          {
+            "id": "yubao-60824-v-1239",
+            "zh": "田",
+            "ipa": "si¹³die⁵⁵",
+            "cls": [
+              "noun"
+            ]
+          }
+        ],
+        "verbs": [
+          {
+            "id": "stedt-rn-289732",
+            "zh": "耙",
+            "ipa": "ba²¹",
+            "cls": [
+              "verb"
+            ]
+          }
+        ]
+      },
+      "zh": "耙田",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "si13die55ba21",
+      "ipa": "si¹³die⁵⁵ba²¹",
+      "displayIPA": "si¹³die⁵⁵ ba²¹",
+      "pinyinParts": [
+        "siddie",
+        "bba"
+      ],
+      "originalSpellings": [
+        "sǐddiēbbà"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60756-v-0930",
+      "split": 2,
+      "basis": "Previously reviewed object–verb analysis: the noun 玩笑 followed by 开.",
+      "zh": "开玩笑",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "uaŋ33ɕau35khɛ55",
+      "ipa": "uaŋ³³ɕau³⁵kʰɛ⁵⁵",
+      "displayIPA": "uaŋ³³ɕau³⁵ kʰɛ⁵⁵",
+      "pinyinParts": [
+        "wangxiao",
+        "kai"
+      ],
+      "originalSpellings": [
+        "wǎngxiáokāi"
+      ],
+      "loanNotes": []
+    },
+    {
+      "id": "yubao-60756-v-0871",
+      "split": 2,
+      "basis": "The same-point noun 牙齿 (yubao-60756-v-0468) followed by the reviewed Chinese verb 刷.",
+      "zh": "刷牙",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "sɿ53sɿ33sua35",
+      "ipa": "sɿ⁵³sɿ³³sua³⁵",
+      "displayIPA": "sɿ⁵³sɿ³³ sua³⁵",
+      "pinyinParts": [
+        "sisi",
+        "sua"
+      ],
+      "originalSpellings": [
+        "sìsǐsuá"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60756-v-0871",
+          "donor": "刷",
+          "reviewedForms": [
+            {
+              "ipa": "sɿ⁵³sɿ³³sua³⁵",
+              "span": [
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-0889",
+      "split": 1,
+      "basis": "The same-point noun 人 (yubao-60823-v-0574) followed by the reviewed Chinese verb 怪.",
+      "zh": "责怪",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "no55kuai13",
+      "ipa": "no⁵⁵kuai¹³",
+      "displayIPA": "no⁵⁵ kuai¹³",
+      "pinyinParts": [
+        "no",
+        "guai"
+      ],
+      "originalSpellings": [
+        "nōguái"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60823-v-0889",
+          "donor": "怪",
+          "reviewedForms": [
+            {
+              "ipa": "no⁵⁵kuai¹³",
+              "span": [
+                2,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60823-v-2715",
+      "split": 2,
+      "basis": "The same-point noun 脚 (yubao-60823-v-0487) followed by 抓 (yubao-60823-v-0804); NV records word classes without asserting an object role.",
+      "zh": "刨食",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "tɕi31pha33tsua55",
+      "ipa": "tɕi³¹pʰa³³tsua⁵⁵",
+      "displayIPA": "tɕi³¹pʰa³³ tsua⁵⁵",
+      "pinyinParts": [
+        "jipa",
+        "zua"
+      ],
+      "originalSpellings": [
+        "jǐpazuā"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60823-v-2715",
+          "donor": "抓",
+          "reviewedForms": [
+            {
+              "ipa": "tɕi³¹pʰa³³tsua⁵⁵",
+              "span": [
+                3,
+                3
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60824-v-0684",
+      "split": 2,
+      "basis": "Reviewed 江湖 noun component followed by the independently attested same-point verb 跑, also merged under stedt-rn-289904; retain that two-syllable verb as one word.",
+      "zh": "走江湖",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "tɕiã33fu21bu21ɣe13",
+      "ipa": "tɕiã³³fu²¹bu²¹ɣe¹³",
+      "displayIPA": "tɕiã³³fu²¹ bu²¹ɣe¹³",
+      "pinyinParts": [
+        "jianfu",
+        "bbuhxe"
+      ],
+      "originalSpellings": [
+        "jianfùbbùhxě"
+      ],
+      "loanNotes": [
+        {
+          "id": "chinese-loan-yubao-60824-v-0684",
+          "donor": "江湖",
+          "reviewedForms": [
+            {
+              "ipa": "tɕiã³³fu²¹bu²¹ɣe¹³",
+              "span": [
+                1,
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

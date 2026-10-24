@@ -27,6 +27,13 @@ for(const word of [{id:'yubao-60823-v-2790',pos:''},{id:'merged',mergedWordIds:[
  assert.equal(JSON.stringify(word),original,'review leaves source POS unchanged');
 }
 assert.equal(pos.label({id:'unreviewed',pos:''}),'');
+for(const [structure,zh,en]of [['OV','宾语＋动词','Object + verb'],['SV','主语＋谓语','Subject + predicate'],['NV','名词＋动词','Noun + verb']]){
+ const id=vm.runInContext('Object.keys(LEXICAL_REVIEWS.structures).find(id=>LEXICAL_REVIEWS.structures[id]==='+JSON.stringify(structure)+')',context);
+ assert(id,'Reviewed '+structure+' example exists');
+ const word={id},category=pos.ids(word)[0];
+ assert(pos.explanation(word,category,'zh').includes(zh+'（'+structure+'）。'),structure+' Chinese structure explanation');
+ assert(pos.explanation(word,category,'en').includes(en+' ('+structure+').'),structure+' English structure explanation');
+}
 assert.equal(pos.label(null),'');
 assert.equal(pos.filterId('adj.'),'adjective');
 assert.equal(pos.matches({positions:['unmapped source label']},'unmapped source label'),true);

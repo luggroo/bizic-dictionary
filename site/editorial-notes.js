@@ -62930,6 +62930,12 @@ EDITORIAL_NOTES.push(
 {"id":"chinese-loan-yubao-60756-v-1185","wordIds":["yubao-60756-v-1185"],"kind":"借词来源","donor":"宁愿","donorVariety":"汉语（方言待核）","scope":"whole","text":"借自汉语「宁愿」，具体方言来源待核。","reviewedForms":[{"ipa":"ȵiŋ³³ʑaŋ³⁵","span":[1,2]}],"reviewBatch":"named-supplement-2026-10-24"}
 );
 EDITORIAL_NOTES.push({"id":"chinese-loan-w2695","wordIds":["w2695"],"kind":"借词来源","donor":"","donorVariety":"汉语（方言待核）","scope":"whole","text":"整词借自汉语，具体方言来源和原词写法待核。","reviewedForms":[{"ipa":"tsɨ²⁴ai⁵⁵tsɨ²¹","span":[1,3]}],"reviewBatch":"named-supplement-2026-10-24"});
+EDITORIAL_NOTES.push(
+{"id":"chinese-loan-yubao-60824-v-0529","wordIds":["yubao-60824-v-0529"],"kind":"借词来源","donor":"媒婆","donorVariety":"汉语（方言待核）","scope":"whole","text":"借自汉语「媒婆」，具体方言来源待核。","reviewedForms":[{"ipa":"mei¹³bo³⁵","span":[1,2]}],"reviewBatch":"named-supplement-2026-10-24"},
+{"id":"chinese-loan-yubao-60756-v-0523","wordIds":["yubao-60756-v-0523"],"kind":"借词来源","donor":"针","donorVariety":"汉语（方言待核）","scope":"component","text":"「针」部分（第 1 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"tseŋ⁵⁵xa⁵⁵","span":[1,1]}],"reviewBatch":"named-supplement-2026-10-24"},
+{"id":"chinese-loan-yubao-60823-v-0523","wordIds":["yubao-60823-v-0523"],"kind":"借词来源","donor":"针","donorVariety":"汉语（方言待核）","scope":"component","text":"「针」部分（第 1 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"tsɤ̃⁵⁵xa⁵⁵","span":[1,1]}],"reviewBatch":"named-supplement-2026-10-24"},
+{"id":"chinese-loan-yubao-60824-v-0523","wordIds":["yubao-60824-v-0523"],"kind":"借词来源","donor":"针","donorVariety":"汉语（方言待核）","scope":"component","text":"「针」部分（第 1 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"tsẽ³³bu¹³","span":[1,1]}],"reviewBatch":"named-supplement-2026-10-24"}
+);
 // Index source IDs once; list filtering visits every merged entry.
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){

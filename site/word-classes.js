@@ -186,7 +186,13 @@ const WordClasses=(()=>{
    let text=p.origin==='source'?(en?'Source label: ':'原文献词性：')+p.sourceLabels.join(' / '):
      (en?'Part of speech inferred by this site with AI assistance; it may be incorrect.':'本站借助 AI 推测的词性，可能有误。')+
      (raw?(en?' Original source label: ':'原文献标注：')+raw:(en?' This category is not labelled in the source.':'原文献未标注此词性。'));
-   if(r?.structure)text+=' '+(r.structure==='OV'?(en?'Object + verb (OV).':'宾语＋动词（OV）。'):(en?'Subject + predicate (SV).':'主语＋谓语（SV）。'));
+   const structure={
+     OV:['宾语＋动词（OV）。','Object + verb (OV).'],
+     SV:['主语＋谓语（SV）。','Subject + predicate (SV).'],
+     NV:['名词＋动词（NV）。','Noun + verb (NV).'],
+     VN:['动词＋名词（VN）。','Verb + noun (VN).']
+   }[r?.structure];
+   if(structure)text+=' '+structure[en?1:0];
    if(r?.tentative)text+=' '+(en?'The grammatical analysis remains tentative.':'具体语法分析仍待核。');
    return text;
  }

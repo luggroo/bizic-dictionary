@@ -574,6 +574,110 @@
       },
       "noteEn": "The full form is borrowed from Chinese; the specific donor variety and Chinese spelling remain to be established.",
       "rationale": "Cover the full three-syllable Brassett form without reconstructing an unverified Chinese donor spelling or extending the annotation to other nephew forms."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "媒婆（媒人）",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0529",
+        "wordIds": [
+          "yubao-60824-v-0529"
+        ],
+        "kind": "借词来源",
+        "donor": "媒婆",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「媒婆」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "mei¹³bo³⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 媒婆; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "打针",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0523",
+        "wordIds": [
+          "yubao-60756-v-0523"
+        ],
+        "kind": "借词来源",
+        "donor": "针",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「针」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tseŋ⁵⁵xa⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 针 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "打针",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0523",
+        "wordIds": [
+          "yubao-60823-v-0523"
+        ],
+        "kind": "借词来源",
+        "donor": "针",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「针」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsɤ̃⁵⁵xa⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 针 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "打针",
+      "note": {
+        "id": "chinese-loan-yubao-60824-v-0523",
+        "wordIds": [
+          "yubao-60824-v-0523"
+        ],
+        "kind": "借词来源",
+        "donor": "针",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「针」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsẽ³³bu¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 针 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
     }
   ],
   "phrases": [
@@ -582,6 +686,534 @@
       "parts": [
         "ninzen",
         "ha"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-0436",
+      "parts": [
+        "zaohuang",
+        "ga"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-0438",
+      "parts": [
+        "yehuang",
+        "ga"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-0520",
+      "parts": [
+        "bin",
+        "ba"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60756-v-0524",
+      "parts": [
+        "diaozen",
+        "ha"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-0528",
+      "parts": [
+        "meiren",
+        "ri"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-0748",
+      "parts": [
+        "mosu",
+        "wang"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-0749",
+      "parts": [
+        "gusi",
+        "li"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2012",
+      "parts": [
+        "laru",
+        "ku"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2199",
+      "parts": [
+        "sousu",
+        "ri"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2417",
+      "parts": [
+        "huangsan",
+        "kai"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2420",
+      "parts": [
+        "huiliao",
+        "zui"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2421",
+      "parts": [
+        "huiliao",
+        "ou"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2487",
+      "parts": [
+        "cuang",
+        "hua"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60756-v-2530",
+      "parts": [
+        "wusu",
+        "liang"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2531",
+      "parts": [
+        "dangong",
+        "ha"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2570",
+      "parts": [
+        "sango",
+        "can"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2650",
+      "parts": [
+        "zuang",
+        "gao"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60756-v-2719",
+      "parts": [
+        "kaisui",
+        "si"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2770",
+      "parts": [
+        "sihui",
+        "wu"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2771",
+      "parts": [
+        "qian",
+        "sua"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60757-v-2012",
+      "parts": [
+        "laru",
+        "ku"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60757-v-2570",
+      "parts": [
+        "sango",
+        "san"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60757-v-2770",
+      "parts": [
+        "sihui",
+        "wu"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60757-v-2804",
+      "parts": [
+        "gendou",
+        "ha"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-0436",
+      "parts": [
+        "zaohuan",
+        "ga"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-0524",
+      "parts": [
+        "diaozen",
+        "ha"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-2289",
+      "parts": [
+        "guazi",
+        "ha"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-2530",
+      "parts": [
+        "wusu",
+        "ahxe"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-2570",
+      "parts": [
+        "sango",
+        "can"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-2599",
+      "parts": [
+        "minzi",
+        "naoa"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-2770",
+      "parts": [
+        "sihui",
+        "wu"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-2821",
+      "parts": [
+        "weiqin",
+        "bu"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-0746",
+      "parts": [
+        "pokei",
+        "bbu"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-0747",
+      "parts": [
+        "majian",
+        "bbu"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-0748",
+      "parts": [
+        "mosu",
+        "wan"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-0929",
+      "parts": [
+        "mopiegu",
+        "pe"
+      ],
+      "splitAfter": 3
+    },
+    {
+      "id": "yubao-60824-v-0930",
+      "parts": [
+        "wanxiau",
+        "kai"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-2012",
+      "parts": [
+        "laru",
+        "suen"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-2279",
+      "parts": [
+        "naurengo",
+        "co"
+      ],
+      "splitAfter": 3
+    },
+    {
+      "id": "yubao-60824-v-2418",
+      "parts": [
+        "ce",
+        "jiau"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60824-v-2420",
+      "parts": [
+        "hueiliau",
+        "san"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-2421",
+      "parts": [
+        "feiliau",
+        "ddeubbeu"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-2574",
+      "parts": [
+        "mo",
+        "jji"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60824-v-2626",
+      "parts": [
+        "nanyau",
+        "cen"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-2770",
+      "parts": [
+        "sihuei",
+        "eu"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-2772",
+      "parts": [
+        "ahxe",
+        "qüan"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-2773",
+      "parts": [
+        "zubu",
+        "he"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-2778",
+      "parts": [
+        "camen",
+        "suan"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-2816",
+      "parts": [
+        "biqi",
+        "fa"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60757-v-2629",
+      "parts": [
+        "musa",
+        "li"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-2629",
+      "parts": [
+        "mujisa",
+        "li"
+      ],
+      "splitAfter": 3
+    },
+    {
+      "id": "yubao-60823-v-2629",
+      "parts": [
+        "musa",
+        "li"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-0523",
+      "parts": [
+        "zen",
+        "ha"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60823-v-0523",
+      "parts": [
+        "zen",
+        "ha"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60824-v-0523",
+      "parts": [
+        "zen",
+        "bbu"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60757-v-1663",
+      "parts": [
+        "song",
+        "ha"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60757-v-2606",
+      "parts": [
+        "ka",
+        "ta"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60757-v-2635",
+      "parts": [
+        "la",
+        "i"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60757-v-2803",
+      "parts": [
+        "ji",
+        "za"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60824-v-0525",
+      "parts": [
+        "se",
+        "hxe"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60824-v-2412",
+      "parts": [
+        "siddie",
+        "bba"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-0930",
+      "parts": [
+        "wangxiao",
+        "kai"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-0871",
+      "parts": [
+        "sisi",
+        "sua"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-0889",
+      "parts": [
+        "no",
+        "guai"
+      ],
+      "splitAfter": 1
+    },
+    {
+      "id": "yubao-60823-v-2715",
+      "parts": [
+        "jipa",
+        "zua"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-0684",
+      "parts": [
+        "jianfu",
+        "bbuhxe"
       ],
       "splitAfter": 2
     }
@@ -609,6 +1241,13 @@
       "zh": "领导；带领",
       "en": "lead; guide",
       "rationale": "The source English lead is a leadership/action verb here; the recorded lĩ⁵⁵tʰau³⁵ matches 领导. Original attestations remain unchanged."
+    },
+    {
+      "id": "yubao-60824-v-0529",
+      "previousZh": "媒人",
+      "zh": "媒婆（媒人）",
+      "en": "matchmaker",
+      "rationale": "mei¹³bo³⁵ corresponds to the Chinese donor 媒婆; retain 媒人 as an explanatory sense and search alias."
     }
   ],
   "deferredDian": [
