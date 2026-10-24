@@ -1906,3 +1906,19 @@ Object.assign(UI_TRANSLATIONS,{
 
 // Navigation of the mobile reference-grammar chapter list.
 Object.assign(UI_TRANSLATIONS,{"章节目录":"Chapter contents"});
+
+Object.assign(UI_TRANSLATIONS, {
+  "系动词否定": "Copular negation",
+  "系动词否定：“不是”": "Copular negation: ‘not be’",
+  "不是；前者由“是＋否定”组成，后者借自汉语。见系动词否定": "Not be: the first form combines the copula with negation; the second is a Chinese loan. See Copular negation.",
+  "表示“不是”时，可以用 /sou²¹ta²⁴/，由“是”与否定成分组成；也可以用借自汉语的 /pu²⁴sɨ⁵⁵/。下例中，两种形式都放在名词性表达后：": "To say ‘not be’, Tujia can use /sou²¹ta²⁴/, combining the copula with a negative particle, or the Chinese loan /pu²⁴sɨ⁵⁵/. Both forms follow the nominal expression in this example:",
+  "肯定句可以省略“是”；在这类否定句中，使用 /sou²¹ta²⁴/ 时要保留 /sou²¹/，不能只在名词后加 /ta²⁴/。": "The copula can be omitted in affirmative clauses. In negative clauses of this kind, /sou²¹ta²⁴/ retains /sou²¹/; adding /ta²⁴/ alone after the noun is not acceptable.",
+  "出处：Brassett等（2006），第52页，§4.2.3，例17；音标由原书拼写换算。": "Source: Brassett et al. (2006), p. 52, §4.2.3, example 17; IPA converted from the original spelling.",
+  "“不是”的形式与例句见系动词否定。": "For forms and examples of ‘not be’, see Copular negation.",
+  "田": "Tian",
+  "姓": "surname",
+  "不是": "not be",
+  "我不姓田。": "My surname is not Tian."
+});
+
+Object.assign(UI_TRANSLATIONS, {"不是；前者由“是＋否定”组成，后者借自汉语。见": "Not be: the first form combines the copula with negation; the second is a Chinese loan. See", "“不是”的形式与例句见": "For forms and examples of ‘not be’, see"});
