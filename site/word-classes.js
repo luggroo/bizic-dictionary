@@ -126,7 +126,7 @@ const WordClasses=(()=>{
      .filter(x=>x!==null&&x!==undefined&&String(x).trim()).map(x=>String(x).trim()))];
  }
  const reviewedClasses=new Map([['yubao-60823-v-2790',['phrase.verb']],['yubao-60756-v-2550',['phrase.verb']],['yubao-60823-v-2550',['phrase.verb']],['yubao-60824-v-2550',['phrase.verb']]]);
- function review(w){return typeof lexicalReviewFor==='function'?lexicalReviewFor(w):null;}
+ function review(w){return w&&Object.hasOwn(w,'_classReview')?w._classReview:typeof lexicalReviewFor==='function'?lexicalReviewFor(w):null;}
  function reviewedIds(w){
    if(review(w))return review(w).classes;
    return [...new Set([w?.id,...(w?.mergedWordIds||[]),...(w?.attestations||[]).map(a=>a.id)]

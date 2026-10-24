@@ -5,7 +5,7 @@ const preparedVersion=document.querySelector('meta[name="prepared-data-version"]
 function fastChunk(name){
  if(!fastChunks.has(name)){
   const url='prepared/'+name+'.json.gz'+(preparedVersion?'?v='+encodeURIComponent(preparedVersion):'');
-  const request=typeof SiteRequest==='undefined'?fetch(url).then(preparedJSON):SiteRequest.read(url,preparedJSON,{timeoutMs:name==='words-index'?45000:20000});
+  const request=typeof SiteRequest==='undefined'?fetch(url).then(preparedJSON):SiteRequest.read(url,preparedJSON,{timeoutMs:['words-index','word-search'].includes(name)?45000:20000});
   fastChunks.set(name,request.catch(e=>{fastChunks.delete(name);throw e;}));
  }
  return fastChunks.get(name);
@@ -26,14 +26,17 @@ function loadAllSourceTexts(){
 }
 async function loadWordEvidence(word){
  if(word._chunk===undefined)return word;
- const original=(await fastChunk('words-'+word._chunk)).find(w=>w.id===word.id);
- if(!original)throw Error('Missing word '+word.id);
+ const name=word._entry===undefined?'words-'+word._chunk:'entries/'+word._entry;
+ const payload=await fastChunk(name),original=word._entry===undefined?payload.find(w=>w.id===word.id):payload;
+ if(original?.id!==word.id){fastChunks.delete(name);throw Error('Mismatched word '+word.id);}
+ Object.assign(UI_TRANSLATIONS,original._translations||{});
  // Keep object identity so history, dialect filters and WeakMap caches remain valid.
- Object.assign(word,original);delete word._chunk;return word;
+ Object.assign(word,original);delete word._chunk;delete word._entry;return word;
 }
 async function loadAllWordEvidence(){
+ if(window.SitePages)await SitePages.group('dictionary');
  const chunks=[...new Set(D.words.filter(w=>w._chunk!==undefined).map(w=>w._chunk))];
- for(const n of chunks){const rows=await fastChunk('words-'+n);for(const original of rows){const word=W[original.id];if(word){Object.assign(word,original);delete word._chunk;}}}
+ for(const n of chunks){const rows=await fastChunk('words-'+n);for(const original of rows){const word=W[original.id];if(word){Object.assign(word,original);delete word._chunk;delete word._entry;}}}
 }
 let evidenceRequest=0;
 async function openPreparedDetail(id){
@@ -46,10 +49,14 @@ async function openPreparedDetail(id){
  commitDetailNavigation(id,wasOpen);
  if(window.TujiaUI)TujiaUI.refresh();
  try{
-  if(window.SitePages)await SitePages.prepare(state,id);
-  if(W[id]?._chunk!==undefined)await loadWordEvidence(W[id]);
-  else if(S[id]?._textChunk){
+  const ready=window.SitePages?SitePages.prepare(state,id):Promise.resolve();
+  if(W[id]?._chunk!==undefined)await Promise.all([ready,loadWordEvidence(W[id])]);
+  else {
+   await ready;
+   if(W[id]?._chunk!==undefined)await loadWordEvidence(W[id]);
+   else if(S[id]?._textChunk){
    try{await loadSourceText(S[id]);}catch{S[id]._textUnavailable=true;S[id]._skipTextOnce=true;}
+   }
   }
   if(token===evidenceRequest)openDetail(id);
  }catch{if(token===evidenceRequest){$('#detail-body').innerHTML='<p role="status">条目未能载入，请重试。</p><button data-open="'+E(id)+'">重试</button>';if(window.TujiaUI)TujiaUI.refresh();}}
@@ -116,7 +123,8 @@ async function initializePreparedData(){
  }catch(error){console.error(error);window.fastReady=false;const status=document.getElementById('startup-status');if(status)status.hidden=true;const notice=document.createElement('div');notice.innerHTML='<p role="status">资料未能载入，请检查网络后重试。</p><button>重试</button>';notice.querySelector('button').onclick=()=>{notice.remove();initializePreparedData()};$('#main').prepend(notice);window.TujiaUI?.refresh();}
 }
 function applyPreparedPart(name,payload){
- if(name==='words-index'){
+ if(name==='words-index'||name==='word-search'){
+  if(typeof WordIndex!=='undefined')payload=WordIndex.unpack(payload);
   D.words=payload.words;D.wordAliases=payload.wordAliases;
   W=Object.fromEntries(D.words.map(w=>[w.id,w]));
   for(const [alias,id]of Object.entries(D.wordAliases||{}))W[alias]=W[id];

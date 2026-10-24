@@ -52,6 +52,15 @@ function displayedAttestations(w){
  displayedAttestationsCache.set(w,rows);return rows;
 }
 function wordSources(w){return [...new Set((w.sourceIds||[w.source]).map(canonicalSource))]}
+function wordLoanInfo(w){return w._loan||modernChineseLoanInfo(w)}
+function wordLoanBadge(w){
+ if(typeof modernChineseLoanBadge==='function')return modernChineseLoanBadge(w);
+ const {scope}=wordLoanInfo(w);return scope?`<span class="loan-badge" data-loan-scope="${scope}">${{whole:'新借',component:'半借',mixed:'含新借词形'}[scope]}</span>`:'';
+}
+function wordLoanAccessibleSuffix(w){
+ if(typeof modernChineseLoanAccessibleSuffix==='function')return modernChineseLoanAccessibleSuffix(w);
+ const {scope}=wordLoanInfo(w);return scope?'，'+{whole:'可能整词借自汉语',component:'部分音节可能借自汉语',mixed:'部分词形可能借自汉语'}[scope]:'';
+}
 function wordForms(w){return [...(typeof reviewedSpelling==='function'?notationValues(w,'ye').flatMap(v=>[reviewedSpelling(w,v.text,'ye'),reviewedSpelling(w,accentForNotation(w,v),'accent')]):[]),...(isSouthernWord(w)?southernNotationValues(w).flatMap(v=>[v.accent,v.poj]):[]),...(w.forms||[w.term]),...Object.keys(NOTATION_LABELS).flatMap(k=>notationValues(w,k).map(x=>x.text)),...notationValues(w,'ye').map(v=>accentForNotation(w,v))]}
 function wordSearchText(w){return [...wordForms(w),w.zh,...(w.glosses||[w.en]),w.alt].join(' ')}
 function wordSourceGroups(w){
@@ -93,14 +102,18 @@ function indexedWord(w){
  const english=[w.en,...(w.glosses||[])].filter(Boolean).flatMap(s=>searchableEnglish(s).split(/[;；/／]/)).map(normalize);
  const index={forms,hasGlottal:rawForms.some(f=>f.includes('ʔ')),chinese,english,englishWords:new Set(english.flatMap(englishTokens))};wordSearchIndex.set(w,index);return index;
 }
+let wordQueryCache;
+function wordQuery(){
+ const raw=state.q.trim();if(wordQueryCache?.raw===raw)return wordQueryCache;
+ const q=searchNormalize(raw),quoted=q.includes("'"),compact=t=>t.replace(quoted?/[\s\-]/g:/[\s'\-]/g,'');
+ return wordQueryCache={raw,q,normal:normalize(raw),compact,compactQuery:compact(q),quoted,tokens:englishTokens(raw)};
+}
 function wordSearchScore(w,language=state.searchLanguage){
- const raw=state.q.trim();if(!raw)return 1;
- const index=indexedWord(w),lang=language||'',q=searchNormalize(raw),normal=normalize(raw);let score=0;
+ const {raw,q,normal,compact,compactQuery,quoted,tokens}=wordQuery();if(!raw)return 1;
+ const index=indexedWord(w),lang=language||'';let score=0;
  // A bare apostrophe searches the recorded consonant, not spelling separators or English punctuation.
  if(q==="'")return !state.exact&&(!lang||lang==='tujia')&&index.hasGlottal?80:0;
  if(!lang||lang==='tujia'){
-  const quoted=q.includes("'"),compact=t=>t.replace(quoted?/[\s\-]/g:/[\s'\-]/g,'');
-  const compactQuery=compact(q);
   if(index.forms.some(f=>f===q||(compactQuery&&compact(f)===compactQuery)))score=100;
   if(!state.exact&&!score){
    if(index.forms.some(f=>f.split(quoted?/[\s\-0-9]+/:/[\s'\-0-9]+/).includes(q)))score=80;
@@ -114,7 +127,7 @@ function wordSearchScore(w,language=state.searchLanguage){
  }
  if(!lang||lang==='en'){
   if(index.english.includes(normal))score=Math.max(score,100);
-  else if(!state.exact){const tokens=englishTokens(raw);if(tokens.length&&tokens.every(t=>index.englishWords.has(t)))score=Math.max(score,70);}
+  else if(!state.exact){if(tokens.length&&tokens.every(t=>index.englishWords.has(t)))score=Math.max(score,70);}
  }
  return score;
 }
@@ -125,10 +138,10 @@ function languageSearchButtons(){return `<div class="search-languages" role="gro
 function searchScopeLabel(){return {tujia:'搜索范围：土话',zh:'搜索范围：客话',en:'搜索范围：英语'}[state.searchLanguage]||'搜索范围：土话、客话、英语'}
 function rankedWords(items,language=state.searchLanguage){return items.map(w=>({w,score:wordSearchScore(w,language)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score).map(x=>x.w)}
 
-function wordMatches(w){return (!state.hideWholeLoans||modernChineseLoanInfo(w).scope!=='whole')&&wordSearchScore(w)>0&&(!state.scheme||w.schemes.includes(state.scheme))&&(!state.pos||WordClasses.matches(w,state.pos))&&dialectMatches(w)&&(!state.category||wordSemanticCategories(w).includes(state.category))&&(!state.sourceFilter||wordSources(w).includes(canonicalSource(state.sourceFilter)))}
+function wordMatches(w){return (!state.hideWholeLoans||wordLoanInfo(w).scope!=='whole')&&wordSearchScore(w)>0&&(!state.scheme||w.schemes.includes(state.scheme))&&(!state.pos||WordClasses.matches(w,state.pos))&&dialectMatches(w)&&(!state.category||wordSemanticCategories(w).includes(state.category))&&(!state.sourceFilter||wordSources(w).includes(canonicalSource(state.sourceFilter)))}
 function sourceMatches(s){return (!state.grammarSourceScope||s.grammarScope===state.grammarSourceScope)&&(!state.batch||!!s.recognition)&&(!state.priority||(state.priority==='全部待解析'?!!s.parsePriority:s.parsePriority?.tier===state.priority))&&(!state.q||contains(s.title+' '+(s.variantSearch||'')+' '+s.path+' '+s.text,state.q))&&(!state.topic||s.topics.includes(state.topic))&&dialectMatches(s)&&(!state.kind||s.kind===state.kind)&&(!state.status||s.status===state.status)}
 function pager(n){const pages=Math.max(1,Math.ceil(n/40));state.page=Math.min(state.page,pages);return `<div class="pager"><button data-page="${state.page-1}" ${state.page<=1?'disabled':''}>← 上一页</button><span>${state.page} / ${pages}</span><button data-page="${state.page+1}" ${state.page>=pages?'disabled':''}>下一页 →</button></div>`}
-function wordTable(items){return `<div class="word-grid">${items.map(w=>`<article class="word-card"><button class="word-card-content" data-open="${w.id}" aria-label="${E(w.zh||w.en)}，查看词条${modernChineseLoanAccessibleSuffix(w)}"><span class="word-card-heading">${wordCardNotation(w)}</span><span class="word-card-definition"><span class="word-card-meaning" data-ui-content>${E(w.zh||'')}${w.en?`<span class="${w.zh?'tiny ':''}word-card-english" lang="en">${WordClasses.inline(w)?WordClasses.inline(w)+' ':''}${E(w.en)}</span>`:''}</span><span class="word-card-dialect">${wordVarietyPill(w)}${modernChineseLoanBadge(w)}${!wordIPA(w).length?'<span class="tiny">IPA 待校核</span>':''}</span></span></button></article>`).join('')}</div>`}
+function wordTable(items){return `<div class="word-grid">${items.map(w=>`<article class="word-card"><button class="word-card-content" data-open="${w.id}" aria-label="${E(w.zh||w.en)}，查看词条${wordLoanAccessibleSuffix(w)}"><span class="word-card-heading">${wordCardNotation(w)}</span><span class="word-card-definition"><span class="word-card-meaning" data-ui-content>${E(w.zh||'')}${w.en?`<span class="${w.zh?'tiny ':''}word-card-english" lang="en">${WordClasses.inline(w)?WordClasses.inline(w)+' ':''}${E(w.en)}</span>`:''}</span><span class="word-card-dialect">${wordVarietyPill(w)}${wordLoanBadge(w)}${!wordIPA(w).length?'<span class="tiny">IPA 待校核</span>':''}</span></span></button></article>`).join('')}</div>`}
 
 
 let randomWordSelection={key:'',ids:[]};
@@ -414,12 +427,12 @@ function download(name,obj){const u=URL.createObjectURL(new Blob([JSON.stringify
 function sourceLink(id,label='打开来源原件 ↗'){if(!S[id]?.url)return '';return `<a href="${E(S[id].url)}" target="_blank" rel="noopener">${label}</a>`}
 function wordDetail(w){
  const related=D.words.filter(x=>x.id!==w.id&&((w.zh&&normalize(x.zh)===normalize(w.zh))||(w.en&&normalize(x.en)===normalize(w.en)))).slice(0,10);
- const metadata=WordClasses.badges(w)+modernChineseLoanBadge(w);
+ const metadata=WordClasses.badges(w)+wordLoanBadge(w);
  return `<div class="word-entry-summary">
  <div class="word-entry-form"><div class="chips">${wordVarietyPill(w)}</div><h1 class="word">${notationHeadHTML(w)}</h1>${notationCells(w)}</div>
  <div class="word-entry-definition"><h2 data-ui-content>${E(w.zh||w.en)}</h2>${w.en?`<p class="sub word-detail-english" lang="en" data-ui-content>${E(w.en)}</p>`:''}${metadata?`<div class="word-metadata">${metadata}</div>`:''}${w.zhReviewEvidence?`<details class="gloss-evidence"><summary>释义说明</summary><p>${E(w.zhReviewEvidence)}</p></details>`:''}</div>
  <div class="detail-actions"><button data-copy="${w.id}">复制引用</button><button data-word-search="${E(w.en||w.zh)}">查找同义词</button></div>
- </div><details><summary>出处与原记音</summary>${dictionaryProvenance(w)}</details>${typeof editorialNotesHTML==='function'?editorialNotesHTML(w):''}${related.length?`<h3>同义词条</h3><div class="stack">${related.map(x=>`<button data-open="${x.id}">${notationHeadHTML(x)} · ${E(wordVarietyInfo(x).label)} · ${E(x.zh||x.en)}</button>`).join('')}</div>`:''}`
+ </div><details><summary>出处与原记音</summary>${dictionaryProvenance(w)}</details>${typeof wordEntryNotesHTML==='function'?wordEntryNotesHTML(w):typeof editorialNotesHTML==='function'?editorialNotesHTML(w):''}${related.length?`<h3>同义词条</h3><div class="stack">${related.map(x=>`<button data-open="${x.id}">${notationHeadHTML(x)} · ${E(wordVarietyInfo(x).label)} · ${E(x.zh||x.en)}</button>`).join('')}</div>`:''}`
 }
 
 function sourceVariantPanel(s){if(s.canonicalSource)return `<div class="notice">本文件属于 <button data-open="${s.canonicalSource}">${E(S[s.canonicalSource].title)}</button>。</div>`;if(!s.variantIds)return '';return `<h3>原著与文件版本</h3><p>${E(s.originalTitle)}</p>${s.variantIds.map(id=>{const v=S[id];return `<article class="card"><button data-open="${id}">${E(v.title)}</button>${sourceLink(id)}</article>`}).join('')}`}

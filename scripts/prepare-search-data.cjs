@@ -3,8 +3,12 @@ const fs=require('fs'),path=require('path'),vm=require('vm');
 const zlib=require('node:zlib'),crypto=require('node:crypto');
 const root=path.resolve(process.argv[2]||path.join(__dirname,'../site'));const marks={};
 const ctx=vm.createContext({console,URL,URLSearchParams,Map,Set,window:{addEventListener(){}},localStorage:{getItem:()=>null},document:{addEventListener(){}},fetch:async name=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,name),'utf8'))})});
-const files=['brassett-grammar.js','grammar-data.js','comparison-merge.js','research.js','grammar-dialects.js','south-zhou-phonology.js','notation-profiles.js','ipa-normalize.js','notation-ui.js','southern-notation.js','longshan-texts.js','corpus-player.js','grammar-integrated.js','grammar-evidence.js','grammar-notation.js','grammar-reviewed-data.js','grammar-glosses.js','grammar-reviewed.js','yubao.js','semantic-categories.js','lexical-reviews.js','word-classes.js','word-merge-groups.js','word-merge.js','editorial-notes.js','spelling-boundaries.js','notation-pairs.js','ui-translations.js','content-translations.js'];
-for(const f of files)vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
+const files=['brassett-grammar.js','grammar-data.js','comparison-merge.js','research.js','grammar-dialects.js','south-zhou-phonology.js','notation-profiles.js','ipa-normalize.js','notation-ui.js','southern-notation.js','longshan-texts.js','corpus-player.js','grammar-integrated.js','grammar-evidence.js','grammar-notation.js','grammar-reviewed-data.js','grammar-glosses.js','grammar-reviewed.js','yubao.js','semantic-categories.js','lexical-reviews.js','word-classes.js','word-merge-groups.js','word-merge.js','editorial-notes.js','spelling-boundaries.js','notation-pairs.js','ui-translations.js','content-translations.js','word-index.js'];
+let canonicalUI;
+for(const f of files){
+ vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
+ if(f==='ui-translations.js')canonicalUI={...vm.runInContext('UI_TRANSLATIONS',ctx)};
+}
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.slice(0,app.indexOf('window.addEventListener(\'popstate\'')),ctx);
 let prev=performance.now();function mark(name){const n=performance.now();marks[name]=Math.round(n-prev);prev=n;console.log(name,marks[name]+'ms');}
 (async()=>{
@@ -39,17 +43,36 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
  delete core.dictionaryFile;delete core.reconstructionOriginals;
  for(let i=0;i<data.words.length;i+=chunkSize){write('words-'+Math.floor(i/chunkSize),data.words.slice(i,i+chunkSize).map(w=>{const out={...w};delete out._search;delete out._semantic;return out;}));}
  write('core',core);
+ // The reading index contains no original attestations or entry notes. Its
+ // normalized search forms refer to displayed strings instead of repeating them.
+ const wordClassReview=vm.runInContext('WordClasses.review',ctx);
+ const summaries=coreWords.map((w,i)=>({...w,_classReview:wordClassReview(data.words[i]),
+  _display:Object.fromEntries(Object.entries(w._display).map(([mode,values])=>[mode,values.map(v=>({...v,...(v.ipaForms?{ipaForms:v.ipaForms.map(ipa=>ctx.displayReviewedIPA(data.words[i],ipa))}:{})}))]))
+ }));
+ const wordIndex=vm.runInContext('WordIndex.pack',ctx)(summaries,core.wordAliases);
+ fs.rmSync(path.join(compiled,'entries'),{recursive:true,force:true});
+ fs.mkdirSync(path.join(compiled,'entries'),{recursive:true});
+ const translations=canonicalUI;
+ const entryHash=crypto.createHash('sha256');
+ data.words.forEach(w=>{
+  if(!/^[A-Za-z0-9_-]+$/.test(w.id))throw Error('Invalid entry ID: '+w.id);
+  const {_search,_semantic,...entry}=w,notes=ctx.editorialNotesFor(w);
+  const labels=notes.flatMap(n=>[n.kind,n.text,n.literalMeaning,n.originalMeaning]).filter(text=>translations[text]);
+  const payload={...entry,_entryNotes:notes,_translations:Object.fromEntries(labels.map(text=>[text,translations[text]]))};
+  entryHash.update(JSON.stringify(payload));write('entries/'+w.id,payload);
+ });
  const sourceWordCounts={};for(const w of coreWords)for(const id of w.sourceIds||[w.source])sourceWordCounts[id]=(sourceWordCounts[id]||0)+1;
  const home={...core,words:[],wordAliases:{},sources:core.sources.map(({id,title,url})=>({id,title,url})),sourceVariants:core.sourceVariants.map(({id,title,url})=>({id,title,url})),corpus:core.corpus.map(({id})=>({id})),reconstructions:core.reconstructions.map(({id})=>({id})),_counts:{words:coreWords.length,sources:core.sources.length,corpus:core.corpus.length},_sourceWordCounts:sourceWordCounts};
  write('home',home);
  write('words-index',{words:coreWords,wordAliases:core.wordAliases});
+ write('word-search',wordIndex);
  write('catalogue',{sources:core.sources,sourceVariants:core.sourceVariants,topics:core.topics,folders:core.folders});
  write('corpus',{corpus:core.corpus});
  write('history',{reconstructions:core.reconstructions});
  ctx.data=data;vm.runInContext('D=data;',ctx);
  // Loan scopes and precomputed spellings live in coreWords, not data.words.
  // Include them so returning readers request the refreshed prepared payload.
- const version=crypto.createHash('sha256').update(JSON.stringify(core)).update(JSON.stringify(data)).digest('hex').slice(0,16);
+ const version=crypto.createHash('sha256').update(JSON.stringify(core)).update(JSON.stringify(data)).update(JSON.stringify(wordIndex)).update(entryHash.digest()).digest('hex').slice(0,16);
  const index=path.join(root,'index.html');
  let html=fs.readFileSync(index,'utf8').replace(/<main id="main">[\s\S]*?<\/main>/,'<main id="main">'+ctx.overview()+'</main>');
  html=html.replace(/<meta name="prepared-data-version"[^>]*>/g,'').replace(/<link[^>]*data-prepared-preload[^>]*>/g,'');
@@ -58,8 +81,8 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
  const uiRoot=path.join(root,'ui-core-translations.js');
  if(fs.existsSync(uiRoot)){
   const uiContext=vm.createContext({});vm.runInContext(fs.readFileSync(uiRoot,'utf8'),uiContext);
-  const translations={...vm.runInContext('UI_TRANSLATIONS',uiContext),...vm.runInContext('UI_TRANSLATIONS',ctx)};
-  const essential=html+['app.js','taste.js','fast-data.js','page-loader.js'].map(f=>fs.readFileSync(path.join(root,f),'utf8')).join('');
+  const translations={...vm.runInContext('UI_TRANSLATIONS',uiContext),...canonicalUI};
+  const essential=html+['app.js','taste.js','fast-data.js','page-loader.js','semantic-categories.js','word-classes.js','word-entry.js','yubao.js'].map(f=>fs.readFileSync(path.join(root,f),'utf8')).join('');
   const labels=Object.fromEntries(Object.entries(translations).filter(([text])=>essential.includes(text)||/\{\w+\}/.test(text)));
   fs.writeFileSync(uiRoot,'/* Navigation and home labels; other labels load with the reader tools. */\nvar UI_TRANSLATIONS='+JSON.stringify(labels,null,1)+';\n');
  }

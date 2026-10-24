@@ -10,7 +10,8 @@ try{
   const version=html.match(/name="prepared-data-version" content="([^"]+)"/)[1];
   const assets=JSON.parse(html.match(/<script id="site-assets" type="application\/json">([\s\S]*?)<\/script>/)[1]);
   const core=JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(fixture,'prepared/core.json.gz'))));
-  return {version,core,assets};
+  const entry=JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(fixture,'prepared/entries/w2335.json.gz'))));
+  return {version,core,assets,entry};
  };
  const original=build(),notes=path.join(fixture,'editorial-notes.js'),source=fs.readFileSync(notes,'utf8');
  const dictionaryHash=()=>crypto.createHash('sha256').update(fs.readFileSync(path.join(fixture,'dictionary.json'))).digest('hex');
@@ -27,5 +28,11 @@ try{
  const interfaceChange=build();
  assert.equal(interfaceChange.version,changed.version,'a reader script change reuses unchanged dictionary data');
  assert.notEqual(interfaceChange.assets['grammar-reviewed.js'],changed.assets['grammar-reviewed.js'],'lazy reader scripts receive a new content fingerprint');
+ const note=original.entry._entryNotes.find(n=>n.id==='chinese-loan-w2335');assert(note);
+ fs.appendFileSync(path.join(fixture,'ui-translations.js'),'\nObject.assign(UI_TRANSLATIONS,'+JSON.stringify({[note.text]:'Translation cache check.'})+');\n');
+ const translationChange=build();
+ assert.notEqual(translationChange.version,interfaceChange.version,'entry translation changes require new entry URLs');
+ assert.equal(translationChange.entry._translations[note.text],'Translation cache check.');
+ assert.equal(dictionaryHash(),before,'annotation and translation edits preserve the source dictionary');
  console.log('PASS: note-only loan badge changes invalidate prepared data without changing dictionary sources.');
 }finally{fs.rmSync(fixture,{recursive:true,force:true});}

@@ -3609,5 +3609,6 @@ Object.assign(UI_TRANSLATIONS,{
 });
 
 Object.assign(UI_TRANSLATIONS,{
+ "正在准备词汇检索…": "Preparing word search…",
  "两音节均借自汉语，分别对应「状」「告」；具体方言来源待核。": "Both syllables are borrowed from Chinese, corresponding to 状 and 告; the specific donor variety remains to be established."
 });
