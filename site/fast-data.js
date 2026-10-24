@@ -27,16 +27,29 @@ function loadAllSourceTexts(){
 async function loadWordEvidence(word){
  if(word._chunk===undefined)return word;
  const name=word._entry===undefined?'words-'+word._chunk:'entries/'+word._entry;
- const payload=await fastChunk(name),original=word._entry===undefined?payload.find(w=>w.id===word.id):payload;
- if(original?.id!==word.id){fastChunks.delete(name);throw Error('Mismatched word '+word.id);}
+ const payload=await fastChunk(name),original=word._entry===undefined?(Array.isArray(payload)?payload.find(w=>w.id===word.id):null):payload;
+ if(original?.id!==word.id||!Array.isArray(original.attestations)){fastChunks.delete(name);throw Error('Invalid word '+word.id);}
  Object.assign(UI_TRANSLATIONS,original._translations||{});
  // Keep object identity so history, dialect filters and WeakMap caches remain valid.
  Object.assign(word,original);delete word._chunk;delete word._entry;return word;
 }
-async function loadAllWordEvidence(){
+async function loadAllWordEvidence(words=D.words){
  if(window.SitePages)await SitePages.group('dictionary');
- const chunks=[...new Set(D.words.filter(w=>w._chunk!==undefined).map(w=>w._chunk))];
- for(const n of chunks){const rows=await fastChunk('words-'+n);for(const original of rows){const word=W[original.id];if(word){Object.assign(word,original);delete word._chunk;delete word._entry;}}}
+ const chunks=[...new Set(words.filter(w=>w._chunk!==undefined).map(w=>w._chunk))];
+ for(const n of chunks){
+  const name='words-'+n,rows=await fastChunk(name);
+  const valid=Array.isArray(rows)&&rows.every(w=>w?.id&&Array.isArray(w.attestations));
+  const ids=new Set(valid?rows.map(w=>w.id):[]);
+  if(!valid||words.some(w=>w._chunk===n&&!ids.has(w.id))){fastChunks.delete(name);throw Error('Invalid word batch '+n);}
+  for(const original of rows){const word=W[original.id];if(word){Object.assign(word,original);delete word._chunk;delete word._entry;}}
+ }
+}
+async function loadWordEvidenceForExport(words){
+ if(words.length<=1){
+  if(words.length){await loadWordEvidence(words[0]);if(!Array.isArray(words[0]._entryNotes)&&window.SitePages)await SitePages.group('dictionary');}
+  return;
+ }
+ await loadAllWordEvidence(words);
 }
 async function loadCorpusEvidence(c){
  if(!c?._corpusEntry)return c;

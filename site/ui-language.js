@@ -206,18 +206,29 @@
     if (observer) observe();
   }
   let languageRequest=0;
+  function refreshGrammarResults(){
+    if(typeof state==='undefined'||state.view!=='grammar'||!state.q.trim()||typeof render!=='function'||window.SitePages?.pending)return;
+    const input=document.querySelector('#main #query'),draft=input?.value,focused=document.activeElement===input,start=input?.selectionStart,end=input?.selectionEnd;
+    const top=window.scrollY,dialog=document.getElementById('detail'),dialogTop=dialog?.scrollTop;
+    render();
+    const next=document.querySelector('#main #query');
+    if(next&&draft!==undefined){next.value=draft;if(focused)next.focus({preventScroll:true});if(start!==null&&start!==undefined)next.setSelectionRange(start,end);}
+    window.scrollTo({top,behavior:'instant'});if(dialog?.open)dialog.scrollTop=dialogTop;
+  }
   async function setLanguage(value) {
     const serial=++languageRequest,previous=language;
-    language = value === 'en' ? 'en' : 'zh';
+    const requested=value === 'en' ? 'en' : 'zh';language=requested;
     if(language==='en'&&window.SitePages&&window.fastReady){
       try{await SitePages.prepareLanguage(language);}catch{
         if(serial!==languageRequest)return;
-        language=previous;refresh();if(typeof toast==='function')toast('语言资料未能载入，请重试。');return;
+        language=previous;if(previous!==requested)SitePages.resumePending();refresh();if(typeof toast==='function')toast('语言资料未能载入，请重试。');return;
       }
     }
     if(serial!==languageRequest)return;
     try { localStorage.setItem('tujia-ui-language',language); } catch {}
     syncLanguageURL();
+    const resumed=window.SitePages&&window.fastReady&&SitePages.resumePending();
+    if(!resumed)refreshGrammarResults();
     refresh();
   }
   window.TujiaUI = {refresh,translate,spelling,setLanguage,setHeadingSpelling(value){initialSpelling=value==='ye'?'ye':'accent';refresh();},get language(){return language;}};

@@ -3251,6 +3251,10 @@ Object.assign(UI_TRANSLATIONS, {
 });
 Object.assign(UI_TRANSLATIONS,{
  "语言资料未能载入，请重试。": "Language resources could not be loaded. Please try again.",
+ "正在准备导出…": "Preparing export…",
+ "导出未能完成，请重试。": "Export could not be completed. Please try again.",
+ "部分语料未能载入，已导入可核对的时间标记。": "Some texts could not be loaded. Verified time marks were imported.",
+ "语料未能载入，请重试导入。": "Texts could not be loaded. Please try importing again.",
  "查看相关词条": "Show related dictionary entries",
  "相关词条未能载入，请重试。": "Related entries could not be loaded. Please try again.",
  "「弓箭」部分（第 1—2 音节）可能借自汉语，具体方言来源待核。":"The 弓箭 component (syllables 1–2) may be borrowed from Chinese; the specific donor variety remains to be established.",

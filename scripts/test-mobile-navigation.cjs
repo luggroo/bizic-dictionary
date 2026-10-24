@@ -25,14 +25,14 @@ async function main(){
   base='http://127.0.0.1:'+server.address().port+mount;
  }
  const engine=process.env.BROWSER||'chromium';
- browser=await browsers[engine].launch({headless:true,...(engine==='chromium'?{executablePath:process.env.CHROMIUM_EXECUTABLE||undefined,args:['--no-sandbox']}:{} )});
+ browser=await browsers[engine].launch({headless:true,...(engine==='chromium'?{executablePath:process.env.CHROMIUM_EXECUTABLE||['/usr/bin/google-chrome','/usr/bin/chromium'].find(fs.existsSync),args:['--no-sandbox']}:{} )});
  const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,reducedMotion:'reduce',acceptDownloads:true});
  const page=await context.newPage(),errors=[],badAssets=[];
  page.setDefaultTimeout(20000);
  page.on('pageerror',error=>errors.push(error.message));
  page.on('response',response=>{if(response.status()>=400&&/\.(?:js|css|json|woff2)(?:\?|$)/.test(response.url()))badAssets.push([response.status(),response.url()]);});
  const ready=async view=>{
-  await page.waitForFunction(v=>typeof D!=='undefined'&&D&&state.view===v&&!!document.querySelector('#main h1'),view,{timeout:90000});
+  await page.waitForFunction(v=>typeof D!=='undefined'&&D&&state.view===v&&window.fastReady&&navigationReady&&!SitePages.pending&&SitePages.isReady(state,currentDetail)&&!!document.querySelector('#main h1'),view,{timeout:90000});
   await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
   assert.equal(await page.locator('aside nav .active').getAttribute('data-view'),view);
  };
@@ -229,13 +229,21 @@ async function main(){
    await page.selectOption('#ui-language',lang);
    for(const view of ['home','words','grammar','notation','history','corpus','sources']){
     await nav(view);
+    if(view==='words'&&await page.locator('.filter-disclosure:not([open])').count())await tap('.filter-disclosure>summary');
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,lang+' '+view+' overflows at '+width);
     const navClipped=await page.locator('aside nav button').evaluateAll(items=>items.some(b=>b.scrollWidth>b.clientWidth+2));
     assert.equal(navClipped,false,lang+' navigation clips at '+width);
+    const hiddenFilterLabels=await page.locator('.filters select:visible').evaluateAll(items=>items.flatMap(el=>{
+     const text=el.selectedOptions[0]?.label?.trim()||'',css=getComputedStyle(el),canvas=document.createElement('canvas'),context=canvas.getContext('2d');
+     context.font=css.font;
+     const room=el.clientWidth-parseFloat(css.paddingLeft)-parseFloat(css.paddingRight),required=Math.min(72,context.measureText(text).width);
+     return !text||room+1<required?[{filter:el.dataset.filter,text,width:el.clientWidth,textRoom:room,required}]:[];
+    }));
+    assert.deepEqual(hiddenFilterLabels,[],lang+' '+view+' filter labels have visible text space at '+width+'px');
    }
   }
  }
- pass('84 page/language/viewport combinations (320–1280 px) without page overflow');
+ pass('84 page/language/viewport combinations (320–1280 px) without page overflow or arrow-only filter labels');
  assert.deepEqual(errors,[],'Unhandled browser errors');
  assert.deepEqual(badAssets,[],'Required application assets must load');
  console.log(JSON.stringify({engine,checks:checks.length,browserErrors:errors,failedAssets:badAssets},null,2));

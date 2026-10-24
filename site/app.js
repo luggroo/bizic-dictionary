@@ -6,6 +6,7 @@ const searchNormalize=s=>normalize(s).normalize('NFD').replace(/[\u0300\u0301\u0
 const contains=(s,q)=>searchNormalize(s).includes(searchNormalize(q));
 const DEFAULT_STATE={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarAnchor:'',grammarSection:'',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,hideWholeLoans:false,searchLanguage:'',browseWords:false,corpusCollection:''};
 let state={...DEFAULT_STATE}, currentDetail=null,currentOverlay=null;
+let wordExportPending=false;
 const titles={notation:'记音对应与补全',home:'知识总览',words:'词汇检索',topics:'语法与专题',corpus:'例句语料',sources:'全部文献',history:'历史比较',grammar:'参考语法'};
 const descriptions={notation:'',words:'',topics:'按主题浏览研究文献。',corpus:'阅读故事、民歌与日常对话。',sources:'',history:'比较各方言的词形与历史重建。',grammar:''};
 function toast(s){$('#toast').textContent=s;$('#toast').style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').style.display='none',2400)}
@@ -169,10 +170,10 @@ function wordView(){
  if(discovery){const chosen=randomWordItems(items);return pageHeader('words')+search()+languageSearchButtons()+filters+`<div class="section-head"><h2>遇见几个土家语词</h2><button id="shuffle-words">换一组</button></div>`+(chosen.length?wordTable(chosen):empty())+`<div class="detail-actions"><button id="browse-all-words">浏览全部词汇 →</button></div>`}
  if(state.browseWords&&!state.q.trim()){const collator=new Intl.Collator('zh-CN',{numeric:true,sensitivity:'base'});items=items.map(w=>({w,key:notationHead(w)})).sort((a,b)=>collator.compare(a.key,b.key)).map(x=>x.w)}
  const pg=pager(items.length);
- return pageHeader('words')+search()+languageSearchButtons()+filters+`<div class="result-head"><div class="result-summary"><span>${items.length.toLocaleString()} 个词条</span>${state.q.trim()?`<small class="search-scope" role="status">${searchScopeLabel()}</small>`:''}</div><button id="export-words">导出当前检索 JSON</button></div>`+(items.length?wordTable(items.slice((state.page-1)*40,state.page*40)):empty())+pg+`<div class="detail-actions"><button id="discover-words">随机看词</button></div>`;
+ return pageHeader('words')+search()+languageSearchButtons()+filters+`<div class="result-head"><div class="result-summary"><span>${items.length.toLocaleString()} 个词条</span>${state.q.trim()?`<small class="search-scope" role="status">${searchScopeLabel()}</small>`:''}</div><button id="export-words"${wordExportPending?' disabled aria-busy="true"':''}>${wordExportPending?'正在准备导出…':'导出当前检索 JSON'}</button></div>`+(items.length?wordTable(items.slice((state.page-1)*40,state.page*40)):empty())+pg+`<div class="detail-actions"><button id="discover-words">随机看词</button></div>`;
 }
 function empty(){return '<div class="empty">没有匹配的记录。<br><small>试试更短的词、其他拼写，或清除筛选条件。</small></div>'}
-function sourcesView(){const items=D.sources.filter(sourceMatches);if(state.priority)items.sort((a,b)=>a.parsePriority.rank-b.parsePriority.rank);const pg=pager(items.length);return pageHeader('sources')+(state.grammarSourceScope?`<div class="notice">当前仅检索${GRAMMAR_LABELS[state.grammarSourceScope]}资料。清除筛选可恢复全部文献。</div>`:'')+`<div class="detail-actions"><button data-recognition-batch="true">扫描文献全文</button></div>`+search('搜索题名、原目录与已提取正文…')+`<div class="filters">${select('topic',D.topics.map(t=>t.name).concat('综合资料'),'全部专题')}${select('kind',D.sources.map(s=>s.kind),'全部资料类型')}${dialectSelector(true)}${select('status',D.sources.map(s=>s.status),'全文收录情况')}<button id="reset">清除筛选</button></div><div class="result-head"><span>${items.length} 份资料</span><button id="export-sources">导出目录 JSON</button></div>`+(items.length?sourceRows(items.slice((state.page-1)*40,state.page*40)):empty())+pg}
+function sourcesView(){const items=D.sources.filter(sourceMatches);if(state.priority)items.sort((a,b)=>a.parsePriority.rank-b.parsePriority.rank);const pg=pager(items.length);return pageHeader('sources')+(state.grammarSourceScope?`<div class="notice">当前仅检索${{north:'北部土家语',south:'南部土家语'}[state.grammarSourceScope]}资料。清除筛选可恢复全部文献。</div>`:'')+`<div class="detail-actions"><button data-recognition-batch="true">扫描文献全文</button></div>`+search('搜索题名、原目录与已提取正文…')+`<div class="filters">${select('topic',D.topics.map(t=>t.name).concat('综合资料'),'全部专题')}${select('kind',D.sources.map(s=>s.kind),'全部资料类型')}${dialectSelector(true)}${select('status',D.sources.map(s=>s.status),'全文收录情况')}<button id="reset">清除筛选</button></div><div class="result-head"><span>${items.length} 份资料</span><button id="export-sources">导出目录 JSON</button></div>`+(items.length?sourceRows(items.slice((state.page-1)*40,state.page*40)):empty())+pg}
 function corpusCollectionKey(c){return c.survey?'yubao':c.externalText?'tlp-longshan':c.source}
 function corpusCollectionTitle(key){return key==='yubao'?'中国语言资源保护工程':key==='tlp-longshan'?'《龙山土家语》':D.corpus.some(c=>c.source===key&&!c.survey&&!c.externalText)?'Liao–Brassett 土家语文库':S[key]?.title||key}
 function corpusView(){
@@ -422,7 +423,27 @@ function setView(v,keep=false,patch={}){
  if(jumpToChapter&&grammarJumpToReadingTitle())grammarQueueReadingTitleScroll();
  else window.scrollTo({top:0,behavior:'instant'});
 }
-function bindMain(){document.querySelectorAll('[data-corpus-collection]').forEach(b=>b.onclick=()=>{state.corpusCollection=b.dataset.corpusCollection;state.page=1;state.genre="";render();window.scrollTo({top:0,behavior:"smooth"})});if($('#shuffle-words'))$('#shuffle-words').onclick=()=>{randomWordItems(D.words.filter(wordMatches),true);render()};if($('#browse-all-words'))$('#browse-all-words').onclick=()=>{state.browseWords=true;state.page=1;render()};if($('#discover-words'))$('#discover-words').onclick=()=>{state.browseWords=false;state.q='';state.page=1;render()};const form=$('#search-form');if(form){const search=language=>{state.q=$('#query').value.trim();state.searchLanguage=state.view==='words'?language:'';state.page=1;if(state.view==='grammar'&&state.q&&typeof grammarTocMobileViewport==='function'&&grammarTocMobileViewport())grammarSetMobileTocExpanded(false);render()};form.onsubmit=e=>{e.preventDefault();search(e.submitter?.dataset.searchLanguage||'')};form.onkeydown=e=>{if(e.key==='Enter'&&e.target.id==='query'&&!e.isComposing){e.preventDefault();search('')}};document.querySelectorAll('#search-form button,[data-search-language]').forEach(button=>button.onclick=e=>{e.preventDefault();search(button.dataset.searchLanguage||'')})};document.querySelectorAll('[data-filter]').forEach(el=>el.onchange=()=>{state[el.dataset.filter]=el.value;state.page=1;render()});if($('#hide-whole-loans'))$('#hide-whole-loans').onchange=e=>{state.hideWholeLoans=e.target.checked;state.page=1;render()};if($('#exact'))$('#exact').onchange=e=>{state.exact=e.target.checked;state.page=1;render()};if($('#reset'))$('#reset').onclick=()=>{if(state.view==='corpus'){state.q='';state.genre='';state.dialect='';state.page=1;render()}else setView(state.view)};if($('#export-words'))$('#export-words').onclick=async()=>{await loadAllWordEvidence();download('tujia-words.json',D.words.filter(wordMatches).map(w=>({...Object.fromEntries(Object.entries(w).filter(([key])=>!key.startsWith('_'))),canonicalPos:WordClasses.ids(w),posProvenance:WordClasses.provenance(w),sitePosAnalysis:WordClasses.review(w),modernChineseLoanScope:modernChineseLoanInfo(w).scope,editorialNotes:typeof editorialNotesFor==='function'?editorialNotesFor(w):(w.editorialNotes||[]),source_title:S[w.source].title,source_url:S[w.source].url})));};if($('#export-sources'))$('#export-sources').onclick=()=>download('tujia-catalogue.json',D.sources.filter(sourceMatches).map(({text,...s})=>s));if($('#export-reconstructions'))$('#export-reconstructions').onclick=()=>download('proto-bizic-comparison.json',D.reconstructions.filter(reconstructionMatches));}
+function bindMain(){document.querySelectorAll('[data-corpus-collection]').forEach(b=>b.onclick=()=>{state.corpusCollection=b.dataset.corpusCollection;state.page=1;state.genre="";render();window.scrollTo({top:0,behavior:"smooth"})});if($('#shuffle-words'))$('#shuffle-words').onclick=()=>{randomWordItems(D.words.filter(wordMatches),true);render()};if($('#browse-all-words'))$('#browse-all-words').onclick=()=>{state.browseWords=true;state.page=1;render()};if($('#discover-words'))$('#discover-words').onclick=()=>{state.browseWords=false;state.q='';state.page=1;render()};const form=$('#search-form');if(form){const search=language=>{state.q=$('#query').value.trim();state.searchLanguage=state.view==='words'?language:'';state.page=1;if(state.view==='grammar'&&state.q&&typeof grammarTocMobileViewport==='function'&&grammarTocMobileViewport())grammarSetMobileTocExpanded(false);render()};form.onsubmit=e=>{e.preventDefault();search(e.submitter?.dataset.searchLanguage||'')};form.onkeydown=e=>{if(e.key==='Enter'&&e.target.id==='query'&&!e.isComposing){e.preventDefault();search('')}};document.querySelectorAll('#search-form button,[data-search-language]').forEach(button=>button.onclick=e=>{e.preventDefault();search(button.dataset.searchLanguage||'')})};document.querySelectorAll('[data-filter]').forEach(el=>el.onchange=()=>{state[el.dataset.filter]=el.value;state.page=1;render()});if($('#hide-whole-loans'))$('#hide-whole-loans').onchange=e=>{state.hideWholeLoans=e.target.checked;state.page=1;render()};if($('#exact'))$('#exact').onchange=e=>{state.exact=e.target.checked;state.page=1;render()};if($('#reset'))$('#reset').onclick=()=>{if(state.view==='corpus'){state.q='';state.genre='';state.dialect='';state.page=1;render()}else setView(state.view)};if($('#export-words'))$('#export-words').onclick=e=>exportWords(e.currentTarget);if($('#export-sources'))$('#export-sources').onclick=()=>download('tujia-catalogue.json',D.sources.filter(sourceMatches).map(({text,...s})=>s));if($('#export-reconstructions'))$('#export-reconstructions').onclick=()=>download('proto-bizic-comparison.json',D.reconstructions.filter(reconstructionMatches));}
+function updateWordExportButton(button){
+ for(const control of new Set([button,$('#export-words')]))if(control){
+  control.disabled=wordExportPending;control.setAttribute('aria-busy',String(wordExportPending));
+  control.textContent=wordExportPending?'正在准备导出…':'导出当前检索 JSON';
+ }
+ window.TujiaUI?.refresh();
+}
+async function exportWords(button){
+ if(wordExportPending)return;
+ const words=D.words.filter(wordMatches);wordExportPending=true;updateWordExportButton(button);
+ try{
+  await loadWordEvidenceForExport(words);
+  download('tujia-words.json',words.map(w=>({...Object.fromEntries(Object.entries(w).filter(([key])=>!key.startsWith('_'))),
+   canonicalPos:WordClasses.ids(w),posProvenance:WordClasses.provenance(w),sitePosAnalysis:WordClasses.review(w),
+   modernChineseLoanScope:wordLoanInfo(w).scope,
+   editorialNotes:typeof editorialNotesFor==='function'?editorialNotesFor(w):(w._entryNotes||w.editorialNotes||[]),
+   source_title:S[w.source].title,source_url:S[w.source].url})));
+ }catch{toast('导出未能完成，请重试。');}
+ finally{wordExportPending=false;updateWordExportButton(button);}
+}
 function download(name,obj){const u=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
 function sourceLink(id,label='打开来源原件 ↗'){if(!S[id]?.url)return '';return `<a href="${E(S[id].url)}" target="_blank" rel="noopener">${label}</a>`}
 function wordDetail(w){
@@ -548,7 +569,7 @@ initializePreparedData();
 
 document.addEventListener('change',e=>{
  if(!e.target.dataset.spellingDisplay)return;
- const query=$('#query'),draft=query?.value,start=query?.selectionStart,end=query?.selectionEnd;
+ const query=$('#query'),savedQuery=window.SitePages?.captureQuery?.()||(query?{value:query.value,focused:document.activeElement===query,start:query.selectionStart,end:query.selectionEnd}:null);
  if(typeof spellingDisplay==='undefined'){
   const south=e.target.dataset.spellingDisplay==='south',mode=south?(e.target.value==='poj'?'poj':'accent'):(e.target.value==='ye'?'ye':'accent');
   try{localStorage.setItem(south?'tujia-south-spelling-v1':'tujia-north-spelling-v2',mode)}catch{}
@@ -564,7 +585,8 @@ document.addEventListener('change',e=>{
  render();
  // Display preferences must not submit or discard an unfinished query.
  const nextQuery=$('#query');
- if(nextQuery&&draft!==undefined){nextQuery.value=draft;if(start!==null&&start!==undefined)nextQuery.setSelectionRange(start,end);}
+ if(nextQuery&&savedQuery){nextQuery.value=savedQuery.value;if(savedQuery.focused)nextQuery.focus({preventScroll:true});if(savedQuery.start!==null&&savedQuery.start!==undefined)nextQuery.setSelectionRange(savedQuery.start,savedQuery.end);}
+ else if(savedQuery)window.SitePages?.preservePendingQuery?.(savedQuery);
  $('#detail-spelling-control').innerHTML=typeof spellingSelector==='function'?spellingSelector():'';
  if(isOpen&&id){
   if(C[id]&&!C[id].survey){const lines=corpusLyricLines(C[id].text);document.querySelectorAll('.lyric-tujia').forEach((el,i)=>el.textContent=displayBrassett(lines[i].text))}

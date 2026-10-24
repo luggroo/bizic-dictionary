@@ -19,7 +19,7 @@ const SitePages=(()=>{
  };
  const assets=JSON.parse(document.getElementById('site-assets')?.textContent||'{}');
  const reads=new Map(),loaded=new Set(),groups=new Map(),readyGroups=new Set(),data=new Map(),readyData=new Set();
- let requestSerial=0,waiting=false;
+ let requestSerial=0,waiting=false,deferred=null;
  const assetURL=name=>name+(assets[name]?'?v='+assets[name]:'');
  function readAsset(name){
   if(!reads.has(name))reads.set(name,SiteRequest.text(assetURL(name)).catch(error=>{reads.delete(name);throw error}));
@@ -83,39 +83,79 @@ const SitePages=(()=>{
   return {modules:[...modules],parts:[...parts]};
  }
  function isReady(next,id){const n=needs(next,id);return n.modules.every(x=>readyGroups.has(x))&&n.parts.every(x=>readyData.has(x));}
- async function prepare(next,id){
-  const n=needs(next,id);await Promise.all([...n.modules.map(group),...n.parts.map(part)]);
+ function initializeReadyData(){
   if(readyData.has('word-search')&&!window.preparedClassesReady){WordClasses.initialize(D.words);window.preparedClassesReady=true;}
  }
- function defer(next,id,resume){
+ async function prepare(next,id){
+  const n=needs(next,id);await Promise.all([...n.modules.map(group),...n.parts.map(part)]);
+  initializeReadyData();
+ }
+ function querySnapshot(){
+  const input=document.querySelector('#main #query');
+  return input?{value:input.value,focused:document.activeElement===input,start:input.selectionStart,end:input.selectionEnd}:null;
+ }
+ function restoreQuery(saved){
+  const input=document.querySelector('#main #query');if(!input||!saved)return;
+  input.value=saved.value;
+  if(saved.focused)input.focus({preventScroll:true});
+  if(saved.start!==null&&saved.start!==undefined)input.setSelectionRange(saved.start,saved.end);
+ }
+ function captureQuery(){return querySnapshot()||deferred?.query||null;}
+ function preservePendingQuery(saved){if(deferred&&saved)deferred.query=saved;}
+ function resumeTask(task,saved){
+  try{task.resume();restoreQuery(saved);}catch(error){error.pageReload=true;console.error(error);task.failed(error,true);}
+ }
+ function resumePending(){
+  const task=deferred;if(!task)return false;
+  const saved=querySnapshot()||task.query;
+  if(!defer(task.next,task.id,task.resume,saved)){
+   resumeTask(task,saved);
+  }
+  return true;
+ }
+ function defer(next,id,resume,preservedQuery=null){
   const serial=++requestSerial;
-  if(isReady(next,id)){waiting=false;return false;}
+  if(isReady(next,id)){initializeReadyData();waiting=false;deferred=null;return false;}
+  const task={next,id,resume,query:preservedQuery};deferred=task;
   waiting=true;
   const main=document.getElementById('main');
   const wordSearch=next.view==='words';
   main.innerHTML=wordSearch?pageHeader('words')+search()+languageSearchButtons()+'<p role="status">正在准备词汇检索…</p>':'<p role="status">正在载入页面…</p>';
   if(wordSearch)bindMain();
+  restoreQuery(preservedQuery);
   document.getElementById('crumb').textContent=titles[next.view]||titles.home;
   document.body.dataset.view=next.view;
   document.querySelectorAll('aside>nav [data-view]').forEach(button=>{const current=button.dataset.view===next.view;button.classList.toggle('active',current);if(current)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');});
   window.TujiaUI?.refresh();
   const failed=(error,force=false)=>{
    if(!force&&serial!==requestSerial)return;
+   task.query=querySnapshot()||task.query;
    main.innerHTML='<p role="status">页面未能载入，请重试。</p><button id="retry-page">重试</button>';
-   document.getElementById('retry-page').onclick=()=>{if(error.pageReload)location.reload();else if(!defer(next,id,resume))resume();};
+   document.getElementById('retry-page').onclick=()=>{if(error.pageReload)location.reload();else resumePending();};
    window.TujiaUI?.refresh();
   };
+  task.failed=failed;
   prepare(next,id).then(()=>{if(serial===requestSerial){
-   const input=main.querySelector('#query'),draft=input?.value,focused=document.activeElement===input,start=input?.selectionStart,end=input?.selectionEnd;
-   try{
-    resume();
-    const readyInput=main.querySelector('#query');
-    if(readyInput&&draft!==undefined&&draft!==next.q){readyInput.value=draft;if(focused){readyInput.focus();readyInput.setSelectionRange(start,end);}}
-   }catch(error){error.pageReload=true;console.error(error);failed(error,true)}
+   const saved=querySnapshot()||task.query;
+   resumeTask(task,saved);
   }},failed);
   return true;
  }
- async function prepareLanguage(language){const n=needs(state,currentDetail,language);await Promise.all(n.modules.map(group));}
- return {defer,prepare,isReady,prepareLanguage,definitions,group,get pending(){return waiting;}};
+ async function prepareLanguage(language){
+  let modules=needs(state,currentDetail,language).modules;
+  const key=values=>[...values].sort().join('|');
+  for(;;){
+   if(window.TujiaUI&&window.TujiaUI.language!==language)return;
+   try{await Promise.all(modules.map(group));}catch(error){
+    const current=needs(state,currentDetail,language).modules;
+    if(key(current)===key(modules))throw error;
+    modules=current;continue;
+   }
+   const current=needs(state,currentDetail,language).modules;
+   if(key(current)===key(modules))return;
+   modules=current;
+  }
+ }
+ return {defer,prepare,isReady,prepareLanguage,resumePending,captureQuery,preservePendingQuery,definitions,group,get pending(){return waiting;}};
 })();
 window.SitePages=SitePages;

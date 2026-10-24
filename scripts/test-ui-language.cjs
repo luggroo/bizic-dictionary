@@ -14,17 +14,28 @@ const server=http.createServer((req,res)=>{
   try {
     const page=await browser.newPage({viewport:{width:1280,height:900}}),errors=[];
     page.on('pageerror',e=>errors.push(e.message));
+    const ready=async view=>{
+      await page.waitForFunction(v=>window.fastReady&&navigationReady&&state.view===v&&!SitePages.pending&&SitePages.isReady(state,currentDetail)&&!!document.querySelector('#main h1'),view,{timeout:90000});
+      await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+    };
+    const nav=async view=>{await page.locator('nav [data-view="'+view+'"]').click();await ready(view);};
+    const language=async value=>{
+      await page.selectOption('#ui-language',value);
+      await page.waitForFunction(v=>TujiaUI.language===v&&document.documentElement.lang===(v==='en'?'en':'zh-CN')&&new URL(location.href).searchParams.get('lang')===v&&!SitePages.pending&&SitePages.isReady(state,currentDetail),value,{timeout:90000});
+      await ready(await page.evaluate(()=>state.view));
+    };
     await page.goto('http://127.0.0.1:'+server.address().port);
     await page.waitForSelector('.hero',{timeout:90000});
+    await ready('home');
     assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīsǎ áhxī');
-    await page.selectOption('#ui-language','en');
+    await language('en');
     assert.match(await page.title(),/^Overview/);
     assert.equal(await page.locator('nav [data-ui-tujia="words"]').innerText(),'cīcī nī');
     await page.locator('details:has(#spelling-control)>summary').click();
     await page.selectOption('#spelling-control [data-spelling-display="north"]','ye');
     assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bifzixsar afhxix');
     assert.equal(await page.locator('nav [data-view="saved"]').count(),0);
-    await page.locator('nav [data-view="words"]').click();
+    await nav('words');
     assert.equal(await page.locator('.word-card').count(),12);
     await page.evaluate(()=>loadAllWordEvidence());
     const snapshot=await page.evaluate(()=>JSON.stringify(D.words.map(w=>[w.id,w.zh,w.en,w.term,w.forms,w.attestations])));
@@ -33,7 +44,7 @@ const server=http.createServer((req,res)=>{
     assert.match(await page.locator('.result-head').innerText(),/entries/);
     assert.match(await page.locator('.word-card-meaning').first().innerText(),/水/);
     const before=await page.locator('.word-card-meaning').allTextContents();
-    await page.selectOption('#ui-language','zh');
+    await language('zh');
     assert.deepEqual(await page.locator('.word-card-meaning').allTextContents(),before);
     assert.equal(await page.locator('[data-search-language][aria-pressed]').count(),0);
     assert.equal(await page.locator('#search-form button').count(),1);
@@ -50,22 +61,25 @@ const server=http.createServer((req,res)=>{
     assert.equal(await page.evaluate(()=>state.searchLanguage),'');
     await page.locator('#query').fill('水');
     await page.locator('[data-search-language="zh"]').click();
-    await page.selectOption('#ui-language','en');
+    await language('en');
     assert.equal(await page.locator('.bookmark,[data-save]').count(),0);
     await page.locator('.word-card-content').first().click();
-    await page.waitForSelector('dialog[open]');
+    await page.waitForSelector('dialog[open] #detail-body .word-entry-definition h2');
+    await ready('words');
     assert.match(await page.locator('#detail-label').innerText(),/Dictionary entry/);
     assert.match(await page.locator('#detail-body .word-entry-definition h2').innerText(),/水/);
     await page.selectOption('#detail-spelling-control [data-spelling-display="north"]','accent');
     assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīsǎ áhxī');
     await page.locator('#close').click();
+    await page.waitForSelector('dialog[open]',{state:'hidden'});
     assert.equal(await page.locator('#note,#save-note').count(),0);
     await page.reload();
     await page.waitForSelector('.word-card',{timeout:90000});
+    await ready('words');
     assert.equal(await page.inputValue('#ui-language'),'en');
     assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīsǎ áhxī');
     for(const view of ['home','words','corpus','sources','grammar','notation','history']){
-      await page.locator('nav [data-view="'+view+'"]').click();
+      await nav(view);
       assert(await page.locator('#main').innerText(),view+' is empty');
       assert(!/未能载入|undefined|NaN/.test(await page.locator('#main').innerText()),view+' failed');
     }
@@ -74,7 +88,7 @@ const server=http.createServer((req,res)=>{
     for(const width of [390,768,1280]){
       await page.setViewportSize({width,height:844});
       for(const view of ['home','words','corpus','grammar','notation']){
-        await page.locator('nav [data-view="'+view+'"]').click();
+        await nav(view);
         const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);
         assert.equal(overflow,false,view+' page overflows at '+width+'px');
         const crowded=await page.locator('aside>nav button').evaluateAll(items=>items.some(b=>b.scrollWidth>b.clientWidth+2));
@@ -82,9 +96,9 @@ const server=http.createServer((req,res)=>{
       }
     }
     await page.setViewportSize({width:390,height:844});
-    await page.locator('nav [data-view="words"]').click();
+    await nav('words');
     await page.screenshot({path:'/tmp/tujia-ui-mobile-en.png',fullPage:true});
-    await page.selectOption('#ui-language','zh');
+    await language('zh');
     await page.screenshot({path:'/tmp/tujia-ui-mobile-zh.png',fullPage:true});
     assert.equal(await page.locator('nav [data-view="words"] .ui-secondary').innerText(),'词汇检索');
     assert.equal(await page.locator('nav [data-view="words"] .tujia-ui').innerText(),'cīcī nī');
