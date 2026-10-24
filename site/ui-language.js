@@ -202,7 +202,7 @@
     const select = document.getElementById('ui-language');
     if (select) select.value = language;
     const title = typeof state === 'undefined' ? '知识总览' : titles[state.view] || '知识总览';
-    document.title = document.body.dataset.documentTitle ? translate(document.body.dataset.documentTitle) : translate(title) + ' · ' + translate('土家语知识索引');
+    document.title = document.body.dataset.documentTitle ? translate(document.body.dataset.documentTitle) : ((typeof state === 'undefined' || state.view === 'home') ? '' : translate(title) + ' · ') + '毕兹学堂 Bizic Academy - A library and dictionary of Tujia languages';
     if (observer) observe();
   }
   let languageRequest=0;
