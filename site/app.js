@@ -456,6 +456,7 @@ document.addEventListener('click',async e=>{
   const destination=parseViewHash(b.getAttribute('href')).state;
   if(destination.view==='grammar'){
    e.preventDefault();
+   if(b.closest('.grammar-toc')&&typeof grammarTocMobileViewport==='function'&&grammarTocMobileViewport())grammarSetMobileTocExpanded(false);
    setView('grammar',false,{
     grammarDialect:destination.grammarDialect,
     chapter:destination.chapter,
@@ -475,6 +476,9 @@ document.addEventListener('click',async e=>{
  if(b.dataset.recognitionBatch){setView('sources',false,{batch:'first-five'});return}
  if(b.dataset.priorityQueue){setView('sources',false,{priority:'全部待解析'});return}
  if(b.dataset.grammarDialect||b.dataset.chapter){
+  // A chapter selection must close its index before rendering or measuring
+  // the reading title; a global capture listener alone can miss this transition.
+  if(b.dataset.chapter&&b.closest('.grammar-toc')&&typeof grammarTocMobileViewport==='function'&&grammarTocMobileViewport())grammarSetMobileTocExpanded(false);
   setView('grammar',false,{grammarDialect:b.dataset.grammarDialect||state.grammarDialect||'north',chapter:b.dataset.chapter||'1'});return;
  }
  if(b.dataset.grammarQuery){setView('sources',false,{q:b.dataset.grammarQuery,grammarSourceScope:b.dataset.queryScope||state.grammarDialect||'north'});return}

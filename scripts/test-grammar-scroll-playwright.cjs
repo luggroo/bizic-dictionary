@@ -20,6 +20,9 @@ const browserPath=process.env.CHROMIUM_EXECUTABLE||[
  '/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'
 ].find(p=>fs.existsSync(p));
 async function main(){
+ // Explicit deadline: a hung browser must fail the build promptly.
+ const deadline=setTimeout(()=>{console.error('Mobile browser QA timed out');process.exit(1)},65000);
+ deadline.unref();
  assert(browserPath,'No system Chrome or Chromium found');
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
  const browser=await chromium.launch({headless:true,executablePath:browserPath,args:['--no-sandbox','--disable-dev-shm-usage']});
@@ -41,19 +44,6 @@ async function main(){
     route:location.hash};
   });
   const settle=()=>page.evaluate(()=>new Promise(done=>requestAnimationFrame(()=>requestAnimationFrame(done))));
-  await page.evaluate(()=>{
-   window.__grammarClickTrace=[];
-   document.addEventListener('click',event=>{
-    const el=event.target instanceof Element?event.target:null;
-    if(!el?.closest('.grammar-toc [data-chapter]'))return;
-    window.__grammarClickTrace.push({
-     target:el.tagName,
-     insideSwitch:!!el.closest('.grammar-switch [data-grammar-dialect]'),
-     insideToc:!!el.closest('.grammar-toc'),
-     mobile:grammarTocMobileViewport(),expanded:grammarMobileTocExpanded
-    });
-   },true);
-  });
   const initial=await measure();
   assert(initial.mediaQuery,'Test browser did not enter mobile media query: '+JSON.stringify(initial));
   assert.equal(initial.expanded,'true','Initial chapter menu should be expanded');
@@ -61,8 +51,7 @@ async function main(){
   await page.waitForFunction(()=>state.chapter==='104'&&document.querySelector('.grammar-article > h1.grammar-reading-title'));
   await settle();await settle();
   const chapter=await measure();
-  const clickTrace=await page.evaluate(()=>window.__grammarClickTrace);
-  console.log('Mobile chapter click diagnostic:',JSON.stringify({initial,chapter,clickTrace}));
+  console.log('Mobile chapter click:',JSON.stringify({initial,chapter}));
   assert.equal(chapter.expanded,'false','Chapter selection should collapse index');
   assert(chapter.top>=-8&&chapter.top<=65,'Chapter not scrolled to heading: '+JSON.stringify(chapter));
   assert(chapter.scrollY>=90,'Chapter left at page top: '+JSON.stringify(chapter));
