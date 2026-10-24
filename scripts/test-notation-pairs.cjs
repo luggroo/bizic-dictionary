@@ -75,7 +75,13 @@ for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','sout
  assert.equal(vm.runInContext(`npRecords(empty,'zhou-fx').length`,context),0);
  assert.equal(vm.runInContext("npSpellingSyllables('err')[0].rime",context),'er');
  assert.equal(vm.runInContext("npSpellingSyllables('jierr')[0].rime",context),'ier');
- const index=read('index.html');assert(index.includes('href="notation-pairs.css?'));assert.equal((index.match(/src="notation-pairs.js/g)||[]).length,1);
+ const index=read('index.html');assert(index.includes('src="page-loader.js'));
+ const loader=vm.createContext({window:{},document:{getElementById:id=>id==='main'?{innerHTML:''}:null}});
+ vm.runInContext(read('page-loader.js'),loader);
+ const group=vm.runInContext('SitePages.definitions.notation',loader);
+ assert.deepEqual(Array.from(group.css),['notation-pairs.css']);
+ assert.equal(group.files.filter(f=>f==='notation-pairs.js').length,1);
+ assert(group.files.indexOf('notation-ui.js')<group.files.indexOf('notation-pairs.js'));
  let html=vm.runInContext('notationGuide()',context);
  if(out)fs.writeFileSync(path.join(out,'notation-guide.html'),html);
  assert(!html.includes('Matisoff'));

@@ -1,4 +1,4 @@
-const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const {normalizeIPAAspiration,normalizeIPA,ipaIdentity,mergeIPANotations,normalizeIPAData}=require('../site/ipa-normalize.js');
 // h and typographic/ASCII apostrophes marking aspiration collapse to IPA superscript h.
 assert.equal(normalizeIPA("pha55 thɨ33 kha21 tsha55 tɕ’a35 ts'i55"),"pʰa⁵⁵ tʰɨ³³ kʰa²¹ tsʰa⁵⁵ tɕʰa³⁵ tsʰi⁵⁵");
@@ -30,7 +30,13 @@ assert.equal(raw.corpus[0].blocks[0].ipa,'tsʰi³³');
 // Guard all published pathways against a regression to the old h-only replacement.
 const site=path.resolve(__dirname,'../site');
 const read=f=>fs.readFileSync(path.join(site,f),'utf8');
-for(const f of ['index.html','notation-ui.js','word-merge.js','yubao.js','southern-notation.js','notation-pairs.js','longshan-texts.js']){
- assert(read(f).includes(f==='index.html'?'ipa-normalize.js':f==='word-merge.js'?'normalizeIPAWord(':f==='longshan-texts.js'?'normalizeIPA(':'normalizeIPAAspiration(')||read(f).includes('normalizeIPA('),f+' is not wired to standardizer');
+assert(read('index.html').includes('src="page-loader.js'),'index.html loads the reader module loader');
+const loader=vm.createContext({window:{},document:{getElementById:id=>id==='main'?{innerHTML:''}:null}});
+vm.runInContext(read('page-loader.js'),loader);
+const notation=Array.from(vm.runInContext('SitePages.definitions.notation.files',loader));
+assert(notation.includes('ipa-normalize.js'),'notation loads the IPA standardizer');
+for(const f of ['notation-ui.js','word-merge.js','yubao.js','southern-notation.js','notation-pairs.js','longshan-texts.js']){
+ assert(read(f).includes(f==='word-merge.js'?'normalizeIPAWord(':'normalizeIPAAspiration(')||read(f).includes('normalizeIPA('),f+' is not wired to standardizer');
+ if(notation.includes(f))assert(notation.indexOf('ipa-normalize.js')<notation.indexOf(f),'standardizer loads before '+f);
 }
 console.log('PASS: IPA aspiration ʰ, normalized tone values, duplicate coalescing, source retention, converter and corpus integration');
