@@ -62954,14 +62954,14 @@ function loanIPAForms(value){
  // Keep tone and nasalization distinctions. Only separators and spaces are removed.
  return normalizeIPA(value).split(/[~～/／;；]/u).map(s=>s.replace(/[\s|｜◦]/gu,'').normalize('NFC')).filter(Boolean);
 }
-// Match an older Brassett /f/ review IPA to its /x/ successor only when
-// that complete /x/ IPA is independently derived from this word's Brassett form.
+// Match an older Brassett /f/ review IPA to its /xu/ successor only when
+// that complete /xu/ IPA is independently derived from this word's Brassett form.
 function loanIPAReviewedForms(w,value){
  const forms=loanIPAForms(value);
  if(!w.notations?.brassett?.length)return forms;
  const brassett=new Set(w.notations.brassett.flatMap(v=>loanIPAForms(standardBrassettIPA(v.text)||'')));
  return [...new Set(forms.flatMap(form=>{
-  const corrected=form.replace(/(^|[⁰¹²³⁴⁵⁶⁷⁸⁹-])f(?=[aeɛɔ])/gu,'$1x');
+  const corrected=form.replace(/(^|[⁰¹²³⁴⁵⁶⁷⁸⁹-])f(?=[aeɛɔ])/gu,'$1xu');
   return corrected!==form&&brassett.has(corrected)?[form,corrected]:[form];
  }))];
 }

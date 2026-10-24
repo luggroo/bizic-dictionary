@@ -4,13 +4,14 @@ const ctx=vm.createContext({localStorage:{getItem:()=>null},document:{addEventLi
 for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
 const finals={a:'a',ai:'ai',an:'ɛn',ang:'aŋ',ao:'au',e:'ɤ',ei:'ei',eng:'ɜŋ',i:'i',ia:'ia',ian:'iɛn',iao:'iau',ie:'iɛ',ii:'ɯ',ing:'iŋ',iong:'iɔŋ',iu:'iu',o:'ɔ',ong:'ɔŋ',ou:'ou',u:'u',ua:'ua',uai:'uai',uan:'uɛn',ui:'uei',un:'un',uo:'uɔ'};
 for(const [spelling,ipa]of Object.entries(finals))assert.equal(ctx.standardSyllableIPA(spelling),ipa,spelling);
-const examples={yan:'jɛn',yang:'jaŋ',wan:'wɛn',gan:'kɛn',ban:'pɛn',tan:'tʰɛn',bii:'pɯ',pii:'pʰɯ',hu:'xu',hua:'xa',huai:'xai',huan:'xɛn',hui:'xei',huo:'xɔ',hun:'xun',ha:'xa',hhu:'ɣu',ni:'ȵi',li:'li',ji:'tɕi',qi:'tɕʰi',xi:'ɕi',ci:'tsʰɨ',zi:'tsɨ',ri:'zɨ',si:'sɨ',gi:'kɨ',ki:'kʰɨ',hi:'xɨ',hhi:'ɣɨ'};
+const examples={yan:'jɛn',yang:'jaŋ',wan:'wɛn',gan:'kɛn',ban:'pɛn',tan:'tʰɛn',bii:'pɯ',pii:'pʰɯ',hu:'xu',hua:'xua',huai:'xuai',huan:'xuɛn',hui:'xuei',huo:'xuɔ',hun:'xun',ha:'xa',hhu:'ɣu',ni:'ȵi',li:'li',ji:'tɕi',qi:'tɕʰi',xi:'ɕi',ci:'tsʰɨ',zi:'tsɨ',ri:'zɨ',si:'sɨ',gi:'kɨ',ki:'kʰɨ',hi:'xɨ',hhi:'ɣɨ'};
 for(const [spelling,ipa]of Object.entries(examples))assert.equal(ctx.standardSyllableIPA(spelling),ipa,spelling);
 assert.equal(ctx.standardBrassettIPA('cuo4yan3gu2'),'tsʰuɔ⁵¹jɛn²¹ku²⁴');
 assert.equal(ctx.standardBrassettIPA('yan'),'jɛn');
-assert.equal(ctx.standardBrassettIPA('zao4huan3'),'tsau⁵¹xɛn²¹');
+assert.equal(ctx.standardBrassettIPA('zao4huan3'),'tsau⁵¹xuɛn²¹');
 assert.equal(ctx.standardBrassettIPA('hu3'),'xu²¹');
-assert.ok(ctx.convertNotation('xɛn21','brassett-phonetic').rows.some(row=>row.brassett==='huan³'));
+assert.equal(ctx.standardBrassettIPA('hu1hua2huai3huan4hui1huo2'),'xu⁵⁵xua²⁴xuai²¹xuɛn⁵¹xuei⁵⁵xuɔ²⁴');
+assert.ok(ctx.convertNotation('xuɛn21','brassett-phonetic').rows.some(row=>row.brassett==='huan³'));
 assert.equal(ctx.standardBrassettIPA('a1a2a3a4'),'a⁵⁵a²⁴a²¹a⁵¹');
 // Separators do not introduce tone, and marked tones attach to the last syllable.
 for(const [spelling,ipa]of Object.entries({'a':'a','-di':'-ti','di²-':'ti²⁴-','me²a':'mɤ²⁴a','bao¹wa':'pau⁵⁵wa','-adi²':'-ati²⁴','-adiu²':'-atiu²⁴','-aduo³':'-atuɔ²¹','-alie³':'-aliɛ²¹','-alu³':'-alu²¹','-axie²':'-aɕiɛ²⁴','bo³|luo¹｜luo¹':'pɔ²¹luɔ⁵⁵luɔ⁵⁵','si¹◦si¹':'sɨ⁵⁵sɨ⁵⁵','ta◦i²':'tʰai²⁴','ha⁴lie³|':'xa⁵¹liɛ²¹'}))assert.equal(ctx.standardBrassettIPA(spelling),ipa,spelling);
