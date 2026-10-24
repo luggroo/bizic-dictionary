@@ -134,15 +134,21 @@ grammarChapter=function(ch){
  `<h1 class="grammar-reading-title${ch.pending?' grammar-pending':''}">${number} <span>${E(section?.title||ch.title)}</span>${ch.pending?'<span class="grammar-pending-label">（待补充）</span>':''}</h1>`+
  grammarPageHTML(ch,section?.id||'')+grammarReadingNavigation(ch,section);
 };
+const grammarSearchPagesCache=new Map();
+function grammarSearchPages(d){
+ const key=[d,window.TujiaUI?.language||'zh',spellingDisplay,southernDisplay,Object.keys(UI_TRANSLATIONS).length].join('/');
+ if(grammarSearchPagesCache.has(key))return grammarSearchPagesCache.get(key);
+ const pages=grammarPages(d).map(page=>{const holder=document.createElement('div');holder.innerHTML=grammarPageHTML(page.ch,page.section?.id||'');return {page,text:page.ch.title+' '+(page.section?.title||'')+' '+holder.textContent};});
+ if(grammarSearchPagesCache.size>=8)grammarSearchPagesCache.delete(grammarSearchPagesCache.keys().next().value);
+ grammarSearchPagesCache.set(key,pages);return pages;
+}
 grammarView=function(){
  const d=state.grammarDialect||'north',chapters=REVIEWED_GRAMMAR[d],ch=chapters.find(c=>c.id===state.chapter)||chapters[0];
  const current=ch.sections.find(s=>s.id===state.grammarSection)||ch.sections[0];
  const chapterButton=c=>`<button data-chapter="${c.id}" data-grammar-dialect="${d}" class="${c.id===ch.id?'selected ':''}${c.pending?'grammar-pending':''}">${c.number}. <span>${E(c.title)}</span>${c.pending?'<span class="grammar-pending-label">（待补充）</span>':''}</button>`;
  const toc=chapters.map(c=>chapterButton(c)+(c.id===ch.id&&c.sections.length?'<div class="grammar-toc-sections">'+c.sections.map(s=>`<a href="${grammarPageURL(c,s)}"${s.id===current?.id?' aria-current="page"':''}>${grammarPageNumber(c,s)} <span>${E(s.title)}</span></a>`).join('')+'</div>':'')).join('');
  const term=state.q?.trim();
- const results=term?grammarPages(d).filter(p=>{
-  const holder=document.createElement('div');holder.innerHTML=grammarPageHTML(p.ch,p.section?.id||'');return contains(p.ch.title+' '+(p.section?.title||'')+' '+holder.textContent,term);
- }):[];
+ const results=term?grammarSearchPages(d).filter(p=>contains(p.text,term)).map(p=>p.page):[];
  const found=term?'<h1>检索结果</h1><div class="grammar-page-results">'+results.map(p=>`<a href="${grammarPageURL(p.ch,p.section)}">${grammarPageNumber(p.ch,p.section)}. <span>${E(p.section?.title||p.ch.title)}</span></a>`).join('')+'</div>':grammarChapter(ch);
  return pageHeader('grammar')+grammarSwitch()+search('在本套语法中检索规则、章节与例句…')+`<div class="grammar-layout"><div class="grammar-toc-wrap" data-mobile-expanded="${grammarMobileTocExpanded}"><button class="grammar-toc-toggle" type="button" aria-controls="grammar-toc-nav" aria-expanded="${grammarMobileTocExpanded}"><span class="grammar-toc-toggle-label">章节目录 <span class="grammar-toc-current">${ch.number}. ${E(ch.title)}</span></span><span class="grammar-toc-chevron" aria-hidden="true"></span></button><nav class="grammar-toc" id="grammar-toc-nav" aria-label="语法目录">${toc}</nav></div><article class="grammar-article grammar-reading">${found}</article></div>`;
 };

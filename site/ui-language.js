@@ -205,8 +205,17 @@
     document.title = document.body.dataset.documentTitle ? translate(document.body.dataset.documentTitle) : translate(title) + ' · ' + translate('土家语知识索引');
     if (observer) observe();
   }
-  function setLanguage(value) {
+  let languageRequest=0;
+  async function setLanguage(value) {
+    const serial=++languageRequest,previous=language;
     language = value === 'en' ? 'en' : 'zh';
+    if(language==='en'&&window.SitePages&&window.fastReady){
+      try{await SitePages.prepareLanguage(language);}catch{
+        if(serial!==languageRequest)return;
+        language=previous;refresh();if(typeof toast==='function')toast('语言资料未能载入，请重试。');return;
+      }
+    }
+    if(serial!==languageRequest)return;
     try { localStorage.setItem('tujia-ui-language',language); } catch {}
     syncLanguageURL();
     refresh();

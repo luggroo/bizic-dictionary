@@ -9,6 +9,7 @@ for(const f of files){
  vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
  if(f==='ui-translations.js')canonicalUI={...vm.runInContext('UI_TRANSLATIONS',ctx)};
 }
+const publishedUI={...vm.runInContext('UI_TRANSLATIONS',ctx)};
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.slice(0,app.indexOf('window.addEventListener(\'popstate\'')),ctx);
 let prev=performance.now();function mark(name){const n=performance.now();marks[name]=Math.round(n-prev);prev=n;console.log(name,marks[name]+'ms');}
 (async()=>{
@@ -68,11 +69,19 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
  write('word-search',wordIndex);
  write('catalogue',{sources:core.sources,sourceVariants:core.sourceVariants,topics:core.topics,folders:core.folders});
  write('corpus',{corpus:core.corpus});
+ const corpusFields=['id','title','genre','source','audio','code','dialect','dialects','location','locations','people','survey','ipa','externalText'];
+ const corpusTranslations=publishedUI;
+ const corpusIndex={corpus:core.corpus.map(c=>({...Object.fromEntries(corpusFields.filter(key=>c[key]!==undefined).map(key=>[key,c[key]])),text:'',_titleEnglish:corpusTranslations[c.title]||'',_corpusEntry:c.id}))};
+ const normalizeSearch=vm.runInContext('searchNormalize',ctx);
+ const corpusSearch={texts:Object.fromEntries(core.corpus.map(c=>[c.id,normalizeSearch(c.text||'')]))};
+ write('corpus-index',corpusIndex);write('corpus-search',corpusSearch);
+ fs.rmSync(path.join(compiled,'corpus-entries'),{recursive:true,force:true});fs.mkdirSync(path.join(compiled,'corpus-entries'));
+ for(const c of core.corpus){if(!/^[A-Za-z0-9][A-Za-z0-9_.-]*$/.test(c.id))throw Error('Invalid corpus ID: '+c.id);write('corpus-entries/'+c.id,c);}
  write('history',{reconstructions:core.reconstructions});
  ctx.data=data;vm.runInContext('D=data;',ctx);
  // Loan scopes and precomputed spellings live in coreWords, not data.words.
  // Include them so returning readers request the refreshed prepared payload.
- const version=crypto.createHash('sha256').update(JSON.stringify(core)).update(JSON.stringify(data)).update(JSON.stringify(wordIndex)).update(entryHash.digest()).digest('hex').slice(0,16);
+ const version=crypto.createHash('sha256').update(JSON.stringify(core)).update(JSON.stringify(data)).update(JSON.stringify(wordIndex)).update(JSON.stringify(corpusIndex)).update(JSON.stringify(corpusSearch)).update(entryHash.digest()).digest('hex').slice(0,16);
  const index=path.join(root,'index.html');
  let html=fs.readFileSync(index,'utf8').replace(/<main id="main">[\s\S]*?<\/main>/,'<main id="main">'+ctx.overview()+'</main>');
  html=html.replace(/<meta name="prepared-data-version"[^>]*>/g,'').replace(/<link[^>]*data-prepared-preload[^>]*>/g,'');
@@ -82,7 +91,7 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
  if(fs.existsSync(uiRoot)){
   const uiContext=vm.createContext({});vm.runInContext(fs.readFileSync(uiRoot,'utf8'),uiContext);
   const translations={...vm.runInContext('UI_TRANSLATIONS',uiContext),...canonicalUI};
-  const essential=html+['app.js','taste.js','fast-data.js','page-loader.js','semantic-categories.js','word-classes.js','word-entry.js','yubao.js'].map(f=>fs.readFileSync(path.join(root,f),'utf8')).join('');
+  const essential=html+['app.js','taste.js','fast-data.js','page-loader.js','semantic-categories.js','word-classes.js','word-entry.js','yubao.js','research.js','corpus-player.js','longshan-texts.js','grammar-pages.js','grammar-reviewed.js'].map(f=>fs.readFileSync(path.join(root,f),'utf8')).join('');
   const labels=Object.fromEntries(Object.entries(translations).filter(([text])=>essential.includes(text)||/\{\w+\}/.test(text)));
   fs.writeFileSync(uiRoot,'/* Navigation and home labels; other labels load with the reader tools. */\nvar UI_TRANSLATIONS='+JSON.stringify(labels,null,1)+';\n');
  }

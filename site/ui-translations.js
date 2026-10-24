@@ -3250,6 +3250,9 @@ Object.assign(UI_TRANSLATIONS, {
  "本站借助 AI 推测的词性，可能有误。原文献未标注此词性。":"Part of speech inferred by this site with AI assistance; it may be incorrect. This category is not labelled in the source."
 });
 Object.assign(UI_TRANSLATIONS,{
+ "语言资料未能载入，请重试。": "Language resources could not be loaded. Please try again.",
+ "查看相关词条": "Show related dictionary entries",
+ "相关词条未能载入，请重试。": "Related entries could not be loaded. Please try again.",
  "「弓箭」部分（第 1—2 音节）可能借自汉语，具体方言来源待核。":"The 弓箭 component (syllables 1–2) may be borrowed from Chinese; the specific donor variety remains to be established.",
  "可能借自汉语「弓」，具体方言来源待核。":"Possibly borrowed from Chinese 弓; the specific donor variety remains to be established."
 });

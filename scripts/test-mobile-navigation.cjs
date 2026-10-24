@@ -83,7 +83,8 @@ async function main(){
  await page.goForward();await ready('home');
  pass('All seven mobile navigation targets, browser Back and Forward');
 
- const renderCounts=await page.evaluate(()=>{
+ const renderCounts=await page.evaluate(async()=>{
+  await loadAllCorpusEvidence();
   const groups=[['sources',D.sources,sourceDetail],['corpus',D.corpus,corpusDetail],['comparisons',D.reconstructions,reconstructionDetail]],counts={};
   for(const [kind,records,renderDetail] of groups){
    for(const record of records){const html=renderDetail(record);if(!html||html.includes('data-save=')||html.includes('id="save-note"'))throw Error(kind+' detail failed: '+record.id);}

@@ -148,7 +148,10 @@ document.addEventListener('click',event=>{
  event.preventDefault();event.stopPropagation();for(let n=target.parentElement;n;n=n.parentElement)if(n.tagName==='DETAILS')n.open=true;
  target.scrollIntoView({block:'start'});target.focus({preventScroll:true});
 },true);
+const grammarRenderedCache=new Map();
 function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
+ const cacheKey=[ch.dialect,ch.id,language,spellingDisplay,southernDisplay,Object.keys(UI_TRANSLATIONS).length].join('/');
+ if(grammarRenderedCache.has(cacheKey))return grammarRenderedCache.get(cacheKey);
  const root=document.createElement('div');root.className='reviewed-grammar integrated-grammar';root.dataset.referenceGrammar='';root.dataset.dialect=ch.dialect;root.dataset.chapter=ch.id;root.dataset.uiLanguage=language;root.dataset.uiContent='';root.lang=language==='en'?'en':'zh-CN';root.innerHTML=ch.html;
  let heading=0;for(const h of root.querySelectorAll('h3'))h.id='chapter-'+ch.id+'-'+heading++;
  for(const table of root.querySelectorAll('table')){
@@ -274,7 +277,7 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  for(const link of root.querySelectorAll('a[href^="#"]')){
   const target=link.getAttribute('href').slice(1),where=GRAMMAR_ANCHORS[target];if(where)link.href='#grammar/'+where.dialect+'/'+where.chapter+'?grammarAnchor='+encodeURIComponent(target);
  }
- return root.outerHTML;
+ const html=root.outerHTML;if(grammarRenderedCache.size>=48)grammarRenderedCache.delete(grammarRenderedCache.keys().next().value);grammarRenderedCache.set(cacheKey,html);return html;
 }
 grammarView=function(){
  const d=state.grammarDialect||'north',gs=REVIEWED_GRAMMAR[d],ch=gs.find(c=>c.id===state.chapter)||gs[0];

@@ -92,13 +92,51 @@ const server=http.createServer((req,res)=>{
    p=await page();await p.goto(base+'#'+route);await p.waitForSelector(selector);
    assert.equal(await p.evaluate(()=>D.words.length),0,route+' does not load the dictionary index');await p.close();
   }
+  p=await page();await p.goto(base+'?id=brassett-2006#sources');await p.waitForSelector('dialog[open] .grammar-summary');await p.close();
+
+  p=await page();requests=[];p.on('request',r=>requests.push(r.url()));
+  await p.goto(base+'#corpus');await p.waitForSelector('.corpus-card');
+  assert.equal(await p.evaluate(()=>D.corpus.filter(c=>c.text||c.blocks).length),0,'the corpus opens with a catalogue, without transcripts');
+  assert(!requests.some(url=>/\/prepared\/corpus(?:-search)?\.json\.gz|\/corpus-entries\/|content-translations\.js|ui-translations\.js/.test(url)),'Chinese corpus browsing does not preload texts or English prose');
+  await p.locator('[data-corpus-collection="tlp-longshan"]').click();
+  await p.locator('.corpus-card-content[data-open]').first().click();await p.waitForSelector('dialog[open] .external-text-block');
+  assert.equal(await p.evaluate(()=>D.corpus.filter(c=>!c._corpusEntry).length),1,'opening a text hydrates only that text');
+  await p.locator('#close').click();await p.waitForSelector('dialog[open]',{state:'hidden'});
+  await p.locator('aside [data-view="corpus"]').click();await p.locator('#query').fill('哭嫁歌');await p.locator('#query').press('Enter');await p.waitForFunction(()=>!SitePages.pending);
+  assert.equal(requests.filter(url=>/\/corpus-search\.json\.gz/.test(url)).length,1,'full-text search loads its small index when queried');
+  assert.equal(await p.evaluate(()=>D.corpus.filter(c=>!c._corpusEntry).length),1,'search leaves other transcripts unloaded');await p.close();
+
+  p=await page();requests=[];p.on('request',r=>requests.push(r.url()));
+  await p.goto(base+'#history');await p.waitForSelector('.table-wrap');
+  await p.locator('.table-wrap [data-open]').first().click();await p.waitForSelector('dialog[open] h1');
+  assert.equal(await p.evaluate(()=>D.words.length),0,'a comparison opens without the dictionary index');
+  assert(!requests.some(url=>/word-search\.json|brassett-grammar\.js|grammar-data\.js|grammar-dialects\.js|ui-translations\.js/.test(url)),'Chinese comparison browsing avoids dictionary and grammar payloads');
+  await p.locator('[data-comparison-words]').click();await p.waitForFunction(()=>D.words.length===16577);await p.waitForSelector('dialog[open] h1');
+  assert.equal(requests.filter(url=>/word-search\.json/.test(url)).length,1,'related dictionary links load only on request');await p.close();
+
+  p=await page();requests=[];p.on('request',r=>requests.push(r.url()));let proseAttempts=0;
+  await p.route('**/grammar-reviewed-i18n.js*',route=>++proseAttempts===1?route.fulfill({status:503,body:'busy'}):route.continue());
+  await p.goto(base+'#grammar');await p.waitForSelector('.grammar-reading-title');
+  assert.equal(proseAttempts,0);assert(!requests.some(url=>/ui-translations\.js|content-translations\.js/.test(url)),'Chinese grammar does not preload English prose');
+  await p.evaluate(()=>TujiaUI.setLanguage('en'));assert.equal(proseAttempts,2,'English prose loads with retry when English is selected');
+  assert.equal(await p.locator('[data-reference-grammar]').getAttribute('data-ui-language'),'en');
+  const searchEquivalent=await p.evaluate(()=>{
+   for(const d of ['north','south'])for(const mode of ['accent',d==='north'?'ye':'poj']){
+    if(d==='north')spellingDisplay=mode;else southernDisplay=mode;
+    const cached=grammarSearchPages(d);
+    for(const {page,text}of cached){const holder=document.createElement('div');holder.innerHTML=grammarPageHTML(page.ch,page.section?.id||'');if(text!==page.ch.title+' '+(page.section?.title||'')+' '+holder.textContent)return false;}
+   }return true;
+  });assert(searchEquivalent,'cached search preserves complete rendered text in both dialects and spelling modes');
+  await p.evaluate(()=>TujiaUI.setLanguage('zh'));await p.evaluate(()=>TujiaUI.setLanguage('en'));assert.equal(proseAttempts,2,'language toggles reuse loaded prose');
+  await p.locator('#query').fill('否定');await p.locator('#query').press('Enter');await p.waitForSelector('.grammar-page-results');
+  assert.equal(await p.locator('.grammar-toc-toggle').getAttribute('aria-expanded'),'false','mobile search exposes its results by collapsing the chapter index');await p.close();
 
   p=await page();attempts=0;
   await p.route('**/grammar-reviewed-data.js*',route=>++attempts===1?route.fulfill({status:503,body:'busy'}):route.continue());
   await p.goto(base+'#grammar/north/101/1');await p.waitForSelector('.grammar-reading-title');assert.equal(attempts,2,'scripts retry a transient failure');await p.close();
 
   p=await page();attempts=0;
-  await p.route('**/prepared/corpus.json.gz*',route=>++attempts<=3?route.fulfill({status:503,body:'busy'}):route.continue());
+  await p.route('**/prepared/corpus-index.json.gz*',route=>++attempts<=3?route.fulfill({status:503,body:'busy'}):route.continue());
   await p.goto(base+'#corpus');await p.waitForSelector('#retry-page');assert.equal(attempts,3);
   await p.locator('#retry-page').click();await p.waitForSelector('.corpus-collection-card,.corpus-card');assert.equal(attempts,4,'manual retry clears failed dataset promises');await p.close();
 
@@ -111,7 +149,7 @@ const server=http.createServer((req,res)=>{
   assert((await p.locator('dialog[open] .loan-badge').innerText()).includes('新借'));await p.locator('#close').click();await p.waitForSelector('dialog[open]',{state:'hidden'});assert.equal(await p.evaluate(()=>state.view),'words');
   await p.evaluate(()=>scrollTo(0,Math.min(400,document.documentElement.scrollHeight-innerHeight)));
   const savedY=await p.evaluate(()=>scrollY);
-  await p.route('**/prepared/corpus.json.gz*',async route=>{await new Promise(done=>setTimeout(done,250));await route.continue();});
+  await p.route('**/prepared/corpus-index.json.gz*',async route=>{await new Promise(done=>setTimeout(done,250));await route.continue();});
   await p.locator('aside [data-view="corpus"]').dispatchEvent('click');await p.waitForSelector('.corpus-card');
   await p.goBack();await p.waitForSelector('.word-card');await p.waitForFunction(y=>Math.abs(scrollY-y)<3,savedY);await p.close();
 

@@ -5,12 +5,16 @@ const SitePages=(()=>{
  const definitions={
   inflate:{files:['vendor/pako_inflate.min.js']},
   notation:{files:['notation-profiles.js','ipa-normalize.js','notation-ui.js','southern-notation.js','yubao.js','notation-pairs.js'],css:['notation-pairs.css']},
-  catalogue:{requires:['notation'],files:['brassett-grammar.js','grammar-data.js','research.js','grammar-dialects.js','ui-translations.js']},
+  catalogue:{requires:['notation'],files:['research.js']},
+  'grammar-base':{requires:['catalogue'],files:['brassett-grammar.js','grammar-data.js','grammar-dialects.js']},
+  interface:{files:['ui-translations.js']},
+  'corpus-en':{requires:['interface'],files:['content-translations.js']},
+  'grammar-en':{requires:['interface'],files:['content-translations.js','grammar-reviewed-i18n.js']},
   'word-list':{requires:['notation'],files:['semantic-categories.js','word-classes.js','word-index.js','word-class-ui.js']},
   'word-detail':{requires:['word-list'],files:['word-entry.js']},
   dictionary:{requires:['word-list'],files:['word-merge-groups.js','lexical-reviews.js','word-merge.js','editorial-notes.js','spelling-boundaries.js','ui-translations.js']},
-  grammar:{requires:['catalogue','notation'],files:['south-zhou-phonology.js','grammar-integrated.js','grammar-evidence.js','grammar-notation.js','grammar-reviewed-data.js','grammar-glosses.js','grammar-reviewed.js','content-translations.js','grammar-reviewed-i18n.js','grammar-pages.js'],css:['grammar-integrated.css','grammar-reviewed.css']},
-  corpus:{requires:['notation'],files:['longshan-texts.js','corpus-player.js','content-translations.js','ui-translations.js']},
+  grammar:{requires:['grammar-base','notation'],files:['south-zhou-phonology.js','grammar-integrated.js','grammar-evidence.js','grammar-notation.js','grammar-reviewed-data.js','grammar-glosses.js','grammar-reviewed.js','grammar-pages.js'],css:['grammar-integrated.css','grammar-reviewed.css']},
+  corpus:{requires:['notation'],files:['longshan-texts.js','corpus-player.js']},
   history:{requires:['catalogue','notation'],files:['comparison-merge.js']}
  };
  const assets=JSON.parse(document.getElementById('site-assets')?.textContent||'{}');
@@ -45,18 +49,18 @@ const SitePages=(()=>{
   return groups.get(name);
  }
  function part(name){
-  const dependency={'word-search':'word-list',corpus:'corpus',history:'history'}[name];
-  if(!data.has(name))data.set(name,Promise.all([fastChunk(name),dependency?group(dependency):Promise.resolve()]).then(([payload])=>{applyPreparedPart(name,payload);readyData.add(name);}).catch(error=>{data.delete(name);fastChunks.delete(name);throw error}));
+  const dependency={'word-search':'word-list','corpus-index':'corpus','corpus-search':'corpus',history:'history'}[name];
+  if(!data.has(name))data.set(name,Promise.all([fastChunk(name),dependency?group(dependency):Promise.resolve(),name==='corpus-search'?part('corpus-index'):Promise.resolve()]).then(([payload])=>{applyPreparedPart(name,payload);readyData.add(name);}).catch(error=>{data.delete(name);fastChunks.delete(name);throw error}));
   return data.get(name);
  }
- function needs(next,id){
+ function needs(next,id,language=window.TujiaUI?.language||'zh'){
   const modules=new Set(),parts=new Set();
   const add=view=>{
    if(view==='words'){modules.add('word-list');parts.add('word-search');}
    if(view==='grammar')modules.add('grammar');
    if(view==='notation'){modules.add('dictionary');modules.add('catalogue');parts.add('word-search');parts.add('history');}
    if(view==='sources'){modules.add('catalogue');parts.add('catalogue');}
-   if(view==='corpus'){modules.add('corpus');parts.add('corpus');}
+   if(view==='corpus'){modules.add('corpus');parts.add('corpus-index');if(next.q&&['home','corpus'].includes(next.view))parts.add('corpus-search');}
    if(view==='history'){modules.add('history');parts.add('history');}
   };
   if(next.view==='home'&&next.q){for(const view of ['words','grammar','sources','corpus','history'])add(view);}
@@ -64,11 +68,17 @@ const SitePages=(()=>{
   if(id){
    if(C?.[id])add('corpus');
    else if(S?.[id])add('sources');
-   else if(R?.[id]){add('history');add('words');}
+   else if(R?.[id])add('history');
    else {add('words');modules.add('word-detail');}
+   if(id==='brassett-2006')modules.add('grammar-base');
   }
   // A standalone converter also uses the full interface translations.
   if(modules.delete('ui-translations'))modules.add('catalogue');
+  if(language==='en'){
+   if(['catalogue','grammar','corpus','history'].some(name=>modules.has(name)))modules.add('interface');
+   if(modules.has('grammar'))modules.add('grammar-en');
+   if(modules.has('corpus'))modules.add('corpus-en');
+  }
   if(modules.size)parts.add('catalogue');
   return {modules:[...modules],parts:[...parts]};
  }
@@ -105,6 +115,7 @@ const SitePages=(()=>{
   }},failed);
   return true;
  }
- return {defer,prepare,isReady,definitions,group,get pending(){return waiting;}};
+ async function prepareLanguage(language){const n=needs(state,currentDetail,language);await Promise.all(n.modules.map(group));}
+ return {defer,prepare,isReady,prepareLanguage,definitions,group,get pending(){return waiting;}};
 })();
 window.SitePages=SitePages;
