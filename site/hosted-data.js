@@ -6,5 +6,6 @@ async function preparedJSON(response){
  if(typeof DecompressionStream==='function'&&typeof Blob.prototype.stream==='function'){
   try{return await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).json();}catch{}
  }
+ if(typeof pako==='undefined'&&typeof SitePages!=='undefined')await SitePages.group('inflate');
  return new Response(pako.ungzip(bytes)).json();
 }

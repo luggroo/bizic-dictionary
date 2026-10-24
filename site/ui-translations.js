@@ -1,5 +1,5 @@
 /* Reviewed interface copy; source texts and dictionary glosses stay in their source language. */
-const UI_TRANSLATIONS={
+var UI_TRANSLATIONS=Object.assign(globalThis.UI_TRANSLATIONS||{},{
   "可能借自西南官话「提高」。": "Possibly borrowed from Southwestern Mandarin 提高.",
   "可能借自西南官话「泉」。": "Possibly borrowed from Southwestern Mandarin 泉.",
   "可能借自西南官话「厉害」。": "Possibly borrowed from Southwestern Mandarin 厉害.",
@@ -2769,7 +2769,7 @@ const UI_TRANSLATIONS={
   "清单可检索": "Searchable list",
   "词表可检索·音标未校对": "Searchable wordlist · IPA unchecked",
   "音标有误·可查原件": "IPA errors · original available"
-};
+});
 
 // Revised grammar prose shared with the full content translation catalogue.
 Object.assign(UI_TRANSLATIONS, {

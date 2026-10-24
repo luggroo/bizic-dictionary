@@ -34,14 +34,20 @@
     searchEn: 'yinxyiv niv-xivsour', searchZh: 'pavsar niv-xivsour', searchTujia: 'bifsar niv-xivsour',
     history: 'nierzuxbarzux niex sar', search: 'nix'
   });
+  const homeAccents={"brand":"bízīsǎ áhxī","home":"gě lāi xié","words":"cīcī nī","grammar":"sǎ qímō lǐ","notation":"sǎ qímō á","corpus":"lázé lázé lǐ","sources":"cīpū jiěxí","searchEn":"yīnyì nì-xìsǒu","searchZh":"pàsǎ nì-xìsǒu","searchTujia":"bísǎ nì-xìsǒu","history":"niězūbǎzū niē sǎ","search":"nī"};
+  let initialSpelling="accent";try{if(localStorage.getItem("tujia-north-spelling-v2")==="ye")initialSpelling="ye"}catch{}
   const textMemory = new WeakMap(), attributeMemory = new WeakMap(), grammarMemory = new WeakMap();
   const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
   const escapeRE = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const templates = Object.entries(UI_TRANSLATIONS).filter(([s]) => /\{\w+\}/.test(s)).map(([source, target]) => {
+  let templateCount=-1,templates=[];
+  function updateTemplates(){if(templateCount===Object.keys(UI_TRANSLATIONS).length)return;templateCount=Object.keys(UI_TRANSLATIONS).length;
+  templates = Object.entries(UI_TRANSLATIONS).filter(([s]) => /\{\w+\}/.test(s)).map(([source, target]) => {
     const names = [], pieces = source.split(/(\{\w+\})/g);
     const pattern = pieces.map(p => /^\{\w+\}$/.test(p) ? (names.push(p.slice(1,-1)), '(.+?)') : escapeRE(p)).join('');
     return {re: new RegExp('^' + pattern + '$'), names, target};
   });
+  }
+  updateTemplates();
   function translate(source) {
     if (language !== 'en') return source;
     const trim = source.trim();
@@ -73,7 +79,8 @@
   }
   function spelling(key) {
     const ye = labels[key] || '';
-    return typeof spellingDisplay !== 'undefined' && spellingDisplay === 'ye' ? ye : yeToAccent(ye);
+    const mode=typeof spellingDisplay==='undefined'?initialSpelling:spellingDisplay;
+    return mode==='ye'?ye:typeof yeToAccent==='function'?yeToAccent(ye):homeAccents[key]||ye;
   }
   // Move existing nodes, rather than copying labels, so translation memory and
   // event handlers survive language/spelling changes. DOM and visual order agree.
@@ -182,6 +189,7 @@
   const pending = new Set();
   function observe() { observer.observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['aria-label','title','placeholder','alt']}); }
   function refresh(roots = [document.body]) {
+    updateTemplates();
     observer?.disconnect();
     decorate();
     localizeLinks();
@@ -203,7 +211,7 @@
     syncLanguageURL();
     refresh();
   }
-  window.TujiaUI = {refresh,translate,spelling,setLanguage,get language(){return language;}};
+  window.TujiaUI = {refresh,translate,spelling,setLanguage,setHeadingSpelling(value){initialSpelling=value==='ye'?'ye':'accent';refresh();},get language(){return language;}};
   document.getElementById('ui-language')?.addEventListener('change', e => setLanguage(e.target.value));
   window.addEventListener('popstate', () => setLanguage(urlLanguage() || language));
   // Run after app.js initializes its shared lexical bindings.

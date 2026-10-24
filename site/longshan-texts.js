@@ -1,8 +1,6 @@
 // Texts reproduced with permission confirmed by the project owner; audio stays on the source website.
 async function loadLongshanTexts(data){
- const response=await fetch('longshan-texts.json');
- if(!response.ok)throw Error('Longshan texts unavailable');
- const entries=await response.json();
+ const entries=typeof SiteRequest==='undefined'?await fetch('longshan-texts.json').then(r=>{if(!r.ok)throw Error('Longshan texts unavailable');return r.json()}):await SiteRequest.json('longshan-texts.json');
  const existing=new Set(data.corpus.map(c=>c.id));
  data.corpus.push(...entries.filter(c=>!existing.has(c.id)));
  if(!data.sources.some(s=>s.id==='tlp-longshan'))data.sources.push({id:'tlp-longshan',title:'《龙山土家语》文本 · Tujia Language Project',url:'https://tujialanguage.com/texts/longshan.html',dialect:'北部',locations:['龙山'],topics:['语料'],kind:'网页',status:'已整理',path:'语料',text:'口彩禁忌、俗语谚语、歌谣和故事。'});

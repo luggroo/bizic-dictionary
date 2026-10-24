@@ -3,7 +3,11 @@
 const fastChunks=new Map();
 const preparedVersion=document.querySelector('meta[name="prepared-data-version"]')?.content||'';
 function fastChunk(name){
- if(!fastChunks.has(name))fastChunks.set(name,fetch('prepared/'+name+'.json.gz'+(preparedVersion?'?v='+encodeURIComponent(preparedVersion):'')).then(preparedJSON).catch(e=>{fastChunks.delete(name);throw e;}));
+ if(!fastChunks.has(name)){
+  const url='prepared/'+name+'.json.gz'+(preparedVersion?'?v='+encodeURIComponent(preparedVersion):'');
+  const request=typeof SiteRequest==='undefined'?fetch(url).then(preparedJSON):SiteRequest.read(url,preparedJSON,{timeoutMs:name==='words-index'?45000:20000});
+  fastChunks.set(name,request.catch(e=>{fastChunks.delete(name);throw e;}));
+ }
  return fastChunks.get(name);
 }
 let fullTextReady=false,fullTextPromise=null,sourceSearchFailed=false;
@@ -14,7 +18,10 @@ async function loadSourceText(source){
 }
 function loadAllSourceTexts(){
  if(fullTextReady)return Promise.resolve();
- if(!fullTextPromise)fullTextPromise=Promise.all([...D.sources,...(D.sourceVariants||[])].map(loadSourceText)).then(()=>{fullTextReady=true;}).catch(e=>{fullTextPromise=null;throw e;});
+ if(!fullTextPromise){
+  const sources=[...D.sources,...(D.sourceVariants||[])];let next=0;
+  fullTextPromise=Promise.all(Array.from({length:Math.min(6,sources.length)},async()=>{while(next<sources.length)await loadSourceText(sources[next++]);})).then(()=>{fullTextReady=true;}).catch(e=>{fullTextPromise=null;throw e;});
+ }
  return fullTextPromise;
 }
 async function loadWordEvidence(word){
@@ -32,13 +39,14 @@ let evidenceRequest=0;
 async function openPreparedDetail(id){
  const token=++evidenceRequest,dialog=$('#detail'),wasOpen=dialog.open;
  currentDetail=id;currentOverlay=id;
- $('#detail-label').textContent=W[id]?'词汇条目':'文献详情';
+ $('#detail-label').textContent=W[id]?'词汇条目':C[id]?'语料详情':'文献详情';
  $('#detail-spelling-control').innerHTML='';
  $('#detail-body').innerHTML='<p role="status">正在载入条目…</p>';
  showDetailDialog(id);
  commitDetailNavigation(id,wasOpen);
  if(window.TujiaUI)TujiaUI.refresh();
  try{
+  if(window.SitePages)await SitePages.prepare(state,id);
   if(W[id]?._chunk!==undefined)await loadWordEvidence(W[id]);
   else if(S[id]?._textChunk){
    try{await loadSourceText(S[id]);}catch{S[id]._textUnavailable=true;S[id]._skipTextOnce=true;}
@@ -84,13 +92,15 @@ document.addEventListener('click',e=>{
 },true);
 async function initializePreparedData(){
  try{
-  const data=await fastChunk('core');D=data;
+  const initial=document.getElementById('site-bootstrap-data');
+  const data=typeof SitePages==='undefined'?await fastChunk('core'):initial?JSON.parse(initial.textContent):await fastChunk('home');D=data;
   S=Object.fromEntries([...(D.sourceVariants||[]),...D.sources].map(x=>[x.id,x]));
   W=Object.fromEntries(D.words.map(x=>[x.id,x]));
   for(const [old,id]of Object.entries(D.wordAliases||{}))W[old]=W[id];
   C=Object.fromEntries(D.corpus.map(x=>[x.id,x]));R=Object.fromEntries((D.reconstructions||[]).map(x=>[x.id,x]));
-  WordClasses.initialize(D.words);
+  if(typeof WordClasses!=='undefined')WordClasses.initialize(D.words);
   window.fastReady=true;
+  const input=document.querySelector('#query'),draft=input?.value,focused=document.activeElement===input,start=input?.selectionStart,end=input?.selectionEnd;
   initializeNavigation();
   if(startupAction?.type==='search')setView('home',false,{q:startupAction.q});
   else if(startupAction?.type==='click'){
@@ -100,7 +110,19 @@ async function initializePreparedData(){
    else if(d.grammarDialect)setView('grammar',false,{grammarDialect:d.grammarDialect});
    else if(d.open)openDetail(d.open);
   }
+  if(!startupAction&&state.view==='home'&&!state.q&&draft){const input=document.querySelector('#query');if(input){input.value=draft;if(focused){input.focus();input.setSelectionRange(start,end);}}}
   document.documentElement.dataset.readyMs=String(Math.round(performance.now()));
   const status=document.getElementById('startup-status');if(status)status.hidden=true;
- }catch(error){console.error(error);window.fastReady=false;const status=document.getElementById('startup-status');if(status)status.hidden=true;$('#main').innerHTML='<p role="status">资料未能载入，请检查网络后刷新页面。</p>';}
+ }catch(error){console.error(error);window.fastReady=false;const status=document.getElementById('startup-status');if(status)status.hidden=true;const notice=document.createElement('div');notice.innerHTML='<p role="status">资料未能载入，请检查网络后重试。</p><button>重试</button>';notice.querySelector('button').onclick=()=>{notice.remove();initializePreparedData()};$('#main').prepend(notice);window.TujiaUI?.refresh();}
+}
+function applyPreparedPart(name,payload){
+ if(name==='words-index'){
+  D.words=payload.words;D.wordAliases=payload.wordAliases;
+  W=Object.fromEntries(D.words.map(w=>[w.id,w]));
+  for(const [alias,id]of Object.entries(D.wordAliases||{}))W[alias]=W[id];
+ }else if(name==='catalogue'){
+  for(const key of ['sources','sourceVariants','topics','folders'])D[key]=payload[key];
+  S=Object.fromEntries([...(D.sourceVariants||[]),...D.sources].map(s=>[s.id,s]));
+ }else if(name==='corpus'){D.corpus=payload.corpus;C=Object.fromEntries(D.corpus.map(c=>[c.id,c]));}
+ else if(name==='history'){D.reconstructions=payload.reconstructions;R=Object.fromEntries(D.reconstructions.map(r=>[r.id,r]));}
 }

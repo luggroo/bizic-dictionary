@@ -3,7 +3,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path'),http=require('node:http'),zlib=require('node:zlib');
 const {chromium}=require('playwright');
-const root=path.resolve(__dirname,'../site'),mount='/bizic-dictionary/';
+const root=path.resolve(process.argv[2]||path.join(__dirname,'../site')),mount='/bizic-dictionary/';
 const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.svg':'image/svg+xml','.woff2':'font/woff2'};
 const server=http.createServer((req,res)=>{
  const url=new URL(req.url,'http://127.0.0.1');

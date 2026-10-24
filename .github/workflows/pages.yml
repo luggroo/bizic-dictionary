@@ -2,7 +2,7 @@ name: Publish Tujia knowledge index
 on:
   push:
     branches: [main]
-    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/prepare-search-data.cjs', 'scripts/test-prepared-search.cjs', 'scripts/test-prepared-loader.cjs', 'scripts/test-prepared-version.cjs', 'scripts/apply-gloss-reviews.py', 'scripts/test-reader-copy.cjs', 'scripts/test-loanword-review.cjs', 'scripts/test-stedt-gloss-review.cjs', 'scripts/normalize-ipa-data.cjs', 'scripts/refresh-brassett-ipa.cjs', 'scripts/test-brassett-ipa.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-word-classes.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', 'scripts/test-y-initial.cjs', 'scripts/test-w-initial.cjs', 'scripts/test-spelling-boundaries.cjs', 'scripts/test-lexical-reviews.cjs', 'scripts/test-grammar-scroll-playwright.cjs', '.github/workflows/pages.yml']
+    paths: ['site/**', 'scripts/prepare-webfonts.py', 'scripts/prepare-search-data.cjs', 'scripts/test-prepared-search.cjs', 'scripts/test-prepared-loader.cjs', 'scripts/test-network.cjs', 'scripts/test-web-loading.cjs', 'scripts/test-prepared-version.cjs', 'scripts/apply-gloss-reviews.py', 'scripts/test-reader-copy.cjs', 'scripts/test-loanword-review.cjs', 'scripts/test-stedt-gloss-review.cjs', 'scripts/normalize-ipa-data.cjs', 'scripts/refresh-brassett-ipa.cjs', 'scripts/test-brassett-ipa.cjs', 'scripts/test-ipa-normalize.cjs', 'scripts/test-word-merges.cjs', 'scripts/test-word-classes.cjs', 'scripts/test-southern-notation.cjs', 'scripts/test-notation-pairs.cjs', 'scripts/test-y-initial.cjs', 'scripts/test-w-initial.cjs', 'scripts/test-spelling-boundaries.cjs', 'scripts/test-lexical-reviews.cjs', 'scripts/test-grammar-scroll-playwright.cjs', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -24,6 +24,7 @@ jobs:
           node scripts/test-ipa-normalize.cjs
           node scripts/test-brassett-ipa.cjs
           node scripts/test-word-classes.cjs
+          node scripts/test-network.cjs
       - name: Expand website datasets
         run: find site -name '*.gz' -exec gzip -dk {} \;
       - name: Install same-origin Gentium Plus webfonts
@@ -73,10 +74,12 @@ jobs:
           PYCODE
       - name: Install mobile browser QA driver
         run: PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install --prefix /tmp/bizic-grammar-qa --no-save --ignore-scripts --silent playwright@1.58.2
-      - name: Test mobile grammar navigation in Chrome
+      - name: Test reader loading and mobile grammar navigation
         env:
           NODE_PATH: /tmp/bizic-grammar-qa/node_modules
-        run: node scripts/test-grammar-scroll-playwright.cjs
+        run: |
+          node scripts/test-web-loading.cjs
+          node scripts/test-grammar-scroll-playwright.cjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

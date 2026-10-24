@@ -39,6 +39,13 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
  delete core.dictionaryFile;delete core.reconstructionOriginals;
  for(let i=0;i<data.words.length;i+=chunkSize){write('words-'+Math.floor(i/chunkSize),data.words.slice(i,i+chunkSize).map(w=>{const out={...w};delete out._search;delete out._semantic;return out;}));}
  write('core',core);
+ const sourceWordCounts={};for(const w of coreWords)for(const id of w.sourceIds||[w.source])sourceWordCounts[id]=(sourceWordCounts[id]||0)+1;
+ const home={...core,words:[],wordAliases:{},sources:core.sources.map(({id,title,url})=>({id,title,url})),sourceVariants:core.sourceVariants.map(({id,title,url})=>({id,title,url})),corpus:core.corpus.map(({id})=>({id})),reconstructions:core.reconstructions.map(({id})=>({id})),_counts:{words:coreWords.length,sources:core.sources.length,corpus:core.corpus.length},_sourceWordCounts:sourceWordCounts};
+ write('home',home);
+ write('words-index',{words:coreWords,wordAliases:core.wordAliases});
+ write('catalogue',{sources:core.sources,sourceVariants:core.sourceVariants,topics:core.topics,folders:core.folders});
+ write('corpus',{corpus:core.corpus});
+ write('history',{reconstructions:core.reconstructions});
  ctx.data=data;vm.runInContext('D=data;',ctx);
  // Loan scopes and precomputed spellings live in coreWords, not data.words.
  // Include them so returning readers request the refreshed prepared payload.
@@ -46,7 +53,20 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
  const index=path.join(root,'index.html');
  let html=fs.readFileSync(index,'utf8').replace(/<main id="main">[\s\S]*?<\/main>/,'<main id="main">'+ctx.overview()+'</main>');
  html=html.replace(/<meta name="prepared-data-version"[^>]*>/g,'').replace(/<link[^>]*data-prepared-preload[^>]*>/g,'');
- html=html.replace('</head>',`<meta name="prepared-data-version" content="${version}"><link data-prepared-preload rel="preload" as="fetch" href="prepared/core.json.gz?v=${version}" crossorigin></head>`);
+ html=html.replace(/<script id="site-(?:assets|bootstrap-data)"[^>]*>[\s\S]*?<\/script>/g,'');
+ // Keep the small home labels and accent fallback aligned with the canonical UI.
+ const uiRoot=path.join(root,'ui-core-translations.js');
+ if(fs.existsSync(uiRoot)){
+  const uiContext=vm.createContext({});vm.runInContext(fs.readFileSync(uiRoot,'utf8'),uiContext);
+  const translations={...vm.runInContext('UI_TRANSLATIONS',uiContext),...vm.runInContext('UI_TRANSLATIONS',ctx)};
+  const essential=html+['app.js','taste.js','fast-data.js','page-loader.js'].map(f=>fs.readFileSync(path.join(root,f),'utf8')).join('');
+  const labels=Object.fromEntries(Object.entries(translations).filter(([text])=>essential.includes(text)||/\{\w+\}/.test(text)));
+  fs.writeFileSync(uiRoot,'/* Navigation and home labels; other labels load with the reader tools. */\nvar UI_TRANSLATIONS='+JSON.stringify(labels,null,1)+';\n');
+ }
+ const assets=Object.fromEntries(fs.readdirSync(root).filter(f=>/\.(js|css)$/.test(f)).map(f=>[f,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,f))).digest('hex').slice(0,16)]));
+ assets['vendor/pako_inflate.min.js']=crypto.createHash('sha256').update(fs.readFileSync(path.join(root,'vendor/pako_inflate.min.js'))).digest('hex').slice(0,16);
+ const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
+ html=html.replace('</head>',`<meta name="prepared-data-version" content="${version}"></head>`).replace('</body>',`<script id="site-assets" type="application/json">${json(assets)}</script><script id="site-bootstrap-data" type="application/json">${json(home)}</script></body>`);
  fs.writeFileSync(index,html);
  mark('prepare-lazy-chunks');
  if(process.env.PREPARED_REFERENCE)fs.writeFileSync(process.env.PREPARED_REFERENCE,JSON.stringify(data));mark('write');

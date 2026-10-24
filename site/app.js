@@ -12,6 +12,14 @@ function toast(s){$('#toast').textContent=s;$('#toast').style.display='block';cl
 function pill(t,w=false){return `<span class="pill${w?' warn':''}">${E(t)}</span>`}
 function opts(values,current,all){return `<option value="">${E(all)}</option>`+[...new Set(values)].filter(Boolean).sort((a,b)=>a.localeCompare(b,'zh')).map(x=>`<option ${x===current?'selected':''} value="${E(x)}">${E(x)}</option>`).join('')}
 function select(key,values,label){return `<select data-filter="${key}" aria-label="${E(label)}">${opts(values,state[key],label)}</select>`}
+function commonSpellingSelector(){
+ if(typeof spellingSelector==='function')return spellingSelector();
+ const control=(region,label,key,options)=>{
+  let value='accent';try{value=localStorage.getItem(key)||value}catch{}
+  return `<label class="spelling-selector">${label}<select data-spelling-display="${region}" aria-label="${label}拼音显示">${options.map(([v,text])=>`<option value="${v}" ${v===value?'selected':''}>${text}</option>`).join('')}</select></label>`;
+ };
+ return control('north','北部','tujia-north-spelling-v2',[['accent','调号拼音'],['ye','叶式拼音']])+control('south','南部','tujia-south-spelling-v1',[['accent','调号拼音'],['poj','白话字拼音']]);
+}
 function search(placeholder='搜索词形、中文、英语…'){
  const dictionary=state.view==='words';
  return `<form class="searchbar" id="search-form">${dictionary?'':'<span aria-hidden="true">⌕</span>'}<input id="query" aria-label="搜索" value="${E(state.q)}" placeholder="${placeholder}" autocomplete="off">${dictionary?`<button type="submit" class="search-all" data-search-all>${searchIcon()}<span class="search-language-label"><span>全部搜索</span><small class="tujia-ui" data-ui-tujia="search" lang="tji"></small></span></button>`:'<button type="submit">搜索</button>'}</form>`;
@@ -23,7 +31,7 @@ function topicCards(topics){return `<div class="grid">${topics.map((t,i)=>`<arti
 function corpusMetadataLabels(values){return values.filter(Boolean).map(value=>`<span>${E(value)}</span>`).join(' · ')}
 function corpusCards(items){return `<div class="grid corpus-grid">${items.map(c=>`<article class="card corpus-card"><div class="row"><span class="num grow">${corpusMetadataLabels([...(c.locations||[]),c.genre])}</span></div><button class="corpus-card-content" data-open="${E(c.id)}" aria-label="阅读：${E(c.title)}"><span class="card-title">${E(c.title)}</span>${c.survey?`<span class="survey-ipa">/${E(c.ipa)}/</span>`:''}<span class="tiny">阅读 →</span></button>${S[c.audio]?.media?`<audio controls preload="none" hidden data-media-src="${E(S[c.audio].media)}" aria-label="${E(c.title)}录音"></audio>`:''}</article>`).join('')}</div>`}
 
-function overview(){return `<section class="hero"><h1>知识总览</h1><p class="sub">查词、读语法、看语料。</p>${search('词形、汉语、英语或研究主题…')}<div class="chips">${['水','否定','他砂','哭嫁歌'].map(x=>`<button data-query="${x}">${x}</button>`).join('')}</div></section><div class="metrics"><a class="metric" href="#words" data-view="words"><b>${D.words.length.toLocaleString()}</b><span>词条</span></a><a class="metric" href="#sources" data-view="sources"><b>${D.sources.length}</b><span>文献</span></a><a class="metric" href="#corpus" data-view="corpus"><b>${D.corpus.length}</b><span>语料</span></a></div><div class="section-head"><h2>参考语法</h2></div>${grammarEntryCards()}<div class="section-head"><h2>读土家语</h2><button data-view="corpus">全部语料 →</button></div>${corpusCards(D.corpus.filter(c=>['1.1','3.2','6.3'].includes(c.code)))}` }
+function overview(){if(window.SITE_HOME_HTML)return window.SITE_HOME_HTML;return `<section class="hero"><h1>知识总览</h1><p class="sub">查词、读语法、看语料。</p>${search('词形、汉语、英语或研究主题…')}<div class="chips">${['水','否定','他砂','哭嫁歌'].map(x=>`<button data-query="${x}">${x}</button>`).join('')}</div></section><div class="metrics"><a class="metric" href="#words" data-view="words"><b>${D.words.length.toLocaleString()}</b><span>词条</span></a><a class="metric" href="#sources" data-view="sources"><b>${D.sources.length}</b><span>文献</span></a><a class="metric" href="#corpus" data-view="corpus"><b>${D.corpus.length}</b><span>语料</span></a></div><div class="section-head"><h2>参考语法</h2></div>${grammarEntryCards()}<div class="section-head"><h2>读土家语</h2><button data-view="corpus">全部语料 →</button></div>${corpusCards(D.corpus.filter(c=>['1.1','3.2','6.3'].includes(c.code)))}` }
 
 function removeExcludedSource(data){
  const id='1a5k-8h7ZWLI2nZtJGIec5JWSznl4e9Tk';
@@ -192,7 +200,7 @@ function cleanViewState(value){
  next.chapter=typeof normalizeGrammarChapter==='function'?normalizeGrammarChapter(next.chapter,next.grammarDialect):next.chapter;
  if(typeof grammarResolvePage==='function')Object.assign(next,grammarResolvePage(next));
  if(typeof normalizeGrammarSection==='function')next.grammarSection=normalizeGrammarSection(next.chapter,next.grammarDialect,next.grammarSection,next.grammarAnchor);
- if(D&&next.pos)next.pos=WordClasses.filterId(next.pos);
+ if(D&&next.pos&&typeof WordClasses!=='undefined')next.pos=WordClasses.filterId(next.pos);
  next.page=Number.isFinite(Number(next.page))?Math.max(1,Math.floor(Number(next.page)||1)):1;
  next.exact=next.exact===true||next.exact==='1';
  next.hideWholeLoans=next.hideWholeLoans===true||next.hideWholeLoans==='1';
@@ -245,18 +253,18 @@ function navigationEntry(){return history.state?.tujiaNavigation===1?history.sta
 function navigationToken(){return location.href+'|'+(navigationEntry()?.key||'')}
 function mainOpenDetails(){return [...document.querySelectorAll('#main details')].flatMap((el,i)=>el.open?[i]:[])}
 function notationNavigationState(){
- if(state.view!=='notation')return null;
+ if(state.view!=='notation'||typeof notationState==='undefined')return null;
  const input=document.querySelector('#notation-input')?.value??notationState.input;
  return {source:notationState.source,input,converted:input===notationState.input&&!!notationState.result};
 }
 function restoreNotationState(snapshot){
- if(!snapshot||!NOTATION_CONFIG.profiles.some(p=>p.id===snapshot.source))return;
+ if(!snapshot||typeof NOTATION_CONFIG==='undefined'||!NOTATION_CONFIG.profiles.some(p=>p.id===snapshot.source))return;
  notationState={source:snapshot.source,input:String(snapshot.input??''),result:null};
  if(snapshot.converted)notationState.result=convertNotation(notationState.input,notationState.source);
 }
 function saveNavigationPosition(){
  const entry=navigationEntry();
- if(!navigationReady||restoringNavigation||!entry||viewHash(entry.viewState)!==location.hash)return;
+ if(!navigationReady||restoringNavigation||window.SitePages?.pending||!entry||viewHash(entry.viewState)!==location.hash)return;
  navigationPositions.set(entry.key,window.scrollY);
  const openDetails=mainOpenDetails();
  const input=entry.notation?document.querySelector('#notation-input')?.value:undefined;
@@ -303,7 +311,12 @@ function revealPageAnchor(id){
 function restoreNavigation(){
  if(!navigationReady||navigationToken()===lastNavigationToken)return;
  const parsed=parseViewHash(location.hash),saved=navigationEntry();
- const requestedId=new URLSearchParams(location.search).get('id'),sharedId=resolveDetailId(requestedId);
+ const requestedId=new URLSearchParams(location.search).get('id');
+ if(window.SitePages){
+  if(!SitePages.isReady(parsed.state,requestedId)){state=parsed.state;closeDetailSilently();}
+  if(SitePages.defer(parsed.state,requestedId,()=>{lastNavigationToken='';restoreNavigation();}))return;
+ }
+ const sharedId=resolveDetailId(requestedId);
  if(!location.hash&&sharedId)parsed.state.view=sharedDetailView(sharedId);
  const entry=saved&&viewHash(saved.viewState)===location.hash&&resolveDetailId(saved.detail)===sharedId?saved:null;
  restoringNavigation=true;closingDetail=false;
@@ -327,7 +340,13 @@ function restoreNavigation(){
 function initializeNavigation(){
  navigationReady=true;
  history.scrollRestoration='manual';
- const sharedId=resolveDetailId(new URLSearchParams(location.search).get('id'));
+ const requestedId=new URLSearchParams(location.search).get('id');
+ if(window.SitePages){
+  const requestedState=parseViewHash(location.hash).state;
+  if(!SitePages.isReady(requestedState,requestedId))state=requestedState;
+  if(SitePages.defer(requestedState,requestedId,initializeNavigation))return;
+ }
+ const sharedId=resolveDetailId(requestedId);
  // A fresh shared link gets a list entry underneath, so Close and Back stay on site.
  if(sharedId&&!navigationEntry()?.detail){
   state=parseViewHash(location.hash).state;
@@ -342,19 +361,26 @@ window.addEventListener('hashchange',restoreNavigation);
 let scrollSaveTimer;
 window.addEventListener('scroll',()=>{
  const entry=navigationEntry();
- if(navigationReady&&!restoringNavigation&&entry)navigationPositions.set(entry.key,window.scrollY);
+ if(navigationReady&&!restoringNavigation&&!window.SitePages?.pending&&entry)navigationPositions.set(entry.key,window.scrollY);
  clearTimeout(scrollSaveTimer);
  // Safari rate-limits History API writes; a swipe must not write every frame.
  scrollSaveTimer=setTimeout(saveNavigationPosition,200);
 },{passive:true});
 window.addEventListener('pagehide',saveNavigationPosition);
 function render(){
+ if(window.SitePages){
+  saveNavigationPosition();
+  state=cleanViewState(state);
+  if(!SitePages.isReady(state))closeDetailSilently();
+  const previous=navigationEntry();
+  if(SitePages.defer(state,null,render)){finishNavigation(previous);return;}
+ }
  if(typeof ensureSourceSearch==='function'&&ensureSourceSearch())return;
  const previous=navigationEntry();
- saveNavigationPosition();
+ if(!window.SitePages)saveNavigationPosition();
  state=cleanViewState(state);
  if(navigationReady&&!restoringNavigation&&location.hash!==viewHash())closeDetailSilently();
- if($('#spelling-control'))$('#spelling-control').innerHTML=spellingSelector();
+ if($('#spelling-control'))$('#spelling-control').innerHTML=commonSpellingSelector();
  document.querySelectorAll('aside>nav button').forEach(b=>{const active=b.dataset.view===state.view;b.classList.toggle('active',active);if(active)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')});
  const nav=$('aside>nav'),active=nav.querySelector('.active');
  if(active&&nav.scrollWidth>nav.clientWidth){
@@ -363,10 +389,10 @@ function render(){
   else if(button.right>box.right)nav.scrollLeft+=button.right-box.right;
  }
  $('#crumb').textContent=titles[state.view]||'知识检索';
- const views={home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:historyView,grammar:grammarView,notation:notationView};
+ const views={home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:()=>historyView(),grammar:()=>grammarView(),notation:()=>notationView()};
  $('#main').innerHTML=views[state.view]();
  document.title=(titles[state.view]||'知识总览')+' · 土家语知识索引';
- bindMain();bindNotationView();if(window.tasteRefresh)tasteRefresh();if(window.TujiaUI)TujiaUI.refresh();
+ bindMain();if(typeof bindNotationView==='function')bindNotationView();if(window.tasteRefresh)tasteRefresh();if(window.TujiaUI)TujiaUI.refresh();
  finishNavigation(previous);
 }
 function setView(v,keep=false,patch={}){
@@ -397,7 +423,7 @@ function wordDetail(w){
 }
 
 function sourceVariantPanel(s){if(s.canonicalSource)return `<div class="notice">本文件属于 <button data-open="${s.canonicalSource}">${E(S[s.canonicalSource].title)}</button>。</div>`;if(!s.variantIds)return '';return `<h3>原著与文件版本</h3><p>${E(s.originalTitle)}</p>${s.variantIds.map(id=>{const v=S[id];return `<article class="card"><button data-open="${id}">${E(v.title)}</button>${sourceLink(id)}</article>`}).join('')}`}
-function sourceDetail(s){return `<div class="eyebrow"><span class="tujia-ui" data-ui-tujia="sources" lang="tji"></span></div><div class="row"><h2 class="grow">${E(s.title)}</h2></div><div class="chips">${pill(s.kind)}${s.topics.map(t=>pill(t)).join('')}${pill(s.status,s.status.includes('待'))}</div><dl><dt>原始目录</dt><dd>${E(s.path)}</dd><dt>方言标签</dt><dd>${E(s.dialect)}</dd><dt>地点线索</dt><dd>${E(s.locations.join(' / ')||'题名未说明')}</dd><dt>文件大小</dt><dd>${s.size?(Number(s.size)/1024/1024).toFixed(2)+' MB':'不适用／未提供'}</dd></dl>${sourceVariantPanel(s)}${s.id==='brassett-2006'?brassettSourcePanel():''}${s.recognition?recognitionPanel(s):''}${s.description?`<p class="sub">${E(s.description)}</p>`:''}<div class="detail-actions">${sourceLink(s.id)}<button data-copy="${s.id}">复制来源引用</button>${D.words.some(w=>wordSources(w).includes(s.id))?`<button data-source-words="${s.id}">检索本来源词条</button>`:''}</div>${s.image?`<figure style="margin:15px 0"><a href="${E(s.image)}" target="_blank"><img class="research-map" hidden data-media-src="${E(s.image)}" alt="原始地图 ${E(s.title)}"></a><figcaption class="tiny">原图 ${E(s.title)} · 点击放大。历史版本地图请结合论文勘误阅读。</figcaption></figure>`:''}${s.media?`<audio controls preload="metadata" hidden data-media-src="${E(s.media)}"></audio>`:''}${s.members?`<h3>压缩包内容</h3>${s.members.map(m=>`<p>${E(m.name)} · ${(m.size/1024).toFixed(0)} KB</p>${m.media?`<audio controls preload="none" hidden data-media-src="${E(m.media)}"></audio>`:''}`).join('')}`:''}${s.text.length>500?`<div class="notice warn">${E(s.textNotice)}</div><h3>提取文本</h3><div class="compact-search"><input id="within" value="${E(state.q)}" placeholder="在正文中查找关键词" aria-label="文内定位"><button id="within-find">定位</button></div><div class="text-view" id="source-text">${s.recognition?recognizedHTML(s):E(s.text)}</div>`:`<div class="notice">${s._textUnavailable?'文献全文尚未载入，可打开来源原件。':s.media?'暂无逐句转写，可查看原始资料。':s.status.includes('词表')?'可通过“检索本来源词条”查看词汇。':'暂无全文，请打开原件。'}</div>`}`}
+function sourceDetail(s){return `<div class="eyebrow"><span class="tujia-ui" data-ui-tujia="sources" lang="tji"></span></div><div class="row"><h2 class="grow">${E(s.title)}</h2></div><div class="chips">${pill(s.kind)}${s.topics.map(t=>pill(t)).join('')}${pill(s.status,s.status.includes('待'))}</div><dl><dt>原始目录</dt><dd>${E(s.path)}</dd><dt>方言标签</dt><dd>${E(s.dialect)}</dd><dt>地点线索</dt><dd>${E(s.locations.join(' / ')||'题名未说明')}</dd><dt>文件大小</dt><dd>${s.size?(Number(s.size)/1024/1024).toFixed(2)+' MB':'不适用／未提供'}</dd></dl>${sourceVariantPanel(s)}${s.id==='brassett-2006'?brassettSourcePanel():''}${s.recognition?recognitionPanel(s):''}${s.description?`<p class="sub">${E(s.description)}</p>`:''}<div class="detail-actions">${sourceLink(s.id)}<button data-copy="${s.id}">复制来源引用</button>${((D._sourceWordCounts?.[s.id]||0)>0||D.words.some(w=>wordSources(w).includes(s.id)))?`<button data-source-words="${s.id}">检索本来源词条</button>`:''}</div>${s.image?`<figure style="margin:15px 0"><a href="${E(s.image)}" target="_blank"><img class="research-map" hidden data-media-src="${E(s.image)}" alt="原始地图 ${E(s.title)}"></a><figcaption class="tiny">原图 ${E(s.title)} · 点击放大。历史版本地图请结合论文勘误阅读。</figcaption></figure>`:''}${s.media?`<audio controls preload="metadata" hidden data-media-src="${E(s.media)}"></audio>`:''}${s.members?`<h3>压缩包内容</h3>${s.members.map(m=>`<p>${E(m.name)} · ${(m.size/1024).toFixed(0)} KB</p>${m.media?`<audio controls preload="none" hidden data-media-src="${E(m.media)}"></audio>`:''}`).join('')}`:''}${s.text.length>500?`<div class="notice warn">${E(s.textNotice)}</div><h3>提取文本</h3><div class="compact-search"><input id="within" value="${E(state.q)}" placeholder="在正文中查找关键词" aria-label="文内定位"><button id="within-find">定位</button></div><div class="text-view" id="source-text">${s.recognition?recognizedHTML(s):E(s.text)}</div>`:`<div class="notice">${s._textUnavailable?'文献全文尚未载入，可打开来源原件。':s.media?'暂无逐句转写，可查看原始资料。':s.status.includes('词表')?'可通过“检索本来源词条”查看词汇。':'暂无全文，请打开原件。'}</div>`}`}
 function corpusDetail(c){if(c.externalText)return longshanTextDetail(c);if(c.survey)return surveySentenceDetail(c);return `<div class="eyebrow"><span class="tujia-ui" data-ui-tujia="corpus" lang="tji"></span></div><div class="row"><h2 class="grow">${E(c.title)}</h2></div><div class="chips">${pill(c.genre)}${pill(c.code)}</div>${corpusPlayer(c)}<dl><dt>方言判定依据</dt><dd>${E(S[c.source].dialectBasis||'范围尚未核定')}</dd><dt>地点线索</dt><dd>${E(c.locations.join(' / ')||'待核')}</dd><dt>人物原文</dt><dd>${c.people.length?c.people.map(E).join('<br>'):'待核'}</dd><dt>文本来源</dt><dd>土家语文库 网站原版（拼音版）${c.page?' · PDF 第 '+c.page+' 页起':''}</dd></dl><div class="detail-actions">${sourceLink(c.audio,'打开原始录音 ↗')}${sourceLink(c.source,'打开 PDF 原件 ↗')}<button data-copy="${c.id}">复制语料引用</button></div>${c.text?`<div class="compact-search"><input id="within" value="${E(state.q)}" placeholder="在本段文本中定位" aria-label="语料内定位"><button id="within-find">定位</button></div><details><summary>查看原始全文与分行</summary><div class="text-view" id="source-text">${E(c.text)}</div></details>`:'<div class="notice warn">暂无文本。</div>'}`}
 function showDetailDialog(id){
  const dialog=$('#detail');
@@ -409,6 +435,7 @@ function showDetailDialog(id){
  document.querySelectorAll('.word-card-content').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.open===id)));
 }
 function openDetail(id){
+ if(window.SitePages&&!SitePages.isReady(state,id)){openPreparedDetail(id);return;}
  if(W[id]?._chunk!==undefined||(S[id]?._textChunk&&!S[id]._skipTextOnce)){openPreparedDetail(id);return;}
  if(S[id])delete S[id]._skipTextOnce;
  id=resolveDetailId(id);
@@ -417,7 +444,7 @@ function openDetail(id){
  saveNavigationPosition();
  const html=R[id]?reconstructionDetail(R[id]):W[id]?wordDetail(W[id]):C[id]?corpusDetail(C[id]):sourceDetail(S[id]);
  currentDetail=id;
- $('#detail-spelling-control').innerHTML=spellingSelector(W[id]||C[id]);
+ $('#detail-spelling-control').innerHTML=typeof spellingSelector==='function'?spellingSelector(W[id]||C[id]):'';
  $('#detail-label').textContent=W[id]?'词汇条目':C[id]?'语料详情':R[id]?'历史比较':'文献详情';
  $('#detail-body').innerHTML=html;
  showDetailDialog(id);
@@ -509,7 +536,11 @@ initializePreparedData();
 document.addEventListener('change',e=>{
  if(!e.target.dataset.spellingDisplay)return;
  const query=$('#query'),draft=query?.value,start=query?.selectionStart,end=query?.selectionEnd;
- if(e.target.dataset.spellingDisplay==='south'){
+ if(typeof spellingDisplay==='undefined'){
+  const south=e.target.dataset.spellingDisplay==='south',mode=south?(e.target.value==='poj'?'poj':'accent'):(e.target.value==='ye'?'ye':'accent');
+  try{localStorage.setItem(south?'tujia-south-spelling-v1':'tujia-north-spelling-v2',mode)}catch{}
+  if(!south)window.TujiaUI?.setHeadingSpelling(mode);
+ }else if(e.target.dataset.spellingDisplay==='south'){
   southernDisplay=e.target.value==='poj'?'poj':'accent';
   try{localStorage.setItem('tujia-south-spelling-v1',southernDisplay)}catch{}
  }else{
@@ -521,7 +552,7 @@ document.addEventListener('change',e=>{
  // Display preferences must not submit or discard an unfinished query.
  const nextQuery=$('#query');
  if(nextQuery&&draft!==undefined){nextQuery.value=draft;if(start!==null&&start!==undefined)nextQuery.setSelectionRange(start,end);}
- $('#detail-spelling-control').innerHTML=spellingSelector();
+ $('#detail-spelling-control').innerHTML=typeof spellingSelector==='function'?spellingSelector():'';
  if(isOpen&&id){
   if(C[id]&&!C[id].survey){const lines=corpusLyricLines(C[id].text);document.querySelectorAll('.lyric-tujia').forEach((el,i)=>el.textContent=displayBrassett(lines[i].text))}
   else openDetail(id);

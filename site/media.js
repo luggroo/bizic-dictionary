@@ -10,7 +10,7 @@ async function mediaAvailable(path, kind) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 8000);
     try {
-      const response = await fetch(path, { method: 'HEAD', signal: controller.signal });
+      const response = await (typeof SiteRequest==='undefined'?fetch(path, { method: 'HEAD', signal: controller.signal }):SiteRequest.fetch(path,{method:'HEAD',signal:controller.signal,retries:1,timeoutMs:3500}));
       const type = (response.headers.get('content-type') || '').toLowerCase();
       return response.ok && (kind === 'img' ? type.startsWith('image/') : type.startsWith('audio/') || type.startsWith('video/') || type.startsWith('application/octet-stream'));
     } catch { return false; } finally { clearTimeout(timer); }

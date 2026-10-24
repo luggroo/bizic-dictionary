@@ -49,9 +49,10 @@ const YUBAO_PARALLEL_FORMS={
  'yubao-60756-v-0370':['miaŋ33ʑi33','phau33tsɿ33']
 };
 async function loadYubao(data){
- const manifest=await fetch('yubao-manifest.json').then(r=>{if(!r.ok)throw Error('Survey manifest unavailable');return r.json()});
- const parts=await Promise.all(manifest.map(f=>fetch(f).then(r=>{if(!r.ok)throw Error('Survey data unavailable');return r.json()})));
- const english=await fetch('yubao-english.json').then(r=>{if(!r.ok)throw Error('Survey English glosses unavailable');return r.json()});
+ const read=file=>typeof SiteRequest==='undefined'?fetch(file).then(r=>{if(!r.ok)throw Error('Survey data unavailable');return r.json()}):SiteRequest.json(file);
+ const manifest=await read('yubao-manifest.json');
+ const parts=await Promise.all(manifest.map(read));
+ const english=await read('yubao-english.json');
  const sources=new Set(data.sources.map(s=>s.id)),seen=new Map();
  for(const p of parts){
   const source='yubao-'+p.point;
