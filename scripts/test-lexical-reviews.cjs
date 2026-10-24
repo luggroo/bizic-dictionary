@@ -61,5 +61,32 @@ const run=s=>vm.runInContext(s,ctx);
  assert.equal(ctx.modernChineseLoanInfo(get('yubao-60756-v-1857')).scope,'component');
  const note=ctx.editorialNotesFor(get('yubao-60757-v-0273')).find(n=>n.id==='site-pos-inference');ctx.note=note;
  assert(note);assert(run('UI_TRANSLATIONS[note.text]').includes('may be incorrect'));
+  // Check the complete meal family, including forms without any loan notes.
+  // The repeated ga in "eat lunch" belongs to two words: wongga + ga.
+  const meals=data.words.filter(w=>/^yubao-/.test(w.id)&&/^吃[早午晚]饭$/.test(w.zh));
+  assert.equal(meals.length,12,'three meals across all four survey points');
+  assert.equal(new Set(meals.map(w=>w.source)).size,4);
+  for(const w of meals){
+    check(w.id,'phrase.verb');
+    const rootId=w.id.replace(/043[678]$/,'0439');
+    const eat=data.words.find(w=>w.attestations?.some(a=>a.id===rootId));
+    assert(eat,w.id+' independent eat entry');
+    const roots=ctx.notationValues(eat,'ipa').filter(v=>v.attestationIds?.includes(rootId)).flatMap(v=>ctx.loanIPAForms(v.text)).map(s=>s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g,''));
+    for(const ipa of ctx.wordIPA(w)){
+      const parts=ipa.trim().split(/\s+/);assert.equal(parts.length,2,w.id+' meal noun + eat');
+      assert(roots.includes(parts[1].replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g,'')),w.id+' final word matches the local eat verb');
+    }
+    for(const mode of ctx.isSouthernWord(w)?['accent','poj']:['accent','ye']){
+      ctx.w=w;ctx.mode=mode;run('spellingDisplay=mode;southernDisplay=mode');
+      for(const value of ctx.completeSpellings(w)){
+        assert.equal(value.text.trim().split(/\s+/).length,2,w.id+' '+mode+' meal noun remains one word');
+        for(const [,end] of ctx.spellingLoanRanges(w,value))assert(end<=value.text.lastIndexOf(' '),w.id+' native eat verb is not grey');
+      }
+    }
+  }
+  for(const id of ['w1663','w2561','w2645']){
+    check(id,'noun');assert(!ctx.wordIPA(get(id)).some(s=>s.includes(' ')),id+' meal noun is not an eating phrase');
+  }
  console.log(`PASS: ${classified} reviewed classifications, ${boundaries} spelling rules, all source evidence preserved, OV/SV, numerals, pronouns, modals and provenance.`);
+  console.log('PASS: all 12 meal phrases, independent local eat verbs, both notation modes, unchanged loan shading and intact meal nouns.');
 })().catch(e=>{console.error(e);process.exit(1)});

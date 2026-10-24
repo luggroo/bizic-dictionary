@@ -1299,6 +1299,78 @@
         "gau"
       ],
       "splitAfter": 1
+    },
+    {
+      "id": "yubao-60757-v-0436",
+      "parts": [
+        "hulan",
+        "ga"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60757-v-0437",
+      "parts": [
+        "wongga",
+        "ga"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60757-v-0438",
+      "parts": [
+        "rozi",
+        "ga"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60756-v-0437",
+      "parts": [
+        "sanwu",
+        "ga"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-0437",
+      "parts": [
+        "sanwu",
+        "ga"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-0438",
+      "parts": [
+        "yehuan",
+        "ga"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-0436",
+      "parts": [
+        "risiwu",
+        "hxe"
+      ],
+      "splitAfter": 3
+    },
+    {
+      "id": "yubao-60824-v-0437",
+      "parts": [
+        "yiwu",
+        "hxe"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60824-v-0438",
+      "parts": [
+        "rizza",
+        "hxe"
+      ],
+      "splitAfter": 2
     }
   ],
   "supersededConstraints": [

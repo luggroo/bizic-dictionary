@@ -2149,6 +2149,240 @@
         "zuǎn'gǎu"
       ],
       "loanNotes": []
+    },
+    {
+      "id": "yubao-60757-v-0436",
+      "split": 2,
+      "basis": "Meal noun followed by the independently attested same-point eat verb (yubao-60757-v-0439); only separate the final verb, preserving the meal noun as one word.",
+      "zh": "吃早饭",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "ɸu24lan33ka24",
+      "ipa": "ɸu²⁴lan³³ka²⁴",
+      "displayIPA": "ɸu²⁴lan³³ ka²⁴",
+      "pinyinParts": [
+        "hulan",
+        "ga"
+      ],
+      "originalSpellings": [
+        "húlān'gá"
+      ],
+      "loanNotes": [],
+      "rootEvidence": {
+        "verbId": "yubao-60757-v-0439",
+        "canonicalId": "w684",
+        "forms": [
+          "ka²⁴"
+        ]
+      }
+    },
+    {
+      "id": "yubao-60757-v-0437",
+      "split": 2,
+      "basis": "Meal noun followed by the independently attested same-point eat verb (yubao-60757-v-0439); only separate the final verb, preserving the meal noun as one word.",
+      "zh": "吃午饭",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "uŋ55ka33ka24",
+      "ipa": "uŋ⁵⁵ka³³ka²⁴",
+      "displayIPA": "uŋ⁵⁵ka³³ ka²⁴",
+      "pinyinParts": [
+        "wongga",
+        "ga"
+      ],
+      "originalSpellings": [
+        "wōnggāgá"
+      ],
+      "loanNotes": [],
+      "rootEvidence": {
+        "verbId": "yubao-60757-v-0439",
+        "canonicalId": "w684",
+        "forms": [
+          "ka²⁴"
+        ]
+      }
+    },
+    {
+      "id": "yubao-60757-v-0438",
+      "split": 2,
+      "basis": "Meal noun followed by the independently attested same-point eat verb (yubao-60757-v-0439); only separate the final verb, preserving the meal noun as one word.",
+      "zh": "吃晚饭",
+      "location": "龙山",
+      "source": "yubao-60757",
+      "sourceTerm": "zo21tsɿ22ka24",
+      "ipa": "zo²¹tsɿ²²ka²⁴",
+      "displayIPA": "zo²¹tsɿ²² ka²⁴",
+      "pinyinParts": [
+        "rozi",
+        "ga"
+      ],
+      "originalSpellings": [
+        "rǒzǐgá"
+      ],
+      "loanNotes": [],
+      "rootEvidence": {
+        "verbId": "yubao-60757-v-0439",
+        "canonicalId": "w684",
+        "forms": [
+          "ka²⁴"
+        ]
+      }
+    },
+    {
+      "id": "yubao-60756-v-0437",
+      "split": 2,
+      "basis": "Meal noun followed by the independently attested same-point eat verb (yubao-60756-v-0439); only separate the final verb, preserving the meal noun as one word.",
+      "zh": "吃午饭",
+      "location": "保靖阳朝",
+      "source": "yubao-60756",
+      "sourceTerm": "saŋ55u55ka53",
+      "ipa": "saŋ⁵⁵u⁵⁵ka⁵³",
+      "displayIPA": "saŋ⁵⁵u⁵⁵ ka⁵³",
+      "pinyinParts": [
+        "sanwu",
+        "ga"
+      ],
+      "originalSpellings": [
+        "sānwūgà"
+      ],
+      "loanNotes": [],
+      "rootEvidence": {
+        "verbId": "yubao-60756-v-0439",
+        "canonicalId": "yubao-60756-v-0439",
+        "forms": [
+          "ka³³"
+        ]
+      }
+    },
+    {
+      "id": "yubao-60823-v-0437",
+      "split": 2,
+      "basis": "Meal noun followed by the independently attested same-point eat verb (yubao-60823-v-0439); only separate the final verb, preserving the meal noun as one word.",
+      "zh": "吃午饭",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "sã55u55ka13",
+      "ipa": "sã⁵⁵u⁵⁵ka¹³",
+      "displayIPA": "sã⁵⁵u⁵⁵ ka¹³",
+      "pinyinParts": [
+        "sanwu",
+        "ga"
+      ],
+      "originalSpellings": [
+        "sānwūgá"
+      ],
+      "loanNotes": [],
+      "rootEvidence": {
+        "verbId": "yubao-60823-v-0439",
+        "canonicalId": "yubao-60823-v-0439",
+        "forms": [
+          "ka¹³"
+        ]
+      }
+    },
+    {
+      "id": "yubao-60823-v-0438",
+      "split": 2,
+      "basis": "Meal noun followed by the independently attested same-point eat verb (yubao-60823-v-0439); only separate the final verb, preserving the meal noun as one word.",
+      "zh": "吃晚饭",
+      "location": "保靖碗米坡",
+      "source": "yubao-60823",
+      "sourceTerm": "ʑie13xuã55ka13",
+      "ipa": "ʑie¹³xuã⁵⁵ka¹³",
+      "displayIPA": "ʑie¹³xuã⁵⁵ ka¹³",
+      "pinyinParts": [
+        "yehuan",
+        "ga"
+      ],
+      "originalSpellings": [
+        "yéhuān'gá"
+      ],
+      "loanNotes": [],
+      "rootEvidence": {
+        "verbId": "yubao-60823-v-0439",
+        "canonicalId": "yubao-60823-v-0439",
+        "forms": [
+          "ka¹³"
+        ]
+      }
+    },
+    {
+      "id": "yubao-60824-v-0436",
+      "split": 3,
+      "basis": "Meal noun followed by the independently attested same-point eat verb (yubao-60824-v-0439); only separate the final verb, preserving the meal noun as one word.",
+      "zh": "吃早饭",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "zi35si35wu21ɣe35",
+      "ipa": "zi³⁵si³⁵wu²¹ɣe³⁵",
+      "displayIPA": "zi³⁵si³⁵wu²¹ ɣe³⁵",
+      "pinyinParts": [
+        "risiwu",
+        "hxe"
+      ],
+      "originalSpellings": [
+        "rísíwùhxé"
+      ],
+      "loanNotes": [],
+      "rootEvidence": {
+        "verbId": "yubao-60824-v-0439",
+        "canonicalId": "stedt-rn-43584",
+        "forms": [
+          "ɣe³⁵"
+        ]
+      }
+    },
+    {
+      "id": "yubao-60824-v-0437",
+      "split": 2,
+      "basis": "Meal noun followed by the independently attested same-point eat verb (yubao-60824-v-0439); only separate the final verb, preserving the meal noun as one word.",
+      "zh": "吃午饭",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "ji55wu21ɣe35",
+      "ipa": "ji⁵⁵wu²¹ɣe³⁵",
+      "displayIPA": "ji⁵⁵wu²¹ ɣe³⁵",
+      "pinyinParts": [
+        "yiwu",
+        "hxe"
+      ],
+      "originalSpellings": [
+        "yīwùhxé"
+      ],
+      "loanNotes": [],
+      "rootEvidence": {
+        "verbId": "yubao-60824-v-0439",
+        "canonicalId": "stedt-rn-43584",
+        "forms": [
+          "ɣe³⁵"
+        ]
+      }
+    },
+    {
+      "id": "yubao-60824-v-0438",
+      "split": 2,
+      "basis": "Meal noun followed by the independently attested same-point eat verb (yubao-60824-v-0439); only separate the final verb, preserving the meal noun as one word.",
+      "zh": "吃晚饭",
+      "location": "泸溪潭溪",
+      "source": "yubao-60824",
+      "sourceTerm": "zi35dza35ɣe35",
+      "ipa": "zi³⁵dza³⁵ɣe³⁵",
+      "displayIPA": "zi³⁵dza³⁵ ɣe³⁵",
+      "pinyinParts": [
+        "rizza",
+        "hxe"
+      ],
+      "originalSpellings": [
+        "rízzáhxé"
+      ],
+      "loanNotes": [],
+      "rootEvidence": {
+        "verbId": "yubao-60824-v-0439",
+        "canonicalId": "stedt-rn-43584",
+        "forms": [
+          "ɣe³⁵"
+        ]
+      }
     }
   ]
 }

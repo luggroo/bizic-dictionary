@@ -1,0 +1,248 @@
+{
+  "date": "2026-10-24",
+  "scope": "All 12 breakfast, lunch and dinner eating phrases across the four survey points. Original tones, source records and borrowing annotations retained.",
+  "added": 9,
+  "alreadySpaced": 3,
+  "entries": [
+    {
+      "id": "yubao-60757-v-0436",
+      "zh": "吃早饭",
+      "location": "龙山",
+      "sourceTerm": "ɸu24lan33ka24",
+      "originalIPA": "ɸu²⁴lan³³ka²⁴",
+      "displayIPA": "ɸu²⁴lan³³ ka²⁴",
+      "parts": [
+        "hulan",
+        "ga"
+      ],
+      "verbRoot": {
+        "canonicalId": "w684",
+        "attestationId": "yubao-60757-v-0439",
+        "forms": [
+          "ka²⁴"
+        ]
+      },
+      "added": true
+    },
+    {
+      "id": "yubao-60757-v-0437",
+      "zh": "吃午饭",
+      "location": "龙山",
+      "sourceTerm": "uŋ55ka33ka24",
+      "originalIPA": "uŋ⁵⁵ka³³ka²⁴",
+      "displayIPA": "uŋ⁵⁵ka³³ ka²⁴",
+      "parts": [
+        "wongga",
+        "ga"
+      ],
+      "verbRoot": {
+        "canonicalId": "w684",
+        "attestationId": "yubao-60757-v-0439",
+        "forms": [
+          "ka²⁴"
+        ]
+      },
+      "added": true
+    },
+    {
+      "id": "yubao-60757-v-0438",
+      "zh": "吃晚饭",
+      "location": "龙山",
+      "sourceTerm": "zo21tsɿ22ka24",
+      "originalIPA": "zo²¹tsɿ²²ka²⁴",
+      "displayIPA": "zo²¹tsɿ²² ka²⁴",
+      "parts": [
+        "rozi",
+        "ga"
+      ],
+      "verbRoot": {
+        "canonicalId": "w684",
+        "attestationId": "yubao-60757-v-0439",
+        "forms": [
+          "ka²⁴"
+        ]
+      },
+      "added": true
+    },
+    {
+      "id": "yubao-60756-v-0436",
+      "zh": "吃早饭",
+      "location": "保靖阳朝",
+      "sourceTerm": "tsau55xuaŋ53ka33",
+      "originalIPA": "tsau⁵⁵xuaŋ⁵³ka³³",
+      "displayIPA": "tsau⁵⁵xuaŋ⁵³ ka³³",
+      "parts": [
+        "zaohuang",
+        "ga"
+      ],
+      "verbRoot": {
+        "canonicalId": "yubao-60756-v-0439",
+        "attestationId": "yubao-60756-v-0439",
+        "forms": [
+          "ka³³"
+        ]
+      },
+      "added": false
+    },
+    {
+      "id": "yubao-60756-v-0437",
+      "zh": "吃午饭",
+      "location": "保靖阳朝",
+      "sourceTerm": "saŋ55u55ka53",
+      "originalIPA": "saŋ⁵⁵u⁵⁵ka⁵³",
+      "displayIPA": "saŋ⁵⁵u⁵⁵ ka⁵³",
+      "parts": [
+        "sanwu",
+        "ga"
+      ],
+      "verbRoot": {
+        "canonicalId": "yubao-60756-v-0439",
+        "attestationId": "yubao-60756-v-0439",
+        "forms": [
+          "ka³³"
+        ]
+      },
+      "added": true
+    },
+    {
+      "id": "yubao-60756-v-0438",
+      "zh": "吃晚饭",
+      "location": "保靖阳朝",
+      "sourceTerm": "ʑe33xuaŋ33ka33",
+      "originalIPA": "ʑe³³xuaŋ³³ka³³",
+      "displayIPA": "ʑe³³xuaŋ³³ ka³³",
+      "parts": [
+        "yehuang",
+        "ga"
+      ],
+      "verbRoot": {
+        "canonicalId": "yubao-60756-v-0439",
+        "attestationId": "yubao-60756-v-0439",
+        "forms": [
+          "ka³³"
+        ]
+      },
+      "added": false
+    },
+    {
+      "id": "yubao-60823-v-0436",
+      "zh": "吃早饭",
+      "location": "保靖碗米坡",
+      "sourceTerm": "tsau55xuã31ka13",
+      "originalIPA": "tsau⁵⁵xuã³¹ka¹³",
+      "displayIPA": "tsau⁵⁵xuã³¹ ka¹³",
+      "parts": [
+        "zaohuan",
+        "ga"
+      ],
+      "verbRoot": {
+        "canonicalId": "yubao-60823-v-0439",
+        "attestationId": "yubao-60823-v-0439",
+        "forms": [
+          "ka¹³"
+        ]
+      },
+      "added": false
+    },
+    {
+      "id": "yubao-60823-v-0437",
+      "zh": "吃午饭",
+      "location": "保靖碗米坡",
+      "sourceTerm": "sã55u55ka13",
+      "originalIPA": "sã⁵⁵u⁵⁵ka¹³",
+      "displayIPA": "sã⁵⁵u⁵⁵ ka¹³",
+      "parts": [
+        "sanwu",
+        "ga"
+      ],
+      "verbRoot": {
+        "canonicalId": "yubao-60823-v-0439",
+        "attestationId": "yubao-60823-v-0439",
+        "forms": [
+          "ka¹³"
+        ]
+      },
+      "added": true
+    },
+    {
+      "id": "yubao-60823-v-0438",
+      "zh": "吃晚饭",
+      "location": "保靖碗米坡",
+      "sourceTerm": "ʑie13xuã55ka13",
+      "originalIPA": "ʑie¹³xuã⁵⁵ka¹³",
+      "displayIPA": "ʑie¹³xuã⁵⁵ ka¹³",
+      "parts": [
+        "yehuan",
+        "ga"
+      ],
+      "verbRoot": {
+        "canonicalId": "yubao-60823-v-0439",
+        "attestationId": "yubao-60823-v-0439",
+        "forms": [
+          "ka¹³"
+        ]
+      },
+      "added": true
+    },
+    {
+      "id": "yubao-60824-v-0436",
+      "zh": "吃早饭",
+      "location": "泸溪潭溪",
+      "sourceTerm": "zi35si35wu21ɣe35",
+      "originalIPA": "zi³⁵si³⁵wu²¹ɣe³⁵",
+      "displayIPA": "zi³⁵si³⁵wu²¹ ɣe³⁵",
+      "parts": [
+        "risiwu",
+        "hxe"
+      ],
+      "verbRoot": {
+        "canonicalId": "stedt-rn-43584",
+        "attestationId": "yubao-60824-v-0439",
+        "forms": [
+          "ɣe³⁵"
+        ]
+      },
+      "added": true
+    },
+    {
+      "id": "yubao-60824-v-0437",
+      "zh": "吃午饭",
+      "location": "泸溪潭溪",
+      "sourceTerm": "ji55wu21ɣe35",
+      "originalIPA": "ji⁵⁵wu²¹ɣe³⁵",
+      "displayIPA": "ji⁵⁵wu²¹ ɣe³⁵",
+      "parts": [
+        "yiwu",
+        "hxe"
+      ],
+      "verbRoot": {
+        "canonicalId": "stedt-rn-43584",
+        "attestationId": "yubao-60824-v-0439",
+        "forms": [
+          "ɣe³⁵"
+        ]
+      },
+      "added": true
+    },
+    {
+      "id": "yubao-60824-v-0438",
+      "zh": "吃晚饭",
+      "location": "泸溪潭溪",
+      "sourceTerm": "zi35dza35ɣe35",
+      "originalIPA": "zi³⁵dza³⁵ɣe³⁵",
+      "displayIPA": "zi³⁵dza³⁵ ɣe³⁵",
+      "parts": [
+        "rizza",
+        "hxe"
+      ],
+      "verbRoot": {
+        "canonicalId": "stedt-rn-43584",
+        "attestationId": "yubao-60824-v-0439",
+        "forms": [
+          "ɣe³⁵"
+        ]
+      },
+      "added": true
+    }
+  ]
+}
