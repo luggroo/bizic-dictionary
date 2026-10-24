@@ -171,6 +171,7 @@ async function main(){
   assert.equal(await page.evaluate(()=>state.corpusCollection),collection);
   const corpusId=await page.locator('.corpus-card-content[data-open]').first().getAttribute('data-open');
   await tap('.corpus-card-content[data-open]');await detailReady(corpusId);
+  await page.waitForFunction(()=>!document.querySelector('#detail-body [role="status"]'));
   assert((await page.locator('#detail-body').innerText()).length>50);
   assert.equal(await page.locator('#note,#save-note,.bookmark').count(),0);
   await page.goBack();await closed();
