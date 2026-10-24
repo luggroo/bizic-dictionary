@@ -157,7 +157,7 @@ const WordClasses=(()=>{
    'pronoun.interrogative':'interrog. pron.','pronoun.reflexive':'refl. pron.',
    verb:'v.','verb.transitive':'v.t.','verb.intransitive':'v.i.','verb.auxiliary':'aux. v.',
    'verb.stative':'stat. v.','verb.copular':'cop.',adjective:'adj.',adverb:'adv.',numeral:'num.',classifier:'clf.',
-   'verb.modal':'modal v.',interrogative:'interr.','phrase.verb':'v. phr.','phrase.subject_predicate':'phr.','phrase.quantity':'quant. phr.',property:'prop.',
+   'verb.modal':'modal v.',interrogative:'interr.','phrase.verb':'v. phr.','phrase.subject_predicate':'phr.','phrase.quantity':'quant. phr.',property:'qual.',
    adposition:'adp.','adposition.preposition':'prep.','adposition.postposition':'postp.',
    conjunction:'conj.',determiner:'det.',particle:'ptcl.','particle.aspect':'asp. ptcl.',
    'particle.modal':'mod. ptcl.','particle.structural':'str. ptcl.','particle.negative':'neg.',
