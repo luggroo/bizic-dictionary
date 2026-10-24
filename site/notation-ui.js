@@ -70,7 +70,7 @@ function spellingLoanRanges(w,value,mode=isSouthernWord(w)?southernDisplay:spell
  const key=s=>normalizeIPA(s).replace(/[\s|｜◦]/gu,'').normalize('NFC');
  const forms=wordIPA(w).map(ipa=>({ipa,key:key(ipa),units:ipa.match(/[^⁰¹²³⁴⁵⁶⁷⁸⁹]+[⁰¹²³⁴⁵⁶⁷⁸⁹]+/gu)||[],borrowed:new Set(),whole:false}));
  for(const form of forms)for(const note of notes)for(const reviewed of note.reviewedForms||[]){
-  if(!loanIPAForms(reviewed.ipa).some(ipa=>key(ipa)===form.key))continue;
+  if(!loanIPAReviewedForms(w,reviewed.ipa).some(ipa=>key(ipa)===form.key))continue;
   if(note.scope==='whole')form.whole=true;
   const [a,b]=reviewed.span||(note.scope==='whole'?[1,form.units.length]:[]);
   if(Number.isInteger(a)&&Number.isInteger(b))for(let i=a-1;i<b;i++)form.borrowed.add(i);

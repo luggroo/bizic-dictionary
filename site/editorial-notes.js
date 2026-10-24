@@ -62954,6 +62954,17 @@ function loanIPAForms(value){
  // Keep tone and nasalization distinctions. Only separators and spaces are removed.
  return normalizeIPA(value).split(/[~～/／;；]/u).map(s=>s.replace(/[\s|｜◦]/gu,'').normalize('NFC')).filter(Boolean);
 }
+// Match an older Brassett /f/ review IPA to its /x/ successor only when
+// that complete /x/ IPA is independently derived from this word's Brassett form.
+function loanIPAReviewedForms(w,value){
+ const forms=loanIPAForms(value);
+ if(!w.notations?.brassett?.length)return forms;
+ const brassett=new Set(w.notations.brassett.flatMap(v=>loanIPAForms(standardBrassettIPA(v.text)||'')));
+ return [...new Set(forms.flatMap(form=>{
+  const corrected=form.replace(/(^|[⁰¹²³⁴⁵⁶⁷⁸⁹-])f(?=[aeɛɔ])/gu,'$1x');
+  return corrected!==form&&brassett.has(corrected)?[form,corrected]:[form];
+ }))];
+}
 function modernChineseLoanInfo(w){
  if(w._loan)return w._loan;
  if(modernChineseLoanCache.has(w))return modernChineseLoanCache.get(w);
@@ -62961,8 +62972,8 @@ function modernChineseLoanInfo(w){
  let scope='';
  if(notes.length){
   const forms=[...new Set(wordIPA(w).flatMap(loanIPAForms))];
-  const whole=new Set(notes.filter(n=>n.scope==='whole').flatMap(n=>(n.reviewedForms||[]).flatMap(f=>loanIPAForms(f.ipa))));
-  const component=new Set(notes.filter(n=>n.scope==='component').flatMap(n=>(n.reviewedForms||[]).flatMap(f=>loanIPAForms(f.ipa))));
+  const whole=new Set(notes.filter(n=>n.scope==='whole').flatMap(n=>(n.reviewedForms||[]).flatMap(f=>loanIPAReviewedForms(w,f.ipa))));
+  const component=new Set(notes.filter(n=>n.scope==='component').flatMap(n=>(n.reviewedForms||[]).flatMap(f=>loanIPAReviewedForms(w,f.ipa))));
   // A merged entry is hideable only when every recorded variant is fully covered.
   scope=forms.length&&forms.every(f=>whole.has(f))?'whole':
    !forms.some(f=>whole.has(f))&&forms.some(f=>component.has(f))?'component':'mixed';
