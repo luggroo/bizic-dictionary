@@ -42,7 +42,10 @@ const fixtures=[
     await page.locator('#detail-spelling-control [data-spelling-display="'+region+'"]').selectOption(mode);
     const detail=await page.locator('#detail-body .word-entry-form').evaluate(el=>[...el.querySelectorAll('h1,.notation-form')].map(e=>({text:e.textContent,gray:[...e.querySelectorAll('.loan-spelling')].map(s=>s.textContent)})));
     assert.deepEqual(detail,card,id+' '+mode+' list and detail agree');
-    for(const span of await page.locator('#detail-body .word-entry-form .loan-spelling').all())assert.equal(await span.evaluate(e=>getComputedStyle(e).color),'rgb(115, 123, 118)',id+' muted loan color');
+    for(const span of await page.locator('#detail-body .word-entry-form .loan-spelling').all()){
+     const style=await span.evaluate(e=>({color:getComputedStyle(e).color,heading:!!e.closest('h1.word')}));
+     assert.equal(style.color,style.heading?'rgb(137, 135, 127)':'rgb(112, 109, 100)',id+' warm grey loan color');
+    }
     assert(await page.locator('#detail-body .stack').evaluateAll(roots=>roots.every(root=>[...root.querySelectorAll('.loan-spelling')].every(e=>e.closest('[data-script="transliteration"]')))),id+' related loan spellings retain their phonetic font');
     assert.equal(await page.evaluate(id=>JSON.stringify(W[id].attestations),id),before,id+' source after toggling');
     assert(await page.locator('dialog').evaluate(el=>el.scrollWidth<=el.clientWidth+1),id+' detail fits viewport');

@@ -33,7 +33,9 @@
 @media(max-width:600px){.media-switch{margin-left:auto}.shell>header{height:auto;min-height:56px;padding-top:10px;padding-bottom:10px}}
 
 .word-ipa{font-size:13px;line-height:1.6;color:var(--muted,#626b68);font-family:"Charis SIL","Doulos SIL",Georgia,serif;overflow-wrap:anywhere;margin:3px 0 8px}
-.loan-spelling{color:#737b76}
+:root{--loan-ink:#706d64;--loan-display-ink:#89877f}
+.loan-spelling{color:var(--loan-ink)}
+.word-card-title .loan-spelling,h1.word .loan-spelling{color:var(--loan-display-ink)}
 
 .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;align-items:stretch}
 .word-card{min-width:0;display:flex;flex-direction:column;background:white;border:1px solid var(--line);border-radius:9px;padding:20px;overflow-wrap:anywhere}
@@ -152,8 +154,9 @@ button.primary:hover,button.primary:focus-visible{background:var(--green);color:
 @media(pointer:coarse){.word-metadata button.word-class-badge{min-height:44px}}
 .word-metadata{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px;margin:10px 0 18px}
 .word-metadata .word-class-badge,.word-metadata .loan-badge{font-size:12px;line-height:1.65}
-/* Loan scope is neutral so dialect colours keep their existing meaning. */
+/* Warm grey recedes beside native forms; small text retains stronger contrast. */
 .loan-badge,.word-class-badge{display:inline-block;flex:none;align-self:center;white-space:nowrap;font-family:inherit;font-size:11px;font-weight:500;line-height:1.6;padding:0;border:0;background:transparent;color:#46534b;vertical-align:middle}
+.loan-badge{color:var(--loan-ink);font-weight:400}
 .loan-badge::before,.word-class-badge::before{content:'〈'}
 .loan-badge::after,.word-class-badge::after{content:'〉'}
 .loan-key{font-size:12px;line-height:1.6;color:#5c6961;margin:-5px 0 16px}
