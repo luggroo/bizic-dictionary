@@ -405,7 +405,7 @@ function render(){
  $('#crumb').textContent=titles[state.view]||'知识检索';
  const views={home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:()=>historyView(),grammar:()=>grammarView(),notation:()=>notationView()};
  $('#main').innerHTML=views[state.view]();
- document.title=(state.view==='home'?'':(titles[state.view]||'知识总览')+' · ')+'毕兹学堂 Bizic Academy - A library and dictionary of Tujia languages';
+ document.title=(state.view==='home'?'':(titles[state.view]||'知识总览')+' · ')+'毕兹学堂 Bizic Academy - 土家语词典、语法与语料 | A library and dictionary of Tujia languages';
  bindMain();if(typeof bindNotationView==='function')bindNotationView();if(window.tasteRefresh)tasteRefresh();if(window.TujiaUI)TujiaUI.refresh();
  finishNavigation(previous);
 }
