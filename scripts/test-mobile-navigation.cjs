@@ -150,6 +150,7 @@ async function main(){
   await page.reload();await ready('corpus');
   assert.equal(await page.evaluate(()=>state.corpusCollection),collection);
   await tap('.corpus-card-content[data-open]');await page.waitForSelector('dialog[open]');
+  await page.waitForFunction(()=>!document.querySelector('#detail-body [role="status"]'));
   assert((await page.locator('#detail-body').innerText()).length>50);
   assert.equal(await page.locator('#note,#save-note,.bookmark').count(),0);
   await page.goBack();await closed();
