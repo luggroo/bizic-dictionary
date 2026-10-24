@@ -34,7 +34,8 @@ const semanticCache=new WeakMap();
 function wordSemanticCategories(w){return w._semantic||semanticCache.get(w)||['未分类']}
 function initializeSemanticCategories(words){
  const byGloss=new Map();
- const glossKey=w=>String(w.zh||'').trim();
+ // Display-name revisions retain their original cross-source category key.
+ const glossKey=w=>String(w.lexicalGlossReview?.semanticGloss||w.zh||'').trim();
  for(const w of words){const groups=[...new Set((w.categories||[]).map(c=>SEMANTIC_LOOKUP.get(c)).filter(Boolean))];semanticCache.set(w,groups);const key=glossKey(w);if(key&&groups.length){if(!byGloss.has(key))byGloss.set(key,new Set());for(const g of groups)byGloss.get(key).add(g)}}
  // Only propagate an exact, unambiguous Chinese gloss match across sources.
  for(const w of words){if(semanticCache.get(w).length)continue;const candidates=byGloss.get(glossKey(w));semanticCache.set(w,candidates?.size===1?[...candidates]:['未分类'])}

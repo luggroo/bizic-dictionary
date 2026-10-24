@@ -1,0 +1,4277 @@
+{
+  "date": "2026-10-23",
+  "source": "STEDT loan-headword review against original English and Chinese comparison records",
+  "counts": {
+    "alias-only": 10,
+    "rename": 78,
+    "form-headword": 7
+  },
+  "decisions": [
+    {
+      "id": "w372",
+      "action": "alias-only",
+      "category": "E",
+      "beforeZh": "木盘子",
+      "beforeEn": "wooden tray",
+      "review": {
+        "zh": "木盘子",
+        "en": "wooden tray",
+        "zhAliases": [
+          "茶盘",
+          "木盘子"
+        ],
+        "semanticGloss": "木盘子",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "wooden tray"
+        ],
+        "keepSharedGloss": true
+      },
+      "reason": "原中文已写“木盘子”；茶盘是借词本字的候选显示名，木制材料、用途义需保留核对。",
+      "originalIPA": [
+        "tsʰa²¹pʰaŋ²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "cǎpǎng"
+          }
+        ],
+        "ye": [
+          {
+            "text": "carpangr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w433",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "做好",
+      "beforeEn": "to do well",
+      "review": {
+        "zh": "抻敨（做好）",
+        "en": "to do well",
+        "zhAliases": [
+          "抻敨",
+          "做好"
+        ],
+        "semanticGloss": "做好",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "to do well",
+          "do well"
+        ]
+      },
+      "reason": "具体本字已补入来源注；“做好”原已来自中文词表，不是 STEDT 新译造成。",
+      "originalIPA": [
+        "tsʰɜŋ⁵⁵tʰu⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "cēntū"
+          }
+        ],
+        "ye": [
+          {
+            "text": "cenxtux"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w464",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "枪; 步枪",
+      "beforeEn": "gun; rifle",
+      "review": {
+        "zh": "铳（枪；步枪）",
+        "en": "gun; rifle",
+        "zhAliases": [
+          "铳",
+          "枪",
+          "步枪"
+        ],
+        "semanticGloss": "枪; 步枪",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "gun; rifle",
+          "gun",
+          "gun / rifle"
+        ]
+      },
+      "reason": "恢复“铳”的借入词名；原文 gun 的器物义保留。",
+      "originalIPA": [
+        "tsʰɔŋ²⁴",
+        "tsʰoŋ³⁵",
+        "tsʰuŋ²⁴"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "cóng"
+          }
+        ],
+        "ye": [
+          {
+            "text": "congf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w608",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "疯子",
+      "beforeEn": "lunatic",
+      "review": {
+        "zh": "癫子（疯子）",
+        "en": "lunatic",
+        "zhAliases": [
+          "癫子",
+          "疯子"
+        ],
+        "semanticGloss": "疯子",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "lunatic"
+        ]
+      },
+      "reason": "恢复词名并保留原文 insane person 的解释；不从字形扩大到其他病症。",
+      "originalIPA": [
+        "tiɛn⁵⁵tsɨ⁵⁵",
+        "tian⁵⁵tsi⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "diānzī"
+          }
+        ],
+        "ye": [
+          {
+            "text": "dianxzix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w751",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "马上",
+      "beforeEn": "quickly",
+      "review": {
+        "zh": "跟倒（马上）",
+        "en": "quickly",
+        "zhAliases": [
+          "跟倒",
+          "马上"
+        ],
+        "semanticGloss": "马上",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "quickly"
+        ]
+      },
+      "reason": "本字“跟倒”已补入来源注，现有“马上”沿自原中文。",
+      "originalIPA": [
+        "kɜŋ⁵⁵tau⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "gēndāo"
+          }
+        ],
+        "ye": [
+          {
+            "text": "genxdaox"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w787",
+      "action": "alias-only",
+      "category": "E",
+      "beforeZh": "(哇哇声)",
+      "beforeEn": "(sound of crying)",
+      "review": {
+        "zh": "(哇哇声)",
+        "en": "(sound of crying)",
+        "zhAliases": [
+          "呱呱",
+          "(哇哇声)",
+          "哇哇声"
+        ],
+        "semanticGloss": "(哇哇声)",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "(sound of crying)"
+        ],
+        "keepSharedGloss": true
+      },
+      "reason": "(sound of crying) 有来源依据；不能单凭本字改成其他声源。",
+      "originalIPA": [
+        "kua²⁴kua²⁴"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "guáguá"
+          }
+        ],
+        "ye": [
+          {
+            "text": "guafguaf"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w788",
+      "action": "alias-only",
+      "category": "E",
+      "beforeZh": "聪明",
+      "beforeEn": "clever, well-behaved; clever",
+      "review": {
+        "zh": "聪明",
+        "en": "clever, well-behaved; clever",
+        "zhAliases": [
+          "乖",
+          "聪明"
+        ],
+        "semanticGloss": "聪明",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "clever, well-behaved; clever",
+          "clever, well-behaved",
+          "clever"
+        ],
+        "keepSharedGloss": true
+      },
+      "reason": "现译有原中文依据；若补完整本字，应保留原释义。",
+      "originalIPA": [
+        "kuai⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "guāi"
+          }
+        ],
+        "ye": [
+          {
+            "text": "guaix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w1006",
+      "action": "alias-only",
+      "category": "E",
+      "beforeZh": "剪子",
+      "beforeEn": "scissors",
+      "review": {
+        "zh": "剪子",
+        "en": "scissors",
+        "zhAliases": [
+          "剪剪",
+          "剪子"
+        ],
+        "semanticGloss": "剪子",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "scissors"
+        ],
+        "keepSharedGloss": true
+      },
+      "reason": "现译有原中文依据；若补完整本字，应保留原释义。",
+      "originalIPA": [
+        "tɕiɛn⁵⁵tɕiɛn⁵⁵",
+        "tɕian⁵⁵tɕian⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "jiānjiān"
+          }
+        ],
+        "ye": [
+          {
+            "text": "jianxjianx"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w1460",
+      "action": "alias-only",
+      "category": "E",
+      "beforeZh": "鞍子",
+      "beforeEn": "saddle",
+      "review": {
+        "zh": "鞍子",
+        "en": "saddle",
+        "zhAliases": [
+          "马鞍子",
+          "鞍子"
+        ],
+        "semanticGloss": "鞍子",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "saddle"
+        ],
+        "keepSharedGloss": true
+      },
+      "reason": "现译有原中文依据；若补完整本字，应保留原释义。",
+      "originalIPA": [
+        "ma⁵¹aŋ⁵⁵tsɨ⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "mà'āngzī"
+          }
+        ],
+        "ye": [
+          {
+            "text": "mavangxzix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w1461",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "鞭子",
+      "beforeEn": "whip (for horse)",
+      "review": {
+        "zh": "马鞭子（鞭子）",
+        "en": "whip (for horse)",
+        "zhAliases": [
+          "马鞭子",
+          "鞭子"
+        ],
+        "semanticGloss": "鞭子",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "whip (for horse)"
+        ]
+      },
+      "reason": "借入词形包含“马”，可恢复较具体的器物名。",
+      "originalIPA": [
+        "ma⁵¹piɛn⁵⁵tsɨ⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "màbiānzī"
+          }
+        ],
+        "ye": [
+          {
+            "text": "mavbianxzix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w1466",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "走得快",
+      "beforeEn": "quickly",
+      "review": {
+        "zh": "麻利（走得快）",
+        "en": "quickly",
+        "zhAliases": [
+          "麻利",
+          "走得快"
+        ],
+        "semanticGloss": "走得快",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "quickly"
+        ]
+      },
+      "reason": "ma-li 对应“麻利”；fast/quickly 是其现有释义。",
+      "originalIPA": [
+        "ma²¹li²⁴"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "mǎlí"
+          }
+        ],
+        "ye": [
+          {
+            "text": "marlif"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w1702",
+      "action": "alias-only",
+      "category": "E",
+      "beforeZh": "爆竹",
+      "beforeEn": "firecracker",
+      "review": {
+        "zh": "爆竹",
+        "en": "firecracker",
+        "zhAliases": [
+          "炮竹",
+          "爆竹"
+        ],
+        "semanticGloss": "爆竹",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "firecracker"
+        ],
+        "keepSharedGloss": true
+      },
+      "reason": "现译有原中文依据；若补完整本字，应保留原释义。",
+      "originalIPA": [
+        "pʰau²⁴tsu⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "páozū"
+          }
+        ],
+        "ye": [
+          {
+            "text": "paofzux"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w1819",
+      "action": "alias-only",
+      "category": "E",
+      "beforeZh": "圈; 箍",
+      "beforeEn": "circle, hoop; hoop",
+      "review": {
+        "zh": "圈; 箍",
+        "en": "circle, hoop; hoop",
+        "zhAliases": [
+          "圈圈",
+          "圈",
+          "箍"
+        ],
+        "semanticGloss": "圈; 箍",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "circle, hoop; hoop",
+          "circle, hoop",
+          "hoop"
+        ],
+        "keepSharedGloss": true
+      },
+      "reason": "现译有原中文依据；若补完整本字，应保留原释义。",
+      "originalIPA": [
+        "tɕʰiɛn⁵⁵tɕʰiɛn⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "qiānqiān"
+          }
+        ],
+        "ye": [
+          {
+            "text": "qianxqianx"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w1820",
+      "action": "alias-only",
+      "category": "E",
+      "beforeZh": "火钳",
+      "beforeEn": "fire-tongs; fire tongs",
+      "review": {
+        "zh": "火钳",
+        "en": "fire-tongs; fire tongs",
+        "zhAliases": [
+          "钳钳",
+          "火钳"
+        ],
+        "semanticGloss": "火钳",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "fire-tongs; fire tongs",
+          "fire-tongs",
+          "fire tongs"
+        ],
+        "keepSharedGloss": true
+      },
+      "reason": "现译有原中文依据；若补完整本字，应保留原释义。",
+      "originalIPA": [
+        "tɕʰiɛn²⁴tɕʰiɛn⁵⁵",
+        "tɕʰian²⁴tɕʰian³³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "qiánqiān"
+          }
+        ],
+        "ye": [
+          {
+            "text": "qianfqianx"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w1996",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "民歌",
+      "beforeEn": "folk songs",
+      "review": {
+        "zh": "山歌（民歌）",
+        "en": "folk songs",
+        "zhAliases": [
+          "山歌",
+          "民歌"
+        ],
+        "semanticGloss": "民歌",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "folk songs"
+        ]
+      },
+      "reason": "现译有原中文依据；若补完整本字，应保留原释义。",
+      "originalIPA": [
+        "saŋ⁵⁵kuɔ⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "sānggō"
+          }
+        ],
+        "ye": [
+          {
+            "text": "sangxgox"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w2279",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "勺子",
+      "beforeEn": "spoon, ladle",
+      "review": {
+        "zh": "调羹（勺子）",
+        "en": "spoon, ladle",
+        "zhAliases": [
+          "调羹",
+          "勺子"
+        ],
+        "semanticGloss": "勺子",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "spoon, ladle"
+        ]
+      },
+      "reason": "现译有原中文依据；若补完整本字，应保留原释义。",
+      "originalIPA": [
+        "tʰiau²¹kɜŋ²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "tiǎogěn"
+          }
+        ],
+        "ye": [
+          {
+            "text": "tiaorgenr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w2306",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "钱",
+      "beforeEn": "money",
+      "review": {
+        "zh": "铜钱（钱）",
+        "en": "money",
+        "zhAliases": [
+          "铜钱",
+          "钱"
+        ],
+        "semanticGloss": "钱",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "money"
+        ]
+      },
+      "reason": "保留可能泛指货币的用法；本字为“铜钱”。",
+      "originalIPA": [
+        "tʰɔŋ²¹tɕʰiɛn²¹",
+        "tʰoŋ²¹tɕʰian²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "tǒngqiǎn"
+          }
+        ],
+        "ye": [
+          {
+            "text": "tongrqianr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w2480",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "学校",
+      "beforeEn": "school",
+      "review": {
+        "zh": "校堂（学校）",
+        "en": "school",
+        "zhAliases": [
+          "校堂",
+          "学校"
+        ],
+        "semanticGloss": "学校",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "school"
+        ]
+      },
+      "reason": "ɕiaɨ-dã 对应“校堂”，现译为其通行解释“学校”。",
+      "originalIPA": [
+        "ɕiau²⁴tʰaŋ²¹",
+        "ɕiau³⁵tʰan²¹",
+        "ɕiau³⁵tʰã²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "xiáotǎng"
+          },
+          {
+            "text": "xiáotǎn",
+            "ipaForms": [
+              "ɕiau³⁵tʰan²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "xiaoftangr"
+          },
+          {
+            "text": "xiaoftanr",
+            "ipaForms": [
+              "ɕiau³⁵tʰan²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "w2535",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "马铃薯",
+      "beforeEn": "potato",
+      "review": {
+        "zh": "洋芋（马铃薯）",
+        "en": "potato",
+        "zhAliases": [
+          "洋芋",
+          "马铃薯"
+        ],
+        "semanticGloss": "马铃薯",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "potato"
+        ]
+      },
+      "reason": "jan/jiã-ji 等形式对应“洋芋”；现译为通行植物名称。",
+      "originalIPA": [
+        "jɛn²¹ji⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yǎnyī"
+          }
+        ],
+        "ye": [
+          {
+            "text": "yanryix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w2539",
+      "action": "rename",
+      "category": "E",
+      "beforeZh": "肾",
+      "beforeEn": "kidney",
+      "review": {
+        "zh": "腰子（肾）",
+        "en": "kidney",
+        "zhAliases": [
+          "腰子",
+          "肾"
+        ],
+        "semanticGloss": "肾",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "kidney"
+        ]
+      },
+      "reason": "现译有原中文依据；若补完整本字，应保留原释义。",
+      "originalIPA": [
+        "jau⁵⁵tsɨ⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yāozī"
+          }
+        ],
+        "ye": [
+          {
+            "text": "yaoxzix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w2646",
+      "action": "alias-only",
+      "category": "E",
+      "beforeZh": "镜子",
+      "beforeEn": "mirror",
+      "review": {
+        "zh": "镜子",
+        "en": "mirror",
+        "zhAliases": [
+          "照镜",
+          "镜子"
+        ],
+        "semanticGloss": "镜子",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "mirror"
+        ],
+        "keepSharedGloss": true,
+        "formHeadwords": [
+          {
+            "ipa": "tsau²⁴tɕiŋ⁵⁵",
+            "zh": "照镜"
+          },
+          {
+            "ipa": "tsau³⁵tɕĩ⁵⁵",
+            "zh": "照镜"
+          }
+        ]
+      },
+      "reason": "此处原文 mirror 为名词；补原词名时保留名词义。 本条另含其他词形，建议仅在对应借入词形下附原词名，保留共同释义。",
+      "originalIPA": [
+        "tsau²⁴tɕiŋ⁵⁵",
+        "tsau³⁵tɕin⁵⁵",
+        "tsau³⁵tɕĩ⁵⁵"
+      ],
+      "originalLoanScope": "mixed",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "záojīn"
+          }
+        ],
+        "ye": [
+          {
+            "text": "zaofjinx"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w2711",
+      "action": "alias-only",
+      "category": "E",
+      "beforeZh": "侄女",
+      "beforeEn": "niece",
+      "review": {
+        "zh": "侄女",
+        "en": "niece",
+        "zhAliases": [
+          "侄女子",
+          "侄女"
+        ],
+        "semanticGloss": "侄女",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "niece"
+        ],
+        "keepSharedGloss": true
+      },
+      "reason": "现译有原中文依据；若补完整本字，应保留原释义。",
+      "originalIPA": [
+        "tsɨ²⁴ȵi⁵⁵tsɨ⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "zínīzī"
+          }
+        ],
+        "ye": [
+          {
+            "text": "zifnixzix"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w3073",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "玉米",
+      "beforeEn": "maize; corn",
+      "review": {
+        "zh": "包谷（玉米）",
+        "en": "maize; corn",
+        "zhAliases": [
+          "包谷",
+          "玉米"
+        ],
+        "semanticGloss": "玉米",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "maize; corn",
+          "maize",
+          "maize / corn"
+        ]
+      },
+      "reason": "具体借入词名是“包谷”，现译为通行名称。",
+      "originalIPA": [
+        "pau⁵⁵ku⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "bāogū"
+          }
+        ],
+        "ye": [
+          {
+            "text": "baoxgux"
+          }
+        ]
+      }
+    },
+    {
+      "id": "w5688",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "一会儿; 片刻",
+      "beforeEn": "for a while",
+      "review": {
+        "zh": "一下（一会儿；片刻）",
+        "en": "for a while",
+        "zhAliases": [
+          "一下",
+          "一会儿",
+          "片刻"
+        ],
+        "semanticGloss": "一会儿; 片刻",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "for a while"
+        ]
+      },
+      "reason": "时量用法应保留，不仅按普通话动作量的“一下”解释。",
+      "originalIPA": [
+        "ji²⁴ɕia⁵¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yíxià"
+          }
+        ],
+        "ye": [
+          {
+            "text": "yifxiav"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-43497",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "边; 侧面",
+      "beforeEn": "side",
+      "review": {
+        "zh": "旁边（边；侧面）",
+        "en": "side",
+        "zhAliases": [
+          "旁边",
+          "边",
+          "侧面"
+        ],
+        "semanticGloss": "边; 侧面",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "side"
+        ]
+      },
+      "reason": "bã-piã 对应“旁边”，现译 side 较概括。",
+      "originalIPA": [
+        "bã²¹ piã³³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "bbànbian"
+          }
+        ],
+        "poj": [
+          {
+            "text": "bàn-pian"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289517",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "田里的青蛙",
+      "beforeEn": "frog (lives in rice paddy)",
+      "review": {
+        "zh": "田鸡（水田里的青蛙）",
+        "en": "frog (lives in rice paddy)",
+        "zhAliases": [
+          "田鸡",
+          "田里的青蛙"
+        ],
+        "semanticGloss": "田里的青蛙",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "frog (lives in rice paddy)"
+        ]
+      },
+      "reason": "恢复“田鸡”这一词名；具体蛙类仍以原文为准。",
+      "originalIPA": [
+        "diã¹³tɕi⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "ddiǎnjī"
+          }
+        ],
+        "poj": [
+          {
+            "text": "diǎn-cī"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289560",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "向日葵",
+      "beforeEn": "sunflower",
+      "review": {
+        "zh": "葵花（向日葵）",
+        "en": "sunflower",
+        "zhAliases": [
+          "葵花",
+          "向日葵"
+        ],
+        "semanticGloss": "向日葵",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "sunflower"
+        ]
+      },
+      "reason": "具体借入词名为“葵花”，现译植物名称本身无误。",
+      "originalIPA": [
+        "gu̵¹³h̄ua³³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "ggěuhua"
+          }
+        ],
+        "poj": [
+          {
+            "text": "gěu-hua"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-366853",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "马铃薯; 土豆",
+      "beforeEn": "potato",
+      "review": {
+        "zh": "洋芋（土豆；马铃薯）",
+        "en": "potato",
+        "zhAliases": [
+          "洋芋",
+          "马铃薯",
+          "土豆"
+        ],
+        "semanticGloss": "马铃薯; 土豆",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "potato"
+        ]
+      },
+      "reason": "jan/jiã-ji 等形式对应“洋芋”；现译为通行植物名称。",
+      "originalIPA": [
+        "jan²¹ji³⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yǎnyí",
+            "ipaForms": [
+              "jan²¹ji³⁵"
+            ]
+          },
+          {
+            "text": "yǎngyí",
+            "ipaForms": [
+              "jan²¹ji³⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "yanryif",
+            "ipaForms": [
+              "jan²¹ji³⁵"
+            ]
+          },
+          {
+            "text": "yangryif",
+            "ipaForms": [
+              "jan²¹ji³⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-189948",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "马铃薯; 土豆",
+      "beforeEn": "potato",
+      "review": {
+        "zh": "洋芋（土豆；马铃薯）",
+        "en": "potato",
+        "zhAliases": [
+          "洋芋",
+          "马铃薯",
+          "土豆"
+        ],
+        "semanticGloss": "马铃薯; 土豆",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "potato"
+        ]
+      },
+      "reason": "jan/jiã-ji 等形式对应“洋芋”；现译为通行植物名称。",
+      "originalIPA": [
+        "jian²¹jiu⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yǎnyōu",
+            "ipaForms": [
+              "jian²¹jiu⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "yanryoux",
+            "ipaForms": [
+              "jian²¹jiu⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-372691",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "火柴",
+      "beforeEn": "match",
+      "review": {
+        "zh": "洋火（火柴）",
+        "en": "match",
+        "zhAliases": [
+          "洋火",
+          "火柴"
+        ],
+        "semanticGloss": "火柴",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "match"
+        ]
+      },
+      "reason": "jian/jiã-xo 对应“洋火”；现译“火柴”语义准确。",
+      "originalIPA": [
+        "jian²¹xo²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yǎnhǒ",
+            "ipaForms": [
+              "jian²¹xo²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "yanrhor",
+            "ipaForms": [
+              "jian²¹xo²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-380892",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "形状; 模样",
+      "beforeEn": "shape; appearance",
+      "review": {
+        "zh": "样子；模样",
+        "en": "shape; appearance",
+        "zhAliases": [
+          "样子",
+          "形状",
+          "模样"
+        ],
+        "semanticGloss": "形状; 模样",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "shape; appearance",
+          "shape / appearance"
+        ]
+      },
+      "reason": "jian-tsi 对应“样子”，现译 shape/appearance 的释义较概括。",
+      "originalIPA": [
+        "jian³⁵tsi⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yánzī",
+            "ipaForms": [
+              "jian³⁵tsi⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "yanfzix",
+            "ipaForms": [
+              "jian³⁵tsi⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-191274",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "苗; 幼苗",
+      "beforeEn": "seedling",
+      "review": {
+        "zh": "秧子（苗；幼苗）",
+        "en": "seedling",
+        "zhAliases": [
+          "秧子",
+          "苗",
+          "幼苗"
+        ],
+        "semanticGloss": "苗; 幼苗",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "seedling"
+        ]
+      },
+      "reason": "借入词形为“秧子”，现译 seedling 为解释义。",
+      "originalIPA": [
+        "jian⁵⁵tsi²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yānzǐ",
+            "ipaForms": [
+              "jian⁵⁵tsi²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "yanxzir",
+            "ipaForms": [
+              "jian⁵⁵tsi²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288613",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "马铃薯; 土豆",
+      "beforeEn": "potato",
+      "review": {
+        "zh": "洋芋（土豆；马铃薯）",
+        "en": "potato",
+        "zhAliases": [
+          "洋芋",
+          "马铃薯",
+          "土豆"
+        ],
+        "semanticGloss": "马铃薯; 土豆",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "potato"
+        ]
+      },
+      "reason": "jan/jiã-ji 等形式对应“洋芋”；现译为通行植物名称。",
+      "originalIPA": [
+        "jiã²¹ji³⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yǎnyí",
+            "ipaForms": [
+              "jiã²¹ji³⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "yanryif",
+            "ipaForms": [
+              "jiã²¹ji³⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289554",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "马铃薯; 土豆",
+      "beforeEn": "potato",
+      "review": {
+        "zh": "洋芋（土豆；马铃薯）",
+        "en": "potato",
+        "zhAliases": [
+          "洋芋",
+          "马铃薯",
+          "土豆"
+        ],
+        "semanticGloss": "马铃薯; 土豆",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "potato"
+        ]
+      },
+      "reason": "jan/jiã-ji 等形式对应“洋芋”；现译为通行植物名称。",
+      "originalIPA": [
+        "jiã²¹jy¹³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yànyǚ"
+          }
+        ],
+        "poj": [
+          {
+            "text": "iàn-ǚ"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288856",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "火柴",
+      "beforeEn": "match",
+      "review": {
+        "zh": "洋火（火柴）",
+        "en": "match",
+        "zhAliases": [
+          "洋火",
+          "火柴"
+        ],
+        "semanticGloss": "火柴",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "match"
+        ]
+      },
+      "reason": "jian/jiã-xo 对应“洋火”；现译“火柴”语义准确。",
+      "originalIPA": [
+        "jiã²¹xo²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yǎnhǒ",
+            "ipaForms": [
+              "jiã²¹xo²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "yanrhor",
+            "ipaForms": [
+              "jiã²¹xo²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289859",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "好处; 优势",
+      "beforeEn": "advantage",
+      "review": {
+        "zh": "优点（好处；优势）",
+        "en": "advantage",
+        "zhAliases": [
+          "优点",
+          "好处",
+          "优势"
+        ],
+        "semanticGloss": "好处; 优势",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "advantage"
+        ]
+      },
+      "reason": "advantage 是概括性英译；借入词形为“优点”。",
+      "originalIPA": [
+        "jiu̵³³tiã⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yeudiān"
+          }
+        ],
+        "poj": [
+          {
+            "text": "ieu-tiān"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-357548",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "姨母; 母亲的姐妹; 姨妈",
+      "beforeEn": "aunt <mother's sister>; aunt (maternal)",
+      "review": {
+        "zh": "姨娘（姨母；母亲的姐妹）",
+        "en": "aunt <mother's sister>; aunt (maternal)",
+        "zhAliases": [
+          "姨娘",
+          "姨母",
+          "母亲的姐妹",
+          "姨妈"
+        ],
+        "semanticGloss": "姨母; 母亲的姐妹; 姨妈",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "aunt <mother's sister>; aunt (maternal)",
+          "aunt <mother's sister>",
+          "aunt (maternal)"
+        ]
+      },
+      "reason": "保留原文母系姨母义。",
+      "originalIPA": [
+        "ji²¹ȵian⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "yǐniān",
+            "ipaForms": [
+              "ji²¹ȵian⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "yirnianx",
+            "ipaForms": [
+              "ji²¹ȵian⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289650",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "外祖母; 外婆",
+      "beforeEn": "maternal grandmother",
+      "review": {
+        "zh": "家婆（外祖母；外婆）",
+        "en": "maternal grandmother",
+        "zhAliases": [
+          "家婆",
+          "外祖母",
+          "外婆"
+        ],
+        "semanticGloss": "外祖母; 外婆",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "maternal grandmother"
+        ]
+      },
+      "reason": "保留该条明确的 maternal grandmother 义，避免用其他方言的亲属关系义覆盖。",
+      "originalIPA": [
+        "ka³³bo³³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "gabbo"
+          }
+        ],
+        "poj": [
+          {
+            "text": "ka-bo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-220497",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "管",
+      "beforeEn": "manage",
+      "review": {
+        "zh": "管理",
+        "en": "manage",
+        "zhAliases": [
+          "管理",
+          "管"
+        ],
+        "semanticGloss": "管",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "manage"
+        ]
+      },
+      "reason": "kuan-li 两音节对应“管理”，现译只写“管”。",
+      "originalIPA": [
+        "kuan³⁵li⁵³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "guánlì",
+            "ipaForms": [
+              "kuan³⁵li⁵³"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "guanfliv",
+            "ipaForms": [
+              "kuan³⁵li⁵³"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-290217",
+      "action": "form-headword",
+      "category": "B",
+      "beforeZh": "明亮; 有前途",
+      "beforeEn": "bright; promising",
+      "review": {
+        "zh": "明亮; 有前途",
+        "en": "bright; promising",
+        "zhAliases": [
+          "光明",
+          "明亮",
+          "有前途"
+        ],
+        "semanticGloss": "明亮; 有前途",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "bright; promising",
+          "bright / promising"
+        ],
+        "keepSharedGloss": true,
+        "formHeadwords": [
+          {
+            "ipa": "kuã³³mĩ²¹",
+            "zh": "光明"
+          }
+        ]
+      },
+      "reason": "kuã-mĩ 对应“光明”；混合条目还收有本土词形，宜按词形附原词名。 本条另含其他词形，建议仅在对应借入词形下附原词名，保留共同释义。",
+      "originalIPA": [
+        "kuã³³mĩ²¹",
+        "su³⁵su³⁵"
+      ],
+      "originalLoanScope": "mixed",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "guanmìn~súsú"
+          }
+        ],
+        "poj": [
+          {
+            "text": "kuan-mìn~sú-sú"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289301",
+      "action": "form-headword",
+      "category": "B",
+      "beforeZh": "明亮; 有前途",
+      "beforeEn": "bright; promising",
+      "review": {
+        "zh": "明亮; 有前途",
+        "en": "bright; promising",
+        "zhAliases": [
+          "光明",
+          "明亮",
+          "有前途"
+        ],
+        "semanticGloss": "明亮; 有前途",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "bright; promising",
+          "bright / promising"
+        ],
+        "keepSharedGloss": true,
+        "formHeadwords": [
+          {
+            "ipa": "kuã⁵⁵mĩ²¹",
+            "zh": "光明"
+          }
+        ]
+      },
+      "reason": "kuã-mĩ 对应“光明”；混合条目还收有本土词形，宜按词形附原词名。 本条另含其他词形，建议仅在对应借入词形下附原词名，保留共同释义。",
+      "originalIPA": [
+        "kuã⁵⁵mĩ²¹",
+        "kʰu⁵⁵su²¹ka⁵⁵lai⁵⁵"
+      ],
+      "originalLoanScope": "mixed",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "guānmǐn",
+            "ipaForms": [
+              "kuã⁵⁵mĩ²¹"
+            ]
+          },
+          {
+            "text": "kūsǔgālāi",
+            "ipaForms": [
+              "kʰu⁵⁵su²¹ka⁵⁵lai⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "guanxminr",
+            "ipaForms": [
+              "kuã⁵⁵mĩ²¹"
+            ]
+          },
+          {
+            "text": "kuxsurgaxlaix",
+            "ipaForms": [
+              "kʰu⁵⁵su²¹ka⁵⁵lai⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-454186",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "篱笆; 围栏",
+      "beforeEn": "fence",
+      "review": {
+        "zh": "栏杆（篱笆；围栏）",
+        "en": "fence",
+        "zhAliases": [
+          "栏杆",
+          "篱笆",
+          "围栏"
+        ],
+        "semanticGloss": "篱笆; 围栏",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "fence"
+        ]
+      },
+      "reason": "laŋ-kaŋ 对应“栏杆”；保留原文 fence 所指的围栏义。",
+      "originalIPA": [
+        "laŋ²¹kaŋ²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "lǎnggǎng"
+          }
+        ],
+        "ye": [
+          {
+            "text": "langrgangr"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289463",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "十二月",
+      "beforeEn": "December; twelfth lunar month",
+      "review": {
+        "zh": "腊月（农历十二月）",
+        "en": "twelfth lunar month",
+        "zhAliases": [
+          "腊月",
+          "农历十二月"
+        ],
+        "semanticGloss": "十二月",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "词形为“腊月”；南部条目合并的语保 yubao-60824-v-1349 原中文为“腊月”，英文为 twelfth lunar month。",
+      "originalIPA": [
+        "la²¹jye²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "làyüè"
+          }
+        ],
+        "poj": [
+          {
+            "text": "là-üè"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288492",
+      "action": "form-headword",
+      "category": "B",
+      "beforeZh": "南（南方）",
+      "beforeEn": "south",
+      "review": {
+        "zh": "南（南方）",
+        "en": "south",
+        "zhAliases": [
+          "南边",
+          "南（南方）",
+          "南",
+          "南方"
+        ],
+        "semanticGloss": "南（南方）",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "south"
+        ],
+        "keepSharedGloss": true,
+        "formHeadwords": [
+          {
+            "ipa": "lã²¹piã⁵⁵",
+            "zh": "南边"
+          }
+        ]
+      },
+      "reason": "借入词形包含“边”，现译 south 可与原词名并列。 本条另含其他词形，建议仅在对应借入词形下附原词名，保留共同释义。",
+      "originalIPA": [
+        "lã²¹piã⁵⁵",
+        "lã²¹piã⁵⁵la⁵⁵kuei²¹"
+      ],
+      "originalLoanScope": "mixed",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "lǎngbiān",
+            "ipaForms": [
+              "lã²¹piã⁵⁵"
+            ]
+          },
+          {
+            "text": "lǎngbiānlāguǐ",
+            "ipaForms": [
+              "lã²¹piã⁵⁵la⁵⁵kuei²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "langrbianx",
+            "ipaForms": [
+              "lã²¹piã⁵⁵"
+            ]
+          },
+          {
+            "text": "langrbianxlaxguir",
+            "ipaForms": [
+              "lã²¹piã⁵⁵la⁵⁵kuei²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-290047",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "理解",
+      "beforeEn": "understand; comprehend",
+      "review": {
+        "zh": "了解；理解",
+        "en": "understand; comprehend",
+        "zhAliases": [
+          "了解",
+          "理解"
+        ],
+        "semanticGloss": "理解",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "understand; comprehend",
+          "understand / comprehend"
+        ]
+      },
+      "reason": "liaɨ-kai 对应“了解”；“理解”是近义释义。",
+      "originalIPA": [
+        "liaɨ³³kai³³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "liaugai"
+          }
+        ],
+        "poj": [
+          {
+            "text": "liau-kai"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288616",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "花生",
+      "beforeEn": "peanut",
+      "review": {
+        "zh": "落花生（花生）",
+        "en": "peanut",
+        "zhAliases": [
+          "落花生",
+          "花生"
+        ],
+        "semanticGloss": "花生",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "peanut"
+        ]
+      },
+      "reason": "词形的首音节对应“落”，可附完整本字。",
+      "originalIPA": [
+        "lo²¹xua²¹sẽ⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "lǒhuǎsēn",
+            "ipaForms": [
+              "lo²¹xua²¹sẽ⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "lorhuarsenx",
+            "ipaForms": [
+              "lo²¹xua²¹sẽ⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-367263",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "花生",
+      "beforeEn": "peanut",
+      "review": {
+        "zh": "落花生（花生）",
+        "en": "peanut",
+        "zhAliases": [
+          "落花生",
+          "花生"
+        ],
+        "semanticGloss": "花生",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "peanut"
+        ]
+      },
+      "reason": "词形的首音节对应“落”，可附完整本字。",
+      "originalIPA": [
+        "lo²¹xua²¹sən⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "lǒhuǎsēn",
+            "ipaForms": [
+              "lo²¹xua²¹sən⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "lorhuarsenx",
+            "ipaForms": [
+              "lo²¹xua²¹sən⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289557",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "花生",
+      "beforeEn": "peanut",
+      "review": {
+        "zh": "落花生（花生）",
+        "en": "peanut",
+        "zhAliases": [
+          "落花生",
+          "花生"
+        ],
+        "semanticGloss": "花生",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "peanut"
+        ]
+      },
+      "reason": "词形的首音节对应“落”，可附完整本字。",
+      "originalIPA": [
+        "lo¹³h̄ua³³sẽ³³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "lǒhuasen"
+          }
+        ],
+        "poj": [
+          {
+            "text": "lǒ-hua-sen"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289262",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "快",
+      "beforeEn": "fast",
+      "review": {
+        "zh": "麻利（快）",
+        "en": "fast",
+        "zhAliases": [
+          "麻利",
+          "快"
+        ],
+        "semanticGloss": "快",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "fast"
+        ]
+      },
+      "reason": "ma-li 对应“麻利”；fast/quickly 是其现有释义。",
+      "originalIPA": [
+        "ma²¹li³⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "mǎlí",
+            "ipaForms": [
+              "ma²¹li³⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "marlif",
+            "ipaForms": [
+              "ma²¹li³⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-368616",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "马饲料",
+      "beforeEn": "fodder; feed (horse)",
+      "review": {
+        "zh": "马食（马饲料）",
+        "en": "fodder; feed (horse)",
+        "zhAliases": [
+          "马食",
+          "马饲料"
+        ],
+        "semanticGloss": "马饲料",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "fodder; feed (horse)",
+          "fodder / feed (horse)"
+        ]
+      },
+      "reason": "ma-si 对应“马食”；现译为其用途说明。",
+      "originalIPA": [
+        "ma⁵³si²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "màsǐ",
+            "ipaForms": [
+              "ma⁵³si²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "mavsir",
+            "ipaForms": [
+              "ma⁵³si²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288813",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "鞭子",
+      "beforeEn": "whip",
+      "review": {
+        "zh": "马鞭子（鞭子）",
+        "en": "whip",
+        "zhAliases": [
+          "马鞭子",
+          "鞭子"
+        ],
+        "semanticGloss": "鞭子",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "whip"
+        ]
+      },
+      "reason": "借入词形包含“马”，可恢复较具体的器物名。",
+      "originalIPA": [
+        "ma⁵⁵piã⁵⁵tsi⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "mābiānzī",
+            "ipaForms": [
+              "ma⁵⁵piã⁵⁵tsi⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "maxbianxzix",
+            "ipaForms": [
+              "ma⁵⁵piã⁵⁵tsi⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-205197",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "墨",
+      "beforeEn": "ink",
+      "review": {
+        "zh": "墨水（墨）",
+        "en": "ink",
+        "zhAliases": [
+          "墨水",
+          "墨"
+        ],
+        "semanticGloss": "墨",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "ink"
+        ]
+      },
+      "reason": "mɯ-sui 对应“墨水”，现译仅写“墨”。",
+      "originalIPA": [
+        "mɯ³⁵sui⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "mísuī",
+            "ipaForms": [
+              "mɯ³⁵sui⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "mifsuix",
+            "ipaForms": [
+              "mɯ³⁵sui⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289857",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "方法",
+      "beforeEn": "method",
+      "review": {
+        "zh": "办法；方法",
+        "en": "method",
+        "zhAliases": [
+          "办法",
+          "方法"
+        ],
+        "semanticGloss": "方法",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "method"
+        ]
+      },
+      "reason": "pã-fa 对应“办法”；“方法”隐藏了具体借入词形。",
+      "originalIPA": [
+        "pã¹³fa⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "bǎnfā"
+          }
+        ],
+        "poj": [
+          {
+            "text": "pǎn-fā"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-373468",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "盘; 碟",
+      "beforeEn": "plate; dish",
+      "review": {
+        "zh": "盘子（盘；碟）",
+        "en": "plate; dish",
+        "zhAliases": [
+          "盘子",
+          "盘",
+          "碟"
+        ],
+        "semanticGloss": "盘; 碟",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "plate; dish",
+          "plate / dish"
+        ]
+      },
+      "reason": "原词为“盘子”，plate/dish 是泛称释义。",
+      "originalIPA": [
+        "pʰan²¹tsi²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "pǎnzǐ",
+            "ipaForms": [
+              "pʰan²¹tsi²¹"
+            ]
+          },
+          {
+            "text": "pǎngzǐ",
+            "ipaForms": [
+              "pʰan²¹tsi²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "panrzir",
+            "ipaForms": [
+              "pʰan²¹tsi²¹"
+            ]
+          },
+          {
+            "text": "pangrzir",
+            "ipaForms": [
+              "pʰan²¹tsi²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289198",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "获胜",
+      "beforeEn": "triumph; win",
+      "review": {
+        "zh": "胜利；获胜",
+        "en": "triumph; win",
+        "zhAliases": [
+          "胜利",
+          "获胜"
+        ],
+        "semanticGloss": "获胜",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "triumph; win",
+          "triumph / win"
+        ]
+      },
+      "reason": "保留原文 triumph/win 的动词用法，补回“胜利”这一借入词形。",
+      "originalIPA": [
+        "sẽ³⁵li³⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "sénlí",
+            "ipaForms": [
+              "sẽ³⁵li³⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "senflif",
+            "ipaForms": [
+              "sẽ³⁵li³⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-290114",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "获胜",
+      "beforeEn": "triumph; win",
+      "review": {
+        "zh": "胜利；获胜",
+        "en": "triumph; win",
+        "zhAliases": [
+          "胜利",
+          "获胜"
+        ],
+        "semanticGloss": "获胜",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "triumph; win",
+          "triumph / win"
+        ]
+      },
+      "reason": "保留原文 triumph/win 的动词用法，补回“胜利”这一借入词形。",
+      "originalIPA": [
+        "sẽ¹³li⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "sěnlī"
+          }
+        ],
+        "poj": [
+          {
+            "text": "sěn-lī"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289199",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "战败; 输掉战争等",
+      "beforeEn": "defeated; lose (a war etc.)",
+      "review": {
+        "zh": "失败；战败",
+        "en": "defeated; lose (a war etc.)",
+        "zhAliases": [
+          "失败",
+          "战败",
+          "输掉战争等"
+        ],
+        "semanticGloss": "战败; 输掉战争等",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "defeated; lose (a war etc.)",
+          "defeated / lose (a war etc.)"
+        ]
+      },
+      "reason": "借入词形为“失败”；原文有战争语境，保留战败义。",
+      "originalIPA": [
+        "si²¹pai³⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "sǐbái",
+            "ipaForms": [
+              "si²¹pai³⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "sirbaif",
+            "ipaForms": [
+              "si²¹pai³⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-290115",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "战败; 输掉战争等",
+      "beforeEn": "defeated; lose (a war etc.)",
+      "review": {
+        "zh": "失败；战败",
+        "en": "defeated; lose (a war etc.)",
+        "zhAliases": [
+          "失败",
+          "战败",
+          "输掉战争等"
+        ],
+        "semanticGloss": "战败; 输掉战争等",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "defeated; lose (a war etc.)",
+          "defeated / lose (a war etc.)"
+        ]
+      },
+      "reason": "借入词形为“失败”；原文有战争语境，保留战败义。",
+      "originalIPA": [
+        "si²¹pai⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "sìbāi"
+          }
+        ],
+        "poj": [
+          {
+            "text": "sì-pāi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288498",
+      "action": "form-headword",
+      "category": "B",
+      "beforeZh": "时间",
+      "beforeEn": "time",
+      "review": {
+        "zh": "时间",
+        "en": "time",
+        "zhAliases": [
+          "时节",
+          "时间"
+        ],
+        "semanticGloss": "时间",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "time"
+        ],
+        "keepSharedGloss": true,
+        "formHeadwords": [
+          {
+            "ipa": "si²¹tɕe³⁵",
+            "zh": "时节"
+          }
+        ]
+      },
+      "reason": "si-tɕe 对应“时节”；本条还含其他词形，不能仅按该借入词形改写整个合并条目。 本条另含其他词形，建议仅在对应借入词形下附原词名，保留共同释义。",
+      "originalIPA": [
+        "si²¹tɕe³⁵",
+        "si²¹ka³⁵"
+      ],
+      "originalLoanScope": "mixed",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "sǐjié",
+            "ipaForms": [
+              "si²¹tɕe³⁵"
+            ]
+          },
+          {
+            "text": "sǐgá",
+            "ipaForms": [
+              "si²¹ka³⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "sirjief",
+            "ipaForms": [
+              "si²¹tɕe³⁵"
+            ]
+          },
+          {
+            "text": "sirgaf",
+            "ipaForms": [
+              "si²¹ka³⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289698",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "雨衣",
+      "beforeEn": "raincoat",
+      "review": {
+        "zh": "蓑衣（雨衣）",
+        "en": "raincoat",
+        "zhAliases": [
+          "蓑衣",
+          "雨衣"
+        ],
+        "semanticGloss": "雨衣",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "raincoat"
+        ]
+      },
+      "reason": "so-ji 对应“蓑衣”；raincoat 为泛称，具体材料及是否扩展到现代雨衣仍需资料。",
+      "originalIPA": [
+        "so³³ji³³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "soyi"
+          }
+        ],
+        "poj": [
+          {
+            "text": "so-yi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289441",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "年; 年龄",
+      "beforeEn": "year; age",
+      "review": {
+        "zh": "岁（年岁；年龄单位）",
+        "en": "year; age",
+        "zhAliases": [
+          "岁",
+          "年",
+          "年龄"
+        ],
+        "semanticGloss": "年; 年龄",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "year; age",
+          "year / age"
+        ]
+      },
+      "reason": "suei 对应“岁”；原文 year/age 的年龄用法应明确保留。",
+      "originalIPA": [
+        "suei¹³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "suěi"
+          }
+        ],
+        "poj": [
+          {
+            "text": "suěi"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289612",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "办事员; 文书",
+      "beforeEn": "clerk",
+      "review": {
+        "zh": "书记（文书；办事员）",
+        "en": "secretary; clerk",
+        "zhAliases": [
+          "书记",
+          "文书",
+          "办事员"
+        ],
+        "semanticGloss": "办事员; 文书",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "su-tɕi 对应“书记”；同库 w2161 为“书记”。保留 clerk 的文书、办事员义；是否专指党组织职务另依语境判断。",
+      "originalIPA": [
+        "su⁵⁵tɕi³³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "sūji"
+          }
+        ],
+        "poj": [
+          {
+            "text": "sū-ci"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288671",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "办事员; 文书",
+      "beforeEn": "clerk",
+      "review": {
+        "zh": "书记（文书；办事员）",
+        "en": "secretary; clerk",
+        "zhAliases": [
+          "书记",
+          "文书",
+          "办事员"
+        ],
+        "semanticGloss": "办事员; 文书",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "su-tɕi 对应“书记”；同库 w2161 为“书记”。保留 clerk 的文书、办事员义；是否专指党组织职务另依语境判断。",
+      "originalIPA": [
+        "su⁵⁵tɕi³⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "sūjí",
+            "ipaForms": [
+              "su⁵⁵tɕi³⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "suxjif",
+            "ipaForms": [
+              "su⁵⁵tɕi³⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288871",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "钱",
+      "beforeEn": "money",
+      "review": {
+        "zh": "铜钱（钱）",
+        "en": "money",
+        "zhAliases": [
+          "铜钱",
+          "钱"
+        ],
+        "semanticGloss": "钱",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "money"
+        ]
+      },
+      "reason": "保留可能泛指货币的用法；本字为“铜钱”。",
+      "originalIPA": [
+        "tʰũ²¹tɕʰiã²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "tǒngqiǎn",
+            "ipaForms": [
+              "tʰũ²¹tɕʰiã²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "tongrqianr",
+            "ipaForms": [
+              "tʰũ²¹tɕʰiã²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-411506",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "发疯",
+      "beforeEn": "crazy, become",
+      "review": {
+        "zh": "癫（发疯）",
+        "en": "crazy, become",
+        "zhAliases": [
+          "癫",
+          "发疯"
+        ],
+        "semanticGloss": "发疯",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "crazy, become"
+        ]
+      },
+      "reason": "原文为 become crazy 的动作义，不能仅改成静态名词。",
+      "originalIPA": [
+        "tian⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "diān",
+            "ipaForms": [
+              "tian⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "dianx",
+            "ipaForms": [
+              "tian⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-43565",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "精神失常的人",
+      "beforeEn": "insane person",
+      "review": {
+        "zh": "癫子（精神失常的人）",
+        "en": "insane person",
+        "zhAliases": [
+          "癫子",
+          "精神失常的人"
+        ],
+        "semanticGloss": "精神失常的人",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "insane person"
+        ]
+      },
+      "reason": "恢复词名并保留原文 insane person 的解释；不从字形扩大到其他病症。",
+      "originalIPA": [
+        "tiã³³ tsi²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "dianzì"
+          }
+        ],
+        "poj": [
+          {
+            "text": "tian-cì"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289943",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "数; 计数",
+      "beforeEn": "count",
+      "review": {
+        "zh": "点（清点；计数）",
+        "en": "count",
+        "zhAliases": [
+          "点",
+          "数",
+          "计数"
+        ],
+        "semanticGloss": "数; 计数",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "count"
+        ]
+      },
+      "reason": "原文 count 为动作义；保留该义并附“点”这一借入词形。",
+      "originalIPA": [
+        "tiã⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "diān"
+          }
+        ],
+        "poj": [
+          {
+            "text": "tiān"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-43422",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "精神失常的人",
+      "beforeEn": "insane person",
+      "review": {
+        "zh": "癫子（精神失常的人）",
+        "en": "insane person",
+        "zhAliases": [
+          "癫子",
+          "精神失常的人"
+        ],
+        "semanticGloss": "精神失常的人",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "insane person"
+        ]
+      },
+      "reason": "恢复词名并保留原文 insane person 的解释；不从字形扩大到其他病症。",
+      "originalIPA": [
+        "tiã⁵⁵ tsi⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "diānzī",
+            "ipaForms": [
+              "tiã⁵⁵ tsi⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "dianxzix",
+            "ipaForms": [
+              "tiã⁵⁵ tsi⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-355180",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "仇人; 对头",
+      "beforeEn": "enemy (personal); antagonizer",
+      "review": {
+        "zh": "敌人（仇人；对头）",
+        "en": "enemy (personal); antagonizer",
+        "zhAliases": [
+          "敌人",
+          "仇人",
+          "对头"
+        ],
+        "semanticGloss": "仇人; 对头",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "enemy (personal); antagonizer",
+          "enemy (personal) / antagonizer"
+        ]
+      },
+      "reason": "ti-zən 对应“敌人”；原文指定个人仇敌、对头，保留该范围。",
+      "originalIPA": [
+        "ti²¹zən²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "dǐrěn",
+            "ipaForms": [
+              "ti²¹zən²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "dirrenr",
+            "ipaForms": [
+              "ti²¹zən²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289462",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "十一月",
+      "beforeEn": "November; eleventh lunar month",
+      "review": {
+        "zh": "冬月（农历十一月）",
+        "en": "eleventh lunar month",
+        "zhAliases": [
+          "冬月",
+          "农历十一月"
+        ],
+        "semanticGloss": "十一月",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "词形为“冬月”；南部条目合并的语保 yubao-60824-v-1348 原中文为“冬月”，英文为 eleventh lunar month。",
+      "originalIPA": [
+        "tõ³³jye²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "donyüè"
+          }
+        ],
+        "poj": [
+          {
+            "text": "ton-üè"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289784",
+      "action": "form-headword",
+      "category": "C",
+      "beforeZh": "镜子",
+      "beforeEn": "mirror",
+      "review": {
+        "zh": "镜子",
+        "en": "mirror",
+        "zhAliases": [
+          "照镜",
+          "镜子"
+        ],
+        "semanticGloss": "镜子",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "mirror"
+        ],
+        "keepSharedGloss": true,
+        "formHeadwords": [
+          {
+            "ipa": "tsau¹³tɕĩ³³",
+            "zh": "照镜"
+          }
+        ]
+      },
+      "reason": "此处原文 mirror 为名词；补原词名时保留名词义。 本条另含其他词形，建议仅在对应借入词形下附原词名，保留共同释义。",
+      "originalIPA": [
+        "tsaɨ¹³tɕĩ³³",
+        "tsau¹³tɕĩ³³"
+      ],
+      "originalLoanScope": "mixed",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "zǎujin"
+          }
+        ],
+        "poj": [
+          {
+            "text": "cǎu-cin"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289452",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "一月",
+      "beforeEn": "January",
+      "review": {
+        "zh": "正月（农历一月）",
+        "en": "first lunar month",
+        "zhAliases": [
+          "正月",
+          "农历一月"
+        ],
+        "semanticGloss": "一月",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "词形为“正月”，同库 w2679 明确释 first month in the lunar calendar。January 无法表达这个传统月名。",
+      "originalIPA": [
+        "tsẽ³³jye²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "zenyüè"
+          }
+        ],
+        "poj": [
+          {
+            "text": "cen-üè"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288511",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "一月",
+      "beforeEn": "January",
+      "review": {
+        "zh": "正月（农历一月）",
+        "en": "first lunar month",
+        "zhAliases": [
+          "正月",
+          "农历一月"
+        ],
+        "semanticGloss": "一月",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "词形为“正月”，同库 w2679 明确释 first month in the lunar calendar。January 无法表达这个传统月名。",
+      "originalIPA": [
+        "tsẽ⁵⁵je⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "zēnyē",
+            "ipaForms": [
+              "tsẽ⁵⁵je⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "zenxyex",
+            "ipaForms": [
+              "tsẽ⁵⁵je⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288932",
+      "action": "form-headword",
+      "category": "B",
+      "beforeZh": "好处; 优势",
+      "beforeEn": "advantage",
+      "review": {
+        "zh": "好处; 优势",
+        "en": "advantage",
+        "zhAliases": [
+          "优点",
+          "好处",
+          "优势"
+        ],
+        "semanticGloss": "好处; 优势",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "advantage"
+        ],
+        "keepSharedGloss": true,
+        "formHeadwords": [
+          {
+            "ipa": "jiu⁵⁵tiã⁵⁵",
+            "zh": "优点"
+          }
+        ]
+      },
+      "reason": "advantage 是概括性英译；借入词形为“优点”。 本条另含其他词形，建议仅在对应借入词形下附原词名，保留共同释义。",
+      "originalIPA": [
+        "tsʰai³⁵",
+        "jiu⁵⁵tiã⁵⁵"
+      ],
+      "originalLoanScope": "mixed",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "cái",
+            "ipaForms": [
+              "tsʰai³⁵"
+            ]
+          },
+          {
+            "text": "yōudiān",
+            "ipaForms": [
+              "jiu⁵⁵tiã⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "caif",
+            "ipaForms": [
+              "tsʰai³⁵"
+            ]
+          },
+          {
+            "text": "youxdianx",
+            "ipaForms": [
+              "jiu⁵⁵tiã⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-201321",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "铲; 锹",
+      "beforeEn": "spade",
+      "review": {
+        "zh": "铲子（铲；锹）",
+        "en": "spade",
+        "zhAliases": [
+          "铲子",
+          "铲",
+          "锹"
+        ],
+        "semanticGloss": "铲; 锹",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "spade"
+        ]
+      },
+      "reason": "原词为“铲子”，不据近义器物名改作其他汉语原词。",
+      "originalIPA": [
+        "tsʰan²¹tsi²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "cǎnzǐ",
+            "ipaForms": [
+              "tsʰan²¹tsi²¹"
+            ]
+          },
+          {
+            "text": "cǎngzǐ",
+            "ipaForms": [
+              "tsʰan²¹tsi²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "canrzir",
+            "ipaForms": [
+              "tsʰan²¹tsi²¹"
+            ]
+          },
+          {
+            "text": "cangrzir",
+            "ipaForms": [
+              "tsʰan²¹tsi²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-198618",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "粮仓",
+      "beforeEn": "granary",
+      "review": {
+        "zh": "仓库（粮仓）",
+        "en": "granary",
+        "zhAliases": [
+          "仓库",
+          "粮仓"
+        ],
+        "semanticGloss": "粮仓",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "granary"
+        ]
+      },
+      "reason": "词形对应“仓库”；原文 granary 较窄，保留“粮仓”义。",
+      "originalIPA": [
+        "tsʰan⁵⁵kʰu⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "cānkū",
+            "ipaForms": [
+              "tsʰan⁵⁵kʰu⁵⁵"
+            ]
+          },
+          {
+            "text": "cāngkū",
+            "ipaForms": [
+              "tsʰan⁵⁵kʰu⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "canxkux",
+            "ipaForms": [
+              "tsʰan⁵⁵kʰu⁵⁵"
+            ]
+          },
+          {
+            "text": "cangxkux",
+            "ipaForms": [
+              "tsʰan⁵⁵kʰu⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-375184",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "轮子",
+      "beforeEn": "wheel",
+      "review": {
+        "zh": "车轮子（轮子）",
+        "en": "wheel",
+        "zhAliases": [
+          "车轮子",
+          "轮子"
+        ],
+        "semanticGloss": "轮子",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "wheel"
+        ]
+      },
+      "reason": "词形首音节对应“车”，较现译“轮子”更完整。",
+      "originalIPA": [
+        "tsʰie⁵⁵luən²¹tsi²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "ciēlǔnzǐ",
+            "ipaForms": [
+              "tsʰie⁵⁵luən²¹tsi²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "ciexlunrzir",
+            "ipaForms": [
+              "tsʰie⁵⁵luən²¹tsi²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-199842",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "丝绸",
+      "beforeEn": "silk (cloth)",
+      "review": {
+        "zh": "绸子（丝绸）",
+        "en": "silk (cloth)",
+        "zhAliases": [
+          "绸子",
+          "丝绸"
+        ],
+        "semanticGloss": "丝绸",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "silk (cloth)"
+        ]
+      },
+      "reason": "词形为“绸子”，现译材料名本身无误。",
+      "originalIPA": [
+        "tsʰou²¹tsi²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "cǒuzǐ",
+            "ipaForms": [
+              "tsʰou²¹tsi²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "courzir",
+            "ipaForms": [
+              "tsʰou²¹tsi²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289745",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "枪",
+      "beforeEn": "gun",
+      "review": {
+        "zh": "铳（枪）",
+        "en": "gun",
+        "zhAliases": [
+          "铳",
+          "枪"
+        ],
+        "semanticGloss": "枪",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "gun"
+        ]
+      },
+      "reason": "恢复“铳”的借入词名；原文 gun 的器物义保留。",
+      "originalIPA": [
+        "tsʰõ¹³"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "cǒn"
+          }
+        ],
+        "poj": [
+          {
+            "text": "chǒn"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288806",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "枪",
+      "beforeEn": "gun",
+      "review": {
+        "zh": "铳（枪）",
+        "en": "gun",
+        "zhAliases": [
+          "铳",
+          "枪"
+        ],
+        "semanticGloss": "枪",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "gun"
+        ]
+      },
+      "reason": "恢复“铳”的借入词名；原文 gun 的器物义保留。",
+      "originalIPA": [
+        "tsʰũ³⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "cóng",
+            "ipaForms": [
+              "tsʰũ³⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "congf",
+            "ipaForms": [
+              "tsʰũ³⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-384788",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "一月",
+      "beforeEn": "January",
+      "review": {
+        "zh": "正月（农历一月）",
+        "en": "first lunar month",
+        "zhAliases": [
+          "正月",
+          "农历一月"
+        ],
+        "semanticGloss": "一月",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "词形为“正月”，同库 w2679 明确释 first month in the lunar calendar。January 无法表达这个传统月名。",
+      "originalIPA": [
+        "tsən⁵⁵jie⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "zēnyē",
+            "ipaForms": [
+              "tsən⁵⁵jie⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "zenxyex",
+            "ipaForms": [
+              "tsən⁵⁵jie⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-374829",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "钉; 图钉",
+      "beforeEn": "nail; tack",
+      "review": {
+        "zh": "钉子（钉；图钉）",
+        "en": "nail; tack",
+        "zhAliases": [
+          "钉子",
+          "钉",
+          "图钉"
+        ],
+        "semanticGloss": "钉; 图钉",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "nail; tack",
+          "nail / tack"
+        ]
+      },
+      "reason": "恢复原词名并保留原文 nail/tack 的范围。",
+      "originalIPA": [
+        "tən⁵⁵tsi⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "dēnzī",
+            "ipaForms": [
+              "tən⁵⁵tsi⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "denxzix",
+            "ipaForms": [
+              "tən⁵⁵tsi⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-290101",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "建筑; 建造",
+      "beforeEn": "build; construct",
+      "review": {
+        "zh": "建设；建造",
+        "en": "build; construct",
+        "zhAliases": [
+          "建设",
+          "建筑",
+          "建造"
+        ],
+        "semanticGloss": "建筑; 建造",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "build; construct",
+          "build / construct"
+        ]
+      },
+      "reason": "tɕiã-se 对应“建设”。原文 build/construct 为动作义，保留“建造”。",
+      "originalIPA": [
+        "tɕiã³⁵se²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "jiánsè"
+          }
+        ],
+        "poj": [
+          {
+            "text": "cián-sè"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289185",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "建筑; 建造",
+      "beforeEn": "build; construct",
+      "review": {
+        "zh": "建设；建造",
+        "en": "build; construct",
+        "zhAliases": [
+          "建设",
+          "建筑",
+          "建造"
+        ],
+        "semanticGloss": "建筑; 建造",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "build; construct",
+          "build / construct"
+        ]
+      },
+      "reason": "tɕiã-se 对应“建设”。原文 build/construct 为动作义，保留“建造”。",
+      "originalIPA": [
+        "tɕiã³⁵se³⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "jiánsé",
+            "ipaForms": [
+              "tɕiã³⁵se³⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "jianfsef",
+            "ipaForms": [
+              "tɕiã³⁵se³⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289855",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "阶级意识",
+      "beforeEn": "consciousness (class)",
+      "review": {
+        "zh": "觉悟（阶级意识）",
+        "en": "consciousness (class)",
+        "zhAliases": [
+          "觉悟",
+          "阶级意识"
+        ],
+        "semanticGloss": "阶级意识",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "consciousness (class)"
+        ]
+      },
+      "reason": "tɕio-wu 对应“觉悟”；保留原文 consciousness (class) 的语境。",
+      "originalIPA": [
+        "tɕio⁵⁵wu²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "jiōwù"
+          }
+        ],
+        "poj": [
+          {
+            "text": "ciō-ù"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-196731",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "舅母; 舅妈",
+      "beforeEn": "aunt (wife of maternal uncle)",
+      "review": {
+        "zh": "舅娘（舅母；舅妈）",
+        "en": "aunt (wife of maternal uncle)",
+        "zhAliases": [
+          "舅娘",
+          "舅母",
+          "舅妈"
+        ],
+        "semanticGloss": "舅母; 舅妈",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "aunt (wife of maternal uncle)"
+        ]
+      },
+      "reason": "保留原文“母亲兄弟的妻子”这一亲属关系。",
+      "originalIPA": [
+        "tɕiu³⁵ȵian²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "jiúniǎn",
+            "ipaForms": [
+              "tɕiu³⁵ȵian²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "jiufnianr",
+            "ipaForms": [
+              "tɕiu³⁵ȵian²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288954",
+      "action": "form-headword",
+      "category": "C",
+      "beforeZh": "拧; 拧湿布等",
+      "beforeEn": "wring; wring (e.g. wet cloth)",
+      "review": {
+        "zh": "拧; 拧湿布等",
+        "en": "wring; wring (e.g. wet cloth)",
+        "zhAliases": [
+          "㩆",
+          "拧",
+          "拧湿布等"
+        ],
+        "semanticGloss": "拧; 拧湿布等",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "wring; wring (e.g. wet cloth)",
+          "wring",
+          "wring (e.g. wet cloth)"
+        ],
+        "keepSharedGloss": true,
+        "formHeadwords": [
+          {
+            "ipa": "tɕiəu⁵⁵",
+            "zh": "㩆"
+          }
+        ]
+      },
+      "reason": "对应已标出的方言原词；原文“拧湿布等”是动作说明，并非错义。 本条另含其他词形，建议仅在对应借入词形下附原词名，保留共同释义。",
+      "originalIPA": [
+        "tɕiu⁵⁵",
+        "tɕiəu⁵⁵"
+      ],
+      "originalLoanScope": "mixed",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "jiū"
+          }
+        ],
+        "ye": [
+          {
+            "text": "jiux"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289307",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "活跃; 有活力",
+      "beforeEn": "active; vigorous",
+      "review": {
+        "zh": "积极；活跃",
+        "en": "active; vigorous",
+        "zhAliases": [
+          "积极",
+          "活跃",
+          "有活力"
+        ],
+        "semanticGloss": "活跃; 有活力",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "active; vigorous",
+          "active / vigorous"
+        ]
+      },
+      "reason": "词形对应“积极”；active/vigorous 的释义可保留。",
+      "originalIPA": [
+        "tɕi²¹tɕi²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "jǐjǐ",
+            "ipaForms": [
+              "tɕi²¹tɕi²¹"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "jirjir",
+            "ipaForms": [
+              "tɕi²¹tɕi²¹"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289307--south",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "活跃; 有活力",
+      "beforeEn": "active; vigorous",
+      "review": {
+        "zh": "积极；活跃",
+        "en": "active; vigorous",
+        "zhAliases": [
+          "积极",
+          "活跃",
+          "有活力"
+        ],
+        "semanticGloss": "活跃; 有活力",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "active; vigorous",
+          "active / vigorous"
+        ]
+      },
+      "reason": "词形对应“积极”；active/vigorous 的释义可保留。",
+      "originalIPA": [
+        "tɕi²¹tɕi²¹"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "jìjì"
+          }
+        ],
+        "poj": [
+          {
+            "text": "cì-cì"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-206625",
+      "action": "rename",
+      "category": "B",
+      "beforeZh": "标记",
+      "beforeEn": "mark",
+      "review": {
+        "zh": "记号；标记",
+        "en": "mark",
+        "zhAliases": [
+          "记号",
+          "标记"
+        ],
+        "semanticGloss": "标记",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "mark"
+        ]
+      },
+      "reason": "tɕi-xau 对应“记号”，现译为近义词“标记”。",
+      "originalIPA": [
+        "tɕi⁵⁵xau³⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "jīháo",
+            "ipaForms": [
+              "tɕi⁵⁵xau³⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "jixhaof",
+            "ipaForms": [
+              "tɕi⁵⁵xau³⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288670",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "县官",
+      "beforeEn": "county magistrate",
+      "review": {
+        "zh": "县长",
+        "en": "county head",
+        "zhAliases": [
+          "县长"
+        ],
+        "semanticGloss": "县官",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "县的行政首长；末音节 tsã/tsaŋ 对应“长”，同库 w2470 的原中文为“县长”。原文 county magistrate 保留在来源记录，显示英文可用 county head。",
+      "originalIPA": [
+        "ɕiã³⁵tsã⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "xiánzāng",
+            "ipaForms": [
+              "ɕiã³⁵tsã⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "xianfzangx",
+            "ipaForms": [
+              "ɕiã³⁵tsã⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289611",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "县官",
+      "beforeEn": "county magistrate",
+      "review": {
+        "zh": "县长",
+        "en": "county head",
+        "zhAliases": [
+          "县长"
+        ],
+        "semanticGloss": "县官",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "县的行政首长；末音节 tsã/tsaŋ 对应“长”，同库 w2470 的原中文为“县长”。原文 county magistrate 保留在来源记录，显示英文可用 county head。",
+      "originalIPA": [
+        "ɕiã¹³tsã⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "xiǎnzān"
+          }
+        ],
+        "poj": [
+          {
+            "text": "siǎn-cān"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-289871",
+      "action": "rename",
+      "category": "C",
+      "beforeZh": "学校",
+      "beforeEn": "school",
+      "review": {
+        "zh": "校堂（学校）",
+        "en": "school",
+        "zhAliases": [
+          "校堂",
+          "学校"
+        ],
+        "semanticGloss": "学校",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23",
+        "enAliases": [
+          "school"
+        ]
+      },
+      "reason": "ɕiaɨ-dã 对应“校堂”，现译为其通行解释“学校”。",
+      "originalIPA": [
+        "ɕiaɨ²¹dã⁵⁵"
+      ],
+      "originalLoanScope": "whole",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "xiàuddān"
+          }
+        ],
+        "poj": [
+          {
+            "text": "siàu-dān"
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288521",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "十一月",
+      "beforeEn": "November",
+      "review": {
+        "zh": "冬月（农历十一月）",
+        "en": "eleventh lunar month",
+        "zhAliases": [
+          "冬月",
+          "农历十一月"
+        ],
+        "semanticGloss": "十一月",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "词形为“冬月”；南部条目合并的语保 yubao-60824-v-1348 原中文为“冬月”，英文为 eleventh lunar month。",
+      "originalIPA": [
+        "tũ⁵⁵je⁵⁵"
+      ],
+      "originalLoanScope": "",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "dōngyē",
+            "ipaForms": [
+              "tũ⁵⁵je⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "dongxyex",
+            "ipaForms": [
+              "tũ⁵⁵je⁵⁵"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "stedt-rn-288522",
+      "action": "rename",
+      "category": "A",
+      "beforeZh": "十二月",
+      "beforeEn": "December",
+      "review": {
+        "zh": "腊月（农历十二月）",
+        "en": "twelfth lunar month",
+        "zhAliases": [
+          "腊月",
+          "农历十二月"
+        ],
+        "semanticGloss": "十二月",
+        "reviewedAt": "2026-10-23",
+        "reviewBatch": "stedt-loan-gloss-2026-10-23"
+      },
+      "reason": "词形为“腊月”；南部条目合并的语保 yubao-60824-v-1349 原中文为“腊月”，英文为 twelfth lunar month。",
+      "originalIPA": [
+        "la³⁵je⁵⁵"
+      ],
+      "originalLoanScope": "",
+      "originalSpellings": {
+        "accent": [
+          {
+            "text": "láyē",
+            "ipaForms": [
+              "la³⁵je⁵⁵"
+            ]
+          }
+        ],
+        "ye": [
+          {
+            "text": "lafyex",
+            "ipaForms": [
+              "la³⁵je⁵⁵"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "retained": [
+    {
+      "id": "w301",
+      "zh": "当兵",
+      "category": "E",
+      "reason": "汉语释义使用自然动宾顺序；土家语借入成分的名词—动词顺序另由拼音分词体现。"
+    },
+    {
+      "id": "w434",
+      "zh": "柚子",
+      "category": "E",
+      "reason": "原中文为“柚子”，原文英文为 pomelo；借词本字“橙子”与植物所指的关系要核对。"
+    },
+    {
+      "id": "w723",
+      "zh": "炼钢",
+      "category": "E",
+      "reason": "汉译“炼钢”正确；土家语“钢—炼”顺序已在拼音分词体现。"
+    },
+    {
+      "id": "w1366",
+      "zh": "凉水",
+      "category": "E",
+      "reason": "原中文写“凉水”；当前借词来源注写“冷水”，需先核对该来源注。"
+    },
+    {
+      "id": "w1848",
+      "zh": "锣",
+      "category": "E",
+      "reason": "原中文“锣”与原英文 gong 一致；本字“磬”已经补注，器物分类仍须核来源用例。"
+    },
+    {
+      "id": "w2450",
+      "zh": "香; 香（气味香）; 开胃",
+      "category": "E",
+      "reason": "原中文有“香”，原文还含 incense、fragrant、savory/appetizing；不能把全部义项直接改为“鲜”。"
+    },
+    {
+      "id": "w5744",
+      "zh": "爪",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "w5779",
+      "zh": "整齐",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "w5859",
+      "zh": "爪",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-127338",
+      "zh": "不能说话; 哑",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-289826",
+      "zh": "旗",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-43569",
+      "zh": "粪肥",
+      "category": "D",
+      "reason": "原文 manure 专指粪肥，汉语“肥料”范围更广；须核原始材料的用法。"
+    },
+    {
+      "id": "stedt-rn-423829",
+      "zh": "使溶解",
+      "category": "D",
+      "reason": "原文 dissolve (cause to) 明确使役；还原本字时保留使役信息，“溶／融”字也需按用例核定。"
+    },
+    {
+      "id": "stedt-rn-194028",
+      "zh": "胆; 胆汁",
+      "category": "D",
+      "reason": "借入词形对应“苦胆”；合并原文既有 gall 又有 gall bladder，器官与液体两义需分别核对。 本条另含其他词形，建议仅在对应借入词形下附原词名，保留共同释义。"
+    },
+    {
+      "id": "stedt-rn-375236",
+      "zh": "鞍; 马鞍",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-288814",
+      "zh": "鞍; 马鞍",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-413857",
+      "zh": "哄; 骗",
+      "category": "D",
+      "reason": "借入后的方言义或语义变化可能成立，不能仅按普通话“玩耍”替换 coax/fool。"
+    },
+    {
+      "id": "stedt-rn-289917",
+      "zh": "整理; 安排",
+      "category": "D",
+      "reason": "ta-pã 的汉字本字尚需原文或地方词证；put in order/arrange 不足以确定为现代常用义“打扮”。"
+    },
+    {
+      "id": "stedt-rn-43354",
+      "zh": "爪",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-361042",
+      "zh": "爪; 利爪",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-43501",
+      "zh": "爪",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-288725",
+      "zh": "侄女",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。 本条另含其他词形，建议仅在对应借入词形下附原词名，保留共同释义。"
+    },
+    {
+      "id": "stedt-rn-288664",
+      "zh": "主人",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-288664--south",
+      "zh": "主人",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-374099",
+      "zh": "火钳",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-288899",
+      "zh": "旗",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-288850",
+      "zh": "剪子",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-201984",
+      "zh": "鞍; 马鞍",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    },
+    {
+      "id": "stedt-rn-289753",
+      "zh": "鞍; 马鞍",
+      "category": "F",
+      "reason": "现译已表达核心词义；词尾、重叠、解释性表达或自然词序不同，未见足以判为误译的证据。"
+    }
+  ]
+}

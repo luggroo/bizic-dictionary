@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 7,
   "scope": "Screening constraints, not a native-word training set. Entry aliases resolve before scoring; rejected donors and component boundaries apply separately. Later linguistic review is required to revise these constraints.",
   "setuScope": "Exclude the five setu-family entries and their merged aliases. The distinct Southern sītī /si⁵⁵tʰi⁵⁵/ is not part of this exclusion.",
   "rules": [
@@ -281,13 +281,6 @@
       "nativeSeed": false
     },
     {
-      "id": "w1062",
-      "policy": "retain-review",
-      "reason": "Donor spelling remains unresolved; do not silently replace the source gloss.",
-      "origin": "docs/loan-coverage-review-2026-10-23.json",
-      "nativeSeed": false
-    },
-    {
       "id": "w465",
       "policy": "retain-review",
       "reason": "Donor spelling remains unresolved; do not silently replace the source gloss.",
@@ -340,13 +333,6 @@
       "id": "yubao-60824-v-2830",
       "policy": "retain-review",
       "reason": "担心的可能原词仍需比较，暂不落实为着心。",
-      "origin": "docs/loan-coverage-review-2026-10-23.json",
-      "nativeSeed": false
-    },
-    {
-      "id": "w4351",
-      "policy": "retain-review",
-      "reason": "送气声母与领导的拟借词对应尚需核实，暂缓。",
       "origin": "docs/loan-coverage-review-2026-10-23.json",
       "nativeSeed": false
     },
@@ -2501,6 +2487,147 @@
       "reviewedForms": [
         {
           "ipa": "tsʰi²¹",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-145866",
+      "policy": "exclude-entry",
+      "reason": "ũ³⁵tɕʰi⁵⁵kʰuẽ²¹kʰuẽ²¹「傲慢；蛮横」保留为本土词；不据 un 韵母判作借词。",
+      "origin": "docs/loan-un-wen-sun-2026-10-24.json"
+    },
+    {
+      "id": "yubao-60756-v-1675",
+      "policy": "exclude-entry",
+      "reason": "水牛为本土词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json"
+    },
+    {
+      "id": "yubao-60757-v-1675",
+      "policy": "exclude-entry",
+      "reason": "水牛为本土词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json"
+    },
+    {
+      "id": "yubao-60756-v-1121",
+      "policy": "exclude-entry",
+      "reason": "件为 uang 组的本土例外。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json"
+    },
+    {
+      "id": "yubao-60756-v-1374",
+      "policy": "exclude-entry",
+      "reason": "周围为 uang 组的本土例外。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json"
+    },
+    {
+      "id": "stedt-rn-289123",
+      "policy": "exclude-entry",
+      "reason": "功为 gua 组的本土例外。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json"
+    },
+    {
+      "id": "w275",
+      "policy": "exclude-component",
+      "reason": "很扁中的 gua 为本土成分。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "pi²¹kua²¹tʰa²¹",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2748",
+      "policy": "exclude-component",
+      "reason": "枪中的 zua 不标借入。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsua²¹tsɨ²¹tsʰɔŋ²⁴",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1612",
+      "policy": "exclude-component",
+      "reason": "小指中的 nian 仅作可能同源比较，不认定为近代借词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "ȵiɛn²¹kʰuei⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2439",
+      "policy": "exclude-component",
+      "reason": "tian 为指定的本土例外，不据韵母归类判作借词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "u⁵⁵so⁵⁵xa²¹ȵie³³tʰian⁵⁵tɕiəu⁵⁵",
+          "span": [
+            5,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2441",
+      "policy": "exclude-component",
+      "reason": "tian 为指定的本土例外，不据韵母归类判作借词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "li²⁴pu⁵⁵lan²¹lan²⁴ȵie³³tʰian⁵⁵tɕiəu⁵⁵",
+          "span": [
+            6,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2273",
+      "policy": "exclude-component",
+      "reason": "tian 为指定的本土例外，不据韵母归类判作借词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "tʰiɛn²¹kɤ²¹",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-454726",
+      "policy": "exclude-component",
+      "reason": "tian 为指定的本土例外，不据韵母归类判作借词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "tʰiɛn²¹kɤ²¹",
           "span": [
             1,
             1

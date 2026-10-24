@@ -134,7 +134,13 @@ function loanSpellingHTML(w,value){
 }
 function notationHead(w){return completeSpellings(w)[0]?.text||wordIPA(w)[0]||phon(w.term)}
 function notationHeadHTML(w){const value=completeSpellings(w)[0];return value?'<span data-script="transliteration">'+loanSpellingHTML(w,value)+'</span>':E(notationHead(w));}
-function ipaSubtitle(w){const ipa=wordIPA(w);return completeSpellings(w).length&&ipa.length?`<div class="word-ipa">${ipa.map(E).join(' · ')}</div>`:!ipa.length?'<div class="tiny">IPA 待校核</div>':''}
+function formHeadwordHTML(w,ipa){
+ if(!w.formHeadwords?.length)return '';
+ const key=text=>normalizeIPA(text).replace(/[\s|｜◦/]/gu,'');
+ const names=[...new Set(w.formHeadwords.filter(form=>key(form.ipa)===key(ipa)).map(form=>form.zh))];
+ return names.length?` <small class="word-form-lexeme" lang="zh" data-script="source" translate="no">〔${names.map(E).join('；')}〕</small>`:'';
+}
+function ipaSubtitle(w){const ipa=wordIPA(w);return completeSpellings(w).length&&ipa.length?`<div class="word-ipa">${ipa.map(p=>E(p)+formHeadwordHTML(w,p)).join(' · ')}</div>`:!ipa.length?'<div class="tiny">IPA 待校核</div>':''}
 // Pair alternatives only when the same source conversion supplies the link.
 // Array order alone is not evidence that two notations describe the same form.
 function pairedNotationForms(w){
@@ -145,12 +151,12 @@ function pairedNotationForms(w){
 }
 function wordCardNotation(w){
  const pairs=pairedNotationForms(w);
- const row=(value,ipa)=>`<span class="word word-card-title">${value?loanSpellingHTML(w,value):E(phon(notationHead(w)))}</span>${ipa.length?`<span class="word-ipa">${ipa.map(v=>'/'+E(v.replace(/^\/|\/$/g,''))+'/').join(' · ')}</span>`:''}`;
+ const row=(value,ipa)=>`<span class="word word-card-title">${value?loanSpellingHTML(w,value):E(phon(notationHead(w)))}</span>${ipa.length?`<span class="word-ipa">${ipa.map(v=>'/'+E(v.replace(/^\/|\/$/g,''))+'/'+formHeadwordHTML(w,v)).join(' · ')}</span>`:''}`;
  return pairs?pairs.map(v=>row(v,v.ipa)).join(''):row(completeSpellings(w)[0],completeSpellings(w).length?wordIPA(w):[]);
 }
 function notationCells(w,compact=false){
  const values=completeSpellings(w),ipa=wordIPA(w),shown=compact?values.slice(1,3):values.slice(1),pairs=pairedNotationForms(w);
- const ipaLine=forms=>`<div class="word-ipa">${forms.map(E).join(' · ')}</div>`;
+ const ipaLine=forms=>`<div class="word-ipa">${forms.map(p=>E(p)+formHeadwordHTML(w,p)).join(' · ')}</div>`;
  const forms=pairs?ipaLine(pairs[0].ipa)+(compact?pairs.slice(1,3):pairs.slice(1)).map(v=>`<div class="notation-alternative"><div class="notation-form">${loanSpellingHTML(w,v)}</div>${ipaLine(v.ipa)}</div>`).join(''):ipaSubtitle(w)+(!values.length&&ipa.length>1?ipaLine(ipa.slice(1)):'')+shown.map(v=>`<div class="notation-form">${loanSpellingHTML(w,v)}</div>`).join('');
  return forms+(values.some(v=>v.ambiguous)?'<small class="tiny">多种候选</small>':'')+(compact&&values.length>3?`<small class="tiny">另 ${values.length-3} 种</small>`:'');
 }

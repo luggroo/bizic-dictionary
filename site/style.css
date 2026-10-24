@@ -36,6 +36,7 @@
 :root{--loan-ink:#706d64;--loan-display-ink:#89877f}
 .loan-spelling{color:var(--loan-ink)}
 .word-card-title .loan-spelling,h1.word .loan-spelling{color:var(--loan-display-ink)}
+.word-form-lexeme{font:13px/1.5 system-ui,sans-serif;color:var(--ink,#24372d);white-space:normal}
 
 .word-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px;align-items:stretch}
 .word-card{min-width:0;display:flex;flex-direction:column;background:white;border:1px solid var(--line);border-radius:9px;padding:20px;overflow-wrap:anywhere}

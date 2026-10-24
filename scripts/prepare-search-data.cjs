@@ -20,7 +20,7 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
  mark('search-index');
  const compiled=path.join(root,'prepared');fs.mkdirSync(compiled,{recursive:true});
  function write(name,value){fs.writeFileSync(path.join(compiled,name+'.json.gz'),zlib.gzipSync(JSON.stringify(value),{level:9}));}
- const kept=['id','term','zh','en','pos','source','sourceIds','dialect','dialects','location','locations','positions','schemes','_search','_semantic'];
+ const kept=['id','term','zh','en','pos','source','sourceIds','dialect','dialects','location','locations','positions','schemes','_search','_semantic','formHeadwords'];
  const coreWords=[];const chunkSize=200;
  for(let i=0;i<data.words.length;i++){
   const w=data.words[i],mini=Object.fromEntries(kept.filter(k=>w[k]!==undefined).map(k=>[k,w[k]]));

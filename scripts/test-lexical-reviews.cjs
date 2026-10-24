@@ -22,7 +22,7 @@ const run=s=>vm.runInContext(s,ctx);
   const w=get(id);assert(w,id+' missing');ctx.w=w;
   assert(run('WordClasses.ids(w)').includes(category),id+' category');classified++;
  }
- assert.equal(classified,11517);assert.equal(data.words.length,16577);
+ assert.equal(classified,11518);assert.equal(data.words.length,16577);
  const check=(id,category)=>{ctx.w=get(id);assert(run('WordClasses.ids(w)').includes(category),id);};
  for(const point of ['60757','60756','60823','60824']){
   for(const number of ['1073','1074','1075'])check('yubao-'+point+'-v-'+number,'numeral');
@@ -36,7 +36,8 @@ const run=s=>vm.runInContext(s,ctx);
  for(const id of ['yubao-60756-v-1122','yubao-60823-v-1122']){check(id,'phrase.quantity');assert.equal(get(id).zh,'一点');}
  for(const id of ['yubao-60757-v-1140','yubao-60757-v-1080']){ctx.w=get(id);assert(!run('WordClasses.ids(w)').includes('pronoun'));assert(!run('WordClasses.ids(w)').includes('numeral'));}
  let boundaries=0;
- for(const rule of run('LEXICAL_BOUNDARY_REVIEWS')){
+ for(const reviewed of run('LEXICAL_BOUNDARY_REVIEWS'))for(const mode of reviewed.mode?[reviewed.mode]:['accent','ye']){
+  const rule={...reviewed,mode};
   const w=get(rule.wordIds[0]);ctx.w=w;ctx.mode=rule.mode;ctx.rule=rule;
   const forms=run('spellingDisplay=mode;southernDisplay=mode;completeSpellings(w).map(v=>v.text)');
   const matching=forms.filter(t=>{

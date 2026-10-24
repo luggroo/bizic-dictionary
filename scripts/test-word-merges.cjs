@@ -14,7 +14,13 @@ const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.s
  const by=new Map(data.words.map(w=>[w.id,w]));assert(by.has('w1760'));assert.notEqual(data.wordAliases['w1759']||'w1759',data.wordAliases['w1758']||'w1758');
  assert.equal(ctx.dictionaryGlosses(['cut / clip / trim','clip;cut'],'en').join('; '),'cut; clip; trim');
  assert.equal(ctx.dictionaryGlosses(['姐/姐姐','堂姐'],'zh').join('; '),'姐姐; 堂姐');
- for(const [ipa,accent] of [['tɕe⁵⁵','jiē'],['tɕɛ⁵⁵','jiē'],['tɕʰe³³','qiě'],['ɕɛ³³','xiě'],['ʑe³³','yě'],['pe³³','běi']])assert.equal(ctx.northernSurveySpelling(ipa,'60756').accent,accent);
+ for(const [ipa,accent] of [['tɕe⁵⁵','jiē'],['tɕɛ⁵⁵','jiē'],['tɕʰe³³','qiě'],['ɕɛ³³','xiě'],['ʑe³³','yě'],['pe³³','běi'],['ȵɛ⁵⁵','niē'],['ɲɛ³³','niě'],['ȵe⁵⁵','niē'],['ȵa⁵⁵','niā'],['ȵu⁵⁵','niū'],['ȵai⁵⁵','niāi'],['nɛ⁵⁵','nāi']])assert.equal(ctx.northernSurveySpelling(ipa,'60756').accent,accent);
+ assert.equal(ctx.northernSurveySpelling('ȵɛ⁵⁵','60757').accent,'nāi');
+ const graduate=by.get('yubao-60756-v-2525');
+ assert.equal(graduate.notations.accent[0].text,'bíniē');
+ assert.equal(graduate.notations.ye[0].text,'bifniex');
+ assert.equal(graduate.notations.ipa[0].text,'pi³⁵ȵɛ⁵⁵');
+ assert.equal(graduate.attestations[0].term,'pi35ȵɛ55');
  for(const [old,id] of Object.entries(data.wordAliases))assert(by.has(id),old+' dangling alias '+id);
  vm.runInContext("state.dialect='南部'",ctx);for(const w of data.words.filter(ctx.dialectMatches))assert.equal(ctx.wordVarietyInfo(w).kind,'south',w.id);
  console.log('PASS: '+before+' → '+data.words.length+' entries; Baojing preserved; unrelated homonyms separate; gloss deduplication; Xianren; aliases.');

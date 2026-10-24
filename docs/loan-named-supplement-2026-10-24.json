@@ -1,0 +1,625 @@
+{
+  "date": "2026-10-24",
+  "scope": "Named Northern loans, semantic dian review and the lead gloss.",
+  "decisions": [
+    {
+      "action": "add-loan-note",
+      "zh": "好像",
+      "note": {
+        "id": "chinese-loan-w850",
+        "wordIds": [
+          "w850"
+        ],
+        "kind": "借词来源",
+        "donor": "好像",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「好像」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xau⁵⁵tɕʰiɛn²⁴",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 好像; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "抢",
+      "note": {
+        "id": "chinese-loan-w1807",
+        "wordIds": [
+          "w1807"
+        ],
+        "kind": "借词来源",
+        "donor": "抢",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「抢」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰiɛn⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 抢; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "墙壁",
+      "note": {
+        "id": "chinese-loan-w1812",
+        "wordIds": [
+          "w1812"
+        ],
+        "kind": "借词来源",
+        "donor": "墙壁",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「墙壁」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰiɛn²¹pi²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 墙壁; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "强盗",
+      "note": {
+        "id": "chinese-loan-stedt-rn-355079",
+        "wordIds": [
+          "stedt-rn-355079"
+        ],
+        "kind": "借词来源",
+        "donor": "强盗",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「强盗」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰian²¹to³⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 强盗; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "点钟",
+      "note": {
+        "id": "chinese-loan-w3462",
+        "wordIds": [
+          "w3462"
+        ],
+        "kind": "借词来源",
+        "donor": "点",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「点」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tiɛn⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 点; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "席子; 垫子",
+      "note": {
+        "id": "chinese-loan-stedt-rn-370213",
+        "wordIds": [
+          "stedt-rn-370213"
+        ],
+        "kind": "借词来源",
+        "donor": "垫",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「垫」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "lian²¹tian³⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 垫 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "席子; 垫子",
+      "note": {
+        "id": "chinese-loan-stedt-rn-199689",
+        "wordIds": [
+          "stedt-rn-199689"
+        ],
+        "kind": "借词来源",
+        "donor": "垫",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「垫」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "lian²¹tian⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 垫 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "疯狗",
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-1701",
+        "wordIds": [
+          "yubao-60757-v-1701"
+        ],
+        "kind": "借词来源",
+        "donor": "癫子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「癫子」部分（第 3—4 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xa⁵⁵lie³³tian⁵⁵tsɿ⁵⁵",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 癫子 component (syllables 3–4) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "枕头",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0323",
+        "wordIds": [
+          "yubao-60823-v-0323"
+        ],
+        "kind": "借词来源",
+        "donor": "垫",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「垫」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰo⁵⁵pa³³tiã³³tsʰɿ⁵⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 垫 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "褥子",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0327",
+        "wordIds": [
+          "yubao-60823-v-0327"
+        ],
+        "kind": "借词来源",
+        "donor": "草垫",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「草垫」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰau⁵⁵tiã³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 草垫; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "发疯",
+      "note": {
+        "id": "chinese-loan-stedt-rn-411506",
+        "wordIds": [
+          "stedt-rn-411506"
+        ],
+        "kind": "借词来源",
+        "donor": "癫",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「癫」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tian⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 癫; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "枕巾",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1925",
+        "wordIds": [
+          "yubao-60823-v-1925"
+        ],
+        "kind": "借词来源",
+        "donor": "垫",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「垫」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰo⁵⁵pa³³tiã³³tsʰɿ⁵⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 垫 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "手电筒",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0360",
+        "wordIds": [
+          "yubao-60823-v-0360"
+        ],
+        "kind": "借词来源",
+        "donor": "电筒",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「电筒」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tiã³³tʰũ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 电筒; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "电池",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1782",
+        "wordIds": [
+          "yubao-60823-v-1782"
+        ],
+        "kind": "借词来源",
+        "donor": "电筒",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「电筒」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tiã³³tʰũ⁵⁵sɤ⁵³sɿ¹³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 电筒 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "疯狗",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1701",
+        "wordIds": [
+          "yubao-60823-v-1701"
+        ],
+        "kind": "借词来源",
+        "donor": "癫狗",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「癫狗」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tiã⁵⁵kɤu³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 癫狗; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "酒鬼",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2340",
+        "wordIds": [
+          "yubao-60823-v-2340"
+        ],
+        "kind": "借词来源",
+        "donor": "癫子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「癫子」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zɤe¹³tiã⁵⁵tsɿ³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 癫子 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "邮局",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2488",
+        "wordIds": [
+          "yubao-60823-v-2488"
+        ],
+        "kind": "借词来源",
+        "donor": "邮电所",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「邮电所」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑiɤu³³tiã¹³so⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 邮电所; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "领导; 首领",
+      "note": {
+        "id": "chinese-loan-w4351",
+        "wordIds": [
+          "w4351"
+        ],
+        "kind": "借词来源",
+        "donor": "领导",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「领导」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "liŋ⁵⁵tʰau²⁴",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 领导; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "领导；带领",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289192",
+        "wordIds": [
+          "stedt-rn-289192"
+        ],
+        "kind": "借词来源",
+        "donor": "领导",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「领导」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "lĩ⁵⁵tʰau³⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 领导; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "针灸",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0522",
+        "wordIds": [
+          "yubao-60756-v-0522"
+        ],
+        "kind": "借词来源",
+        "donor": "银针",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「银针」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ȵiŋ³³tseŋ³³xa³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "The 银针 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "宁可",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1185",
+        "wordIds": [
+          "yubao-60756-v-1185"
+        ],
+        "kind": "借词来源",
+        "donor": "宁愿",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「宁愿」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ȵiŋ³³ʑaŋ³⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "named-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 宁愿; the specific donor variety remains to be established."
+    }
+  ],
+  "phrases": [
+    {
+      "id": "yubao-60756-v-0522",
+      "parts": [
+        "ninzen",
+        "ha"
+      ],
+      "splitAfter": 2
+    }
+  ],
+  "supersededConstraints": [
+    {
+      "id": "w1062",
+      "policy": "retain-review",
+      "reason": "Donor spelling remains unresolved; do not silently replace the source gloss.",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    },
+    {
+      "id": "w4351",
+      "policy": "retain-review",
+      "reason": "送气声母与领导的拟借词对应尚需核实，暂缓。",
+      "origin": "docs/loan-coverage-review-2026-10-23.json",
+      "nativeSeed": false
+    }
+  ],
+  "glossCorrections": [
+    {
+      "id": "stedt-rn-289192",
+      "previousZh": "牵",
+      "zh": "领导；带领",
+      "en": "lead; guide",
+      "rationale": "The source English lead is a leadership/action verb here; the recorded lĩ⁵⁵tʰau³⁵ matches 领导. Original attestations remain unchanged."
+    }
+  ],
+  "deferredDian": [
+    {
+      "id": "w598",
+      "reason": "Not a confirmed 垫 sense; no inference from dian alone."
+    },
+    {
+      "id": "w600",
+      "reason": "Not a confirmed 垫 sense; no inference from dian alone."
+    },
+    {
+      "id": "w601",
+      "reason": "Not a confirmed 垫 sense; no inference from dian alone."
+    },
+    {
+      "id": "w603",
+      "reason": "Not a confirmed 垫 sense; no inference from dian alone."
+    },
+    {
+      "id": "w604",
+      "reason": "Not a confirmed 垫 sense; no inference from dian alone."
+    },
+    {
+      "id": "w605",
+      "reason": "Not a confirmed 垫 sense; no inference from dian alone."
+    },
+    {
+      "id": "stedt-rn-454954",
+      "reason": "Not a confirmed 垫 sense; no inference from dian alone."
+    },
+    {
+      "id": "yubao-60757-v-1401",
+      "reason": "Not a confirmed 垫 sense; no inference from dian alone."
+    },
+    {
+      "id": "yubao-60823-v-1401",
+      "reason": "Not a confirmed 垫 sense; no inference from dian alone."
+    }
+  ]
+}

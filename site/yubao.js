@@ -125,7 +125,8 @@ function northernSurveySpelling(raw,point){
   const rime=m[1].slice(onset.length),vowel=rimes[rime],tone=tones[m[2]];
   if(!vowel||!tone)return null;
   let core=northernInitialCore(onsets[onset]+vowel,m[1]);
-  if(xr&&['ȵ','ɲ'].includes(onset))core='ni'+(rime==='e'?'e':vowel.replace(/^i/,''));
+  if(xr&&!onset&&rime==='un')core='wen';
+  if(xr&&['ȵ','ɲ'].includes(onset))core='ni'+(['e','ɛ'].includes(rime)?'e':vowel.replace(/^i/,''));
   if(xr&&['e','ɛ'].includes(rime)&&['tɕ','tɕʰ','ɕ','ʑ'].includes(onset))core=({'tɕ':'jie','tɕʰ':'qie','ɕ':'xie','ʑ':'ye'})[onset];
   core=pinyinPalatalCore(core);
   const separator=!gap&&previous&&(/^[aeiou]/.test(core)||(/n$/.test(previous)&&/^g/.test(core)))?"'":'';
@@ -134,6 +135,6 @@ function northernSurveySpelling(raw,point){
  const tail=text.slice(pos);return pos&&/^[\s（）()]*$/.test(tail)?{ye:ye+tail,accent:accent+tail}:null;
 }
 for(const [point,title,count,notes] of [
- ['60756','保靖仙仁（阳朝）',2883,'55→x，35→f，33→r，53→v；e→ei，ə→e，ɛ→ai；j/q/x/y对应声母后的e、ɛ统一写jie/qie/xie/ye；ȵ→ni，ȵe→nie；ɚ→er。'],
+ ['60756','保靖仙仁（阳朝）',2883,'55→x，35→f，33→r，53→v；e→ei，ə→e，ɛ→ai；j/q/x/y对应声母后的e、ɛ统一写jie/qie/xie/ye；ȵ→ni，ȵe/ȵɛ→nie；零声母un→wen；ɚ→er。'],
  ['60757','龙山',2008,'按当前表层归并：55／33→x，53→v，24→f，22／21→r。an 与 aŋ 分别写 an、ang；异常调值保留 IPA。']
 ])NOTATION_CONFIG.profiles.push({id:'yubao-'+point,source:'yubao-'+point,title:'中国语保 · '+title,kind:'ipa',status:'按调查点规则转写',count,dialects:['北部 · '+title],notes:[notes]});

@@ -1,0 +1,3272 @@
+{
+  "date": "2026-10-24",
+  "scope": "Northern uang, zua/kua/sua/gua/rua and named component reviews.",
+  "decisions": [
+    {
+      "action": "add-loan-note",
+      "zh": "刮",
+      "note": {
+        "id": "chinese-loan-w785",
+        "wordIds": [
+          "w785"
+        ],
+        "kind": "借词来源",
+        "donor": "刮",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「刮」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua²⁴",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 刮; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "挂",
+      "note": {
+        "id": "chinese-loan-w786",
+        "wordIds": [
+          "w786"
+        ],
+        "kind": "借词来源",
+        "donor": "挂",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「挂」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua²⁴",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 挂; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "(哇哇声)",
+      "note": {
+        "id": "chinese-loan-w787",
+        "wordIds": [
+          "w787"
+        ],
+        "kind": "借词来源",
+        "donor": "呱呱",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「呱呱」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua²⁴kua²⁴",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 呱呱; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "黄瓜",
+      "note": {
+        "id": "chinese-loan-w905",
+        "wordIds": [
+          "w905"
+        ],
+        "kind": "借词来源",
+        "donor": "瓜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「瓜」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "fɛn²¹kua²¹",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 瓜 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "垮",
+      "note": {
+        "id": "chinese-loan-w1184",
+        "wordIds": [
+          "w1184"
+        ],
+        "kind": "借词来源",
+        "donor": "垮",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「垮」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰua⁵¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 垮; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "官",
+      "note": {
+        "id": "loan-etymology-w4124",
+        "wordIds": [
+          "w4124"
+        ],
+        "kind": "借词来源",
+        "donor": "官",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「官」，属早期借词。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰua²⁴",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24",
+        "borrowingPeriod": "early"
+      },
+      "noteEn": "An early Chinese loan from 官."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "瓜; 葫芦",
+      "note": {
+        "id": "chinese-loan-stedt-rn-366905",
+        "wordIds": [
+          "stedt-rn-366905"
+        ],
+        "kind": "借词来源",
+        "donor": "瓜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「瓜」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua²¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 瓜; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "哄; 骗",
+      "note": {
+        "id": "chinese-loan-stedt-rn-413857",
+        "wordIds": [
+          "stedt-rn-413857"
+        ],
+        "kind": "借词来源",
+        "donor": "耍",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「耍」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "sua⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 耍; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "推翻; 打倒",
+      "note": {
+        "id": "chinese-loan-stedt-rn-407684",
+        "wordIds": [
+          "stedt-rn-407684"
+        ],
+        "kind": "借词来源",
+        "donor": "垮",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「垮」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xa²¹mo²¹ kʰua⁵⁵liau⁵⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 垮 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "揉",
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-0434",
+        "wordIds": [
+          "yubao-60757-v-0434"
+        ],
+        "kind": "借词来源",
+        "donor": "挼",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「挼」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zua²¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 挼; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "捻",
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-0781",
+        "wordIds": [
+          "yubao-60757-v-0781"
+        ],
+        "kind": "借词来源",
+        "donor": "挼",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「挼」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zua²¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 挼; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "官",
+      "note": {
+        "id": "loan-etymology-yubao-60757-v-2317",
+        "wordIds": [
+          "yubao-60757-v-2317"
+        ],
+        "kind": "借词来源",
+        "donor": "官",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "第 1、2 音节借自汉语「官」，属早期借词。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰua²⁴ kʰua²⁴tʰi⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24",
+        "borrowingPeriod": "early"
+      },
+      "noteEn": "Syllables 1 and 2 are early Chinese loans from 官."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "南瓜",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0214",
+        "wordIds": [
+          "yubao-60756-v-0214"
+        ],
+        "kind": "借词来源",
+        "donor": "瓜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「瓜」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiŋ⁵⁵kua³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 瓜 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "甲鱼",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0253",
+        "wordIds": [
+          "yubao-60756-v-0253"
+        ],
+        "kind": "借词来源",
+        "donor": "团鱼",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「团鱼」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰuaŋ³³ʑi⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 团鱼; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "吃晚饭",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0438",
+        "wordIds": [
+          "yubao-60756-v-0438"
+        ],
+        "kind": "借词来源",
+        "donor": "饭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「饭」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑe³³xuaŋ³³ka³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 饭 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "箩筐",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0674",
+        "wordIds": [
+          "yubao-60756-v-0674"
+        ],
+        "kind": "借词来源",
+        "donor": "筐",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「筐」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "lɔ³³kʰuaŋ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 筐 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "饭馆",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0695",
+        "wordIds": [
+          "yubao-60756-v-0695"
+        ],
+        "kind": "借词来源",
+        "donor": "饭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「饭」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xuaŋ³³tiaŋ³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 饭 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "放学",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0721",
+        "wordIds": [
+          "yubao-60756-v-0721"
+        ],
+        "kind": "借词来源",
+        "donor": "放",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「放」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xuaŋ³⁵ɕau⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 放 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "撞",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0810",
+        "wordIds": [
+          "yubao-60756-v-0810"
+        ],
+        "kind": "借词来源",
+        "donor": "撞",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「撞」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰuaŋ⁵⁵tɔ⁵⁵lu⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 撞 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "刷牙",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0871",
+        "wordIds": [
+          "yubao-60756-v-0871"
+        ],
+        "kind": "借词来源",
+        "donor": "刷",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「刷」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "sɿ⁵³sɿ³³sua³⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 刷 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "吹牛",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0928",
+        "wordIds": [
+          "yubao-60756-v-0928"
+        ],
+        "kind": "借词来源",
+        "donor": "夸",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「夸」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xɛ⁵⁵kʰəu³³kʰua⁵⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 夸 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "再见",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0934",
+        "wordIds": [
+          "yubao-60756-v-0934"
+        ],
+        "kind": "借词来源",
+        "donor": "",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "第 2 音节为汉语借入成分，具体原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "lɛ⁵⁵xuaŋ⁵⁵ɣə³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The component at syllable 2 is borrowed from Chinese; the specific donor expression remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "宽敞",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0944",
+        "wordIds": [
+          "yubao-60756-v-0944"
+        ],
+        "kind": "借词来源",
+        "donor": "宽",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「宽」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰuaŋ³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 宽; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "圆",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0956",
+        "wordIds": [
+          "yubao-60756-v-0956"
+        ],
+        "kind": "借词来源",
+        "donor": "团",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「团」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tuaŋ³³ti³³kʰu⁵⁵lɛ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 团 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "方",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0958",
+        "wordIds": [
+          "yubao-60756-v-0958"
+        ],
+        "kind": "借词来源",
+        "donor": "方",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「方」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "sɿ³³xuaŋ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 方 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "光",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1208",
+        "wordIds": [
+          "yubao-60756-v-1208"
+        ],
+        "kind": "借词来源",
+        "donor": "光",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「光」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kuaŋ⁵⁵ɕaŋ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 光 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "瓜蔓",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1434",
+        "wordIds": [
+          "yubao-60756-v-1434"
+        ],
+        "kind": "借词来源",
+        "donor": "瓜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「瓜」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua⁵⁵tʰeŋ⁵⁵tsɿ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 瓜 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "瓜籽",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1465",
+        "wordIds": [
+          "yubao-60756-v-1465"
+        ],
+        "kind": "借词来源",
+        "donor": "瓜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「瓜」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua⁵⁵tsɿ³³pu³³lɛ³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 瓜 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "蒜苗",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1532",
+        "wordIds": [
+          "yubao-60756-v-1532"
+        ],
+        "kind": "借词来源",
+        "donor": "蒜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「蒜」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ta⁵⁵suaŋ⁵⁵tʰɛ⁵⁵tʰɛ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 蒜 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "啄木鸟",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1573-rime-review",
+        "wordIds": [
+          "yubao-60756-v-1573"
+        ],
+        "kind": "借词来源",
+        "donor": "",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "第 3 音节为汉语借入成分，具体原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "tsua³³mu⁵⁵kua⁵⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The component at syllable 3 is borrowed from Chinese; the specific donor expression remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "鹰爪",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1579",
+        "wordIds": [
+          "yubao-60756-v-1579"
+        ],
+        "kind": "借词来源",
+        "donor": "爪子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「爪子」部分（第 2—3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "paŋ³⁵tsua⁵⁵tsɿ³³",
+            "span": [
+              2,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 爪子 component (syllables 2–3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "鸡爪",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1705",
+        "wordIds": [
+          "yubao-60756-v-1705"
+        ],
+        "kind": "借词来源",
+        "donor": "爪子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「爪子」部分（第 4—5 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "za³³tɕi³³pʰa³³tsua⁵³tsɿ³³",
+            "span": [
+              4,
+              5
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 爪子 component (syllables 4–5) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "木板房",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1720",
+        "wordIds": [
+          "yubao-60756-v-1720"
+        ],
+        "kind": "借词来源",
+        "donor": "房",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「房」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "mu³³xuaŋ³³tsɿ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 房 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "砖瓦房",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1721",
+        "wordIds": [
+          "yubao-60756-v-1721"
+        ],
+        "kind": "借词来源",
+        "donor": "砖房子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「砖房子」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsuaŋ⁵⁵xuaŋ⁵⁵tsɿ⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 砖房子; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "椽子",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1733",
+        "wordIds": [
+          "yubao-60756-v-1733"
+        ],
+        "kind": "借词来源",
+        "donor": "椽",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「椽」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰuaŋ³³kʰɔ³³pʰi⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 椽 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "闩",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1739",
+        "wordIds": [
+          "yubao-60756-v-1739"
+        ],
+        "kind": "借词来源",
+        "donor": "闩子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「闩子」部分（第 3—4 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵suaŋ⁵⁵tsɿ³³",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 闩子 component (syllables 3–4) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "砖墙",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1755",
+        "wordIds": [
+          "yubao-60756-v-1755"
+        ],
+        "kind": "借词来源",
+        "donor": "砖",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「砖」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xɔ⁵⁵tsuaŋ⁵⁵tɕʰaŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 砖 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "开关",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1775",
+        "wordIds": [
+          "yubao-60756-v-1775"
+        ],
+        "kind": "借词来源",
+        "donor": "关",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「关」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰɛ⁵⁵kuaŋ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 关 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "勺子",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1813",
+        "wordIds": [
+          "yubao-60756-v-1813"
+        ],
+        "kind": "借词来源",
+        "donor": "饭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「饭」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xuaŋ⁵⁵pʰiau⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 饭 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "木勺子",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1814",
+        "wordIds": [
+          "yubao-60756-v-1814"
+        ],
+        "kind": "借词来源",
+        "donor": "饭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「饭」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰa⁵⁵xuaŋ⁵⁵pʰiau⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 饭 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "饭勺",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1815",
+        "wordIds": [
+          "yubao-60756-v-1815"
+        ],
+        "kind": "借词来源",
+        "donor": "饭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「饭」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xuaŋ⁵⁵pʰiau⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 饭 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "水碾",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1939",
+        "wordIds": [
+          "yubao-60756-v-1939"
+        ],
+        "kind": "借词来源",
+        "donor": "房",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「房」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ȵaŋ⁵⁵xuaŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 房 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "皮袄",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1959",
+        "wordIds": [
+          "yubao-60756-v-1959"
+        ],
+        "kind": "借词来源",
+        "donor": "褂",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「褂」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "pʰi³³kua³³tsɿ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 褂 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "耳环",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1999",
+        "wordIds": [
+          "yubao-60756-v-1999"
+        ],
+        "kind": "借词来源",
+        "donor": "环",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「环」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɛ⁵⁵xuaŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 环 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "排骨",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2008",
+        "wordIds": [
+          "yubao-60756-v-2008"
+        ],
+        "kind": "借词来源",
+        "donor": "",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "第 2 音节为汉语借入成分，具体原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑau⁵⁵xuaŋ³³lu³³ka³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The component at syllable 2 is borrowed from Chinese; the specific donor expression remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "软饭",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2069",
+        "wordIds": [
+          "yubao-60756-v-2069"
+        ],
+        "kind": "借词来源",
+        "donor": "饭",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「饭」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ȵi³³pa³³xuaŋ³⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 饭 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "肩胛骨",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2087",
+        "wordIds": [
+          "yubao-60756-v-2087"
+        ],
+        "kind": "借词来源",
+        "donor": "",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "第 1 音节为汉语借入成分，具体原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "xuaŋ⁵⁵sɿ⁵⁵ku⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The component at syllable 1 is borrowed from Chinese; the specific donor expression remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "凤凰",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2304",
+        "wordIds": [
+          "yubao-60756-v-2304"
+        ],
+        "kind": "借词来源",
+        "donor": "凰",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「凰」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xɔŋ⁵⁵xuaŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 凰 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "摆渡人",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2339",
+        "wordIds": [
+          "yubao-60756-v-2339"
+        ],
+        "kind": "借词来源",
+        "donor": "船",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「船」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tu⁵⁵tsʰuaŋ⁵⁵lau⁵³paŋ³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 船 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "鳏夫",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2342",
+        "wordIds": [
+          "yubao-60756-v-2342"
+        ],
+        "kind": "借词来源",
+        "donor": "寡",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「寡」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua⁵³kɔŋ³³tsɿ³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 寡 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "寡妇",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2343",
+        "wordIds": [
+          "yubao-60756-v-2343"
+        ],
+        "kind": "借词来源",
+        "donor": "寡",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「寡」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua⁵⁵pʰau⁵⁵tsɿ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 寡 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "筐",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2449",
+        "wordIds": [
+          "yubao-60756-v-2449"
+        ],
+        "kind": "借词来源",
+        "donor": "筐",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「筐」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "lɔ³³kʰuaŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 筐 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "划船",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2487",
+        "wordIds": [
+          "yubao-60756-v-2487"
+        ],
+        "kind": "借词来源",
+        "donor": "船",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「船」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰuaŋ³³xua³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 船 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "翻筋斗",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2532",
+        "wordIds": [
+          "yubao-60756-v-2532"
+        ],
+        "kind": "借词来源",
+        "donor": "翻",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「翻」部分（第 5 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "keŋ⁵⁵tʰəu⁵⁵pu⁵⁵lɛ⁵⁵xuaŋ⁵⁵",
+            "span": [
+              5,
+              5
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 翻 component (syllable 5) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "告状",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2650",
+        "wordIds": [
+          "yubao-60756-v-2650"
+        ],
+        "kind": "借词来源",
+        "donor": "状",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「状」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsuaŋ³⁵kau⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 状 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "坐牢",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2653",
+        "wordIds": [
+          "yubao-60756-v-2653"
+        ],
+        "kind": "借词来源",
+        "donor": "房",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「房」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "lau³³xuaŋ³³tɔŋ⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 房 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "搓",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2680",
+        "wordIds": [
+          "yubao-60756-v-2680"
+        ],
+        "kind": "借词来源",
+        "donor": "挼",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「挼」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zua³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 挼; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "刮",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2695",
+        "wordIds": [
+          "yubao-60756-v-2695"
+        ],
+        "kind": "借词来源",
+        "donor": "刮",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「刮」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua³⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 刮; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "剐蹭",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2737",
+        "wordIds": [
+          "yubao-60756-v-2737"
+        ],
+        "kind": "借词来源",
+        "donor": "撞",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「撞」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰuaŋ⁵⁵tɔ⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 撞 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "撒娇",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2759",
+        "wordIds": [
+          "yubao-60756-v-2759"
+        ],
+        "kind": "借词来源",
+        "donor": "耍",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「耍」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "sua⁵⁵tɕau⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 耍 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "烧砖",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2768",
+        "wordIds": [
+          "yubao-60756-v-2768"
+        ],
+        "kind": "借词来源",
+        "donor": "砖",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「砖」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsuaŋ⁵⁵ u⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 砖 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "刷墙",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2771",
+        "wordIds": [
+          "yubao-60756-v-2771"
+        ],
+        "kind": "借词来源",
+        "donor": "刷",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「刷」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰaŋ³³sua³⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 刷 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "闩门",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2778-rime-review",
+        "wordIds": [
+          "yubao-60756-v-2778"
+        ],
+        "kind": "借词来源",
+        "donor": "闩",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「闩」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɔ⁵⁵meŋ⁵⁵ suaŋ⁵⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 闩 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "着急",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2828",
+        "wordIds": [
+          "yubao-60756-v-2828"
+        ],
+        "kind": "借词来源",
+        "donor": "慌",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「慌」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xuaŋ⁵⁵tsaŋ³³tʰa³³tau³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 慌 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "背心",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0368",
+        "wordIds": [
+          "yubao-60823-v-0368"
+        ],
+        "kind": "借词来源",
+        "donor": "褂",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「褂」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua¹³kua⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 褂; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "揉",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0434",
+        "wordIds": [
+          "yubao-60823-v-0434"
+        ],
+        "kind": "借词来源",
+        "donor": "挼",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「挼」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zua³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 挼; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "擀",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0435",
+        "wordIds": [
+          "yubao-60823-v-0435"
+        ],
+        "kind": "借词来源",
+        "donor": "挼",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「挼」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zua³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 挼; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "抓",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0804",
+        "wordIds": [
+          "yubao-60823-v-0804"
+        ],
+        "kind": "借词来源",
+        "donor": "抓",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「抓」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsua⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 抓; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "鸡爪",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1705",
+        "wordIds": [
+          "yubao-60823-v-1705"
+        ],
+        "kind": "借词来源",
+        "donor": "爪子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「爪子」部分（第 3—4 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "za³³nie³³tsua⁵⁵tsɿ³³",
+            "span": [
+              3,
+              4
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 爪子 component (syllables 3–4) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "打卦",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2289",
+        "wordIds": [
+          "yubao-60823-v-2289"
+        ],
+        "kind": "借词来源",
+        "donor": "卦",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「卦」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kua¹³tsɿ⁵⁵xa⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 卦 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "挠",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2587",
+        "wordIds": [
+          "yubao-60823-v-2587"
+        ],
+        "kind": "借词来源",
+        "donor": "抓",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「抓」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kʰa³³kʰɤe⁵⁵tsua⁵⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 抓 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "搓",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2590",
+        "wordIds": [
+          "yubao-60823-v-2590"
+        ],
+        "kind": "借词来源",
+        "donor": "挼",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「挼」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zua³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 挼; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "刨食",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2715",
+        "wordIds": [
+          "yubao-60823-v-2715"
+        ],
+        "kind": "借词来源",
+        "donor": "抓",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「抓」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕi³¹pʰa³³tsua⁵⁵",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 抓 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "算命",
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-0571",
+        "wordIds": [
+          "yubao-60757-v-0571"
+        ],
+        "kind": "借词来源",
+        "donor": "命、算",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "前两音节分别借自汉语「命」「算」，按“命—算”的顺序构词。",
+        "reviewedForms": [
+          {
+            "ipa": "min²⁴suan³³ma³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The first two syllables are borrowed from Chinese 命 and 算, in the order 命–算."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "剪指甲",
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-2779",
+        "wordIds": [
+          "yubao-60757-v-2779"
+        ],
+        "kind": "借词来源",
+        "donor": "剪",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「剪」部分（第 6 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕie²⁴mi³³tʰi²²kʰuo⁵⁵tʰa⁵⁵tɕiaŋ⁵⁵",
+            "span": [
+              6,
+              6
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 剪 component (syllable 6) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "窗",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0314",
+        "wordIds": [
+          "yubao-60756-v-0314"
+        ],
+        "kind": "借词来源",
+        "donor": "亮窗儿",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "汉语借词，可能对应「亮窗儿」，末音节带儿化。",
+        "reviewedForms": [
+          {
+            "ipa": "liaŋ³⁵tsʰuɚ⁵³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "A Chinese loan, possibly from 亮窗儿; the final syllable is rhoticized."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "锣",
+      "note": {
+        "id": "chinese-loan-w1848",
+        "wordIds": [
+          "w1848"
+        ],
+        "kind": "借词来源",
+        "donor": "磬",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「磬」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰiŋ²⁴",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 磬; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "情",
+      "note": {
+        "id": "chinese-loan-w1849",
+        "wordIds": [
+          "w1849"
+        ],
+        "kind": "借词来源",
+        "donor": "情",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「情」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕʰiŋ²¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 情; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "命运",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2288",
+        "wordIds": [
+          "yubao-60823-v-2288"
+        ],
+        "kind": "借词来源",
+        "donor": "",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语，具体原词待考。",
+        "reviewedForms": [
+          {
+            "ipa": "mĩ¹³sã⁵⁵tai¹³",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese; the specific donor expression remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "聪明",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289294",
+        "wordIds": [
+          "stedt-rn-289294"
+        ],
+        "kind": "借词来源",
+        "donor": "乖",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「乖」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kuai⁵⁵pau⁵⁵tsi⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 乖 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "槐树",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1393",
+        "wordIds": [
+          "yubao-60756-v-1393"
+        ],
+        "kind": "借词来源",
+        "donor": "槐树",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「槐树」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xuɛ³³su⁵⁵kʰa⁵³mu³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 槐树 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "做好",
+      "note": {
+        "id": "chinese-loan-w433",
+        "wordIds": [
+          "w433"
+        ],
+        "kind": "借词来源",
+        "donor": "抻敨",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「抻敨」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɜŋ⁵⁵tʰu⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 抻敨; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "柚子",
+      "note": {
+        "id": "chinese-loan-w434",
+        "wordIds": [
+          "w434"
+        ],
+        "kind": "借词来源",
+        "donor": "橙子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「橙子」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɜŋ²¹tsɨ²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 橙子; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "不成",
+      "note": {
+        "id": "chinese-loan-w6",
+        "wordIds": [
+          "w6"
+        ],
+        "kind": "借词来源",
+        "donor": "不成",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「不成」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "-pu⁵⁵tsʰɜŋ²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 不成; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "存",
+      "note": {
+        "id": "chinese-loan-w431",
+        "wordIds": [
+          "w431"
+        ],
+        "kind": "借词来源",
+        "donor": "存",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「存」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tsʰɜŋ²¹",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 存; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "整天",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0088",
+        "wordIds": [
+          "yubao-60756-v-0088"
+        ],
+        "kind": "借词来源",
+        "donor": "梗天",
+        "donorVariety": "西南官话或湘语",
+        "scope": "whole",
+        "text": "借自西南官话或湘语「梗天」，意为“整天”。",
+        "reviewedForms": [
+          {
+            "ipa": "keŋ⁵⁵tʰiaŋ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Southwestern Mandarin or Xiang 梗天, meaning “all day”."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "翻筋斗",
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-2532",
+        "wordIds": [
+          "yubao-60757-v-2532"
+        ],
+        "kind": "借词来源",
+        "donor": "跟斗",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「跟斗」部分（第 1—2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɘn⁵⁵təu⁵⁵xa²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 跟斗 component (syllables 1–2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "马上",
+      "note": {
+        "id": "chinese-loan-w751",
+        "wordIds": [
+          "w751"
+        ],
+        "kind": "借词来源",
+        "donor": "跟倒",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「跟倒」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "kɜŋ⁵⁵tau⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 跟倒; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "勺子",
+      "note": {
+        "id": "chinese-loan-w2279",
+        "wordIds": [
+          "w2279"
+        ],
+        "kind": "借词来源",
+        "donor": "调羹",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「调羹」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰiau²¹kɜŋ²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 调羹; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "很",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-1160",
+        "wordIds": [
+          "yubao-60756-v-1160"
+        ],
+        "kind": "借词来源",
+        "donor": "很",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「很」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xeŋ⁵³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 很; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "杏",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0164",
+        "wordIds": [
+          "yubao-60823-v-0164"
+        ],
+        "kind": "借词来源",
+        "donor": "杏子",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「杏子」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xɤ̃¹³tsɿ⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 杏子; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "忌妒",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0891",
+        "wordIds": [
+          "yubao-60823-v-0891"
+        ],
+        "kind": "借词来源",
+        "donor": "恨",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「恨」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xɤ̃¹³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 恨; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "打喷嚏",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0772",
+        "wordIds": [
+          "yubao-60823-v-0772"
+        ],
+        "kind": "借词来源",
+        "donor": "",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "表示“喷嚏”的前两音节借自汉语，具体方言词形待核。",
+        "reviewedForms": [
+          {
+            "ipa": "pʰɤ̃¹³tɕiau³³xa³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The noun meaning “sneeze” (syllables 1–2) is borrowed from Chinese; its specific dialectal form remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "棚子",
+      "note": {
+        "id": "chinese-loan-yubao-60757-v-1725",
+        "wordIds": [
+          "yubao-60757-v-1725"
+        ],
+        "kind": "借词来源",
+        "donor": "窝棚",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「窝棚」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "uo⁵⁵pʰɘŋ³³",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 窝棚; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "碰",
+      "note": {
+        "id": "chinese-loan-w1714",
+        "wordIds": [
+          "w1714"
+        ],
+        "kind": "借词来源",
+        "donor": "碰",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「碰」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "pʰɜŋ²⁴",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 碰; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "浑",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-0955",
+        "wordIds": [
+          "yubao-60756-v-0955"
+        ],
+        "kind": "借词来源",
+        "donor": "浓",
+        "donorVariety": "湘语",
+        "scope": "whole",
+        "text": "可能借自湘语「浓」。",
+        "reviewedForms": [
+          {
+            "ipa": "ȵɔŋ³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Possibly borrowed from Xiang 浓."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "浊",
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2860",
+        "wordIds": [
+          "yubao-60756-v-2860"
+        ],
+        "kind": "借词来源",
+        "donor": "浓",
+        "donorVariety": "湘语",
+        "scope": "whole",
+        "text": "可能借自湘语「浓」。",
+        "reviewedForms": [
+          {
+            "ipa": "ȵɔŋ³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Possibly borrowed from Xiang 浓."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "婶娘",
+      "note": {
+        "id": "chinese-loan-w2047",
+        "wordIds": [
+          "w2047"
+        ],
+        "kind": "借词来源",
+        "donor": "婶娘",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「婶娘」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "sɜŋ⁵⁵ȵiɛn²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 婶娘; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "姨母; 母亲的姐妹; 姨妈",
+      "note": {
+        "id": "chinese-loan-stedt-rn-357548",
+        "wordIds": [
+          "stedt-rn-357548"
+        ],
+        "kind": "借词来源",
+        "donor": "姨娘",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「姨娘」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ji²¹ȵian⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 姨娘; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "舅母; 舅妈",
+      "note": {
+        "id": "chinese-loan-stedt-rn-196731",
+        "wordIds": [
+          "stedt-rn-196731"
+        ],
+        "kind": "借词来源",
+        "donor": "舅娘",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「舅娘」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiu³⁵ȵian²¹",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 舅娘; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "炼钢",
+      "note": {
+        "id": "chinese-loan-w723",
+        "wordIds": [
+          "w723"
+        ],
+        "kind": "借词来源",
+        "donor": "钢、炼",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "两音节分别借自汉语「钢」「炼」，按“钢—炼”的名词—动词顺序构词。",
+        "reviewedForms": [
+          {
+            "ipa": "kaŋ⁵⁵ liɛn²⁴",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The two syllables are borrowed from Chinese 钢 and 炼, in the noun–verb order 钢–炼."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "今后",
+      "note": {
+        "id": "chinese-loan-w176",
+        "wordIds": [
+          "w176"
+        ],
+        "kind": "借词来源",
+        "donor": "天",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「天」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ai²⁴tʰiɛn⁵⁵liɛ²¹",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 天 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "很甜",
+      "note": {
+        "id": "chinese-loan-w2276",
+        "wordIds": [
+          "w2276"
+        ],
+        "kind": "借词来源",
+        "donor": "甜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「甜」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰiɛn²¹tsei⁵⁵tsei⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 甜 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "往天",
+      "note": {
+        "id": "chinese-loan-w2363",
+        "wordIds": [
+          "w2363"
+        ],
+        "kind": "借词来源",
+        "donor": "天",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「天」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "wɛn⁵⁵tʰiɛn²¹",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 天 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "今后",
+      "note": {
+        "id": "chinese-loan-w3541",
+        "wordIds": [
+          "w3541"
+        ],
+        "kind": "借词来源",
+        "donor": "天",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「天」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ei²⁴tʰiɛn⁵⁵liɛ²¹",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 天 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "今后",
+      "note": {
+        "id": "chinese-loan-stedt-rn-288538",
+        "wordIds": [
+          "stedt-rn-288538"
+        ],
+        "kind": "借词来源",
+        "donor": "天",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「天」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ai³⁵tʰiã⁵⁵le²¹",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 天 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "甜",
+      "note": {
+        "id": "chinese-loan-stedt-rn-289287-rime-review",
+        "wordIds": [
+          "stedt-rn-289287"
+        ],
+        "kind": "借词来源",
+        "donor": "甜",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「甜」部分（第 1 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰiã²¹",
+            "span": [
+              1,
+              1
+            ]
+          },
+          {
+            "ipa": "tʰiã²¹tsʰa⁵⁵tsʰa⁵⁵",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 甜 component (syllable 1) is borrowed from Chinese; the specific donor variety remains to be established.",
+      "expectedBadgeScope": "mixed"
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "阴历",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0109",
+        "wordIds": [
+          "yubao-60823-v-0109"
+        ],
+        "kind": "借词来源",
+        "donor": "天",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「天」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "uã⁵⁵tʰiã³¹nie³³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 天 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "星期天",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-0111",
+        "wordIds": [
+          "yubao-60823-v-0111"
+        ],
+        "kind": "借词来源",
+        "donor": "星期天",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「星期天」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ɕĩ⁵⁵tɕʰi⁵⁵tʰiã⁵⁵",
+            "span": [
+              1,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 星期天; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "田坎",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1241",
+        "wordIds": [
+          "yubao-60823-v-1241"
+        ],
+        "kind": "借词来源",
+        "donor": "田",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「田」部分（第 3 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "sɿ³³kʰɤe⁵⁵tʰiã³¹ka¹³",
+            "span": [
+              3,
+              3
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 田 component (syllable 3) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "秧田",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1242",
+        "wordIds": [
+          "yubao-60823-v-1242"
+        ],
+        "kind": "借词来源",
+        "donor": "秧田",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「秧田」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "ʑiã⁵⁵tʰiã⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 秧田; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "夏天",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-1330",
+        "wordIds": [
+          "yubao-60823-v-1330"
+        ],
+        "kind": "借词来源",
+        "donor": "热天",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「热天」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "zɤe³³tʰiã⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 热天; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "填",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2711",
+        "wordIds": [
+          "yubao-60823-v-2711"
+        ],
+        "kind": "借词来源",
+        "donor": "填",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「填」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tʰiã³³",
+            "span": [
+              1,
+              1
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 填; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "仰睡",
+      "note": {
+        "id": "chinese-loan-yubao-60823-v-2761",
+        "wordIds": [
+          "yubao-60823-v-2761"
+        ],
+        "kind": "借词来源",
+        "donor": "天",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「天」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "xuã⁵⁵tʰiã³³ŋau³³mo³¹nie¹³",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 天 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "二面",
+      "note": {
+        "id": "chinese-loan-w196",
+        "wordIds": [
+          "w196"
+        ],
+        "kind": "借词来源",
+        "donor": "面",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "component",
+        "text": "「面」部分（第 2 音节）借自汉语，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "au²⁴miɛn⁵⁵",
+            "span": [
+              2,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "The 面 component (syllable 2) is borrowed from Chinese; the specific donor variety remains to be established."
+    },
+    {
+      "action": "add-loan-note",
+      "zh": "境面",
+      "note": {
+        "id": "chinese-loan-w1062",
+        "wordIds": [
+          "w1062"
+        ],
+        "kind": "借词来源",
+        "donor": "境面",
+        "donorVariety": "汉语（方言待核）",
+        "scope": "whole",
+        "text": "借自汉语「境面」，具体方言来源待核。",
+        "reviewedForms": [
+          {
+            "ipa": "tɕiŋ²⁴miɛn⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Borrowed from Chinese 境面; the specific donor variety remains to be established."
+    },
+    {
+      "action": "replace-loan-note",
+      "zh": "浓茶",
+      "previousNote": {
+        "id": "chinese-loan-yubao-60756-v-2044",
+        "wordIds": [
+          "yubao-60756-v-2044"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自西南官话「浓茶」。",
+        "donor": "浓茶",
+        "donorVariety": "西南官话",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "ȵɔŋ³³tsʰa⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "complete-components-4"
+      },
+      "note": {
+        "id": "chinese-loan-yubao-60756-v-2044",
+        "wordIds": [
+          "yubao-60756-v-2044"
+        ],
+        "kind": "借词来源",
+        "text": "可能借自湘语「浓茶」。",
+        "donor": "浓茶",
+        "donorVariety": "湘语",
+        "scope": "whole",
+        "reviewedForms": [
+          {
+            "ipa": "ȵɔŋ³³tsʰa⁵⁵",
+            "span": [
+              1,
+              2
+            ]
+          }
+        ],
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Possibly borrowed from Xiang 浓茶."
+    }
+  ],
+  "retainedUnmarked": [
+    {
+      "id": "yubao-60756-v-1675",
+      "policy": "exclude-entry",
+      "reason": "水牛为本土词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json"
+    },
+    {
+      "id": "yubao-60757-v-1675",
+      "policy": "exclude-entry",
+      "reason": "水牛为本土词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json"
+    },
+    {
+      "id": "yubao-60756-v-1121",
+      "policy": "exclude-entry",
+      "reason": "件为 uang 组的本土例外。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json"
+    },
+    {
+      "id": "yubao-60756-v-1374",
+      "policy": "exclude-entry",
+      "reason": "周围为 uang 组的本土例外。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json"
+    },
+    {
+      "id": "stedt-rn-289123",
+      "policy": "exclude-entry",
+      "reason": "功为 gua 组的本土例外。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json"
+    },
+    {
+      "id": "w275",
+      "policy": "exclude-component",
+      "reason": "很扁中的 gua 为本土成分。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "pi²¹kua²¹tʰa²¹",
+          "span": [
+            2,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2748",
+      "policy": "exclude-component",
+      "reason": "枪中的 zua 不标借入。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsua²¹tsɨ²¹tsʰɔŋ²⁴",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w1612",
+      "policy": "exclude-component",
+      "reason": "小指中的 nian 仅作可能同源比较，不认定为近代借词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "ȵiɛn²¹kʰuei⁵⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2439",
+      "policy": "exclude-component",
+      "reason": "tian 为指定的本土例外，不据韵母归类判作借词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "u⁵⁵so⁵⁵xa²¹ȵie³³tʰian⁵⁵tɕiəu⁵⁵",
+          "span": [
+            5,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "yubao-60757-v-2441",
+      "policy": "exclude-component",
+      "reason": "tian 为指定的本土例外，不据韵母归类判作借词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "li²⁴pu⁵⁵lan²¹lan²⁴ȵie³³tʰian⁵⁵tɕiəu⁵⁵",
+          "span": [
+            6,
+            6
+          ]
+        }
+      ]
+    },
+    {
+      "id": "w2273",
+      "policy": "exclude-component",
+      "reason": "tian 为指定的本土例外，不据韵母归类判作借词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "tʰiɛn²¹kɤ²¹",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-454726",
+      "policy": "exclude-component",
+      "reason": "tian 为指定的本土例外，不据韵母归类判作借词。",
+      "origin": "docs/loan-rime-supplement-2026-10-24.json",
+      "reviewedForms": [
+        {
+          "ipa": "tʰiɛn²¹kɤ²¹",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stedt-rn-409017",
+      "reason": "点头义 zua 的借词分析尚不确定。"
+    },
+    {
+      "id": "yubao-60823-v-2660",
+      "reason": "同义点头词中的 zua 暂缓借词分析。"
+    }
+  ],
+  "phrases": [
+    {
+      "id": "yubao-60757-v-2779",
+      "parts": [
+        "jiemitikota",
+        "jiang"
+      ],
+      "splitAfter": 5
+    },
+    {
+      "id": "yubao-60757-v-2532",
+      "parts": [
+        "gendou",
+        "ha"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "yubao-60823-v-0772",
+      "parts": [
+        "penjiao",
+        "ha"
+      ],
+      "splitAfter": 2
+    },
+    {
+      "id": "w723",
+      "parts": [
+        "gang",
+        "lian"
+      ],
+      "splitAfter": 1
+    }
+  ],
+  "etymologyComparisons": [
+    {
+      "note": {
+        "id": "etymology-comparison-w1612",
+        "wordIds": [
+          "w1612"
+        ],
+        "kind": "词源比较",
+        "text": "词首 /ȵiɛn²¹/ 表示“小”，可能与湘语、西南官话中表示“小”的 niang 同源。",
+        "reviewBatch": "rime-supplement-2026-10-24"
+      },
+      "noteEn": "Initial /ȵiɛn²¹/ means “small” and may be cognate with niang meaning “small” in Xiang and Southwestern Mandarin."
+    }
+  ]
+}

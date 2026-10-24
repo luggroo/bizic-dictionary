@@ -73,20 +73,25 @@ const result=vm.runInContext(`(()=>{
  }
  // The mobile title jump targets the actual reading heading, never the TOC.
  const heading=document.querySelector('.grammar-article > h1.grammar-reading-title');
- const scrolls=[],originalScroll=Element.prototype.scrollIntoView;
- Element.prototype.scrollIntoView=function(options){scrolls.push({node:this,options})};
+ const scrolls=[],originalScroll=window.scrollTo,originalScrollY=window.scrollY;
+ const originalHeadingRect=heading.getBoundingClientRect;
+ window.scrollTo=options=>scrolls.push(options);
+ window.scrollY=125;
+ heading.getBoundingClientRect=()=>({top:250});
  const originalMatchMedia=window.matchMedia;
  window.matchMedia=()=>({matches:true});
  grammarSetMobileTocExpanded(false);
  if(!grammarJumpToReadingTitle())failures.push('Collapsed mobile chapter does not jump to title');
- if(scrolls.length!==1||scrolls[0].node!==heading||scrolls[0].options.block!=='start')failures.push('Mobile chapter jump did not target reading h1');
+ if(scrolls.length!==1||scrolls[0].top!==361||scrolls[0].behavior!=='auto')failures.push('Mobile chapter jump did not target reading h1');
+ heading.getBoundingClientRect=()=>({top:-500});
+ if(!grammarJumpToReadingTitle()||scrolls.length!==2||scrolls[1].top!==0)failures.push('Mobile chapter jump scrolled above document start');
  grammarSetMobileTocExpanded(true);
- if(grammarJumpToReadingTitle()||scrolls.length!==1)failures.push('Expanded menu unexpectedly triggered title jump');
+ if(grammarJumpToReadingTitle()||scrolls.length!==2)failures.push('Expanded menu unexpectedly triggered title jump');
  grammarSetMobileTocExpanded(false);
  window.matchMedia=()=>({matches:false});
- if(grammarJumpToReadingTitle()||scrolls.length!==1)failures.push('Desktop chapter jump should be disabled');
+ if(grammarJumpToReadingTitle()||scrolls.length!==2)failures.push('Desktop chapter jump should be disabled');
  if(originalMatchMedia===undefined)delete window.matchMedia;else window.matchMedia=originalMatchMedia;
- if(originalScroll===undefined)delete Element.prototype.scrollIntoView;else Element.prototype.scrollIntoView=originalScroll;
+ window.scrollTo=originalScroll;window.scrollY=originalScrollY;heading.getBoundingClientRect=originalHeadingRect;
  // A genuinely different source spelling remains visible.
  const alternate=root(grammarRenderHTML({id:'999',dialect:'north',html:'<table><tr><td>other /tsʰa²⁴/</td></tr></table>'}));if(!alternate.textContent.includes('other'))failures.push('different source form removed');
  return {failures,pages,citations};

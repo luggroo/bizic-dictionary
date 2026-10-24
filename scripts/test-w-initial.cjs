@@ -21,6 +21,10 @@ for(const [raw,accent,poj] of [['u55','wū','ū'],['ũ55','wūn','ūn'],['ua35',
 assert.equal(ctx.northernSurveySpelling('uo24thu55','60757').accent,'wótū');
 assert.equal(ctx.northernSurveySpelling('uei33tsi33li24','60757').accent,'wēizīlí');
 assert.equal(ctx.northernSurveySpelling('uɤ̃55','60823').accent,'wēn');
+assert.equal(ctx.northernSurveySpelling('un55','60756').accent,'wēn');
+assert.equal(ctx.northernSurveySpelling('un33','60756').ye,'wenr');
+assert.equal(ctx.northernSurveySpelling('kun55','60756').accent,'gūn');
+assert.equal(ctx.northernSurveySpelling('lu33un33tsɿ55','60756').accent,'lǔwěnzī');
 assert.equal(ctx.grammarSpelling('u','north').accent,'wu');
 assert.equal(ctx.grammarSpelling('u²¹','north','ur').accent,'wǔ');
 assert.equal(ctx.grammarSpelling('uo²¹','north').accent,'wǒ');
