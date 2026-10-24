@@ -36,6 +36,21 @@ async function main(){
   await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
   assert.equal(await page.locator('aside nav .active').getAttribute('data-view'),view);
  };
+ const detailReady=async(expected=null)=>{
+  await page.waitForFunction(wanted=>{
+   const dialog=document.querySelector('#detail'),body=document.querySelector('#detail-body'),id=currentDetail,overlay=currentOverlay;
+   if(!dialog?.open||!body||!SitePages.isReady(state,id))return false;
+   if(wanted&&JSON.stringify(overlay)!==JSON.stringify(wanted))return false;
+   if(overlay?.type==='notation-pair')return !!body.querySelector('h2,h3');
+   if(!id)return false;
+   if(W[id])return W[id]._chunk===undefined&&Array.isArray(W[id].attestations)&&!!body.querySelector('.word-entry-definition h2');
+   if(C[id])return !C[id]._corpusEntry&&!!body.querySelector('h2')&&!!body.querySelector(C[id].externalText?'.external-text-block':'.detail-actions');
+   if(R[id])return !!body.querySelector('h1')&&!!body.querySelector('h2');
+   if(S[id])return !S[id]._textChunk&&!!body.querySelector('h2')&&!!body.querySelector('.detail-actions');
+   return false;
+  },expected,{timeout:90000});
+  await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+ };
  const tap=async selector=>{
   const target=page.locator(selector).first();
   if(!await target.evaluate(el=>el.tagName==='SUMMARY'))for(const detail of await target.locator('xpath=ancestor::details').all())if(await detail.getAttribute('open')===null)await detail.locator('summary').first().tap();
@@ -49,12 +64,13 @@ async function main(){
  const pass=name=>{checks.push(name);console.log('PASS ['+engine+']: '+name);};
  const notationHistoryChecks=async()=>{
   await visit('#notation','notation');
-  await tap('[data-pair-source="zhou-ts"]');await page.waitForSelector('dialog[open]');
+  await tap('[data-pair-source="zhou-ts"]');await detailReady();
+  const overlay=await page.evaluate(()=>currentOverlay);
   const evidence=await page.locator('#detail-body').innerText();
   await page.goBack();await closed();await ready('notation');
-  await page.goForward();await page.waitForSelector('dialog[open]');
+  await page.goForward();await detailReady(overlay);
   assert.equal(await page.locator('#detail-body').innerText(),evidence);
-  await page.reload();await page.waitForSelector('dialog[open]',{timeout:90000});
+  await page.reload();await detailReady(overlay);
   assert.equal(await page.locator('#detail-body').innerText(),evidence);
   await close();
   await page.locator('#notation-source').selectOption('zhou-fx');
@@ -113,11 +129,12 @@ async function main(){
  assert.equal(page.url(),searchURL);
  pass('Search scope and results survive Back and reload; here excludes there');
 
- await tap('.word-card-content');await page.waitForSelector('dialog[open]');
+ const wordId=await page.locator('.word-card-content').first().getAttribute('data-open');
+ await tap('.word-card-content');await detailReady(wordId);
  const detailHeading=await page.locator('#detail-body h1').first().innerText();
  await page.goBack();await closed();await ready('words');
  assert.equal(await page.inputValue('#query'),'here');
- await page.goForward();await page.waitForSelector('dialog[open]');
+ await page.goForward();await detailReady(wordId);
  assert.equal(await page.locator('#detail-body h1').first().innerText(),detailHeading);
  await close();
  pass('Back closes details before leaving the list; Forward restores details');
@@ -143,22 +160,30 @@ async function main(){
  await nav('corpus');
  const collections=await page.locator('[data-corpus-collection]').evaluateAll(items=>items.map(el=>el.dataset.corpusCollection));
  assert.equal(collections.length,3);
+ let delayedCorpusReads=0;
+ const delayedCorpus=async route=>{delayedCorpusReads++;await new Promise(resolve=>setTimeout(resolve,250));await route.continue();};
+ await page.route('**/prepared/corpus-entries/**',delayedCorpus);
  for(const collection of collections){
   await tap('[data-corpus-collection="'+collection+'"]');
   await page.waitForSelector('.corpus-card-content[data-open]');
   const collectionURL=page.url();
   await page.reload();await ready('corpus');
   assert.equal(await page.evaluate(()=>state.corpusCollection),collection);
-  await tap('.corpus-card-content[data-open]');await page.waitForSelector('dialog[open]');
+  const corpusId=await page.locator('.corpus-card-content[data-open]').first().getAttribute('data-open');
+  await tap('.corpus-card-content[data-open]');await detailReady(corpusId);
   assert((await page.locator('#detail-body').innerText()).length>50);
   assert.equal(await page.locator('#note,#save-note,.bookmark').count(),0);
   await page.goBack();await closed();
   assert.equal(page.url(),collectionURL);
   await tap('[data-corpus-collection=""]');
  }
+ await page.unroute('**/prepared/corpus-entries/**',delayedCorpus);
+ assert.equal(delayedCorpusReads,collections.length,'each reloaded collection hydrates its selected record after the delayed response');
  pass('All three corpus collections, their readers, collection deep links and Back');
 
- await nav('history');await tap('#main [data-open]');await page.waitForSelector('dialog[open]');await close();
+ await nav('history');
+ const comparisonId=await page.locator('#main [data-open]').first().getAttribute('data-open');
+ await tap('#main [data-open]');await detailReady(comparisonId);await close();
  await nav('home');await page.locator('#query').fill('water');await tap('#search-form button');
  await page.waitForSelector('[data-results="history"]');
  await tap('[data-results="history"]');await ready('history');
@@ -219,7 +244,7 @@ async function main(){
   await page.locator('#notation-source').selectOption(value);
   assert((await page.locator('#main').innerText()).length>100);
  }
- await tap('#main [data-open="brassett-2006"]');await page.waitForSelector('dialog[open]');await close();
+ await tap('#main [data-open="brassett-2006"]');await detailReady('brassett-2006');await close();
  pass('All '+notationSources.length+' transcription source selectors and source detail');
  await notationHistoryChecks();
 
