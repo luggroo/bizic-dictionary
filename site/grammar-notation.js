@@ -71,7 +71,7 @@ function grammarSpelling(raw,dialect='north',explicitYe=''){
     if(nominalBoundaries.has(m.index))sep='-';
     else if(previous==='ɲie'&&m[1]==='ɕi'&&/^\s*\(?$/.test(gap))sep=gap.replace(/\s/g,'');
    }
-   const boundary=count&&!gap&&key==='accent'&&/^[aeiouüı]/.test(syll[key])?"'":'';
+   const boundary=count&&!gap&&key==='accent'&&(/^[aeiouüı]/.test(syll[key])||(/n$/i.test(result[key])&&/^g/i.test(syll[key])))?"'":'';
    result[key]+=sep+boundary+syll[key];
   }
   end=m.index+m[0].length;previous=m[1];count++;
