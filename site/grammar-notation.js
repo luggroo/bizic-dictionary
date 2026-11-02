@@ -22,6 +22,9 @@ const GRAMMAR_NORTH_TONES={'55':'x','44':'x','24':'f','35':'f','325':'f','13':'f
 const GRAMMAR_SUPERS='⁰¹²³⁴⁵⁶⁷⁸⁹';
 function grammarIPANormalize(raw){return normalizeIPAAspiration(plainTones(raw).normalize('NFC')).replaceAll('ɡ','g').replaceAll('ɑ','a').replaceAll('ȵ','ɲ').replaceAll('ɲ̟','ɲ').replaceAll('ʦ','ts').replaceAll('ʨ','tɕ').replaceAll('ǳ','dz').replaceAll('ʣ','dz').replaceAll('ʥ','dʑ').replaceAll('t͡s','ts').replaceAll('t͡ɕ','tɕ');}
 function grammarNorthSyllable(core,tone=''){
+ // Feng (2025) transcribes 'white' as untoned asɨ: a + sɨ.
+ // Convert the two syllables without altering the cited source IPA.
+ if(core==='asɨ'&&!tone)return {ye:'asi',accent:'asi'};
  const onset=Object.keys(GRAMMAR_ONSETS).sort((a,b)=>b.length-a.length).find(k=>core.startsWith(k));
  const r=core.slice(onset.length);
  // After written j/q/x/y, this rime uses ie (jie/qie/xie/ye).
