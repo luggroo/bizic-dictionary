@@ -228,9 +228,13 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   let before=pair.previousSibling;
   if(before?.nodeType===Node.TEXT_NODE){
    const match=before.nodeValue.match(/([\p{Script=Latin}\p{M}]+)(\s*(?:\(\s*)?)$/u);
-   // In prose, only remove explicit onset labels. An English preposition
-   // such as "in" before /ĩ/ must not be mistaken for its spelling.
-   if(match&&known.has(match[1].normalize('NFC'))&&(pair.closest('td,th')||['ng','hx','r'].includes(match[1])))before.nodeValue=before.nodeValue.slice(0,match.index)+match[2];
+   // A preceding accented source spelling is already displayed by this pair.
+   // Also recognize unaccented xi before /ɕi/; do not remove ordinary English
+   // words such as "in" before an IPA transcription.
+   const label=match?.[1].normalize('NFC');
+   const accented=label&&/\p{M}/u.test(label.normalize('NFD'));
+   const explicit=accented||(label==='xi'&&pair.dataset.ipa==='ɕi');
+   if(match&&known.has(label)&&(pair.closest('td,th')||['ng','hx','r'].includes(label)||explicit))before.nodeValue=before.nodeValue.slice(0,match.index)+match[2];
   }else if(before?.matches?.('.grammar-spelling')&&known.has(before.textContent.trim().normalize('NFC')))before.remove();
  }
  // Romanization-only paradigms share the same display selector.
