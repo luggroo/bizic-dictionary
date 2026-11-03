@@ -87,6 +87,30 @@ const root=path.resolve(__dirname,'../site');
       }
      }
      if(ch.id==='104'){
+      const feng=[...document.querySelectorAll('p')].find(p=>p.textContent.startsWith('Feng（2025：4）记录：'));
+      if(!feng)failures.push('Feng noun-modifier comparison missing');
+      else {
+       const expected=[
+        ['kʰa tsʰo','ka co'],
+        ['kʰa-ȵiɛ tsʰo','ka-nie co'],
+        ['asɨ-ȵiɛ za','asi-nie za'],
+        ['asɨ-ȵiɛ-ɕi za','asi-nie-xi za'],
+        ['kʰa-ȵiɛ-ɕi tsʰo','ka-nie-xi co']
+       ];
+       for(const [ipa,source] of expected){
+        const pair=[...feng.querySelectorAll('.grammar-pair')].find(n=>n.dataset.ipa===ipa);
+        if(!pair){failures.push('Feng phrase missing '+ipa);continue;}
+        const spelling=pair.querySelector('.grammar-spelling');
+        if(spelling?.dataset.ye!==source||spelling?.dataset.accent!==source)failures.push('Feng source spelling changed: '+source);
+        const preceding=pair.previousSibling?.nodeType===Node.TEXT_NODE?pair.previousSibling.nodeValue:'';
+        if(preceding.trimEnd().endsWith(source))failures.push('Feng phrase duplicated: '+source);
+       }
+       if(feng.textContent.includes('asi-nie ra')||feng.textContent.includes('asi-nie-xi ra'))failures.push('Feng za was rewritten as ra');
+      }
+      // Check identical behavior in English, where the preceding context differs.
+      const fengEn=[...english.querySelectorAll('p')].find(p=>p.textContent.startsWith('Feng (2025:4) records'));
+      if(!fengEn)failures.push('English Feng comparison missing');
+      else if([...fengEn.querySelectorAll('.grammar-pair')].some(p=>p.dataset.ipa.endsWith(' za')&&!p.querySelector('.grammar-spelling')?.dataset.ye.endsWith(' za')))failures.push('Feng source za lost in English');
       // The source has *qì* · /tɕʰi⁵¹/ in adjective tables. Only the
       // switchable spelling and IPA should remain after rendering.
       const adjectiveTables=[...document.querySelectorAll('table')].filter(t=>{
