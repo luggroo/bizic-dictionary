@@ -249,13 +249,33 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   const known=new Set([forms.ye,forms.accent,forms.poj].filter(Boolean).map(x=>x.normalize('NFC')));
   let before=pair.previousSibling;
   if(before?.nodeType===Node.TEXT_NODE){
-   // A source may give an entire untoned phrase before its transcription:
-   // "ka-nie co /kʰa-ȵiɛ tsʰo/". The phonetic pair already generates a
-   // romanization; keep the source phrase once, including attested spellings
-   // that differ from automatic conversion (e.g. za rather than ra).
+   // Where a complete Latin-script phrase precedes IPA, keep the attested
+   // spelling once instead of repeating an automatic rendering.
    const ipaWords=pair.dataset.ipa.trim().split(/\s+/);
    if(ipaWords.length>1&&ipaWords.length<=6){
-    const phrasePattern=new RegExp('([a-z]+(?:-[a-z]+)*(?:\\s+[a-z]+(?:-[a-z]+)*){'+(ipaWords.length-1)+'})(\\s*)
+    const source=before.nodeValue;
+    const tokens=[...source.matchAll(/[a-z]+(?:-[a-z]+)*/gu)];
+    if(tokens.length>=ipaWords.length){
+     const selected=tokens.slice(-ipaWords.length);
+     const first=selected[0].index;
+     const end=selected[selected.length-1].index+selected[selected.length-1][0].length;
+     const authored=source.slice(first,end).normalize('NFC');
+     const aligned=/^[a-z]+(?:-[a-z]+)*(?:\s+[a-z]+(?:-[a-z]+)*)+$/u.test(authored);
+     const fullTail=/^\s*$/u.test(source.slice(end));
+     const same=known.has(authored);
+     const sourceZa=pair.dataset.ipa.endsWith(' za')&&authored.endsWith(' za')&&known.has(authored.slice(0,-2)+'ra');
+     if(aligned&&fullTail&&(same||sourceZa)){
+      if(pair.dataset.dialect==='north'){
+       const roman=pair.querySelector('.grammar-spelling');
+       roman.dataset.ye=authored;
+       roman.dataset.accent=authored;
+       roman.textContent=grammarDisplayedSpelling(roman.dataset,'north');
+      }
+      before.nodeValue=source.slice(0,first)+source.slice(end);
+      continue;
+     }
+    }
+   }
    // A preceding accented source spelling is already displayed by this pair.
    // Also recognize unaccented xi before /ɕi/; do not remove ordinary English
    // words such as "in" before an IPA transcription.
