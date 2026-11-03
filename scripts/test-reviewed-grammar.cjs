@@ -87,6 +87,8 @@ const root=path.resolve(__dirname,'../site');
       }
      }
      if(ch.id==='104'){
+      const adjectiveIntro=[...document.querySelectorAll('p')].find(p=>p.textContent.startsWith('性质动词可以直接作谓语。'));
+      if(!adjectiveIntro||/(niěxi|niě|xi)\\s+\\1(?=\\s*\\/)/u.test(adjectiveIntro.textContent))failures.push('Adjective introduction duplicates romanization before IPA');
       const overview=document.querySelector('.grammar-predicate-overview');
       const headings=[...overview.querySelectorAll('h5')].map(h=>h.textContent);
       if(JSON.stringify(headings)!==JSON.stringify(['一般否定','体态及其否定','情态及其否定','方向','程度','不规则变化','名词化']))failures.push('Overview: missing or reordered sections');
