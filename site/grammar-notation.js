@@ -15,7 +15,7 @@ const GRAMMAR_RIMES={
  'ɜŋ':'en','ɨe':'e','ɜ̃':'en','ɛ̃':'en','ẽ':'en','uɜ̃':'un','uɛ̃':'un','ũ':'un','ie':'ie','iɛ':'ie',
  'ɔ':'o','o':'o','uɔ':'o','ei':'ei','ɯi':'ei','ɯe':'e','ɯə':'e','ɯɛ':'e','uɛ':'uai','iə':'ie','iẽ':'ian','iuŋ':'iong','ue':'ue','uẽ':'uan','ə':'e',
  'an':'an','aŋ':'ang','en':'en','in':'in','ian':'ian','uan':'uan','un':'un','uin':'un',
- 'oŋ':'ong','ioŋ':'iong','iŋ':'in','uŋ':'un','io':'io','iɔ':'io','ɛ':'ai','y':'ü',
+ 'oŋ':'ong','ɔŋ':'ong','ioŋ':'iong','iŋ':'in','uŋ':'un','io':'io','iɔ':'io','ɛ':'ai','y':'ü',
  'ʊ':'u','ʊa':'ua','ʊo':'o','iaʊ':'iao','uo':'o','ɛn':'an','ong':'ong','uɐ':'ua','ɐ':'a','ɪ':'i','əu':'ou','ɤu':'ou','m̩':'m'
 };
 const GRAMMAR_NORTH_TONES={'55':'x','44':'x','24':'f','35':'f','325':'f','13':'f','21':'r','214':'r','33':'r','31':'r','51':'v','53':'v','54':'v'};
