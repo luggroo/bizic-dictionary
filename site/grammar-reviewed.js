@@ -249,127 +249,28 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   const known=new Set([forms.ye,forms.accent,forms.poj].filter(Boolean).map(x=>x.normalize('NFC')));
   let before=pair.previousSibling;
   if(before?.nodeType===Node.TEXT_NODE){
-   // Where a complete Latin-script phrase precedes IPA, keep the attested
-   // spelling once instead of repeating an automatic rendering.
-   const ipaWords=pair.dataset.ipa.trim().split(/\s+/);
-   if(ipaWords.length>1&&ipaWords.length<=6){
+   // Keep an explicitly written full phrase once before its IPA.
+   // The source spelling can differ from automatic normalization (za vs. ra).
+   const parts=pair.dataset.ipa.trim().split(/\s+/);
+   if(parts.length>1&&parts.length<=6){
     const source=before.nodeValue;
-    const tokens=[...source.matchAll(/[a-z]+(?:-[a-z]+)*/gu)];
-    if(tokens.length>=ipaWords.length){
-     const selected=tokens.slice(-ipaWords.length);
-     const first=selected[0].index;
-     const end=selected[selected.length-1].index+selected[selected.length-1][0].length;
-     const authored=source.slice(first,end).normalize('NFC');
-     const aligned=/^[a-z]+(?:-[a-z]+)*(?:\s+[a-z]+(?:-[a-z]+)*)+$/u.test(authored);
-     const fullTail=/^\s*$/u.test(source.slice(end));
-     const same=known.has(authored);
-     const sourceZa=pair.dataset.ipa.endsWith(' za')&&authored.endsWith(' za')&&known.has(authored.slice(0,-2)+'ra');
-     if(aligned&&fullTail&&(same||sourceZa)){
+    const words=[...source.matchAll(/[a-z]+(?:-[a-z]+)*/gu)];
+    if(words.length>=parts.length){
+     const last=words.slice(-parts.length);
+     const from=last[0].index;
+     const to=last[last.length-1].index+last[last.length-1][0].length;
+     const written=source.slice(from,to).normalize('NFC');
+     const valid=/^[a-z]+(?:-[a-z]+)*(?:\s+[a-z]+(?:-[a-z]+)*)+$/u.test(written);
+     const final=/^\s*$/u.test(source.slice(to));
+     const matches=known.has(written)||(pair.dataset.ipa.endsWith(' za')&&written.endsWith(' za')&&known.has(written.slice(0,-2)+'ra'));
+     if(valid&&final&&matches){
       if(pair.dataset.dialect==='north'){
-       const roman=pair.querySelector('.grammar-spelling');
-       roman.dataset.ye=authored;
-       roman.dataset.accent=authored;
-       roman.textContent=grammarDisplayedSpelling(roman.dataset,'north');
+       const sp=pair.querySelector('.grammar-spelling');
+       sp.dataset.ye=written;
+       sp.dataset.accent=written;
+       sp.textContent=grammarDisplayedSpelling(sp.dataset,'north');
       }
-      before.nodeValue=source.slice(0,first)+source.slice(end);
-      continue;
-     }
-    }
-   }
-   // A preceding accented source spelling is already displayed by this pair.
-   // Also recognize unaccented xi before /ɕi/; do not remove ordinary English
-   // words such as "in" before an IPA transcription.
-   const label=match?.[1].normalize('NFC');
-   const accented=label&&/\p{M}/u.test(label.normalize('NFD'));
-   const explicit=accented||(label==='xi'&&pair.dataset.ipa==='ɕi');
-   if(match&&known.has(label)&&(pair.closest('td,th')||['ng','hx','r'].includes(label)||explicit))before.nodeValue=before.nodeValue.slice(0,match.index)+match[2];
-  }else if(before?.matches?.('.grammar-spelling')&&known.has(before.textContent.trim().normalize('NFC')))before.remove();
- }
- // Romanization-only paradigms share the same display selector.
- if(ch.dialect==='north'){
-  const accepted=new Set(GRAMMAR_YE_FORMS),w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.grammar-pair,.grammar-ipa,.grammar-gloss,.grammar-spelling,script,style')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});const texts=[];let t;while((t=w.nextNode()))texts.push(t);
-  // Unmarked /aze/ is spelled "are"; English prose also uses this word.
-  // Explicit interlinear spellings are rendered separately above.
-  if(language==='en')accepted.delete('are');
-  const labels={niexi:{ye:'niexxi',accent:'niēxi'},gaxica:{ye:'ga-xi ca',accent:'ga-xi ca'},gaci:{ye:'ga-ci',accent:'ga-ci'}};
-  for(const n of texts){let end=0,frag=document.createDocumentFragment();for(const m of n.nodeValue.matchAll(/\b[a-z]+\b/g)){if(!accepted.has(m[0])&&!labels[m[0]])continue;const span=document.createElement('span');span.className='grammar-spelling';span.dataset.uiContent='';span.dataset.ye=labels[m[0]]?.ye||m[0].replace(/^angf/,'anf').replace(/^angx/,'anx');span.dataset.accent=labels[m[0]]?.accent||yeToAccent(span.dataset.ye);span.textContent=grammarDisplayedSpelling(span.dataset,'north');frag.append(n.nodeValue.slice(end,m.index),span);end=m.index+m[0].length;}if(end){frag.append(n.nodeValue.slice(end));n.replaceWith(frag);}}
- }
- // Bare onset/rime inventory cells also receive their matching romanization.
- for(const table of root.querySelectorAll('table')){
-  const headers=JSON.parse(table.dataset.originalHeaders||'[]');delete table.dataset.originalHeaders;
-  if(headers[0]==='问什么'&&headers[1]?.includes('形式'))table.classList.add('grammar-question-forms');
-  for(const row of table.querySelectorAll('tbody tr'))for(let i=0;i<row.cells.length;i++){
-   const cell=row.cells[i],header=headers[i]||'',raw=cell.textContent.trim();
-   if(!raw||raw==='—'||cell.classList.contains('grammar-ipa'))continue;
-   const phoneticHeader=/IPA|声母|韵母|唇部|齿|腭部|软腭|咽|^(?:TS|拉西峒|XR仙仁|XL小龙热|CB|CJ)|音值|符号/.test(header)&&!/叶氏|词例（叶氏）|出现条件|汉义|说明/.test(header);
-   if(!['101','201'].includes(ch.id)||!phoneticHeader||cell.dataset.sourceHasHan)continue;
-   const w=document.createTreeWalker(cell,NodeFilter.SHOW_TEXT,{acceptNode:n=>n.parentElement.closest('.grammar-pair')?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT});const remaining=[];let t;while((t=w.nextNode()))remaining.push(t);
-   for(const n of remaining){const original=n.nodeValue,frag=document.createDocumentFragment();let end=0;
-    for(const m of original.matchAll(new RegExp('[A-Z'+letters+']+','gu'))){if(/[A-Z]/.test(m[0]))continue;frag.append(original.slice(end,m.index),grammarPairElement(m[0],ch.dialect));end=m.index+m[0].length;}
-    if(end){frag.append(original.slice(end));n.replaceWith(frag);}
-   }
-  }
-  const wrap=document.createElement('div');wrap.className='grammar-table-scroll';wrap.tabIndex=0;table.replaceWith(wrap);wrap.append(table);
- }
- // Prose reads on one line; source tables and interlinear examples remain stacked.
- const inProse=node=>!node.closest('table,figure,.grammar-example,.example,.grammar-formula');
- for(const pair of root.querySelectorAll('.grammar-pair')){
-  if(!inProse(pair))continue;
-  pair.classList.add('grammar-pair-inline');
-  pair.querySelector('.grammar-spelling').after(document.createTextNode(' '));
-  const ipa=pair.querySelector('.grammar-ipa');
-  if(!/^[\/\[]/.test(ipa.textContent))ipa.textContent='/'+ipa.textContent+'/';
- }
- for(const spelling of root.querySelectorAll('.grammar-spelling')){
-  if(!spelling.closest('.grammar-pair')&&inProse(spelling))spelling.classList.add('grammar-spelling-inline');
- }
- for(const note of root.querySelectorAll('sup')){
-  if(note.querySelector('.grammar-citation')&&inProse(note))note.classList.add('grammar-inline-citation');
- }
- for(const link of root.querySelectorAll('a[href^="#"]')){
-  const target=link.getAttribute('href').slice(1),where=GRAMMAR_ANCHORS[target];if(where)link.href='#grammar/'+where.dialect+'/'+where.chapter+'?grammarAnchor='+encodeURIComponent(target);
- }
- const html=root.outerHTML;if(grammarRenderedCache.size>=48)grammarRenderedCache.delete(grammarRenderedCache.keys().next().value);grammarRenderedCache.set(cacheKey,html);return html;
-}
-grammarView=function(){
- const d=state.grammarDialect||'north',gs=REVIEWED_GRAMMAR[d],ch=gs.find(c=>c.id===state.chapter)||gs[0];
- const term=state.q?.trim(),found=term?gs.filter(c=>contains(c.title+' '+c.html.replace(/<[^>]*>/g,' '),term)):[];
- const button=c=>`<button data-chapter="${c.id}" data-grammar-dialect="${d}" class="${c.id===ch.id?'selected ':''}${c.pending?'grammar-pending':''}" >${c.number}. <span>${E(c.title)}</span>${c.pending?'<span class="grammar-pending-label">（待补充）</span>':''}</button>`;
- return pageHeader('grammar')+grammarSwitch()+search('在本套语法中检索规则、章节与例句…')+`<div class="grammar-layout"><nav class="grammar-toc" aria-label="语法目录">${gs.map(button).join('')}</nav><article class="grammar-article">${term?'<h1>检索结果</h1>'+found.map(button).join(''):grammarChapter(ch)}</article></div>`;
-};
-grammarChapter=function(ch){
- const gs=REVIEWED_GRAMMAR[ch.dialect],index=gs.indexOf(ch),parts=ch.sections;
- return `<h1 class="${ch.pending?'grammar-pending':''}">${ch.number}. <span>${E(ch.title)}</span>${ch.pending?'<span class="grammar-pending-label">（待补充）</span>':''}</h1>`+
- (parts.length?'<nav class="grammar-section-links" aria-label="本章目录">'+parts.map((s,i)=>`<a href="#grammar/${ch.dialect}/${ch.id}?grammarAnchor=chapter-${ch.id}-${i}">${s.id.split('.').slice(1).join('.')}. <span>${E(s.title)}</span></a>`).join('')+'</nav>':'')+
- grammarRenderHTML(ch)+
- `<div class="chapter-pagination">${[[-1,'← 上一章'],[1,'下一章 →']].map(([step,label])=>gs[index+step]?`<button data-chapter="${gs[index+step].id}" data-grammar-dialect="${ch.dialect}">${label}</button>`:'').join('')}</div>`;
-};
-window.ReviewedGrammar={refresh(){
- const language=window.TujiaUI?.language||'zh',en=language==='en';
- const position=document.querySelector('.grammar-page-position');
- if(position){const values=position.textContent.match(/\d+/g);if(values?.length===2)position.textContent=en?'Page '+values[0]+' of '+values[1]:'第 '+values[0]+' / '+values[1]+' 页';}
- for(const root of document.querySelectorAll('.reviewed-grammar')){
-  if(root.dataset.uiLanguage===language)continue;
-  const ch=REVIEWED_GRAMMAR[root.dataset.dialect].find(c=>c.id===root.dataset.chapter);if(!ch)continue;
-  const opened=[...root.querySelectorAll('details')].map(n=>n.open),holder=document.createElement('template');holder.innerHTML=root.dataset.readingPage==='true'?grammarPageHTML(ch,root.dataset.section,language):grammarRenderHTML(ch,language);
-  const replacement=holder.content.firstElementChild;[...replacement.querySelectorAll('details')].forEach((n,i)=>n.open=opened[i]||false);root.replaceWith(replacement);
- }
- for(const n of document.querySelectorAll('.reviewed-grammar .grammar-spelling')){const d=n.closest('[data-dialect]').dataset.dialect,value=n.closest('[data-spelling-pending]')?(en?'(spelling pending)':'（拼音待补充）'):grammarDisplayedSpelling(n.dataset,d);if(n.textContent!==value)n.textContent=value;}
-}};
-,'u');
-    const phrase=before.nodeValue.match(phrasePattern);
-    if(phrase){
-     const authored=phrase[1].normalize('NFC');
-     const same=known.has(authored);
-     const sourceZa=pair.dataset.ipa.endsWith(' za')&&authored.endsWith(' za')&&known.has(authored.slice(0,-2)+'ra');
-     if(same||sourceZa){
-      if(pair.dataset.dialect==='north'){
-       const roman=pair.querySelector('.grammar-spelling');
-       roman.dataset.ye=authored;
-       roman.dataset.accent=authored;
-       roman.textContent=grammarDisplayedSpelling(roman.dataset,'north');
-      }
-      before.nodeValue=before.nodeValue.slice(0,phrase.index)+phrase[2];
+      before.nodeValue=source.slice(0,from)+source.slice(to);
       continue;
      }
     }
