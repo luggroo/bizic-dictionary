@@ -233,7 +233,9 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   const roman=pair.querySelector('.grammar-spelling');
   if(!roman)continue;
   if(pair.dataset.dialect==='north'){
-   roman.dataset.accent=sourceSpelling;
+   // A Ye-source spelling should not overwrite the accent-mode spelling.
+   if(sourceSpelling===roman.dataset.ye)roman.dataset.ye=sourceSpelling;
+   else roman.dataset.accent=sourceSpelling;
    roman.textContent=grammarDisplayedSpelling(roman.dataset,'north');
   }
   label.remove();
