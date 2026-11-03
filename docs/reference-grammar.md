@@ -1794,7 +1794,7 @@ Brassett 等（2006）将能够直接修饰名词、又能独立指代的形式�
 
 形容词修饰名词则采用“名词＋形容词”的语序，如“狗＋小”“竹子＋长”“书＋厚”。
 
-Feng（2025：4）记录：“木屋”可以说成 ka co /kʰa tsʰo/ 或 ka-nie co /kʰa-ȵiɛ tsʰo/；“白鸡”可以说成 asi-nie za /asɨ-ȵiɛ za/ 或 asi-nie-xi za /asɨ-ȵiɛ-ɕi za/。ka-nie-xi co /kʰa-ȵiɛ-ɕi tsʰo/ 被标为不合语法，显示 xi /ɕi/ 在名词修饰和性质词修饰结构中的分布差异。
+Feng（2025：4）记录：“木屋”可以说成 ka co /kʰa tsʰo/ 或 ka-nie co /kʰa-ȵiɛ tsʰo/；“白鸡”可以说成 asi-nie ra /asɨ-ȵiɛ za/ 或 asi-nie-xi ra /asɨ-ȵiɛ-ɕi za/。ka-nie-xi co /kʰa-ȵiɛ-ɕi tsʰo/ 被标为不合语法，显示 xi /ɕi/ 在名词修饰和性质词修饰结构中的分布差异。
 
 #### 跨语言比较：藏语
 
