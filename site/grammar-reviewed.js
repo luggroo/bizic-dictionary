@@ -251,7 +251,7 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   if(before?.nodeType===Node.TEXT_NODE){
    // Keep an explicitly written full phrase once before its IPA.
    // Match the same number of space-delimited words as the transcription.
-   // The source spelling can differ from automatic normalization (za vs. ra).
+   // Use the IPA-derived, tone-free spelling; do not privilege source typos.
    const parts=pair.dataset.ipa.trim().split(/\s+/);
    if(parts.length>1&&parts.length<=6){
     const source=before.nodeValue;
@@ -263,14 +263,8 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
      const written=source.slice(from,to).normalize('NFC');
      const valid=/^[a-z]+(?:-[a-z]+)*(?:\s+[a-z]+(?:-[a-z]+)*)+$/u.test(written);
      const final=/^\s*$/u.test(source.slice(to));
-     const matches=known.has(written)||(pair.dataset.ipa.endsWith(' za')&&written.endsWith(' za')&&known.has(written.slice(0,-2)+'ra'));
+     const matches=known.has(written);
      if(valid&&final&&matches){
-      if(pair.dataset.dialect==='north'){
-       const sp=pair.querySelector('.grammar-spelling');
-       sp.dataset.ye=written;
-       sp.dataset.accent=written;
-       sp.textContent=grammarDisplayedSpelling(sp.dataset,'north');
-      }
       before.nodeValue=source.slice(0,from)+source.slice(to);
       continue;
      }
