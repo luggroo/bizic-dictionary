@@ -225,11 +225,11 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  // spelling and remove the redundant text and separator.
  for(const pair of root.querySelectorAll('td .grammar-pair,th .grammar-pair')){
   const separator=pair.previousSibling;
-  if(separator?.nodeType!==Node.TEXT_NODE||!/^\\s*·\\s*$/u.test(separator.nodeValue))continue;
+  if(separator?.nodeType!==Node.TEXT_NODE||!/^\s*·\s*$/u.test(separator.nodeValue))continue;
   const label=separator.previousSibling;
   if(label?.tagName!=='EM'||label.childNodes.length!==1||label.firstChild.nodeType!==Node.TEXT_NODE)continue;
   const sourceSpelling=label.textContent.trim().normalize('NFC');
-  if(!/^[\\p{Script=Latin}\\p{M}’'-]+$/u.test(sourceSpelling))continue;
+  if(!/^[\p{Script=Latin}\p{M}’'-]+$/u.test(sourceSpelling))continue;
   const roman=pair.querySelector('.grammar-spelling');
   if(!roman)continue;
   if(pair.dataset.dialect==='north'){
