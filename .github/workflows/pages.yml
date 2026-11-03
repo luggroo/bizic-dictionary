@@ -82,7 +82,7 @@ jobs:
           node - <<'JSCODE'
           const {spawnSync}=require('node:child_process');
           let failed=false;
-          for(const test of ['test-web-loading','test-word-export-browser','test-language-recovery-browser','test-corpus-timing-browser','test-mobile-navigation','test-grammar-scroll-playwright']){
+          for(const test of ['test-web-loading','test-word-export-browser','test-language-recovery-browser','test-corpus-timing-browser','test-mobile-navigation','test-reviewed-grammar','test-grammar-scroll-playwright']){
             const result=spawnSync(process.execPath,['scripts/'+test+'.cjs'],{encoding:'utf8',maxBuffer:16*1024*1024});
             process.stdout.write(result.stdout||'');process.stderr.write(result.stderr||'');
             if(result.status!==0){
