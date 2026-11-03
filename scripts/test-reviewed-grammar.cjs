@@ -2,7 +2,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 const {chromium}=require(require.resolve('playwright',{paths:[process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES||process.cwd()]}));
 const root=path.resolve(__dirname,'../site');
 (async()=>{
- const browser=await chromium.launch({headless:true,executablePath:process.env.GRAMMAR_TEST_CHROMIUM||undefined,args:['--no-sandbox']});
+ const executablePath=process.env.GRAMMAR_TEST_CHROMIUM||process.env.CHROMIUM_EXECUTABLE||['/usr/bin/google-chrome','/usr/bin/chromium'].find(fs.existsSync);
+ const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox','--disable-dev-shm-usage']});
  try{
   const page=await browser.newPage({viewport:{width:390,height:844}});
   await page.setContent('<main></main>');
