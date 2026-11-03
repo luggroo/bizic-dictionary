@@ -251,7 +251,8 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   if(before?.nodeType===Node.TEXT_NODE){
    // Keep an explicitly written full phrase once before its IPA.
    // Match the same number of space-delimited words as the transcription.
-   // Use the IPA-derived, tone-free spelling; do not privilege source typos.
+   // Use IPA-derived, tone-free spelling; remove the source phrase only when
+   // it matches the computed romanization, never preserving a wrong source form.
    const parts=pair.dataset.ipa.trim().split(/\s+/);
    if(parts.length>1&&parts.length<=6){
     const source=before.nodeValue;
