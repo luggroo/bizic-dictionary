@@ -87,6 +87,22 @@ const root=path.resolve(__dirname,'../site');
       }
      }
      if(ch.id==='104'){
+      // The source has *qì* · /tɕʰi⁵¹/ in adjective tables. Only the
+      // switchable spelling and IPA should remain after rendering.
+      const adjectiveTables=[...document.querySelectorAll('table')].filter(t=>{
+       const first=t.rows[0]?.cells[0]?.textContent.trim(),second=t.rows[0]?.cells[1]?.textContent.trim();
+       return first==='意义'&&(second?.includes('基本式')||second?.includes('词形（拼音'));
+      });
+      if(adjectiveTables.length!==2)failures.push('Adjective comparison tables missing');
+      for(const table of adjectiveTables){
+       for(const cell of table.querySelectorAll('tbody td')){
+        if(!cell.querySelector('.grammar-pair'))continue;
+        if(cell.querySelector('em')||cell.textContent.includes('·'))failures.push('Adjective table duplicates an authored spelling: '+cell.textContent);
+       }
+      }
+      const adjectiveDerivation=adjectiveTables.find(t=>t.rows[0]?.cells[1]?.textContent.includes('基本式'));
+      const bigRow=[...adjectiveDerivation?.tBodies[0]?.rows||[]].find(r=>r.cells[0]?.textContent==='大');
+      if(bigRow?.cells[2]?.querySelector('.grammar-spelling')?.dataset.accent!=='qìbǎ')failures.push('Adjective table lost the attested qìbǎ spelling');
       const adjectiveIntro=[...document.querySelectorAll('p')].find(p=>p.textContent.startsWith('性质动词可以直接作谓语。'));
       if(!adjectiveIntro||/(niěxi|niě|xi)\s+\1(?=\s*\/)/u.test(adjectiveIntro.textContent))failures.push('Adjective introduction duplicates romanization before IPA');
       const overview=document.querySelector('.grammar-predicate-overview');
