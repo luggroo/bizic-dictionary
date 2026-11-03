@@ -232,12 +232,8 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   if(!/^[\p{Script=Latin}\p{M}’'-]+$/u.test(sourceSpelling))continue;
   const roman=pair.querySelector('.grammar-spelling');
   if(!roman)continue;
-  if(pair.dataset.dialect==='north'){
-   // A Ye-source spelling should not overwrite the accent-mode spelling.
-   if(sourceSpelling===roman.dataset.ye)roman.dataset.ye=sourceSpelling;
-   else roman.dataset.accent=sourceSpelling;
-   roman.textContent=grammarDisplayedSpelling(roman.dataset,'north');
-  }
+  // Author-provided spellings may be inconsistent with the cited IPA.
+  // Keep the single spelling calculated from IPA in each display mode.
   label.remove();
   separator.remove();
  }
