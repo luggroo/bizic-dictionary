@@ -153,6 +153,14 @@ const root=path.resolve(__dirname,'../site');
         if(cell.querySelector('em')||cell.textContent.includes('·'))failures.push('Adjective table duplicates an authored spelling: '+cell.textContent);
        }
       }
+      // Table cells must not let an authored pinyin form override the IPA-derived
+      // canonical spelling, even when it differs in tone or apostrophe placement.
+      for(const table of adjectiveTables)for(const pair of table.querySelectorAll('.grammar-pair')){
+       if(pair.dataset.dialect!=='north')continue;
+       const actual=pair.querySelector('.grammar-spelling')?.dataset.accent;
+       const canonical=grammarSpelling(pair.dataset.ipa,'north').accent;
+       if(actual!==canonical)failures.push('Table spelling does not match IPA '+pair.dataset.ipa+': '+actual+' vs '+canonical);
+      }
       const adjectiveDerivation=adjectiveTables.find(t=>t.rows[0]?.cells[1]?.textContent.includes('基本式'));
       const bigRow=[...adjectiveDerivation?.tBodies[0]?.rows||[]].find(r=>r.cells[0]?.textContent==='大');
       if(bigRow?.cells[2]?.querySelector('.grammar-spelling')?.dataset.accent!=='qìbǎ')failures.push('Adjective table lost the attested qìbǎ spelling');
