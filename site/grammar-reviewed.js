@@ -98,7 +98,8 @@ function grammarBuildReferences(root,ch,language){
   if(oldId&&!entry.aliases.includes(oldId))entry.aliases.push(oldId);
   const target='grammar-note-'+ch.id+'-'+entry.number,a=document.createElement('a');
   a.className='grammar-citation';a.id='grammar-cite-'+ch.id+'-'+(++serial);a.href='#grammar/'+ch.dialect+'/'+ch.id+'?grammarAnchor='+target;a.dataset.footnoteTarget=target;
-  a.textContent='['+entry.number+']';a.title=body.textContent.trim().replace(/^(?:出处：|Source:\s*)/,'');a.setAttribute('aria-label',(en?'Source ':'出处 ')+a.textContent+': '+a.title);entry.refs.push(a.id);return a;
+  const originalTitle=body.textContent.trim(),localizedTitle=en?(UI_TRANSLATIONS[originalTitle]||originalTitle):originalTitle;
+  a.textContent='['+entry.number+']';a.title=localizedTitle.replace(/^(?:出处：|Source:\s*)/,'');a.setAttribute('aria-label',(en?'Source ':'出处 ')+a.textContent+': '+a.title);entry.refs.push(a.id);return a;
  }
  // Source columns use the same numbered references as the running text.
  for(const table of root.querySelectorAll('table')){
