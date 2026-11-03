@@ -87,6 +87,35 @@ const root=path.resolve(__dirname,'../site');
       }
      }
      if(ch.id==='104'){
+      // Audit the whole 4.2 section rather than isolated examples: prose,
+      // compound forms, prefix forms, tables, and both languages.
+      for(const [rendered,locale] of [[document.querySelector('main'),'zh'],[english,'en']]){
+       const h42=[...rendered.querySelectorAll('h3')].find(h=>h.textContent.startsWith('4.2'));
+       const h43=[...rendered.querySelectorAll('h3')].find(h=>h.textContent.startsWith('4.3'));
+       if(!h42||!h43){failures.push(locale+': missing 4.2/4.3 boundary');continue;}
+       const in42=el=>Boolean(h42.compareDocumentPosition(el)&Node.DOCUMENT_POSITION_FOLLOWING)&&Boolean(el.compareDocumentPosition(h43)&Node.DOCUMENT_POSITION_FOLLOWING);
+       let checked=0;
+       for(const pair of rendered.querySelectorAll('.grammar-pair-inline')){
+        if(!in42(pair))continue;
+        const preceding=pair.previousSibling;
+        if(preceding?.nodeType!==Node.TEXT_NODE)continue;
+        checked++;
+        const candidate=preceding.nodeValue.match(/([\p{Script=Latin}\p{M}'’-]+)\s*$/u)?.[1]?.normalize('NFC');
+        if(!candidate)continue;
+        const accented=/\p{M}/u.test(candidate.normalize('NFD'));
+        const spelled=pair.querySelector('.grammar-spelling')?.dataset;
+        const identical=[spelled?.ye,spelled?.accent].includes(candidate);
+        if(accented||identical)failures.push(locale+': duplicated author spelling before '+pair.dataset.ipa+': '+candidate);
+       }
+       if(checked<35)failures.push(locale+': 4.2 prose audit covered too few IPA forms: '+checked);
+       const colors=[...rendered.querySelectorAll('p')].find(p=>in42(p)&&p.textContent.includes('lã²⁴ka⁵⁵')&&p.textContent.includes('wã²¹ka⁵⁵la⁵⁵'));
+       if(!colors)failures.push(locale+': 4.2 color-word paragraph missing');
+       else for(const [ipa,expected] of [[ 'lã²⁴ka⁵⁵',"lán'gā" ],[ 'lã²⁴ka⁵⁵tiɛ²¹',"lán'gādiě" ],[ 'ɕiŋ²⁴ka⁵⁵',"xín'gā" ],[ 'ɕiŋ²⁴ka⁵⁵tiɛ²¹',"xín'gādiě" ],[ 'wã²¹ka⁵⁵la⁵⁵',"wǎn'gālā" ],[ 'ɕi²⁴ka⁵⁵la⁵⁵','xígālā' ]]){
+        const p=[...colors.querySelectorAll('.grammar-pair')].find(p=>p.dataset.ipa===ipa);
+        if(!p)failures.push(locale+': missing color-word IPA '+ipa);
+        else if(p.querySelector('.grammar-spelling')?.dataset.accent!==expected)failures.push(locale+': incorrect IPA-derived color spelling '+ipa+' expected '+expected);
+       }
+      }
       const feng=[...document.querySelectorAll('p')].find(p=>p.textContent.startsWith('Feng（2025：4）记录：'));
       if(!feng)failures.push('Feng noun-modifier comparison missing');
       else {
