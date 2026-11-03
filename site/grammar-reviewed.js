@@ -36,7 +36,7 @@ function grammarExample(ipa,glosses,d,pinyin=[],english=[]){
  const groups=ipa.map((raw,i)=>({raw,spelling:grammarSpelling(raw,d,pinyin[i]||''),zh:glosses[i]||'',en:english[i]||grammarGlossEnglish(glosses[i]||'')}));
  const bare=s=>s.replace(/[\[\]［］()（）*]/g,'').trim();
  if(d==='north')for(let i=1;i<groups.length;i++){
-  if(bare(groups[i].zh)!=='名词化')continue;
+  if(!/^(?:名词化|名物化)$/.test(bare(groups[i].zh)))continue;
   let start=i-1;
   while(start>0&&/^(?:状态|不能|未完成|完成)$/.test(bare(groups[start].zh)))start--;
   const parts=groups.slice(start,i+1),merged={raw:parts.map(p=>p.raw).join(' '),spelling:{}};
