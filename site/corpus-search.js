@@ -1,9 +1,13 @@
 // Corpus full-text search and in-document navigation. Keep source spelling intact.
 'use strict';
 function corpusSearchText(c){
+ // Older corpus records may already provide a richer searchable transcript,
+ // including interlinear glosses not present in their display text.
+ // Keep that complete source index verbatim to preserve existing searches.
+ if(c._searchText!=null)return String(c._searchText);
+ if(c.text)return String(c.text);
  const fallback=(c.blocks||[]).flatMap(b=>[b.ipa,b.ye,b.zh,b.en,...(b.glosses||[]).flatMap(g=>[g.ye,g.zh,g.en])]).filter(Boolean).join('\n');
- const body=String(c.text||fallback);
- return [body,...[c.annotation,c.culturalNote,c.culturalNoteEn].filter(x=>x&&!body.includes(x))].filter(Boolean).join('\n');
+ return [fallback,c.annotation,c.culturalNote,c.culturalNoteEn].filter(Boolean).join('\n');
 }
 // Fold each grapheme while preserving the original UTF-16 positions for highlights.
 function corpusSearchRanges(text,query){
