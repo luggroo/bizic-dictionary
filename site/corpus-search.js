@@ -42,7 +42,7 @@ function corpusWithinControls(){
  '<button type="button" id="within-find">'+(english?'Find':'查找')+'</button>'+
  '<button type="button" id="within-prev" disabled aria-label="'+(english?'Previous match':'上一处')+'">↑</button>'+
  '<button type="button" id="within-next" disabled aria-label="'+(english?'Next match':'下一处')+'">↓</button>'+
- '<span id="within-count" role="status" aria-live="polite"></span></div>';
+ '<span id="within-count" aria-live="polite"></span></div>';
 }
 function bindCorpusTextSearch(c){
  const panel=document.getElementById('detail-body'),input=panel.querySelector('#within'),

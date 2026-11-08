@@ -121,7 +121,7 @@ const server=http.createServer((req,res)=>{
   assert.equal(await p.locator('#corpus-text mark[data-corpus-match]').count(),0);
   assert.equal(await p.locator('#within-next').isDisabled(),true);
   await p.locator('#close').click();await p.waitForSelector('dialog[open]',{state:'hidden'});
-  await p.evaluate(()=>openDetail('c1.1'));await p.waitForSelector('dialog[open] #source-text');
+  await p.evaluate(()=>openDetail('c1.1'));await p.waitForSelector('dialog[open] #source-text',{state:'attached'});
   const transcriptNeedle=await p.evaluate(()=>(C['c1.1'].text.match(/[a-z]{3,}/i)||[])[0]);
   assert(transcriptNeedle);await p.locator('#within').fill(transcriptNeedle);
   await p.locator('#within-find').click();
