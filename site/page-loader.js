@@ -14,7 +14,7 @@ const SitePages=(()=>{
   'word-detail':{requires:['word-list'],files:['word-entry.js']},
   dictionary:{requires:['word-list'],files:['word-merge-groups.js','lexical-reviews.js','word-merge.js','editorial-notes.js','spelling-boundaries.js','ui-translations.js']},
   grammar:{requires:['grammar-base','notation'],files:['south-zhou-phonology.js','grammar-integrated.js','grammar-evidence.js','grammar-notation.js','grammar-reviewed-data.js','grammar-glosses.js','grammar-reviewed.js','grammar-pages.js'],css:['grammar-integrated.css','grammar-reviewed.css']},
-  corpus:{requires:['notation'],files:['longshan-texts.js','corpus-player.js']},
+  corpus:{requires:['notation'],files:['longshan-texts.js','corpus-player.js','corpus-search.js']},
   history:{requires:['catalogue','notation'],files:['comparison-merge.js']}
  };
  const assets=JSON.parse(document.getElementById('site-assets')?.textContent||'{}');

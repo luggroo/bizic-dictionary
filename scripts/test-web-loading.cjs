@@ -106,6 +106,29 @@ const server=http.createServer((req,res)=>{
   assert.equal(requests.filter(url=>/\/corpus-search\.json\.gz/.test(url)).length,1,'full-text search loads its small index when queried');
   assert.equal(await p.evaluate(()=>D.corpus.filter(c=>!c._corpusEntry).length),1,'search leaves other transcripts unloaded');await p.close();
 
+  // Corpus search returns direct hits and finds text in both reader styles on mobile.
+  p=await page();await p.goto(base+'#corpus');await p.waitForSelector('.corpus-card');
+  await p.locator('#query').fill('双数');await p.locator('#query').press('Enter');
+  await p.waitForSelector('.corpus-search-hit');
+  assert(await p.locator('.corpus-card-content[data-open="tlp-longshan-euphemisms-01"]').count(),'matched Longshan text appears directly');
+  await p.locator('.corpus-card-content[data-open="tlp-longshan-euphemisms-01"]').click();
+  await p.waitForSelector('dialog[open] #corpus-text');
+  assert(await p.locator('#corpus-text mark[data-corpus-match]').count()>0,'incoming query highlights text');
+  await p.locator('#within').fill('sUanx');await p.locator('#within').press('Enter');
+  assert(await p.locator('#corpus-text mark[data-corpus-match]').count()>0,'case-insensitive romanization search');
+  assert((await p.locator('#within-count').innerText()).includes('/'),'hit count is shown');
+  await p.locator('#within').fill('not-present-anywhere');await p.locator('#within').press('Enter');
+  assert.equal(await p.locator('#corpus-text mark[data-corpus-match]').count(),0);
+  assert.equal(await p.locator('#within-next').isDisabled(),true);
+  await p.locator('#close').click();await p.waitForSelector('dialog[open]',{state:'hidden'});
+  await p.evaluate(()=>openDetail('c1.1'));await p.waitForSelector('dialog[open] #source-text');
+  const transcriptNeedle=await p.evaluate(()=>(C['c1.1'].text.match(/[a-z]{3,}/i)||[])[0]);
+  assert(transcriptNeedle);await p.locator('#within').fill(transcriptNeedle);
+  await p.locator('#within-find').click();
+  assert(await p.locator('#source-text mark[data-corpus-match]').count()>0,'original transcript search finds text');
+  assert.equal(await p.locator('#source-text').evaluate(node=>node.closest('details').open),true);
+  await p.close();
+
   p=await page();requests=[];p.on('request',r=>requests.push(r.url()));
   await p.goto(base+'#history');await p.waitForSelector('.table-wrap');
   await p.locator('.table-wrap [data-open]').first().click();await p.waitForSelector('dialog[open] h1');

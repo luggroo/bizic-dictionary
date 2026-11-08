@@ -164,3 +164,13 @@ button.primary:hover,button.primary:focus-visible{background:var(--green);color:
 .filters .loan-filter{min-height:44px;cursor:pointer;color:var(--ink)}
 .loan-filter input{width:17px;height:17px;accent-color:var(--green)}
 @media(max-width:720px){.filters .loan-filter{font-size:14px}.loan-key{font-size:12px}}
+
+/* Corpus search snippets and touch-friendly in-document navigation. */
+.corpus-search-hit{font-size:13px;line-height:1.7;color:#506258;margin:8px 0 2px;overflow-wrap:anywhere}
+.corpus-within-search{align-items:center;flex-wrap:wrap;gap:8px;margin:16px 0}
+.corpus-within-search input{flex:1 1 170px;font-size:16px;min-width:0}
+.corpus-within-search button{min-height:40px;min-width:42px}
+.corpus-within-search #within-count{font-size:12px;color:var(--muted);min-width:48px;font-variant-numeric:tabular-nums}
+mark[data-corpus-match]{scroll-margin-block:100px}
+mark.corpus-current-match{outline:2px solid #8c622a;outline-offset:2px;background:#f5dd93}
+@media(max-width:600px){.corpus-within-search button{min-height:44px}.corpus-within-search #within-count{flex-basis:100%}}

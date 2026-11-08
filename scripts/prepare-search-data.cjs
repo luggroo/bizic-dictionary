@@ -3,7 +3,7 @@ const fs=require('fs'),path=require('path'),vm=require('vm');
 const zlib=require('node:zlib'),crypto=require('node:crypto');
 const root=path.resolve(process.argv[2]||path.join(__dirname,'../site'));const marks={};
 const ctx=vm.createContext({console,URL,URLSearchParams,Map,Set,window:{addEventListener(){}},localStorage:{getItem:()=>null},document:{addEventListener(){}},fetch:async name=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,name),'utf8'))})});
-const files=['brassett-grammar.js','grammar-data.js','comparison-merge.js','research.js','grammar-dialects.js','south-zhou-phonology.js','notation-profiles.js','ipa-normalize.js','notation-ui.js','southern-notation.js','longshan-texts.js','corpus-player.js','grammar-integrated.js','grammar-evidence.js','grammar-notation.js','grammar-reviewed-data.js','grammar-glosses.js','grammar-reviewed.js','yubao.js','semantic-categories.js','lexical-reviews.js','word-classes.js','word-merge-groups.js','word-merge.js','editorial-notes.js','spelling-boundaries.js','notation-pairs.js','ui-translations.js','content-translations.js','word-index.js'];
+const files=['brassett-grammar.js','grammar-data.js','comparison-merge.js','research.js','grammar-dialects.js','south-zhou-phonology.js','notation-profiles.js','ipa-normalize.js','notation-ui.js','southern-notation.js','longshan-texts.js','corpus-player.js','corpus-search.js','grammar-integrated.js','grammar-evidence.js','grammar-notation.js','grammar-reviewed-data.js','grammar-glosses.js','grammar-reviewed.js','yubao.js','semantic-categories.js','lexical-reviews.js','word-classes.js','word-merge-groups.js','word-merge.js','editorial-notes.js','spelling-boundaries.js','notation-pairs.js','ui-translations.js','content-translations.js','word-index.js'];
 let canonicalUI;
 for(const f of files){
  vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx,{filename:f});
@@ -72,8 +72,9 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
  const corpusFields=['id','title','genre','source','audio','code','dialect','dialects','location','locations','people','survey','ipa','externalText'];
  const corpusTranslations=publishedUI;
  const corpusIndex={corpus:core.corpus.map(c=>({...Object.fromEntries(corpusFields.filter(key=>c[key]!==undefined).map(key=>[key,c[key]])),text:'',_titleEnglish:corpusTranslations[c.title]||'',_corpusEntry:c.id}))};
- const normalizeSearch=vm.runInContext('searchNormalize',ctx);
- const corpusSearch={texts:Object.fromEntries(core.corpus.map(c=>[c.id,normalizeSearch(c.text||'')]))};
+ const corpusText=vm.runInContext('corpusSearchText',ctx);
+ // Preserve original source spelling for excerpts; comparisons normalize at query time.
+ const corpusSearch={texts:Object.fromEntries(core.corpus.map(c=>[c.id,corpusText(c)]))};
  write('corpus-index',corpusIndex);write('corpus-search',corpusSearch);
  fs.rmSync(path.join(compiled,'corpus-entries'),{recursive:true,force:true});fs.mkdirSync(path.join(compiled,'corpus-entries'));
  for(const c of core.corpus){if(!/^[A-Za-z0-9][A-Za-z0-9_.-]*$/.test(c.id))throw Error('Invalid corpus ID: '+c.id);write('corpus-entries/'+c.id,c);}
