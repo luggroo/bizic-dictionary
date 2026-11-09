@@ -44,17 +44,25 @@ function corpusWithinControls(){
  '<button type="button" id="within-next" disabled aria-label="'+(english?'Next match':'下一处')+'">↓</button>'+
  '<span id="within-count" aria-live="polite"></span></div>';
 }
+// Find in the visible reader first; open the source transcript only for fallback hits.
 function bindCorpusTextSearch(c){
- const panel=document.getElementById('detail-body'),input=panel.querySelector('#within'),
- root=panel.querySelector(c.externalText||c.survey?'#corpus-text':'#source-text');
- if(!input||!root)return;
- const find=panel.querySelector('#within-find'),prev=panel.querySelector('#within-prev'),
- next=panel.querySelector('#within-next'),counter=panel.querySelector('#within-count'),
- english=window.TujiaUI?.language==='en';
+ const panel=document.getElementById('detail-body'),
+  toolbar=document.getElementById('detail-corpus-search'),
+  input=toolbar.querySelector('#within'),
+  primary=panel.querySelector(c.externalText||c.survey?'#corpus-text':'#lyric-window'),
+  fallback=(!c.externalText&&!c.survey)?panel.querySelector('#source-text'):null;
+ if(!input||(!primary&&!fallback))return;
+ const find=toolbar.querySelector('#within-find'),prev=toolbar.querySelector('#within-prev'),
+  next=toolbar.querySelector('#within-next'),counter=toolbar.querySelector('#within-count'),
+  english=window.TujiaUI?.language==='en';
  let marks=[],active=-1;
  function unmark(){
-  for(const mark of root.querySelectorAll('mark[data-corpus-match]'))mark.replaceWith(document.createTextNode(mark.textContent));
-  root.normalize();marks=[];active=-1;
+  for(const root of [primary,fallback]){
+   if(!root)continue;
+   for(const mark of root.querySelectorAll('mark[data-corpus-match]'))mark.replaceWith(document.createTextNode(mark.textContent));
+   root.normalize();
+  }
+  marks=[];active=-1;
  }
  function goTo(index){
   if(!marks.length)return;
@@ -62,12 +70,16 @@ function bindCorpusTextSearch(c){
   marks.forEach((mark,i)=>mark.classList.toggle('corpus-current-match',i===active));
   const target=marks[active];
   for(let node=target.parentElement;node&&node!==panel;node=node.parentElement)if(node.tagName==='DETAILS')node.open=true;
+  if(target.closest('.lyric-chinese')){
+   const box=panel.querySelector('#lyric-window'),toggle=panel.querySelector('#lyric-translation');
+   box?.classList.remove('hide-translation');
+   if(toggle)toggle.checked=true;
+  }
   counter.textContent=(active+1)+' / '+marks.length;
   target.scrollIntoView({block:'center',behavior:'auto'});
  }
- function run(){
-  unmark();const query=input.value.trim();
-  if(!query){counter.textContent='';prev.disabled=next.disabled=true;return;}
+ function highlight(root,query){
+  if(!root)return [];
   const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),nodes=[];
   for(let node=walker.nextNode();node;node=walker.nextNode())if(node.nodeValue?.trim())nodes.push(node);
   for(const node of nodes){
@@ -76,16 +88,27 @@ function bindCorpusTextSearch(c){
    const fragment=document.createDocumentFragment();let offset=0;
    for(const {start,end} of ranges){
     fragment.appendChild(document.createTextNode(value.slice(offset,start)));
-    const mark=document.createElement('mark');mark.dataset.corpusMatch='1';mark.textContent=value.slice(start,end);
+    const mark=document.createElement('mark');mark.dataset.corpusMatch='1';
+    mark.textContent=value.slice(start,end);
     fragment.appendChild(mark);offset=end;
    }
-   fragment.appendChild(document.createTextNode(value.slice(offset)));node.replaceWith(fragment);
+   fragment.appendChild(document.createTextNode(value.slice(offset)));
+   node.replaceWith(fragment);
   }
-  marks=[...root.querySelectorAll('mark[data-corpus-match]')];prev.disabled=next.disabled=!marks.length;
-  if(marks.length)goTo(0);else counter.textContent=english?'No matches':'没有匹配';
+  return [...root.querySelectorAll('mark[data-corpus-match]')];
+ }
+ function run(){
+  unmark();const query=input.value.trim();
+  if(!query){counter.textContent='';prev.disabled=next.disabled=true;return;}
+  marks=highlight(primary,query);
+  if(!marks.length)marks=highlight(fallback,query);
+  prev.disabled=next.disabled=!marks.length;
+  if(marks.length)goTo(0);
+  else counter.textContent=english?'No matches':'没有匹配';
  }
  find.onclick=run;
  input.onkeydown=event=>{if(event.key==='Enter'&&!event.isComposing){event.preventDefault();run();}};
- prev.onclick=()=>goTo(active-1);next.onclick=()=>goTo(active+1);
+ prev.onclick=()=>goTo(active-1);
+ next.onclick=()=>goTo(active+1);
  if(input.value.trim())run();
 }

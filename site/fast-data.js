@@ -67,6 +67,7 @@ async function openPreparedDetail(id){
  currentDetail=id;currentOverlay=id;
  $('#detail-label').textContent=W[id]?'词汇条目':C[id]?'语料详情':'文献详情';
  $('#detail-spelling-control').innerHTML='';
+ $('#detail-corpus-search').replaceChildren();
  $('#detail-body').innerHTML='<p role="status">正在载入条目…</p>';
  showDetailDialog(id);
  commitDetailNavigation(id,wasOpen);

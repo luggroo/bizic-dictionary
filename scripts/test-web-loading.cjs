@@ -113,6 +113,8 @@ const server=http.createServer((req,res)=>{
   assert(await p.locator('.corpus-card-content[data-open="tlp-longshan-euphemisms-01"]').count(),'matched Longshan text appears directly');
   await p.locator('.corpus-card-content[data-open="tlp-longshan-euphemisms-01"]').click();
   await p.waitForSelector('dialog[open] #corpus-text');
+  assert(await p.locator('#detail-corpus-search #within').isVisible(),'finder is immediately accessible in the header');
+  assert.equal(await p.locator('#within').evaluate(node=>!!node.closest('.dialog-head')),true,'finder stays in the sticky dialog toolbar');
   assert(await p.locator('#corpus-text mark[data-corpus-match]').count()>0,'incoming query highlights text');
   await p.locator('#within').fill('sUanx');await p.locator('#within').press('Enter');
   assert(await p.locator('#corpus-text mark[data-corpus-match]').count()>0,'case-insensitive romanization search');
@@ -122,11 +124,17 @@ const server=http.createServer((req,res)=>{
   assert.equal(await p.locator('#within-next').isDisabled(),true);
   await p.locator('#close').click();await p.waitForSelector('dialog[open]',{state:'hidden'});
   await p.evaluate(()=>openDetail('c1.1'));await p.waitForSelector('dialog[open] #source-text',{state:'attached'});
-  const transcriptNeedle=await p.evaluate(()=>(C['c1.1'].text.match(/[a-z]{3,}/i)||[])[0]);
-  assert(transcriptNeedle);await p.locator('#within').fill(transcriptNeedle);
-  await p.locator('#within-find').click();
-  assert(await p.locator('#source-text mark[data-corpus-match]').count()>0,'original transcript search finds text');
-  assert.equal(await p.locator('#source-text').evaluate(node=>node.closest('details').open),true);
+  assert(await p.locator('#detail-corpus-search #within').isVisible(),'Brassett finder is above the transcript');
+  const lyricNeedle=await p.locator('.lyric-tujia').first().evaluate(node=>(node.textContent.match(/[a-z]{3,}/i)||[])[0]);
+  assert(lyricNeedle,'a visible lyric has searchable romanization');
+  await p.locator('#within').fill(lyricNeedle);await p.locator('#within-find').click();
+  assert(await p.locator('#lyric-window mark[data-corpus-match]').count()>0,'search highlights the readable transcript');
+  assert.equal(await p.locator('#source-text mark[data-corpus-match]').count(),0,'hidden source copy is not searched twice');
+  await p.locator('#detail').evaluate(node=>node.scrollTop=650);
+  assert(await p.locator('#detail-corpus-search #within').isVisible(),'finder remains accessible when scrolled down');
+  await p.locator('#within').fill('1.1.1: 自我介绍');await p.locator('#within-find').click();
+  assert(await p.locator('#source-text mark[data-corpus-match]').count()>0,'fallback searches original intro text');
+  assert.equal(await p.locator('#source-text').evaluate(node=>node.closest('details').open),true,'fallback expands original text');
   await p.close();
 
   p=await page();requests=[];p.on('request',r=>requests.push(r.url()));
