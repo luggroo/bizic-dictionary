@@ -1,0 +1,710 @@
+{
+  "date": "2026-11-12",
+  "source_repository": "luggroo/bizic-dictionary",
+  "source_commit": "d9af02aaf111936f4024bd58e132a67b4c17cf38",
+  "skill_sha256": "08494b9457d8ddb93e3659bdc54a0b4f551fd611708563534fcd3872405457e2",
+  "evaluation_kind": "retrieval-assisted composition; provisional targets are not gold translations",
+  "cases": [
+    {
+      "id": "1",
+      "stage": "development",
+      "family": "arrival_question",
+      "dialect": "北部",
+      "location": "龙山",
+      "point": "60757",
+      "template": {
+        "path": "site/yubao-60757-0.json",
+        "row": [
+          "0015",
+          "客人什么时候到？",
+          "phu55 tshuo33 tɕhie24 tu55 iɘ55。",
+          "客人 什么 时候 到－PROS"
+        ]
+      },
+      "substitutions": [
+        {
+          "from_surface": "phu55 tshuo33",
+          "to_surface": "pha22phu55",
+          "role": "subject",
+          "source_word": {
+            "path": "site/yubao-60757-0.json",
+            "id": "0587",
+            "quote": [
+              "0587",
+              "客人",
+              "pu55tshuo22",
+              "",
+              ""
+            ]
+          },
+          "replacement_word": {
+            "path": "site/yubao-60757-0.json",
+            "id": "0610",
+            "quote": [
+              "0610",
+              "爷爷",
+              "pha22phu55",
+              "呼称，最通用的",
+              ""
+            ]
+          }
+        }
+      ],
+      "source_text": "爷爷什么时候到？",
+      "meaning_constraints": [
+        "来者为爷爷，不是客人",
+        "询问到达时间，保留疑问作用域",
+        "不增添已经到达或不会到达的意思"
+      ],
+      "translation": "pha22phu55 tɕhie24 tu55 iɘ55?",
+      "translation_unresolved_spans": [],
+      "review": {
+        "sample_admissibility": "usable",
+        "translation_verdict": "supported",
+        "actual_errors": [],
+        "remaining_gaps": [
+          {
+            "kind": "phonetic_realization",
+            "status": "unresolved",
+            "span": "pha22phu55 tɕhie24",
+            "issue": "新主语后的语流声调及问句语调未由此新句音频/说话人判断核实；原例0086/0087的爷爷表面调值亦不同，不能声称词表数字即在所有句中固定。"
+          },
+          {
+            "kind": "native_naturalness",
+            "status": "unresolved",
+            "issue": "没有此新句的整句母语者判断；这不否定已支持的词义、角色和句式。"
+          }
+        ],
+        "assessment": {
+          "translation_changed": false,
+          "result": "保留原判定。译文与既有候选相同；既有独立非呼语句例支持爷爷作参与者，问时和PROS结构有同点依据。",
+          "uncertainty_reporting": "拟译标签合理；unresolved_spans为空不能解释为新句语流调或自然度已验证，原评审中的这两类缺口继续保留。"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "stage": "development",
+      "family": "arrival_question",
+      "dialect": "南部",
+      "location": "泸溪（潭溪）",
+      "point": "60824",
+      "template": {
+        "path": "site/yubao-60824-0.json",
+        "row": [
+          "0015",
+          "客人什么时候到？",
+          "mu33tsha35 tshʉ55 si21xe21 dzai13 tau13pie33 de33.",
+          "客人 什么 时候 才 到 PROS"
+        ]
+      },
+      "substitutions": [
+        {
+          "from_surface": "mu33tsha35",
+          "to_surface": "a13khʉ55",
+          "role": "subject",
+          "source_word": {
+            "path": "site/yubao-60824-1.json",
+            "id": "0587",
+            "quote": [
+              "0587",
+              "客人",
+              "mu33tsha35",
+              "",
+              ""
+            ]
+          },
+          "replacement_word": {
+            "path": "site/yubao-60824-1.json",
+            "id": "0610",
+            "quote": [
+              "0610",
+              "爷爷",
+              "a13khʉ55",
+              "呼称，最通用的",
+              ""
+            ]
+          }
+        }
+      ],
+      "source_text": "爷爷什么时候到？",
+      "meaning_constraints": [
+        "来者为爷爷，不是客人",
+        "询问到达时间，保留疑问作用域",
+        "不增添已经到达或不会到达的意思"
+      ],
+      "translation": "a13khʉ55 tshʉ55 si21xe21 ⟦待核：dzai13⟧ tau13pie33 de33?",
+      "translation_unresolved_spans": [
+        {
+          "source_span": "什么时候到",
+          "translation_span": "⟦待核：dzai13⟧",
+          "issue": "原近例逐词含dzai13“才”，其汉语整句却未译出“才”。已有证据不能确立该成分在此构式中的可省性，也不能确定保留时是否带出原文未指定的焦点或迟到语气。拟译保留有据原串并局部标记，准确的中性问时表达仍待核。"
+        }
+      ],
+      "review": {
+        "sample_admissibility": "usable",
+        "translation_verdict": "unresolved",
+        "actual_errors": [],
+        "remaining_gaps": [
+          {
+            "kind": "pragmatics_and_source_alignment",
+            "status": "unresolved",
+            "span": "dzai13",
+            "issue": "原句中文未写才，逐词有才。恢复原串有记录依据，但此问时构式中的中性程度、等待/焦点含义，以及可否省略仍缺直接证据；不能据保留原串便判中性目标已完全验证。"
+          },
+          {
+            "kind": "phonetic_realization",
+            "status": "unresolved",
+            "issue": "爷爷替换进入原问时构式后的表面语流调和问句韵律仍未核。"
+          },
+          {
+            "kind": "native_naturalness",
+            "status": "unresolved",
+            "issue": "新句的母语者自然度仍未核。"
+          }
+        ],
+        "assessment": {
+          "translation_changed": true,
+          "result": "修订合理。恢复有记录的dzai13，消除了候选正在执行无据省略的问题；完整原构式的句法现在有支持。当前未决点转为保留该成分与中性汉语输入的语用/对齐关系，不是继续指控候选删词。",
+          "uncertainty_reporting": "如实局部标记。注释既不断言删去合法，也不断言保留必增等待或焦点义；⟦待核：…⟧是评估标记，不作为土家语词形判错。",
+          "prior_gap_resolution": "无据省略的操作已撤回；该成分的构式可选性仍是语言研究问题，现译文没有将它当作已解决规则。"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "stage": "development",
+      "family": "static_locative",
+      "dialect": "北部",
+      "location": "龙山",
+      "point": "60757",
+      "template": {
+        "path": "site/yubao-60757-0.json",
+        "row": [
+          "0083",
+          "桌子下躺着一只狗。",
+          "sɿ21 thie24 tɕi22 xa55 lie22 lau53 phɘ21 po22。",
+          "桌子 下 狗 CL 躺 ADV"
+        ]
+      },
+      "substitutions": [
+        {
+          "from_surface": "xa55 lie22",
+          "to_surface": "mo21",
+          "role": "existential_subject",
+          "source_word": {
+            "path": "site/yubao-60757-0.json",
+            "id": "0277",
+            "quote": [
+              "0277",
+              "狗",
+              "xa55lie21",
+              "统称",
+              ""
+            ]
+          },
+          "replacement_word": {
+            "path": "site/yubao-60757-0.json",
+            "id": "0274",
+            "quote": [
+              "0274",
+              "猫",
+              "mo21",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "source_text": "桌子下躺着一只猫。",
+      "meaning_constraints": [
+        "桌子下，不是桌子上或屋里",
+        "一只猫，不是多只、狗或猫的东西",
+        "保留躺着/静态姿态，不改成正在奔跑、跳或来到"
+      ],
+      "translation": "sɿ21 thie24 tɕi22 mo21 lau53 phɘ21 po22.",
+      "translation_unresolved_spans": [],
+      "review": {
+        "sample_admissibility": "usable",
+        "translation_verdict": "supported",
+        "actual_errors": [],
+        "remaining_gaps": [
+          {
+            "kind": "noun_classifier_direct_attestation",
+            "status": "unresolved",
+            "span": "mo21 lau53",
+            "issue": "同点未检得猫与该数量表达直接合用例；狗、鸡、野猪、蚊子的同类量词证据已支持生产性推广，不能仅因缺整句而判错。"
+          },
+          {
+            "kind": "phonetic_realization",
+            "status": "unresolved",
+            "issue": "换入单音节猫后，名词—数量式及整句语流调未核。"
+          },
+          {
+            "kind": "native_naturalness",
+            "status": "unresolved",
+            "issue": "新句说话人自然度尚无直接判断。"
+          }
+        ],
+        "assessment": {
+          "translation_changed": false,
+          "result": "修订合理。译文未变；数量表达的主要证据明确为龙山同点狗/鸡/野猪例，北部lau51合音说明只作一般旁证，未用于跨点生成lau53或覆盖语保调值。现表述与既有证据边界相符。",
+          "uncertainty_reporting": "仍清楚标为生产性替换和拟译。猫与数量式的直接合例、语流调、自然度缺口保留；这些缺口不反证已支持的数量和句法。"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "stage": "development",
+      "family": "static_locative",
+      "dialect": "南部",
+      "location": "泸溪（潭溪）",
+      "point": "60824",
+      "template": {
+        "path": "site/yubao-60824-0.json",
+        "row": [
+          "0083",
+          "桌子下躺着一只狗。",
+          "tso21tsi21 a33dʑiʉ35 tshe55 la21 nu21 nie21 tɨ35.",
+          "桌子 下面 狗 一 CL 睡 DUR"
+        ]
+      },
+      "substitutions": [
+        {
+          "from_surface": "tshe55",
+          "to_surface": "ma21tɕi35",
+          "role": "existential_subject",
+          "source_word": {
+            "path": "site/yubao-60824-0.json",
+            "id": "0277",
+            "quote": [
+              "0277",
+              "狗",
+              "tshe55",
+              "统称",
+              ""
+            ]
+          },
+          "replacement_word": {
+            "path": "site/yubao-60824-0.json",
+            "id": "0274",
+            "quote": [
+              "0274",
+              "猫",
+              "ma21tɕi35",
+              "",
+              ""
+            ]
+          }
+        }
+      ],
+      "source_text": "桌子下躺着一只猫。",
+      "meaning_constraints": [
+        "桌子下，不是桌子上或屋里",
+        "一只猫，不是多只、狗或猫的东西",
+        "保留躺着/静态姿态，不改成正在奔跑、跳或来到"
+      ],
+      "translation": "tso21tsi21 a33dʑiʉ35 ma21tɕi35 la21 nu21 nie21 tɨ35.",
+      "translation_unresolved_spans": [],
+      "review": {
+        "sample_admissibility": "usable",
+        "translation_verdict": "supported",
+        "actual_errors": [],
+        "remaining_gaps": [
+          {
+            "kind": "noun_classifier_direct_attestation",
+            "status": "unresolved",
+            "span": "ma21tɕi35 la21 nu21",
+            "issue": "未见猫+nu21直接合用例；同点多个哺乳动物和鸟类用例支持类别推广，缺直接合例不构成已证实误配。"
+          },
+          {
+            "kind": "phonetic_realization",
+            "status": "unresolved",
+            "issue": "换入多音节猫后名词—数量式和全句表面语流调未核。"
+          },
+          {
+            "kind": "native_naturalness",
+            "status": "unresolved",
+            "issue": "新句母语者自然度尚未直接核实。"
+          }
+        ],
+        "assessment": {
+          "translation_changed": false,
+          "result": "保留原判定。译文未变；同点猫词形、动物量词类别、独立一和nie21的躺义均有既有证据。未发现恢复词表读音、改写完整谓语等新问题。",
+          "uncertainty_reporting": "拟译和同类动物推广的说明成立；直接搭配、语流调及整句自然度仍未由实录或说话人判断补足。"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "stage": "validation",
+      "family": "human_comparison",
+      "dialect": "北部",
+      "location": "龙山",
+      "point": "60757",
+      "template": {
+        "path": "site/yubao-60757-0.json",
+        "row": [
+          "0085",
+          "哥哥比弟弟高多了。",
+          "a22 khuo53 kuo24 an55 ŋai22 kɯ55 thau55 ȵie55。",
+          "哥哥 DEM 弟弟 多 高 AUX"
+        ]
+      },
+      "substitutions": [
+        {
+          "from_surface": "a22 khuo53",
+          "to_surface": "a24ta55",
+          "role": "comparison_subject",
+          "source_word": {
+            "path": "site/yubao-60757-0.json",
+            "id": "0638",
+            "quote": [
+              "0638",
+              "哥哥",
+              "a21kho55",
+              "呼称，统称",
+              ""
+            ]
+          },
+          "replacement_word": {
+            "path": "site/yubao-60757-0.json",
+            "id": "0642",
+            "quote": [
+              "0642",
+              "姐姐",
+              "a24ta55",
+              "呼称，统称",
+              ""
+            ]
+          }
+        }
+      ],
+      "source_text": "姐姐比弟弟高多了。",
+      "meaning_constraints": [
+        "姐姐是较高者，弟弟是比较基准",
+        "保留“高多了”的显著程度，不弱化成一样高或略高",
+        "不增加已完成长高过程，也不颠倒比较方向"
+      ],
+      "translation": "a24ta55 kuo24 an55ŋai22 kɯ55 thau55 ȵie55。",
+      "translation_unresolved_spans": [
+        {
+          "span": "kuo24",
+          "issue": "同点句级例证支持该完整比较句，但此音节在该句中的具体句法身份与逐词注释不一致，未完成内部分析。"
+        }
+      ],
+      "review": {
+        "sample_admissibility": "unresolved",
+        "translation_verdict": "unresolved",
+        "actual_errors": [],
+        "remaining_gaps": {
+          "core_structure": [
+            "原0085中kuo24的身份和比较角色映射。"
+          ],
+          "prosody_naturalness": [
+            "替换后的语流调及自然度。"
+          ]
+        },
+        "assessment": "名词替换本身有同点依据；但原0085的kuo24标DEM、同点词1132作他，且比较基准/目标无法由三层一致定位。译文沿用该有争议结构，既不能因与provisional_target相同判对，也不能按另一北部例句直接判倒置。"
+      }
+    },
+    {
+      "id": "6",
+      "stage": "validation",
+      "family": "human_comparison",
+      "dialect": "南部",
+      "location": "泸溪（潭溪）",
+      "point": "60824",
+      "template": {
+        "path": "site/yubao-60824-0.json",
+        "row": [
+          "0085",
+          "哥哥比弟弟高多了。",
+          "a21ko21 pi55 a33ŋo35 kau33 zi35 la21.",
+          "哥哥 COMPR 弟弟 高 多 PRT"
+        ]
+      },
+      "substitutions": [
+        {
+          "from_surface": "a21ko21",
+          "to_surface": "a13jio55",
+          "role": "comparison_subject",
+          "source_word": {
+            "path": "site/yubao-60824-1.json",
+            "id": "0638",
+            "quote": [
+              "0638",
+              "哥哥",
+              "ɑ21ko21",
+              "呼称，统称",
+              ""
+            ]
+          },
+          "replacement_word": {
+            "path": "site/yubao-60824-1.json",
+            "id": "0642",
+            "quote": [
+              "0642",
+              "姐姐",
+              "a13jio55",
+              "呼称，统称",
+              ""
+            ]
+          }
+        }
+      ],
+      "source_text": "姐姐比弟弟高多了。",
+      "meaning_constraints": [
+        "姐姐是较高者，弟弟是比较基准",
+        "保留“高多了”的显著程度，不弱化成一样高或略高",
+        "不增加已完成长高过程，也不颠倒比较方向"
+      ],
+      "translation": "a13jio55 pi55 a33ŋo35 kau33 zi35 la21。",
+      "translation_unresolved_spans": [],
+      "review": {
+        "sample_admissibility": "usable",
+        "translation_verdict": "supported",
+        "actual_errors": [],
+        "remaining_gaps": {
+          "core_structure": [],
+          "prosody_naturalness": [
+            "替换后的语流调和自然度。"
+          ]
+        },
+        "assessment": "60824句0085的中文、音形、逐词在参与者、方向与大差量上一致；以同点姐姐a13jio55替换哥哥可支撑当前译文的核心意义与构式。"
+      }
+    },
+    {
+      "id": "7",
+      "stage": "validation",
+      "family": "negative_motion",
+      "dialect": "北部",
+      "location": "龙山",
+      "point": "60757",
+      "template": {
+        "path": "site/yubao-60757-0.json",
+        "row": [
+          "0071",
+          "妈妈不会来了。妈妈还没回来。你别回去了。",
+          "a21 ȵie53 ɘn22 tsɿ22 khau53，a21 ȵie53 ai33 ia55 ɯ24 ta55，ȵi24 tha55 suŋ55 khuo55 ku24。",
+          "妈妈 来 不会 妈妈 还 走 没 2sg 别 回 DIR"
+        ]
+      },
+      "substitutions": [
+        {
+          "from_surface": "a21 ȵie53",
+          "to_surface": "a21pa33",
+          "role": "motion_subject_in_two_clauses",
+          "source_word": {
+            "path": "site/yubao-60757-0.json",
+            "id": "0618",
+            "quote": [
+              "0618",
+              "妈妈",
+              "a21ȵie33",
+              "呼称，最通用的",
+              ""
+            ]
+          },
+          "replacement_word": {
+            "path": "site/yubao-60757-0.json",
+            "id": "0617",
+            "quote": [
+              "0617",
+              "爸爸",
+              "a21pa33",
+              "呼称，最通用的",
+              ""
+            ]
+          }
+        }
+      ],
+      "source_text": "爸爸不会来了。爸爸还没回来。你别回去了。",
+      "meaning_constraints": [
+        "前两分句的主体都改为爸爸",
+        "第一句“不会来了”的预期/可能性否定，不仅表示没有来过",
+        "第二句保留“还没回来”的尚未义，不得改成不会来",
+        "第三句主体仍是你，保留别回去的禁止，不可改为爸爸别回去"
+      ],
+      "translation": "a21pa33 ɘn22 tsɿ22 khau53。a21pa33 ai33 ia55 suŋ55 khuo55 ti24 ta55。ȵi24 tha55 suŋ55 khuo55 ku24。",
+      "translation_unresolved_spans": [],
+      "review": {
+        "sample_admissibility": "invalid",
+        "translation_verdict": "unresolved",
+        "actual_errors": [],
+        "remaining_gaps": {
+          "core_structure": [
+            "第二句ti24的本点功能及与ta55共现。",
+            "第一句khau53内部分析、第三句ku24的精确标签仍属局部分析问题，整句意义另有支持。"
+          ],
+          "prosody_naturalness": [
+            "替换/组合后的语流调、自然度。"
+          ]
+        },
+        "assessment": "原0071第二分句ai33 ia55 ɯ24 ta55中的ɯ24在同点词0800、句0092均为走，名词替换后仍不能直接兑现还没回来，所以机械参考样本不成立。译者改用有记录的suŋ55 khuo55 ti24修复词义，有依据；局部ti24与否定共现尚未确证。"
+      }
+    },
+    {
+      "id": "8",
+      "stage": "validation",
+      "family": "negative_motion",
+      "dialect": "南部",
+      "location": "泸溪（潭溪）",
+      "point": "60824",
+      "template": {
+        "path": "site/yubao-60824-0.json",
+        "row": [
+          "0071",
+          "妈妈不会来了。妈妈还没回来。你别回去了。",
+          "a21ma21 la13dɨ55 mi35 a21ma21 la13dɨ55 tsi21ɡe21 la21 ni33 ta33 la33ɣa35 jie21.",
+          "妈妈 回来 NEG 妈妈 回来 NEG 会 CSM 2sg NEG 回去 也"
+        ]
+      },
+      "substitutions": [
+        {
+          "from_surface": "a21ma21",
+          "to_surface": "a13ta55",
+          "role": "motion_subject_in_two_clauses",
+          "source_word": {
+            "path": "site/yubao-60824-1.json",
+            "id": "0618",
+            "quote": [
+              "0618",
+              "妈妈",
+              "a21ma21",
+              "呼称，最通用的",
+              ""
+            ]
+          },
+          "replacement_word": {
+            "path": "site/yubao-60824-1.json",
+            "id": "0617",
+            "quote": [
+              "0617",
+              "爸爸",
+              "a13ta55",
+              "呼称，最通用的",
+              ""
+            ]
+          }
+        }
+      ],
+      "source_text": "爸爸不会来了。爸爸还没回来。你别回去了。",
+      "meaning_constraints": [
+        "前两分句的主体都改为爸爸",
+        "第一句“不会来了”的预期/可能性否定，不仅表示没有来过",
+        "第二句保留“还没回来”的尚未义，不得改成不会来",
+        "第三句主体仍是你，保留别回去的禁止，不可改为爸爸别回去"
+      ],
+      "translation": "⟦待核拟译：a13ta55 ɨ13dɨ55 tsi21ɡe21 la21；此处须表达将来判断“不会来了”，tsi21ɡe21 的该用法尚待核⟧。a13ta55 a21ɣa13 la13dɨ55 mi35。ni33 ta33 la33ɣa35 jie21。",
+      "translation_unresolved_spans": [
+        {
+          "span": "爸爸不会来了／a13ta55 ɨ13dɨ55 tsi21ɡe21 la21",
+          "issue": "现有潭溪证据能证明tsi21ɡe21的能力否定用法，尚不能独立证明“不会再发生”的将来判断义；句0071中文与音形的分句对齐也有冲突。候选整句保留待核，不能把来不了等同于不会来。"
+        },
+        {
+          "span": "jie21",
+          "issue": "同点完整劝止近例实际保留该词，但逐词只记“也”；其与此处劝止语气及汉语“了”的确切对应未核定，故保留原形而不自行删去。"
+        }
+      ],
+      "review": {
+        "sample_admissibility": "unresolved",
+        "translation_verdict": "unresolved",
+        "actual_errors": [
+          {
+            "type": "task_completion",
+            "span": "爸爸不会来了。",
+            "finding": "只给待核候选，未完成将来判断译文要求。",
+            "confirmed_linguistic_error": false
+          }
+        ],
+        "remaining_gaps": {
+          "core_structure": [
+            "第一句tsi21ɡe21的将来判断用法及la21的语气。",
+            "第三句jie21与了的精确对应。"
+          ],
+          "prosody_naturalness": [
+            "新组合语流调、自然度。"
+          ]
+        },
+        "assessment": "原0071前两句的来/回来、判断否定/还没与音形逐词不一致，机械替换父亲无法解决，provisional_target不能定为正确答案。译者识别冲突并修复第二句，第三句保留同点劝止形式；第一句仍是明标待核的将来判断候选，因此没有完成该分句要求。"
+      }
+    }
+  ],
+  "reference_scope": "Sample admissibility assesses the original paired template and the mechanical substitution as a clean reference. An invalid reference does not itself make the Chinese task invalid or a repaired translation erroneous.",
+  "reference_is_gold": false,
+  "summary": {
+    "development": {
+      "counts": {
+        "supported": 3,
+        "unresolved": 1,
+        "error": 0
+      },
+      "confirmed_actual_errors": 0,
+      "result": "未发现新的确定翻译错误。第2项撤回无构式证据的省略并恢复原串，局部待核准确反映尚存的语用与原记录对齐问题；第3项已正确收窄跨点语法旁证的用途。其余核心判定不变。",
+      "remaining_limits": "四句的拟句语流调/韵律与母语者自然度仍未核；两条猫句缺直接猫＋量词合例，但已有类别证据支持生产性替换。不能把这些剩余缺口泛化成所有意义/结构均错误。",
+      "uncertainty_reporting": "第2项明确且不过度。第1/3/4项unresolved_spans为空仅能指没有额外的局部构式争点，不能据此声称语流调及整句自然度已获验证。"
+    },
+    "validation": {
+      "core_support": {
+        "item_6": "比较角色、方向、大差量、句法与同点音形均有直接支持。",
+        "item_7": "第一、三句完整近例支持；第二句还＋回来＋事实否定核心有据，局部ti24搭配未决。",
+        "item_8": "第二句尚未回来组合、第三句禁止回去核心有据；第一句仅来词义等成分获证。"
+      },
+      "confirmed_linguistic_errors": [],
+      "concrete_completion_errors": [
+        {
+          "id": "8",
+          "clause": 1,
+          "issue": "待核将来判断候选未完成对应译文要求。"
+        }
+      ],
+      "unresolved_core_or_structure": [
+        {
+          "id": "5",
+          "issue": "原0085内部比较映射与kuo24身份。"
+        },
+        {
+          "id": "7",
+          "issue": "第二句ti24在本点的否定搭配。"
+        },
+        {
+          "id": "8",
+          "issue": "第一句将来判断/la21，第三句jie21精确语气。"
+        }
+      ],
+      "source_and_sample_problems": [
+        {
+          "id": "5",
+          "status": "unresolved",
+          "issue": "原比较例内部关系不明。"
+        },
+        {
+          "id": "7",
+          "status": "invalid",
+          "issue": "只换名词的参考仍说还没走，不能承载还没回来。"
+        },
+        {
+          "id": "8",
+          "status": "unresolved",
+          "issue": "原三层的前两分句对齐冲突，无法升格为gold。"
+        }
+      ],
+      "prosody_and_naturalness": {
+        "status": "unresolved",
+        "scope": "四项替换/组合后的连读调和自然度均未独立验证；不与核心结构缺口混计，也不据此自动判音形错误。"
+      },
+      "counts": {
+        "items": 4,
+        "sample_usable": 1,
+        "sample_invalid_as_clean_reference": 1,
+        "sample_unresolved": 2,
+        "translation_supported_core": 1,
+        "translation_unresolved": 3,
+        "confirmed_linguistic_errors": 0,
+        "incomplete_clause_requirements": 1
+      },
+      "interpretation": "本轮证明了若干核心结构获得支持，也暴露了来源对齐与译文局部证据缺口；不能据四项或与provisional_target相符宣称译法全对。"
+    }
+  }
+}

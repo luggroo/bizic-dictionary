@@ -1,63 +1,63 @@
 ---
 name: translate-tujia
-description: Translate into Northern or Southern Tujia using the Bizic Academy dictionary, corpus, and reference grammar, with evidence-based lexical and grammatical verification.
+description: Translate text into Northern or Southern Tujia, or review an existing translation, using the Bizic Academy dictionary, corpus, and reference grammar to check meaning, dialect, grammar, and spelling.
 ---
 
 # Translate Tujia / 土家语翻译
 
-Use this skill when asked to translate Chinese, English, songs, poems, or other material into Tujia, or to review an existing Tujia translation. This is a **research workflow**, not a claim that an automatic translator or validated bilingual model exists.
+Build a usable translation from attested words and constructions. Preserve the source's meaning and distinguish supported forms, productive combinations, and unresolved choices.
 
-## Source priority
+## Establish the task
 
-1. Work **only with materials in this repository** unless the user expressly permits external research.
-2. Consult `docs/reference-grammar.md` for Northern/Southern grammar, tone and spelling, nominalization, modifier placement, verb morphology, argument structure, and particles.
-3. Consult `site/longshan-texts.json` for attested Northern discourse, dialogues, folk songs, and natural phrases; preserve the original line and its translation when citing.
-4. Consult `site/yubao-60757-*.json` for Northern Longshan vocabulary and `site/yubao-60756-*.json` for Northern Xianren vocabulary. Other dialects require separately identified sources.
-5. Use the site's prepared dictionary where accessible (`site/dictionary.json.gz`, `site/data.json.gz`), and record provenance and dialect for every selected form. These are gzip files; decode before parsing. If unavailable, do not invent dictionary entries.
-6. Existing grammar and corpus examples are evidence; do not treat automatically generated English glosses or editorial inferences as native-speaker validation.
+- Follow the requested dialect and locality. Reuse an unambiguous target from the conversation; otherwise ask Northern or Southern while analyzing the source. For Northern without a narrower target, use Longshan materials and state that basis once. Translate Northern and Southern separately when both are requested.
+- Identify the audience, register, and requested spelling. Separate meaning from additional constraints such as meter, rhyme, line count, or terminology; explain a trade-off only when it affects the result.
+- For revision, preserve the supplied text and edit the requested span. Distinguish the author's choices from independently attested forms.
 
-## Translation procedure
+## Find evidence
 
-1. **Identify dialect**. If not specified, ask whether Northern or Southern; if previous context unambiguously establishes the dialect, preserve it. For Northern, prefer a consistent Longshan variety unless the user selects another location.
-2. **Analyze the source** by clause, participants, focus, aspect, idiom, and intended pragmatic effect. For songs, record line count, approximate syllable count, parallelism, rhyme, and repeated phrases.
-3. **Find vocabulary** in the dictionary, checking example contexts and part of speech. Distinguish loanwords, idioms, and polysemy. Do not use an attested word with an unrelated sense merely because the Chinese gloss overlaps.
-4. **Check grammar** against attested examples. Northern is generally SOV; verify adjective/stative predicate vs attributive usage, derived long forms, `nie`/`niexi` linking and nominalization, case/recipient marking, aspect, and result/degree complements.
-5. **Check corpus** for the actual construction, not merely individual words. Especially for lyrics, look at attested terms of address, self-reference, and particles in songs and dialogue.
-6. **Draft natural Tujia** rather than calquing Chinese word order. Preserve meaning and meter where possible; when competing constraints conflict, explain the trade-off.
-7. **Audit each line**: dialect consistency, semantic match, grammar, syllable count, tones, spelling, and unsupported words. Separate **attested** constructions from **analogical proposals** and unresolved choices.
-8. **Present a usable final translation**, followed by brief notes only where uncertainty matters. Do not pretend a draft has been verified by a native speaker.
+Start with the committed repository materials. Use additional sources when the user supplies or authorizes them, preserving their provenance and access scope.
 
-## Romanization and tones
+| Material | Use |
+| --- | --- |
+| `docs/reference-grammar.md` | Locate the relevant dialect's sentence patterns, nominal phrases, predicate forms, tone and spelling rules. Record the cited work, page, and example when available. |
+| `site/dictionary.json.gz` | Search lexical senses and full forms. Inspect individual `attestations` and their IDs, source, locality, spelling scheme, and linked `notations`; merged entries can contain different witnesses. |
+| `site/data.json.gz` | Look up source metadata and corpus texts. Check extraction quality, dialect, locality, and alignment before quoting an example. |
+| `site/longshan-texts.json` | Find Northern discourse and genre-specific usage. Inspect `blocks`, literal wording, and context; a paragraph summary or cultural paraphrase is not a word-for-word translation. |
+| `site/yubao-*.json` | Consult vocabulary and sentences from a specific survey point. Read each file's `point`, `location`, and `dialect`; Longshan, Xianren, Wanmi-po, and Southern Tanxi remain distinct. |
+| `site/notation-profiles.js`, `site/grammar-notation.js`, `site/southern-notation.js` | Check source-specific transcription and display conversions. A display convention does not establish phonetic identity between sources. |
 
-- Default to the **site's tone-marked romanization** when the user asks for `调号拼音`, not raw IPA or trailing Ye tone letters.
-- Follow the site's own phonology and conversion code, including `site/grammar-notation.js` for reference-grammar display conventions; do not assign Mandarin tones by intuition.
-- Preserve syllable boundaries, nasalization, and any lexically untoned particles. Do not invent tone marks when a source lacks them.
-- For technical discussion, include IPA or source-specific Ye spellings alongside tone-marked forms if useful; in a singable lyric, favor tone-marked spelling alone unless the user requests otherwise.
-- Do not mix Xianren, Longshan, and Southern phonology silently.
+Decode gzip files before parsing, for example:
 
-## Specific construction cautions
+```python
+import gzip, json
+with gzip.open("site/dictionary.json.gz", "rt", encoding="utf-8") as f:
+    words = json.load(f)["words"]
+```
 
-- **Stative modifiers**: A short predicate form does not automatically function as an attributive adjective. Check whether a lexical long/derived adjective is attested; otherwise evaluate `nie` or `niexi` with actual examples. Do not invent derivational suffixes.
-- **`xi`**: In `V-xi + adjective`, documented examples include “eat well,” “plough well,” and “time passes slowly”; analyses include complement marking or event nominalization. Other `xi` functions include clause nominalization, degree, and assertion. Do not assume all are interchangeable.
-- **`mor` / `mo`**: It is attested as a manner/accompaniment marker (“laugh while walking,” “sit while eating”) and also in corpus expressions translated as “speak clearly,” “manage to do,” “beat nearly to death,” and flooding to a result. Do not reduce it to manner only. Conversely, do not assume every stative predicate accepts `mor` as a result complement without evidence.
-- **`di mor kaxilan`**: A proposed lyric rendering of “痛得不好过,” supported by analogy with `V mor + result`, **not** a directly verified native-speaker example. Preserve the user's preferred lyric form, but label the construction provisional when discussing its evidence.
-- A source's Chinese “烂” may mean rotten, soft from cooking, or spoiled. Verify the sense and context before using the same Tujia lexeme for a rotten fruit.
+Search both lexical records and sentences; inspect complete records rather than taking the first gloss match. A missing search result establishes a retrieval gap. Machine glosses, OCR, editorial analyses, and a source cited by the grammar retain their limitations; cite a secondary quotation honestly when the original has not been checked. Record the repository commit for a reproducible audit.
 
-## Lyric editing conventions
+## Translate
 
-- Treat user-authored Tujia lines as the base text; do not overwrite their choices or replace a verse with an unrelated translation.
-- Preserve line count, repeated refrains, meaningful vocatives, and song rhythm.
-- If the user asks only for a targeted edit (e.g., one final line), edit that span and leave the rest intact.
-- Explicitly distinguish user-supplied but unverified words from database-attested forms.
-- Prefer concise alternatives over fabricated certainty. Mark a genuine unresolved choice rather than making up a form to complete a rhyme.
+1. **Analyze meaning by clause.** Track participants and their roles, reference, time, aspect, negation scope, modality, comparison, condition, direction, result, and speech act. Keep narration and quotation distinct. Split long clauses where useful without deleting events or logical relations.
+2. **Choose lexical senses.** Prefer witnesses from the target locality and compatible sources. Identify the source locality and limits of any cross-locality borrowing. Check context, part of speech, argument roles, idioms, loans, and collocations. Broaden a search with synonyms, but disclose any resulting change of meaning.
+3. **Find a construction.** Find an applicable grammatical rule or close attested examples for each important relation. Verify phrase order, case or relation markers, modifier vs predicate forms, nominalization, and clause linkage. General SOV order is a starting point; use the selected dialect's actual patterns for questions, topics, comparison, and other constructions.
+4. **Apply supported rules.** Ordinary lexical substitution is possible when the construction is productive and the new word fits its semantic role. Check animacy, countability, classifiers, possession, compound boundaries, register, and tonal or morphological effects. When adapting an example, check additions, deletions, and movement separately; a gloss alone does not establish that a marker is optional in that construction. A superficially similar example does not establish a new predicate construction or suffix function.
+5. **Build the predicate.** Resolve action stage, direction, result, ability, intention, possibility, and negation before choosing forms. Distinguish the meanings behind source-language expressions such as Chinese “会” and “了”. Check the whole predicate, contractions, irregular forms, and the scope of each marker; use Southern evidence for Southern morphology.
+6. **Realize the sentence.** Arrange arguments and modifiers, select attested full forms, and maintain consistent reference and discourse flow. Preserve meaningful repetition, address terms, and voice. For constrained genres, check rhythm and line structure after semantic and grammatical checks.
+7. **Audit against the source.** Recheck roles, polarity, time, modality, comparison direction, quantity, reference, and omitted or added content. Then check lexical sense, morphology, dialect, tones, and spelling. Back-translation can expose drift; it does not establish grammaticality or naturalness.
 
-## Privacy and publication
+## Preserve transcription and uncertainty
 
-- Never access, copy, publish, or upload private source archives, keys, or unpublished fieldwork without explicit permission. This skill must refer only to materials already committed to this repository.
-- The skill file itself contains workflow guidance only, not private corpus data or credentials.
+- Follow the requested notation; use the site's tone-marked romanization for `调号拼音`. Keep source transcription alongside it when useful for review. Use verified source-specific conversions and inspect failures instead of completing missing mappings by intuition.
+- Preserve tone values, syllable boundaries, nasalization, and genuinely untoned particles in source quotations. Keep source IPA unchanged when a display system groups distinct tone values. Different notation arrays are paired only when their provenance supports that pairing.
+- Distinguish an exact quotation from a new translation. A new sentence whose words and productive construction have evidence may be offered as a **proposed translation / 拟译** even if the full sentence is unattested. State the specific remaining gap rather than requiring an exact corpus match for every sentence.
+- When a word or construction lacks evidence, mark the affected span `⟦待核：…⟧` and complete supported portions. If the uncertainty determines the whole clause's roles, polarity, modality, or logic, give a structural explanation instead of a confident complete sentence.
+- Treat conflicting glosses, ambiguous alignment, missing tones, and incomplete source context as separate evidence gaps. Preserve ambiguity when it cannot be resolved. An attested Chinese insertion can be retained and identified as code-switching; its written form alone does not supply a Tujia pronunciation.
 
-## Example request
+## Deliver
 
-> Translate this eight-line Chinese folk song into Northern Tujia in tone-marked romanization, matching the original meter. Verify address terms in the repository's Longshan songs, and annotate any unattested morphology.
+Give the translation first. For a short text, add only the notes needed to explain a material uncertainty or adaptation. For a longer text, align numbered clauses or passages with the source; keep dialect versions distinct. Add word alignment, IPA, or an evidence table when the task calls for learning, review, or verification.
 
-Deliver the lyric, a short list of uncertain expressions, and a concise source trail.
+For an audit, identify the affected span, the specific issue, supporting evidence, and a correction or unresolved choice. Report what was actually checked. Reserve “native-speaker reviewed” for an actual documented review; corpus support alone does not establish naturalness.
+
+Use committed or authorized material within its access scope. Permission to read source material for research does not authorize publishing it. Keep progress reports and commissioning conversations outside the translation itself.
