@@ -40,6 +40,39 @@ async function inspectDocument(page) {
   assert((await page.locator('body').innerText()).includes(version), 'published data version is readable');
   assert.equal(await page.locator('meta[name="text-scale"]').getAttribute('content'), 'scale', 'opt into supported platform text scaling');
   assert.equal(await page.locator('h1#main-heading[tabindex="-1"]').count(), 1, 'a single focusable main heading receives the skip link');
+  const destinations = await page.locator('.text-index a, .card .actions a').evaluateAll(elements => elements.map(el => ({href: el.getAttribute('href'), text: el.innerText})));
+  for (const link of destinations) assert(link.text.includes(new URL(link.href, 'https://tujia.biz').href), 'a flattened candidate/index link retains its exact destination');
+}
+
+async function inspectTextDiscovery(browser, base) {
+  const context = await browser.newContext({javaScriptEnabled: false});
+  try {
+    const page = await context.newPage();
+    const extract = text => [...new Set(text.match(/https:\/\/tujia\.biz\/[^\s<>]+/g) || [])];
+    // Only the directory URL is seeded. All subsequent destinations come from
+    // visible text, modelling a reader which loses href attributes.
+    await page.goto(base + '/text/');
+    const directory = await page.locator('main').innerText();
+    assert(directory.includes('目前收录') && directory.includes('其他义项'), 'directory explains the finite published coverage');
+    const lookups = extract(directory).filter(url => new URL(url).pathname.startsWith('/text/lookup/'));
+    assert.equal(lookups.length, 1, 'one query is actually advertised');
+    await page.goto(base + new URL(lookups[0]).pathname);
+    const query = await page.locator('main').innerText();
+    const allUrls = extract(query);
+    const details = allUrls.filter(url => new URL(url).pathname.startsWith('/text/entry/'));
+    assert.equal(details.length, 2, 'only two candidates advertise a text detail page');
+    assert.equal(allUrls.filter(url => new URL(url).searchParams.has('id')).length, 2, 'other candidates keep explicitly interactive destinations');
+    const discovered = [];
+    for (const url of details) {
+      const response = await page.goto(base + new URL(url).pathname);
+      assert.equal(response.status(), 200, 'a destination discovered in plain text resolves');
+      const id = path.basename(new URL(url).pathname, '.html');
+      assert(entries.has(id), 'discovered detail belongs to the prepared source');
+      await inspectEntry(page, entries.get(id));
+      discovered.push({url, witnesses: await page.locator('[data-attestation-id]').count()});
+    }
+    return {seed: '/text/', query: lookups[0], details: discovered, source: 'visible body text with JavaScript disabled'};
+  } finally { await context.close(); }
 }
 
 // Computed colors provide a repeatable contrast regression check. This does not
@@ -246,9 +279,10 @@ async function inspectAdversarialFixture(browser) {
   }
   const executablePath = process.env.CHROMIUM_EXECUTABLE || ['/usr/bin/google-chrome', '/usr/bin/chromium'].find(fs.existsSync);
   const browser = await chromium.launch({headless: true, executablePath, args: ['--no-sandbox', '--disable-dev-shm-usage']});
-  let accessibility;
+  let accessibility, textDiscovery;
   try {
     await inspectAdversarialFixture(browser);
+    textDiscovery = await inspectTextDiscovery(browser, base);
     for (const [label, viewport] of [['desktop', {width: 1280, height: 900}], ['mobile', {width: 390, height: 844}]]) {
       const context = await browser.newContext({javaScriptEnabled: false, viewport});
       const page = await context.newPage();
@@ -287,5 +321,5 @@ async function inspectAdversarialFixture(browser) {
     }
     accessibility = await inspectAccessibility(browser, base, routes);
   } finally { await browser.close(); }
-  console.log(JSON.stringify({result: 'PASS', candidates: candidates.length, witnesses: Object.fromEntries([...entries].map(([id, e]) => [id, e.attestations.length])), htmlBytes: sizes, accessibility, screenshots: snapshots || null}));
+  console.log(JSON.stringify({result: 'PASS', candidates: candidates.length, witnesses: Object.fromEntries([...entries].map(([id, e]) => [id, e.attestations.length])), htmlBytes: sizes, textDiscovery, accessibility, screenshots: snapshots || null}));
 })().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => server.close());

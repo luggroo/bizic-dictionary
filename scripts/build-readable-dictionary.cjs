@@ -10,6 +10,7 @@ const DETAIL_IDS = ['w684', 'stedt-rn-43584'];
 const QUERY = '吃';
 const TEXT_ROOT = 'text';
 const QUERY_PATH = TEXT_ROOT + '/lookup/zh/' + QUERY + '.html';
+const PUBLIC_ORIGIN = 'https://tujia.biz';
 const entryPath = id => TEXT_ROOT + '/entry/' + encodeURIComponent(id) + '.html';
 const escape = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const list = value => (Array.isArray(value) ? value : value ? [value] : []).filter(Boolean);
@@ -27,6 +28,8 @@ const field = (name, value, lang = '') => {
   const absent = value === undefined || value === null || value === '';
   return `<dt>${bilingual(name)}</dt><dd${lang && !absent ? ` lang="${lang}"` : ''}>${absent ? bilingual(missing) : escape(text(value))}</dd>`;
 };
+// Keep destinations in visible text as well as href for readers that flatten links.
+const readingLink = (href, label, attributes = '') => `<a ${attributes} href="${escape(href)}">${label}<span class="address" lang="en">${escape(new URL(href, PUBLIC_ORIGIN).href)}</span></a>`;
 function sourceLink(source) {
   if (!source?.url || !/^https?:\/\//i.test(source.url)) return '';
   return `<a class="source-link" href="${escape(source.url)}">${bilingual('来源原件 / Source document ↗')}</a>`;
@@ -49,6 +52,7 @@ h1{font-size:clamp(1.875rem,1.4rem + 2vw,2.875rem);line-height:1.25;margin:.75re
 h2{font-size:1.5rem;margin:2rem 0 .875rem}h3{font-size:1.25rem;margin:0 0 .75rem}p{margin:.625rem 0}
 .lede{max-inline-size:48rem}
 .text-index{padding-inline-start:1.25rem}.text-index li{margin-block:.75rem}.text-index p{margin:0}
+.address{display:block;font-size:.875rem;font-weight:400;overflow-wrap:anywhere}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,24rem),1fr));gap:1rem}
 .card,.witness{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;padding:1.375rem;min-inline-size:0;overflow-wrap:anywhere}
 .witness{margin:1.125rem 0;scroll-margin-block-start:1rem}
@@ -98,7 +102,7 @@ function renderLookup(candidates, data, version) {
       const display = list(w._display?.accent).map(n => n.text).join(' · ');
       const location = list(w.locations || w.location).join('、');
       const sourceNames = list(w.sourceIds || w.source).map(id => data.sources.find(s => s.id === id)?.title || id).join(' · ');
-      const link = DETAIL_IDS.includes(w.id) ? `<a data-static-entry aria-label="${escape(w.id)}：完整见证 / Full source witnesses" href="/${entryPath(w.id)}">完整见证 / <span lang="en">Full source witnesses →</span></a>` : `<a aria-label="${escape(w.id)}：交互词条（需 JavaScript）/ Interactive entry (JavaScript)" href="/?id=${encodeURIComponent(w.id)}#words">交互词条（需 JavaScript）/ <span lang="en">Interactive entry (JavaScript) →</span></a>`;
+      const link = DETAIL_IDS.includes(w.id) ? readingLink(`/${entryPath(w.id)}`, `${escape(w.id)} · 完整见证 / <span lang="en">Full source witnesses →</span>`, 'data-static-entry') : readingLink(`/?id=${encodeURIComponent(w.id)}#words`, `${escape(w.id)} · 交互词条（需 JavaScript）/ <span lang="en">Interactive entry (JavaScript) →</span>`);
       return `<article class="card" data-entry-id="${escape(w.id)}"><div class="tag">${escape(w.id)}</div><h3>${escape(w.zh)}</h3><p lang="en">${escape(w.en)}</p>${display ? `<div class="form">${escape(display)}</div><p class="meta">词条显示拼写 / <span lang="en">Entry display spelling</span></p>` : ''}<p class="scope">词条地点 / <span lang="en">Entry locations</span>: ${escape(location || missing)}</p><p class="meta">${escape(sourceNames)}</p><div class="actions">${link}</div></article>`;
     }).join('')}</div></section>`;
   }).join('');
@@ -108,9 +112,9 @@ function renderIndex(summaries, version) {
   const entries = DETAIL_IDS.map(id => {
     const entry = summaries.find(w => w.id === id);
     if (!entry) throw Error('Missing entry summary: '+id);
-    return `<li><a href="/${entryPath(id)}">${escape(entry.zh || entry.en)} · ${escape(id)}</a><p class="meta">${escape(entry.dialect || missing)}</p></li>`;
+    return `<li>${readingLink(`/${entryPath(id)}`, `${escape(entry.zh || entry.en)} · ${escape(id)}`)}<p class="meta">${escape(entry.dialect || missing)}</p></li>`;
   }).join('');
-  return page('词典文本索引 / Dictionary text index', `<div class="eyebrow">${bilingual('土家语词典 / Tujia dictionary')}</div><h1 id="main-heading" tabindex="-1">${bilingual('词典文本索引 / Dictionary text index')}</h1><p class="lede">${bilingual('按汉语义项查阅词条，或直接打开来源见证。 / Browse by Chinese sense or open source witnesses directly.')}</p><section><h2>${bilingual('汉语义项 / Chinese senses')}</h2><ul class="text-index"><li><a href="/${encodeURI(QUERY_PATH)}">吃 / <span lang="en">eat</span></a></li></ul></section><section><h2>${bilingual('词条与来源 / Entries and sources')}</h2><ul class="text-index">${entries}</ul></section><p class="meta">${bilingual('此目录收录上方列出的检索页与词条。 / This directory covers the lookup and entry pages listed above.')}</p><p class="actions"><a href="/#words">${bilingual('打开完整交互词典（需 JavaScript）/ Open the full interactive dictionary (JavaScript)')}</a></p>`, version);
+  return page('词典文本索引 / Dictionary text index', `<div class="eyebrow">${bilingual('土家语词典 / Tujia dictionary')}</div><h1 id="main-heading" tabindex="-1">${bilingual('词典文本索引 / Dictionary text index')}</h1><p class="lede">${bilingual('本目录目前收录汉语义项「吃」的查询页，以及 w684、stedt-rn-43584 两个词条的完整来源见证。查询页列出候选的记音、方言分区和已记录地点；详情页分别保留每条见证的原记音、义项、来源与关联拼写。 / This directory currently covers the Chinese query “吃” and full source witnesses for w684 and stedt-rn-43584. The query lists candidate forms, dialect groups and recorded locations; each detail page preserves individual transcriptions, senses, sources and linked spellings.')}</p><p>${bilingual('下方列出全部可用的文本页面。其他义项与词条可在完整交互词典中查阅。 / All available text pages are listed below. Use the full interactive dictionary for other senses and entries.')}</p><section><h2>${bilingual('汉语义项 / Chinese senses')}</h2><ul class="text-index"><li>${readingLink(`/${encodeURI(QUERY_PATH)}`, '吃 / <span lang="en">eat</span>')}</li></ul></section><section><h2>${bilingual('词条与来源 / Entries and sources')}</h2><ul class="text-index">${entries}</ul></section><p class="actions"><a href="/#words">${bilingual('打开完整交互词典（需 JavaScript）/ Open the full interactive dictionary (JavaScript)')}</a></p>`, version);
 }
 function buildReadableDictionary({root}) {
   const read = name => JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(root,'prepared',name+'.json.gz'))));

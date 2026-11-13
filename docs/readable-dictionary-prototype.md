@@ -25,19 +25,19 @@ provide arbitrary-query search or complete static coverage of the dictionary.
 
 ## Size and ordinary browsing
 
-The current four pages add **86,350 bytes (84.33 KiB)** of HTML to the deployment
+The current four pages add **87,521 bytes (85.47 KiB)** of HTML to the deployment
 directory. The local staged site grows by about **0.13%**. No copy of the full
 dictionary is added to the text directory.
 
 | Text page | HTML bytes | Local gzip estimate |
 | --- | ---: | ---: |
-| `/text/index.html` | 5,558 | 2,412 |
-| `/text/lookup/zh/吃.html` | 7,750 | 2,858 |
-| `/text/entry/w684.html` | 60,167 | 5,939 |
-| `/text/entry/stedt-rn-43584.html` | 12,875 | 3,650 |
-| Total | 86,350 | 14,859 |
+| `/text/index.html` | 6,402 | 2,727 |
+| `/text/lookup/zh/吃.html` | 7,915 | 2,857 |
+| `/text/entry/w684.html` | 60,248 | 5,842 |
+| `/text/entry/stedt-rn-43584.html` | 12,956 | 3,609 |
+| Total | 87,521 | 15,035 |
 
-Local Brotli compression totals 11,596 bytes. Both compression figures are
+Local Brotli compression totals 11,848 bytes. Both compression figures are
 estimates, not measurements of the deployed server's content encoding.
 
 A JavaScript-enabled Chromium comparison of ordinary home → search **吃** →
@@ -149,3 +149,24 @@ publication, each target platform must open `/text/`, fetch the lookup page, dis
 detail URLs, and quote their witness records. A platform fetch failure remains
 distinct from an empty dictionary result. No translation skill was changed as
 part of this prototype.
+
+## Plain-text discovery follow-up
+
+The directory now states its exact published coverage in prose. Directory and
+candidate links include their complete public URL as visible text, so a reader
+that drops `href` attributes can still recover the actual destination. Candidate
+links include their entry ID; interactive-only candidates retain their actual
+JavaScript route. No ungenerated text detail URL is advertised.
+
+The browser test also seeds only `/text/`, extracts subsequent destinations from
+visible main text, and reaches both details with JavaScript disabled. It verifies
+all 21 witnesses against prepared data, including source/locality distinctions.
+The follow-up adds 1,171 HTML bytes over the first prototype; ordinary homepage
+links, resources and default behavior remain unchanged. Reader-copy, normal
+loading and the existing desktop/mobile/accessibility checks pass.
+
+This checks browser rendering and deterministic text discovery, not a hosted
+model's extraction. A separate translator skill experiment records page access,
+unpublished coverage and missing witness-linked notation independently. In this
+release, headline accent forms have no witness IDs in the prepared summary;
+their proximity to a witness does not establish a spelling/IPA pair.
