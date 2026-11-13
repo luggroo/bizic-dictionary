@@ -53,3 +53,5 @@ site/prepared/
 site/data.json
 site/dictionary.json
 site/fonts/GentiumPlus-*
+# Generated text reading routes (built with prepared data)
+site/text/

@@ -101,6 +101,7 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
  const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
  html=html.replace('</head>',`<meta name="prepared-data-version" content="${version}"></head>`).replace('</body>',`<script id="site-assets" type="application/json">${json(assets)}</script><script id="site-bootstrap-data" type="application/json">${json(home)}</script></body>`);
  fs.writeFileSync(index,html);
+ require('./build-readable-dictionary.cjs').buildReadableDictionary({root});
  mark('prepare-lazy-chunks');
  if(process.env.PREPARED_REFERENCE)fs.writeFileSync(process.env.PREPARED_REFERENCE,JSON.stringify(data));mark('write');
  console.log('words',data.words.length,'core gzip bytes',fs.statSync(path.join(compiled,'core.json.gz')).size);
