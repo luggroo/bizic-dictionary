@@ -6,7 +6,7 @@ const http = require('node:http');
 const zlib = require('node:zlib');
 const crypto = require('node:crypto');
 const {chromium} = require('playwright');
-const {renderEntry,selectEntry,groupFor,queryPath,buildReadableDictionary} = require('./build-readable-dictionary.cjs');
+const {renderEntry,selectEntry,groupFor,queryPath,initialPath,buildReadableDictionary} = require('./build-readable-dictionary.cjs');
 const root = path.resolve(process.argv[2] || path.join(__dirname,'../site'));
 const read = name => JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(root,'prepared',name+'.json.gz'))));
 const data = read('core');
@@ -76,7 +76,65 @@ function inspectAllFiles() {
     const html=fs.readFileSync(path.join(root,queryPath(q)),'utf8');
     const actual=new Set([...html.matchAll(/data-entry-id="([^"]+)"/g)].map(m=>m[1]));
     assert.deepEqual(sort(actual),sort(expected),q+': all matching selected witnesses remain discoverable');
+    const pairs=new Set([...html.matchAll(/data-entry-id="([^"]+)" data-source-id="([^"]+)"/g)].map(m=>m[1]+'|'+m[2]));
+    const wanted=new Set([...expected].flatMap(id=>entries.get(id).attestations.filter(a=>keys(a.zh).includes(q)).map(a=>id+'|'+(data.sourceAliases?.[a.source] || a.source))));
+    assert.deepEqual(sort(pairs),sort(wanted),q+': each query row belongs to the actual canonical source');
   }
+  const expectedSources=new Map(),initials=new Map();
+  for(const e of entries.values())for(const a of e.attestations){
+    const id=data.sourceAliases?.[a.source] || a.source;
+    if(!expectedSources.has(id))expectedSources.set(id,{entries:new Set(),witnesses:0,keys:new Set(),ids:new Set()});
+    const s=expectedSources.get(id);s.entries.add(e.id);s.witnesses++;s.ids.add(a.source);keys(a.zh).forEach(q=>s.keys.add(q));
+  }
+  for(const q of queries.keys()){const first=Array.from(q)[0];if(!initials.has(first))initials.set(first,[]);initials.get(first).push(q);}
+  const catalogBytes=fs.readFileSync(path.join(root,'text/catalog.json'));
+  const catalog=JSON.parse(catalogBytes);assert.equal(catalog.data_version,version);
+  assert.equal(catalog.all_entries,'https://tujia.biz/text/all.html');
+  const allHtml=Object.values(catalog.dialect_indexes).map(item=>fs.readFileSync(path.join(root,decodeURIComponent(new URL(item.page).pathname)),'utf8')).join('\n');
+  const tables=[...allHtml.matchAll(/<pre class="all-entries" data-dialect="([^"]+)"[^>]*>([\s\S]*?)<\/pre>/g)].map(m=>({dialect:decode(m[1]),text:decode(m[2])}));
+  assert(tables.some(t=>t.dialect==='北部') && tables.some(t=>t.dialect==='南部'),'North and South have independent complete tables');
+  const foundIds=new Set(),cell=value=>String(value ?? '').replace(/\s+/g,' ').trim();
+  for(const table of tables){
+    const lines=table.text.split('\n');assert(lines.shift().includes('英语 English'),'complete index contains explicit English glosses');
+    const actual=new Map(lines.map(line=>{const fields=line.split('\t|\t');assert.equal(fields.length,4);foundIds.add(fields[3]);return [fields[3],fields]}));
+    const expected=new Map();
+    for(const e of entries.values()){
+      const witnesses=e.attestations.filter(a=>(['北部','南部'].includes(a.dialect) ? a.dialect : '其他或未标明')===table.dialect);
+      if(!witnesses.length)continue;
+      expected.set(e.id,[[...new Set(witnesses.map(a=>a.zh).filter(Boolean))].join('; '),[...new Set(witnesses.map(a=>a.en).filter(Boolean))].join('; '),[...new Set(witnesses.map(a=>a.term).filter(Boolean))].join(' · '),e.id].map(cell));
+    }
+    assert.deepEqual(sort(actual.keys()),sort(expected.keys()),table.dialect+': no other dialect enters the table');
+    for(const [id,row] of expected)assert.deepEqual(actual.get(id),row,id+': all Chinese/English senses and forms survive in their own dialect section');
+  }
+  assert.deepEqual(sort(foundIds),sort(entries.keys()),'one page contains every published entry');
+  for(const m of allHtml.matchAll(/<pre class="all-entries"[^>]*>([\s\S]*?)<\/pre>/g))assert(!/<a\b/.test(m[1]),'complete tables contain no per-entry links');
+  assert.deepEqual(sort(catalog.sources.map(s=>s.id)),sort(expectedSources.keys()),'catalog covers every canonical source');
+  for(const s of catalog.sources){
+    const expected=expectedSources.get(s.id);
+    assert.equal(s.entries,expected.entries.size);assert.equal(s.witnesses,expected.witnesses);assert.equal(s.query_keys,expected.keys.size);
+    assert.deepEqual(s.original_source_ids,sort(expected.ids),'original source IDs remain distinct from canonical source IDs');
+    const html=fs.readFileSync(path.join(root,decodeURIComponent(new URL(s.page).pathname)),'utf8');
+    const actual=decode(html.match(/<pre class="sense-keys">([\s\S]*?)<\/pre>/)[1]).split('\n');
+    assert.deepEqual(actual,sort(expected.keys),s.id+': one source page contains its entire Chinese-key index');
+    assert(Buffer.byteLength(html)<32768,s.id+': source index stays below 32 KiB');
+    for(const q of expected.keys){
+      const query=fs.readFileSync(path.join(root,queryPath(q)),'utf8');
+      assert(query.includes('id="'+s.query_anchor+'"'),s.id+': advertised query anchor exists');
+    }
+  }
+  for(const [initial,qs] of initials){
+    const url=catalog.templates.initial_zh.replace('{initial}',encodeURIComponent(initial));
+    const file=path.join(root,decodeURIComponent(new URL(url).pathname));
+    const html=fs.readFileSync(file,'utf8');
+    const actual=[...html.matchAll(/href="(\/text\/lookup\/zh\/[^\"]+)"/g)].map(m=>decodeURIComponent(m[1]));
+    assert.deepEqual(sort(actual),sort(qs.map(q=>'/'+queryPath(q))),initial+': prefix location is predictable and complete');
+    assert(Buffer.byteLength(html)<32768,initial+': prefix page stays below 32 KiB');
+  }
+  for(const q of queries.keys()){
+    const url=catalog.exceptional_queries[q] || catalog.templates.exact_zh.replace('{query}',encodeURIComponent(q));
+    assert.equal(decodeURIComponent(new URL(url).pathname),'/'+queryPath(q),q+': catalog template or explicit exception locates the actual query');
+  }
+  bytes+=catalogBytes.length;gzipBytes+=zlib.gzipSync(catalogBytes,{level:9}).length;
   for(const c of corpus) {
     const html=fs.readFileSync(path.join(root,'text/corpus',c.id+'.html'),'utf8');
     for(const key of ['title','text','ipa','annotation','source'])if(c[key])assert(html.includes(escape(c[key])),c.id+': retain '+key);
@@ -93,7 +151,7 @@ function inspectAllFiles() {
   assert(bytes<60*1024*1024,'text deployment budget stays below 60 MiB');
   assert(sizes['index.html']<4096,'root directory stays small');
   assert(sizes['entry/w684.html']<60248/2,'Northern sample is less than half the previous HTML size');
-  return {files:files.length,bytes,gzipEstimateBytes:gzipBytes,rootBytes:sizes['index.html'],sampleBytes:Object.fromEntries(['lookup/zh/吃.html','entry/w684.html','entry/stedt-rn-43584.html'].map(k=>[k,sizes[k]])),largest:Object.entries(sizes).sort((a,b)=>b[1]-a[1])[0]};
+  return {files:files.length+1,bytes,gzipEstimateBytes:gzipBytes,sources:expectedSources.size,initials:initials.size,rootBytes:sizes['index.html'],sampleBytes:Object.fromEntries(['lookup/zh/吃.html','entry/w684.html','entry/stedt-rn-43584.html'].map(k=>[k,sizes[k]])),largest:Object.entries(sizes).sort((a,b)=>b[1]-a[1])[0]};
 }
 function inspectFixtures() {
   const fixture={sources:[{id:'brassett-2004'},{id:'south',dialect:'南部'}],sourceAliases:{alias:'brassett-2004'}};
@@ -115,9 +173,17 @@ function inspectFixtures() {
     fs.writeFileSync(path.join(temp,'index.html'),'<meta name="prepared-data-version" content="fixture">');
     fs.writeFileSync(path.join(temp,'prepared/core.json.gz'),zlib.gzipSync(JSON.stringify({...fixture,corpus:[]})));
     fs.writeFileSync(path.join(temp,'prepared/entries/x.json.gz'),zlib.gzipSync(JSON.stringify({...original,attestations:original.attestations.map(a=>({...a,zh:'1',term:'raw'}))})));
+    fs.writeFileSync(path.join(temp,'prepared/entries/mixed.json.gz'),zlib.gzipSync(JSON.stringify({id:'mixed',attestations:[
+      {id:'north-witness',source:'alias',dialect:'北部',term:'NORTH_FORM',zh:'北',en:'NORTHERN_ENGLISH'},
+      {id:'south-witness',source:'foreign',dialect:'南部',term:'SOUTH_FORM',zh:'南',en:'SOUTHERN_ENGLISH'}
+    ],notations:{}})));
     buildReadableDictionary({root:temp});
     assert(!fs.existsSync(path.join(temp,'text/stale.html')));
     assert(fs.readFileSync(path.join(temp,'text/lookup/zh/1.html'),'utf8').includes('data-entry-id="x"'),'numeric query does not collide with browse pagination');
+    const complete=fs.readFileSync(path.join(temp,'text/all/north.html'),'utf8')+fs.readFileSync(path.join(temp,'text/all/south.html'),'utf8');
+    const north=complete.match(/data-dialect="北部"[^>]*>([\s\S]*?)<\/pre>/)[1],south=complete.match(/data-dialect="南部"[^>]*>([\s\S]*?)<\/pre>/)[1];
+    assert(north.includes('NORTH_FORM') && north.includes('NORTHERN_ENGLISH') && !north.includes('SOUTH_FORM') && !north.includes('SOUTHERN_ENGLISH'));
+    assert(south.includes('SOUTH_FORM') && south.includes('SOUTHERN_ENGLISH') && !south.includes('NORTH_FORM') && !south.includes('NORTHERN_ENGLISH'),'even a shared entry is split by witness dialect in the complete index');
   } finally {fs.rmSync(temp,{recursive:true,force:true});}
 }
 const server=http.createServer((req,res)=>{
@@ -126,7 +192,7 @@ const server=http.createServer((req,res)=>{
     let file=path.resolve(root,'.'+pathname);
     if(!file.startsWith(root+path.sep))return res.writeHead(403).end();
     if(fs.statSync(file).isDirectory())file=path.join(file,'index.html');
-    res.setHeader('Content-Type','text/html; charset=utf-8');res.end(fs.readFileSync(file));
+    res.setHeader('Content-Type',file.endsWith('.json') ? 'application/json; charset=utf-8' : 'text/html; charset=utf-8');res.end(fs.readFileSync(file));
   } catch {res.writeHead(404).end();}
 });
 async function inspectBrowser() {
@@ -167,6 +233,29 @@ async function inspectBrowser() {
           await page.goto(base+route);await page.locator('main a').first().click();await page.locator('main a').first().click();
           assert.equal(await page.locator('h1').count(),1);
         }
+        await page.goto(base+'/text/');
+        await page.locator('main a[href="/text/all.html"]').click();
+        for(const [name,dialect] of [['north','北部'],['south','南部']]){
+          await page.locator('main a[href="/text/all/'+name+'.html"]').click();
+          assert.equal(await page.locator('.all-entries').count(),1,'one complete dialect per page');
+          assert.equal(await page.locator('.all-entries[data-dialect="'+dialect+'"]').count(),1);
+          const complete=await page.locator('.all-entries').innerText();
+          assert(complete.includes('eat'),'complete dialect index exposes English glosses without script execution');
+          assert.equal(await page.locator('.all-entries a').count(),0);
+          assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'complete table reflows on narrow screens');
+          if(screenshots)await page.screenshot({path:path.join(screenshots,label+'-all-'+name+'.png')});
+          await page.locator('main a[href="/text/all.html"]').click();
+        }
+        await page.goto(base+'/text/');
+        await page.locator('main a[href="/text/source/index.html"]').click();
+        await page.locator('main a[href="/text/source/brassett-2004/index.html"]').click();
+        assert((await page.locator('.sense-keys').innerText()).split('\n').includes('吃'));
+        await page.locator('main a[href*="/lookup/zh/"]').first().click();
+        assert.equal(new URL(page.url()).hash,'#source-brassett-2004');
+        assert(await page.locator('#source-brassett-2004 [data-entry-id="w684"]').count());
+        await page.goto(base+encodeURI('/text/initial/zh/大.html'));
+        await page.locator('main a').first().click();
+        assert(await page.locator('[data-entry-id]').count(),'first-character route reaches an actual query without page-number guessing');
         for(const route of ['/text/','/text/lookup/zh/吃.html','/text/entry/w684.html','/text/corpus/yubao-60757-s-0001.html']) {
           await page.goto(base+encodeURI(route));
           assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,label+route+': reflows');

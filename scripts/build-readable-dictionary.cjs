@@ -17,9 +17,12 @@ const normal = value => String(value ?? '').normalize('NFKC').toLowerCase().repl
 const chineseKeys = value => unique(String(value || '').split(/[;；/／]/).map(normal).filter(Boolean));
 const entryPath = id => 'text/entry/' + id + '.html';
 const queryPath = query => 'text/lookup/zh/' + (Buffer.byteLength(query) <= 180 && !/[\\/\x00-\x1f]/.test(query) && !/^\.+$/.test(query) ? query : '~'+crypto.createHash('sha256').update(query).digest('hex').slice(0,24)) + '.html';
+const initialPath = initial => queryPath(initial).replace('/lookup/','/initial/');
+const sourcePath = id => 'text/source/'+id+'/index.html';
 const href = name => '/' + name.split('/').map(encodeURIComponent).join('/');
 // The URL is the link text too: flattened web readers retain the destination.
 const link = (name, label = '') => `${label ? escape(label)+' ' : ''}<a href="${href(name)}">${ORIGIN+href(name)}</a>`;
+const anchoredLink = (name, anchor, label) => `${escape(label)} <a href="${href(name)}#${encodeURIComponent(anchor)}">${ORIGIN+href(name)}#${encodeURIComponent(anchor)}</a>`;
 const sourceUrl = value => /^https?:\/\//i.test(value || '') ? `<a href="${escape(value)}">${escape(value)}</a>` : '';
 const style = ':root{color-scheme:light dark}body{max-width:72ch;margin:1em auto;padding:0 .75em;font:1em/1.5 system-ui,sans-serif;background:Canvas;color:CanvasText;overflow-wrap:anywhere}pre{white-space:pre-wrap;font:inherit}a{color:LinkText;overflow-wrap:anywhere}:focus-visible{outline:2px solid currentColor;outline-offset:2px}h1{font-size:1.4em}h2,h3{font-size:1.1em}footer{margin-top:1.5em}';
 function page(title, body, version) {
@@ -94,10 +97,13 @@ function renderLookup(query, entries, data, version) {
   const sources = sourceMap(data);
   const rows = Object.entries(GROUPS).map(([group,label])=>{
     const matches = entries.filter(e=>e.attestations.some(a=>groupFor(a,data,sources) === group && chineseKeys(a.zh).includes(query)));
-    return matches.length ? `<h2>${label}</h2>`+matches.map(e=>{
-      const forms = unique(e.attestations.filter(a=>groupFor(a,data,sources) === group && chineseKeys(a.zh).includes(query)).map(a=>a.term)).join(' · ');
-      return `<p data-entry-id="${escape(e.id)}">${escape(forms)}<br>${link(entryPath(e.id),e.id)}</p>`;
-    }).join('') : '';
+    const ids = unique(matches.flatMap(e=>e.attestations.filter(a=>groupFor(a,data,sources) === group && chineseKeys(a.zh).includes(query)).map(a=>data.sourceAliases?.[a.source] || a.source))).sort(compare);
+    return matches.length ? `<h2>${label}</h2>`+ids.map(id=>`<section id="source-${escape(id)}"><h3>${escape(sources.get(id)?.title || id)} · ${escape(id)}</h3>`+matches.flatMap(e=>{
+      const witnesses=e.attestations.filter(a=>groupFor(a,data,sources) === group && (data.sourceAliases?.[a.source] || a.source) === id && chineseKeys(a.zh).includes(query));
+      if(!witnesses.length)return [];
+      const forms=unique(witnesses.map(a=>a.term)).join(' · ');
+      return [`<p data-entry-id="${escape(e.id)}" data-source-id="${escape(id)}">${escape(forms)}<br>${link(entryPath(e.id),e.id)}</p>`];
+    }).join('')+'</section>').join('') : '';
   }).join('');
   return page(query+' · 汉语义项',`<p>${entries.length} 个词条。按本目录来源范围匹配汉语义项；具体用法见原始见证。</p>${rows}`,version);
 }
@@ -128,6 +134,17 @@ function buildReadableDictionary({root}) {
   for (const e of entries) for (const q of unique(e.attestations.flatMap(a=>chineseKeys(a.zh)))) {
     if (!queries.has(q)) queries.set(q,[]);
     queries.get(q).push(e);
+  }
+  const sourceIndexes=new Map(),initials=new Map();
+  for(const e of entries)for(const a of e.attestations){
+    const id=data.sourceAliases?.[a.source] || a.source;
+    if(!/^[A-Za-z0-9_-]+$/.test(id))throw Error('Invalid canonical source ID: '+id);
+    if(!sourceIndexes.has(id))sourceIndexes.set(id,{id,title:sources.get(id)?.title || id,entries:new Set(),witnesses:0,keys:new Set(),originalIds:new Set()});
+    const s=sourceIndexes.get(id);s.entries.add(e.id);s.witnesses++;s.originalIds.add(a.source);
+    for(const q of chineseKeys(a.zh))s.keys.add(q);
+  }
+  for(const q of [...queries.keys()].sort(compare)){
+    const initial=Array.from(q)[0];if(!initials.has(initial))initials.set(initial,[]);initials.get(initial).push(q);
   }
   const originalSentences=new Map();
   const manifestPath=path.join(root,'yubao-manifest.json');
@@ -168,13 +185,51 @@ function buildReadableDictionary({root}) {
     report.groups[key]={entries:group.entries.size,witnesses:group.witnesses};report.witnesses+=group.witnesses;
     directory('text/source/'+key,GROUPS[key],entries.filter(e=>group.entries.has(e.id)).map(e=>({name:entryPath(e.id),label:e.id+' · '+unique(e.attestations.filter(a=>groupFor(a,data,sources)===key).map(a=>a.zh || a.en)).join('; ')})));
   }
+  const routes={exact_zh:ORIGIN+'/text/lookup/zh/{query}.html',initial_zh:ORIGIN+'/text/initial/zh/{initial}.html',entry:ORIGIN+'/text/entry/{entry_id}.html'};
+  const catalog={schema_version:1,data_version:version,all_entries:ORIGIN+'/text/all.html',templates:routes,
+    normalization:'NFKC, lowercase, collapse whitespace, trim; then URL-encode the path parameter. initial is the first Unicode character of the normalized query.',
+    missing:'A missing route means no published key in this export, not absence from the language or all source material.',
+    exceptional_queries:Object.fromEntries([...queries.keys()].filter(q=>queryPath(q).split('/').at(-1).startsWith('~')).map(q=>[q,ORIGIN+href(queryPath(q))])),sources:[]};
+  for(const s of [...sourceIndexes.values()].sort((a,b)=>compare(a.id,b.id))){
+    const keys=[...s.keys].sort(compare),example=s.keys.has('吃') ? '吃' : keys[0];
+    const item={id:s.id,title:s.title,page:ORIGIN+href(sourcePath(s.id)),entries:s.entries.size,witnesses:s.witnesses,query_keys:keys.length,original_source_ids:[...s.originalIds].sort(compare),query_anchor:'source-'+s.id};
+    catalog.sources.push(item);
+    const exampleLinks=example ? `<p>${anchoredLink(queryPath(example),'source-'+s.id,'查询示例：'+example)}</p><p>${link(initialPath(Array.from(example)[0]),'首字浏览')}</p>` : '';
+    write(sourcePath(s.id),page(s.title+' · 来源索引',`<p>Canonical source ID: ${escape(s.id)}</p><p>本目录收录 ${item.entries} 个词条、${item.witnesses} 条见证、${item.query_keys} 个汉语义项。</p><pre>原始 Source ID:\n${escape(item.original_source_ids.join('\n'))}</pre><p>下方每行是一个已收录的汉语查询词。完整见证见查询结果中的词条链接。</p><p>精确查询：<code>${escape(routes.exact_zh)}</code>；query 替换为查询词并作 URL 编码。结果按来源列出，可定位到 <code>#source-${escape(s.id)}</code>。</p>${exampleLinks}<h2>汉语义项</h2><pre class="sense-keys">${escape(keys.join('\n'))}</pre>`,version));
+  }
+  write('text/source/index.html',page('来源目录',catalog.sources.map(s=>`<p>${link(sourcePath(s.id),s.title+' · '+s.id)}<br>${s.entries} 个词条，${s.witnesses} 条见证，${s.query_keys} 个汉语义项</p>`).join(''),version));
+  for(const [initial,keys] of initials)write(initialPath(initial),page(initial+' · 汉语首字索引',`<p>${keys.length} 个以「${escape(initial)}」开头的汉语义项。</p>`+keys.map(q=>`<p>${link(queryPath(q),q)}</p>`).join(''),version));
+  directory('text/browse/initial','汉语首字目录',[...initials].map(([initial,keys])=>({name:initialPath(initial),label:initial+' · '+keys.length+' 个义项'})));
+  report.sources=catalog.sources.length;report.initials=initials.size;
+  // One complete, link-free headword table per dialect, with no further paging.
+  // Detailed witness/notation provenance remains on the individual entry pages.
+  const cell=value=>String(value ?? '').replace(/\s+/g,' ').trim();
+  const variety=a=>['北部','南部'].includes(a.dialect) ? a.dialect : '其他或未标明';
+  report.all_entries_by_dialect={};
+  const dialectIndexes=[['北部','Northern Tujia','north'],['南部','Southern Tujia','south'],['其他或未标明','Other or unclassified','unspecified']].flatMap(([dialect,english,anchor])=>{
+    const rows=entries.flatMap(e=>{
+      const witnesses=e.attestations.filter(a=>variety(a)===dialect);if(!witnesses.length)return [];
+      return [[unique(witnesses.map(a=>a.zh).filter(Boolean)).join('; '),unique(witnesses.map(a=>a.en).filter(Boolean)).join('; '),unique(witnesses.map(a=>a.term).filter(Boolean)).join(' · '),e.id].map(cell)];
+    }).sort((a,b)=>compare(a[0],b[0]) || compare(a[3],b[3]));
+    if(!rows.length)return [];
+    report.all_entries_by_dialect[dialect]=rows.length;
+    const table=`<pre class="all-entries" data-dialect="${dialect}" style="tab-size:1">${escape(['汉语 Chinese\t|\t英语 English\t|\t土家语（来源记音） Tujia\t|\tEntry ID',...rows.map(row=>row.join('\t|\t'))].join('\n'))}</pre>`;
+    const name='text/all/'+anchor+'.html';
+    const html=page(dialect+' · '+english+' · 完整词目表',`<p>本页完整列出本目录收录的 ${rows.length} 个${dialect}词条，可用页面查找检索汉语、英语或土家语词形。</p><p>各列只取本方言见证的义项和来源记音。并列形式的来源对应关系及用法见词条详情；缺项只表示本目录未收录。</p><p>详情路径：<code>${escape(routes.entry)}</code>，entry_id 对应表中的 Entry ID。</p><p>${link('text/all.html','北部与南部总表')}</p>${table}`,version);
+    write(name,html);
+    return [{key:anchor,dialect,english,page:ORIGIN+href(name),path:name,entries:rows.length,bytes:Buffer.byteLength(html)}];
+  });
+  catalog.dialect_indexes=Object.fromEntries(dialectIndexes.map(({key,path,english,...item})=>[key,item]));
+  write('text/catalog.json',JSON.stringify(catalog)+'\n');
+  const allHtml=page('完整词目总表 · Complete headword indexes',`<p>共 ${entries.length} 个词条，覆盖本目录收录的 Brassett 04、06、龙山语保和南部土家语资料。北部、南部分别一页完整列出，不再分页。每页包含汉语义项、英语义项、土家语来源记音和 Entry ID。</p>${dialectIndexes.map(item=>`<p>${link(item.path,item.dialect+' · '+item.english)}<br>${item.entries} 个词条，约 ${Math.ceil(item.bytes/1024)} KiB</p>`).join('')}<p>可用浏览器页面查找检索词目；此表的缺项只表示本目录未收录。</p>`,version);
+  write('text/all.html',allHtml);report.all_entries_bytes=dialectIndexes.reduce((total,item)=>total+item.bytes,0);report.dialect_indexes=catalog.dialect_indexes;
   for(const c of corpus) {
     if(!/^[A-Za-z0-9][A-Za-z0-9_.-]*$/.test(c.id))throw Error('Invalid corpus ID: '+c.id);
     write('text/corpus/'+c.id+'.html',renderCorpus(c,data,version));
   }
   directory('text/corpus','语保例句',corpus.map(c=>({name:'text/corpus/'+c.id+'.html',label:c.title+' · '+c.id})));
-  write('text/index.html',page('土家语词典 · 文本目录',`<p>收录 Brassett 04、06 的词汇见证、龙山语保词汇和例句，以及标注为南部土家语的词汇见证和例句。每条见证保留原记音、义项、来源与已记录的调查点。</p><p>${report.entries} 个词条，${report.witnesses} 条见证，${report.queries} 个汉语义项，${report.corpus} 条例句。目录之外的资料可在交互词典查阅。</p><p>${link('text/browse/zh/index.html','汉语义项')}</p>${queries.has('吃') ? '<p>'+link(queryPath('吃'),'吃')+'</p>' : ''}${Object.entries(GROUPS).map(([key,label])=>`<p>${link('text/source/'+key+'/index.html',label)} · ${report.groups[key].witnesses} 条见证</p>`).join('')}<p>${link('text/corpus/index.html','语保例句')}</p><p><a href="/#words">交互词典</a>（需 JavaScript）</p>`,version));
+  write('text/index.html',page('土家语词典 · 文本目录',`<p>收录 Brassett 04、06 的词汇见证、龙山语保词汇和例句，以及标注为南部土家语的词汇见证和例句。每条见证保留原记音、义项、来源与已记录的调查点。</p><p>${report.entries} 个词条，${report.witnesses} 条见证，${report.queries} 个汉语义项，${report.corpus} 条例句。目录之外的资料可在交互词典查阅。</p><p>${link('text/all.html','完整词目总表：北部、南部各一页')}</p><p>${link('text/source/index.html','按来源：每个来源一页完整汉语索引')}</p><p>精确查询：<code>${escape(routes.exact_zh)}</code>。首字浏览：<code>${escape(routes.initial_zh)}</code>。将 query 替换为查询词，initial 替换为其首字符，并作 URL 编码。仅已收录的查询词和首字符有对应页面。</p>${queries.has('吃') ? '<p>'+link(queryPath('吃'),'查询示例：吃')+'</p>' : ''}<p>${link('text/browse/initial/index.html','全部首字')}</p><p>${link('text/browse/zh/index.html','全部汉语义项')}</p><p>${link('text/catalog.json','来源与路径清单（JSON）')}</p><p>${link('text/corpus/index.html','语保例句')}</p><p><a href="/#words">交互词典</a>（需 JavaScript）</p>`,version));
   return report;
 }
-module.exports = {buildReadableDictionary,renderEntry,renderAttestation,selectEntry,groupFor,chineseKeys,queryPath,entryPath,renderLookup,renderCorpus};
+module.exports = {buildReadableDictionary,renderEntry,renderAttestation,selectEntry,groupFor,chineseKeys,queryPath,initialPath,entryPath,renderLookup,renderCorpus};
 if(require.main===module)console.log(JSON.stringify(buildReadableDictionary({root:path.resolve(process.argv[2] || path.join(__dirname,'../site'))}),null,2));
