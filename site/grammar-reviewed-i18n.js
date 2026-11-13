@@ -1940,10 +1940,12 @@ Object.assign(UI_TRANSLATIONS,{"例（1）中“锋利”直接作谓语；例�
 Object.assign(UI_TRANSLATIONS,{"这里的 mtho “高”是表示性质的词根，mtho ba'i 通过名物化和属格标记组成定语。土家语和藏语都可比较性质词的派生、直接定语及带标记的修饰结构。参见 Tournadre & Suzuki（2023）及 Shirai（1999）。":"The root mtho “high” denotes a property. In mtho ba'i, nominalization and genitive marking form an attributive modifier. Tibetan and Tujia can be compared in property-word derivation, direct noun modification, and marked modification (Tournadre & Suzuki 2023; Shirai 1999)."});
 
 Object.assign(UI_TRANSLATIONS,{
-  "工具名物化": "Instrument nominalization",
+  "ci 的工具名词": "Tool nouns with ci",
+  "xi 的工具名物化": "Instrument nominalization with xi",
   "动词或动词短语后加 xi，可以组成表示工具、器具的名词。向华武（2026）的龙山靛房材料有以下例子：": "Adding xi to a verb or verb phrase can form a noun denoting a tool or utensil. Xiang Huawu (2026) records the following examples from Dingfang, Longshan:",
-  "同一材料中，ci 也见于工具名称：": "The same source also records ci in tool names:",
-  "作者将这些 ci 工具名词列为基本词汇化的形式；xi 构成工具名称则具有能产性。": "The author describes these tool nouns with ci as largely lexicalized, while tool nominalization with xi is productive.",
+  "向华武（2026）的龙山靛房材料还记录了以下 ci 工具名词：": "Xiang Huawu (2026) also records the following tool nouns with ci in Dingfang, Longshan:",
+  "作者将这些 ci 工具名词列为基本词汇化的形式。": "The author describes these tool nouns with ci as largely lexicalized.",
+  "xi 构成工具名称具有能产性。": "Tool nominalization with xi is productive.",
   "饭.煮.名物化": "rice.cook.NMLZ",
   "地.耕.名物化": "field.plough.NMLZ",
   "坐.名物化": "sit.NMLZ",
