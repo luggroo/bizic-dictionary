@@ -17,8 +17,8 @@ const server=http.createServer((req,res)=>{
  const base='http://127.0.0.1:'+server.address().port+'/';
  const executablePath=process.env.CHROMIUM_EXECUTABLE||['/usr/bin/google-chrome','/usr/bin/chromium'].find(fs.existsSync);
  const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox','--disable-dev-shm-usage']});
- const failures=[];
- const page=async()=>{const p=await browser.newPage({viewport:{width:390,height:844}});p.setDefaultTimeout(30000);p.on('pageerror',e=>failures.push(e.message));return p;};
+ const failures=[],textRequests=[];
+ const page=async()=>{const p=await browser.newPage({viewport:{width:390,height:844}});p.setDefaultTimeout(30000);p.on('pageerror',e=>failures.push(e.message));p.on('request',r=>{if(new URL(r.url()).pathname.startsWith('/text/'))textRequests.push(r.url())});return p;};
  try{
   let p=await page(),requests=[],attempts=0;p.on('request',r=>requests.push(r.url()));
   await p.route('**/prepared/**',route=>route.abort());
@@ -187,6 +187,7 @@ const server=http.createServer((req,res)=>{
   p=await page();await p.addInitScript(()=>{window.DecompressionStream=undefined});await p.goto(base+'#words');await p.waitForSelector('.word-card');
   assert(await p.evaluate(()=>typeof pako==='object'),'older browsers load the inflater only when needed');await p.close();
   assert.deepEqual(failures,[],'no runtime exceptions across lazy reader routes');
+  assert.deepEqual(textRequests,[],'ordinary browsing never fetches the separate text export');
   console.log('PASS: interactive home without datasets, independent grammar, script retries, dataset retry recovery, route races, shared links and lazy gzip fallback.');
  }finally{await browser.close()}
 })().catch(error=>{console.error(error);process.exitCode=1}).finally(()=>server.close());

@@ -1,172 +1,140 @@
-# Separate dictionary text routes
+# Dictionary text routes
 
-The website build generates a separate `/text/` directory for direct text
-reading: a Chinese sense lookup for **吃** and full source-witness pages for
-**w684** and **stedt-rn-43584**. Their initial HTML
-contains the evidence; reading and navigation require no JavaScript, JSON
-download, or gzip decompression on the client.
+`/text/` publishes compact initial HTML for direct reading without JavaScript,
+client-side decompression, fonts, images, or data requests. Its native links
+include their absolute destination as visible text for readers that discard
+`href` attributes. The ordinary interactive homepage does not link, redirect,
+preload, or fetch this directory.
 
-| Generated route | Scope |
-| --- | --- |
-| `/text/` | Directory of the available text lookup and source pages |
-| `/text/lookup/zh/吃.html` | All matches for 吃 in the prepared Chinese exact-search keys |
-| `/text/entry/w684.html` | Every witness of the merged Northern entry |
-| `/text/entry/stedt-rn-43584.html` | Every witness of the merged Southern entry |
+## Published coverage
 
-The existing `/`, `/#words`, and `/?id=…` routes remain the interactive website.
-Its homepage, navigation, footer, and no-script fallback do not expose the text
-entry point. The ordinary app does not preload or fetch these files; a reader
-opens `/text/` or a specific text URL directly. The directory is separate public
-content, not a replacement for the default interface.
+Selection operates on source witnesses after the normal website build has
+applied its gloss reviews, IPA normalization and entry merges.
 
-The other two current candidates retain links to the existing interactive
-website, explicitly labeled as requiring JavaScript. This prototype does not
-provide arbitrary-query search or complete static coverage of the dictionary.
-
-## Size and ordinary browsing
-
-The current four pages add **87,521 bytes (85.47 KiB)** of HTML to the deployment
-directory. The local staged site grows by about **0.13%**. No copy of the full
-dictionary is added to the text directory.
-
-| Text page | HTML bytes | Local gzip estimate |
+| Collection | Distinct entries in collection | Source witnesses |
 | --- | ---: | ---: |
-| `/text/index.html` | 6,402 | 2,727 |
-| `/text/lookup/zh/吃.html` | 7,915 | 2,857 |
-| `/text/entry/w684.html` | 60,248 | 5,842 |
-| `/text/entry/stedt-rn-43584.html` | 12,956 | 3,609 |
-| Total | 87,521 | 15,035 |
+| Brassett 04 and 06, including their source aliases | 3,578 | 13,652 |
+| Chinese Language Resources Protection Project, Longshan (`60757`) | 1,937 | 2,008 |
+| Southern Tujia | 3,763 | 4,078 |
+| Union | **8,938** | **19,738** |
 
-Local Brotli compression totals 11,848 bytes. Both compression figures are
-estimates, not measurements of the deployed server's content encoding.
+An entry may belong to multiple collections. Southern selection uses the
+witness dialect; a Southern source label may supply selection scope only when
+the witness has no dialect classification. An explicit Northern or mixed
+witness label is not overridden. Source-wide geography remains separately
+labeled and is not assigned to a witness's missing locality.
 
-A JavaScript-enabled Chromium comparison of ordinary home → search **吃** →
-open **w684** found identical request sets, status codes, and response bytes
-before and after generating `/text/`. The three stages made 21, 15, and three
-requests respectively, with **zero text-directory requests and zero added
-response bytes**. The homepage HTML hash and its 76,681-byte size also stayed
-unchanged. The local preview had the same missing font and three media paths in
-both runs; this is an incremental comparison, not a production traffic estimate.
+The export also contains **199 survey sentences**: 99 from Longshan and 100
+from Southern Luxi/Tanxi. Each retains both the survey file's original
+transcription and the website's normalized IPA, Chinese prompt and source
+annotation. This is a dictionary and survey-sentence export, not a reproduction
+of every source PDF, recording or grammar chapter.
 
-The Pages build uploads all site files, but the ordinary asset manifest includes
-only root-level JavaScript and CSS. There is no service worker or precache step
-that pulls this text directory into normal browsing. Tests keep the text entry
-point out of the homepage's links and resource hints. Extending the prototype
-to all entries would require a fresh storage measurement; it need not add any
-ordinary page-load requests.
+## Navigation
 
-## Data and provenance
-
-`scripts/prepare-search-data.cjs` invokes
-`scripts/build-readable-dictionary.cjs` after writing prepared data. The new
-renderer consumes the same final merged entries, source aliases, and prepared
-spelling summaries as the website. It does not independently convert spellings
-or rewrite original forms.
-
-- Each witness has its own visible ID, original transcription, senses, source,
-  locator, dialect, and recorded locality. Unknown locality stays unknown;
-  source-wide geography is separately labeled.
-- Linked notation is selected by `attestationIds`, never array position.
-  Entry-level display spelling is identified separately from witness evidence.
-- Merged notation records can combine source and derived forms. Their processing
-  metadata is labeled as belonging to the notation record; mixed origins are
-  not assigned to individual witnesses without a mapping.
-- Original Chinese/English glosses, editorial translation provenance, source
-  notices, and entry notes remain visible. Evidence is not hidden in collapsed
-  controls or HTML attributes alone.
-- Pages show the prepared-data version. Entry pages also show the SHA-256 of
-  their prepared gzip input. These identify data, not linguistic correctness.
-
-## Build and preview
-
-Use the repository's normal dataset-expansion, gloss-review, IPA-normalization,
-and prepared-data build sequence. The Pages workflow runs the new generator
-through the existing build and runs its end-to-end test with the browser tests.
-Generated pages are ignored by Git and included in the site artifact.
-
-For the current local prototype, the complete staged website is at
-`.local/readable-preview/site`. No live deployment is needed to inspect it:
-
-```sh
-python3 -m http.server 8765 --bind 127.0.0.1 --directory .local/readable-preview/site
-```
-
-Open `http://127.0.0.1:8765/text/`, follow the **吃** lookup, then open the two
-full witness pages. To regenerate the four pages from existing prepared data:
-
-```sh
-node scripts/build-readable-dictionary.cjs .local/readable-preview/site
-```
-
-## Validation
-
-```sh
-READABLE_SCREENSHOT_DIR=.local/readable-preview/screenshots node scripts/test-readable-dictionary.cjs .local/readable-preview/site
-node scripts/test-reader-copy.cjs .local/readable-preview/site
-node scripts/test-prepared-search.cjs .local/readable-preview/site
-node scripts/test-prepared-version.cjs .local/readable-preview/site
-```
-
-The reading test serves the pages over local HTTP, navigates from the text directory through lookup to both
-entries with JavaScript disabled at desktop and mobile sizes, and compares every
-witness and linked notation with the prepared records. It checks escaping,
-unsafe source links, unknown-locality handling, mixed notation origins,
-translation provenance, and horizontal overflow.
-
-The current data produces four candidates, 18 Northern witnesses, and three
-Southern witnesses. Desktop/mobile screenshots are generated locally when
-`READABLE_SCREENSHOT_DIR` is set. Playwright and an installed Chromium are needed
-for this test; `CHROMIUM_EXECUTABLE` can select a browser binary.
-
-## Modern Web Guidance
-
-The prototype applies the relevant parts of
-[Chrome's Modern Web Guidance](https://developer.chrome.com/docs/modern-web-guidance/guides):
-
-| Guidance | Implementation |
+| Route | Content |
 | --- | --- |
-| [HTML](https://developer.chrome.com/docs/modern-web-guidance/guides/html/html) | Native links, landmarks, ordered heading levels, labeled definition lists, and language annotations for English interface text and glosses |
-| [Accessibility](https://developer.chrome.com/docs/modern-web-guidance/guides/accessibility/accessibility) | Keyboard skip link to the focusable main heading, visible focus, distinct candidate link names, list semantics, and standalone link targets at least 44px high at the default font size |
-| [Typography](https://developer.chrome.com/docs/modern-web-guidance/guides/visual-design/typography) and [OS text scaling](https://developer.chrome.com/docs/modern-web-guidance/guides/accessibility/respect-os-text-scale) | Relative font sizes, an unset root font size, unitless line heights, unrestricted zoom, and the progressive `text-scale` meta declaration |
-| [CSS layout](https://developer.chrome.com/docs/modern-web-guidance/guides/css/css-layout) | Content-driven card columns, wrapping metadata, flexible heights, and document order matching visual order |
-| [Dark mode](https://developer.chrome.com/docs/modern-web-guidance/guides/visual-design/dark-mode) | Early color-scheme declaration and shared light/dark color tokens selected by system preference, with a forced-colors focus outline |
-| [Performance](https://developer.chrome.com/docs/modern-web-guidance/guides/performance/performance) | Complete initial HTML and small inline CSS; no client scripts, downloaded fonts, images, or data-fetch dependency chain |
+| `/text/` | Small coverage summary and collection links |
+| `/text/browse/zh/index.html` | Paginated directory of all 4,978 Chinese sense keys |
+| `/text/lookup/zh/吃.html` | Entries whose included witnesses match 吃 |
+| `/text/entry/w684.html` | Included witnesses of that merged entry |
+| `/text/source/brassett/index.html` | Brassett entry directory |
+| `/text/source/longshan/index.html` | Longshan survey entry directory |
+| `/text/source/southern/index.html` | Southern entry directory |
+| `/text/corpus/index.html` | Survey sentence directory |
 
-The browser checks include keyboard navigation, 320px layout, doubled root font
-size, increased text spacing, computed text and focus contrast, and emulated
-dark/forced-color preferences. These supplement the source-fidelity tests.
-The local run on 2026-11-13 passed for all four `/text/` pages in all three color modes,
-preserving all 21 witnesses and making document requests only. Minimum sampled
-text contrast was 5.28:1 in light mode, 8.08:1 in dark mode, and 13.99:1 with
-forced colors; tested focus outlines exceeded 3:1. Reader-copy checks also passed.
+Directories contain at most 100 items per leaf page. Query pages are generated
+for the Chinese senses actually present in selected witnesses. Punctuation
+splitting and NFKC normalization match the site's Chinese-key conventions;
+this is exact sense lookup, not arbitrary free-text search. The browse directory
+is the authoritative list of URLs. Oversized or unsafe filename components use
+short digest paths advertised by that directory. Pagination is separate from
+query paths, including numeric queries.
 
-They do not establish full WCAG conformance, physical-device OS text scaling,
-screen-reader behavior, Safari/Firefox compatibility, or production Core Web
-Vitals. Those require their respective environments after publication.
+The 吃 page now has two distinct merged entries in three collection rows:
+Brassett and Longshan share `w684`; Southern witnesses use `stedt-rn-43584`.
+The previously displayed Baojing candidates are outside this export's scope.
+No interactive-only candidate is presented as a text detail page.
 
-Local success does not verify Gemini or DeepSeek domain access. After a separate
-publication, each target platform must open `/text/`, fetch the lookup page, discover the two
-detail URLs, and quote their witness records. A platform fetch failure remains
-distinct from an empty dictionary result. No translation skill was changed as
-part of this prototype.
+## Evidence and compact rendering
 
-## Plain-text discovery follow-up
+Pages use plain paragraphs, headings, wrapped text blocks and native links.
+The small inline stylesheet supports text enlargement, keyboard focus, narrow
+screens and system light/dark colors. There are no cards, decorative assets,
+external stylesheets or bilingual repetitions of every interface label.
+Original English glosses and source language material remain intact.
 
-The directory now states its exact published coverage in prose. Directory and
-candidate links include their complete public URL as visible text, so a reader
-that drops `href` attributes can still recover the actual destination. Candidate
-links include their entry ID; interactive-only candidates retain their actual
-JavaScript route. No ungenerated text detail URL is advertised.
+Every populated witness field is retained, including editorial translation
+provenance, original glosses, corrections and notices. Entry IDs, attestation
+IDs, source IDs and canonical source IDs remain distinct. Source descriptions
+are listed once per entry. A linked notation is also listed once, with the exact
+included attestation IDs; its processing metadata is not attributed to an
+individual witness when the merged record has multiple origins. Unlinked
+headline spelling is not promoted to witness evidence. The export performs no
+new spelling conversion.
 
-The browser test also seeds only `/text/`, extracts subsequent destinations from
-visible main text, and reaches both details with JavaScript disabled. It verifies
-all 21 witnesses against prepared data, including source/locality distinctions.
-The follow-up adds 1,171 HTML bytes over the first prototype; ordinary homepage
-links, resources and default behavior remain unchanged. Reader-copy, normal
-loading and the existing desktop/mobile/accessibility checks pass.
+All pages show the prepared-data version. Generated routes are removed before
+rebuilding so deleted or excluded records cannot remain publicly accessible as
+stale files. The generator never rewrites the interactive homepage or prepared
+datasets.
 
-This checks browser rendering and deterministic text discovery, not a hosted
-model's extraction. A separate translator skill experiment records page access,
-unpublished coverage and missing witness-linked notation independently. In this
-release, headline accent forms have no witness IDs in the prepared summary;
-their proximity to a witness does not establish a spelling/IPA pair.
+## Measured size
+
+Measurements for prepared-data version `22cb01c6881a6922`:
+
+| Item | HTML bytes |
+| --- | ---: |
+| Text directory | 2,086 |
+| 吃 lookup | 1,550 |
+| `w684` detail | 10,318 |
+| `stedt-rn-43584` detail | 4,522 |
+| Largest page (sentence directory leaf) | 18,224 |
+| All 14,267 files | **45,073,361** |
+
+The two sample details previously occupied 60,248 and 12,956 bytes. They are
+now about 83% and 65% smaller, respectively; the Northern page also excludes
+witnesses outside the selected collections. These percentages therefore
+combine layout savings with the explicit source-scope change.
+
+The staged site excluding `/text/` occupies 67,467,248 bytes. Full text coverage
+adds about **45.1 MB**, or **66.8%**, bringing that staged directory to about
+112.5 MB. The extension is substantial deployment storage; it does not add
+ordinary homepage transfer. The sum of separately gzip-compressed HTML files
+is 19,529,943 bytes, a local estimate rather than a server encoding measurement.
+Readers retrieve individual small pages, never the whole directory by default.
+
+## Build and validation
+
+The normal Pages workflow invokes `build-readable-dictionary.cjs` from
+`prepare-search-data.cjs`. The generated `/text/` and `/prepared/` directories
+remain ignored by Git and are included in the deployment artifact.
+
+For an already prepared stage:
+
+```sh
+node scripts/build-readable-dictionary.cjs .local/release-qa/site
+READABLE_SCREENSHOT_DIR=.local/text-expanded/screenshots node scripts/test-readable-dictionary.cjs .local/release-qa/site
+node scripts/test-reader-copy.cjs .local/release-qa/site
+node scripts/test-web-loading.cjs .local/release-qa/site
+```
+
+The full export check compares all selected witness fields and notation links
+against prepared data; checks every Chinese query's candidate set, all sentence
+transcriptions and every internal link; and enforces a 60 MiB storage budget.
+Fixtures check source aliases, dialect isolation, unsafe content, stale-route
+removal, missing locality and numeric-query/pagination separation.
+
+Chromium tests run with JavaScript disabled at desktop and 320px widths in
+light and dark mode. They discover the 吃 URL from visible directory text,
+navigate through query and collection directories, read source witnesses,
+exercise keyboard navigation and 200% text enlargement, and assert that only
+documents are requested. The ordinary loading regression covers interactive
+search, reader routes, deferred datasets, retries and navigation races. Screenshots
+receive a separate visual review; the reader-copy check also passes.
+
+The relevant [Chrome Modern Web Guidance](https://developer.chrome.com/docs/modern-web-guidance/guides)
+is applied through semantic HTML, native navigation, relative font sizing,
+unrestricted zoom, wrapping layouts, system color preferences and no render-time
+data dependency. These checks do not claim full accessibility conformance or
+establish a particular hosted model's domain access. DeepSeek/Gemini must still
+test their own page-reading tools after publication.
