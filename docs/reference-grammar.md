@@ -3136,6 +3136,29 @@ xi也可以指人或事物，如“做工的人”“吃的、用的”。niexi�
 
 两者在修饰名词时怎样选择，见[nie、xi与nie-xi的搭配](#north-xi-niexi-pairs)。
 
+<a id="north-tool-nominalization"></a>
+
+#### 工具名物化
+
+动词或动词短语后加 xi，可以组成表示工具、器具的名词。向华武（2026）的龙山靛房材料有以下例子：
+
+| 形式 | 逐词 | 含义 |
+| --- | --- | --- |
+| /je²¹pan³⁵ɕi⁵⁵/ | 饭.煮.名物化 | 煮饭的器具 |
+| /li⁵³ʨhie²¹ɕi⁵⁵/ | 地.耕.名物化 | 犁地的工具 |
+
+同一材料中，ci 也见于工具名称：
+
+| 形式 | 逐词 | 含义 |
+| --- | --- | --- |
+| /u²¹ʦhɿ²¹/ | 坐.名物化 | 坐凳 |
+| /thu⁵⁵ʦhɿ²¹/ | 蒸.名物化 | 蒸笼 |
+| /ke²¹ʦhɿ³⁵ʦhɿ²¹/ | 玩.名物化 | 玩具 |
+
+作者将这些 ci 工具名词列为基本词汇化的形式；xi 构成工具名称则具有能产性。
+
+出处：向华武（2026），《龙山土家语的名物化结构》，第14页，龙山靛房。[原文](https://drive.google.com/file/d/1IdJUH4JKzlBkH1W7CQJM7MLYkHl8HxDp/view#page=3)
+
 <a id="north-xi-functions"></a>
 
 ### 6.2 把动作或小句作为主语、宾语
@@ -3147,6 +3170,74 @@ xi也可以指人或事物，如“做工的人”“吃的、用的”。niexi�
 鲁曼等（2021）从名词化出发解释这些用法；其中部分例子使用niexi或po xi。该文自采材料主要来自龙山靛房镇报鸽村、坡脚村，另引有其他文献的例句。
 
 出处：[鲁曼等（2021），第424—432页](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf#page=2)。
+
+<a id="north-clausal-nominalization-distribution"></a>
+
+#### 小句名物化的形式与分布
+
+向华武（2026）将龙山靛房的小句名物化分为关系小句、补足语小句和状语小句。下表按正文例句列出所用形式：
+
+| 小句类型 | 形式 | 例句 |
+| --- | --- | --- |
+| 关系小句 | /nie⁵⁵/、/ɕi⁵⁵/、/nie⁵⁵ɕi⁵⁵/ | [我们吃的食物](#north-clausal-nie-example)；[挖地的男人、绑牛的绳子](#north-niexi-explicit-head) |
+| 补足语小句 | /ɕi⁵⁵/ | [我看见小孩在那里哭](#north-complement-xi-example) |
+| 状语小句 | /nie⁵⁵/、/ɕi⁵⁵/ | [孩子渴得哭起来](#north-adverbial-nie-example)；[他脚痛才这样坐着](#north-adverbial-xi-example) |
+
+出处：向华武（2026），第15—17页，龙山靛房。[原文](https://drive.google.com/file/d/1IdJUH4JKzlBkH1W7CQJM7MLYkHl8HxDp/view#page=4)
+
+**关系小句修饰后面的名词：**
+
+<a id="north-clausal-nie-example"></a>
+
+| 拼音 | [anf | gaf | niex] | yer | hor | lur |
+| --- | --- | --- | --- | --- | --- | --- |
+| IPA | [an³⁵ | ka³⁵ | nie⁵⁵] | je²¹ | xo²¹ | lu²¹ |
+| 中文逐词 | 我们 | 吃 | 名物化 | 食物 | 拿 | 离心.状态变化 |
+| English | 1PL | eat | NMLZ | food | take | AND.COS |
+
+译文：我们吃的食物拿走了。 / The food we eat has been taken away.
+
+出处：向华武（2026），《龙山土家语的名物化结构》，第16页，龙山靛房。[原文](https://drive.google.com/file/d/1IdJUH4JKzlBkH1W7CQJM7MLYkHl8HxDp/view#page=5)
+
+**补足语小句说明看见的内容：**
+
+<a id="north-complement-xi-example"></a>
+
+| 拼音 | [ngaf | baix | bifkuix | aoxcair | zif | xix] | yir |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| IPA | [ŋa³⁵ | pai⁵⁵ | pi³⁵khui⁵⁵ | au⁵⁵ʦhai²¹ | ʦɿ³⁵ | ɕi⁵⁵] | ji²¹ |
+| 中文逐词 | 我 | 孩子 | 小 | 那里 | 哭 | 名物化 | 看见 |
+| English | 1SG | child | small | there | cry | NMLZ | see |
+
+译文：我看见小孩在那里哭。 / I see a small child crying there.
+
+出处：向华武（2026），《龙山土家语的名物化结构》，第17页，龙山靛房。[原文](https://drive.google.com/file/d/1IdJUH4JKzlBkH1W7CQJM7MLYkHl8HxDp/view#page=6)
+
+**状语小句说明原因或事态背景：**
+
+<a id="north-adverbial-nie-example"></a>
+
+| 拼音 | [purlir | paix | baixzef | gax | niex] | zif | lax | hux |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| IPA | [phu²¹li²¹ | phai⁵⁵ | pai⁵⁵ʦe³⁵ | ka⁵⁵ | nie⁵⁵] | ʦɿ³⁵ | la⁵⁵ | xu⁵⁵ |
+| 中文逐词 | 昨晚 | 孩子 | 嘴 | 干 | 名物化 | 哭 | 进行 | 将行 |
+| English | last.night | child | mouth | dry | NMLZ | cry | PROG | PROSP |
+
+译文：昨晚孩子渴得哭起来了。 / Last night the child was so thirsty that they began to cry.
+
+出处：向华武（2026），《龙山土家语的名物化结构》，第16页，龙山靛房。[原文](https://drive.google.com/file/d/1IdJUH4JKzlBkH1W7CQJM7MLYkHl8HxDp/view#page=5)
+
+<a id="north-adverbial-xi-example"></a>
+
+| 拼音 | [gof | jirdif | liex | hof | wur | box | xix] |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| IPA | [ko³⁵ | ʨi²¹ti³⁵ | lie⁵⁵ | xo³⁵ | u²¹ | po⁵⁵ | ɕi⁵⁵] |
+| 中文逐词 | 他 | 脚.痛 | 连接 | 这样 | 坐 | 持续 | 名物化 |
+| English | 3SG | foot.hurt | CONN | thus | sit | DUR | NMLZ |
+
+译文：他脚痛才这样坐着。 / He is sitting like this because his feet hurt.
+
+出处：向华武（2026），《龙山土家语的名物化结构》，第16页，龙山靛房。[原文](https://drive.google.com/file/d/1IdJUH4JKzlBkH1W7CQJM7MLYkHl8HxDp/view#page=5)
 
 <a id="north-xi-evaluation"></a>
 
@@ -3478,6 +3569,38 @@ Feng（2025）把nie-xi分成连接成分nie和名词化成分xi。两者可以�
 译文：这只母鸡是昨天下蛋的那只。
 
 出处：Feng（2025），[第10页，例27b、27a](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu#page=10)。例27a中，省去末尾ɕi的形式被判为不成立；原文未标声调。
+
+<a id="north-niexi-explicit-head"></a>
+
+#### nie-xi 与显式中心词
+
+nie-xi 后面也可以有中心名词。向华武（2026）记录了“挖地的男人”“绑牛的绳子”等关系小句，名物化短语分别修饰“男人”和“绳子”。
+
+<a id="north-niexi-man-example"></a>
+
+| 拼音 | [liv | gav-niexxix] | loxbaxsef | anxbeix |
+| --- | --- | --- | --- | --- |
+| IPA | [li⁵³ | ka⁵³-nie⁵⁵ɕi⁵⁵] | lo⁵⁵pa⁵⁵se³⁵ | an⁵⁵pei⁵⁵ |
+| 中文逐词 | 地 | 挖-名物化.名物化 | 男人 | 你们.叔叔 |
+| English | field | dig-NMLZ.NMLZ | man | 2PL.uncle |
+
+译文：挖地的男人是你叔叔。 / The man digging the field is your uncle.
+
+出处：向华武（2026），《龙山土家语的名物化结构》，第16页，龙山靛房。[原文](https://drive.google.com/file/d/1IdJUH4JKzlBkH1W7CQJM7MLYkHl8HxDp/view#page=5)
+
+<a id="north-niexi-rope-example"></a>
+
+| 拼音 | gof | [wuftif-niexxix] | hxef | laxdier | liaor |
+| --- | --- | --- | --- | --- | --- |
+| IPA | ko³⁵ | [u³⁵thi³⁵-nie⁵⁵ɕi⁵⁵] | ɣe³⁵ | la⁵⁵tie²¹ | liau²¹ |
+| 中文逐词 | 他 | 牛.绑-名物化.名物化 | 绳子 | 断 | 状态变化 |
+| English | 3SG | ox.tie-NMLZ.NMLZ | rope | break | COS |
+
+译文：他用来绑牛的绳子断了。 / The rope he used to tie the ox has broken.
+
+出处：向华武（2026），《龙山土家语的名物化结构》，第16页，龙山靛房。[原文](https://drive.google.com/file/d/1IdJUH4JKzlBkH1W7CQJM7MLYkHl8HxDp/view#page=5)
+
+这组叠用结构中，nie 在前、xi 在后，两者之间不插入其他成分；nie 通常可以省略，xi 保留。
 
 <a id="north-serial-verbs"></a>
 
@@ -4832,7 +4955,7 @@ Markdown 是静态预览，尚未接入 UI 切换。此轮保留现有中文 glo
 
 - [鲁曼等（2021），《土家语名物化标记ɕi功能扩展研究》](https://english.hnu.edu.cn/__local/9/91/0E/B3A496D2B933FA9F1486E7E32C8_C8C2E71C_71612.pdf)，载《语言科学》20(4)：423—435。
 - [Angela Feng（2025），Prenominal modification in Northern Tujia](https://spaces-cdn.owlstown.com/blobs/79jggwdzaghv6u4vpsh04nbnavmu)，IACL-31报告，2025年7月4日。田野点在龙山靛房附近；除引文外不标声调。
-- [向华武（2026），《龙山土家语的名物化结构》](https://yxsg.cbpt.cnki.net/portal/journal/portal/client/paper/af3aacfdbe1f41fd7d8c4c3fed42644c)，载《玉溪师范学院学报》42(1)：12—19；本次只核摘要。
+- [向华武（2026），《龙山土家语的名物化结构》](https://yxsg.cbpt.cnki.net/portal/journal/portal/client/paper/af3aacfdbe1f41fd7d8c4c3fed42644c)，载《玉溪师范学院学报》42(1)：12—19；全文第14—17页用于工具名物化、小句名物化及显式中心词例证。
 - [《土家语汉语词典》扫描本](https://drive.google.com/file/d/1stgXjdqN6TjySRIxOlbLnq6uHjmvHCPt/view?usp=drivesdk)，第55、58、72—73页。
 
 ## 鲁曼等（2021）：全文增补与核对

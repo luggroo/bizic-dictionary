@@ -1938,3 +1938,41 @@ Object.assign(UI_TRANSLATIONS,{"本节所称“里耶调查”，指对湖南省
 Object.assign(UI_TRANSLATIONS,{"例（1）中“锋利”直接作谓语；例（2）中则在 xì /ɕi⁵¹/ 后加 niě /ȵiɛ²¹/，组成修饰“刀”的成分。":"In (1), xì /ɕi⁵¹/ “sharp” is the predicate; in (2), niě /ȵiɛ²¹/ follows it to form a modifier of “knife.”","这些对应包含词缀、韵母及声调变化。“好”的扩展式也可作谓语，见例（14b）。“大”的 /tɕʰi⁵¹/ 与 Brassett 所记 /tsʰɿ⁵¹/ 来自不同调查点；tiébà /tʰiɛ²⁴pa⁵¹/“大、粗”属于另一词根。":"These pairs differ in affixes, vowels, and tones. The extended form of “good” can also be a predicate (14b). /tɕʰi⁵¹/ “big” differs by dialect from Brassett's /tsʰɿ⁵¹/; tiébà /tʰiɛ²⁴pa⁵¹/ “large, thick” is another root.","/-pa/（拼音 -ba）与 /-kʰuei/（-kui）呈现一定的尺度对立。/-pa/ 常见于“大”qìbǎ /tɕʰi⁵¹pa²¹/、“长”hxěbǎ /ɣɤ²¹pa²¹/；/-kʰuei/ 则见于“小”bíkuī /pi²⁴kʰuei⁵⁵/、“短”zòngkuí /tsɔŋ⁵¹kʰuei²⁴/。“漂亮”rèkuí /zɤ⁵¹kʰuei²⁴/ 也使用 /-kʰuei/。":"/-pa/ (-ba) and /-kʰuei/ (-kui) show a scale-related tendency. /-pa/ occurs in qìbǎ /tɕʰi⁵¹pa²¹/ “big” and hxěbǎ /ɣɤ²¹pa²¹/ “long”; /-kʰuei/ occurs in bíkuī /pi²⁴kʰuei⁵⁵/ “small” and zòngkuí /tsɔŋ⁵¹kʰuei²⁴/ “short.” Rèkuí /zɤ⁵¹kʰuei²⁴/ “pretty” also has /-kʰuei/.","颜色词常见 /-ka/（-ga）及其扩展形式。熊英（2020）记录“黑”lán'gā /lã²⁴ka⁵⁵/、lán'gādiě /lã²⁴ka⁵⁵tiɛ²¹/，“青绿”xín'gā /ɕiŋ²⁴ka⁵⁵/、xín'gādiě /ɕiŋ²⁴ka⁵⁵tiɛ²¹/，以及“黄”wǎn'gālā /wã²¹ka⁵⁵la⁵⁵/。/-ka-la/（-gala）也见于非颜色词，如“细”xígālā /ɕi²⁴ka⁵⁵la⁵⁵/。":"Color words often have /-ka/ (-ga) and expanded forms. Xiong Ying (2020) records lán'gā /lã²⁴ka⁵⁵/ and lán'gādiě /lã²⁴ka⁵⁵tiɛ²¹/ “black”; xín'gā /ɕiŋ²⁴ka⁵⁵/ and xín'gādiě /ɕiŋ²⁴ka⁵⁵tiɛ²¹/ “blue-green”; and wǎn'gālā /wã²¹ka⁵⁵la⁵⁵/ “yellow.” /-ka-la/ (-gala) also occurs in xígālā /ɕi²⁴ka⁵⁵la⁵⁵/ “fine, thin.”","其他词形扩展更加多样：“厚”lápàgǎi /la²⁴pʰa⁵¹kai²¹/ 带 /-pʰa-kai/（-pàgǎi），“薄”sǎsāgǎi /sa²¹sa⁵⁵kai²¹/ 带 /-kai/（-gǎi），“白”ǎsǐkūlī /a²¹sɨ²¹kʰu⁵⁵li⁵⁵/ 带 /-kʰu-li/（-kūlī），“重”dùzǐ /tu⁵¹tsɨ²¹/ 带 /-tsɨ/（-zǐ）。胖、瘦等词还有较复杂的扩展形式。":"Other extensions are varied. Lápàgǎi /la²⁴pʰa⁵¹kai²¹/ “thick” takes /-pʰa-kai/ (-pàgǎi); sǎsāgǎi /sa²¹sa⁵⁵kai²¹/ “thin” takes /-kai/ (-gǎi); ǎsǐkūlī /a²¹sɨ²¹kʰu⁵⁵li⁵⁵/ “white” takes /-kʰu-li/ (-kūlī); and dùzǐ /tu⁵¹tsɨ²¹/ “heavy” takes /-tsɨ/ (-zǐ). “Fat” and “thin” also have more complex extensions.","前缀派生也有记录。Brassett 等（2006：100）将“干”gǎ /ka²¹/ 与 āgǎ /a⁵⁵ka²¹/ 并列，将“暖”gǐ /kɨ²¹/ 与 ságī /sa²⁴kɨ⁵⁵/ 并列，分别涉及前缀 ā- /a⁵⁵-/ 和 sá- /sa²⁴-/。":"Prefixation is also attested. Brassett et al. (2006:100) give gǎ /ka²¹/ and āgǎ /a⁵⁵ka²¹/ “dry,” and gǐ /kɨ²¹/ and ságī /sa²⁴kɨ⁵⁵/ “warm,” involving prefixes ā- /a⁵⁵-/ and sá- /sa²⁴-/.","例如，“红布”与“这块布红”都使用 miàjiě，“新书”与“这本书新”都使用 áxì。“甜”“苦”本身带有重复音节，在这些语法环境中也保持同形。“小”另有 suàn /suã⁵¹/ 这一词根，与 bí /pi²⁴/ 和 bíkuī /pi²⁴kʰuei⁵⁵/ 需分别分析。":"Miàjiě occurs in both “red cloth” and “this cloth is red,” and áxì in “new book” and “this book is new.” “Sweet” and “bitter” have repeated syllables. The separate root suàn /suã⁵¹/ “small” differs from bí /pi²⁴/ and bíkuī /pi²⁴kʰuei⁵⁵/.","不少形容词与性质动词同根，但词形有所不同。以下例句来自 Brassett 等（2006）、Feng（2025）等文献和里耶调查。":"Many adjectives share roots with property verbs but differ in form. Examples come from Brassett et al. (2006), Feng (2025), and Lìyē fieldwork.","清楚":"clear","好吃":"delicious","山　白":"mountain white","距离　长-属格　房子":"distance long-GEN house","房子　距离　长":"house distance long","等级　最　高-名物化-属格　墓葬":"rank most high-NMLZ-GEN tomb","译文：白山。 / A white mountain.":"Translation: A white mountain.","译文：偏远的房子。 / A distant house.":"Translation: A distant house.","译文：等级最高的墓葬。 / The highest-ranked tomb.":"Translation: The highest-ranked tomb.","这里的 mtho “高”是表示性质的词根，mtho ba'":"The root mtho “high” forms an attributive phrase through mtho ba'"," 通过名物化和属格标记组成定语。土家语和藏语都可比较性质词的派生、直接定语及带标记的修饰结构。参见 Tournadre & Suzuki（2023）及 Shirai（1999）。":" through nominalization and genitive marking. Compare Tujia and Tibetan adjective derivation and marked modification (Tournadre & Suzuki 2023; Shirai 1999).","出处：Brassett 等（2006），第101页。":"Source: Brassett et al. (2006), p. 101.","出处：Feng（2025），第4页。":"Source: Feng (2025), p. 4."});
 
 Object.assign(UI_TRANSLATIONS,{"这里的 mtho “高”是表示性质的词根，mtho ba'i 通过名物化和属格标记组成定语。土家语和藏语都可比较性质词的派生、直接定语及带标记的修饰结构。参见 Tournadre & Suzuki（2023）及 Shirai（1999）。":"The root mtho “high” denotes a property. In mtho ba'i, nominalization and genitive marking form an attributive modifier. Tibetan and Tujia can be compared in property-word derivation, direct noun modification, and marked modification (Tournadre & Suzuki 2023; Shirai 1999)."});
+
+Object.assign(UI_TRANSLATIONS,{
+  "工具名物化": "Instrument nominalization",
+  "动词或动词短语后加 xi，可以组成表示工具、器具的名词。向华武（2026）的龙山靛房材料有以下例子：": "Adding xi to a verb or verb phrase can form a noun denoting a tool or utensil. Xiang Huawu (2026) records the following examples from Dingfang, Longshan:",
+  "同一材料中，ci 也见于工具名称：": "The same source also records ci in tool names:",
+  "作者将这些 ci 工具名词列为基本词汇化的形式；xi 构成工具名称则具有能产性。": "The author describes these tool nouns with ci as largely lexicalized, while tool nominalization with xi is productive.",
+  "饭.煮.名物化": "rice.cook.NMLZ",
+  "地.耕.名物化": "field.plough.NMLZ",
+  "坐.名物化": "sit.NMLZ",
+  "蒸.名物化": "steam.NMLZ",
+  "玩.名物化": "play.NMLZ",
+  "煮饭的器具": "Utensil for cooking rice",
+  "犁地的工具": "Tool for ploughing",
+  "坐凳": "Stool",
+  "蒸笼": "Steamer",
+  "玩具": "Toy",
+  "小句名物化的形式与分布": "Forms and distribution of clausal nominalization",
+  "向华武（2026）将龙山靛房的小句名物化分为关系小句、补足语小句和状语小句。下表按正文例句列出所用形式：": "Xiang Huawu (2026) distinguishes relative, complement and adverbial clauses in Dingfang Tujia. The table lists the forms illustrated in the article’s examples:",
+  "小句类型": "Clause type",
+  "关系小句": "Relative clause",
+  "补足语小句": "Complement clause",
+  "状语小句": "Adverbial clause",
+  "我们吃的食物": "The food we eat",
+  "挖地的男人、绑牛的绳子": "The man digging the field; the rope used to tie an ox",
+  "我看见小孩在那里哭": "I see a small child crying there",
+  "孩子渴得哭起来": "The child began crying from thirst",
+  "他脚痛才这样坐着": "He is sitting like this because his feet hurt",
+  "关系小句修饰后面的名词：": "A relative clause modifies the following noun:",
+  "补足语小句说明看见的内容：": "A complement clause expresses what is seen:",
+  "状语小句说明原因或事态背景：": "An adverbial clause gives a reason or background:",
+  "nie-xi 与显式中心词": "nie-xi with an overt head noun",
+  "nie-xi 后面也可以有中心名词。向华武（2026）记录了“挖地的男人”“绑牛的绳子”等关系小句，名物化短语分别修饰“男人”和“绳子”。": "nie-xi can also precede an overt head noun. In Xiang Huawu’s (2026) examples, the nominalized clauses modify “man” in “the man digging the field” and “rope” in “the rope used to tie an ox”.",
+  "这组叠用结构中，nie 在前、xi 在后，两者之间不插入其他成分；nie 通常可以省略，xi 保留。": "In these combinations, nie immediately precedes xi. The author reports that nie is usually optional and xi is retained.",
+  "出处：向华武（2026），第15—17页，龙山靛房。": "Source: Xiang Huawu (2026), pp. 15–17; Dingfang, Longshan.",
+  "出处：向华武（2026），《龙山土家语的名物化结构》，第14页，龙山靛房。": "Source: Xiang Huawu (2026), “The Nominalization Structure of Longshan Tujia Language”, p. 14; Dingfang, Longshan.",
+  "出处：向华武（2026），《龙山土家语的名物化结构》，第16页，龙山靛房。": "Source: Xiang Huawu (2026), “The Nominalization Structure of Longshan Tujia Language”, p. 16; Dingfang, Longshan.",
+  "出处：向华武（2026），《龙山土家语的名物化结构》，第17页，龙山靛房。": "Source: Xiang Huawu (2026), “The Nominalization Structure of Longshan Tujia Language”, p. 17; Dingfang, Longshan."
+});
