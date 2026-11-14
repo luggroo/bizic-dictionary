@@ -184,9 +184,14 @@ function buildReadableDictionary({root}) {
   fs.rmSync(path.join(root,'text'),{recursive:true,force:true});
   const report = {version,entries:entries.length,witnesses:0,queries:queries.size,corpus:corpus.length,groups:{},files:0,bytes:0,largest:{bytes:0}};
   function write(name,html) {
+    if(name.endsWith('.html')){
+      const canonical=ORIGIN+(name==='text/index.html'?'/text/':href(name));
+      html=html.replace('<title>',`<link rel="canonical" href="${escape(canonical)}"><title>`);
+    }
     const dest=path.join(root,name);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,html);
     const bytes=Buffer.byteLength(html);report.files++;report.bytes+=bytes;
     if (bytes>report.largest.bytes) report.largest={path:name,bytes};
+    return bytes;
   }
   for (const e of entries) write(entryPath(e.id),renderEntry(e,data,version));
   const paths = new Set();
@@ -239,8 +244,8 @@ function buildReadableDictionary({root}) {
     const table=`<pre class="all-entries" data-dialect="${dialect}" style="tab-size:1">${escape(['汉语 Chinese\t|\t英语 English\t|\t土家语（调号拼音） Tone-marked Tujia\t|\tEntry ID',...rows.map(row=>row.join('\t|\t'))].join('\n'))}</pre>`;
     const name='text/all/'+anchor+'.html';
     const html=page(dialect+' · '+english+' · 完整词目表',`<p>本页完整列出本目录收录的 ${rows.length} 个${dialect}词条，可用页面查找检索汉语、英语或土家语词形。</p><p>各列只取本方言见证。土家语使用调号拼音，无可靠拼音时保留 /IPA/；两者皆缺则标为读音待核。来源原记音、并列形式的对应关系及用法见词条详情；缺项只表示本目录未收录。</p><p>详情路径：<code>${escape(routes.entry)}</code>，entry_id 对应表中的 Entry ID。</p><p>${link('text/all.html','北部与南部总表')}</p>${table}`,version);
-    write(name,html);
-    return [{key:anchor,dialect,english,page:ORIGIN+href(name),path:name,entries:rows.length,bytes:Buffer.byteLength(html)}];
+    const bytes=write(name,html);
+    return [{key:anchor,dialect,english,page:ORIGIN+href(name),path:name,entries:rows.length,bytes}];
   });
   catalog.dialect_indexes=Object.fromEntries(dialectIndexes.map(({key,path,english,...item})=>[key,item]));
   write('text/catalog.json',JSON.stringify(catalog)+'\n');

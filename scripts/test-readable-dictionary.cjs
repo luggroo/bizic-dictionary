@@ -41,7 +41,14 @@ function inspectAllFiles() {
   for(const name of files) {
     const html=fs.readFileSync(path.join(root,'text',name),'utf8');
     sizes[name]=Buffer.byteLength(html);bytes+=sizes[name];gzipBytes+=zlib.gzipSync(html,{level:9}).length;
-    assert(!/<(?:script|img|iframe|link)\b|<[^>]+\son[a-z]+\s*=|<[^>]+\b(?:src|action)=/i.test(html),name+': no active content or asset dependencies');
+    assert(!/<(?:script|img|iframe)\b|<[^>]+\son[a-z]+\s*=|<[^>]+\b(?:src|action)=/i.test(html),name+': no active content or asset dependencies');
+    const metadataLinks=[...html.matchAll(/<link\b[^>]*>/gi)].map(m=>m[0]);
+    assert.equal(metadataLinks.length,1,name+': only the canonical metadata link is present');
+    assert(/^<link rel="canonical" href="[^"]+">$/.test(metadataLinks[0]),name+': canonical is not an asset dependency');
+    const canonical=new URL(decode(metadataLinks[0].match(/href="([^"]+)"/)[1]));
+    assert.equal(canonical.origin,'https://tujia.biz');
+    assert.equal(decodeURIComponent(canonical.pathname),name==='index.html'?'/text/':'/text/'+name);
+    assert.equal(canonical.search+canonical.hash,'');
     assert(!/<[^>]+\b(?:hidden|style="display:\s*none")|<details\b/i.test(html),name+': evidence is visible');
     assert(html.includes(version),name+': version is present');
     for(const match of html.matchAll(/href="([^"]+)"/g)) {

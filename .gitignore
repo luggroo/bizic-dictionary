@@ -55,3 +55,10 @@ site/dictionary.json
 site/fonts/GentiumPlus-*
 # Generated text reading routes (built with prepared data)
 site/text/
+
+# Generated after the readable dictionary is built.
+site/sitemap-pages*.xml
+site/sitemap-entries*.xml
+site/sitemap-lookups*.xml
+site/sitemap-sources*.xml
+site/sitemap-corpus*.xml
