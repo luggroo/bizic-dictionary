@@ -1,5 +1,11 @@
 /* Navigation and home labels; other labels load with the reader tools. */
 var UI_TRANSLATIONS={
+ "土家语词典、语法与语料｜毕兹学堂": "Tujia Dictionary, Grammar & Texts | Bizic Academy 毕兹学堂",
+ "查询北部与南部土家语词汇、汉英释义、原始记音和来源见证，查阅参考语法与语料。毕兹学堂提供土家语学习与研究资料。": "Search Northern and Southern Tujia vocabulary with Chinese and English meanings, pronunciation and source references. Explore Tujia grammar and texts at Bizic Academy.",
+ "土家语词典、语法与语料": "Tujia Dictionary, Grammar & Texts",
+ "自我介绍": "Self-introduction",
+ "坡脚乡的日常生活": "Everyday Life in Pojiao Township",
+ "谚语": "Proverbs",
  "土家语可以翻译。": "Tujia can be translated.",
  "汉语可以译成土家语，土家语也可以译成汉语。北部土家语、南部土家语都可以翻译。": "Chinese can be translated into Tujia, and Tujia into Chinese. Both Northern and Southern Tujia can be translated.",
  "打开翻译 Skill": "Open the translation skill",
@@ -139,4 +145,4 @@ var UI_TRANSLATIONS={
  "资料未能载入，请检查网络后重试。": "The data could not be loaded. Check your connection and try again."
 };
 
-Object.assign(UI_TRANSLATIONS,{"毕兹学堂":"Bizic Academy","土家语词典、语法与语料":"Tujia dictionary, grammar & texts"});
+Object.assign(UI_TRANSLATIONS,{"毕兹学堂":"Bizic Academy","土家语词典、语法与语料":"Tujia Dictionary, Grammar & Texts"});

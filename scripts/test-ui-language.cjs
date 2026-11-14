@@ -29,7 +29,7 @@ const server=http.createServer((req,res)=>{
     await ready('home');
     assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bízīsǎ áhxī');
     await language('en');
-    const academyTitle='毕兹学堂 Bizic Academy - 土家语词典、语法与语料 | A library and dictionary of Tujia languages';
+    const academyTitle='Tujia Dictionary, Grammar & Texts | Bizic Academy 毕兹学堂';
     assert.equal(await page.title(),academyTitle);
     assert.equal(await page.locator('nav [data-ui-tujia="words"]').innerText(),'cīcī nī');
     await page.locator('details:has(#spelling-control)>summary').click();
@@ -37,7 +37,7 @@ const server=http.createServer((req,res)=>{
     assert.equal(await page.locator('.brand [data-ui-tujia]').innerText(),'bifzixsar afhxix');
     assert.equal(await page.locator('nav [data-view="saved"]').count(),0);
     await nav('words');
-    assert.equal(await page.title(),'Dictionary · '+academyTitle);
+    assert.equal(await page.title(),'Tujia Dictionary | Bizic Academy 毕兹学堂');
     assert.equal(await page.locator('.word-card').count(),12);
     await page.evaluate(()=>loadAllWordEvidence());
     const snapshot=await page.evaluate(()=>JSON.stringify(D.words.map(w=>[w.id,w.zh,w.en,w.term,w.forms,w.attestations])));

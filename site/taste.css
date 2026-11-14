@@ -162,3 +162,7 @@ main a:not(.metric):visited,#detail-body a:visited,.site-footer a:visited{color:
 .translation-about-link{font-size:12px;color:#526057;text-underline-offset:3px}
 @media(max-width:1000px){.translation-callout{grid-template-columns:1fr;gap:18px;padding:22px}.translation-actions{flex-direction:row;justify-content:flex-start;flex-wrap:wrap;gap:14px}}
 @media(max-width:480px){.translation-callout{padding:20px;margin-top:14px}.translation-callout h2{font-size:22px}.translation-callout p{font-size:13px}}
+
+.site-languages{display:flex;align-items:center;gap:12px}.site-languages [aria-current="true"]{font-weight:600}
+
+.hero h1{text-wrap:balance}

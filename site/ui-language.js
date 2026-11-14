@@ -5,22 +5,32 @@
   try { if (localStorage.getItem('tujia-ui-language') === 'en') language = 'en'; } catch {}
   function urlLanguage() {
     const value = new URLSearchParams(location.search).get('lang');
-    return value === 'en' || value === 'zh' ? value : null;
+    return value === 'en' || value === 'zh' ? value : document.body.dataset.homeLanguage || null;
   }
   language = urlLanguage() || language;
   const script = document.currentScript || document.querySelector('script[src*="ui-language.js"]');
   const siteRoot = new URL('.', script?.src || location.href);
   function syncLanguageURL() {
     const url = new URL(location.href);
+    if (!url.searchParams.has('lang') && language === document.body.dataset.homeLanguage) return;
     if (url.searchParams.get('lang') === language) return;
     url.searchParams.set('lang', language);
     history.replaceState(history.state, '', url);
   }
   function localizeLinks() {
     for (const link of document.querySelectorAll('a[href]')) {
+      if (link.dataset.uiLanguageLink) {
+        const url = new URL(location.href);
+        url.pathname = siteRoot.pathname + (link.dataset.uiLanguageLink === 'en' ? 'en/' : '');
+        url.searchParams.delete('lang');
+        link.href = url.pathname + url.search + url.hash;
+        if (link.dataset.uiLanguageLink === language) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+        continue;
+      }
       const href = link.getAttribute('href');
       if (!href || href.startsWith('#') || link.hasAttribute('download')) continue;
-      const url = new URL(href, location.href);
+      const url = new URL(href, document.baseURI);
       if (url.origin !== siteRoot.origin || !url.pathname.startsWith(siteRoot.pathname) || !/(?:\/|\.html)$/.test(url.pathname)) continue;
       url.searchParams.set('lang', language);
       const localized = url.pathname + url.search + url.hash;
@@ -37,7 +47,7 @@
   const homeAccents={"brand":"bízīsǎ áhxī","home":"gě lāi xié","words":"cīcī nī","grammar":"sǎ qímō lǐ","notation":"sǎ qímō á","corpus":"lázé lázé lǐ","sources":"cīpū jiěxí","searchEn":"yīnyì nì-xìsǒu","searchZh":"pàsǎ nì-xìsǒu","searchTujia":"bísǎ nì-xìsǒu","history":"niězūbǎzū niē sǎ","search":"nī"};
   let initialSpelling="accent";try{if(localStorage.getItem("tujia-north-spelling-v2")==="ye")initialSpelling="ye"}catch{}
   const textMemory = new WeakMap(), attributeMemory = new WeakMap(), grammarMemory = new WeakMap();
-  const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
+  const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],[data-ui-language-link],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
   const escapeRE = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   let templateCount=-1,templates=[];
   function updateTemplates(){if(templateCount===Object.keys(UI_TRANSLATIONS).length)return;templateCount=Object.keys(UI_TRANSLATIONS).length;
@@ -133,7 +143,7 @@
   function translateText(node) {
     if (node.parentElement?.closest(protectedContent)) return;
     const previous = textMemory.get(node), current = node.nodeValue;
-    const source = previous && current === previous.output ? previous.source : current;
+    const source = previous && current === previous.output ? previous.source : node.parentElement?.dataset.uiSource ?? current;
     const output = translate(source);
     textMemory.set(node, {source,output});
     if (current !== output) node.nodeValue = output;
@@ -143,7 +153,7 @@
     for (const attr of ['aria-label','title','placeholder','alt']) {
       if (!element.hasAttribute(attr)) continue;
       const current = element.getAttribute(attr), previous = cache[attr];
-      const source = previous && current === previous.output ? previous.source : current;
+      const source = previous && current === previous.output ? previous.source : element.getAttribute('data-ui-source-' + attr) ?? current;
       let output = translate(source);
       cache[attr] = {source,output};
       if (current !== output) element.setAttribute(attr,output);
@@ -202,7 +212,22 @@
     const select = document.getElementById('ui-language');
     if (select) select.value = language;
     const title = typeof state === 'undefined' ? '知识总览' : titles[state.view] || '知识总览';
-    document.title = document.body.dataset.documentTitle ? translate(document.body.dataset.documentTitle) : ((typeof state === 'undefined' || state.view === 'home') ? '' : translate(title) + ' · ') + '毕兹学堂 Bizic Academy - 土家语翻译、词典与语法 | Tujia translation, dictionary and grammar';
+    const view = typeof state === 'undefined' ? 'home' : state.view;
+    const homeTitle = translate('土家语词典、语法与语料｜毕兹学堂');
+    const brand = language === 'en' ? ' | Bizic Academy 毕兹学堂' : '｜毕兹学堂';
+    document.title = document.body.dataset.documentTitle ? translate(document.body.dataset.documentTitle)
+      : view === 'home' ? homeTitle
+      : (view === 'words' ? (language === 'en' ? 'Tujia Dictionary' : '土家语词典') : translate(title)) + brand;
+    if (document.body.dataset.homeLanguage) {
+      const description = translate('查询北部与南部土家语词汇、汉英释义、原始记音和来源见证，查阅参考语法与语料。毕兹学堂提供土家语学习与研究资料。');
+      const canonical = 'https://tujia.biz/' + (language === 'en' ? 'en/' : '');
+      document.querySelector('meta[name="description"]')?.setAttribute('content', description);
+      document.querySelector('meta[property="og:title"]')?.setAttribute('content', document.title);
+      document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
+      document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical);
+      document.querySelector('meta[property="og:locale"]')?.setAttribute('content', language === 'en' ? 'en_US' : 'zh_CN');
+      document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical);
+    }
     if (observer) observe();
   }
   let languageRequest=0;

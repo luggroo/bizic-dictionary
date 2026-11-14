@@ -29,7 +29,7 @@ const server=http.createServer((req,res)=>{
   await p.locator('#spelling-control [data-spelling-display="north"]').selectOption('ye');
   assert.equal(await p.locator('[data-ui-tujia="home"]').first().textContent(),'ger laix xief','home spelling preferences work without reader scripts');
   await p.locator('#spelling-control [data-spelling-display="north"]').selectOption('accent');
-  await p.locator('#ui-language').selectOption('en');assert((await p.locator('#main').innerText()).includes('Overview'));
+  await p.locator('#ui-language').selectOption('en');assert((await p.locator('#main').innerText()).includes('Tujia Dictionary'));
   await p.unroute('**/prepared/**');await p.route(/\/prepared\/(?:core|word-search|words-\d+)\.json\.gz/,route=>route.abort());
   await p.locator('aside [data-view="grammar"]').click();await p.waitForSelector('.grammar-reading-title');
   assert.equal(await p.evaluate(()=>D.words.length),0,'grammar opens without the dictionary index');
