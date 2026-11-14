@@ -4,6 +4,7 @@ var UI_TRANSLATIONS={
  "汉语可以译成土家语，土家语也可以译成汉语。北部土家语、南部土家语都可以翻译。": "Chinese can be translated into Tujia, and Tujia into Chinese. Both Northern and Southern Tujia can be translated.",
  "打开翻译 Skill": "Open the translation skill",
  "关于土家语翻译": "About Tujia translation",
+ "翻译 Skill 需要在支持代码执行的人工智能服务中使用。": "This translation skill requires an AI service that can execute code.",
 
  "{name}，查看词条，可能整词借自汉语": "View entry: {name}. Possibly a recent whole-word Chinese loan.",
  "{name}，查看词条，部分音节可能借自汉语": "View entry: {name}. Possibly contains a recently borrowed Chinese component.",
