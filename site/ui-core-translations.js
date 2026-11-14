@@ -1,5 +1,10 @@
 /* Navigation and home labels; other labels load with the reader tools. */
 var UI_TRANSLATIONS={
+ "土家语可以翻译。": "Tujia can be translated.",
+ "汉语可以译成土家语，土家语也可以译成汉语。北部土家语、南部土家语都可以翻译。": "Chinese can be translated into Tujia, and Tujia into Chinese. Both Northern and Southern Tujia can be translated.",
+ "打开翻译 Skill": "Open the translation skill",
+ "关于土家语翻译": "About Tujia translation",
+
  "{name}，查看词条，可能整词借自汉语": "View entry: {name}. Possibly a recent whole-word Chinese loan.",
  "{name}，查看词条，部分音节可能借自汉语": "View entry: {name}. Possibly contains a recently borrowed Chinese component.",
  "{name}，查看词条，部分词形可能借自汉语": "View entry: {name}. Some variants may be recent Chinese loans.",

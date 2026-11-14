@@ -1,5 +1,10 @@
 /* Reviewed interface copy; source texts and dictionary glosses stay in their source language. */
 var UI_TRANSLATIONS=Object.assign(globalThis.UI_TRANSLATIONS||{},{
+ "土家语可以翻译。": "Tujia can be translated.",
+ "汉语可以译成土家语，土家语也可以译成汉语。北部土家语、南部土家语都可以翻译。": "Chinese can be translated into Tujia, and Tujia into Chinese. Both Northern and Southern Tujia can be translated.",
+ "打开翻译 Skill": "Open the translation skill",
+ "关于土家语翻译": "About Tujia translation",
+
   "可能借自西南官话「提高」。": "Possibly borrowed from Southwestern Mandarin 提高.",
   "可能借自西南官话「泉」。": "Possibly borrowed from Southwestern Mandarin 泉.",
   "可能借自西南官话「厉害」。": "Possibly borrowed from Southwestern Mandarin 厉害.",
