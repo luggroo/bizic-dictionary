@@ -36,7 +36,7 @@ of every source PDF, recording or grammar chapter.
 | --- | --- |
 | `/text/` | Small coverage summary and collection links |
 | `/text/all.html` | Links to the two complete dialect indexes |
-| `/text/all/north.html` | All 5,175 Northern entries, with Chinese, English, original forms and entry IDs |
+| `/text/all/north.html` | All 5,175 Northern entries, with Chinese, English, tone-marked spelling and entry IDs |
 | `/text/all/south.html` | All 3,763 Southern entries with the same fields |
 | `/text/source/index.html` | Six canonical sources, each with its own fixed index page |
 | `/text/source/brassett-2004/index.html` | Complete Chinese-key index for Brassett 04 on one page |

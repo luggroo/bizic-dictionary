@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
 const crypto = require('node:crypto');
+const vm = require('node:vm');
 
 const ORIGIN = 'https://tujia.biz';
 const PAGE_SIZE = 100;
@@ -49,6 +50,27 @@ function selectEntry(entry, data, sources) {
     return attestationIds.length ? [{...n,attestationIds}] : [];
   })]));
   return {...entry,attestations,notations};
+}
+function createSpellingResolver(root) {
+  const ctx=vm.createContext({localStorage:{getItem:()=>null},document:{addEventListener(){}},window:{addEventListener(){}}});
+  for(const name of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js','lexical-reviews.js','spelling-boundaries.js'])
+    vm.runInContext(fs.readFileSync(path.join(root,name),'utf8'),ctx,{filename:name});
+  const cache=new WeakMap();
+  return (entry,a)=>{
+    if(cache.has(a))return cache.get(a);
+    // A merged entry's headline and display arrays may describe another witness.
+    const notations=Object.fromEntries(Object.entries(entry.notations || {}).map(([scheme,values])=>
+      [scheme,values.filter(n=>(n.attestationIds || []).includes(a.id))]));
+    const word={...entry,dialect:a.dialect,dialects:a.dialect?[a.dialect]:[],attestations:[a],notations};
+    delete word._display;delete word._ipa;
+    ctx.initializeSpellingBoundaries({words:[word]});
+    const accent=unique([...(notations.accent || []),...ctx.completeSpellings(word)]
+      .filter(v=>v.text && !v.ambiguous && !/[□⟦⟧⁇?]/u.test(v.text)).map(v=>v.text));
+    const ipa=unique(ctx.notationValues(word,'ipa').map(v=>v.text).filter(Boolean));
+    const result=accent.length ? accent : ipa.map(v=>'/'+v.replace(/^\/|\/$/g,'')+'/');
+    cache.set(a,result.length ? result : ['⟦读音待核⟧']);
+    return cache.get(a);
+  };
 }
 const labels = {
   id:'Attestation ID', source:'Source ID', term:'原记音', zh:'汉语', en:'English', scheme:'原记音方案',
@@ -115,6 +137,7 @@ function renderCorpus(record, data, version) {
 function buildReadableDictionary({root}) {
   const read = name => JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(root,'prepared',name+'.json.gz'))));
   const data = read('core'), sources = sourceMap(data);
+  const spellingFor=createSpellingResolver(root);
   const version = fs.readFileSync(path.join(root,'index.html'),'utf8').match(/name="prepared-data-version" content="([^"]+)"/)?.[1];
   if (!version) throw Error('Build prepared website data first: missing version');
   const entries = [], groups = Object.fromEntries(Object.keys(GROUPS).map(key=>[key,{entries:new Set(),witnesses:0}]));
@@ -209,19 +232,19 @@ function buildReadableDictionary({root}) {
   const dialectIndexes=[['北部','Northern Tujia','north'],['南部','Southern Tujia','south'],['其他或未标明','Other or unclassified','unspecified']].flatMap(([dialect,english,anchor])=>{
     const rows=entries.flatMap(e=>{
       const witnesses=e.attestations.filter(a=>variety(a)===dialect);if(!witnesses.length)return [];
-      return [[unique(witnesses.map(a=>a.zh).filter(Boolean)).join('; '),unique(witnesses.map(a=>a.en).filter(Boolean)).join('; '),unique(witnesses.map(a=>a.term).filter(Boolean)).join(' · '),e.id].map(cell)];
+      return [[unique(witnesses.map(a=>a.zh).filter(Boolean)).join('; '),unique(witnesses.map(a=>a.en).filter(Boolean)).join('; '),unique(witnesses.flatMap(a=>spellingFor(e,a))).join(' · '),e.id].map(cell)];
     }).sort((a,b)=>compare(a[0],b[0]) || compare(a[3],b[3]));
     if(!rows.length)return [];
     report.all_entries_by_dialect[dialect]=rows.length;
-    const table=`<pre class="all-entries" data-dialect="${dialect}" style="tab-size:1">${escape(['汉语 Chinese\t|\t英语 English\t|\t土家语（来源记音） Tujia\t|\tEntry ID',...rows.map(row=>row.join('\t|\t'))].join('\n'))}</pre>`;
+    const table=`<pre class="all-entries" data-dialect="${dialect}" style="tab-size:1">${escape(['汉语 Chinese\t|\t英语 English\t|\t土家语（调号拼音） Tone-marked Tujia\t|\tEntry ID',...rows.map(row=>row.join('\t|\t'))].join('\n'))}</pre>`;
     const name='text/all/'+anchor+'.html';
-    const html=page(dialect+' · '+english+' · 完整词目表',`<p>本页完整列出本目录收录的 ${rows.length} 个${dialect}词条，可用页面查找检索汉语、英语或土家语词形。</p><p>各列只取本方言见证的义项和来源记音。并列形式的来源对应关系及用法见词条详情；缺项只表示本目录未收录。</p><p>详情路径：<code>${escape(routes.entry)}</code>，entry_id 对应表中的 Entry ID。</p><p>${link('text/all.html','北部与南部总表')}</p>${table}`,version);
+    const html=page(dialect+' · '+english+' · 完整词目表',`<p>本页完整列出本目录收录的 ${rows.length} 个${dialect}词条，可用页面查找检索汉语、英语或土家语词形。</p><p>各列只取本方言见证。土家语使用调号拼音，无可靠拼音时保留 /IPA/；两者皆缺则标为读音待核。来源原记音、并列形式的对应关系及用法见词条详情；缺项只表示本目录未收录。</p><p>详情路径：<code>${escape(routes.entry)}</code>，entry_id 对应表中的 Entry ID。</p><p>${link('text/all.html','北部与南部总表')}</p>${table}`,version);
     write(name,html);
     return [{key:anchor,dialect,english,page:ORIGIN+href(name),path:name,entries:rows.length,bytes:Buffer.byteLength(html)}];
   });
   catalog.dialect_indexes=Object.fromEntries(dialectIndexes.map(({key,path,english,...item})=>[key,item]));
   write('text/catalog.json',JSON.stringify(catalog)+'\n');
-  const allHtml=page('完整词目总表 · Complete headword indexes',`<p>共 ${entries.length} 个词条，覆盖本目录收录的 Brassett 04、06、龙山语保和南部土家语资料。北部、南部分别一页完整列出，不再分页。每页包含汉语义项、英语义项、土家语来源记音和 Entry ID。</p>${dialectIndexes.map(item=>`<p>${link(item.path,item.dialect+' · '+item.english)}<br>${item.entries} 个词条，约 ${Math.ceil(item.bytes/1024)} KiB</p>`).join('')}<p>可用浏览器页面查找检索词目；此表的缺项只表示本目录未收录。</p>`,version);
+  const allHtml=page('完整词目总表 · Complete headword indexes',`<p>共 ${entries.length} 个词条，覆盖本目录收录的 Brassett 04、06、龙山语保和南部土家语资料。北部、南部分别一页完整列出，不再分页。每页包含汉语义项、英语义项、土家语调号拼音和 Entry ID；无可靠拼音时保留 /IPA/。</p>${dialectIndexes.map(item=>`<p>${link(item.path,item.dialect+' · '+item.english)}<br>${item.entries} 个词条，约 ${Math.ceil(item.bytes/1024)} KiB</p>`).join('')}<p>可用浏览器页面查找检索词目；此表的缺项只表示本目录未收录。</p>`,version);
   write('text/all.html',allHtml);report.all_entries_bytes=dialectIndexes.reduce((total,item)=>total+item.bytes,0);report.dialect_indexes=catalog.dialect_indexes;
   for(const c of corpus) {
     if(!/^[A-Za-z0-9][A-Za-z0-9_.-]*$/.test(c.id))throw Error('Invalid corpus ID: '+c.id);
@@ -231,5 +254,5 @@ function buildReadableDictionary({root}) {
   write('text/index.html',page('土家语词典 · 文本目录',`<p>收录 Brassett 04、06 的词汇见证、龙山语保词汇和例句，以及标注为南部土家语的词汇见证和例句。每条见证保留原记音、义项、来源与已记录的调查点。</p><p>${report.entries} 个词条，${report.witnesses} 条见证，${report.queries} 个汉语义项，${report.corpus} 条例句。目录之外的资料可在交互词典查阅。</p><p>${link('text/all.html','完整词目总表：北部、南部各一页')}</p><p>${link('text/source/index.html','按来源：每个来源一页完整汉语索引')}</p><p>精确查询：<code>${escape(routes.exact_zh)}</code>。首字浏览：<code>${escape(routes.initial_zh)}</code>。将 query 替换为查询词，initial 替换为其首字符，并作 URL 编码。仅已收录的查询词和首字符有对应页面。</p>${queries.has('吃') ? '<p>'+link(queryPath('吃'),'查询示例：吃')+'</p>' : ''}<p>${link('text/browse/initial/index.html','全部首字')}</p><p>${link('text/browse/zh/index.html','全部汉语义项')}</p><p>${link('text/catalog.json','来源与路径清单（JSON）')}</p><p>${link('text/corpus/index.html','语保例句')}</p><p><a href="/#words">交互词典</a>（需 JavaScript）</p>`,version));
   return report;
 }
-module.exports = {buildReadableDictionary,renderEntry,renderAttestation,selectEntry,groupFor,chineseKeys,queryPath,initialPath,entryPath,renderLookup,renderCorpus};
+module.exports = {buildReadableDictionary,createSpellingResolver,renderEntry,renderAttestation,selectEntry,groupFor,chineseKeys,queryPath,initialPath,entryPath,renderLookup,renderCorpus};
 if(require.main===module)console.log(JSON.stringify(buildReadableDictionary({root:path.resolve(process.argv[2] || path.join(__dirname,'../site'))}),null,2));

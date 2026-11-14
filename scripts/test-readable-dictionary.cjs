@@ -6,10 +6,11 @@ const http = require('node:http');
 const zlib = require('node:zlib');
 const crypto = require('node:crypto');
 const {chromium} = require('playwright');
-const {renderEntry,selectEntry,groupFor,queryPath,initialPath,buildReadableDictionary} = require('./build-readable-dictionary.cjs');
+const {renderEntry,selectEntry,groupFor,queryPath,initialPath,buildReadableDictionary,createSpellingResolver} = require('./build-readable-dictionary.cjs');
 const root = path.resolve(process.argv[2] || path.join(__dirname,'../site'));
 const read = name => JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(root,'prepared',name+'.json.gz'))));
 const data = read('core');
+const spellingFor=createSpellingResolver(root);
 const sources = new Map([...(data.sourceVariants || []),...data.sources].map(s=>[s.id,s]));
 const version = fs.readFileSync(path.join(root,'index.html'),'utf8').match(/name="prepared-data-version" content="([^"]+)"/)[1];
 const decode = html => html.replace(/&(#39|quot|gt|lt|amp);/g,(_,entity)=>({'#39':"'",quot:'"',gt:'>',lt:'<',amp:'&'}[entity]));
@@ -101,10 +102,11 @@ function inspectAllFiles() {
     for(const e of entries.values()){
       const witnesses=e.attestations.filter(a=>(['北部','南部'].includes(a.dialect) ? a.dialect : '其他或未标明')===table.dialect);
       if(!witnesses.length)continue;
-      expected.set(e.id,[[...new Set(witnesses.map(a=>a.zh).filter(Boolean))].join('; '),[...new Set(witnesses.map(a=>a.en).filter(Boolean))].join('; '),[...new Set(witnesses.map(a=>a.term).filter(Boolean))].join(' · '),e.id].map(cell));
+      expected.set(e.id,[[...new Set(witnesses.map(a=>a.zh).filter(Boolean))].join('; '),[...new Set(witnesses.map(a=>a.en).filter(Boolean))].join('; '),[...new Set(witnesses.flatMap(a=>spellingFor(e,a)))].join(' · '),e.id].map(cell));
     }
     assert.deepEqual(sort(actual.keys()),sort(expected.keys()),table.dialect+': no other dialect enters the table');
     for(const [id,row] of expected)assert.deepEqual(actual.get(id),row,id+': all Chinese/English senses and forms survive in their own dialect section');
+    for(const row of actual.values())assert(!/[0-9⁰¹²³⁴⁵⁶⁷⁸⁹]/u.test(row[2].replace(/\/[^/]*\//g,'')),row[3]+': only /IPA/ may contain numeric tones');
   }
   assert.deepEqual(sort(foundIds),sort(entries.keys()),'one page contains every published entry');
   for(const m of allHtml.matchAll(/<pre class="all-entries"[^>]*>([\s\S]*?)<\/pre>/g))assert(!/<a\b/.test(m[1]),'complete tables contain no per-entry links');
@@ -168,6 +170,7 @@ function inspectFixtures() {
   // A tiny real build proves removed data cannot leave stale public routes.
   const temp=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'text-fixture-'));
   try {
+    for(const name of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js','lexical-reviews.js','spelling-boundaries.js'])fs.copyFileSync(path.join(root,name),path.join(temp,name));
     fs.mkdirSync(path.join(temp,'prepared/entries'),{recursive:true});fs.mkdirSync(path.join(temp,'text'));
     fs.writeFileSync(path.join(temp,'text/stale.html'),'old');
     fs.writeFileSync(path.join(temp,'index.html'),'<meta name="prepared-data-version" content="fixture">');
@@ -175,15 +178,24 @@ function inspectFixtures() {
     fs.writeFileSync(path.join(temp,'prepared/entries/x.json.gz'),zlib.gzipSync(JSON.stringify({...original,attestations:original.attestations.map(a=>({...a,zh:'1',term:'raw'}))})));
     fs.writeFileSync(path.join(temp,'prepared/entries/mixed.json.gz'),zlib.gzipSync(JSON.stringify({id:'mixed',attestations:[
       {id:'north-witness',source:'alias',dialect:'北部',term:'NORTH_FORM',zh:'北',en:'NORTHERN_ENGLISH'},
-      {id:'south-witness',source:'foreign',dialect:'南部',term:'SOUTH_FORM',zh:'南',en:'SOUTHERN_ENGLISH'}
-    ],notations:{}})));
+      {id:'south-witness',source:'foreign',dialect:'南部',term:'SOUTH_FORM',zh:'南',en:'SOUTHERN_ENGLISH'},
+      {id:'ipa-witness',source:'alias',dialect:'北部',term:'UNCONVERTED_RAW',zh:'音标',en:'IPA_ONLY'}
+    ],_display:{accent:[{text:'STALE_ENTRY_FORM'}]},notations:{accent:[
+      {text:'nórth',attestationIds:['north-witness']},
+      {text:'sòuth',attestationIds:['south-witness']}
+    ],ipa:[{text:'ɣa²¹',attestationIds:['ipa-witness']}]}})));
     buildReadableDictionary({root:temp});
     assert(!fs.existsSync(path.join(temp,'text/stale.html')));
     assert(fs.readFileSync(path.join(temp,'text/lookup/zh/1.html'),'utf8').includes('data-entry-id="x"'),'numeric query does not collide with browse pagination');
     const complete=fs.readFileSync(path.join(temp,'text/all/north.html'),'utf8')+fs.readFileSync(path.join(temp,'text/all/south.html'),'utf8');
     const north=complete.match(/data-dialect="北部"[^>]*>([\s\S]*?)<\/pre>/)[1],south=complete.match(/data-dialect="南部"[^>]*>([\s\S]*?)<\/pre>/)[1];
-    assert(north.includes('NORTH_FORM') && north.includes('NORTHERN_ENGLISH') && !north.includes('SOUTH_FORM') && !north.includes('SOUTHERN_ENGLISH'));
-    assert(south.includes('SOUTH_FORM') && south.includes('SOUTHERN_ENGLISH') && !south.includes('NORTH_FORM') && !south.includes('NORTHERN_ENGLISH'),'even a shared entry is split by witness dialect in the complete index');
+    assert(north.includes('nórth') && north.includes('NORTHERN_ENGLISH') && !north.includes('sòuth') && !north.includes('SOUTHERN_ENGLISH'));
+    assert(south.includes('sòuth') && south.includes('SOUTHERN_ENGLISH') && !south.includes('nórth') && !south.includes('NORTHERN_ENGLISH'),'even a shared entry is split by witness dialect in the complete index');
+    assert(north.includes('/ɣa²¹/') && !north.includes('UNCONVERTED_RAW'),'missing spelling uses source IPA');
+    assert(!complete.includes('STALE_ENTRY_FORM') && !complete.includes('NORTH_FORM') && !complete.includes('SOUTH_FORM'),'headword summaries never copy merged displays or raw witness letters');
+    const resolver=createSpellingResolver(temp),entry={id:'conversion',attestations:[],notations:{ye:[{text:'gaf',attestationIds:['n']}]}};
+    assert.deepEqual(resolver(entry,{id:'n',source:'alias',dialect:'北部',term:'RAW_NORTH'}),['gá']);
+    assert.deepEqual(resolver(entry,{id:'s',source:'yubao-60824',dialect:'南部',term:'ka35'}),['gá'],'Southern words use their own source converter without copying Northern notations');
   } finally {fs.rmSync(temp,{recursive:true,force:true});}
 }
 const server=http.createServer((req,res)=>{
