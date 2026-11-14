@@ -43,8 +43,8 @@ function buildLocalizedHome(root){
   if(output===source)return token;
   return body?'<span data-ui-source="'+escape(source)+'">'+escape(output)+'</span>':escape(output);
  }).join('');
- html=html.replace('<html lang="zh-CN"','<html lang="en"').replace('data-home-language="zh"','data-home-language="en"')
-  .replace(/href="#(home|words|sources|corpus)"/g,'href="/en/#$1"')
+ html=html.replace('<html lang="zh-CN"','<html lang="en"').replace('<base href="./">','<base href="../">').replace('data-home-language="zh"','data-home-language="en"')
+  .replace(/href="#(home|words|sources|corpus)"/g,'href="en/#$1"')
   .replace('<option value="en">','<option value="en" selected>')
   .replace('rel="canonical" href="https://tujia.biz/"','rel="canonical" href="https://tujia.biz/en/"')
   .replace('property="og:url" content="https://tujia.biz/"','property="og:url" content="https://tujia.biz/en/"')

@@ -5,17 +5,20 @@ const {chromium}=require('playwright');
 const root=path.resolve(process.argv[2]||path.join(__dirname,'../site'));
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.woff2':'font/woff2'};
 const titles={zh:'土家语词典、语法与语料｜毕兹学堂',en:'Tujia Dictionary, Grammar & Texts | Bizic Academy 毕兹学堂'};
+const mount='/bizic-dictionary/';
 let server,base=process.env.BASE_URL;
 (async()=>{
  if(!base){
   server=http.createServer((req,res)=>{
-   let name=decodeURIComponent(new URL(req.url,'http://localhost').pathname).replace(/^\//,'');
+   const pathname=new URL(req.url,'http://localhost').pathname;
+   if(!pathname.startsWith(mount)){res.writeHead(404).end();return;}
+   let name=decodeURIComponent(pathname.slice(mount.length));
    if(!name||name.endsWith('/'))name+='index.html';
    const file=path.resolve(root,name);
    if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}
    try{res.setHeader('Content-Type',mime[path.extname(file)]||'application/octet-stream');res.end(fs.readFileSync(file));}catch{res.writeHead(404).end();}
   });
-  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));base='http://127.0.0.1:'+server.address().port+'/';
+  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));base='http://127.0.0.1:'+server.address().port+mount;
  }
  const executablePath=process.env.CHROMIUM_EXECUTABLE||['/usr/bin/google-chrome','/usr/bin/chromium'].find(fs.existsSync);
  const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox','--disable-dev-shm-usage']});
@@ -48,16 +51,16 @@ let server,base=process.env.BASE_URL;
   p.on('response',r=>{
    const url=new URL(r.url());
    // Optional recordings are checked with HEAD and hidden when absent.
-   const optionalMedia=r.status()===404&&r.request().method()==='HEAD'&&url.pathname.startsWith('/media/');
+   const optionalMedia=r.status()===404&&r.request().method()==='HEAD'&&url.pathname.startsWith(new URL('media/',base).pathname);
    if(r.status()>=400&&url.origin===new URL(base).origin&&!optionalMedia)failures.push(r.status()+' '+r.url());
   });
   const requests=[];p.on('request',r=>requests.push(new URL(r.url()).pathname));
   await p.goto(base);await ready(p);await p.evaluate(()=>localStorage.setItem('tujia-ui-language','zh'));
   await p.goto(base+'en/');await ready(p);
   assert.equal(await p.evaluate(()=>TujiaUI.language),'en','explicit English entry overrides a saved Chinese preference');
-  assert.equal(await p.title(),titles.en);assert.equal(new URL(p.url()).pathname,'/en/');
+  assert.equal(await p.title(),titles.en);assert.equal(new URL(p.url()).pathname,new URL('en/',base).pathname);
   assert(!requests.some(url=>url.includes('/prepared/')),'both homepages remain independent of dictionary downloads');
-  assert(!requests.some(url=>/^\/en\/.*\.(?:js|css|gz)$/.test(url)),'English entry reuses root assets');
+  assert(!requests.some(url=>url.startsWith(new URL('en/',base).pathname)&&/\.(?:js|css|gz)$/.test(url)),'English entry reuses root assets');
   await screenshot(p,'home-en-desktop');
   for(const lang of ['zh','en']){
    await p.selectOption('#ui-language',lang);assert.equal(await p.title(),titles[lang]);
@@ -81,9 +84,9 @@ let server,base=process.env.BASE_URL;
   await p.locator('[data-ui-language-link=en]').click();await p.waitForSelector('.word-card');await ready(p);
   assert.equal(await p.evaluate(()=>state.q),'吃');assert.equal(await p.evaluate(()=>TujiaUI.language),'en');
   await p.locator('aside [data-view=grammar]').click();await p.waitForSelector('.grammar-reading-title');await ready(p);
-  assert.equal(new URL(p.url()).pathname,'/en/');
+  assert.equal(new URL(p.url()).pathname,new URL('en/',base).pathname);
   const chapter=p.locator('.grammar-toc a[href^="#grammar/"]').first();
-  if(await chapter.count()){await chapter.click();await ready(p);assert.equal(new URL(p.url()).pathname,'/en/');}
+  if(await chapter.count()){await chapter.click();await ready(p);assert.equal(new URL(p.url()).pathname,new URL('en/',base).pathname);}
   await p.locator('aside button[data-view=home]').click();await p.waitForSelector('.hero');await ready(p);
   assert.equal(await p.title(),titles.en);
   assert((await p.locator('.hero h1').innerText()).includes('Tujia Dictionary'));

@@ -17,8 +17,8 @@ node scripts/test-localized-home.cjs site
 The Pages workflow performs these steps before deploying. After editing home
 copy or interface labels, regenerate the checked-in `site/en/index.html` too.
 The English page references the same root scripts, styles, fonts and lazy data
-files; it does not duplicate or preload the dictionary. The root `<base>` URL
-keeps relative asset requests working from `/en/` on the custom domain.
+files; it does not duplicate or preload the dictionary. Relative `<base>` URLs (`./` for Chinese and `../` for English) keep asset
+requests working on both the custom domain and GitHub Pages subpath previews.
 
 Generated `data-ui-source` attributes retain the Chinese interface strings so
 the existing language selector can switch in either direction without a reload.
