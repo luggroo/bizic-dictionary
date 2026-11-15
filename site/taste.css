@@ -152,7 +152,7 @@ main a:not(.metric):visited,#detail-body a:visited,.site-footer a:visited{color:
 }
 
 /* Translation section: an editorial resource, not a promotional card. */
-.translation-callout{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:34px;margin:34px 0 8px;padding:27px 0 0;border-top:1px solid var(--line)}
+.translation-callout{display:block;margin:34px 0 8px;padding:27px 0 0;border-top:1px solid var(--line)}
 .translation-copy{min-width:0}
 .translation-callout h2{margin:0 0 12px;font-size:24px;line-height:1.4;font-weight:650;color:#294532}
 .translation-callout p{max-width:68ch;margin:0;color:#354b40;font-size:14px;line-height:1.85}
@@ -160,11 +160,6 @@ main a:not(.metric):visited,#detail-body a:visited,.site-footer a:visited{color:
 .translation-actions{display:flex;flex-wrap:wrap;align-items:center;gap:23px;margin-top:18px}
 .translation-callout a.translation-skill-link,.translation-callout a.translation-skill-link:visited,.translation-callout a.translation-about-link{background:none;border:0;border-bottom:1px solid currentColor;border-radius:0;padding:0;color:var(--green);font-size:13px;font-weight:500;text-decoration:none;line-height:1.7}
 .translation-callout a.translation-skill-link:hover,.translation-callout a.translation-about-link:hover{color:#426c55;text-decoration:none}
-.translation-notation{display:flex;align-items:center;justify-content:flex-end;gap:17px;margin:4px 0 0;padding:10px 0 10px 25px;border-left:1px solid var(--line);color:var(--green);white-space:nowrap}
-.translation-notation-side{font-size:19px;font-weight:550;line-height:1.45;text-align:center}
-.translation-notation-side small{display:block;font-size:12px;font-weight:400;color:#65726b;margin-top:4px}
-.translation-swap{font-size:23px;color:#789084;font-family:Georgia,serif}
-@media(max-width:1050px){.translation-callout{grid-template-columns:1fr;gap:14px}.translation-notation{grid-row:1;justify-content:flex-start;width:max-content;max-width:100%;padding:0;border-left:0;gap:16px}.translation-copy{grid-row:2}.translation-notation-side{font-size:16px}}
 @media(max-width:480px){.translation-callout{margin-top:22px;padding-top:22px}.translation-callout h2{font-size:21px}.translation-callout p{font-size:13px}.translation-actions{gap:17px}}
 /* External GitHub link with the same bilingual treatment as navigation tabs. */
 aside>nav .nav-repo-link{display:flex;align-items:center;min-height:57px;padding:10px 11px;gap:13px;border-radius:5px;color:#5e6861;text-decoration:none;font-size:17px}
