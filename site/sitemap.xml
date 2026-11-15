@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap><loc>https://tujia.biz/sitemap-pages.xml</loc></sitemap>
-  <sitemap><loc>https://tujia.biz/sitemap-entries.xml</loc></sitemap>
-  <sitemap><loc>https://tujia.biz/sitemap-lookups.xml</loc></sitemap>
-  <sitemap><loc>https://tujia.biz/sitemap-sources.xml</loc></sitemap>
-  <sitemap><loc>https://tujia.biz/sitemap-corpus.xml</loc></sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://tujia.biz/</loc></url>
+  <url><loc>https://tujia.biz/translation.html</loc></url>
+  <url><loc>https://tujia.biz/en/</loc></url>
+</urlset>

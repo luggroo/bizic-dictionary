@@ -1,11 +1,13 @@
 # Search sitemaps
 
 Submit `https://tujia.biz/sitemap.xml` using the domain property or the
-`https://tujia.biz/` URL-prefix property in Search Console. It is a sitemap index;
-Google can follow its child sitemap links. The `/en/` URL-prefix property covers
-only that subtree and is not the property for this site-wide submission.
+`https://tujia.biz/` URL-prefix property in Search Console. It directly lists the
+Chinese homepage, the translation introduction and the English homepage. The
+`/en/` URL-prefix property covers only that subtree and is not the property for
+this site-wide submission.
 
-The build exports five groups from the HTML pages actually published:
+The detailed index is available separately at `https://tujia.biz/sitemap-index.xml`.
+It links to five groups built from the HTML pages actually published:
 
 | Group | Content |
 | --- | --- |
@@ -22,8 +24,10 @@ entries available only inside the interactive dictionary have no standalone HTML
 to include yet. Grammar sections likewise need standalone pages before they can
 be listed individually.
 
-The main index keeps the same address as the former three-URL sitemap. Child
-files are generated during deployment and ignored by Git. Groups automatically
+The root `sitemap.xml` keeps its original three-URL format, including after a
+rebuild. `robots.txt` continues to advertise that root file. The detailed index
+and child files are generated during deployment and ignored by Git; the detailed
+index can be submitted independently. Groups automatically
 split into numbered files before reaching the protocol's URL or byte limits.
 The readable pages expose matching canonical URLs. Unicode path components are
 URL-encoded and XML values are escaped.

@@ -38,19 +38,12 @@ def local_path(url):
     return file
 
 
-index = ET.parse(root / 'sitemap.xml').getroot()
-assert index.tag == ns + 'sitemapindex'
-children = [node.findtext(ns + 'loc') for node in index]
-assert len(children) == len(set(children)) and len(children) >= 5
-urls = []
-sizes = {}
-for child in children:
-    file = local_path(child)
+def read_urlset(file):
     xml = ET.parse(file).getroot()
     assert xml.tag == ns + 'urlset'
     assert 0 < len(xml) <= 50000
     assert file.stat().st_size < 50_000_000
-    sizes[file.name] = len(xml)
+    urls = []
     for item in xml:
         url = item.findtext(ns + 'loc')
         page = local_path(url)
@@ -61,8 +54,27 @@ for child in children:
         assert not parser.noindex, url
         assert item.find(ns + 'lastmod') is None, 'Do not claim a build time as a content update'
         urls.append(url)
+    return urls
+
+
+primary_urls = read_urlset(root / 'sitemap.xml')
+assert primary_urls == ['https://tujia.biz/', 'https://tujia.biz/translation.html',
+                        'https://tujia.biz/en/'], 'Keep the root sitemap as the original three-page URL list'
+
+index = ET.parse(root / 'sitemap-index.xml').getroot()
+assert index.tag == ns + 'sitemapindex'
+children = [node.findtext(ns + 'loc') for node in index]
+assert len(children) == len(set(children)) and len(children) >= 5
+urls = []
+sizes = {}
+for child in children:
+    file = local_path(child)
+    child_urls = read_urlset(file)
+    sizes[file.name] = len(child_urls)
+    urls.extend(child_urls)
 
 assert len(urls) == len(set(urls))
+assert set(primary_urls) <= set(urls)
 assert {'https://tujia.biz/', 'https://tujia.biz/en/', 'https://tujia.biz/translation.html',
         'https://tujia.biz/text/', 'https://tujia.biz/text/all/north.html',
         'https://tujia.biz/text/all/south.html'} <= set(urls)
@@ -88,5 +100,5 @@ assert.throws(()=>chunkUrls(urls,100,bytes-1));
 assert(chunkUrls(["https://tujia.biz/吃&喝's.html"])[0].includes('&amp;'));
 """, script], check=True)
 
-print(json.dumps({'result': 'PASS', 'urls': len(urls), 'groups': sizes,
+print(json.dumps({'result': 'PASS', 'primary_urls': len(primary_urls), 'urls': len(urls), 'groups': sizes,
                   'checks': 'XML, unique canonical URLs, existing HTML, encoding, coverage and size limits'}))

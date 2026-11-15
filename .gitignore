@@ -57,6 +57,7 @@ site/fonts/GentiumPlus-*
 site/text/
 
 # Generated after the readable dictionary is built.
+site/sitemap-index.xml
 site/sitemap-pages*.xml
 site/sitemap-entries*.xml
 site/sitemap-lookups*.xml
