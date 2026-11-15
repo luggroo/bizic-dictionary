@@ -42,9 +42,9 @@
     notation: 'sar qifmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
     // Search action wording approved for this interface; not a source quotation.
     searchEn: 'yinxyiv niv-xivsour', searchZh: 'pavsar niv-xivsour', searchTujia: 'bifsar niv-xivsour',
-    history: 'nierzuxbarzux niex sar', translation: 'sar aflix', search: 'nix'
+    history: 'nierzuxbarzux niex sar', translation: 'da ali', search: 'nix'
   });
-  const homeAccents={"brand":"bízīsǎ áhxī","home":"gě lāi xié","words":"cīcī nī","grammar":"sǎ qímō lǐ","notation":"sǎ qímō á","corpus":"lázé lázé lǐ","sources":"cīpū jiěxí","searchEn":"yīnyì nì-xìsǒu","searchZh":"pàsǎ nì-xìsǒu","searchTujia":"bísǎ nì-xìsǒu","history":"niězūbǎzū niē sǎ","translation":"sǎ álī","search":"nī"};
+  const homeAccents={"brand":"bízīsǎ áhxī","home":"gě lāi xié","words":"cīcī nī","grammar":"sǎ qímō lǐ","notation":"sǎ qímō á","corpus":"lázé lázé lǐ","sources":"cīpū jiěxí","searchEn":"yīnyì nì-xìsǒu","searchZh":"pàsǎ nì-xìsǒu","searchTujia":"bísǎ nì-xìsǒu","history":"niězūbǎzū niē sǎ","translation":"da ali","search":"nī"};
   let initialSpelling="accent";try{if(localStorage.getItem("tujia-north-spelling-v2")==="ye")initialSpelling="ye"}catch{}
   const textMemory = new WeakMap(), attributeMemory = new WeakMap(), grammarMemory = new WeakMap();
   const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],[data-ui-language-link],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
