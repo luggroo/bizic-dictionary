@@ -257,7 +257,7 @@ async function main(){
     await nav(view);
     if(view==='words'&&await page.locator('.filter-disclosure:not([open])').count())await tap('.filter-disclosure>summary');
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,lang+' '+view+' overflows at '+width);
-    const navClipped=await page.locator('aside nav button').evaluateAll(items=>items.some(b=>b.scrollWidth>b.clientWidth+2));
+    const navClipped=await page.locator('aside nav button, aside nav a.nav-repo-link').evaluateAll(items=>items.some(b=>b.scrollWidth>b.clientWidth+2));
     assert.equal(navClipped,false,lang+' navigation clips at '+width);
     const hiddenFilterLabels=await page.locator('.filters select:visible').evaluateAll(items=>items.flatMap(el=>{
      const text=el.selectedOptions[0]?.label?.trim()||'',css=getComputedStyle(el),canvas=document.createElement('canvas'),context=canvas.getContext('2d');
