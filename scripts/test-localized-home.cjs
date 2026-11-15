@@ -43,6 +43,7 @@ let server,base=process.env.BASE_URL;
    assert(await p.locator('.translation-callout').evaluate(e=>e.parentElement.lastElementChild===e));
    assert.equal(await p.locator('nav .nav-repo-link').getAttribute('href'),'https://github.com/luggroo/bizic-translator');
    assert.equal(await p.locator('nav .nav-repo-link').getAttribute('target'),'_blank');
+   assert((await p.locator('nav .nav-repo-link').innerText()).includes(lang==='en'?'Translation skill':'翻译技能'));
    assert((await p.locator('.translation-callout h2').innerText()).includes(lang==='en'?'Tujia translation':'土家语翻译'));
    await p.locator('[data-ui-language-link="'+(lang==='en'?'zh':'en')+'"]').click();
    assert.equal(await p.title(),titles[lang==='en'?'zh':'en']);
