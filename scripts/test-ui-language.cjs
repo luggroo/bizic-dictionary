@@ -104,7 +104,7 @@ const server=http.createServer((req,res)=>{
     await page.screenshot({path:'/tmp/tujia-ui-mobile-zh.png',fullPage:true});
     assert.equal(await page.locator('nav [data-view="words"] .ui-secondary').innerText(),'词汇检索');
     assert.equal(await page.locator('nav [data-view="words"] .tujia-ui').innerText(),'cīcī nī');
-    assert.equal(await page.locator('nav .nav-repo-link .tujia-ui').innerText(),'da ali');
+    assert.equal(await page.locator('nav .nav-repo-link .tujia-ui').innerText(),'sǎ dà álī');
     assert((await page.locator('nav .nav-repo-link').innerText()).includes('翻译技能'));
     assert.equal(await page.locator('nav .nav-repo-link').getAttribute('href'),'https://github.com/luggroo/bizic-translator');
     assert.deepEqual(errors,[]);
