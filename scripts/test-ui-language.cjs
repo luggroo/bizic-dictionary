@@ -105,6 +105,7 @@ const server=http.createServer((req,res)=>{
     assert.equal(await page.locator('nav [data-view="words"] .ui-secondary').innerText(),'词汇检索');
     assert.equal(await page.locator('nav [data-view="words"] .tujia-ui').innerText(),'cīcī nī');
     assert.equal(await page.locator('nav .nav-repo-link .tujia-ui').innerText(),'da ali');
+    assert((await page.locator('nav .nav-repo-link').innerText()).includes('翻译技能'));
     assert.equal(await page.locator('nav .nav-repo-link').getAttribute('href'),'https://github.com/luggroo/bizic-translator');
     assert.deepEqual(errors,[]);
     console.log('PASS: UI languages and both spellings; search/filter values; protected glosses and source data; detail/reload; removed favorites; seven views; 390/768/1280px layouts.');
