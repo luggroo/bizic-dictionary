@@ -2,7 +2,8 @@
 'use strict';
 const fs=require('node:fs'),path=require('node:path');
 const ORIGIN='https://tujia.biz',NS='http://www.sitemaps.org/schemas/sitemap/0.9';
-const PRIMARY_PAGES=['index.html','translation.html','en/index.html'];
+const TABS=['words','grammar','notation','history','corpus','sources'];
+const PRIMARY_PAGES=['index.html','translation.html','en/index.html','text/all/north.html','text/all/south.html',...TABS.flatMap(tab=>[tab+'.html','en/'+tab+'.html'])];
 const escape=value=>value.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
 const decode=value=>value.replace(/&(?:amp|quot|apos|#39);/g,s=>({'&amp;':'&','&quot;':'"','&apos;':"'",'&#39;':"'"}[s]));
 const address=file=>ORIGIN+(file==='index.html'?'/':file==='en/index.html'?'/en/':file==='text/index.html'?'/text/':'/'+file.split('/').map(encodeURIComponent).join('/'));
@@ -27,7 +28,7 @@ function buildSitemaps(root){
  }}
  if(!fs.existsSync(path.join(root,'text/entry')))throw Error('Build the readable dictionary before sitemaps');
  walk('text');
- const groups={pages:[...PRIMARY_PAGES],entries:[],lookups:[],sources:[],corpus:[]};
+ const groups={pages:PRIMARY_PAGES.filter(file=>!file.startsWith('text/')),entries:[],lookups:[],sources:[],corpus:[]};
  for(const file of files.sort()){
   if(/^text\/entry\/[^/]+\.html$/.test(file))groups.entries.push(file);
   else if(/^text\/lookup\/zh\/[^/]+\.html$/.test(file))groups.lookups.push(file);

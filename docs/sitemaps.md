@@ -2,7 +2,8 @@
 
 Submit `https://tujia.biz/sitemap.xml` using the domain property or the
 `https://tujia.biz/` URL-prefix property in Search Console. It directly lists the
-Chinese homepage, the translation introduction and the English homepage. The
+Chinese and English homepages and their six tabs, the translation introduction,
+and the Northern and Southern text tables (17 URLs). The
 `/en/` URL-prefix property covers only that subtree and is not the property for
 this site-wide submission.
 
@@ -24,7 +25,7 @@ entries available only inside the interactive dictionary have no standalone HTML
 to include yet. Grammar sections likewise need standalone pages before they can
 be listed individually.
 
-The root `sitemap.xml` keeps its original three-URL format, including after a
+The root `sitemap.xml` keeps its flat URL-list format, including after a
 rebuild. `robots.txt` continues to advertise that root file. The detailed index
 and child files are generated during deployment and ignored by Git; the detailed
 index can be submitted independently. Groups automatically
@@ -35,6 +36,7 @@ URL-encoded and XML values are escaped.
 Run after preparing the readable dictionary and English homepage:
 
 ```sh
+node scripts/build-tab-pages.cjs site
 node scripts/build-sitemaps.cjs site
 python3 scripts/test-sitemaps.py site
 ```

@@ -1,6 +1,6 @@
 /* Load each reader tool when its route is opened; the home screen stays independent. */
 'use strict';
-window.SITE_HOME_HTML=document.getElementById('main').innerHTML;
+window.SITE_HOME_HTML=(document.getElementById('site-home-content')||document.getElementById('main')).innerHTML;
 const SitePages=(()=>{
  const definitions={
   inflate:{files:['vendor/pako_inflate.min.js']},

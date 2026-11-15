@@ -220,7 +220,7 @@
       : (view === 'words' ? (language === 'en' ? 'Tujia Dictionary' : '土家语词典') : translate(title)) + brand;
     if (document.body.dataset.homeLanguage) {
       const description = translate('查询北部与南部土家语词汇、汉英释义、原始记音和来源见证，查阅参考语法与语料。毕兹学堂提供土家语学习与研究资料。');
-      const canonical = 'https://tujia.biz/' + (language === 'en' ? 'en/' : '');
+      const canonical = 'https://tujia.biz/' + (language === 'en' ? 'en/' : '') + (document.body.dataset.entryView && view !== 'home' ? view + '.html' : '');
       document.querySelector('meta[name="description"]')?.setAttribute('content', description);
       document.querySelector('meta[property="og:title"]')?.setAttribute('content', document.title);
       document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);

@@ -63,3 +63,17 @@ site/sitemap-entries*.xml
 site/sitemap-lookups*.xml
 site/sitemap-sources*.xml
 site/sitemap-corpus*.xml
+
+# Generated bilingual tab pages
+site/words.html
+site/grammar.html
+site/notation.html
+site/history.html
+site/corpus.html
+site/sources.html
+site/en/words.html
+site/en/grammar.html
+site/en/notation.html
+site/en/history.html
+site/en/corpus.html
+site/en/sources.html

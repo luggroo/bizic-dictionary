@@ -58,8 +58,12 @@ def read_urlset(file):
 
 
 primary_urls = read_urlset(root / 'sitemap.xml')
-assert primary_urls == ['https://tujia.biz/', 'https://tujia.biz/translation.html',
-                        'https://tujia.biz/en/'], 'Keep the root sitemap as the original three-page URL list'
+expected_primary = {'https://tujia.biz/', 'https://tujia.biz/translation.html', 'https://tujia.biz/en/',
+                    'https://tujia.biz/text/all/north.html', 'https://tujia.biz/text/all/south.html'}
+for tab in ['words','grammar','notation','history','corpus','sources']:
+    expected_primary.update(['https://tujia.biz/'+tab+'.html', 'https://tujia.biz/en/'+tab+'.html'])
+assert len(primary_urls) == len(set(primary_urls)) == 17
+assert set(primary_urls) == expected_primary
 
 index = ET.parse(root / 'sitemap-index.xml').getroot()
 assert index.tag == ns + 'sitemapindex'
