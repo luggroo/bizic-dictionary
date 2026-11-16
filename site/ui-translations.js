@@ -1,5 +1,6 @@
 /* Reviewed interface copy; source texts and dictionary glosses stay in their source language. */
 var UI_TRANSLATIONS=Object.assign(globalThis.UI_TRANSLATIONS||{},{
+ "使用方法与翻译例子": "Instructions and translation examples",
  "土家语词典、语法与语料｜毕兹学堂": "Tujia Dictionary, Grammar & Texts | Bizic Academy 毕兹学堂",
  "查询北部与南部土家语词汇、汉英释义、原始记音和来源见证，查阅参考语法与语料。毕兹学堂提供土家语学习与研究资料。": "Search Northern and Southern Tujia vocabulary with Chinese and English meanings, pronunciation and source references. Explore Tujia grammar and texts at Bizic Academy.",
  "土家语词典、语法与语料": "Tujia Dictionary, Grammar & Texts",
