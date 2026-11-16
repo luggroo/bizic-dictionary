@@ -1978,3 +1978,31 @@ Object.assign(UI_TRANSLATIONS,{
   "出处：向华武（2026），《龙山土家语的名物化结构》，第16页，龙山靛房。": "Source: Xiang Huawu (2026), “The Nominalization Structure of Longshan Tujia Language”, p. 16; Dingfang, Longshan.",
   "出处：向华武（2026），《龙山土家语的名物化结构》，第17页，龙山靛房。": "Source: Xiang Huawu (2026), “The Nominalization Structure of Longshan Tujia Language”, p. 17; Dingfang, Longshan."
 });
+
+// Independent gu in the reviewed Northern Tujia grammar.
+Object.assign(UI_TRANSLATIONS,{
+  "进行与持续": "Progressive and continuative",
+  "独立的 /ku²⁴/ 用于祈使、禁止与劝请，见": "Independent /ku²⁴/ occurs in commands, prohibitions and exhortations; see",
+  "即时指令助词 gu": "Immediate directive particle gu",
+  "延续、新情况": "Continuation and emerging situations",
+  "第10位列延续与新情况助词；独立的/ku²⁴/见": "Position 10 includes continuation and emerging-situation particles; for independent /ku²⁴/, see",
+  "祈使句": "imperatives",
+  "。名词化、从句连接和句末语气另见相应章节；这张表没有把它们全部列入。": ". Nominalization, clause linking and sentence-final mood are discussed elsewhere; this table does not include them all.",
+  "这张表以Brassett所记材料为基础，但未沿用其将gu列作一般当前关联助词的分析。原书第2位把/tɕi/和/pɔ/列为互斥；前文“吃中饭”的补充材料却有两者连用的形式。两组资料的搭配范围不同。": "This table is based on Brassett et al.'s material but does not adopt their analysis of gu as a general present-relevance particle. The original table treats /tɕi/ and /pɔ/ as mutually exclusive in position 2, although supplementary examples above combine them. The sources therefore differ in the combinations they attest.",
+  "北部土家语的独立助词 /ku²⁴/（Brassett记作 gu²）用于命令、禁止和包括说话人在内的劝请，强调从说话时起立即采取或停止行动。它可跟在动词及其他谓词后成分之后，位于指令性分句的末尾。": "The independent Northern Tujia particle /ku²⁴/ (gu² in Brassett's spelling) is used in commands, prohibitions and first-person-inclusive exhortations. It calls for an action to begin or stop immediately. It follows the verb and any other predicate-final elements at the end of a directive clause.",
+  "即时指令": "immediate directive",
+  "译文：现在把那个给我！": "Translation: Give that to me now!",
+  "出处：Brassett等（2006），第135页，例191。": "Source: Brassett et al. (2006), p. 135, example 191.",
+  "译文：现在别回家！": "Translation: Don't go home now!",
+  "出处：Brassett等（2006），第135页，例193前半句。该例后半句还用gu表达“我们一起好好玩吧”的劝请。": "Source: Brassett et al. (2006), p. 135, example 193 (first clause); its second clause uses gu in an inclusive exhortation (‘let’s have a good time together’).",
+  "《土家语汉语词典》ku⁵⁵条也将其描述为祈使句动词后的助词，表示动作从说话时开始，兼有句末煞尾作用；词典的调值⁵⁵与Brassett所记²⁴不同，本文保留各自记音。": "The Tujia–Chinese Dictionary also describes ku⁵⁵ as a postverbal imperative particle indicating an action beginning at speech time, with a clause-closing function. Its recorded tone (55) differs from Brassett's (24); both transcriptions are kept as cited.",
+  "Brassett等（2006：135–137、139–140）将gu分析为“当前关联”（present relevance）助词，进一步把liao、tiu、tau等形式解释为与gu融合。": "Brassett et al. (2006: 135–137, 139–140) analyze gu as a ‘present relevance’ particle and propose that forms such as liao, tiu and tau result from fusion with gu.",
+  "编者不采纳这一分析。": "The editors do not adopt this analysis.",
+  "原书独立gu的例190—193、200—201均出现在命令、禁止或劝请语境，尚无独立gu用于普通陈述句的证据。本文将liao、tiu、tau等作为各自记录的形式，不由gu推导。": "The independent instances of gu in examples 190–193 and 200–201 all occur in commands, prohibitions or exhortations; there is no cited evidence of independent gu in ordinary declarative clauses. This grammar treats liao, tiu and tau as independently attested forms rather than deriving them from gu.",
+  "那个": "that",
+  "间接宾语": "indirect object",
+  "给": "give",
+  "回家": "go home",
+  "你": "you",
+  "别": "do not"
+});
