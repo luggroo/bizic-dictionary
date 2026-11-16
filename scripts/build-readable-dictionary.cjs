@@ -257,6 +257,12 @@ function buildReadableDictionary({root}) {
   }
   directory('text/corpus','语保例句',corpus.map(c=>({name:'text/corpus/'+c.id+'.html',label:c.title+' · '+c.id})));
   write('text/index.html',page('土家语词典 · 文本目录',`<p>收录 Brassett 04、06 的词汇见证、龙山语保词汇和例句，以及标注为南部土家语的词汇见证和例句。每条见证保留原记音、义项、来源与已记录的调查点。</p><p>${report.entries} 个词条，${report.witnesses} 条见证，${report.queries} 个汉语义项，${report.corpus} 条例句。目录之外的资料可在交互词典查阅。</p><p>${link('text/all.html','完整词目总表：北部、南部各一页')}</p><p>${link('text/source/index.html','按来源：每个来源一页完整汉语索引')}</p><p>精确查询：<code>${escape(routes.exact_zh)}</code>。首字浏览：<code>${escape(routes.initial_zh)}</code>。将 query 替换为查询词，initial 替换为其首字符，并作 URL 编码。仅已收录的查询词和首字符有对应页面。</p>${queries.has('吃') ? '<p>'+link(queryPath('吃'),'查询示例：吃')+'</p>' : ''}<p>${link('text/browse/initial/index.html','全部首字')}</p><p>${link('text/browse/zh/index.html','全部汉语义项')}</p><p>${link('text/catalog.json','来源与路径清单（JSON）')}</p><p>${link('text/corpus/index.html','语保例句')}</p><p><a href="/#words">交互词典</a>（需 JavaScript）</p>`,version));
+  // Emit a versioned machine contract alongside the no-JavaScript text index.
+  // Tiny isolated test fixtures do not contain the canonical gzip inputs.
+  if(fs.existsSync(path.join(root,'dictionary.json.gz'))&&fs.existsSync(path.join(root,'data.json.gz'))){
+    const {createContract}=require('./skill-contract.cjs');
+    write('text/contract.json',JSON.stringify(createContract(root,catalog),null,2)+'\n');
+  }
   return report;
 }
 module.exports = {buildReadableDictionary,createSpellingResolver,renderEntry,renderAttestation,selectEntry,groupFor,chineseKeys,queryPath,initialPath,entryPath,renderLookup,renderCorpus};
