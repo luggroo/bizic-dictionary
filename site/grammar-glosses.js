@@ -5,3 +5,6 @@ Object.assign(GRAMMAR_GLOSS_EN,{"爸爸":"father","刀":"knife","锋利":"sharp"
 
 // Glosses for restored property-word examples in section 4.2.
 Object.assign(GRAMMAR_GLOSS_EN,{"把":"CL.handle","名物化":"NMLZ","哥哥":"elder.brother","本":"CL.volume","妹妹":"younger.sister","薄":"thin","厚的":"thick.one","留":"leave","着":"CONT","薄的":"thin.one","走":"go.away","句末词":"final.particle","锄头":"hoe"});
+
+// Glosses for the independent immediate-directive gu examples.
+Object.assign(GRAMMAR_GLOSS_EN,{"即时指令":"DIR.IMM","那个":"that","别":"PROH"});
