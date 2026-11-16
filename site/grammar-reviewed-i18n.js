@@ -1997,3 +1997,6 @@ Object.assign(UI_TRANSLATIONS,{
   "第10位列延续与新情况助词；独立的/ku²⁴/见": "Position 10 includes continuation and emerging-situation particles; for independent /ku²⁴/, see",
   "独立的 /ku²⁴/ 用于祈使、禁止与劝请，见": "Independent /ku²⁴/ occurs in commands, prohibitions and exhortations; see"
 });
+
+// Independent gu entry in the predicate overview.
+Object.assign(UI_TRANSLATIONS,{"即时指令 DIR.IMM":"Immediate directive DIR.IMM","命令、禁止及劝请句末，表示从说话时起行动或停止；见":"Clause-final in commands, prohibitions and exhortations; calls for action to start or stop immediately; see"});
