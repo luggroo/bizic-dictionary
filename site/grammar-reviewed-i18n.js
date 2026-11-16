@@ -2006,3 +2006,11 @@ Object.assign(UI_TRANSLATIONS,{
   "你": "you",
   "别": "do not"
 });
+
+// Captions and linked prose for the independent gu examples.
+Object.assign(UI_TRANSLATIONS,{
+  "现在把那个给我！": "Give that to me now!",
+  "现在别回家！": "Don't go home now!",
+  "第10位列延续与新情况助词；独立的/ku²⁴/见": "Position 10 includes continuation and emerging-situation particles; for independent /ku²⁴/, see",
+  "独立的 /ku²⁴/ 用于祈使、禁止与劝请，见": "Independent /ku²⁴/ occurs in commands, prohibitions and exhortations; see"
+});
