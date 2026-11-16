@@ -1978,7 +1978,7 @@ Object.assign(UI_TRANSLATIONS,{
   "出处：Brassett等（2006），第135页，例191。": "Source: Brassett et al. (2006), p. 135, example 191.",
   "译文：现在别回家！": "Translation: Don't go home now!",
   "出处：Brassett等（2006），第135页，例193前半句。该例后半句还用gu表达“我们一起好好玩吧”的劝请。": "Source: Brassett et al. (2006), p. 135, example 193 (first clause); its second clause uses gu in an inclusive exhortation (‘let’s have a good time together’).",
-  "《土家语汉语词典》ku⁵⁵条也将其描述为祈使句动词后的助词，表示动作从说话时开始，兼有句末煞尾作用；词典的调值⁵⁵与Brassett所记²⁴不同，本文保留各自记音。": "The Tujia–Chinese Dictionary also describes ku⁵⁵ as a postverbal imperative particle indicating an action beginning at speech time, with a clause-closing function. Its recorded tone (55) differs from Brassett's (24); both transcriptions are kept as cited.",
+  "李启群等（2021）《土家语汉语词典》的 /ku⁵⁵/（助词）条也将其描述为祈使句动词后的助词，表示动作从说话时开始，兼有句末煞尾作用；词典的调值⁵⁵与Brassett所记²⁴不同，本文保留各自记音。": "The Tujia–Chinese Dictionary also describes ku⁵⁵ as a postverbal imperative particle indicating an action beginning at speech time, with a clause-closing function. Its recorded tone (55) differs from Brassett's (24); both transcriptions are kept as cited.",
   "Brassett等（2006：135–137、139–140）将gu分析为“当前关联”（present relevance）助词，进一步把liao、tiu、tau等形式解释为与gu融合。": "Brassett et al. (2006: 135–137, 139–140) analyze gu as a ‘present relevance’ particle and propose that forms such as liao, tiu and tau result from fusion with gu.",
   "编者不采纳这一分析。": "The editors do not adopt this analysis.",
   "原书独立gu的例190—193、200—201均出现在命令、禁止或劝请语境，尚无独立gu用于普通陈述句的证据。本文将liao、tiu、tau等作为各自记录的形式，不由gu推导。": "The independent instances of gu in examples 190–193 and 200–201 all occur in commands, prohibitions or exhortations; there is no cited evidence of independent gu in ordinary declarative clauses. This grammar treats liao, tiu and tau as independently attested forms rather than deriving them from gu.",
@@ -2000,3 +2000,6 @@ Object.assign(UI_TRANSLATIONS,{
 
 // Independent gu entry in the predicate overview.
 Object.assign(UI_TRANSLATIONS,{"即时指令 DIR.IMM":"Immediate directive DIR.IMM","命令、禁止及劝请句末，表示从说话时起行动或停止；见":"Clause-final in commands, prohibitions and exhortations; calls for action to start or stop immediately; see"});
+
+// Li Qiqun et al. (2021) dictionary citation for ku.
+Object.assign(UI_TRANSLATIONS,{"，北京：商务印书馆，/ku⁵⁵/助词条。":", Beijing: The Commercial Press, entry /ku⁵⁵/ (particle)."});
