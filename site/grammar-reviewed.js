@@ -209,7 +209,11 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
   for(const m of raw.matchAll(pattern)){
    const ipa=m[1]||m[2]||m[0],enclosedMatch=m[1]!==undefined||m[2]!==undefined;
    // Bare Latin forms with a single superscript cite source tone classes, not IPA tone contours.
-   if(!enclosedMatch&&/^[a-z]+[¹²³⁴⁵]$/.test(ipa))continue;
+   if(!enclosedMatch&&/^[a-z]+[¹²³⁴⁵]$/.test(ipa)){
+    fr.append(raw.slice(pos,m.index));
+    const citation=document.createElement('span');citation.className='grammar-source-transcription';citation.dataset.sourceNotation='tone-class';citation.textContent=ipa;fr.append(citation);
+    pos=m.index+m[0].length;changed=true;continue;
+   }
    if(enclosedMatch&&!/[¹²³⁴⁵ɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰ\u0300-\u036f]/u.test(ipa)&&!ipa.split(/[ ,、;+~～]+/).every(s=>/^(?:p|b|t|d|k|g|m|n|l|s|z|f|h|w|j|r|ts|dz|i|u|y|e|o|a|ai|au|ei|ou|ia|ie|iu|ua|uo|ui|an|en|in|un|po|xu|kau|la|lu|lie|liau|te|ti|tiu|to|tso|ma|ta|ku|tau)$/.test(s)))continue;
    if(!enclosedMatch&&!/[¹²³⁴⁵ɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰ\u0303\u0329]/u.test(ipa))continue;
    if(!/[a-zãẽĩõũỹɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥ]/u.test(ipa))continue;
