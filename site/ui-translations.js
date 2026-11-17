@@ -3637,3 +3637,27 @@ Object.assign(UI_TRANSLATIONS,{
 Object.assign(UI_TRANSLATIONS,{"毕兹学堂":"Bizic Academy","土家语词典、语法与语料":"Tujia Dictionary, Grammar & Texts"});
 
 Object.assign(UI_TRANSLATIONS,{"新借自汉语「寨」。": "A modern loan from Chinese 寨 “village”.", "新借自汉语「寨子」，其中「寨」指村庄。": "A modern loan from Chinese 寨子 “village”; 寨 means “village”.", "新借自汉语「上」。": "A modern loan from Chinese 上 “on; above”."});
+
+Object.assign(UI_TRANSLATIONS,{
+ "本站 IPA 记号": "IPA conventions on this site",
+ "词典和语料的 IPA 统一使用以下记号；词条出处保留原始记音，声调值不变。": "Dictionary and corpus IPA uses the following conventions. Source records retain the original transcription and tone values are unchanged.",
+ "与原文不同的记号": "Differences from source notation",
+ "原记号": "Source symbol",
+ "本站 IPA": "Site IPA",
+ "ɳ、ɲ、ɲ̟": "ɳ, ɲ, ɲ̟",
+ "统一为汉语语言学常用的舌面前鼻音记号": "The alveolopalatal nasal symbol commonly used in Chinese linguistics.",
+ "平舌咝音后的舌尖元音": "Apical vowel after dental sibilants",
+ "软腭音后的独立韵母 i": "Standalone i after velar consonants",
+ "c / r / s / z 后的独立韵母 i": "Standalone i after c / r / s / z",
+ "g / h / hh / k 后的独立韵母 i": "Standalone i after g / h / hh / k",
+ "叶式 c / r / s / z": "Ye c / r / s / z",
+ "叶式 g / h / hx / k": "Ye g / h / hx / k",
+ "适用范围": "Scope",
+ "Brassett f": "Brassett f",
+ "双唇擦音；Brassett 拼音 hu、hua、huan、hui 等分别转写为 ɸu、ɸua、ɸuɛn、ɸuei": "Bilabial fricative: Brassett hu, hua, huan and hui are transcribed as ɸu, ɸua, ɸuɛn and ɸuei.",
+ "ɿ、ʅ 沿用汉语语言学常用的舌尖元音记号。Brassett 拼音 ha 仍对应 /xa/；叶式拼音中的调号字母 f 保持原样。": "ɿ and ʅ follow the apical-vowel notation common in Chinese linguistics. Brassett ha corresponds to /xa/; the Ye tone letter f is unchanged.",
+ "ts、tsʰ、dz、s、z 等平舌咝音之后的独立元音；k、kʰ、x、ɣ 等音后的 ɨ 保留": "Standalone vowel after dental sibilants such as ts, tsʰ, dz, s and z; ɨ is retained after k, kʰ, x and ɣ.",
+ "tʂ、tʂʰ、dʐ、ʂ、ʐ 等卷舌咝音之后的独立元音": "Standalone vowel after retroflex sibilants such as tʂ, tʂʰ, dʐ, ʂ and ʐ."
+});
+
+Object.assign(UI_TRANSLATIONS,{"Brassett f；hu 系列的 x":"Brassett f; x in hu syllables","ɿ、ʅ 沿用汉语语言学常用的舌尖元音记号。Brassett 原书 hu³“喝”记 /xu²¹/，本站记 /ɸu²¹/；ha 仍对应 /xa/。叶式拼音中的调号字母 f 保持原样。":"ɿ and ʅ follow the apical-vowel notation common in Chinese linguistics. Brassett transcribes hu³ ‘drink’ as /xu²¹/; this site uses /ɸu²¹/, while ha remains /xa/. The Ye tone letter f is unchanged."});
