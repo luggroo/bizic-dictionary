@@ -1,0 +1,47 @@
+[
+  {
+    "id": "en-crow",
+    "gloss_sha256": "90d95611860b34e6f732d8885381a453e31cd9ba6cb187bb2bcbcb601c1545f7",
+    "pdf": "en-crow.pdf",
+    "pdf_sha256": "f6bcb68f315eb0a7a4f1e6c7f075e9f52c35752465361c1178c4755fd498e826",
+    "clauses": 5,
+    "target_units": 11,
+    "format": "source + aligned pinyin / IPA / gloss"
+  },
+  {
+    "id": "zh-rabbit",
+    "gloss_sha256": "5485e6701965a053948a72e51eb597f2e59fbbc6aad3e2658487dfa6fe28b54f",
+    "pdf": "zh-rabbit.pdf",
+    "pdf_sha256": "bbb916307e4d4f59153899cc5a7b72dcf4ffa00987136bcbc643bd4a95450318",
+    "clauses": 3,
+    "target_units": 10,
+    "format": "source + aligned pinyin / IPA / gloss"
+  },
+  {
+    "id": "ja-jizo",
+    "gloss_sha256": "e1039a577f029fed967cc61e68e76bb2d9f3701b08e366254a34ec2da2d1e225",
+    "pdf": "ja-jizo.pdf",
+    "pdf_sha256": "29273cd84c67ad902e295d4c9605b471a2190110dedc8db4094e87af18327328",
+    "clauses": 27,
+    "target_units": 42,
+    "format": "source + aligned pinyin / IPA / gloss"
+  },
+  {
+    "id": "bo-crane",
+    "gloss_sha256": "c846fae32968cb3070d7b79b1eaf51d69aa6acf6827511ab54fbe679ee3415b0",
+    "pdf": "bo-crane.pdf",
+    "pdf_sha256": "7a620f2ebb7af7ab2b3bea82e3ba85d98846a634a2dcd90e633852016516c322",
+    "clauses": 4,
+    "target_units": 4,
+    "format": "source + aligned pinyin / IPA / gloss"
+  },
+  {
+    "id": "reverse-song",
+    "gloss_sha256": "cf8603f607dc89822c277df13247919c98a1a5a305b85eaffd46ecec46d88655",
+    "pdf": "reverse-song.pdf",
+    "pdf_sha256": "39cf187b3bfdcf8636a76df8459e7dd663df3e27131a3c889cd95c903eef8003",
+    "clauses": 4,
+    "target_units": 4,
+    "format": "source + aligned pinyin / IPA / gloss"
+  }
+]

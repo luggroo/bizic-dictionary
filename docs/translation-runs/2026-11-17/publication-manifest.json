@@ -1,42 +1,47 @@
 [
   {
     "id": "en-crow",
-    "source": "A thirsty crow found a pitcher with a little water in it.\nThe water was too low for its beak to reach.\nIt tried to tip the pitcher, but it was too heavy.\nThen the crow dropped small stones into it, one by one.\nThe water rose, and at last the crow could drink.",
-    "translation": "北部龙山土家语（调号拼音）\n\n1. A thirsty crow found a pitcher with a little water in it.\n\n   Gǎ lá lǒng zégǎ, guán lá lǒng nì liē; guán wótū cě lá xié.\n\n2. The water was too low for its beak to reach.\n\n   Cě dī xǐtái, gó niě záqī hǒliě cě būbǔ tā tī.\n\n3. It tried to tip the pitcher, but it was too heavy.\n\n   Gó guán 试着 duán, qiè guán dùzǐ xǐtái; gó guán duán hī cē.\n\n4. Then the crow dropped small stones into it, one by one.\n\n   Āiliē gǎ ǎbǎ bíkuī lá bú lá bú mǒ guán wótū bō lá liē.\n\n5. The water rose, and at last the crow could drink.\n\n   Cě óng liē, zuíhóu gǎ cě hǔ dē xǐ.\n\n说明：“水罐”用 guán（罐），“喙”用 záqī（嘴）表达；“试着”保留最小汉语插入。第二句改述为“水很低，它用嘴碰不到水”；第三句明说因太重而翻不动。以上为依据词典和能产句式的拟译。\n\n",
+    "gloss_sha256": "90d95611860b34e6f732d8885381a453e31cd9ba6cb187bb2bcbcb601c1545f7",
     "pdf": "en-crow.pdf",
-    "pdf_sha256": "b1cb3b8f2129ac0e6cb1d50f963abdba28cead56d5f00126e61010e12404cbf1",
-    "skill_revision": "local snapshot archived in first blind run"
+    "pdf_sha256": "f6bcb68f315eb0a7a4f1e6c7f075e9f52c35752465361c1178c4755fd498e826",
+    "clauses": 5,
+    "target_units": 11,
+    "format": "source + aligned pinyin / IPA / gloss"
   },
   {
     "id": "zh-rabbit",
-    "source": "宋人有耕者，田中有株，兔走触株，折颈而死。\n因释其耒而守株，冀复得到兔。\n兔不可复得，而身为宋国笑。",
-    "translation": "北部龙山土家语（调号拼音）：\n\n1. 原文：宋人有耕者，田中有株，兔走触株，折颈而死。\n\n   译文：宋国 wótū sígētiē qiě nie lò lá hǔ xié, sígētiē wótū kǎtǐmī xié; mǎotáo xìcǎ mǒ kǎtǐmī pén liē, gó nie kōngdī kǒ liē, gó sé liē.\n\n2. 原文：因释其耒而守株，冀复得到兔。\n\n   译文：āimǒ, sígētiē qiě nie lò gó nie 耒 pō liē, kǎtǐmī sétā tì bǒ; mǎotáo zái tǐ cá.\n\n3. 原文：兔不可复得，而身为宋国笑。\n\n   译文：mǎotáo zái tǐ tā tī; qiè, 宋国 niě lò gó 嘲笑 liē.\n\n说明：“耒”保留古代农具名称；“嘲笑”采用汉语插入，置于土家语主宾动语序中。“冀”按“想再次得到”译出。以上为依据词典与语法构式形成的拟译。\n",
+    "gloss_sha256": "5485e6701965a053948a72e51eb597f2e59fbbc6aad3e2658487dfa6fe28b54f",
     "pdf": "zh-rabbit.pdf",
-    "pdf_sha256": "78e02c3ca38a29471285838163d2cc0782204b94b4e359266da80c4e3a018d55",
-    "skill_revision": "local snapshot archived in first blind run"
+    "pdf_sha256": "bbb916307e4d4f59153899cc5a7b72dcf4ffa00987136bcbc643bd4a95450318",
+    "clauses": 3,
+    "target_units": 10,
+    "format": "source + aligned pinyin / IPA / gloss"
   },
   {
     "id": "ja-jizo",
-    "source": "笠地蔵\nむかし、山のふもとの小さな村に、おじいさんとおばあさんが住んでいました。\n二人は貧しく、お正月を迎えるためのお米もありませんでした。\n大みそかの朝、おじいさんは、自分で作った五つの笠を町へ売りに行きました。\nけれども、町では誰も笠を買ってくれません。\n夕方になり、おじいさんは五つの笠を持ったまま、家へ帰ることにしました。\n帰り道、雪が降り始めました。\n道ばたには、六体のお地蔵様が並んで立っていました。\n頭にも肩にも、白い雪が積もっています。\n「こんなに雪をかぶって、さぞ寒いだろう。」\nおじいさんは、お地蔵様の頭の雪を手で払って、一体ずつ笠をかぶせてあげました。\nところが、笠は五つしかありません。\n六体目のお地蔵様には、おじいさんが自分の手ぬぐいを外して、頭に巻いてあげました。\n家に帰ると、おばあさんが尋ねました。\n「笠は売れましたか。」\nおじいさんは、お米を買えなかったことと、笠をお地蔵様にあげたことを話しました。\nおばあさんは怒らずに言いました。\n「それはよいことをしましたね。\nお地蔵様も喜んでいるでしょう。」\n二人は残っていた少しのおかゆを分けて食べ、早く寝ました。\nその夜、遠くから、何人ものかけ声と、重い物を引く音が聞こえてきました。\n音はだんだん近づき、二人の家の前で止まりました。\nおじいさんが戸を開けると、そこには大きな袋に入ったお米と、お餅と、野菜が置いてありました。\n雪道の向こうには、五つの笠と一枚の手ぬぐいをかぶった六体のお地蔵様が帰っていく姿が見えました。\n「おばあさん、お地蔵様がお米を持ってきてくださったよ。」\n二人はお地蔵様の後ろ姿に何度も頭を下げました。\nそして、いただいたお米とお餅で、うれしいお正月を迎えました。",
-    "translation": "以下采用北部龙山土家语，以调号拼音书写。\n\n(0) 原文：笠地蔵\n\n译文：dēnpǒng diè nie 地藏菩萨\n\n(1) 原文：むかし、山のふもとの小さな村に、おじいさんとおばあさんが住んでいました。\n\n译文：Dīgǎ, kūzā niě bǎtǐ lōyōu bíkuī lá bú wótū, pǎpū niē āmā ǒng bǒ.\n\n(2) 原文：二人は貧しく、お正月を迎えるためのお米もありませんでした。\n\n译文：Gèzē tái; cīkā niě líbū bé tái.\n\n(3) 原文：大みそかの朝、おじいさんは、自分で作った五つの笠を町へ売りに行きました。\n\n译文：除夕 zàogūdiē, pǎpū guándǒ rī nie dēnpǒng ōng dá hǒ liē, cěn bō hxí liē, dēnpǒng lǔ.\n\n(4) 原文：けれども、町では誰も笠を買ってくれません。\n\n译文：Dángsí, cěn wótū, lò húnī dēnpǒng pū dá.\n\n(5) 原文：夕方になり、おじいさんは五つの笠を持ったまま、家へ帰ることにしました。\n\n译文：Lǎngcāi, pǎpū dēnpǒng ōng dá hǒ bǒ mǒ, sōngkō cá.\n\n(6) 原文：帰り道、雪が降り始めました。\n\n译文：Sōngkō nie là gǎ, súsū zí hǔ.\n\n(7) 原文：道ばたには、六体のお地蔵様が並んで立っていました。\n\n译文：Làkūtǔ, 地藏菩萨像 六尊 排成一排 zūzù bǒ.\n\n(8) 原文：頭にも肩にも、白い雪が積もっています。\n\n译文：Kātā gǎ niē pétīkē gǎ, ǎsǐ nie súsū mā bǒ.\n\n(9) 原文：「こんなに雪をかぶって、さぞ寒いだろう。」\n\n译文：“Súsū gěhò dǔ bǒ, hǒnghuāi sà!”\n\n(10) 原文：おじいさんは、お地蔵様の頭の雪を手で払って、一体ずつ笠をかぶせてあげました。\n\n译文：Pǎpū jié hǒliě, 地藏菩萨像 niě kātā gǎ niě súsū hxǐ liē; 地藏菩萨像 lá bú lá bú mǒ dǒ dēnpǒng diè liē.\n\n(11) 原文：ところが、笠は五つしかありません。\n\n译文：Dángsí, dēnpǒng ōng dá láng xié.\n\n(12) 原文：六体目のお地蔵様には、おじいさんが自分の手ぬぐいを外して、頭に巻いてあげました。\n\n译文：Pǎpū guándǒ niě jiézū hí liē; 第六尊地藏菩萨像 bǒ, kātā jiézū hǒliě pē liē.\n\n(13) 原文：家に帰ると、おばあさんが尋ねました。\n\n译文：Pǎpū sōngkō zú, āmā sīliě:\n\n(14) 原文：「笠は売れましたか。」\n\n译文：“Dēnpǒng lǔ liē?”\n\n(15) 原文：おじいさんは、お米を買えなかったことと、笠をお地蔵様にあげたことを話しました。\n\n译文：Pǎpū āmā bǒ, “Ngá líbū pū tā tī; ngá 地藏菩萨像 bǒ dēnpǒng lié liē,” lǐ liē.\n\n(16) 原文：おばあさんは怒らずに言いました。\n\n译文：Āmā xiě dá, lǐ liē:\n\n(17) 原文：「それはよいことをしましたね。\n\n译文：“Ní sǎ cái rī liē.\n\n(18) 原文：お地蔵様も喜んでいるでしょう。」\n\n译文：地藏菩萨像 bé nièlīniègá i.”\n\n(19) 原文：二人は残っていた少しのおかゆを分けて食べ、早く寝ました。\n\n译文：Gèzē 剩下 nie kābiēliē lábiē pǐ mǒ gá liē, zào nié liē.\n\n(20) 原文：その夜、遠くから、何人ものかけ声と、重い物を引く音が聞こえてきました。\n\n译文：Āi lǎyé, rǐ nie lò jiě nie árē niē dù nie yě tō nie árē, hxě nie āidū liē ěnzǐ; gèzē rǔ liē.\n\n(21) 原文：音はだんだん近づき、二人の家の前で止まりました。\n\n译文：Āi árē 渐渐 zòng diú, gèzē niě cò zīgē těn liē.\n\n(22) 原文：おじいさんが戸を開けると、そこには大きな袋に入ったお米と、お餅と、野菜が置いてありました。\n\n译文：Pǎpū lāměn tóng zú, āidū, lótiē cībā wótū niě líbū niē bābā niē hācē pō bǒ.\n\n(23) 原文：雪道の向こうには、五つの笠と一枚の手ぬぐいをかぶった六体のお地蔵様が帰っていく姿が見えました。\n\n译文：Súsū là niě lábiān, 地藏菩萨像 六尊 sōngkō lā; gèzē dēnpǒng ōng dá niē jiézū lá hxī diè bǒ. Pǎpū gèzē yǐ liē.\n\n(24) 原文：「おばあさん、お地蔵様がお米を持ってきてくださったよ。」\n\n译文：“Āmā, 地藏菩萨像 ángnī bǒ líbū hǒ dí!”\n\n(25) 原文：二人はお地蔵様の後ろ姿に何度も頭を下げました。\n\n译文：Gèzē 地藏菩萨像 niě qǐnnié bō, kúkū liē, zái kúkū liē, zái kúkū liē.\n\n(26) 原文：そして、いただいたお米とお餅で、うれしいお正月を迎えました。\n\n译文：Āiliē, 地藏菩萨像 lié nie líbū niē bābā hǒliě, gèzē nièlīniègá bǒ mǒ cīkā liē.\n\n说明：“地藏菩萨像”“除夕”保留汉语名称；“排成一排”“第六尊”“剩下”“渐渐”采用汉语插入。“戴笠”的使役句与“包头巾”的受益句是依语法规则组合的拟译，其具体搭配仍需核实。\n\n",
+    "gloss_sha256": "e1039a577f029fed967cc61e68e76bb2d9f3701b08e366254a34ec2da2d1e225",
     "pdf": "ja-jizo.pdf",
-    "pdf_sha256": "e3530467e01beb80ce672677085bbe1dd3f9e9f2c01e038133ee47534cc344ae",
-    "skill_revision": "local snapshot archived in first blind run"
+    "pdf_sha256": "29273cd84c67ad902e295d4c9605b471a2190110dedc8db4094e87af18327328",
+    "clauses": 27,
+    "target_units": 42,
+    "format": "source + aligned pinyin / IPA / gloss"
   },
   {
     "id": "bo-crane",
-    "source": "བྱ་དེ་ཁྲུང་ཁྲུང་དཀར་པོ།།\nང་ལ་གཤོག་རྩལ་གཡོར་དང་།།\nཐག་རིང་རྒྱང་ལ་མི་འགྲོ།།\nལི་ཐང་བསྐོར་ནས་སླེབས་ཡོང་།།",
-    "translation": "采用北部龙山土家语，调号拼音。\n\nབྱ་དེ་ཁྲུང་ཁྲུང་དཀར་པོ།།\n\nǍsǐ nie 鹤！\n\nང་ལ་གཤོག་རྩལ་གཡོར་དང་།།\n\nNgá bǒ jiédā lú gú.\n\nཐག་རིང་རྒྱང་ལ་མི་འགྲོ།།\n\nNgá hxě nie kō bō hxí tā.\n\nལི་ཐང་བསྐོར་ནས་སླེབས་ཡོང་།།\n\n理塘 绕 liē, sōngkō.\n\n“鹤”“理塘”“绕”保留汉字；末句为绕理塘后返回。译句依词典和语法构式组合，尚未经母语者审校。\n",
+    "gloss_sha256": "c846fae32968cb3070d7b79b1eaf51d69aa6acf6827511ab54fbe679ee3415b0",
     "pdf": "bo-crane.pdf",
-    "pdf_sha256": "040dc432606212a719aed6a585b13ff2fbabfd0323ced606aff9bc3621ba934d",
-    "skill_revision": "f341ec4cef24c68ea9527d6ddbe4dd6b4e068262"
+    "pdf_sha256": "7a620f2ebb7af7ab2b3bea82e3ba85d98846a634a2dcd90e633852016516c322",
+    "clauses": 4,
+    "target_units": 4,
+    "format": "source + aligned pinyin / IPA / gloss"
   },
   {
     "id": "reverse-song",
-    "source": "meftaxcer lafdongx ongr xir civ,\nhufnix daxjiev mor serkex paf,\nlongrbair nier yerdiex rixhuax xief,\nsoxtir xiexqix sixjif heircef.",
-    "translation": "（1）meftaxcer lafdongx ongr xir civ,\n\n汉语：雷轰隆一声，响得很大。\n\n英语：Thunder booms once, very loudly.\n\n日语：雷が一度、ごろりと大きく鳴り響く。\n\n藏语：འབྲུག་སྐད་ཐེངས་གཅིག་ཧ་ཅང་ཆེན་པོར་གྲགས།\n\n（2）hufnix daxjiev mor serkex paf,\n\n汉语：大家一同赶着耙田。\n\n英语：Everyone presses on together, harrowing the fields.\n\n日语：みんな一緒に、急いで田をならす。\n\n藏语：ཚང་མས་མཉམ་དུ་བྲེལ་བ་དང་བཅས་ཞིང་ལ་སོ་མང་རྒྱག\n\n（3）longrbair nier yerdiex rixhuax xief,\n\n汉语：今年的粮食，有〔rixhuax：词义待核〕。\n\n英语：For this year's food, there is [rixhuax: meaning unresolved].\n\n日语：今年の食べ物には、〔rixhuax：意味未確認〕がある。\n\n藏语：ད་ལོའི་ཟས་རིགས་ལ་〔rixhuax：དོན་དག་ད་དུང་གསལ་པོ་མེད〕ཡོད།\n\n（4）soxtir xiexqix sixjif heircef.\n\n汉语：身上的力气，怎么使也使不完。\n\n英语：The body's strength cannot be used up.\n\n日语：体の力は、使っても使い切れない。\n\n藏语：ལུས་ཀྱི་སྟོབས་ཤུགས་སྤྱད་ཀྱང་རྫོགས་མི་ཐུབ།\n\n核对后，第二句补出了 jiev 可对应的“赶”义；dax 暂按 dà“一起”的高调／降调差异理解，因此这句仍是试译。第三句首轮所写的“已有安排”没有可靠依据，现撤回该释义。rixhuax 的整词未查到合适词条，拆成 rī“做／劳动”和 huā“话／分发”也不足以确定句义。yerdiex 在这里暂按 yě“粮食／食物”加复数标记理解。这个词义缺口仍妨碍第三句的完整翻译，不能把上述括注当作已经译完。\n",
+    "gloss_sha256": "cf8603f607dc89822c277df13247919c98a1a5a305b85eaffd46ecec46d88655",
     "pdf": "reverse-song.pdf",
-    "pdf_sha256": "e26c20a7854a852568ab22ef9800acfcf200a1213bd3368c2598f0d4ab4531df",
-    "skill_revision": "local snapshot archived in first blind run"
+    "pdf_sha256": "39cf187b3bfdcf8636a76df8459e7dd663df3e27131a3c889cd95c903eef8003",
+    "clauses": 4,
+    "target_units": 4,
+    "format": "source + aligned pinyin / IPA / gloss"
   }
 ]

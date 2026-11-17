@@ -1,0 +1,855 @@
+{
+  "clauses": [
+    {
+      "source": "A thirsty crow found a pitcher with a little water in it.",
+      "target_units": [
+        {
+          "translation": "Gǎ lá lǒng zégǎ.",
+          "tokens": [
+            {
+              "pinyin": "Gǎ",
+              "ipa": "ka²¹",
+              "gloss": "crow",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w688",
+                "attestation_id": "stedt-rn-453559",
+                "locator": "STEDT rn 453559 · 原文定位 1.3",
+                "original_surface": "Gǎ",
+                "original_ipa": "ka²¹"
+              }
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la³⁵",
+              "gloss": "one",
+              "source": {
+                "source_id": "stedt-7fd6565400",
+                "entry_id": "stedt-rn-386074",
+                "attestation_id": "stedt-rn-226464",
+                "locator": "STEDT rn 226464 · 原文定位 911.38",
+                "original_surface": "lá",
+                "original_ipa": "la³⁵"
+              }
+            },
+            {
+              "pinyin": "lǒng",
+              "ipa": "lɔŋ²¹",
+              "gloss": "individual",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w1391",
+                "attestation_id": "stedt-rn-456932",
+                "locator": "STEDT rn 456932 · 原文定位 未标明",
+                "original_surface": "lǒng",
+                "original_ipa": "lɔŋ²¹"
+              }
+            },
+            {
+              "pinyin": "zégǎ",
+              "ipa": "tsɤ²⁴ka²¹",
+              "gloss": "thirsty",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w5760",
+                "attestation_id": "stedt-rn-454800",
+                "locator": "STEDT rn 454800 · 原文定位 6.1",
+                "original_surface": "zégǎ",
+                "original_ipa": "tsɤ²⁴ka²¹"
+              }
+            }
+          ]
+        },
+        {
+          "translation": "guán lá lǒng nì-liē.",
+          "tokens": [
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "jar",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w791",
+                "attestation_id": "stedt-rn-456261",
+                "locator": "STEDT rn 456261 · 原文定位 未标明",
+                "original_surface": "guán",
+                "original_ipa": "kuɛn²⁴"
+              }
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la³⁵",
+              "gloss": "one",
+              "source": {
+                "source_id": "stedt-7fd6565400",
+                "entry_id": "stedt-rn-386074",
+                "attestation_id": "stedt-rn-226464",
+                "locator": "STEDT rn 226464 · 原文定位 911.38",
+                "original_surface": "lá",
+                "original_ipa": "la³⁵"
+              }
+            },
+            {
+              "pinyin": "lǒng",
+              "ipa": "lɔŋ²¹",
+              "gloss": "individual",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w1391",
+                "attestation_id": "stedt-rn-456932",
+                "locator": "STEDT rn 456932 · 原文定位 未标明",
+                "original_surface": "lǒng",
+                "original_ipa": "lɔŋ²¹"
+              }
+            },
+            {
+              "pinyin": "nì-liē",
+              "ipa": "ȵi⁵³-liɛ⁵⁵",
+              "gloss": "find-PFV",
+              "source": [
+                {
+                  "source_id": "stedt-610ab69a37",
+                  "entry_id": "stedt-rn-430963",
+                  "attestation_id": "stedt-rn-430963",
+                  "locator": "STEDT rn 430963 · 原文定位 1744.49",
+                  "original_surface": "nì",
+                  "original_ipa": "ȵi⁵³"
+                },
+                {
+                  "source_id": "frozen-skill-reference",
+                  "entry_id": "",
+                  "attestation_id": "",
+                  "locator": "aspect-modality.md; event-linking.md, B06:69 ex86",
+                  "original_surface": "liē",
+                  "original_ipa": "liɛ⁵⁵"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "translation": "guán wótū cě lá xié.",
+          "tokens": [
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "jar",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w791",
+                "attestation_id": "stedt-rn-456261",
+                "locator": "STEDT rn 456261 · 原文定位 未标明",
+                "original_surface": "guán",
+                "original_ipa": "kuɛn²⁴"
+              }
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "inside",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "direction-suffixes.md, rn455022",
+                "original_surface": "wótū",
+                "original_ipa": "wɔ²⁴tʰu⁵⁵"
+              }
+            },
+            {
+              "pinyin": "cě",
+              "ipa": "tsʰɤ²¹",
+              "gloss": "water",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w395",
+                "attestation_id": "stedt-rn-453517",
+                "locator": "STEDT rn 453517 · 原文定位 1.2",
+                "original_surface": "cě",
+                "original_ipa": "tsʰɤ²¹"
+              }
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "a.little",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "stedt-rn-455255",
+                "attestation_id": "stedt-rn-455255",
+                "locator": "STEDT rn 455255 · 原文定位 7.5",
+                "original_surface": "lá",
+                "original_ipa": "la²⁴"
+              }
+            },
+            {
+              "pinyin": "xié",
+              "ipa": "ɕie²⁴",
+              "gloss": "exist",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "clause-patterns.md B06:84 ex62",
+                "original_surface": "xié",
+                "original_ipa": "ɕie²⁴"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "The water was too low for its beak to reach.",
+      "target_units": [
+        {
+          "translation": "Cě dī-xǐtái.",
+          "tokens": [
+            {
+              "pinyin": "Cě",
+              "ipa": "tsʰɤ²¹",
+              "gloss": "water",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w395",
+                "attestation_id": "stedt-rn-453517",
+                "locator": "STEDT rn 453517 · 原文定位 1.2",
+                "original_surface": "Cě",
+                "original_ipa": "tsʰɤ²¹"
+              }
+            },
+            {
+              "pinyin": "dī-xǐtái",
+              "ipa": "ti⁵⁵-ɕi²¹tʰai²⁴",
+              "gloss": "low-very",
+              "source": [
+                {
+                  "source_id": "brassett-2004",
+                  "entry_id": "w575",
+                  "attestation_id": "w575",
+                  "locator": "词条 575",
+                  "original_surface": "dī",
+                  "original_ipa": "ti⁵⁵"
+                },
+                {
+                  "source_id": "brassett-2006",
+                  "entry_id": "stedt-rn-455076",
+                  "attestation_id": "stedt-rn-455076",
+                  "locator": "STEDT rn 455076 · 原文定位 7.1",
+                  "original_surface": "xǐtái",
+                  "original_ipa": "ɕi²¹tʰai²⁴"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "translation": "gó niě záqī hǒliě cě būbǔ-tā-tī.",
+          "tokens": [
+            {
+              "pinyin": "gó",
+              "ipa": "kuɔ²⁴",
+              "gloss": "it",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "clause-patterns.md B06:83 ex59",
+                "original_surface": "gó",
+                "original_ipa": "kuɔ²⁴"
+              }
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "clause-patterns.md B06:56 §4.3.6",
+                "original_surface": "niě",
+                "original_ipa": "ɲie²¹"
+              }
+            },
+            {
+              "pinyin": "záqī",
+              "ipa": "tsa²⁴tɕʰi⁵⁵",
+              "gloss": "mouth",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w2621",
+                "attestation_id": "stedt-rn-453769",
+                "locator": "STEDT rn 453769 · 原文定位 2.1",
+                "original_surface": "záqī",
+                "original_ipa": "tsa²⁴tɕʰi⁵⁵"
+              }
+            },
+            {
+              "pinyin": "hǒliě",
+              "ipa": "xuɔ²¹lie²¹",
+              "gloss": "INS",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "clause-patterns.md B06:154 ex37",
+                "original_surface": "hǒliě",
+                "original_ipa": "xuɔ²¹lie²¹"
+              }
+            },
+            {
+              "pinyin": "cě",
+              "ipa": "tsʰɤ²¹",
+              "gloss": "water",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w395",
+                "attestation_id": "stedt-rn-453517",
+                "locator": "STEDT rn 453517 · 原文定位 1.2",
+                "original_surface": "cě",
+                "original_ipa": "tsʰɤ²¹"
+              }
+            },
+            {
+              "pinyin": "būbǔ-tā-tī",
+              "ipa": "pu⁵⁵pu²¹-tʰa⁵⁵-tʰi⁵⁵",
+              "gloss": "touch-NEG-can",
+              "source": [
+                {
+                  "source_id": "brassett-2006",
+                  "entry_id": "w326",
+                  "attestation_id": "stedt-rn-453779",
+                  "locator": "STEDT rn 453779 · 原文定位 2.2",
+                  "original_surface": "būbǔ",
+                  "original_ipa": "pu⁵⁵pu²¹"
+                },
+                {
+                  "source_id": "frozen-skill-reference",
+                  "entry_id": "",
+                  "attestation_id": "",
+                  "locator": "aspect-modality.md B06:127–128",
+                  "original_surface": "tā",
+                  "original_ipa": "tʰa⁵⁵"
+                },
+                {
+                  "source_id": "frozen-skill-reference",
+                  "entry_id": "",
+                  "attestation_id": "",
+                  "locator": "aspect-modality.md B06:127–128",
+                  "original_surface": "tī",
+                  "original_ipa": "tʰi⁵⁵"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "It tried to tip the pitcher, but it was too heavy.",
+      "target_units": [
+        {
+          "translation": "Gó guán 试着 duán.",
+          "tokens": [
+            {
+              "pinyin": "Gó",
+              "ipa": "kuɔ²⁴",
+              "gloss": "it",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "clause-patterns.md B06:83 ex59",
+                "original_surface": "Gó",
+                "original_ipa": "kuɔ²⁴"
+              }
+            },
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "jar",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w791",
+                "attestation_id": "stedt-rn-456261",
+                "locator": "STEDT rn 456261 · 原文定位 未标明",
+                "original_surface": "guán",
+                "original_ipa": "kuɛn²⁴"
+              }
+            },
+            {
+              "pinyin": "试着",
+              "ipa": null,
+              "gloss": "try",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "paraphrase-and-borrowing.md; not an attested Tujia form",
+                "original_surface": "试着",
+                "original_ipa": ""
+              }
+            },
+            {
+              "pinyin": "duán",
+              "ipa": "tuɛn²⁴",
+              "gloss": "turn.over",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w647",
+                "attestation_id": "stedt-rn-453784",
+                "locator": "STEDT rn 453784 · 原文定位 2.2",
+                "original_surface": "duán",
+                "original_ipa": "tuɛn²⁴"
+              }
+            }
+          ]
+        },
+        {
+          "translation": "qiè guán dùzǐ-xǐtái.",
+          "tokens": [
+            {
+              "pinyin": "qiè",
+              "ipa": "tɕʰiɛ⁵¹",
+              "gloss": "CONN",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "stedt-rn-455276",
+                "attestation_id": "stedt-rn-455276",
+                "locator": "STEDT rn 455276 · 原文定位 7.5",
+                "original_surface": "qiè",
+                "original_ipa": "tɕʰiɛ⁵¹"
+              }
+            },
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "jar",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w791",
+                "attestation_id": "stedt-rn-456261",
+                "locator": "STEDT rn 456261 · 原文定位 未标明",
+                "original_surface": "guán",
+                "original_ipa": "kuɛn²⁴"
+              }
+            },
+            {
+              "pinyin": "dùzǐ-xǐtái",
+              "ipa": "tu⁵¹tsɨ²¹-ɕi²¹tʰai²⁴",
+              "gloss": "heavy-too",
+              "source": [
+                {
+                  "source_id": "brassett-2006",
+                  "entry_id": "stedt-rn-454872",
+                  "attestation_id": "stedt-rn-454872",
+                  "locator": "STEDT rn 454872 · 原文定位 6.3",
+                  "original_surface": "dùzǐ",
+                  "original_ipa": "tu⁵¹tsɨ²¹"
+                },
+                {
+                  "source_id": "brassett-2006",
+                  "entry_id": "stedt-rn-455076",
+                  "attestation_id": "stedt-rn-455076",
+                  "locator": "STEDT rn 455076 · 原文定位 7.1",
+                  "original_surface": "xǐtái",
+                  "original_ipa": "ɕi²¹tʰai²⁴"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "translation": "gó guán duán-hī-cē.",
+          "tokens": [
+            {
+              "pinyin": "gó",
+              "ipa": "kuɔ²⁴",
+              "gloss": "it",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "clause-patterns.md B06:83 ex59",
+                "original_surface": "gó",
+                "original_ipa": "kuɔ²⁴"
+              }
+            },
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "jar",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w791",
+                "attestation_id": "stedt-rn-456261",
+                "locator": "STEDT rn 456261 · 原文定位 未标明",
+                "original_surface": "guán",
+                "original_ipa": "kuɛn²⁴"
+              }
+            },
+            {
+              "pinyin": "duán-hī-cē",
+              "ipa": "tuɛn²⁴-xɨ⁵⁵-tsʰɤ⁵⁵",
+              "gloss": "turn.over-NEG-have.strength",
+              "source": [
+                {
+                  "source_id": "brassett-2006",
+                  "entry_id": "w647",
+                  "attestation_id": "stedt-rn-453784",
+                  "locator": "STEDT rn 453784 · 原文定位 2.2",
+                  "original_surface": "duán",
+                  "original_ipa": "tuɛn²⁴"
+                },
+                {
+                  "source_id": "frozen-skill-reference",
+                  "entry_id": "",
+                  "attestation_id": "",
+                  "locator": "aspect-modality.md B06:127–129",
+                  "original_surface": "hī",
+                  "original_ipa": "xɨ⁵⁵"
+                },
+                {
+                  "source_id": "frozen-skill-reference",
+                  "entry_id": "",
+                  "attestation_id": "",
+                  "locator": "aspect-modality.md B06:127–129",
+                  "original_surface": "cē",
+                  "original_ipa": "tsʰɤ⁵⁵"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "Then the crow dropped small stones into it, one by one.",
+      "target_units": [
+        {
+          "translation": "Āiliē gǎ ǎbǎ bíkuī lá bú lá bú mǒ guán wótū bō lá-liē.",
+          "tokens": [
+            {
+              "pinyin": "Āiliē",
+              "ipa": "ai⁵⁵lie⁵⁵",
+              "gloss": "CONN",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "event-linking.md B06:69 ex86",
+                "original_surface": "Āiliē",
+                "original_ipa": "ai⁵⁵lie⁵⁵"
+              }
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "crow",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w688",
+                "attestation_id": "stedt-rn-453559",
+                "locator": "STEDT rn 453559 · 原文定位 1.3",
+                "original_surface": "gǎ",
+                "original_ipa": "ka²¹"
+              }
+            },
+            {
+              "pinyin": "ǎbǎ",
+              "ipa": "a²¹pa²¹",
+              "gloss": "stone",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w91",
+                "attestation_id": "stedt-rn-453497",
+                "locator": "STEDT rn 453497 · 原文定位 1.2",
+                "original_surface": "ǎbǎ",
+                "original_ipa": "a²¹pa²¹"
+              }
+            },
+            {
+              "pinyin": "bíkuī",
+              "ipa": "pi²⁴kʰuei⁵⁵",
+              "gloss": "small",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w277",
+                "attestation_id": "stedt-rn-454852",
+                "locator": "STEDT rn 454852 · 原文定位 6.3",
+                "original_surface": "bíkuī",
+                "original_ipa": "pi²⁴kʰuei⁵⁵"
+              }
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la³⁵",
+              "gloss": "one",
+              "source": {
+                "source_id": "stedt-7fd6565400",
+                "entry_id": "stedt-rn-386074",
+                "attestation_id": "stedt-rn-226464",
+                "locator": "STEDT rn 226464 · 原文定位 911.38",
+                "original_surface": "lá",
+                "original_ipa": "la³⁵"
+              }
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "piece",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w317",
+                "attestation_id": "stedt-rn-455728",
+                "locator": "STEDT rn 455728 · 原文定位 未标明",
+                "original_surface": "bú",
+                "original_ipa": "pu²⁴"
+              }
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la³⁵",
+              "gloss": "one",
+              "source": {
+                "source_id": "stedt-7fd6565400",
+                "entry_id": "stedt-rn-386074",
+                "attestation_id": "stedt-rn-226464",
+                "locator": "STEDT rn 226464 · 原文定位 911.38",
+                "original_surface": "lá",
+                "original_ipa": "la³⁵"
+              }
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "piece",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w317",
+                "attestation_id": "stedt-rn-455728",
+                "locator": "STEDT rn 455728 · 原文定位 未标明",
+                "original_surface": "bú",
+                "original_ipa": "pu²⁴"
+              }
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "event-linking.md B06:37 ex12",
+                "original_surface": "mǒ",
+                "original_ipa": "mɔ²¹"
+              }
+            },
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "jar",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w791",
+                "attestation_id": "stedt-rn-456261",
+                "locator": "STEDT rn 456261 · 原文定位 未标明",
+                "original_surface": "guán",
+                "original_ipa": "kuɛn²⁴"
+              }
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "inside",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "direction-suffixes.md, rn455022",
+                "original_surface": "wótū",
+                "original_ipa": "wɔ²⁴tʰu⁵⁵"
+              }
+            },
+            {
+              "pinyin": "bō",
+              "ipa": "pɔ⁵⁵",
+              "gloss": "ALL",
+              "source": {
+                "source_id": "frozen-skill-reference",
+                "entry_id": "",
+                "attestation_id": "",
+                "locator": "clause-patterns.md B06:100 ex64",
+                "original_surface": "bō",
+                "original_ipa": "pɔ⁵⁵"
+              }
+            },
+            {
+              "pinyin": "lá-liē",
+              "ipa": "la²⁴-liɛ⁵⁵",
+              "gloss": "throw-PFV",
+              "source": [
+                {
+                  "source_id": "brassett-2006",
+                  "entry_id": "w1217",
+                  "attestation_id": "stedt-rn-453801",
+                  "locator": "STEDT rn 453801 · 原文定位 2.2",
+                  "original_surface": "lá",
+                  "original_ipa": "la²⁴"
+                },
+                {
+                  "source_id": "frozen-skill-reference",
+                  "entry_id": "",
+                  "attestation_id": "",
+                  "locator": "aspect-modality.md; event-linking.md, B06:69 ex86",
+                  "original_surface": "liē",
+                  "original_ipa": "liɛ⁵⁵"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "The water rose, and at last the crow could drink.",
+      "target_units": [
+        {
+          "translation": "Cě óng-liē.",
+          "tokens": [
+            {
+              "pinyin": "Cě",
+              "ipa": "tsʰɤ²¹",
+              "gloss": "water",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w395",
+                "attestation_id": "stedt-rn-453517",
+                "locator": "STEDT rn 453517 · 原文定位 1.2",
+                "original_surface": "Cě",
+                "original_ipa": "tsʰɤ²¹"
+              }
+            },
+            {
+              "pinyin": "óng-liē",
+              "ipa": "ɔŋ²⁴-liɛ⁵⁵",
+              "gloss": "rise-PFV",
+              "source": [
+                {
+                  "source_id": "brassett-2006",
+                  "entry_id": "stedt-rn-454366",
+                  "attestation_id": "stedt-rn-454366",
+                  "locator": "STEDT rn 454366 · 原文定位 4.3",
+                  "original_surface": "óng",
+                  "original_ipa": "ɔŋ²⁴"
+                },
+                {
+                  "source_id": "frozen-skill-reference",
+                  "entry_id": "",
+                  "attestation_id": "",
+                  "locator": "aspect-modality.md; event-linking.md, B06:69 ex86",
+                  "original_surface": "liē",
+                  "original_ipa": "liɛ⁵⁵"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "translation": "zuíhóu gǎ cě hǔ-dēxǐ.",
+          "tokens": [
+            {
+              "pinyin": "zuíhóu",
+              "ipa": "tsuei²⁴xou²⁴",
+              "gloss": "finally",
+              "source": {
+                "source_id": "brassett-2004",
+                "entry_id": "w2756",
+                "attestation_id": "stedt-rn-458435",
+                "locator": "STEDT rn 458435 · 原文定位 未标明",
+                "original_surface": "zuíhóu",
+                "original_ipa": "tsuei²⁴xou²⁴"
+              }
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "crow",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w688",
+                "attestation_id": "stedt-rn-453559",
+                "locator": "STEDT rn 453559 · 原文定位 1.3",
+                "original_surface": "gǎ",
+                "original_ipa": "ka²¹"
+              }
+            },
+            {
+              "pinyin": "cě",
+              "ipa": "tsʰɤ²¹",
+              "gloss": "water",
+              "source": {
+                "source_id": "brassett-2006",
+                "entry_id": "w395",
+                "attestation_id": "stedt-rn-453517",
+                "locator": "STEDT rn 453517 · 原文定位 1.2",
+                "original_surface": "cě",
+                "original_ipa": "tsʰɤ²¹"
+              }
+            },
+            {
+              "pinyin": "hǔ-dēxǐ",
+              "ipa": "xu²¹-tɤ⁵⁵ɕi²¹",
+              "gloss": "drink-can",
+              "source": [
+                {
+                  "source_id": "stedt-610ab69a37",
+                  "entry_id": "stedt-rn-454324",
+                  "attestation_id": "stedt-rn-413634",
+                  "locator": "STEDT rn 413634 · 原文定位 1370.49",
+                  "original_surface": "hǔ",
+                  "original_ipa": "xu²¹"
+                },
+                {
+                  "source_id": "frozen-skill-reference",
+                  "entry_id": "",
+                  "attestation_id": "",
+                  "locator": "aspect-modality.md B06:127–128",
+                  "original_surface": "dē",
+                  "original_ipa": "tɤ⁵⁵"
+                },
+                {
+                  "source_id": "frozen-skill-reference",
+                  "entry_id": "",
+                  "attestation_id": "",
+                  "locator": "aspect-modality.md B06:127–128",
+                  "original_surface": "xǐ",
+                  "original_ipa": "ɕi²¹"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "既有词汇和语义选择全部保留；仅规范词界、释义标签与独立主句分组。每条完整原文仅出现一次。",
+    "“水罐”沿用 guán “jar”，“喙”沿用 záqī “mouth”；第二句保留“水很低，用嘴不能碰到水”的改述；第三句保留显化的体力不能义。",
+    "试着为原译汉语插入，IPA为null；其现有位置沿用原译，不视为已有整句见证。其余IPA逐项复用原记录，表示来源基记，未推算语流变调。",
+    "能愿 dēxǐ 内部连写，gloss为can；tā与hī单列否定词素NEG，分别和tī can、cē have.strength区分。xǐtái按整体程度成分标very或too。",
+    "lǒng释为individual、bú释为piece，均为按本句所指给出的量词词义；未添加表外量词缩写。",
+    "原记录中数词lá采用所选见证/la³⁵/，数量a.little及动词throw采用各自见证/la²⁴/；保留其来源差异，不在gloss阶段改译或统一音值。"
+  ],
+  "abbreviations": {
+    "PFV": "perfective",
+    "GEN": "genitive",
+    "INS": "instrumental",
+    "NEG": "negation",
+    "CONN": "connective",
+    "ADVZ": "adverbializer",
+    "ALL": "allative"
+  }
+}

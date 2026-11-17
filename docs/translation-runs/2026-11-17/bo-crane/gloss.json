@@ -1,0 +1,508 @@
+{
+  "clauses": [
+    {
+      "source": "བྱ་དེ་ཁྲུང་ཁྲུང་དཀར་པོ།།",
+      "target_units": [
+        {
+          "translation": "Ǎsǐ nie 鹤！",
+          "tokens": [
+            {
+              "pinyin": "Ǎsǐ",
+              "ipa": "a²¹sɨ²¹",
+              "gloss": "དཀར་པོ་",
+              "source": {
+                "entry_id": "w2969",
+                "attestation_id": "stedt-rn-454844",
+                "source": "stedt-39f4cd9a6b",
+                "term": "ǎsǐ",
+                "zh": "白",
+                "en": "white",
+                "pos": "be v.",
+                "dialect": "北部",
+                "locator": "STEDT rn 454844 · 原文定位 6.3",
+                "source_ref": "6.3",
+                "notations": {
+                  "accent": [
+                    "ǎsǐ"
+                  ],
+                  "ipa": [
+                    "a²¹sɨ²¹"
+                  ]
+                },
+                "source_term": "a³si³",
+                "term_notation": "accent",
+                "accent_provenance": [
+                  {
+                    "text": "ǎsǐ",
+                    "method": "derived",
+                    "profile": "brassett-to-ye"
+                  }
+                ],
+                "source_metadata": {
+                  "canonical_id": "brassett-2006",
+                  "dialect": "未标明",
+                  "locations": [],
+                  "title": "STEDT · Brassett 06 Tujia"
+                }
+              }
+            },
+            {
+              "pinyin": "nie",
+              "ipa": "ɲie",
+              "gloss": "LNK",
+              "source": {
+                "reference": "clause-patterns.md#nominalization",
+                "citation": "Feng 2025:4 ex.8; A+nie+N，拟译连接成分不标固定调"
+              }
+            },
+            {
+              "pinyin": "鹤",
+              "ipa": null,
+              "gloss": "ཁྲུང་ཁྲུང་",
+              "source": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ང་ལ་གཤོག་རྩལ་གཡོར་དང་།།",
+      "target_units": [
+        {
+          "translation": "Ngá bǒ jiédā lú gú.",
+          "tokens": [
+            {
+              "pinyin": "Ngá",
+              "ipa": "ŋa²⁴",
+              "gloss": "ང་",
+              "source": {
+                "entry_id": "w1585",
+                "attestation_id": "stedt-rn-457139",
+                "source": "stedt-07898ef938",
+                "term": "ngá",
+                "zh": "我",
+                "en": "I, me",
+                "pos": "pron.",
+                "dialect": "北部",
+                "locator": "STEDT rn 457139 · 原文定位 未标明",
+                "source_ref": "",
+                "notations": {
+                  "accent": [
+                    "ngá"
+                  ],
+                  "ipa": [
+                    "ŋa²⁴"
+                  ]
+                },
+                "source_term": "nga2",
+                "term_notation": "accent",
+                "accent_provenance": [
+                  {
+                    "text": "ngá",
+                    "method": "derived",
+                    "profile": "brassett-to-ye"
+                  }
+                ],
+                "source_metadata": {
+                  "canonical_id": "brassett-2004",
+                  "dialect": "未标明",
+                  "locations": [],
+                  "title": "STEDT · Brassett 04 Tujia"
+                }
+              }
+            },
+            {
+              "pinyin": "bǒ",
+              "ipa": "pɔ²¹",
+              "gloss": "DAT",
+              "source": {
+                "reference": "clause-patterns.md#case-frames",
+                "citation": "B06:102 ex.75，R bǒ O V"
+              }
+            },
+            {
+              "pinyin": "jiédā",
+              "ipa": "tɕiɛ²⁴ta⁵⁵",
+              "gloss": "གཤོག་པ་",
+              "source": {
+                "entry_id": "w1024",
+                "attestation_id": "stedt-rn-453564",
+                "source": "stedt-39f4cd9a6b",
+                "term": "jiédā",
+                "zh": "翅膀",
+                "en": "wing",
+                "pos": "",
+                "dialect": "北部",
+                "locator": "STEDT rn 453564 · 原文定位 1.3",
+                "source_ref": "1.3",
+                "notations": {
+                  "accent": [
+                    "jiédā"
+                  ],
+                  "ipa": [
+                    "tɕiɛ²⁴ta⁵⁵"
+                  ]
+                },
+                "source_term": "jie²da¹",
+                "term_notation": "accent",
+                "accent_provenance": [
+                  {
+                    "text": "jiédā",
+                    "method": "derived",
+                    "profile": "brassett-to-ye"
+                  }
+                ],
+                "source_metadata": {
+                  "canonical_id": "brassett-2006",
+                  "dialect": "未标明",
+                  "locations": [],
+                  "title": "STEDT · Brassett 06 Tujia"
+                }
+              }
+            },
+            {
+              "pinyin": "lú",
+              "ipa": "lu²⁴",
+              "gloss": "གཡར་",
+              "source": {
+                "entry_id": "w1410",
+                "attestation_id": "stedt-rn-456952",
+                "source": "stedt-07898ef938",
+                "term": "lú",
+                "zh": "借",
+                "en": "borrow/lend",
+                "pos": "vt.",
+                "dialect": "北部",
+                "locator": "STEDT rn 456952 · 原文定位 未标明",
+                "source_ref": "",
+                "notations": {
+                  "accent": [
+                    "lú"
+                  ],
+                  "ipa": [
+                    "lu²⁴"
+                  ]
+                },
+                "source_term": "lu2",
+                "term_notation": "accent",
+                "accent_provenance": [
+                  {
+                    "text": "lú",
+                    "method": "derived",
+                    "profile": "brassett-to-ye"
+                  }
+                ],
+                "source_metadata": {
+                  "canonical_id": "brassett-2004",
+                  "dialect": "未标明",
+                  "locations": [],
+                  "title": "STEDT · Brassett 04 Tujia"
+                }
+              }
+            },
+            {
+              "pinyin": "gú",
+              "ipa": "ku²⁴",
+              "gloss": "DIR.IMM",
+              "source": {
+                "reference": "directives.md#gu",
+                "citation": "B06:135–137 ex.190–193、200–201，请求开始活动"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ཐག་རིང་རྒྱང་ལ་མི་འགྲོ།།",
+      "target_units": [
+        {
+          "translation": "Ngá hxě nie kō bō hxí tā.",
+          "tokens": [
+            {
+              "pinyin": "Ngá",
+              "ipa": "ŋa²⁴",
+              "gloss": "ང་",
+              "source": {
+                "entry_id": "w1585",
+                "attestation_id": "stedt-rn-457139",
+                "source": "stedt-07898ef938",
+                "term": "ngá",
+                "zh": "我",
+                "en": "I, me",
+                "pos": "pron.",
+                "dialect": "北部",
+                "locator": "STEDT rn 457139 · 原文定位 未标明",
+                "source_ref": "",
+                "notations": {
+                  "accent": [
+                    "ngá"
+                  ],
+                  "ipa": [
+                    "ŋa²⁴"
+                  ]
+                },
+                "source_term": "nga2",
+                "term_notation": "accent",
+                "accent_provenance": [
+                  {
+                    "text": "ngá",
+                    "method": "derived",
+                    "profile": "brassett-to-ye"
+                  }
+                ],
+                "source_metadata": {
+                  "canonical_id": "brassett-2004",
+                  "dialect": "未标明",
+                  "locations": [],
+                  "title": "STEDT · Brassett 04 Tujia"
+                }
+              }
+            },
+            {
+              "pinyin": "hxě",
+              "ipa": "ɣɤ²¹",
+              "gloss": "ཐག་རིང་",
+              "source": {
+                "entry_id": "w3773",
+                "attestation_id": "stedt-rn-456427",
+                "source": "stedt-07898ef938",
+                "term": "hxě",
+                "zh": "长/远",
+                "en": "long, far",
+                "pos": "vi.",
+                "dialect": "北部",
+                "locator": "STEDT rn 456427 · 原文定位 未标明",
+                "source_ref": "",
+                "notations": {
+                  "accent": [
+                    "hxě"
+                  ],
+                  "ipa": [
+                    "ɣɤ²¹"
+                  ]
+                },
+                "source_term": "hhe3",
+                "term_notation": "accent",
+                "accent_provenance": [
+                  {
+                    "text": "hxě",
+                    "method": "derived",
+                    "profile": "brassett-to-ye"
+                  }
+                ],
+                "source_metadata": {
+                  "canonical_id": "brassett-2004",
+                  "dialect": "未标明",
+                  "locations": [],
+                  "title": "STEDT · Brassett 04 Tujia"
+                }
+              }
+            },
+            {
+              "pinyin": "nie",
+              "ipa": "ɲie",
+              "gloss": "LNK",
+              "source": {
+                "reference": "clause-patterns.md#nominalization",
+                "citation": "Feng 2025:4 ex.8; A+nie+N，拟译连接成分不标固定调"
+              }
+            },
+            {
+              "pinyin": "kō",
+              "ipa": "kʰuɔ⁵⁵",
+              "gloss": "ས་ཆ་",
+              "source": {
+                "entry_id": "w1199",
+                "attestation_id": "stedt-rn-454661",
+                "source": "stedt-39f4cd9a6b",
+                "term": "kō",
+                "zh": "地方",
+                "en": "place",
+                "pos": "",
+                "dialect": "北部",
+                "locator": "STEDT rn 454661 · 原文定位 5.1",
+                "source_ref": "5.1",
+                "notations": {
+                  "accent": [
+                    "kō"
+                  ],
+                  "ipa": [
+                    "kʰuɔ⁵⁵"
+                  ]
+                },
+                "source_term": "kuo¹",
+                "term_notation": "accent",
+                "accent_provenance": [
+                  {
+                    "text": "kō",
+                    "method": "derived",
+                    "profile": "brassett-to-ye"
+                  }
+                ],
+                "source_metadata": {
+                  "canonical_id": "brassett-2006",
+                  "dialect": "未标明",
+                  "locations": [],
+                  "title": "STEDT · Brassett 06 Tujia"
+                }
+              }
+            },
+            {
+              "pinyin": "bō",
+              "ipa": "pɔ⁵⁵",
+              "gloss": "ALL",
+              "source": {
+                "reference": "clause-patterns.md#case-frames",
+                "citation": "B06:100 ex.64，L bō 移动动词"
+              }
+            },
+            {
+              "pinyin": "hxí",
+              "ipa": "ɣɨ²⁴",
+              "gloss": "འགྲོ་",
+              "source": {
+                "entry_id": "w949",
+                "attestation_id": "stedt-rn-454319",
+                "source": "stedt-39f4cd9a6b",
+                "term": "hxí",
+                "zh": "走",
+                "en": "go",
+                "pos": "v",
+                "dialect": "北部",
+                "locator": "STEDT rn 454319 · 原文定位 4.3",
+                "source_ref": "4.3",
+                "notations": {
+                  "accent": [
+                    "hxí"
+                  ],
+                  "ipa": [
+                    "ɣɨ²⁴"
+                  ]
+                },
+                "source_term": "hhi²",
+                "term_notation": "accent",
+                "accent_provenance": [
+                  {
+                    "text": "hxí",
+                    "method": "derived",
+                    "profile": "brassett-to-ye"
+                  }
+                ],
+                "source_metadata": {
+                  "canonical_id": "brassett-2006",
+                  "dialect": "未标明",
+                  "locations": [],
+                  "title": "STEDT · Brassett 06 Tujia"
+                }
+              }
+            },
+            {
+              "pinyin": "tā",
+              "ipa": "tʰa⁵⁵",
+              "gloss": "NEG",
+              "source": {
+                "reference": "clause-patterns.md#negation",
+                "citation": "B06:132 ex.172，意愿／选择否定；在谓词后"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ལི་ཐང་བསྐོར་ནས་སླེབས་ཡོང་།།",
+      "target_units": [
+        {
+          "translation": "理塘 绕-liē, sōngkō.",
+          "tokens": [
+            {
+              "pinyin": "理塘",
+              "ipa": null,
+              "gloss": "ལི་ཐང་",
+              "source": null
+            },
+            {
+              "pinyin": "绕-liē",
+              "ipa": "-lie⁵⁵",
+              "gloss": "བསྐོར་-PFV",
+              "source": {
+                "type": "Chinese stem plus attested Tujia suffix",
+                "components": [
+                  {
+                    "pinyin": "绕",
+                    "ipa": null,
+                    "gloss": "བསྐོར་",
+                    "source": null
+                  },
+                  {
+                    "pinyin": "liē",
+                    "ipa": "lie⁵⁵",
+                    "gloss": "PFV",
+                    "source": {
+                      "reference": "event-linking.md#lie-topic-chain",
+                      "citation": "B06:119 ex.76、154 ex.37，先行事件整体化；步骤可尚未执行"
+                    }
+                  }
+                ],
+                "notation_note": "汉语词根“绕”的IPA为空（null），所以复合词IPA连字符前留空；后缀采用既有lie⁵⁵。"
+              }
+            },
+            {
+              "pinyin": "sōngkō",
+              "ipa": "sɔŋ⁵⁵kʰuɔ⁵⁵",
+              "gloss": "ཕྱིར་ལོག་",
+              "source": {
+                "entry_id": "w2144",
+                "attestation_id": "stedt-rn-457777",
+                "source": "stedt-07898ef938",
+                "term": "sōngkō",
+                "zh": "回来",
+                "en": "return",
+                "pos": "vi.",
+                "dialect": "北部",
+                "locator": "STEDT rn 457777 · 原文定位 未标明",
+                "source_ref": "",
+                "notations": {
+                  "accent": [
+                    "sōngkō"
+                  ],
+                  "ipa": [
+                    "sɔŋ⁵⁵kʰuɔ⁵⁵"
+                  ]
+                },
+                "source_term": "song1kuo1",
+                "term_notation": "accent",
+                "accent_provenance": [
+                  {
+                    "text": "sōngkō",
+                    "method": "derived",
+                    "profile": "brassett-to-ye"
+                  }
+                ],
+                "source_metadata": {
+                  "canonical_id": "brassett-2004",
+                  "dialect": "未标明",
+                  "locations": [],
+                  "title": "STEDT · Brassett 04 Tujia"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "“鹤”“理塘”“绕”保留汉字；其汉语词根的IPA留空，土家语后缀保留已具备的记音。",
+    "实词逐词释义用藏语；语法成分采用固定英文标签。IPA沿用来源基记，整句连读未核。"
+  ],
+  "abbreviations": {
+    "LNK": "linker；修饰连接",
+    "DAT": "dative；与格",
+    "DIR.IMM": "directional.immediate；方向＋即时性",
+    "ALL": "allative；向格",
+    "NEG": "negation；否定",
+    "PFV": "perfective；完整体"
+  }
+}

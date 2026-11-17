@@ -1,0 +1,3554 @@
+{
+  "clauses": [
+    {
+      "source": "笠地蔵",
+      "target_units": [
+        {
+          "translation": "dēnpǒng diè-nie 地藏菩萨",
+          "tokens": [
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "笠",
+              "source": {
+                "entry_id": "w572",
+                "attestation_id": "stedt-rn-454578",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454578 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "diè-nie",
+              "ipa": "tiɛ⁵¹-〔読音未確認〕",
+              "gloss": "かぶる-LNK",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w615",
+                    "attestation_id": "stedt-rn-454579",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454579 · 原文定位 4.6",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "地藏菩萨",
+              "ipa": null,
+              "gloss": "地蔵菩薩",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "むかし、山のふもとの小さな村に、おじいさんとおばあさんが住んでいました。",
+      "target_units": [
+        {
+          "translation": "Dīgǎ kūzā niě bǎtǐ lōyōu bíkuī lá bú wótū pǎpū niē āmā ǒng-bǒ",
+          "tokens": [
+            {
+              "pinyin": "Dīgǎ",
+              "ipa": "ti⁵⁵ka²¹",
+              "gloss": "昔",
+              "source": {
+                "entry_id": "stedt-rn-454953",
+                "attestation_id": "stedt-rn-454953",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454953 · 原文定位 6.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "kūzā",
+              "ipa": "kʰu⁵⁵tsa⁵⁵",
+              "gloss": "山",
+              "source": {
+                "entry_id": "stedt-rn-181278",
+                "attestation_id": "stedt-rn-181278",
+                "source_id": "stedt-7fd6565400",
+                "locator": "STEDT rn 181278 · 原文定位 25.38",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:56 §4.3.6;95 ex24",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "bǎtǐ",
+              "ipa": "pa²¹tʰi²¹",
+              "gloss": "下",
+              "source": {
+                "entry_id": "w212",
+                "attestation_id": "stedt-rn-454999",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454999 · 原文定位 6.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "lōyōu",
+              "ipa": "luɔ⁵⁵jou⁵⁵",
+              "gloss": "村",
+              "source": {
+                "entry_id": "w1452",
+                "attestation_id": "stedt-rn-454664",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454664 · 原文定位 5.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "bíkuī",
+              "ipa": "pi²⁴kʰuei⁵⁵",
+              "gloss": "小さい",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:101 ex70",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": {
+                "entry_id": "w1216",
+                "attestation_id": "stedt-rn-455088",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455088 · 原文定位 7.2",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "個",
+              "source": {
+                "entry_id": "w317",
+                "attestation_id": "stedt-rn-455728",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 455728 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "中",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/direction-suffixes.md",
+                "locator": "B06 rn455022 §6.5",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "pǎpū",
+              "ipa": "pʰa²¹pʰu⁵⁵",
+              "gloss": "おじいさん",
+              "source": {
+                "entry_id": "w1679",
+                "attestation_id": "stedt-rn-453933",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453933 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "CONN",
+              "source": {
+                "entry_id": "w1618",
+                "attestation_id": "stedt-rn-455298",
+                "source_id": "stedt-39f4cd9a6b",
+                "locator": "STEDT rn 455298 · 原文定位 7.6",
+                "selected_sense": "和",
+                "evidence": "existing query_ledger"
+              }
+            },
+            {
+              "pinyin": "āmā",
+              "ipa": "a⁵⁵ma⁵⁵",
+              "gloss": "おばあさん",
+              "source": {
+                "entry_id": "stedt-rn-453889",
+                "attestation_id": "stedt-rn-453889",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453889 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "ǒng-bǒ",
+              "ipa": "oŋ²¹-pɔ²¹",
+              "gloss": "住む-STAT",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-209583",
+                    "attestation_id": "stedt-rn-209583",
+                    "source_id": "stedt-7fd6565400",
+                    "locator": "STEDT rn 209583 · 原文定位 580.38",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "二人は貧しく、お正月を迎えるためのお米もありませんでした。",
+      "target_units": [
+        {
+          "translation": "Gèzē tái",
+          "tokens": [
+            {
+              "pinyin": "Gèzē",
+              "ipa": "kɤ⁵¹tsɤ⁵⁵",
+              "gloss": "彼ら",
+              "source": {
+                "entry_id": "w745",
+                "attestation_id": "stedt-rn-456210",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456210 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "tái",
+              "ipa": "tʰai³⁵",
+              "gloss": "貧しい",
+              "source": {
+                "entry_id": "stedt-rn-289299",
+                "attestation_id": "stedt-rn-289299",
+                "source_id": "stedt-cb523fc3dc",
+                "locator": "STEDT rn 289299 · 原文定位 未标明",
+                "selected_sense": "穷",
+                "evidence": "existing query_ledger"
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "cīkā niě líbū bé tái",
+          "tokens": [
+            {
+              "pinyin": "cīkā",
+              "ipa": "tsʰɨ⁵⁵kʰa⁵⁵",
+              "gloss": "正月を迎える",
+              "source": {
+                "entry_id": "stedt-rn-454690",
+                "attestation_id": "stedt-rn-454690",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454690 · 原文定位 5.3",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "LNK",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:56 §4.3.6;95 ex24",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "líbū",
+              "ipa": "li²⁴pu⁵⁵",
+              "gloss": "米",
+              "source": {
+                "entry_id": "stedt-rn-454099",
+                "attestation_id": "stedt-rn-454099",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454099 · 原文定位 3.3",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "bé",
+              "ipa": "pɤ²⁴",
+              "gloss": "FOC",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06 rn455212;139 ex215",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "tái",
+              "ipa": "tʰa◦i³⁵",
+              "gloss": "無い",
+              "source": {
+                "entry_id": "stedt-rn-289144",
+                "attestation_id": "stedt-rn-217539",
+                "source_id": "stedt-7fd6565400",
+                "locator": "STEDT rn 217539 · 原文定位 736.38",
+                "selected_sense": "没有",
+                "evidence": "existing query_ledger"
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "大みそかの朝、おじいさんは、自分で作った五つの笠を町へ売りに行きました。",
+      "target_units": [
+        {
+          "translation": "除夕 zàogūdiē pǎpū guándǒ rī-nie dēnpǒng ōng dá hǒ-liē",
+          "tokens": [
+            {
+              "pinyin": "除夕",
+              "ipa": null,
+              "gloss": "大晦日",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "zàogūdiē",
+              "ipa": "tsau⁵¹ku⁵⁵tiɛ⁵⁵",
+              "gloss": "朝",
+              "source": {
+                "entry_id": "w2643",
+                "attestation_id": "stedt-rn-454998",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454998 · 原文定位 6.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "pǎpū",
+              "ipa": "pʰa²¹pʰu⁵⁵",
+              "gloss": "おじいさん",
+              "source": {
+                "entry_id": "w1679",
+                "attestation_id": "stedt-rn-453933",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453933 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "guándǒ",
+              "ipa": "kuan³⁵to²¹",
+              "gloss": "自分",
+              "source": {
+                "entry_id": "stedt-rn-229932",
+                "attestation_id": "stedt-rn-229932",
+                "source_id": "stedt-7fd6565400",
+                "locator": "STEDT rn 229932 · 原文定位 979.38",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "rī-nie",
+              "ipa": "zɨ⁵⁵-〔読音未確認〕",
+              "gloss": "作る-LNK",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1932",
+                    "attestation_id": "stedt-rn-457542",
+                    "source_id": "brassett-2004",
+                    "locator": "STEDT rn 457542 · 原文定位 未标明",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "笠",
+              "source": {
+                "entry_id": "w572",
+                "attestation_id": "stedt-rn-454578",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454578 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "ōng",
+              "ipa": "ɔŋ⁵⁵",
+              "gloss": "五",
+              "source": {
+                "entry_id": "w1653",
+                "attestation_id": "stedt-rn-455097",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455097 · 原文定位 7.2",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "dá",
+              "ipa": "ta²⁴",
+              "gloss": "個",
+              "source": {
+                "entry_id": "w511",
+                "attestation_id": "stedt-rn-455940",
+                "source_id": "stedt-07898ef938",
+                "locator": "STEDT rn 455940 · 原文定位 未标明",
+                "selected_sense": "for trays",
+                "evidence": "existing query_ledger"
+              }
+            },
+            {
+              "pinyin": "hǒ-liē",
+              "ipa": "fuɔ²¹-liɛ⁵⁵",
+              "gloss": "持つ-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454327",
+                    "attestation_id": "stedt-rn-454327",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454327 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "cěn bō hxí-liē",
+          "tokens": [
+            {
+              "pinyin": "cěn",
+              "ipa": "tsʰɜŋ²¹",
+              "gloss": "町",
+              "source": {
+                "entry_id": "w430",
+                "attestation_id": "stedt-rn-455851",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 455851 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "bō",
+              "ipa": "pɔ⁵⁵",
+              "gloss": "ALL",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:100 ex64",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "hxí-liē",
+              "ipa": "ɣɨ²⁴-liɛ⁵⁵",
+              "gloss": "行く-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w949",
+                    "attestation_id": "stedt-rn-454319",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454319 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        },
+        {
+          "translation": "dēnpǒng lǔ",
+          "tokens": [
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "笠",
+              "source": {
+                "entry_id": "w572",
+                "attestation_id": "stedt-rn-454578",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454578 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "lǔ",
+              "ipa": "lu²¹",
+              "gloss": "売る",
+              "source": {
+                "entry_id": "w1411",
+                "attestation_id": "stedt-rn-454673",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454673 · 原文定位 5.2",
+                "evidence": "translation.json existing token"
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "けれども、町では誰も笠を買ってくれません。",
+      "target_units": [
+        {
+          "translation": "Dángsí cěn wótū lò húnī dēnpǒng pū-dá",
+          "tokens": [
+            {
+              "pinyin": "Dángsí",
+              "ipa": "taŋ²⁴sɨ²⁴",
+              "gloss": "CONN",
+              "source": {
+                "entry_id": "w558",
+                "attestation_id": "stedt-rn-455993",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 455993 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "cěn",
+              "ipa": "tsʰɜŋ²¹",
+              "gloss": "町",
+              "source": {
+                "entry_id": "w430",
+                "attestation_id": "stedt-rn-455851",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 455851 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "中",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/direction-suffixes.md",
+                "locator": "B06 rn455022 §6.5",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "lò",
+              "ipa": "luɔ⁵¹",
+              "gloss": "人",
+              "source": {
+                "entry_id": "w1421",
+                "attestation_id": "stedt-rn-453974",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453974 · 原文定位 2.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "húnī",
+              "ipa": "fu²⁴ȵi⁵⁵",
+              "gloss": "みな",
+              "source": {
+                "entry_id": "stedt-rn-455243",
+                "attestation_id": "stedt-rn-455243",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455243 · 原文定位 7.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "笠",
+              "source": {
+                "entry_id": "w572",
+                "attestation_id": "stedt-rn-454578",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454578 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "pū-dá",
+              "ipa": "pʰu⁵⁵-ta²⁴",
+              "gloss": "買う-NEG",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454676",
+                    "attestation_id": "stedt-rn-454676",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454676 · 原文定位 5.2",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 factual NEG"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "夕方になり、おじいさんは五つの笠を持ったまま、家へ帰ることにしました。",
+      "target_units": [
+        {
+          "translation": "Lǎngcāi pǎpū dēnpǒng ōng dá hǒ-bǒ-mǒ sōngkō-cá",
+          "tokens": [
+            {
+              "pinyin": "Lǎngcāi",
+              "ipa": "laŋ²¹tsʰai⁵⁵",
+              "gloss": "夕方",
+              "source": {
+                "entry_id": "stedt-rn-454966",
+                "attestation_id": "stedt-rn-454966",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454966 · 原文定位 6.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "pǎpū",
+              "ipa": "pʰa²¹pʰu⁵⁵",
+              "gloss": "おじいさん",
+              "source": {
+                "entry_id": "w1679",
+                "attestation_id": "stedt-rn-453933",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453933 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "笠",
+              "source": {
+                "entry_id": "w572",
+                "attestation_id": "stedt-rn-454578",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454578 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "ōng",
+              "ipa": "ɔŋ⁵⁵",
+              "gloss": "五",
+              "source": {
+                "entry_id": "w1653",
+                "attestation_id": "stedt-rn-455097",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455097 · 原文定位 7.2",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "dá",
+              "ipa": "ta²⁴",
+              "gloss": "個",
+              "source": {
+                "entry_id": "w511",
+                "attestation_id": "stedt-rn-455940",
+                "source_id": "stedt-07898ef938",
+                "locator": "STEDT rn 455940 · 原文定位 未标明",
+                "selected_sense": "for trays",
+                "evidence": "existing query_ledger"
+              }
+            },
+            {
+              "pinyin": "hǒ-bǒ-mǒ",
+              "ipa": "fuɔ²¹-pɔ²¹-mɔ²¹",
+              "gloss": "持つ-STAT-ADVZ",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454327",
+                    "attestation_id": "stedt-rn-454327",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454327 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/event-linking.md",
+                    "locator": "B06:37 ex12;152–154",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "sōngkō-cá",
+              "ipa": "sɔŋ⁵⁵kʰuɔ⁵⁵-tsʰa²⁴",
+              "gloss": "家に帰る-したい",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454399",
+                    "attestation_id": "stedt-rn-454399",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454399 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:129–130 want to return home",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "帰り道、雪が降り始めました。",
+      "target_units": [
+        {
+          "translation": "Sōngkō-nie là gǎ súsū zí-hǔ",
+          "tokens": [
+            {
+              "pinyin": "Sōngkō-nie",
+              "ipa": "sɔŋ⁵⁵kʰuɔ⁵⁵-〔読音未確認〕",
+              "gloss": "家に帰る-LNK",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454399",
+                    "attestation_id": "stedt-rn-454399",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454399 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "là",
+              "ipa": "la⁵¹",
+              "gloss": "道",
+              "source": {
+                "entry_id": "w1224",
+                "attestation_id": "stedt-rn-454662",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454662 · 原文定位 5.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "上",
+              "source": {
+                "entry_id": "w686",
+                "attestation_id": "stedt-rn-456140",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456140 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "súsū",
+              "ipa": "su²⁴su⁵⁵",
+              "gloss": "雪",
+              "source": {
+                "entry_id": "w2166",
+                "attestation_id": "stedt-rn-453486",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453486 · 原文定位 1.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "zí-hǔ",
+              "ipa": "tsɨ²⁴-xu²¹",
+              "gloss": "降る-INCH",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w2168",
+                    "attestation_id": "stedt-rn-453487",
+                    "source_id": "brassett-2006",
+                    "locator": "§1.1",
+                    "evidence": "existing 下雪 query: súsū zí /su²⁴su⁵⁵tsɨ²⁴/; final verb component"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 INCH",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "道ばたには、六体のお地蔵様が並んで立っていました。",
+      "target_units": [
+        {
+          "translation": "Làkūtǔ 地藏菩萨像 六尊 排成一排 zūzù-bǒ",
+          "tokens": [
+            {
+              "pinyin": "Làkūtǔ",
+              "ipa": "la⁵¹kʰu⁵⁵tʰu²¹",
+              "gloss": "道端",
+              "source": {
+                "entry_id": "w1244",
+                "attestation_id": "stedt-rn-455010",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455010 · 原文定位 6.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "地藏菩萨像",
+              "ipa": null,
+              "gloss": "地蔵菩薩像",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "六尊",
+              "ipa": null,
+              "gloss": "六体",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "排成一排",
+              "ipa": null,
+              "gloss": "一列に並ぶ",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "zūzù-bǒ",
+              "ipa": "tsu⁵⁵tsu⁵¹-pɔ²¹",
+              "gloss": "立つ-STAT",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w2747",
+                    "attestation_id": "stedt-rn-453842",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 453842 · 原文定位 2.2",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "頭にも肩にも、白い雪が積もっています。",
+      "target_units": [
+        {
+          "translation": "Kātā gǎ niē pétīkē gǎ ǎsǐ-nie súsū mā-bǒ",
+          "tokens": [
+            {
+              "pinyin": "Kātā",
+              "ipa": "kʰa⁵⁵tʰa⁵⁵",
+              "gloss": "頭",
+              "source": {
+                "entry_id": "stedt-rn-453722",
+                "attestation_id": "stedt-rn-453722",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453722 · 原文定位 2.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "上",
+              "source": {
+                "entry_id": "w686",
+                "attestation_id": "stedt-rn-456140",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456140 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "CONN",
+              "source": {
+                "entry_id": "w1618",
+                "attestation_id": "stedt-rn-455298",
+                "source_id": "stedt-39f4cd9a6b",
+                "locator": "STEDT rn 455298 · 原文定位 7.6",
+                "selected_sense": "和",
+                "evidence": "existing query_ledger"
+              }
+            },
+            {
+              "pinyin": "pétīkē",
+              "ipa": "pʰɤ²⁴tʰi⁵⁵kʰɤ⁵⁵",
+              "gloss": "肩",
+              "source": {
+                "entry_id": "w1712",
+                "attestation_id": "stedt-rn-453753",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453753 · 原文定位 2.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "上",
+              "source": {
+                "entry_id": "w686",
+                "attestation_id": "stedt-rn-456140",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456140 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "ǎsǐ-nie",
+              "ipa": "a²¹sɨ²¹-〔読音未確認〕",
+              "gloss": "白い-LNK",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w2969",
+                    "attestation_id": "stedt-rn-454844",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454844 · 原文定位 6.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "súsū",
+              "ipa": "su²⁴su⁵⁵",
+              "gloss": "雪",
+              "source": {
+                "entry_id": "w2166",
+                "attestation_id": "stedt-rn-453486",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453486 · 原文定位 1.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "mā-bǒ",
+              "ipa": "ma⁵⁵-pɔ²¹",
+              "gloss": "積もる-STAT",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1456",
+                    "attestation_id": "stedt-rn-454354",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454354 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "「こんなに雪をかぶって、さぞ寒いだろう。」",
+      "target_units": [
+        {
+          "translation": "Súsū gěhò dǔ-bǒ",
+          "tokens": [
+            {
+              "pinyin": "Súsū",
+              "ipa": "su²⁴su⁵⁵",
+              "gloss": "雪",
+              "source": {
+                "entry_id": "w2166",
+                "attestation_id": "stedt-rn-453486",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453486 · 原文定位 1.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "gěhò",
+              "ipa": "kɤ²¹fuɔ⁵¹",
+              "gloss": "こんなに",
+              "source": {
+                "entry_id": "stedt-rn-455232",
+                "attestation_id": "stedt-rn-455232",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455232 · 原文定位 7.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "dǔ-bǒ",
+              "ipa": "tu²¹-pɔ²¹",
+              "gloss": "覆う-STAT",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w640",
+                    "attestation_id": "stedt-rn-454299",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454299 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "hǒnghuāi sà",
+          "tokens": [
+            {
+              "pinyin": "hǒnghuāi",
+              "ipa": "xũ²¹xuai⁵⁵",
+              "gloss": "きっと",
+              "source": {
+                "entry_id": "stedt-rn-289384",
+                "attestation_id": "stedt-rn-289384",
+                "source_id": "stedt-cb523fc3dc",
+                "locator": "STEDT rn 289384 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "sà",
+              "ipa": "sa⁵¹",
+              "gloss": "寒い",
+              "source": {
+                "entry_id": "w5031",
+                "attestation_id": "stedt-rn-453485",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453485 · 原文定位 1.1",
+                "evidence": "translation.json existing token"
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "おじいさんは、お地蔵様の頭の雪を手で払って、一体ずつ笠をかぶせてあげました。",
+      "target_units": [
+        {
+          "translation": "Pǎpū jié hǒliě 地藏菩萨像 niě kātā gǎ niě súsū hxǐ-liē",
+          "tokens": [
+            {
+              "pinyin": "Pǎpū",
+              "ipa": "pʰa²¹pʰu⁵⁵",
+              "gloss": "おじいさん",
+              "source": {
+                "entry_id": "w1679",
+                "attestation_id": "stedt-rn-453933",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453933 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "jié",
+              "ipa": "tɕiɛ²⁴",
+              "gloss": "手",
+              "source": {
+                "entry_id": "stedt-rn-453714",
+                "attestation_id": "stedt-rn-453714",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453714 · 原文定位 2.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "hǒliě",
+              "ipa": "xuɔ²¹lie²¹",
+              "gloss": "INS",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:154 ex37 INS",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "地藏菩萨像",
+              "ipa": null,
+              "gloss": "地蔵菩薩像",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:56 §4.3.6;95 ex24",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "kātā",
+              "ipa": "kʰa⁵⁵tʰa⁵⁵",
+              "gloss": "頭",
+              "source": {
+                "entry_id": "stedt-rn-453722",
+                "attestation_id": "stedt-rn-453722",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453722 · 原文定位 2.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "上",
+              "source": {
+                "entry_id": "w686",
+                "attestation_id": "stedt-rn-456140",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456140 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "LNK",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:56 §4.3.6;95 ex24",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "súsū",
+              "ipa": "su²⁴su⁵⁵",
+              "gloss": "雪",
+              "source": {
+                "entry_id": "w2166",
+                "attestation_id": "stedt-rn-453486",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453486 · 原文定位 1.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "hxǐ-liē",
+              "ipa": "ɣɨ²¹-liɛ⁵⁵",
+              "gloss": "払う-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w952",
+                    "attestation_id": "stedt-rn-454320",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454320 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "地藏菩萨像 lá bú lá bú-mǒ dǒ dēnpǒng diè-liē",
+          "tokens": [
+            {
+              "pinyin": "地藏菩萨像",
+              "ipa": null,
+              "gloss": "地蔵菩薩像",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": {
+                "entry_id": "w1216",
+                "attestation_id": "stedt-rn-455088",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455088 · 原文定位 7.2",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "個",
+              "source": {
+                "entry_id": "w317",
+                "attestation_id": "stedt-rn-455728",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 455728 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": {
+                "entry_id": "w1216",
+                "attestation_id": "stedt-rn-455088",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455088 · 原文定位 7.2",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "bú-mǒ",
+              "ipa": "pu²⁴-mɔ²¹",
+              "gloss": "個-ADVZ",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w317",
+                    "attestation_id": "stedt-rn-455728",
+                    "source_id": "brassett-2004",
+                    "locator": "STEDT rn 455728 · 原文定位 未标明",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/event-linking.md",
+                    "locator": "B06:37 ex12;152–154",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "dǒ",
+              "ipa": "tuɔ²¹",
+              "gloss": "CAUS",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:156 ex47 CAUS",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "笠",
+              "source": {
+                "entry_id": "w572",
+                "attestation_id": "stedt-rn-454578",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454578 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "diè-liē",
+              "ipa": "tiɛ⁵¹-liɛ⁵⁵",
+              "gloss": "かぶる-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w615",
+                    "attestation_id": "stedt-rn-454579",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454579 · 原文定位 4.6",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "ところが、笠は五つしかありません。",
+      "target_units": [
+        {
+          "translation": "Dángsí dēnpǒng ōng dá-láng xié",
+          "tokens": [
+            {
+              "pinyin": "Dángsí",
+              "ipa": "taŋ²⁴sɨ²⁴",
+              "gloss": "CONN",
+              "source": {
+                "entry_id": "w558",
+                "attestation_id": "stedt-rn-455993",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 455993 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "笠",
+              "source": {
+                "entry_id": "w572",
+                "attestation_id": "stedt-rn-454578",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454578 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "ōng",
+              "ipa": "ɔŋ⁵⁵",
+              "gloss": "五",
+              "source": {
+                "entry_id": "w1653",
+                "attestation_id": "stedt-rn-455097",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455097 · 原文定位 7.2",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "dá-láng",
+              "ipa": "ta²⁴-laŋ²⁴",
+              "gloss": "個-FOC",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w511",
+                    "attestation_id": "stedt-rn-455940",
+                    "source_id": "stedt-07898ef938",
+                    "locator": "STEDT rn 455940 · 原文定位 未标明",
+                    "selected_sense": "for trays",
+                    "evidence": "existing query_ledger"
+                  },
+                  {
+                    "entry_id": "w47",
+                    "attestation_id": "stedt-rn-455388",
+                    "source_id": "stedt-07898ef938",
+                    "locator": "STEDT rn 455388 · 原文定位 未标明",
+                    "selected_sense": "only",
+                    "evidence": "existing query_ledger"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "xié",
+              "ipa": "ɕiɛ²⁴",
+              "gloss": "有る",
+              "source": {
+                "entry_id": "w2487",
+                "attestation_id": "stedt-rn-454792",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454792 · 原文定位 6.1",
+                "evidence": "translation.json existing token"
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "六体目のお地蔵様には、おじいさんが自分の手ぬぐいを外して、頭に巻いてあげました。",
+      "target_units": [
+        {
+          "translation": "Pǎpū guándǒ niě jiézū hí-liē",
+          "tokens": [
+            {
+              "pinyin": "Pǎpū",
+              "ipa": "pʰa²¹pʰu⁵⁵",
+              "gloss": "おじいさん",
+              "source": {
+                "entry_id": "w1679",
+                "attestation_id": "stedt-rn-453933",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453933 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "guándǒ",
+              "ipa": "kuan³⁵to²¹",
+              "gloss": "自分",
+              "source": {
+                "entry_id": "stedt-rn-229932",
+                "attestation_id": "stedt-rn-229932",
+                "source_id": "stedt-7fd6565400",
+                "locator": "STEDT rn 229932 · 原文定位 979.38",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:56 §4.3.6;95 ex24",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "jiézū",
+              "ipa": "tɕiɛ²⁴tsu⁵⁵",
+              "gloss": "手ぬぐい",
+              "source": {
+                "entry_id": "stedt-rn-454589",
+                "attestation_id": "stedt-rn-454589",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454589 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "hí-liē",
+              "ipa": "xɨ²⁴-liɛ⁵⁵",
+              "gloss": "外す-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w865",
+                    "attestation_id": "stedt-rn-454321",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454321 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "第六尊地藏菩萨像 bǒ kātā jiézū hǒliě pē-liē",
+          "tokens": [
+            {
+              "pinyin": "第六尊地藏菩萨像",
+              "ipa": null,
+              "gloss": "六体目の地蔵菩薩像",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "bǒ",
+              "ipa": "pɔ²¹",
+              "gloss": "BEN",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "kātā",
+              "ipa": "kʰa⁵⁵tʰa⁵⁵",
+              "gloss": "頭",
+              "source": {
+                "entry_id": "stedt-rn-453722",
+                "attestation_id": "stedt-rn-453722",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453722 · 原文定位 2.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "jiézū",
+              "ipa": "tɕiɛ²⁴tsu⁵⁵",
+              "gloss": "手ぬぐい",
+              "source": {
+                "entry_id": "stedt-rn-454589",
+                "attestation_id": "stedt-rn-454589",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454589 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "hǒliě",
+              "ipa": "xuɔ²¹lie²¹",
+              "gloss": "INS",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:154 ex37 INS",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "pē-liē",
+              "ipa": "pʰɤ⁵⁵-liɛ⁵⁵",
+              "gloss": "包む-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1703",
+                    "attestation_id": "stedt-rn-454371",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454371 · 原文定位 4.3",
+                    "evidence": "existing query_ledger 包, wrap"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "家に帰ると、おばあさんが尋ねました。",
+      "target_units": [
+        {
+          "translation": "Pǎpū sōngkō-zú āmā sīliě",
+          "tokens": [
+            {
+              "pinyin": "Pǎpū",
+              "ipa": "pʰa²¹pʰu⁵⁵",
+              "gloss": "おじいさん",
+              "source": {
+                "entry_id": "w1679",
+                "attestation_id": "stedt-rn-453933",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453933 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "sōngkō-zú",
+              "ipa": "sɔŋ⁵⁵kʰuɔ⁵⁵-tsu²⁴",
+              "gloss": "家に帰る-CONN",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454399",
+                    "attestation_id": "stedt-rn-454399",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454399 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/event-linking.md",
+                    "locator": "B06:151 ex12/14 temporal CONN",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "āmā",
+              "ipa": "a⁵⁵ma⁵⁵",
+              "gloss": "おばあさん",
+              "source": {
+                "entry_id": "stedt-rn-453889",
+                "attestation_id": "stedt-rn-453889",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453889 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "sīliě",
+              "ipa": "sɨ⁵⁵liɛ²¹",
+              "gloss": "尋ねる",
+              "source": {
+                "entry_id": "w2106",
+                "attestation_id": "stedt-rn-454396",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454396 · 原文定位 4.3",
+                "evidence": "translation.json existing token"
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "「笠は売れましたか。」",
+      "target_units": [
+        {
+          "translation": "Dēnpǒng lǔ-liē",
+          "tokens": [
+            {
+              "pinyin": "Dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "笠",
+              "source": {
+                "entry_id": "w572",
+                "attestation_id": "stedt-rn-454578",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454578 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "lǔ-liē",
+              "ipa": "lu²¹-liɛ⁵⁵",
+              "gloss": "売る-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1411",
+                    "attestation_id": "stedt-rn-454673",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454673 · 原文定位 5.2",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "おじいさんは、お米を買えなかったことと、笠をお地蔵様にあげたことを話しました。",
+      "target_units": [
+        {
+          "translation": "Pǎpū āmā bǒ Ngá líbū pū-tā-tī",
+          "tokens": [
+            {
+              "pinyin": "Pǎpū",
+              "ipa": "pʰa²¹pʰu⁵⁵",
+              "gloss": "おじいさん",
+              "source": {
+                "entry_id": "w1679",
+                "attestation_id": "stedt-rn-453933",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453933 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "āmā",
+              "ipa": "a⁵⁵ma⁵⁵",
+              "gloss": "おばあさん",
+              "source": {
+                "entry_id": "stedt-rn-453889",
+                "attestation_id": "stedt-rn-453889",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453889 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "bǒ",
+              "ipa": "pɔ²¹",
+              "gloss": "DAT",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "Ngá",
+              "ipa": "ŋa²⁴",
+              "gloss": "私",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:101 ex70",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "líbū",
+              "ipa": "li²⁴pu⁵⁵",
+              "gloss": "米",
+              "source": {
+                "entry_id": "stedt-rn-454099",
+                "attestation_id": "stedt-rn-454099",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454099 · 原文定位 3.3",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "pū-tā-tī",
+              "ipa": "pʰu⁵⁵-tʰa⁵⁵-tʰi⁵⁵",
+              "gloss": "買う-NEG-できる",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454676",
+                    "attestation_id": "stedt-rn-454676",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454676 · 原文定位 5.2",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:127–128 NEG ability",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:127–128 NEG ability",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "ngá 地藏菩萨像 bǒ dēnpǒng lié-liē lǐ-liē",
+          "tokens": [
+            {
+              "pinyin": "ngá",
+              "ipa": "ŋa²⁴",
+              "gloss": "私",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:101 ex70",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "地藏菩萨像",
+              "ipa": null,
+              "gloss": "地蔵菩薩像",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "bǒ",
+              "ipa": "pɔ²¹",
+              "gloss": "DAT",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "笠",
+              "source": {
+                "entry_id": "w572",
+                "attestation_id": "stedt-rn-454578",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454578 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "lié-liē",
+              "ipa": "liɛ²⁴-liɛ⁵⁵",
+              "gloss": "与える-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1372",
+                    "attestation_id": "stedt-rn-454349",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454349 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "lǐ-liē",
+              "ipa": "li²¹-liɛ⁵⁵",
+              "gloss": "言う-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454768",
+                    "attestation_id": "stedt-rn-454768",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454768 · 原文定位 6.1",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "おばあさんは怒らずに言いました。",
+      "target_units": [
+        {
+          "translation": "Āmā xiě-dá",
+          "tokens": [
+            {
+              "pinyin": "Āmā",
+              "ipa": "a⁵⁵ma⁵⁵",
+              "gloss": "おばあさん",
+              "source": {
+                "entry_id": "stedt-rn-453889",
+                "attestation_id": "stedt-rn-453889",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453889 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "xiě-dá",
+              "ipa": "ɕiɛ²¹-ta²⁴",
+              "gloss": "怒る-NEG",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w5592",
+                    "attestation_id": "stedt-rn-454793",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454793 · 原文定位 6.1",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 factual NEG"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "lǐ-liē",
+          "tokens": [
+            {
+              "pinyin": "lǐ-liē",
+              "ipa": "li²¹-liɛ⁵⁵",
+              "gloss": "言う-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454768",
+                    "attestation_id": "stedt-rn-454768",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454768 · 原文定位 6.1",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "「それはよいことをしましたね。",
+      "target_units": [
+        {
+          "translation": "Ní sǎ cái rī-liē",
+          "tokens": [
+            {
+              "pinyin": "Ní",
+              "ipa": "ɲi²⁴",
+              "gloss": "あなた",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:90 ex116",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "sǎ",
+              "ipa": "sa²¹",
+              "gloss": "こと",
+              "source": {
+                "entry_id": "stedt-rn-288906",
+                "attestation_id": "stedt-rn-206268",
+                "source_id": "stedt-7fd6565400",
+                "locator": "STEDT rn 206268 · 原文定位 515.38",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "cái",
+              "ipa": "tsʰai²⁴",
+              "gloss": "よい",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:101 ex69/71",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "rī-liē",
+              "ipa": "zɨ⁵⁵-liɛ⁵⁵",
+              "gloss": "作る-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1932",
+                    "attestation_id": "stedt-rn-457542",
+                    "source_id": "brassett-2004",
+                    "locator": "STEDT rn 457542 · 原文定位 未标明",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "お地蔵様も喜んでいるでしょう。」",
+      "target_units": [
+        {
+          "translation": "地藏菩萨像 bé nièlīniègá-i",
+          "tokens": [
+            {
+              "pinyin": "地藏菩萨像",
+              "ipa": null,
+              "gloss": "地蔵菩薩像",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "bé",
+              "ipa": "pɤ²⁴",
+              "gloss": "FOC",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06 rn455212;139 ex215",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "nièlīniègá-i",
+              "ipa": "ȵiɛ⁵¹li⁵⁵ȵiɛ⁵¹ka²⁴-i",
+              "gloss": "喜ぶ-IRR",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w4643",
+                    "attestation_id": "stedt-rn-454823",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454823 · 原文定位 6.2",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 IRR",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "二人は残っていた少しのおかゆを分けて食べ、早く寝ました。",
+      "target_units": [
+        {
+          "translation": "Gèzē 剩下-nie kābiēliē lábiē pǐ-mǒ gá-liē",
+          "tokens": [
+            {
+              "pinyin": "Gèzē",
+              "ipa": "kɤ⁵¹tsɤ⁵⁵",
+              "gloss": "彼ら",
+              "source": {
+                "entry_id": "w745",
+                "attestation_id": "stedt-rn-456210",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456210 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "剩下-nie",
+              "ipa": null,
+              "gloss": "残る-LNK",
+              "source": {
+                "components": [
+                  {
+                    "type": "Chinese insertion",
+                    "evidence": "existing display.md / first-round translation"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "kābiēliē",
+              "ipa": "kʰa⁵⁵piɛ⁵⁵liɛ⁵⁵",
+              "gloss": "粥",
+              "source": {
+                "entry_id": "stedt-rn-454459",
+                "attestation_id": "stedt-rn-454459",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454459 · 原文定位 4.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "lábiē",
+              "ipa": "la²⁴piɛ⁵⁵",
+              "gloss": "少し",
+              "source": {
+                "entry_id": "stedt-rn-455254",
+                "attestation_id": "stedt-rn-455254",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455254 · 原文定位 7.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "pǐ-mǒ",
+              "ipa": "pʰi²¹-mɔ²¹",
+              "gloss": "分ける-ADVZ",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1720",
+                    "attestation_id": "stedt-rn-457292",
+                    "source_id": "brassett-2004",
+                    "locator": "STEDT rn 457292 · 原文定位 未标明",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/event-linking.md",
+                    "locator": "B06:37 ex12;152–154",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "gá-liē",
+              "ipa": "ka²⁴-liɛ⁵⁵",
+              "gloss": "食べる-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454305",
+                    "attestation_id": "stedt-rn-454305",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454305 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "zào nié-liē",
+          "tokens": [
+            {
+              "pinyin": "zào",
+              "ipa": "tsau⁵¹",
+              "gloss": "早く",
+              "source": {
+                "entry_id": "w2641",
+                "attestation_id": "w2641",
+                "source_id": "brassett-2004",
+                "locator": "词条 2641",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "nié-liē",
+              "ipa": "ȵiɛ²⁴-liɛ⁵⁵",
+              "gloss": "寝る-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1621",
+                    "attestation_id": "stedt-rn-457177",
+                    "source_id": "brassett-2004",
+                    "locator": "STEDT rn 457177 · 原文定位 未标明",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "その夜、遠くから、何人ものかけ声と、重い物を引く音が聞こえてきました。",
+      "target_units": [
+        {
+          "translation": "Āi lǎyé rǐ-nie lò jiě-nie árē niē dù-nie yě tō-nie árē hxě-nie āidū liē ěnzǐ",
+          "tokens": [
+            {
+              "pinyin": "Āi",
+              "ipa": "ai⁵⁵",
+              "gloss": "その",
+              "source": {
+                "entry_id": "w2986",
+                "attestation_id": "stedt-rn-455165",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455165 · 原文定位 7.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "lǎyé",
+              "ipa": "la²¹jɤ²⁴",
+              "gloss": "夜",
+              "source": {
+                "entry_id": "stedt-rn-453457",
+                "attestation_id": "stedt-rn-453457",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453457 · 原文定位 1.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "rǐ-nie",
+              "ipa": "zɨ²¹-〔読音未確認〕",
+              "gloss": "多い-LNK",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w4976",
+                    "attestation_id": "stedt-rn-454922",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454922 · 原文定位 6.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "lò",
+              "ipa": "luɔ⁵¹",
+              "gloss": "人",
+              "source": {
+                "entry_id": "w1421",
+                "attestation_id": "stedt-rn-453974",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453974 · 原文定位 2.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "jiě-nie",
+              "ipa": "tɕiɛ²¹-〔読音未確認〕",
+              "gloss": "叫ぶ-LNK",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454333",
+                    "attestation_id": "stedt-rn-454333",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454333 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "árē",
+              "ipa": "a²⁴zɤ⁵⁵",
+              "gloss": "声・音",
+              "source": {
+                "entry_id": "w143",
+                "attestation_id": "stedt-rn-454748",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454748 · 原文定位 6.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "CONN",
+              "source": {
+                "entry_id": "w1618",
+                "attestation_id": "stedt-rn-455298",
+                "source_id": "stedt-39f4cd9a6b",
+                "locator": "STEDT rn 455298 · 原文定位 7.6",
+                "selected_sense": "和",
+                "evidence": "existing query_ledger"
+              }
+            },
+            {
+              "pinyin": "dù-nie",
+              "ipa": "tu⁵¹-〔読音未確認〕",
+              "gloss": "重い-LNK",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w3512",
+                    "attestation_id": "stedt-rn-454871",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454871 · 原文定位 6.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "yě",
+              "ipa": "jɤ²¹",
+              "gloss": "物",
+              "source": {
+                "entry_id": "stedt-rn-454259",
+                "attestation_id": "stedt-rn-454259",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454259 · 原文定位 4.2",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "tō-nie",
+              "ipa": "tʰuɔ⁵⁵-〔読音未確認〕",
+              "gloss": "引く-LNK",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w2340",
+                    "attestation_id": "stedt-rn-454420",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454420 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "árē",
+              "ipa": "a²⁴zɤ⁵⁵",
+              "gloss": "声・音",
+              "source": {
+                "entry_id": "w143",
+                "attestation_id": "stedt-rn-454748",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454748 · 原文定位 6.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "hxě-nie",
+              "ipa": "ɣɤ²¹-〔読音未確認〕",
+              "gloss": "遠い-LNK",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w3773",
+                    "attestation_id": "stedt-rn-456427",
+                    "source_id": "brassett-2004",
+                    "locator": "STEDT rn 456427 · 原文定位 未标明",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "āidū",
+              "ipa": "ai⁵⁵tu⁵⁵",
+              "gloss": "そこ",
+              "source": {
+                "entry_id": "w169",
+                "attestation_id": "stedt-rn-455207",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455207 · 原文定位 7.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "liē",
+              "ipa": "lie⁵⁵",
+              "gloss": "ABL",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:100 ex65 source/location liē"
+              }
+            },
+            {
+              "pinyin": "ěnzǐ",
+              "ipa": "ɜŋ²¹tsɨ²¹",
+              "gloss": "来る",
+              "source": {
+                "entry_id": "stedt-rn-454303",
+                "attestation_id": "stedt-rn-454303",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454303 · 原文定位 4.3",
+                "evidence": "translation.json existing token"
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "gèzē rǔ-liē",
+          "tokens": [
+            {
+              "pinyin": "gèzē",
+              "ipa": "kɤ⁵¹tsɤ⁵⁵",
+              "gloss": "彼ら",
+              "source": {
+                "entry_id": "w745",
+                "attestation_id": "stedt-rn-456210",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456210 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "rǔ-liē",
+              "ipa": "zu²¹-liɛ⁵⁵",
+              "gloss": "聞こえる-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-127174",
+                    "attestation_id": "stedt-rn-127174",
+                    "source_id": "stedt-24cc5bbb03",
+                    "locator": "STEDT rn 127174 · 原文定位 3.6.7",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "音はだんだん近づき、二人の家の前で止まりました。",
+      "target_units": [
+        {
+          "translation": "Āi árē 渐渐 zòng-diú",
+          "tokens": [
+            {
+              "pinyin": "Āi",
+              "ipa": "ai⁵⁵",
+              "gloss": "その",
+              "source": {
+                "entry_id": "w2986",
+                "attestation_id": "stedt-rn-455165",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455165 · 原文定位 7.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "árē",
+              "ipa": "a²⁴zɤ⁵⁵",
+              "gloss": "声・音",
+              "source": {
+                "entry_id": "w143",
+                "attestation_id": "stedt-rn-454748",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454748 · 原文定位 6.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "渐渐",
+              "ipa": null,
+              "gloss": "だんだん",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "zòng-diú",
+              "ipa": "tsɔŋ⁵¹-tiu²⁴",
+              "gloss": "近い-INCH",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454950",
+                    "attestation_id": "stedt-rn-454950",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454950 · 原文定位 6.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/direction-suffixes.md",
+                    "locator": "B06:122–123 ex100–107 INCH",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "gèzē niě cò zīgē těn-liē",
+          "tokens": [
+            {
+              "pinyin": "gèzē",
+              "ipa": "kɤ⁵¹tsɤ⁵⁵",
+              "gloss": "彼ら",
+              "source": {
+                "entry_id": "w745",
+                "attestation_id": "stedt-rn-456210",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456210 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:56 §4.3.6;95 ex24",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "cò",
+              "ipa": "tsʰuɔ⁵¹",
+              "gloss": "家",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:84 ex62",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "zīgē",
+              "ipa": "tsɨ⁵⁵kɤ⁵⁵",
+              "gloss": "前",
+              "source": {
+                "entry_id": "w5794",
+                "attestation_id": "stedt-rn-458380",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 458380 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "těn-liē",
+              "ipa": "tʰɜŋ²¹-liɛ⁵⁵",
+              "gloss": "止まる-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w2247",
+                    "attestation_id": "stedt-rn-457888",
+                    "source_id": "brassett-2004",
+                    "locator": "STEDT rn 457888 · 原文定位 未标明",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "おじいさんが戸を開けると、そこには大きな袋に入ったお米と、お餅と、野菜が置いてありました。",
+      "target_units": [
+        {
+          "translation": "Pǎpū lāměn tóng-zú āidū lótiē cībā wótū niě líbū niē bābā niē hācē pō-bǒ",
+          "tokens": [
+            {
+              "pinyin": "Pǎpū",
+              "ipa": "pʰa²¹pʰu⁵⁵",
+              "gloss": "おじいさん",
+              "source": {
+                "entry_id": "w1679",
+                "attestation_id": "stedt-rn-453933",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453933 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "lāměn",
+              "ipa": "la⁵⁵mɜŋ²¹",
+              "gloss": "戸",
+              "source": {
+                "entry_id": "stedt-rn-454185",
+                "attestation_id": "stedt-rn-454185",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454185 · 原文定位 4.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "tóng-zú",
+              "ipa": "tʰɔŋ²⁴-tsu²⁴",
+              "gloss": "開ける-CONN",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w2293",
+                    "attestation_id": "stedt-rn-454415",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454415 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/event-linking.md",
+                    "locator": "B06:151 ex12/14 temporal CONN",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "āidū",
+              "ipa": "ai⁵⁵tu⁵⁵",
+              "gloss": "そこ",
+              "source": {
+                "entry_id": "w169",
+                "attestation_id": "stedt-rn-455207",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455207 · 原文定位 7.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "lótiē",
+              "ipa": "luɔ²⁴tʰiɛ⁵⁵",
+              "gloss": "袋",
+              "source": {
+                "entry_id": "w1451",
+                "attestation_id": "stedt-rn-454234",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454234 · 原文定位 4.2",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "cībā",
+              "ipa": "tsʰɿ⁵⁵pa⁵⁵",
+              "gloss": "大きい",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:100 table6.1",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "中",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/direction-suffixes.md",
+                "locator": "B06 rn455022 §6.5",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "LNK",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:56 §4.3.6;95 ex24",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "líbū",
+              "ipa": "li²⁴pu⁵⁵",
+              "gloss": "米",
+              "source": {
+                "entry_id": "stedt-rn-454099",
+                "attestation_id": "stedt-rn-454099",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454099 · 原文定位 3.3",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "CONN",
+              "source": {
+                "entry_id": "w1618",
+                "attestation_id": "stedt-rn-455298",
+                "source_id": "stedt-39f4cd9a6b",
+                "locator": "STEDT rn 455298 · 原文定位 7.6",
+                "selected_sense": "和",
+                "evidence": "existing query_ledger"
+              }
+            },
+            {
+              "pinyin": "bābā",
+              "ipa": "pa⁵⁵pa⁵⁵",
+              "gloss": "餅",
+              "source": {
+                "entry_id": "w204",
+                "attestation_id": "stedt-rn-454447",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454447 · 原文定位 4.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "CONN",
+              "source": {
+                "entry_id": "w1618",
+                "attestation_id": "stedt-rn-455298",
+                "source_id": "stedt-39f4cd9a6b",
+                "locator": "STEDT rn 455298 · 原文定位 7.6",
+                "selected_sense": "和",
+                "evidence": "existing query_ledger"
+              }
+            },
+            {
+              "pinyin": "hācē",
+              "ipa": "xa⁵⁵tsʰɤ⁵⁵",
+              "gloss": "野菜",
+              "source": {
+                "entry_id": "w822",
+                "attestation_id": "stedt-rn-454456",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454456 · 原文定位 4.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "pō-bǒ",
+              "ipa": "pʰɔ⁵⁵-pɔ²¹",
+              "gloss": "置く-STAT",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454377",
+                    "attestation_id": "stedt-rn-454377",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454377 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "雪道の向こうには、五つの笠と一枚の手ぬぐいをかぶった六体のお地蔵様が帰っていく姿が見えました。",
+      "target_units": [
+        {
+          "translation": "Súsū là niě lábiān 地藏菩萨像 六尊 sōngkō-lā",
+          "tokens": [
+            {
+              "pinyin": "Súsū",
+              "ipa": "su²⁴su⁵⁵",
+              "gloss": "雪",
+              "source": {
+                "entry_id": "w2166",
+                "attestation_id": "stedt-rn-453486",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453486 · 原文定位 1.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "là",
+              "ipa": "la⁵¹",
+              "gloss": "道",
+              "source": {
+                "entry_id": "w1224",
+                "attestation_id": "stedt-rn-454662",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454662 · 原文定位 5.1",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:56 §4.3.6;95 ex24",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "lábiān",
+              "ipa": "la²⁴piɛn⁵⁵",
+              "gloss": "向こう",
+              "source": {
+                "entry_id": "stedt-rn-455009",
+                "attestation_id": "stedt-rn-455009",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455009 · 原文定位 6.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "地藏菩萨像",
+              "ipa": null,
+              "gloss": "地蔵菩薩像",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "六尊",
+              "ipa": null,
+              "gloss": "六体",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "sōngkō-lā",
+              "ipa": "sɔŋ⁵⁵kʰuɔ⁵⁵-la⁵⁵",
+              "gloss": "家に帰る-PROG",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454399",
+                    "attestation_id": "stedt-rn-454399",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454399 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PROG",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "gèzē dēnpǒng ōng dá niē jiézū lá hxī diè-bǒ",
+          "tokens": [
+            {
+              "pinyin": "gèzē",
+              "ipa": "kɤ⁵¹tsɤ⁵⁵",
+              "gloss": "彼ら",
+              "source": {
+                "entry_id": "w745",
+                "attestation_id": "stedt-rn-456210",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456210 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "笠",
+              "source": {
+                "entry_id": "w572",
+                "attestation_id": "stedt-rn-454578",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454578 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "ōng",
+              "ipa": "ɔŋ⁵⁵",
+              "gloss": "五",
+              "source": {
+                "entry_id": "w1653",
+                "attestation_id": "stedt-rn-455097",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455097 · 原文定位 7.2",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "dá",
+              "ipa": "ta²⁴",
+              "gloss": "個",
+              "source": {
+                "entry_id": "w511",
+                "attestation_id": "stedt-rn-455940",
+                "source_id": "stedt-07898ef938",
+                "locator": "STEDT rn 455940 · 原文定位 未标明",
+                "selected_sense": "for trays",
+                "evidence": "existing query_ledger"
+              }
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "CONN",
+              "source": {
+                "entry_id": "w1618",
+                "attestation_id": "stedt-rn-455298",
+                "source_id": "stedt-39f4cd9a6b",
+                "locator": "STEDT rn 455298 · 原文定位 7.6",
+                "selected_sense": "和",
+                "evidence": "existing query_ledger"
+              }
+            },
+            {
+              "pinyin": "jiézū",
+              "ipa": "tɕiɛ²⁴tsu⁵⁵",
+              "gloss": "手ぬぐい",
+              "source": {
+                "entry_id": "stedt-rn-454589",
+                "attestation_id": "stedt-rn-454589",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454589 · 原文定位 4.6",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": {
+                "entry_id": "w1216",
+                "attestation_id": "stedt-rn-455088",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455088 · 原文定位 7.2",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "hxī",
+              "ipa": "ɣɨ⁵⁵",
+              "gloss": "枚",
+              "source": {
+                "entry_id": "w948",
+                "attestation_id": "stedt-rn-456437",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456437 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "diè-bǒ",
+              "ipa": "tiɛ⁵¹-pɔ²¹",
+              "gloss": "かぶる-STAT",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w615",
+                    "attestation_id": "stedt-rn-454579",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454579 · 原文定位 4.6",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        },
+        {
+          "translation": "Pǎpū gèzē yǐ-liē",
+          "tokens": [
+            {
+              "pinyin": "Pǎpū",
+              "ipa": "pʰa²¹pʰu⁵⁵",
+              "gloss": "おじいさん",
+              "source": {
+                "entry_id": "w1679",
+                "attestation_id": "stedt-rn-453933",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453933 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "gèzē",
+              "ipa": "kɤ⁵¹tsɤ⁵⁵",
+              "gloss": "彼ら",
+              "source": {
+                "entry_id": "w745",
+                "attestation_id": "stedt-rn-456210",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456210 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "yǐ-liē",
+              "ipa": "ji²¹-liɛ⁵⁵",
+              "gloss": "見える-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w2576",
+                    "attestation_id": "stedt-rn-453835",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 453835 · 原文定位 2.2",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "「おばあさん、お地蔵様がお米を持ってきてくださったよ。」",
+      "target_units": [
+        {
+          "translation": "Āmā 地藏菩萨像 ángnī bǒ líbū hǒ-dí",
+          "tokens": [
+            {
+              "pinyin": "Āmā",
+              "ipa": "a⁵⁵ma⁵⁵",
+              "gloss": "おばあさん",
+              "source": {
+                "entry_id": "stedt-rn-453889",
+                "attestation_id": "stedt-rn-453889",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 453889 · 原文定位 2.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "地藏菩萨像",
+              "ipa": null,
+              "gloss": "地蔵菩薩像",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "ángnī",
+              "ipa": "ã²⁴ɲi⁵⁵",
+              "gloss": "私たち",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:68 ex82",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "bǒ",
+              "ipa": "pɔ²¹",
+              "gloss": "DAT",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "líbū",
+              "ipa": "li²⁴pu⁵⁵",
+              "gloss": "米",
+              "source": {
+                "entry_id": "stedt-rn-454099",
+                "attestation_id": "stedt-rn-454099",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454099 · 原文定位 3.3",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "hǒ-dí",
+              "ipa": "fuɔ²¹-ti²⁴",
+              "gloss": "持つ-VEN",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454327",
+                    "attestation_id": "stedt-rn-454327",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454327 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/direction-suffixes.md",
+                    "locator": "B06:124 ex115–117 VEN",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    },
+    {
+      "source": "二人はお地蔵様の後ろ姿に何度も頭を下げました。",
+      "target_units": [
+        {
+          "translation": "Gèzē 地藏菩萨像 niě qǐnnié bō kúkū-liē",
+          "tokens": [
+            {
+              "pinyin": "Gèzē",
+              "ipa": "kɤ⁵¹tsɤ⁵⁵",
+              "gloss": "彼ら",
+              "source": {
+                "entry_id": "w745",
+                "attestation_id": "stedt-rn-456210",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456210 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "地藏菩萨像",
+              "ipa": null,
+              "gloss": "地蔵菩薩像",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:56 §4.3.6;95 ex24",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "qǐnnié",
+              "ipa": "tɕʰiŋ²¹ȵiɛ²⁴",
+              "gloss": "後ろ",
+              "source": {
+                "entry_id": "stedt-rn-455017",
+                "attestation_id": "stedt-rn-455017",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 455017 · 原文定位 6.5",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "bō",
+              "ipa": "pɔ⁵⁵",
+              "gloss": "ALL",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:100 ex64",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "kúkū-liē",
+              "ipa": "kʰu²⁴kʰu⁵⁵-liɛ⁵⁵",
+              "gloss": "お辞儀する-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1174",
+                    "attestation_id": "stedt-rn-453798",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 453798 · 原文定位 2.2",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        },
+        {
+          "translation": "zái kúkū-liē",
+          "tokens": [
+            {
+              "pinyin": "zái",
+              "ipa": "tsai²⁴",
+              "gloss": "再び",
+              "source": {
+                "entry_id": "w2626",
+                "attestation_id": "stedt-rn-458293",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 458293 · 原文定位 未标明",
+                "evidence": "existing query_ledger 再"
+              }
+            },
+            {
+              "pinyin": "kúkū-liē",
+              "ipa": "kʰu²⁴kʰu⁵⁵-liɛ⁵⁵",
+              "gloss": "お辞儀する-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1174",
+                    "attestation_id": "stedt-rn-453798",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 453798 · 原文定位 2.2",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        },
+        {
+          "translation": "zái kúkū-liē",
+          "tokens": [
+            {
+              "pinyin": "zái",
+              "ipa": "tsai²⁴",
+              "gloss": "再び",
+              "source": {
+                "entry_id": "w2626",
+                "attestation_id": "stedt-rn-458293",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 458293 · 原文定位 未标明",
+                "evidence": "existing query_ledger 再"
+              }
+            },
+            {
+              "pinyin": "kúkū-liē",
+              "ipa": "kʰu²⁴kʰu⁵⁵-liɛ⁵⁵",
+              "gloss": "お辞儀する-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1174",
+                    "attestation_id": "stedt-rn-453798",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 453798 · 原文定位 2.2",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": "独立した主節／独立した断言"
+        }
+      ]
+    },
+    {
+      "source": "そして、いただいたお米とお餅で、うれしいお正月を迎えました。",
+      "target_units": [
+        {
+          "translation": "Āiliē 地藏菩萨像 lié-nie líbū niē bābā hǒliě gèzē nièlīniègá-bǒ-mǒ cīkā-liē",
+          "tokens": [
+            {
+              "pinyin": "Āiliē",
+              "ipa": "ai⁵⁵liɛ⁵⁵",
+              "gloss": "CONN",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/event-linking.md",
+                "locator": "B04 w172 / B06 rn455291 CONN",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "地藏菩萨像",
+              "ipa": null,
+              "gloss": "地蔵菩薩像",
+              "source": {
+                "type": "Chinese insertion",
+                "evidence": "existing display.md / first-round translation"
+              }
+            },
+            {
+              "pinyin": "lié-nie",
+              "ipa": "liɛ²⁴-〔読音未確認〕",
+              "gloss": "与える-LNK",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w1372",
+                    "attestation_id": "stedt-rn-454349",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454349 · 原文定位 4.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "Feng2025 ex8/27; short-form property/relative linker",
+                    "evidence": "first-round untoned nie; no paired IPA supplied"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "líbū",
+              "ipa": "li²⁴pu⁵⁵",
+              "gloss": "米",
+              "source": {
+                "entry_id": "stedt-rn-454099",
+                "attestation_id": "stedt-rn-454099",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454099 · 原文定位 3.3",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "CONN",
+              "source": {
+                "entry_id": "w1618",
+                "attestation_id": "stedt-rn-455298",
+                "source_id": "stedt-39f4cd9a6b",
+                "locator": "STEDT rn 455298 · 原文定位 7.6",
+                "selected_sense": "和",
+                "evidence": "existing query_ledger"
+              }
+            },
+            {
+              "pinyin": "bābā",
+              "ipa": "pa⁵⁵pa⁵⁵",
+              "gloss": "餅",
+              "source": {
+                "entry_id": "w204",
+                "attestation_id": "stedt-rn-454447",
+                "source_id": "brassett-2006",
+                "locator": "STEDT rn 454447 · 原文定位 4.4",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "hǒliě",
+              "ipa": "xuɔ²¹lie²¹",
+              "gloss": "INS",
+              "source": {
+                "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                "locator": "B06:154 ex37 INS",
+                "evidence": "quoted existing grammar witness; source base transcription"
+              }
+            },
+            {
+              "pinyin": "gèzē",
+              "ipa": "kɤ⁵¹tsɤ⁵⁵",
+              "gloss": "彼ら",
+              "source": {
+                "entry_id": "w745",
+                "attestation_id": "stedt-rn-456210",
+                "source_id": "brassett-2004",
+                "locator": "STEDT rn 456210 · 原文定位 未标明",
+                "evidence": "translation.json existing token"
+              }
+            },
+            {
+              "pinyin": "nièlīniègá-bǒ-mǒ",
+              "ipa": "ȵiɛ⁵¹li⁵⁵ȵiɛ⁵¹ka²⁴-pɔ²¹-mɔ²¹",
+              "gloss": "喜ぶ-STAT-ADVZ",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "w4643",
+                    "attestation_id": "stedt-rn-454823",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454823 · 原文定位 6.2",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/clause-patterns.md",
+                    "locator": "B06:102 ex75; event-linking B06:90 ex110/111",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/event-linking.md",
+                    "locator": "B06:37 ex12;152–154",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            },
+            {
+              "pinyin": "cīkā-liē",
+              "ipa": "tsʰɨ⁵⁵kʰa⁵⁵-liɛ⁵⁵",
+              "gloss": "正月を迎える-PFV",
+              "source": {
+                "components": [
+                  {
+                    "entry_id": "stedt-rn-454690",
+                    "attestation_id": "stedt-rn-454690",
+                    "source_id": "brassett-2006",
+                    "locator": "STEDT rn 454690 · 原文定位 5.3",
+                    "evidence": "translation.json existing token"
+                  },
+                  {
+                    "reference": "/workspace/bizic-translator/skills/translate-tujia/references/aspect-modality.md",
+                    "locator": "B06:139–140 table7.1 PFV",
+                    "evidence": "quoted existing grammar witness; source base transcription"
+                  }
+                ]
+              }
+            }
+          ],
+          "relation_to_previous": null
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "既存の初回訳の語彙・意味選択と語順を保ち、語境界と注釈だけを整えた。訳の妥当性を新たに認定するものではない。",
+    "漢語挿入の発音欄は空欄（null）。無声調の nie は同一形の対応する IPA が初回資料に無いため、語内で「読音未確認」とした。",
+    "IPA は各語の既存見証または引用された文法例の基底表記。文中の連続変調は再構成していない。",
+    "niě/nie は実際の構造に従い GEN（所有・所属）と LNK（性質・関係節・場所による修飾）を区別した。名詞を明示する既存訳に独立名詞化は追加していない。",
+    "初回の自動詞元記録にあった同音異義の取り違えを、既存訳の意味役割と取得済み見証で訂正した。tái は一箇所のみ「貧しい」、他は「無い」。dá は数量句で「個」、否定位置で NEG。niē は CONN、zí は雪が「降る」、hǔ は INCH、dǒ は CAUS、pē は「包む」、lā は PROG、cá は「したい」、zái は「再び」。",
+    "「第六尊地藏菩萨像」「六尊」は初回からの漢語挿入として保持した。第17・18行の引用は元の日本語の実際の句点に従う二文として別に示した。",
+    "第15文では外側の発話枠を保ったまま二つの引用断言を別組にした。第25文の反復するお辞儀は各独立述語を別組にした。"
+  ],
+  "abbreviations": {
+    "PFV": "perfective／完整体",
+    "STAT": "stative／状态",
+    "PROG": "progressive／进行",
+    "INCH": "inchoative／起始、新情况",
+    "IRR": "irrealis／未然",
+    "NEG": "negation／否定",
+    "LNK": "linker／修饰连接",
+    "GEN": "genitive／领属",
+    "CONN": "connective／连接",
+    "ADVZ": "adverbializer／方式化",
+    "INS": "instrumental／工具格",
+    "DAT": "dative／与格",
+    "BEN": "benefactive／受益",
+    "ALL": "allative／向格",
+    "ABL": "ablative／离格",
+    "CAUS": "causative／使役",
+    "FOC": "focus／焦点",
+    "VEN": "venitive／向心"
+  }
+}

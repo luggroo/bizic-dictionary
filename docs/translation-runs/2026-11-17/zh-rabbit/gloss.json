@@ -1,0 +1,378 @@
+{
+  "clauses": [
+    {
+      "source": "宋人有耕者，田中有株，兔走触株，折颈而死。",
+      "target_units": [
+        {
+          "translation": "宋国 wótū sígētiē qiě-nie lò lá hǔ xié",
+          "tokens": [
+            {
+              "pinyin": "宋国",
+              "ipa": null,
+              "gloss": "宋国",
+              "source": "既有译文保留的汉语专名"
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "里面",
+              "source": "brassett-2006; stedt-rn-455022; STEDT rn 455022 · 原文定位 6.5"
+            },
+            {
+              "pinyin": "sígētiē",
+              "ipa": "sɨ²⁴kɤ⁵⁵tʰiɛ⁵⁵",
+              "gloss": "田",
+              "source": "brassett-2006; stedt-rn-454126; STEDT rn 454126 · 原文定位 3.3"
+            },
+            {
+              "pinyin": "qiě-nie",
+              "ipa": "tɕʰiɛ²¹-ɲie",
+              "gloss": "耕-LNK",
+              "source": "brassett-2006; stedt-rn-454119; STEDT rn 454119 · 原文定位 3.3 | B06:95 ex24; clause-patterns.md（新拟连接成分不定调）"
+            },
+            {
+              "pinyin": "lò",
+              "ipa": "luɔ⁵¹",
+              "gloss": "人",
+              "source": "brassett-2006; stedt-rn-453974; STEDT rn 453974 · 原文定位 2.5"
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": "brassett-2006; stedt-rn-455088; STEDT rn 455088 · 原文定位 7.2"
+            },
+            {
+              "pinyin": "hǔ",
+              "ipa": "读音待核",
+              "gloss": "个",
+              "source": "brassett-2004; stedt-rn-456359; STEDT rn 456359 · 原文定位 未标明; 已复查 dictionary.json.gz w875 同见证 stedt-rn-456359，原派生IPA fu²¹与hǔ存在音形疑点"
+            },
+            {
+              "pinyin": "xié",
+              "ipa": "ɕiɛ²⁴",
+              "gloss": "有",
+              "source": "brassett-2006; stedt-rn-454792; STEDT rn 454792 · 原文定位 6.1"
+            }
+          ],
+          "source_clause_id": "s1a",
+          "relation": "存在断言"
+        },
+        {
+          "translation": "sígētiē wótū kǎtǐmī xié",
+          "tokens": [
+            {
+              "pinyin": "sígētiē",
+              "ipa": "sɨ²⁴kɤ⁵⁵tʰiɛ⁵⁵",
+              "gloss": "田",
+              "source": "brassett-2006; stedt-rn-454126; STEDT rn 454126 · 原文定位 3.3"
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "里面",
+              "source": "brassett-2006; stedt-rn-455022; STEDT rn 455022 · 原文定位 6.5"
+            },
+            {
+              "pinyin": "kǎtǐmī",
+              "ipa": "kʰa²¹tʰi²¹mi⁵⁵",
+              "gloss": "树桩",
+              "source": "brassett-2006; stedt-rn-453648; STEDT rn 453648 · 原文定位 1.4"
+            },
+            {
+              "pinyin": "xié",
+              "ipa": "ɕiɛ²⁴",
+              "gloss": "有",
+              "source": "brassett-2006; stedt-rn-454792; STEDT rn 454792 · 原文定位 6.1"
+            }
+          ],
+          "source_clause_id": "s1b",
+          "relation": "存在断言"
+        },
+        {
+          "translation": "mǎotáo xìcǎ mǒ kǎtǐmī pén-liē",
+          "tokens": [
+            {
+              "pinyin": "mǎotáo",
+              "ipa": "mau²¹tʰau²⁴",
+              "gloss": "兔子",
+              "source": "brassett-2006; stedt-rn-453578; STEDT rn 453578 · 原文定位 1.3"
+            },
+            {
+              "pinyin": "xìcǎ",
+              "ipa": "ɕi⁵¹tsʰa²¹",
+              "gloss": "跑",
+              "source": "brassett-2006; stedt-rn-453829; STEDT rn 453829 · 原文定位 2.2"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "B06:37 ex12; event-linking.md"
+            },
+            {
+              "pinyin": "kǎtǐmī",
+              "ipa": "kʰa²¹tʰi²¹mi⁵⁵",
+              "gloss": "树桩",
+              "source": "brassett-2006; stedt-rn-453648; STEDT rn 453648 · 原文定位 1.4"
+            },
+            {
+              "pinyin": "pén-liē",
+              "ipa": "pʰɜŋ²⁴-liɛ⁵⁵",
+              "gloss": "碰-PFV",
+              "source": "brassett-2004; stedt-rn-457285; STEDT rn 457285 · 原文定位 未标明 | B06:139–140 table7.1; aspect-modality.md"
+            }
+          ],
+          "source_clause_id": "s1c",
+          "relation": "动作断言；跑为方式从属"
+        },
+        {
+          "translation": "gó nie kōngdī kǒ-liē",
+          "tokens": [
+            {
+              "pinyin": "gó",
+              "ipa": "kuɔ²⁴",
+              "gloss": "它",
+              "source": "brassett-2006; stedt-rn-455181; STEDT rn 455181 · 原文定位 7.4"
+            },
+            {
+              "pinyin": "nie",
+              "ipa": "ɲie",
+              "gloss": "GEN",
+              "source": "B06:95 ex24; clause-patterns.md（新拟连接成分不定调）"
+            },
+            {
+              "pinyin": "kōngdī",
+              "ipa": "kʰɔŋ⁵⁵ti⁵⁵",
+              "gloss": "脖子",
+              "source": "brassett-2006; stedt-rn-453724; STEDT rn 453724 · 原文定位 2.1"
+            },
+            {
+              "pinyin": "kǒ-liē",
+              "ipa": "kʰuɔ²¹-liɛ⁵⁵",
+              "gloss": "断-PFV",
+              "source": "brassett-2006; stedt-rn-454341; STEDT rn 454341 · 原文定位 4.3 | B06:139–140 table7.1; aspect-modality.md"
+            }
+          ],
+          "source_clause_id": "s1d",
+          "relation": "结果断言"
+        },
+        {
+          "translation": "gó sé-liē",
+          "tokens": [
+            {
+              "pinyin": "gó",
+              "ipa": "kuɔ²⁴",
+              "gloss": "它",
+              "source": "brassett-2006; stedt-rn-455181; STEDT rn 455181 · 原文定位 7.4"
+            },
+            {
+              "pinyin": "sé-liē",
+              "ipa": "sɤ²⁴-liɛ⁵⁵",
+              "gloss": "死-PFV",
+              "source": "brassett-2006; stedt-rn-453876; STEDT rn 453876 · 原文定位 2.3 | B06:139–140 table7.1; aspect-modality.md"
+            }
+          ],
+          "source_clause_id": "s1d",
+          "relation": "结果断言"
+        }
+      ]
+    },
+    {
+      "source": "因释其耒而守株，冀复得到兔。",
+      "target_units": [
+        {
+          "translation": "āimǒ sígētiē qiě-nie lò gó-nie 耒 pō-liē",
+          "tokens": [
+            {
+              "pinyin": "āimǒ",
+              "ipa": "ai⁵⁵mɔ²¹",
+              "gloss": "CONN",
+              "source": "B06 §7.6 rn455293 / B04 w174; event-linking.md"
+            },
+            {
+              "pinyin": "sígētiē",
+              "ipa": "sɨ²⁴kɤ⁵⁵tʰiɛ⁵⁵",
+              "gloss": "田",
+              "source": "brassett-2006; stedt-rn-454126; STEDT rn 454126 · 原文定位 3.3"
+            },
+            {
+              "pinyin": "qiě-nie",
+              "ipa": "tɕʰiɛ²¹-ɲie",
+              "gloss": "耕-LNK",
+              "source": "brassett-2006; stedt-rn-454119; STEDT rn 454119 · 原文定位 3.3 | B06:95 ex24; clause-patterns.md（新拟连接成分不定调）"
+            },
+            {
+              "pinyin": "lò",
+              "ipa": "luɔ⁵¹",
+              "gloss": "人",
+              "source": "brassett-2006; stedt-rn-453974; STEDT rn 453974 · 原文定位 2.5"
+            },
+            {
+              "pinyin": "gó-nie",
+              "ipa": "kuɔ²⁴-ɲie",
+              "gloss": "他-LNK",
+              "source": "brassett-2006; stedt-rn-455181; STEDT rn 455181 · 原文定位 7.4 | B06:95 ex24; clause-patterns.md（新拟连接成分不定调）"
+            },
+            {
+              "pinyin": "耒",
+              "ipa": null,
+              "gloss": "耒",
+              "source": "既有译文汉语插入"
+            },
+            {
+              "pinyin": "pō-liē",
+              "ipa": "pʰɔ⁵⁵-liɛ⁵⁵",
+              "gloss": "放下-PFV",
+              "source": "brassett-2006; stedt-rn-454377; STEDT rn 454377 · 原文定位 4.3 | B06:139–140 table7.1; aspect-modality.md"
+            }
+          ],
+          "source_clause_id": "s2a",
+          "relation": "承接因果；独立主句"
+        },
+        {
+          "translation": "kǎtǐmī sétā tì-bǒ",
+          "tokens": [
+            {
+              "pinyin": "kǎtǐmī",
+              "ipa": "kʰa²¹tʰi²¹mi⁵⁵",
+              "gloss": "树桩",
+              "source": "brassett-2006; stedt-rn-453648; STEDT rn 453648 · 原文定位 1.4"
+            },
+            {
+              "pinyin": "sétā",
+              "ipa": "sɤ²⁴tʰa⁵⁵",
+              "gloss": "旁边",
+              "source": "brassett-2006; stedt-rn-455018; STEDT rn 455018 · 原文定位 6.5"
+            },
+            {
+              "pinyin": "tì-bǒ",
+              "ipa": "tʰi⁵¹-pɔ²¹",
+              "gloss": "等候-STAT",
+              "source": "brassett-2006; stedt-rn-454411; STEDT rn 454411 · 原文定位 4.3 | B06:90 ex110; event-linking.md"
+            }
+          ],
+          "source_clause_id": "s2b",
+          "relation": "持续等候断言"
+        },
+        {
+          "translation": "mǎotáo zái tǐ-cá",
+          "tokens": [
+            {
+              "pinyin": "mǎotáo",
+              "ipa": "mau²¹tʰau²⁴",
+              "gloss": "兔子",
+              "source": "brassett-2006; stedt-rn-453578; STEDT rn 453578 · 原文定位 1.3"
+            },
+            {
+              "pinyin": "zái",
+              "ipa": "tsai²⁴",
+              "gloss": "再",
+              "source": "brassett-2004; stedt-rn-458293; STEDT rn 458293 · 原文定位 未标明"
+            },
+            {
+              "pinyin": "tǐ-cá",
+              "ipa": "tʰi²¹-tsʰa²⁴",
+              "gloss": "得到-想",
+              "source": "brassett-2006; stedt-rn-454410; STEDT rn 454410 · 原文定位 4.3 | B06:129–130; aspect-modality.md"
+            }
+          ],
+          "source_clause_id": "s2c",
+          "relation": "意愿断言"
+        }
+      ]
+    },
+    {
+      "source": "兔不可复得，而身为宋国笑。",
+      "target_units": [
+        {
+          "translation": "mǎotáo zái tǐ-tā-tī",
+          "tokens": [
+            {
+              "pinyin": "mǎotáo",
+              "ipa": "mau²¹tʰau²⁴",
+              "gloss": "兔子",
+              "source": "brassett-2006; stedt-rn-453578; STEDT rn 453578 · 原文定位 1.3"
+            },
+            {
+              "pinyin": "zái",
+              "ipa": "tsai²⁴",
+              "gloss": "再",
+              "source": "brassett-2004; stedt-rn-458293; STEDT rn 458293 · 原文定位 未标明"
+            },
+            {
+              "pinyin": "tǐ-tā-tī",
+              "ipa": "tʰi²¹-tʰa⁵⁵-tʰi⁵⁵",
+              "gloss": "得到-NEG-能",
+              "source": "brassett-2006; stedt-rn-454410; STEDT rn 454410 · 原文定位 4.3 | B06:127–128; aspect-modality.md | B06:127–128; aspect-modality.md"
+            }
+          ],
+          "source_clause_id": "s3a",
+          "relation": "否定能力断言"
+        },
+        {
+          "translation": "qiè 宋国 niě lò gó 嘲笑-liē",
+          "tokens": [
+            {
+              "pinyin": "qiè",
+              "ipa": "tɕʰiɛ⁵¹",
+              "gloss": "CONN",
+              "source": "brassett-2006; stedt-rn-455276; STEDT rn 455276 · 原文定位 7.5"
+            },
+            {
+              "pinyin": "宋国",
+              "ipa": null,
+              "gloss": "宋国",
+              "source": "既有译文保留的汉语专名"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": "B06:56 §4.3.6; clause-patterns.md"
+            },
+            {
+              "pinyin": "lò",
+              "ipa": "luɔ⁵¹",
+              "gloss": "人",
+              "source": "brassett-2006; stedt-rn-453974; STEDT rn 453974 · 原文定位 2.5"
+            },
+            {
+              "pinyin": "gó",
+              "ipa": "kuɔ²⁴",
+              "gloss": "他",
+              "source": "brassett-2006; stedt-rn-455181; STEDT rn 455181 · 原文定位 7.4"
+            },
+            {
+              "pinyin": "嘲笑-liē",
+              "ipa": "-liɛ⁵⁵",
+              "gloss": "嘲笑-PFV",
+              "source": "既有译文汉语插入 | B06:139–140 table7.1; aspect-modality.md",
+              "ipa_segments": [
+                null,
+                "liɛ⁵⁵"
+              ]
+            }
+          ],
+          "source_clause_id": "s3b",
+          "relation": "转折主句"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "记音采用原见证基记；新拟句的连读实现未核。nie按已有无调拼写保留，IPA记音段ɲie，不增补固定声调。",
+    "hǔ“个”的同见证stedt-rn-456359在原词条w875中亦记录hu3及派生IPA fu²¹；音形疑点未解决，IPA列局部标“读音待核”，未猜改音值。",
+    "宋国、耒、嘲笑沿用首轮汉语保留或插入；其词根IPA为空。嘲笑-liē的IPA仅显示有据后缀-liɛ⁵⁵，ipa_segments保留空词根与后缀的结构。",
+    "“冀”沿用首轮“想再次得到”的译法；结句沿用“宋国的人嘲笑他”的主动结构。zái为实义重复副词，释“再”；wótū、sétā为处所词，释“里面、旁边”。"
+  ],
+  "abbreviations": {
+    "LNK": "linker；修饰连接",
+    "GEN": "genitive；领属",
+    "ADVZ": "adverbializer；方式化",
+    "PFV": "perfective；完整体",
+    "STAT": "stative；状态",
+    "CONN": "connective；小句连接",
+    "NEG": "negation；否定"
+  }
+}

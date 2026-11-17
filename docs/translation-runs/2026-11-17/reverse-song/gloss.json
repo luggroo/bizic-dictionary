@@ -1,0 +1,198 @@
+{
+  "clauses": [
+    {
+      "source": "meftaxcer lafdongx ongr xir civ,",
+      "translations": {
+        "zh": "雷轰隆一声，响得很大。",
+        "en": "Thunder booms once, very loudly.",
+        "ja": "雷が一度、ごろりと大きく鳴り響く。",
+        "bo": "འབྲུག་སྐད་ཐེངས་གཅིག་ཧ་ཅང་ཆེན་པོར་གྲགས།"
+      },
+      "target_units": [
+        {
+          "translation": "métācě lá dōng ǒng-xǐ cì",
+          "tokens": [
+            {
+              "pinyin": "métācě",
+              "ipa": "mɤ²⁴tʰa⁵⁵tsʰɤ²¹",
+              "gloss": "雷",
+              "source": "stedt-rn-453474 · STEDT rn 453474 · 原文定位 1.1"
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": "stedt-rn-455088 · STEDT rn 455088 · 原文定位 7.2"
+            },
+            {
+              "pinyin": "dōng",
+              "ipa": "toŋ⁵⁵",
+              "gloss": "下",
+              "source": "stedt-rn-392347 · STEDT rn 392347 · 原文定位 0920.49"
+            },
+            {
+              "pinyin": "ǒng-xǐ",
+              "ipa": "ɔŋ²¹-ɕi²¹",
+              "gloss": "响-很",
+              "source": "逐词素拼接基记（非整词语流见证）：stedt-rn-454367 · STEDT rn 454367 · 原文定位 4.3；stedt-rn-455432 · STEDT rn 455432 · 原文定位 未标明"
+            },
+            {
+              "pinyin": "cì",
+              "ipa": "tsʰɨ⁵¹",
+              "gloss": "大",
+              "source": "w442 · 词条 442"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "hufnix daxjiev mor serkex paf,",
+      "translations": {
+        "zh": "大家一同赶着耙田。",
+        "en": "Everyone presses on together, harrowing the fields.",
+        "ja": "みんな一緒に、急いで田をならす。",
+        "bo": "ཚང་མས་མཉམ་དུ་བྲེལ་བ་དང་བཅས་ཞིང་ལ་སོ་མང་རྒྱག"
+      },
+      "target_units": [
+        {
+          "translation": "húnī dà jiè mǒ sěkē pá",
+          "tokens": [
+            {
+              "pinyin": "húnī",
+              "ipa": "fu²⁴ȵi⁵⁵",
+              "gloss": "大家",
+              "source": "stedt-rn-456365 · STEDT rn 456365 · 原文定位 未标明"
+            },
+            {
+              "pinyin": "dà",
+              "ipa": "ta⁵¹",
+              "gloss": "一起",
+              "source": "stedt-rn-455216 · STEDT rn 455216 · 原文定位 7.5"
+            },
+            {
+              "pinyin": "jiè",
+              "ipa": "tɕiɛ⁵¹",
+              "gloss": "赶",
+              "source": "stedt-rn-454330 · STEDT rn 454330 · 原文定位 4.3"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "stedt-rn-457119 · STEDT rn 457119 · 原文定位 未标明"
+            },
+            {
+              "pinyin": "sěkē",
+              "ipa": "sɤ²¹kʰɤ⁵⁵",
+              "gloss": "田",
+              "source": "stedt-rn-457643 · STEDT rn 457643 · 原文定位 未标明"
+            },
+            {
+              "pinyin": "pá",
+              "ipa": "pʰa²⁴",
+              "gloss": "耙",
+              "source": "stedt-rn-457237 · STEDT rn 457237 · 原文定位 未标明"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "longrbair nier yerdiex rixhuax xief,",
+      "translations": {
+        "zh": "今年的粮食，有〔rixhuax：词义待核〕。",
+        "en": "For this year's food, there is [rixhuax: meaning unresolved].",
+        "ja": "今年の食べ物には、〔rixhuax：意味未確認〕がある。",
+        "bo": "ད་ལོའི་ཟས་རིགས་ལ་〔rixhuax：དོན་དག་ད་དུང་གསལ་པོ་མེད〕ཡོད།"
+      },
+      "target_units": [
+        {
+          "translation": "lǒngbǎi niě yě-diē 〔rixhuax：读音待核〕 xié",
+          "tokens": [
+            {
+              "pinyin": "lǒngbǎi",
+              "ipa": "lɔŋ²¹pai²¹",
+              "gloss": "今年",
+              "source": "stedt-rn-454977 · STEDT rn 454977 · 原文定位 6.4"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ȵiɛ²¹",
+              "gloss": "GEN",
+              "source": "stedt-rn-455406 · STEDT rn 455406 · 原文定位 未标明"
+            },
+            {
+              "pinyin": "yě-diē",
+              "ipa": "jɤ²¹-tiɛ⁵⁵",
+              "gloss": "食物-PL",
+              "source": "逐词素拼接基记（非整词语流见证）：stedt-rn-458211 · STEDT rn 458211 · 原文定位 未标明；stedt-rn-455322 · STEDT rn 455322 · 原文定位 7.8"
+            },
+            {
+              "pinyin": "〔rixhuax：读音待核〕",
+              "ipa": null,
+              "gloss": "词义待核",
+              "source": "translation-round2.json s3：整词词义及词界未解，不以部分词读音补作整词读音"
+            },
+            {
+              "pinyin": "xié",
+              "ipa": "ɕiɛ²⁴",
+              "gloss": "有",
+              "source": "stedt-rn-454792 · STEDT rn 454792 · 原文定位 6.1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "soxtir xiexqix sixjif heircef.",
+      "translations": {
+        "zh": "身上的力气，怎么使也使不完。",
+        "en": "The body's strength cannot be used up.",
+        "ja": "体の力は、使っても使い切れない。",
+        "bo": "ལུས་ཀྱི་སྟོབས་ཤུགས་སྤྱད་ཀྱང་རྫོགས་མི་ཐུབ།"
+      },
+      "target_units": [
+        {
+          "translation": "sòtǐ xiēqī sī-jí-hī-cē",
+          "tokens": [
+            {
+              "pinyin": "sòtǐ",
+              "ipa": "suɔ⁵¹tʰi²¹",
+              "gloss": "身体",
+              "source": "stedt-rn-453764 · STEDT rn 453764 · 原文定位 2.1"
+            },
+            {
+              "pinyin": "xiēqī",
+              "ipa": "ɕiɛ⁵⁵tɕʰi⁵⁵",
+              "gloss": "力气",
+              "source": "stedt-rn-454794 · STEDT rn 454794 · 原文定位 6.1"
+            },
+            {
+              "pinyin": "sī-jí-hī-cē",
+              "ipa": "si⁵⁵-tɕi²⁴-xɨ⁵⁵-tsʰɤ⁵⁵",
+              "gloss": "用-COMPL-NEG-做得动",
+              "source": "逐词素拼接基记（非整词语流见证）：stedt-rn-289086 · STEDT rn 289086 · 原文定位 未标明；stedt-rn-455380 · STEDT rn 455380 · 原文定位 未标明；stedt-rn-455376 · STEDT rn 455376 · 原文定位 未标明；按 output.md 能愿表切分否定与体力能愿"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "四语自由译文逐字复用 round2.md，未重新翻译。原文保留叶式记音；对齐组采用已有见证的调号拼音与IPA来源基记。",
+    "lafdongx 拆为 lá dōng；dōng 采用已有击打次数量词见证，gloss 为“下”。雷声语境及自由译文的“声”保持第二轮的试译，不新增词义判断。",
+    "daxjiev 拆为 dà jiè，dà“一起”与原文 dax 存高调／降调差异；整体方式义仍为第二轮试译。mǒ 标 ADVZ。",
+    "yerdiex 按第二轮暂定分析为 yě-diē（食物-PL）；niě 在时间领属短语中标 GEN。rixhuax 词义、词界及完整IPA仍未核定，以局部缺口显示。",
+    "ǒng-xǐ、yě-diē、sī-jí-hī-cē 为依据已有词素见证拼接的形态对齐，并无完整语流IPA见证；各词素内部的拼音与IPA均同见证，不用单个词素的IPA代替整个连写片段。",
+    "sòtǐ 采用原选身体词条完整同见证IPA，与 soxtir 有高调／降调差异。sī 采用原选高调“用”见证；hī-cē 采用原选 -hīcē 的基记，与 heircef 的韵母及词缀调值不同。hī 标 NEG，cē 整体释义“做得动”，保留用-COMPL-NEG-做得动的边界。",
+    "本轮仅复核已有 translation-round2.json、round2.md 和查询结果，未运行新词汇检索。"
+  ],
+  "abbreviations": {
+    "ADVZ": "adverbializer；方式化",
+    "GEN": "genitive；领属",
+    "PL": "plural；复数",
+    "COMPL": "completive；完结",
+    "NEG": "negation；否定"
+  }
+}
