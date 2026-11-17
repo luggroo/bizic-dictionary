@@ -43,5 +43,14 @@
     "clauses": 4,
     "target_units": 4,
     "format": "source + aligned pinyin / IPA / gloss"
+  },
+  {
+    "id": "ko-bandal",
+    "gloss_sha256": "80ebcf310e7faef49a79b87a83cc485ace5918ec3feaa56f802e19d4f6294e3c",
+    "pdf": "ko-bandal.pdf",
+    "pdf_sha256": "68b79dfa14abb0267375df32da1dc2ec116ddd6512c58204512120cdc24996a7",
+    "clauses": 6,
+    "target_units": 8,
+    "format": "source + aligned pinyin / IPA / gloss"
   }
 ]

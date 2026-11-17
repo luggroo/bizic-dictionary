@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "scripts/lookup-loan.py",
+    "作曲",
+    "--target",
+    "north"
+  ],
+  "stdout": "{\n  \"word\": \"作曲\",\n  \"target\": \"north\",\n  \"ipa\": \"tsuɔ²¹ tɕʰi²¹\",\n  \"romanization\": \"zǒ qǐ\",\n  \"display\": \"zǒ qǐ\",\n  \"method\": \"proposed-loan-mapping\",\n  \"status\": \"resolved\",\n  \"characters\": [\n    {\n      \"position\": 0,\n      \"character\": \"作\",\n      \"status\": \"resolved\",\n      \"reading\": {\n        \"source\": \"yongshun\",\n        \"source_ipa\": \"tsuo2\",\n        \"sense\": \"\",\n        \"historical_tone\": null,\n        \"source_category\": \"2\",\n        \"ipa\": \"tsuɔ²¹\",\n        \"romanization\": \"zǒ\",\n        \"tone\": \"21\",\n        \"changes\": [\n          \"ts→ts\",\n          \"uo→uɔ\"\n        ],\n        \"method\": \"proposed-loan-mapping\",\n        \"senses\": []\n      }\n    },\n    {\n      \"position\": 1,\n      \"character\": \"曲\",\n      \"status\": \"resolved\",\n      \"reading\": {\n        \"source\": \"yongshun\",\n        \"source_ipa\": \"tɕʰi2\",\n        \"sense\": \"\",\n        \"historical_tone\": null,\n        \"source_category\": \"2\",\n        \"ipa\": \"tɕʰi²¹\",\n        \"romanization\": \"qǐ\",\n        \"tone\": \"21\",\n        \"changes\": [\n          \"tɕʰ→tɕʰ\",\n          \"i→i\"\n        ],\n        \"method\": \"proposed-loan-mapping\",\n        \"senses\": []\n      }\n    }\n  ]\n}\n",
+  "stderr": "",
+  "returncode": 0
+}

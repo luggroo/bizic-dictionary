@@ -5,8 +5,9 @@ from PIL import ImageFont
 ROOT=Path(__file__).resolve().parents[3]
 RECORDS=Path(__file__).resolve().parent
 SITE=ROOT/'site';OUT=SITE/'translation-runs'
-IDS=['en-crow','zh-rabbit','ja-jizo','bo-crane','reverse-song']
-TITLES={'en-crow':('乌鸦喝水','The Crow and the Pitcher'),'zh-rabbit':('守株待兔','Waiting by a Tree Stump'),'ja-jizo':('笠地蔵','The Jizō Statues and the Straw Hats'),'bo-crane':('洁白的仙鹤','The White Crane'),'reverse-song':('四行土家语歌','A Four-Line Tujia Song')}
+IDS=['en-crow','zh-rabbit','ja-jizo','bo-crane','reverse-song','ko-bandal']
+COMBINED_STEM='all-translations'
+TITLES={'en-crow':('乌鸦喝水','The Crow and the Pitcher'),'zh-rabbit':('守株待兔','Waiting by a Tree Stump'),'ja-jizo':('笠地蔵','The Jizō Statues and the Straw Hats'),'bo-crane':('洁白的仙鹤','The White Crane'),'reverse-song':('四行土家语歌','A Four-Line Tujia Song'),'ko-bandal':('半月（반달）','Half Moon (반달)')}
 RECORD_URL='https://github.com/luggroo/bizic-dictionary/tree/main/docs/translation-runs/2026-11-17'
 LABELS=json.loads((RECORDS/'gloss-label-inventory.json').read_text())
 FONTDIR=Path('/usr/share/fonts')
@@ -15,12 +16,12 @@ FONTS={
  'cjk':ImageFont.truetype(str(FONTDIR/'opentype/noto/NotoSerifCJK-Regular.ttc'),44),
  'tibetan':ImageFont.truetype(str(FONTDIR/'truetype/noto/NotoSerifTibetan-Regular.ttf'),48),
 }
-CSS='''*{box-sizing:border-box}body{margin:0;background:#f5f6f1;color:#203c34;font:16px/1.7 "Noto Serif","Noto Serif CJK SC","Noto Serif Tibetan",serif}main{max-width:960px;margin:auto;padding:32px 24px}a{color:#16584c}header{border-bottom:1px solid #c9d5cd;padding-bottom:24px}h1{font-size:28px;line-height:1.4}h2{font-size:23px}h3{font-size:18px}article{background:white;border:1px solid #d5ded7;border-radius:8px;margin:28px 0;padding:24px;scroll-margin-top:20px}.downloads{display:flex;flex-wrap:wrap;gap:16px}nav ul{display:flex;gap:20px;flex-wrap:wrap;padding:0;list-style:none}.source{white-space:pre-wrap;margin:1.1em 0 .7em;break-after:avoid}.source[lang=bo]{font-size:1.1em;line-height:1.8}.unit-label{font-size:.8em;margin:.8em 0 .1em}.gloss-unit{margin:0 0 1em}.gloss-chunk{break-inside:avoid;overflow-x:auto;margin:0 0 .5em}.interlinear{border-collapse:collapse;table-layout:fixed;width:max-content;max-width:none;margin:0;font-size:11pt;line-height:1.75}.interlinear td{border:0;padding:0 8pt 0 0;text-align:left;vertical-align:top;white-space:nowrap}.pinyin{font-style:italic}.ipa,.gloss{font-style:normal}.gloss [lang=bo]{font-size:12pt}.notes{font-size:.9em;margin-top:1.5em}.abbreviations{font-size:.9em}.translation{margin:.25em 0;line-height:1.7}.screen-only{display:block}.print-only{display:none}@page{size:A4;margin:18mm 17mm 19mm;@bottom-center{content:counter(page);font:9pt "Noto Serif",serif}}@media print{body{background:white;color:black;font-size:11pt;line-height:1.65}main{padding:0;max-width:none}header{border:0;padding:0;margin-bottom:1em}h1{font-size:17pt}h2{font-size:14pt}h3{font-size:11pt}.case{background:none;border:0;border-radius:0;padding:0;margin:0;break-before:page}.case:first-child,.paper-heading + .case{break-before:auto}.paper-heading{margin-bottom:1em}.gloss-chunk{overflow:visible}.interlinear{font-size:11pt}.source{background:none;padding:0}.screen-only,nav,.downloads{display:none}.print-only{display:block}a{color:black;text-decoration:none}h1,h2,h3{break-after:avoid}.notes{font-size:9pt}.unit-label{font-size:9pt}.abbreviations{font-size:9pt;line-height:1.5;break-inside:avoid}}'''
+CSS='''*{box-sizing:border-box}body{margin:0;background:#f5f6f1;color:#203c34;font:16px/1.7 "Noto Serif","Noto Serif CJK SC","Noto Serif Tibetan",serif}main{max-width:960px;margin:auto;padding:32px 24px}a{color:#16584c}header{border-bottom:1px solid #c9d5cd;padding-bottom:24px}h1{font-size:28px;line-height:1.4}h2{font-size:23px}h3{font-size:18px}article{background:white;border:1px solid #d5ded7;border-radius:8px;margin:28px 0;padding:24px;scroll-margin-top:20px}.downloads{display:flex;flex-wrap:wrap;gap:16px}nav ul{display:flex;gap:20px;flex-wrap:wrap;padding:0;list-style:none}.source{white-space:pre-wrap;margin:1.1em 0 .7em;break-after:avoid}.source[lang=bo]{font-size:1.1em;line-height:1.8}.unit-label{font-size:.8em;margin:.8em 0 .1em}.gloss-unit{margin:0 0 1em}.gloss-chunk{break-inside:avoid;overflow-x:auto;margin:0 0 .5em}.interlinear{border-collapse:collapse;table-layout:fixed;width:max-content;max-width:none;margin:0;font-size:11pt;line-height:1.75}.interlinear td{border:0;padding:0 8pt 0 0;text-align:left;vertical-align:top;white-space:nowrap}.pinyin{font-style:italic}.ipa,.gloss{font-style:normal}.gloss [lang=bo]{font-size:12pt}:lang(ko){font-family:"Noto Serif CJK KR","Noto Serif",serif}.notes{font-size:.9em;margin-top:1.5em}.abbreviations{font-size:.9em}.translation{margin:.25em 0;line-height:1.7}.screen-only{display:block}.print-only{display:none}@page{size:A4;margin:18mm 17mm 19mm;@bottom-center{content:counter(page);font:9pt "Noto Serif",serif}}@media print{body{background:white;color:black;font-size:11pt;line-height:1.65}main{padding:0;max-width:none}header{border:0;padding:0;margin-bottom:1em}h1{font-size:17pt}h2{font-size:14pt}h3{font-size:11pt}.case{background:none;border:0;border-radius:0;padding:0;margin:0;break-before:page}.case:first-child,.paper-heading + .case{break-before:auto}.paper-heading{margin-bottom:1em}.gloss-chunk{overflow:visible}.interlinear{font-size:11pt}.source{background:none;padding:0}.screen-only,nav,.downloads{display:none}.print-only{display:block}a{color:black;text-decoration:none}h1,h2,h3{break-after:avoid}.notes{font-size:9pt}.unit-label{font-size:9pt}.abbreviations{font-size:9pt;line-height:1.5;break-inside:avoid}}'''
 def esc(x):return html.escape(str(x))
 def width(text):
  text=str(text)
  if any('\u0f00'<=c<='\u0fff' for c in text):f=FONTS['tibetan']
- elif any(ord(c)>0x2e7f and ord(c)<0xa000 for c in text):f=FONTS['cjk']
+ elif any(unicodedata.east_asian_width(c) in ('W','F') for c in text):f=FONTS['cjk']
  else:f=FONTS['latin']
  return f.getlength(text)/4*1.13
 
@@ -44,7 +45,7 @@ def table(tokens,label=None):
    cells=[]
    for t,w in group:
     value=t.get(field) or ''
-    lang=' lang="bo"' if any('\u0f00'<=c<='\u0fff' for c in value) else ''
+    lang=' lang="bo"' if any('\u0f00'<=c<='\u0fff' for c in value) else (' lang="ko"' if any('\uac00'<=c<='\ud7af' for c in value) else '')
     cells.append('<td'+lang+'>'+esc(value)+'</td>')
    rows.append('<tr class="'+cls+'">'+''.join(cells)+'</tr>')
   out.append('<div class="gloss-chunk">'+('<p class="unit-label">'+esc(label)+'</p>' if label and chunk_index==0 else '')+'<table class="interlinear" style="width:%.2fpt">'%total+'<colgroup>'+cols+'</colgroup><tbody>'+''.join(rows)+'</tbody></table></div>')
@@ -79,7 +80,7 @@ def body_case(cid,data,en=False,start=1):
  out=['<article class="case" id="'+cid+'"><h2>'+TITLES[cid][en]+'</h2>']
  out.append('<p class="screen-only"><a href="translation-runs/'+cid+'.pdf">'+('Download interlinear gloss PDF' if en else '下载逐词对照 PDF')+'</a></p>')
  for i,c in enumerate(data['clauses'],start):
-  lang=' lang="bo"' if cid=='bo-crane' else ''
+  lang=' lang="bo"' if cid=='bo-crane' else (' lang="ko"' if cid=='ko-bandal' else '')
   out.append('<section class="sentence"><p class="source"'+lang+'><span class="number">('+str(i)+')</span> '+esc(c['source'])+'</p>')
   for j,u in enumerate(c['target_units']):
    label=str(i)+chr(97+j) if len(c['target_units'])>1 else None
@@ -109,33 +110,43 @@ def build(only=None):
   manifest.append({'id':cid,'gloss_sha256':hashlib.sha256((RECORDS/cid/'gloss.json').read_bytes()).hexdigest(),'pdf':pdf.name,'pdf_sha256':hashlib.sha256(pdf.read_bytes()).hexdigest(),'clauses':len(d['clauses']),'target_units':sum(len(c['target_units']) for c in d['clauses']),'format':'source + aligned pinyin / IPA / gloss'})
  if only:return manifest
  for en in [False,True]:
-  lang='en' if en else 'zh';name='translation-runs-en.html' if en else 'translation-runs.html';title='Five translations with interlinear gloss' if en else '五例译文与逐词对照'
+  lang='en' if en else 'zh';name='translation-runs-en.html' if en else 'translation-runs.html';title='Six translations with interlinear gloss' if en else '六例译文与逐词对照'
   note='Sources and Tujia forms are aligned word by word with IPA and gloss. Some expressions remain provisional or use Chinese insertions; the song’s rixhuax is unresolved.' if en else '各例按原文逐句列出土家语拼音、IPA 和逐词释义。汉语插入的读音位置留空；词义及读音疑点在局部标明。歌谣的 rixhuax 仍未解。'
-  header='<header><div class="downloads"><a href="'+('translation-en.html' if en else 'translation.html')+'">'+('Translation examples' if en else '翻译例子')+'</a><a href="'+('translation-runs.html' if en else 'translation-runs-en.html')+'">'+('中文' if en else 'English')+'</a></div><h1>'+title+'</h1><p>'+note+'</p><div class="downloads"><a href="translation-runs/five-translations.pdf">'+('Download combined gloss PDF' if en else '下载五例 gloss 合集 PDF')+'</a><a href="'+RECORD_URL+'">'+('Sources and lookup records' if en else '查看来源与检索记录')+'</a><a href="https://raw.githubusercontent.com/luggroo/bizic-dictionary/main/docs/translation-runs/2026-11-17/records.zip">'+('Download complete records' if en else '下载完整记录')+'</a></div></header>'
+  header='<header><div class="downloads"><a href="'+('translation-en.html' if en else 'translation.html')+'">'+('Translation examples' if en else '翻译例子')+'</a><a href="'+('translation-runs.html' if en else 'translation-runs-en.html')+'">'+('中文' if en else 'English')+'</a></div><h1>'+title+'</h1><p>'+note+'</p><div class="downloads"><a href="translation-runs/all-translations.pdf">'+('Download combined gloss PDF' if en else '下载六例 gloss 合集 PDF')+'</a><a href="'+RECORD_URL+'">'+('Sources and lookup records' if en else '查看来源与检索记录')+'</a><a href="https://raw.githubusercontent.com/luggroo/bizic-dictionary/main/docs/translation-runs/2026-11-17/records.zip">'+('Download complete records' if en else '下载完整记录')+'</a></div></header>'
   nav='<nav><ul>'+''.join('<li><a href="#'+cid+'">'+TITLES[cid][en]+'</a></li>' for cid in ids)+'</ul></nav>'
   parts=[];number=1
   for cid in ids:parts.append(body_case(cid,data[cid],en,number));number+=len(data[cid]['clauses'])
   path=SITE/name;path.write_text(document(header+nav+''.join(parts),lang,title,name))
   if not en:
-   paper='<div class="paper-heading"><h1>五例逐词对照</h1></div>'+''.join(parts)
-   paperpath=OUT/'five-translations.html';paperpath.write_text(document(paper,'zh','五例逐词对照'))
-   HTML(filename=str(paperpath)).write_pdf(str(OUT/'five-translations.pdf'))
+   paper='<div class="paper-heading"><h1>六例逐词对照</h1></div>'+''.join(parts)
+   paperpath=OUT/(COMBINED_STEM+'.html');paperpath.write_text(document(paper,'zh','六例逐词对照'))
+   HTML(filename=str(paperpath)).write_pdf(str(OUT/(COMBINED_STEM+'.pdf')))
  for name,en in [('translation.html',False),('translation-en.html',True)]:
   p=SITE/name;s=p.read_text();s=re.sub(r'<p class="independent-drafts-link">.*?</p>','',s)
-  link='<p class="independent-drafts-link"><a href="'+('translation-runs-en.html' if en else 'translation-runs.html')+'">'+('Five independent drafts with interlinear gloss PDFs' if en else '五例独立译稿与逐词对照 PDF')+'</a></p>'
-  p.write_text(s.replace('id="examples">','id="examples">'+link,1))
+  link='<p class="independent-drafts-link"><a href="'+('translation-runs-en.html' if en else 'translation-runs.html')+'">'+('Six independent drafts with interlinear gloss PDFs' if en else '六例独立译稿与逐词对照 PDF')+'</a></p>'
+  s=s.replace('id="examples">','id="examples">'+link,1)
+  s=re.sub(r'<a class="card korean-example".*?</a>','',s)
+  korean='<a class="card korean-example" href="'+('translation-runs-en.html' if en else 'translation-runs.html')+'#ko-bandal"><small>'+('Korean → Northern Tujia' if en else '韩语 → 北部土家语')+'</small><strong>'+('Half Moon (반달) →' if en else '半月（반달） →')+'</strong></a>'
+  s=re.sub(r'(<div class="cards">)(.*?)(</div>)',lambda m:m[1]+m[2]+korean+m[3],s,count=1,flags=re.S)
+  begin=s.index('id="examples"');end=s.index('<div class="cards">',begin)
+  intro_en='Examples translate English, Classical Chinese, Japanese, Tibetan and Korean into Northern Tujia, and Tujia into other languages. Each includes the source text and an interlinear gloss PDF.'
+  intro_zh='例子包括英语、文言汉语、日语、藏语和韩语译入北部土家语，以及土家语译入其他语言；各例提供原文和逐词对照 PDF。'
+  intro='<p class="">'+('<span data-en="'+intro_en+'" data-zh="'+intro_zh+'">'+(intro_en if en else intro_zh)+'</span>')+'</p>'
+  section=re.sub(r'<p class="">.*?</p>',lambda _:intro,s[begin:end],count=1,flags=re.S)
+  s=s[:begin]+section+s[end:]
+  p.write_text(s)
  (RECORDS/'gloss-publication-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
  (RECORDS/'publication-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
  archive=RECORDS/'records.zip';old=Path('/workspace/bizic-translator/docs/evaluation/blind-five-2026-11-17');rerun=Path('/workspace/tibetan-rerun-result')
  with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:
-  for base,prefix in [(old,'first-blind-run'),(rerun,'published-tibetan-rerun')]:
+  for base,prefix in [(old,'first-blind-run'),(rerun,'published-tibetan-rerun'),(Path('/workspace/korean-bandall-result'),'korean-bandal-run')]:
    for p in base.rglob('*'):
     if p.is_file() and '__pycache__' not in p.parts and 'song-normalize' not in p.parts:z.write(p,Path(prefix)/p.relative_to(base))
   for cid in ids:
    for name in ['gloss.json','gloss-audit.md']:z.write(RECORDS/cid/name,Path('aligned-gloss')/cid/name)
   for name in ['build-publication.py','gloss-publication-manifest.json','gloss-label-inventory.json']:z.write(RECORDS/name,Path('aligned-gloss')/name)
   for cid in ids:z.write(OUT/(cid+'.pdf'),Path('aligned-gloss/pdf')/(cid+'.pdf'))
-  z.write(OUT/'five-translations.pdf','aligned-gloss/pdf/five-translations.pdf')
+  z.write(OUT/(COMBINED_STEM+'.pdf'),'aligned-gloss/pdf/all-translations.pdf')
  print(json.dumps(manifest,ensure_ascii=False))
  return manifest
 if __name__=='__main__':

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "fixed_labels": 39,
+  "used": [
+    "ADVZ",
+    "ALL",
+    "FOC",
+    "LNK",
+    "NEG"
+  ],
+  "errors": []
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "scripts/lookup-loan.py",
+    "桂树",
+    "--target",
+    "north"
+  ],
+  "stdout": "{\n  \"word\": \"桂树\",\n  \"target\": \"north\",\n  \"ipa\": \"kuei²⁴ su²⁴\",\n  \"romanization\": \"guí sú\",\n  \"display\": \"guí sú\",\n  \"method\": \"proposed-loan-mapping\",\n  \"status\": \"resolved\",\n  \"characters\": [\n    {\n      \"position\": 0,\n      \"character\": \"桂\",\n      \"status\": \"resolved\",\n      \"reading\": {\n        \"source\": \"yongshun\",\n        \"source_ipa\": \"kuei5\",\n        \"sense\": \"\",\n        \"historical_tone\": null,\n        \"source_category\": \"5\",\n        \"ipa\": \"kuei²⁴\",\n        \"romanization\": \"guí\",\n        \"tone\": \"24\",\n        \"changes\": [\n          \"k→k\",\n          \"uei→uei\"\n        ],\n        \"method\": \"proposed-loan-mapping\",\n        \"senses\": []\n      }\n    },\n    {\n      \"position\": 1,\n      \"character\": \"树\",\n      \"status\": \"resolved\",\n      \"reading\": {\n        \"source\": \"yongshun\",\n        \"source_ipa\": \"su5\",\n        \"sense\": \"\",\n        \"historical_tone\": null,\n        \"source_category\": \"5\",\n        \"ipa\": \"su²⁴\",\n        \"romanization\": \"sú\",\n        \"tone\": \"24\",\n        \"changes\": [\n          \"s→s\",\n          \"u→u\"\n        ],\n        \"method\": \"proposed-loan-mapping\",\n        \"senses\": []\n      }\n    }\n  ]\n}\n",
+  "stderr": "",
+  "returncode": 0
+}

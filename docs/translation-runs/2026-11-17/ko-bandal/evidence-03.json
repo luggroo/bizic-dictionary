@@ -1,0 +1,5555 @@
+{
+  "mode": "skill_based",
+  "results": [
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "天",
+      "query_plan": {
+        "original": "天",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "天",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "天",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "天",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "天",
+          "relation": "original",
+          "raw_exact_hits": 18,
+          "dialect_filtered_hits": 16,
+          "witnesses": [
+            {
+              "entry_id": "w1489",
+              "attestation_id": "stedt-rn-453464",
+              "source": "stedt-39f4cd9a6b",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 453464 · 原文定位 1.1",
+              "source_ref": "1.1",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɤ²⁴"
+                ]
+              },
+              "source_term": "me²",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1489",
+              "attestation_id": "stedt-rn-457038",
+              "source": "stedt-07898ef938",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 457038 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɤ²⁴"
+                ]
+              },
+              "source_term": "me2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1489",
+              "attestation_id": "w1489",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 1489",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɤ²⁴"
+                ]
+              },
+              "source_term": "me2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1489",
+              "attestation_id": "w4466",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A1696:C1696",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɤ²⁴"
+                ]
+              },
+              "source_term": "me4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1489",
+              "attestation_id": "w7571",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C1689:G1689",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "mé"
+                ]
+              },
+              "source_term": "mef",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1623",
+              "attestation_id": "stedt-rn-457179",
+              "source": "stedt-07898ef938",
+              "term": "niè",
+              "zh": "天/日",
+              "en": "day",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 457179 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "niè"
+                ],
+                "ipa": [
+                  "ȵiɛ⁵¹"
+                ]
+              },
+              "source_term": "nie4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "niè",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1623",
+              "attestation_id": "w1623",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "niè",
+              "zh": "天/日",
+              "en": "day",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 1623",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "niè"
+                ],
+                "ipa": [
+                  "ȵiɛ⁵¹"
+                ]
+              },
+              "source_term": "nie4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "niè",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1623",
+              "attestation_id": "w4641",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "niè",
+              "zh": "天/日",
+              "en": "day",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A1871:C1871",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "niè"
+                ],
+                "ipa": [
+                  "ȵiɛ⁵¹"
+                ]
+              },
+              "source_term": "nie3",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "niè",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1623",
+              "attestation_id": "w7390",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "niè",
+              "zh": "天/日",
+              "en": "day",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C1508:G1508",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "niè"
+                ]
+              },
+              "source_term": "niev",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "niè",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2270",
+              "attestation_id": "stedt-rn-457911",
+              "source": "stedt-07898ef938",
+              "term": "tiān",
+              "zh": "天",
+              "en": "day",
+              "pos": "cl.",
+              "dialect": "北部",
+              "locator": "STEDT rn 457911 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "tiān"
+                ],
+                "ipa": [
+                  "tʰiɛn⁵⁵"
+                ]
+              },
+              "source_term": "tian1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "tiān",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "sky",
+      "query_plan": {
+        "original": "sky",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "sky",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "sky",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "sky",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "sky",
+          "relation": "original",
+          "raw_exact_hits": 10,
+          "dialect_filtered_hits": 8,
+          "witnesses": [
+            {
+              "entry_id": "w1489",
+              "attestation_id": "stedt-rn-453464",
+              "source": "stedt-39f4cd9a6b",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 453464 · 原文定位 1.1",
+              "source_ref": "1.1",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɤ²⁴"
+                ]
+              },
+              "source_term": "me²",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1489",
+              "attestation_id": "stedt-rn-457038",
+              "source": "stedt-07898ef938",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 457038 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɤ²⁴"
+                ]
+              },
+              "source_term": "me2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1489",
+              "attestation_id": "w1489",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 1489",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɤ²⁴"
+                ]
+              },
+              "source_term": "me2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1489",
+              "attestation_id": "w4466",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A1696:C1696",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɤ²⁴"
+                ]
+              },
+              "source_term": "me4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1489",
+              "attestation_id": "w7571",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C1689:G1689",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "mé"
+                ]
+              },
+              "source_term": "mef",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-288449",
+              "attestation_id": "stedt-rn-288449",
+              "source": "stedt-cb523fc3dc",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 288449 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɨe³⁵"
+                ]
+              },
+              "source_term": "mɨe³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                }
+              ],
+              "canonical_source": "stedt-cb523fc3dc",
+              "source_title": "STEDT · Tian 86",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-345034",
+              "attestation_id": "stedt-rn-180054",
+              "source": "stedt-7fd6565400",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 180054 · 原文定位 1.38",
+              "source_ref": "1.38",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɯe³⁵"
+                ]
+              },
+              "source_term": "mɯe³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "source-candidate",
+                  "profile": "stedt-7fd6565400"
+                }
+              ],
+              "canonical_source": "stedt-7fd6565400",
+              "source_title": "STEDT · Sun H 91 ZMYY",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-345034",
+              "attestation_id": "stedt-rn-345034",
+              "source": "stedt-610ab69a37",
+              "term": "mé",
+              "zh": "天",
+              "en": "sky",
+              "pos": "n",
+              "dialect": "北部",
+              "locator": "STEDT rn 345034 · 原文定位 0001.49",
+              "source_ref": "0001.49",
+              "notations": {
+                "accent": [
+                  "mé"
+                ],
+                "ipa": [
+                  "mɯe³⁵"
+                ]
+              },
+              "source_term": "mɯe³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mé",
+                  "method": "source-candidate",
+                  "profile": "stedt-610ab69a37"
+                }
+              ],
+              "canonical_source": "stedt-610ab69a37",
+              "source_title": "STEDT · Huang and Dai 92 TBL",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "blue",
+      "query_plan": {
+        "original": "blue",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "blue",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "blue",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "blue",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "blue",
+          "relation": "original",
+          "raw_exact_hits": 6,
+          "dialect_filtered_hits": 4,
+          "witnesses": [
+            {
+              "entry_id": "w5558",
+              "attestation_id": "w5558",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "xián'gà",
+              "zh": "蓝",
+              "en": "blue",
+              "pos": "vi.",
+              "dialect": "北部",
+              "locator": "Sheet1!A2788:C2788",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "xián'gà"
+                ],
+                "ipa": [
+                  "ɕiɛn²⁴ka⁵¹"
+                ]
+              },
+              "source_term": "xian4 ga3",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "xián'gà",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-289244",
+              "attestation_id": "stedt-rn-289244",
+              "source": "stedt-cb523fc3dc",
+              "term": "xín'gā / xín'gāi",
+              "zh": "蓝",
+              "en": "blue",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 289244 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "xín'gā",
+                  "xín'gāi"
+                ],
+                "ipa": [
+                  "ɕĩ³⁵ka⁵⁵~ɕĩ³⁵kai⁵⁵"
+                ]
+              },
+              "source_term": "ɕĩ³⁵ka⁵⁵~ɕĩ³⁵kai⁵⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "xín'gā",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                },
+                {
+                  "text": "xín'gāi",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                }
+              ],
+              "canonical_source": "stedt-cb523fc3dc",
+              "source_title": "STEDT · Tian 86",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-397080",
+              "attestation_id": "stedt-rn-222792",
+              "source": "stedt-7fd6565400",
+              "term": "xín'gāi",
+              "zh": "蓝",
+              "en": "blue",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 222792 · 原文定位 839.38",
+              "source_ref": "839.38",
+              "notations": {
+                "accent": [
+                  "xín'gāi"
+                ],
+                "ipa": [
+                  "ɕin³⁵kai⁵⁵"
+                ]
+              },
+              "source_term": "ɕin³⁵kai⁵⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "xín'gāi",
+                  "method": "source-candidate",
+                  "profile": "stedt-7fd6565400"
+                }
+              ],
+              "canonical_source": "stedt-7fd6565400",
+              "source_title": "STEDT · Sun H 91 ZMYY",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-397080",
+              "attestation_id": "stedt-rn-397080",
+              "source": "stedt-610ab69a37",
+              "term": "xín'gāi",
+              "zh": "蓝",
+              "en": "blue",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 397080 · 原文定位 1010.49",
+              "source_ref": "1010.49",
+              "notations": {
+                "accent": [
+                  "xín'gāi"
+                ],
+                "ipa": [
+                  "ɕin³⁵kai⁵⁵"
+                ]
+              },
+              "source_term": "ɕin³⁵kai⁵⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "xín'gāi",
+                  "method": "source-candidate",
+                  "profile": "stedt-610ab69a37"
+                }
+              ],
+              "canonical_source": "stedt-610ab69a37",
+              "source_title": "STEDT · Huang and Dai 92 TBL",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "银河系",
+      "query_plan": {
+        "original": "银河系",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "银河系",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "银河系",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "银河系",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "银河系",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "Milky Way",
+      "query_plan": {
+        "original": "Milky Way",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "Milky Way",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "Milky Way",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "Milky Way",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "Milky Way",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "天河",
+      "query_plan": {
+        "original": "天河",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "天河",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "天河",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "天河",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "天河",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "桂花树",
+      "query_plan": {
+        "original": "桂花树",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "桂花树",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "桂花树",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "桂花树",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "桂花树",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "桂花",
+      "query_plan": {
+        "original": "桂花",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "桂花",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "桂花",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "桂花",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "桂花",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "osmanthus",
+      "query_plan": {
+        "original": "osmanthus",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "osmanthus",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "osmanthus",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "osmanthus",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "osmanthus",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "mast",
+      "query_plan": {
+        "original": "mast",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "mast",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "mast",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "mast",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "mast",
+          "relation": "original",
+          "raw_exact_hits": 4,
+          "dialect_filtered_hits": 4,
+          "witnesses": [
+            {
+              "entry_id": "w2370",
+              "attestation_id": "stedt-rn-458015",
+              "source": "stedt-07898ef938",
+              "term": "wěizǐ",
+              "zh": "桅杆",
+              "en": "mast, pole",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 458015 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wěizǐ"
+                ],
+                "ipa": [
+                  "wei²¹tsɿ²¹"
+                ]
+              },
+              "source_term": "wei3zi3",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wěizǐ",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2370",
+              "attestation_id": "w2370",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "wěizǐ",
+              "zh": "桅杆",
+              "en": "mast, pole",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 2370",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wěizǐ"
+                ],
+                "ipa": [
+                  "wei²¹tsɿ²¹"
+                ]
+              },
+              "source_term": "wei3zi3",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wěizǐ",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2370",
+              "attestation_id": "w5444",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "wěizǐ",
+              "zh": "桅杆",
+              "en": "mast, pole",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A2674:C2674",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wěizǐ"
+                ],
+                "ipa": [
+                  "wei²¹tsɿ²¹"
+                ]
+              },
+              "source_term": "wei2 zi2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wěizǐ",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2370",
+              "attestation_id": "w8205",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "wěizǐ",
+              "zh": "桅杆",
+              "en": "mast, pole",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C2323:G2323",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wěizǐ"
+                ]
+              },
+              "source_term": "weirzir",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wěizǐ",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "punt",
+      "query_plan": {
+        "original": "punt",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "punt",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "punt",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "punt",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "punt",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "pole",
+      "query_plan": {
+        "original": "pole",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "pole",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "pole",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "pole",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "pole",
+          "relation": "original",
+          "raw_exact_hits": 7,
+          "dialect_filtered_hits": 6,
+          "witnesses": [
+            {
+              "entry_id": "w2370",
+              "attestation_id": "stedt-rn-458015",
+              "source": "stedt-07898ef938",
+              "term": "wěizǐ",
+              "zh": "桅杆",
+              "en": "mast, pole",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 458015 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wěizǐ"
+                ],
+                "ipa": [
+                  "wei²¹tsɿ²¹"
+                ]
+              },
+              "source_term": "wei3zi3",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wěizǐ",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2370",
+              "attestation_id": "w2370",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "wěizǐ",
+              "zh": "桅杆",
+              "en": "mast, pole",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 2370",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wěizǐ"
+                ],
+                "ipa": [
+                  "wei²¹tsɿ²¹"
+                ]
+              },
+              "source_term": "wei3zi3",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wěizǐ",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2370",
+              "attestation_id": "w5444",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "wěizǐ",
+              "zh": "桅杆",
+              "en": "mast, pole",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A2674:C2674",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wěizǐ"
+                ],
+                "ipa": [
+                  "wei²¹tsɿ²¹"
+                ]
+              },
+              "source_term": "wei2 zi2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wěizǐ",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2370",
+              "attestation_id": "w8205",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "wěizǐ",
+              "zh": "桅杆",
+              "en": "mast, pole",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C2323:G2323",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wěizǐ"
+                ]
+              },
+              "source_term": "weirzir",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wěizǐ",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-197904",
+              "attestation_id": "stedt-rn-197904",
+              "source": "stedt-7fd6565400",
+              "term": "kǎtóng",
+              "zh": "杆；竿",
+              "en": "pole",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 197904 · 原文定位 351.38",
+              "source_ref": "351.38",
+              "notations": {
+                "accent": [
+                  "kǎtóng"
+                ],
+                "ipa": [
+                  "kʰa²¹tʰoŋ³⁵"
+                ]
+              },
+              "source_term": "kha²¹thoŋ³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kǎtóng",
+                  "method": "source-candidate",
+                  "profile": "stedt-7fd6565400"
+                }
+              ],
+              "canonical_source": "stedt-7fd6565400",
+              "source_title": "STEDT · Sun H 91 ZMYY",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-288732",
+              "attestation_id": "stedt-rn-288732",
+              "source": "stedt-cb523fc3dc",
+              "term": "kǎtóng",
+              "zh": "杆；竿",
+              "en": "pole",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 288732 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "kǎtóng"
+                ],
+                "ipa": [
+                  "kʰa²¹tʰũ³⁵"
+                ]
+              },
+              "source_term": "kha²¹thũ³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kǎtóng",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                }
+              ],
+              "canonical_source": "stedt-cb523fc3dc",
+              "source_title": "STEDT · Tian 86",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "撑竿",
+      "query_plan": {
+        "original": "撑竿",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "撑竿",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "撑竿",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "撑竿",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "撑竿",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "篙",
+      "query_plan": {
+        "original": "篙",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "篙",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "篙",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "篙",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "篙",
+          "relation": "original",
+          "raw_exact_hits": 1,
+          "dialect_filtered_hits": 1,
+          "witnesses": [
+            {
+              "entry_id": "stedt-rn-454643",
+              "attestation_id": "stedt-rn-454643",
+              "source": "stedt-39f4cd9a6b",
+              "term": "jiázū",
+              "zh": "撑船用的舵杆；篙",
+              "en": "steering pole",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 454643 · 原文定位 4.7",
+              "source_ref": "4.7",
+              "notations": {
+                "accent": [
+                  "jiázū"
+                ],
+                "ipa": [
+                  "tɕia²⁴tsu⁵⁵"
+                ]
+              },
+              "source_term": "jia²zu¹",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "jiázū",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "立",
+      "query_plan": {
+        "original": "立",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "立",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "立",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "立",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "立",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "竖",
+      "query_plan": {
+        "original": "竖",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "竖",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "竖",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "竖",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "竖",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "安装",
+      "query_plan": {
+        "original": "安装",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "安装",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "安装",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "安装",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "安装",
+          "relation": "original",
+          "raw_exact_hits": 5,
+          "dialect_filtered_hits": 5,
+          "witnesses": [
+            {
+              "entry_id": "w1591",
+              "attestation_id": "stedt-rn-454362",
+              "source": "stedt-39f4cd9a6b",
+              "term": "ngāng",
+              "zh": "安装",
+              "en": "install",
+              "pos": "v",
+              "dialect": "北部",
+              "locator": "STEDT rn 454362 · 原文定位 4.3",
+              "source_ref": "4.3",
+              "notations": {
+                "accent": [
+                  "ngāng"
+                ],
+                "ipa": [
+                  "ŋaŋ⁵⁵"
+                ]
+              },
+              "source_term": "ngang¹",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "ngāng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1591",
+              "attestation_id": "stedt-rn-457146",
+              "source": "stedt-07898ef938",
+              "term": "ngāng",
+              "zh": "安装",
+              "en": "install",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "STEDT rn 457146 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "ngāng"
+                ],
+                "ipa": [
+                  "ŋaŋ⁵⁵"
+                ]
+              },
+              "source_term": "ngang1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "ngāng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1591",
+              "attestation_id": "w1591",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "ngāng",
+              "zh": "安装",
+              "en": "to install",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "词条 1591",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "ngāng"
+                ],
+                "ipa": [
+                  "ŋaŋ⁵⁵"
+                ]
+              },
+              "source_term": "ngang1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "ngāng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1591",
+              "attestation_id": "w4575",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "ngāng",
+              "zh": "安装",
+              "en": "install",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "Sheet1!A1805:C1805",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "ngāng"
+                ],
+                "ipa": [
+                  "ŋaŋ⁵⁵"
+                ]
+              },
+              "source_term": "ngang1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "ngāng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1591",
+              "attestation_id": "w7116",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "ngāng",
+              "zh": "安装",
+              "en": "to install",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "Sheet1!C1234:G1234",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "ngāng"
+                ]
+              },
+              "source_term": "ngangx",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "ngāng",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "走",
+      "query_plan": {
+        "original": "走",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "走",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "走",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "走",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "走",
+          "relation": "original",
+          "raw_exact_hits": 10,
+          "dialect_filtered_hits": 8,
+          "witnesses": [
+            {
+              "entry_id": "w949",
+              "attestation_id": "stedt-rn-454319",
+              "source": "stedt-39f4cd9a6b",
+              "term": "hxí",
+              "zh": "走",
+              "en": "go",
+              "pos": "v",
+              "dialect": "北部",
+              "locator": "STEDT rn 454319 · 原文定位 4.3",
+              "source_ref": "4.3",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɨ²⁴"
+                ]
+              },
+              "source_term": "hhi²",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w949",
+              "attestation_id": "stedt-rn-456438",
+              "source": "stedt-07898ef938",
+              "term": "hxí",
+              "zh": "走",
+              "en": "go",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "STEDT rn 456438 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɨ²⁴"
+                ]
+              },
+              "source_term": "hhi2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w949",
+              "attestation_id": "w3778",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "hxí",
+              "zh": "走",
+              "en": "go",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "Sheet1!A1008:C1008",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɨ²⁴"
+                ]
+              },
+              "source_term": "hhi4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w949",
+              "attestation_id": "w5949",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "hxí",
+              "zh": "走",
+              "en": "to go",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "Sheet1!C67:G67",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ]
+              },
+              "source_term": "hxif",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w949",
+              "attestation_id": "w949",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "hxí",
+              "zh": "走",
+              "en": "to go",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "词条 949",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɨ²⁴"
+                ]
+              },
+              "source_term": "hhi2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-288976",
+              "attestation_id": "stedt-rn-288976",
+              "source": "stedt-cb523fc3dc",
+              "term": "hxí",
+              "zh": "走",
+              "en": "walk",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 288976 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɨ³⁵"
+                ]
+              },
+              "source_term": "ɣɨ³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                }
+              ],
+              "canonical_source": "stedt-cb523fc3dc",
+              "source_title": "STEDT · Tian 86",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-434228",
+              "attestation_id": "stedt-rn-209175",
+              "source": "stedt-7fd6565400",
+              "term": "hxí",
+              "zh": "走",
+              "en": "walk",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 209175 · 原文定位 572.38",
+              "source_ref": "572.38",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɯ³⁵"
+                ]
+              },
+              "source_term": "ɣɯ³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "source-candidate",
+                  "profile": "stedt-7fd6565400"
+                }
+              ],
+              "canonical_source": "stedt-7fd6565400",
+              "source_title": "STEDT · Sun H 91 ZMYY",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-434228",
+              "attestation_id": "stedt-rn-434228",
+              "source": "stedt-610ab69a37",
+              "term": "hxí",
+              "zh": "走",
+              "en": "walk",
+              "pos": "v.",
+              "dialect": "北部",
+              "locator": "STEDT rn 434228 · 原文定位 1815.49",
+              "source_ref": "1815.49",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɯ³⁵"
+                ]
+              },
+              "source_term": "ɣɯ³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "source-candidate",
+                  "profile": "stedt-610ab69a37"
+                }
+              ],
+              "canonical_source": "stedt-610ab69a37",
+              "source_title": "STEDT · Huang and Dai 92 TBL",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "go",
+      "query_plan": {
+        "original": "go",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "go",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "go",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "go",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "go",
+          "relation": "original",
+          "raw_exact_hits": 8,
+          "dialect_filtered_hits": 6,
+          "witnesses": [
+            {
+              "entry_id": "w949",
+              "attestation_id": "stedt-rn-454319",
+              "source": "stedt-39f4cd9a6b",
+              "term": "hxí",
+              "zh": "走",
+              "en": "go",
+              "pos": "v",
+              "dialect": "北部",
+              "locator": "STEDT rn 454319 · 原文定位 4.3",
+              "source_ref": "4.3",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɨ²⁴"
+                ]
+              },
+              "source_term": "hhi²",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w949",
+              "attestation_id": "stedt-rn-456438",
+              "source": "stedt-07898ef938",
+              "term": "hxí",
+              "zh": "走",
+              "en": "go",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "STEDT rn 456438 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɨ²⁴"
+                ]
+              },
+              "source_term": "hhi2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w949",
+              "attestation_id": "w3778",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "hxí",
+              "zh": "走",
+              "en": "go",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "Sheet1!A1008:C1008",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɨ²⁴"
+                ]
+              },
+              "source_term": "hhi4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-217641",
+              "attestation_id": "stedt-rn-217641",
+              "source": "stedt-7fd6565400",
+              "term": "zǎo",
+              "zh": "去",
+              "en": "go",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 217641 · 原文定位 738.38",
+              "source_ref": "738.38",
+              "notations": {
+                "accent": [
+                  "zǎo"
+                ],
+                "ipa": [
+                  "tsau²¹"
+                ]
+              },
+              "source_term": "tsau²¹",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "zǎo",
+                  "method": "source-candidate",
+                  "profile": "stedt-7fd6565400"
+                }
+              ],
+              "canonical_source": "stedt-7fd6565400",
+              "source_title": "STEDT · Sun H 91 ZMYY",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-289146",
+              "attestation_id": "stedt-rn-289146",
+              "source": "stedt-cb523fc3dc",
+              "term": "hxí",
+              "zh": "去",
+              "en": "go",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 289146 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɨ³⁵"
+                ]
+              },
+              "source_term": "ɣɨ³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                }
+              ],
+              "canonical_source": "stedt-cb523fc3dc",
+              "source_title": "STEDT · Tian 86",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-423191",
+              "attestation_id": "stedt-rn-423191",
+              "source": "stedt-610ab69a37",
+              "term": "hxí",
+              "zh": "去；离开",
+              "en": "go / leave",
+              "pos": "v.",
+              "dialect": "北部",
+              "locator": "STEDT rn 423191 · 原文定位 1579.49",
+              "source_ref": "1579.49",
+              "notations": {
+                "accent": [
+                  "hxí"
+                ],
+                "ipa": [
+                  "ɣɯ³⁵"
+                ]
+              },
+              "source_term": "ɣɯ³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "hxí",
+                  "method": "source-candidate",
+                  "profile": "stedt-610ab69a37"
+                }
+              ],
+              "canonical_source": "stedt-610ab69a37",
+              "source_title": "STEDT · Huang and Dai 92 TBL",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "快",
+      "query_plan": {
+        "original": "快",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "快",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "快",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "快",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "快",
+          "relation": "original",
+          "raw_exact_hits": 9,
+          "dialect_filtered_hits": 7,
+          "witnesses": [
+            {
+              "entry_id": "w1186",
+              "attestation_id": "w1186",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "kuái",
+              "zh": "快",
+              "en": "to be fast",
+              "pos": "vi.",
+              "dialect": "北部",
+              "locator": "词条 1186",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "kuái"
+                ],
+                "ipa": [
+                  "kʰuai²⁴"
+                ]
+              },
+              "source_term": "kuai2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kuái",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1186",
+              "attestation_id": "w7711",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "kuái",
+              "zh": "快",
+              "en": "to be fast",
+              "pos": "vi.",
+              "dialect": "北部",
+              "locator": "Sheet1!C1829:G1829",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "kuái"
+                ]
+              },
+              "source_term": "kuaif",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kuái",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w4128",
+              "attestation_id": "stedt-rn-456698",
+              "source": "stedt-07898ef938",
+              "term": "kuái",
+              "zh": "快",
+              "en": "fast",
+              "pos": "vi.",
+              "dialect": "北部",
+              "locator": "STEDT rn 456698 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "kuái"
+                ],
+                "ipa": [
+                  "kʰuai²⁴"
+                ]
+              },
+              "source_term": "kuai2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kuái",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w4128",
+              "attestation_id": "w4128",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "kuái",
+              "zh": "快",
+              "en": "fast",
+              "pos": "vi.",
+              "dialect": "北部",
+              "locator": "Sheet1!A1358:C1358",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "kuái"
+                ],
+                "ipa": [
+                  "kʰuai²⁴"
+                ]
+              },
+              "source_term": "kuai4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kuái",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-223965",
+              "attestation_id": "stedt-rn-223965",
+              "source": "stedt-7fd6565400",
+              "term": "xiāohuī",
+              "zh": "快",
+              "en": "fast",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 223965 · 原文定位 862.38",
+              "source_ref": "862.38",
+              "notations": {
+                "accent": [
+                  "xiāohuī"
+                ],
+                "ipa": [
+                  "ɕiau⁵⁵xui⁵⁵"
+                ]
+              },
+              "source_term": "ɕiau⁵⁵xui⁵⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "xiāohuī",
+                  "method": "source-candidate",
+                  "profile": "stedt-7fd6565400"
+                }
+              ],
+              "canonical_source": "stedt-7fd6565400",
+              "source_title": "STEDT · Sun H 91 ZMYY",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-289262",
+              "attestation_id": "stedt-rn-289262",
+              "source": "stedt-cb523fc3dc",
+              "term": "mǎlí",
+              "zh": "快",
+              "en": "fast",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 289262 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "mǎlí"
+                ],
+                "ipa": [
+                  "ma²¹li³⁵"
+                ]
+              },
+              "source_term": "ma²¹li³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "mǎlí",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                }
+              ],
+              "canonical_source": "stedt-cb523fc3dc",
+              "source_title": "STEDT · Tian 86",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-397375",
+              "attestation_id": "stedt-rn-397375",
+              "source": "stedt-610ab69a37",
+              "term": "xiāohuī",
+              "zh": "快；迅速",
+              "en": "quick / fast",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 397375 · 原文定位 1016.49",
+              "source_ref": "1016.49",
+              "notations": {
+                "accent": [
+                  "xiāohuī"
+                ],
+                "ipa": [
+                  "ɕiau⁵⁵xui⁵⁵"
+                ]
+              },
+              "source_term": "ɕiau⁵⁵xui⁵⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "xiāohuī",
+                  "method": "source-candidate",
+                  "profile": "stedt-610ab69a37"
+                }
+              ],
+              "canonical_source": "stedt-610ab69a37",
+              "source_title": "STEDT · Huang and Dai 92 TBL",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "顺利",
+      "query_plan": {
+        "original": "顺利",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "顺利",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "顺利",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "顺利",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "顺利",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "歌",
+      "query_plan": {
+        "original": "歌",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "歌",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "歌",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "歌",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "歌",
+          "relation": "original",
+          "raw_exact_hits": 13,
+          "dialect_filtered_hits": 11,
+          "witnesses": [
+            {
+              "entry_id": "w1056",
+              "attestation_id": "stedt-rn-456552",
+              "source": "stedt-07898ef938",
+              "term": "jīn'gō",
+              "zh": "歌",
+              "en": "song",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 456552 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "jīn'gō"
+                ],
+                "ipa": [
+                  "tɕiŋ⁵⁵kuɔ⁵⁵"
+                ]
+              },
+              "source_term": "jing1guo1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "jīn'gō",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1056",
+              "attestation_id": "w1056",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "jīn'gō",
+              "zh": "歌",
+              "en": "song",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 1056",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "jīn'gō"
+                ],
+                "ipa": [
+                  "tɕiŋ⁵⁵kuɔ⁵⁵"
+                ]
+              },
+              "source_term": "jing1guo1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "jīn'gō",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1056",
+              "attestation_id": "w3974",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "jīn'gō",
+              "zh": "歌",
+              "en": "song",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A1204:C1204",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "jīn'gō"
+                ],
+                "ipa": [
+                  "tɕiŋ⁵⁵kuɔ⁵⁵"
+                ]
+              },
+              "source_term": "jing1 guo1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "jīn'gō",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1056",
+              "attestation_id": "w8323",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "jīn'gō",
+              "zh": "歌",
+              "en": "song",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C2441:G2441",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "jīn'gō"
+                ]
+              },
+              "source_term": "jinxgox",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "jīn'gō",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w800",
+              "attestation_id": "stedt-rn-456270",
+              "source": "stedt-07898ef938",
+              "term": "gō",
+              "zh": "歌",
+              "en": "song",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 456270 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "gō"
+                ],
+                "ipa": [
+                  "kuɔ⁵⁵"
+                ]
+              },
+              "source_term": "guo1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "gō",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w800",
+              "attestation_id": "w3696",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "gō",
+              "zh": "歌",
+              "en": "song",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A926:C926",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "gō"
+                ],
+                "ipa": [
+                  "kuɔ⁵⁵"
+                ]
+              },
+              "source_term": "guo1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "gō",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w800",
+              "attestation_id": "w800",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "gō",
+              "zh": "歌",
+              "en": "song",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 800",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "gō"
+                ],
+                "ipa": [
+                  "kuɔ⁵⁵"
+                ]
+              },
+              "source_term": "guo1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "gō",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w800",
+              "attestation_id": "w8586",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "gō",
+              "zh": "歌",
+              "en": "song",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C2704:G2704",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "gō"
+                ]
+              },
+              "source_term": "gox",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "gō",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-288884",
+              "attestation_id": "stedt-rn-288884",
+              "source": "stedt-cb523fc3dc",
+              "term": "gō",
+              "zh": "歌",
+              "en": "song",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 288884 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "gō"
+                ],
+                "ipa": [
+                  "ko⁵⁵"
+                ]
+              },
+              "source_term": "ko⁵⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "gō",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                }
+              ],
+              "canonical_source": "stedt-cb523fc3dc",
+              "source_title": "STEDT · Tian 86",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-378744",
+              "attestation_id": "stedt-rn-205401",
+              "source": "stedt-7fd6565400",
+              "term": "gó",
+              "zh": "歌",
+              "en": "song",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 205401 · 原文定位 498.38",
+              "source_ref": "498.38",
+              "notations": {
+                "accent": [
+                  "gó"
+                ],
+                "ipa": [
+                  "ko³⁵"
+                ]
+              },
+              "source_term": "ko³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "gó",
+                  "method": "source-candidate",
+                  "profile": "stedt-7fd6565400"
+                }
+              ],
+              "canonical_source": "stedt-7fd6565400",
+              "source_title": "STEDT · Sun H 91 ZMYY",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "歌词",
+      "query_plan": {
+        "original": "歌词",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "歌词",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "歌词",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "歌词",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "歌词",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "曲",
+      "query_plan": {
+        "original": "曲",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "曲",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "曲",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "曲",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "曲",
+          "relation": "original",
+          "raw_exact_hits": 0,
+          "dialect_filtered_hits": 0,
+          "witnesses": []
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "里面",
+      "query_plan": {
+        "original": "里面",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "里面",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "里面",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "里面",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "里面",
+          "relation": "original",
+          "raw_exact_hits": 13,
+          "dialect_filtered_hits": 12,
+          "witnesses": [
+            {
+              "entry_id": "w2395",
+              "attestation_id": "stedt-rn-455022",
+              "source": "stedt-39f4cd9a6b",
+              "term": "wótū",
+              "zh": "里面",
+              "en": "inside",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 455022 · 原文定位 6.5",
+              "source_ref": "6.5",
+              "notations": {
+                "accent": [
+                  "wótū"
+                ],
+                "ipa": [
+                  "wɔ²⁴tʰu⁵⁵"
+                ]
+              },
+              "source_term": "wo²tu¹",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wótū",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2395",
+              "attestation_id": "stedt-rn-458043",
+              "source": "stedt-07898ef938",
+              "term": "wótū",
+              "zh": "里面",
+              "en": "inside",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 458043 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wótū"
+                ],
+                "ipa": [
+                  "wɔ²⁴tʰu⁵⁵"
+                ]
+              },
+              "source_term": "wo2tu1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wótū",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2395",
+              "attestation_id": "w2395",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "wótū",
+              "zh": "里面",
+              "en": "inside",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 2395",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wótū"
+                ],
+                "ipa": [
+                  "wɔ²⁴tʰu⁵⁵"
+                ]
+              },
+              "source_term": "wo2tu1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wótū",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2395",
+              "attestation_id": "w5458",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "wótū",
+              "zh": "里面",
+              "en": "inside",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A2688:C2688",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wótū"
+                ],
+                "ipa": [
+                  "wɔ²⁴tʰu⁵⁵"
+                ]
+              },
+              "source_term": "wo4 tu1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wótū",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2395",
+              "attestation_id": "w6651",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "wótū",
+              "zh": "里面",
+              "en": "inside",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C769:G769",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wótū"
+                ]
+              },
+              "source_term": "woftux",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wótū",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w5384",
+              "attestation_id": "stedt-rn-458045",
+              "source": "stedt-07898ef938",
+              "term": "tū",
+              "zh": "里面",
+              "en": "inside",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 458045 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "tū"
+                ],
+                "ipa": [
+                  "tʰu⁵⁵"
+                ]
+              },
+              "source_term": "tu1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "tū",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w5384",
+              "attestation_id": "w5384",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "tū",
+              "zh": "里面",
+              "en": "inside",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A2614:C2614",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "tū"
+                ],
+                "ipa": [
+                  "tʰu⁵⁵"
+                ]
+              },
+              "source_term": "tu1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "tū",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w5456",
+              "attestation_id": "stedt-rn-458044",
+              "source": "stedt-07898ef938",
+              "term": "wó",
+              "zh": "里面",
+              "en": "inside",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 458044 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wó"
+                ],
+                "ipa": [
+                  "wɔ²⁴"
+                ]
+              },
+              "source_term": "wo2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wó",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w5456",
+              "attestation_id": "w5456",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "wó",
+              "zh": "里面",
+              "en": "inside",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A2686:C2686",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wó"
+                ],
+                "ipa": [
+                  "wɔ²⁴"
+                ]
+              },
+              "source_term": "wo4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wó",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-288496",
+              "attestation_id": "stedt-rn-288496",
+              "source": "stedt-cb523fc3dc",
+              "term": "wótú",
+              "zh": "里面",
+              "en": "inside",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 288496 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "wótú"
+                ],
+                "ipa": [
+                  "wo³⁵tʰu³⁵"
+                ]
+              },
+              "source_term": "wo³⁵thu³⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "wótú",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                }
+              ],
+              "canonical_source": "stedt-cb523fc3dc",
+              "source_title": "STEDT · Tian 86",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "上",
+      "query_plan": {
+        "original": "上",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "上",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "上",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "上",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "上",
+          "relation": "original",
+          "raw_exact_hits": 12,
+          "dialect_filtered_hits": 12,
+          "witnesses": [
+            {
+              "entry_id": "w1994",
+              "attestation_id": "stedt-rn-457612",
+              "source": "stedt-07898ef938",
+              "term": "sáng",
+              "zh": "上",
+              "en": "first part",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 457612 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "sáng"
+                ],
+                "ipa": [
+                  "saŋ²⁴"
+                ]
+              },
+              "source_term": "sang2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "sáng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1994",
+              "attestation_id": "w1994",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "sáng",
+              "zh": "上",
+              "en": "first part",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 1994",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "sáng"
+                ],
+                "ipa": [
+                  "saŋ²⁴"
+                ]
+              },
+              "source_term": "sang2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "sáng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1994",
+              "attestation_id": "w5048",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "sáng",
+              "zh": "上",
+              "en": "first part",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A2278:C2278",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "sáng"
+                ],
+                "ipa": [
+                  "saŋ²⁴"
+                ]
+              },
+              "source_term": "sang4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "sáng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1994",
+              "attestation_id": "w7379",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "sáng",
+              "zh": "上",
+              "en": "first part",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C1497:G1497",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "sáng"
+                ]
+              },
+              "source_term": "sangf",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "sáng",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w61",
+              "attestation_id": "stedt-rn-455408",
+              "source": "stedt-07898ef938",
+              "term": "-sāng",
+              "zh": "上",
+              "en": "[on, above]",
+              "pos": "nsuff.",
+              "dialect": "北部",
+              "locator": "STEDT rn 455408 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "-sāng"
+                ],
+                "ipa": [
+                  "-saŋ⁵⁵"
+                ]
+              },
+              "source_term": "-sang1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "-sāng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w61",
+              "attestation_id": "w2851",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "-sāng",
+              "zh": "上",
+              "en": "[on, above]",
+              "pos": "nsuff.",
+              "dialect": "北部",
+              "locator": "Sheet1!A81:C81",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "-sāng"
+                ],
+                "ipa": [
+                  "-saŋ⁵⁵"
+                ]
+              },
+              "source_term": "-sang1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "-sāng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w61",
+              "attestation_id": "w61",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "-sāng",
+              "zh": "上",
+              "en": "[on, above]",
+              "pos": "nsuff.",
+              "dialect": "北部",
+              "locator": "词条 61",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "-sāng"
+                ],
+                "ipa": [
+                  "-saŋ⁵⁵"
+                ]
+              },
+              "source_term": "-sang1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "-sāng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w61",
+              "attestation_id": "w7404",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "-sāng",
+              "zh": "上",
+              "en": "[on, above]",
+              "pos": "nsuff.",
+              "dialect": "北部",
+              "locator": "Sheet1!C1522:G1522",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "-sāng"
+                ]
+              },
+              "source_term": "-sangx",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "-sāng",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w777",
+              "attestation_id": "stedt-rn-456246",
+              "source": "stedt-07898ef938",
+              "term": "gǔ",
+              "zh": "上",
+              "en": "go up",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "STEDT rn 456246 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "gǔ"
+                ],
+                "ipa": [
+                  "ku²¹"
+                ]
+              },
+              "source_term": "gu3",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "gǔ",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w777",
+              "attestation_id": "w3675",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "gǔ",
+              "zh": "上",
+              "en": "go up",
+              "pos": "vt.",
+              "dialect": "北部",
+              "locator": "Sheet1!A905:C905",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "gǔ"
+                ],
+                "ipa": [
+                  "ku²¹"
+                ]
+              },
+              "source_term": "gu2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "gǔ",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "也",
+      "query_plan": {
+        "original": "也",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "也",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "也",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "也",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "也",
+          "relation": "original",
+          "raw_exact_hits": 14,
+          "dialect_filtered_hits": 13,
+          "witnesses": [
+            {
+              "entry_id": "w247",
+              "attestation_id": "stedt-rn-455212",
+              "source": "stedt-39f4cd9a6b",
+              "term": "bé",
+              "zh": "也",
+              "en": "also",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 455212 · 原文定位 7.5",
+              "source_ref": "7.5",
+              "notations": {
+                "accent": [
+                  "bé"
+                ],
+                "ipa": [
+                  "pɤ²⁴"
+                ]
+              },
+              "source_term": "be²",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "bé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w247",
+              "attestation_id": "stedt-rn-455650",
+              "source": "stedt-07898ef938",
+              "term": "bé",
+              "zh": "也",
+              "en": "also",
+              "pos": "advm.",
+              "dialect": "北部",
+              "locator": "STEDT rn 455650 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "bé"
+                ],
+                "ipa": [
+                  "pɤ²⁴"
+                ]
+              },
+              "source_term": "be2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "bé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w247",
+              "attestation_id": "w247",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "bé",
+              "zh": "也",
+              "en": "also",
+              "pos": "advm.",
+              "dialect": "北部",
+              "locator": "词条 247",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "bé"
+                ],
+                "ipa": [
+                  "pɤ²⁴"
+                ]
+              },
+              "source_term": "be2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "bé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w247",
+              "attestation_id": "w3087",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "bé",
+              "zh": "也",
+              "en": "also",
+              "pos": "advm.",
+              "dialect": "北部",
+              "locator": "Sheet1!A317:C317",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "bé"
+                ],
+                "ipa": [
+                  "pɤ²⁴"
+                ]
+              },
+              "source_term": "be4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "bé",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w247",
+              "attestation_id": "w6333",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "bé",
+              "zh": "也",
+              "en": "also",
+              "pos": "advm.",
+              "dialect": "北部",
+              "locator": "Sheet1!C451:G451",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "bé"
+                ]
+              },
+              "source_term": "bef",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "bé",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2542",
+              "attestation_id": "stedt-rn-458205",
+              "source": "stedt-07898ef938",
+              "term": "yē",
+              "zh": "也",
+              "en": "also",
+              "pos": "advm.",
+              "dialect": "北部",
+              "locator": "STEDT rn 458205 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "yē"
+                ],
+                "ipa": [
+                  "jɤ⁵⁵"
+                ]
+              },
+              "source_term": "ye1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "yē",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2542",
+              "attestation_id": "w2542",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "yē",
+              "zh": "也",
+              "en": "also",
+              "pos": "advm.",
+              "dialect": "北部",
+              "locator": "词条 2542",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "yē"
+                ],
+                "ipa": [
+                  "jɤ⁵⁵"
+                ]
+              },
+              "source_term": "ye1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "yē",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2542",
+              "attestation_id": "w5639",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "yē",
+              "zh": "也",
+              "en": "also",
+              "pos": "advm.",
+              "dialect": "北部",
+              "locator": "Sheet1!A2869:C2869",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "yē"
+                ],
+                "ipa": [
+                  "jɤ⁵⁵"
+                ]
+              },
+              "source_term": "ye1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "yē",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2542",
+              "attestation_id": "w6676",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "yē",
+              "zh": "也",
+              "en": "also",
+              "pos": "advm.",
+              "dialect": "北部",
+              "locator": "Sheet1!C794:G794",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "yē"
+                ]
+              },
+              "source_term": "yex",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "yē",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w3057",
+              "attestation_id": "stedt-rn-455651",
+              "source": "stedt-07898ef938",
+              "term": "bài",
+              "zh": "也",
+              "en": "also",
+              "pos": "advm.",
+              "dialect": "北部",
+              "locator": "STEDT rn 455651 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "bài"
+                ],
+                "ipa": [
+                  "pai⁵¹"
+                ]
+              },
+              "source_term": "bai4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "bài",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "小",
+      "query_plan": {
+        "original": "小",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "小",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "小",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "小",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "小",
+          "relation": "original",
+          "raw_exact_hits": 18,
+          "dialect_filtered_hits": 15,
+          "witnesses": [
+            {
+              "entry_id": "w5236",
+              "attestation_id": "stedt-rn-454930",
+              "source": "stedt-39f4cd9a6b",
+              "term": "suàn",
+              "zh": "小",
+              "en": "small",
+              "pos": "be v.",
+              "dialect": "北部",
+              "locator": "STEDT rn 454930 · 原文定位 6.3",
+              "source_ref": "6.3",
+              "notations": {
+                "accent": [
+                  "suàn"
+                ],
+                "ipa": [
+                  "suɛn⁵¹"
+                ]
+              },
+              "source_term": "suan⁴",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "suàn",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2173",
+              "attestation_id": "w2173",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "suàn",
+              "zh": "小",
+              "en": "to be small",
+              "pos": "vi.",
+              "dialect": "北部",
+              "locator": "词条 2173",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "suàn"
+                ],
+                "ipa": [
+                  "suɛn⁵¹"
+                ]
+              },
+              "source_term": "suan4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "suàn",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w2173",
+              "attestation_id": "w8134",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "suàn",
+              "zh": "小",
+              "en": "to be small",
+              "pos": "vi.",
+              "dialect": "北部",
+              "locator": "Sheet1!C2252:G2252",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "suàn"
+                ]
+              },
+              "source_term": "suanv",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "suàn",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w44",
+              "attestation_id": "stedt-rn-455385",
+              "source": "stedt-07898ef938",
+              "term": "-kǔlī",
+              "zh": "小",
+              "en": "[little]",
+              "pos": "nsuff.",
+              "dialect": "北部",
+              "locator": "STEDT rn 455385 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "-kǔlī"
+                ],
+                "ipa": [
+                  "-kʰu²¹li⁵⁵"
+                ]
+              },
+              "source_term": "-ku3li1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "-kǔlī",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w44",
+              "attestation_id": "w2830",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "-kǔlī",
+              "zh": "小",
+              "en": "[little]",
+              "pos": "nsuff.",
+              "dialect": "北部",
+              "locator": "Sheet1!A60:C60",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "-kǔlī"
+                ],
+                "ipa": [
+                  "-kʰu²¹li⁵⁵"
+                ]
+              },
+              "source_term": "-ku2 li1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "-kǔlī",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w44",
+              "attestation_id": "w44",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "-kǔlī",
+              "zh": "小",
+              "en": "[little]",
+              "pos": "nsuff.",
+              "dialect": "北部",
+              "locator": "词条 44",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "-kǔlī"
+                ],
+                "ipa": [
+                  "-kʰu²¹li⁵⁵"
+                ]
+              },
+              "source_term": "-ku3li1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "-kǔlī",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w44",
+              "attestation_id": "w8402",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "-kǔlī",
+              "zh": "小",
+              "en": "[little]",
+              "pos": "nsuff.",
+              "dialect": "北部",
+              "locator": "Sheet1!C2520:G2520",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "-kǔlī"
+                ]
+              },
+              "source_term": "-kurlix",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "-kǔlī",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w5236",
+              "attestation_id": "stedt-rn-457807",
+              "source": "stedt-07898ef938",
+              "term": "suàn",
+              "zh": "小",
+              "en": "small",
+              "pos": "vi.",
+              "dialect": "北部",
+              "locator": "STEDT rn 457807 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "suàn"
+                ],
+                "ipa": [
+                  "suɛn⁵¹"
+                ]
+              },
+              "source_term": "suan4",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "suàn",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w5236",
+              "attestation_id": "w5236",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "suàn",
+              "zh": "小",
+              "en": "small",
+              "pos": "vi.",
+              "dialect": "北部",
+              "locator": "Sheet1!A2466:C2466",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "suàn"
+                ],
+                "ipa": [
+                  "suɛn⁵¹"
+                ]
+              },
+              "source_term": "suan3",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "suàn",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-289206",
+              "attestation_id": "stedt-rn-289206",
+              "source": "stedt-cb523fc3dc",
+              "term": "suān / bíkuī",
+              "zh": "小",
+              "en": "small",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 289206 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "suān",
+                  "bíkuī"
+                ],
+                "ipa": [
+                  "suã⁵⁵~pi³⁵kʰuei⁵⁵"
+                ]
+              },
+              "source_term": "suã⁵⁵~pi³⁵khuei⁵⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "suān",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                },
+                {
+                  "text": "bíkuī",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                }
+              ],
+              "canonical_source": "stedt-cb523fc3dc",
+              "source_title": "STEDT · Tian 86",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "地方",
+      "query_plan": {
+        "original": "地方",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "地方",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "地方",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "地方",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "地方",
+          "relation": "original",
+          "raw_exact_hits": 22,
+          "dialect_filtered_hits": 22,
+          "witnesses": [
+            {
+              "entry_id": "w1199",
+              "attestation_id": "stedt-rn-454661",
+              "source": "stedt-39f4cd9a6b",
+              "term": "kō",
+              "zh": "地方",
+              "en": "place",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 454661 · 原文定位 5.1",
+              "source_ref": "5.1",
+              "notations": {
+                "accent": [
+                  "kō"
+                ],
+                "ipa": [
+                  "kʰuɔ⁵⁵"
+                ]
+              },
+              "source_term": "kuo¹",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kō",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1283",
+              "attestation_id": "stedt-rn-454663",
+              "source": "stedt-39f4cd9a6b",
+              "term": "lǎngcǎng",
+              "zh": "地方",
+              "en": "place",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 454663 · 原文定位 5.1",
+              "source_ref": "5.1",
+              "notations": {
+                "accent": [
+                  "lǎngcǎng"
+                ],
+                "ipa": [
+                  "laŋ²¹tsʰaŋ²¹"
+                ]
+              },
+              "source_term": "lang³cang³",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "lǎngcǎng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1199",
+              "attestation_id": "stedt-rn-456712",
+              "source": "stedt-07898ef938",
+              "term": "kō",
+              "zh": "地方",
+              "en": "place",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 456712 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "kō"
+                ],
+                "ipa": [
+                  "kʰuɔ⁵⁵"
+                ]
+              },
+              "source_term": "kuo1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kō",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1199",
+              "attestation_id": "w1199",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "kō",
+              "zh": "地方",
+              "en": "place",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 1199",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "kō"
+                ],
+                "ipa": [
+                  "kʰuɔ⁵⁵"
+                ]
+              },
+              "source_term": "kuo1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kō",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1199",
+              "attestation_id": "w4140",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "kō",
+              "zh": "地方",
+              "en": "place",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A1370:C1370",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "kō"
+                ],
+                "ipa": [
+                  "kʰuɔ⁵⁵"
+                ]
+              },
+              "source_term": "kuo1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kō",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1199",
+              "attestation_id": "w5970",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "kō",
+              "zh": "地方",
+              "en": "place",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C88:G88",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "kō"
+                ]
+              },
+              "source_term": "kox",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "kō",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1283",
+              "attestation_id": "stedt-rn-456809",
+              "source": "stedt-07898ef938",
+              "term": "lǎngcǎng",
+              "zh": "地方",
+              "en": "place",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "STEDT rn 456809 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "lǎngcǎng"
+                ],
+                "ipa": [
+                  "laŋ²¹tsʰaŋ²¹"
+                ]
+              },
+              "source_term": "lang3cang3",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "lǎngcǎng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1283",
+              "attestation_id": "w1283",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "term": "lǎngcǎng",
+              "zh": "地方",
+              "en": "place",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "词条 1283",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "lǎngcǎng"
+                ],
+                "ipa": [
+                  "laŋ²¹tsʰaŋ²¹"
+                ]
+              },
+              "source_term": "lang3cang3",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "lǎngcǎng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语汉语词表.htm",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1283",
+              "attestation_id": "w4244",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "lǎngcǎng",
+              "zh": "地方",
+              "en": "place",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!A1474:C1474",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "lǎngcǎng"
+                ],
+                "ipa": [
+                  "laŋ²¹tsʰaŋ²¹"
+                ]
+              },
+              "source_term": "lang2 cang2",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "lǎngcǎng",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w1283",
+              "attestation_id": "w7772",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "term": "lǎngcǎng",
+              "zh": "地方",
+              "en": "place",
+              "pos": "n.",
+              "dialect": "北部",
+              "locator": "Sheet1!C1890:G1890",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "lǎngcǎng"
+                ]
+              },
+              "source_term": "langrcangr",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "lǎngcǎng",
+                  "method": "source",
+                  "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "Brassett (2006) to Ye orthography.xlsx",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    },
+    {
+      "mode": "skill_based",
+      "retrieval": "semantic-bridge candidate expansion + verified static dictionary exact match",
+      "embedding_run": false,
+      "cosine_similarity": null,
+      "query": "一半",
+      "query_plan": {
+        "original": "一半",
+        "context": "",
+        "dialect": "north",
+        "analysis": {
+          "meaning": "一半",
+          "family": "direct",
+          "components": [
+            {
+              "key": "head",
+              "query": "一半",
+              "role": "head",
+              "alternatives": [],
+              "required": true
+            }
+          ],
+          "roles": {},
+          "features": {},
+          "paraphrases": [],
+          "losses": [],
+          "synonyms": []
+        },
+        "queries": [
+          {
+            "query": "一半",
+            "relation": "original",
+            "component": null
+          }
+        ],
+        "origin": "productive_rules_with_lexical_bridges",
+        "version": 1
+      },
+      "concept_meaning": "",
+      "concept_warning": "",
+      "dictionary_revision": "c7044cb35cafb40886ac087da4764b6cc0ebd9c9",
+      "dialect_filter": "north",
+      "candidate_results": [
+        {
+          "query": "一半",
+          "relation": "original",
+          "raw_exact_hits": 8,
+          "dialect_filtered_hits": 6,
+          "witnesses": [
+            {
+              "entry_id": "stedt-rn-455092",
+              "attestation_id": "stedt-rn-455092",
+              "source": "stedt-39f4cd9a6b",
+              "term": "lāzā",
+              "zh": "一半",
+              "en": "half",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 455092 · 原文定位 7.2",
+              "source_ref": "7.2",
+              "notations": {
+                "accent": [
+                  "lāzā"
+                ],
+                "ipa": [
+                  "la⁵⁵tsa⁵⁵"
+                ]
+              },
+              "source_term": "la¹za¹",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "lāzā",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2006",
+              "source_title": "STEDT · Brassett 06 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w3200",
+              "attestation_id": "stedt-rn-458278",
+              "source": "stedt-07898ef938",
+              "term": "cā",
+              "zh": "一半",
+              "en": "half",
+              "pos": "cl.",
+              "dialect": "北部",
+              "locator": "STEDT rn 458278 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "cā"
+                ],
+                "ipa": [
+                  "tsʰa⁵⁵"
+                ]
+              },
+              "source_term": "ca1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "cā",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "STEDT · Brassett 04 Tujia",
+              "source_locations": []
+            },
+            {
+              "entry_id": "w3200",
+              "attestation_id": "w3200",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "term": "cā",
+              "zh": "一半",
+              "en": "half",
+              "pos": "cl.",
+              "dialect": "北部",
+              "locator": "Sheet1!A430:C430",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "cā"
+                ],
+                "ipa": [
+                  "tsʰa⁵⁵"
+                ]
+              },
+              "source_term": "ca1",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "cā",
+                  "method": "derived",
+                  "profile": "brassett-to-ye"
+                }
+              ],
+              "canonical_source": "brassett-2004",
+              "source_title": "土家语英语词表 Brassett.xlsx",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-228300",
+              "attestation_id": "stedt-rn-228300",
+              "source": "stedt-7fd6565400",
+              "term": "/ji³⁵pan⁵⁵/",
+              "zh": "一半",
+              "en": "half",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 228300 · 原文定位 947.38",
+              "source_ref": "947.38",
+              "notations": {
+                "ipa": [
+                  "ji³⁵pan⁵⁵"
+                ]
+              },
+              "source_term": "ji³⁵pan⁵⁵",
+              "term_notation": "ipa",
+              "accent_provenance": [],
+              "canonical_source": "stedt-7fd6565400",
+              "source_title": "STEDT · Sun H 91 ZMYY",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-289332",
+              "attestation_id": "stedt-rn-289332",
+              "source": "stedt-cb523fc3dc",
+              "term": "zā / tīkōlō",
+              "zh": "一半",
+              "en": "half",
+              "pos": "",
+              "dialect": "北部",
+              "locator": "STEDT rn 289332 · 原文定位 未标明",
+              "source_ref": "",
+              "notations": {
+                "accent": [
+                  "zā",
+                  "tīkōlō"
+                ],
+                "ipa": [
+                  "tsa⁵⁵~tʰi⁵⁵kʰo⁵⁵lo⁵⁵"
+                ]
+              },
+              "source_term": "tsa⁵⁵~thi⁵⁵kho⁵⁵lo⁵⁵",
+              "term_notation": "accent",
+              "accent_provenance": [
+                {
+                  "text": "zā",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                },
+                {
+                  "text": "tīkōlō",
+                  "method": "source-candidate",
+                  "profile": "stedt-cb523fc3dc:north"
+                }
+              ],
+              "canonical_source": "stedt-cb523fc3dc",
+              "source_title": "STEDT · Tian 86",
+              "source_locations": []
+            },
+            {
+              "entry_id": "stedt-rn-387857",
+              "attestation_id": "stedt-rn-387857",
+              "source": "stedt-610ab69a37",
+              "term": "/pan⁵⁵/",
+              "zh": "一半",
+              "en": "half",
+              "pos": "num",
+              "dialect": "北部",
+              "locator": "STEDT rn 387857 · 原文定位 0832.49",
+              "source_ref": "0832.49",
+              "notations": {
+                "ipa": [
+                  "pan⁵⁵"
+                ]
+              },
+              "source_term": "pan⁵⁵",
+              "term_notation": "ipa",
+              "accent_provenance": [],
+              "canonical_source": "stedt-610ab69a37",
+              "source_title": "STEDT · Huang and Dai 92 TBL",
+              "source_locations": []
+            }
+          ]
+        }
+      ],
+      "warning": "Expanded queries are not guaranteed synonyms; candidate combination requires grammatical validation."
+    }
+  ]
+}

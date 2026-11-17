@@ -4,7 +4,7 @@ from html.parser import HTMLParser
 import fitz,json,re,unicodedata
 from PIL import Image,ImageDraw
 ROOT=Path(__file__).resolve().parents[3];RECORDS=Path(__file__).resolve().parent
-IDS=['en-crow','zh-rabbit','ja-jizo','bo-crane','reverse-song']
+IDS=['en-crow','zh-rabbit','ja-jizo','bo-crane','reverse-song','ko-bandal']
 def norm(s):return re.sub(r'\s+','',unicodedata.normalize('NFKC',s)).replace('\u200b','').replace('\u00ad','')
 def letters(s):return ''.join(c for c in unicodedata.normalize('NFKC',s).casefold() if unicodedata.category(c)[0] in 'LMN')
 class Tables(HTMLParser):
@@ -43,8 +43,8 @@ for cid in IDS:
  assert not outside,(cid,outside)
  results.append({'id':cid,'pages':len(doc),'clauses':len(d['clauses']),'aligned_tables':len(parser.all),'three_rows_equal_columns':True,'lexical_sequence_preserved':True,'all_source_and_cell_text_present':True,'black_and_white_unboxed':True,'no_page_overflow':True})
  for ix in set([0,len(doc)//2,len(doc)-1]):doc[ix].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save(f'/tmp/gloss-{cid}-{ix+1}.png')
-combined=fitz.open(ROOT/'site/translation-runs/five-translations.pdf');text=''.join(p.get_text() for p in combined)
-nums=[int(x) for x in re.findall(r'\((\d+)\)',text)];assert nums==list(range(1,44)),nums
+combined=fitz.open(ROOT/'site/translation-runs/all-translations.pdf');text=''.join(p.get_text() for p in combined)
+nums=[int(x) for x in re.findall(r'\((\d+)\)',text)];expected=sum(len(json.loads((RECORDS/cid/'gloss.json').read_text())['clauses']) for cid in IDS);assert nums==list(range(1,expected+1)),nums
 results.append({'combined_pages':len(combined),'continuous_source_numbers':nums})
 canvas=Image.new('RGB',(270*3,390*((len(thumbs)+2)//3)),(210,210,210))
 for i,img in enumerate(thumbs):canvas.paste(img,((i%3)*270,(i//3)*390))

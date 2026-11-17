@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "scripts/lookup-loan.py",
+    "银河",
+    "--target",
+    "north"
+  ],
+  "stdout": "{\n  \"word\": \"银河\",\n  \"target\": \"north\",\n  \"ipa\": \"ĩ²¹ xuɔ²¹\",\n  \"romanization\": \"yǐn hǒ\",\n  \"display\": \"yǐn hǒ\",\n  \"method\": \"proposed-loan-mapping\",\n  \"status\": \"resolved\",\n  \"characters\": [\n    {\n      \"position\": 0,\n      \"character\": \"银\",\n      \"status\": \"resolved\",\n      \"reading\": {\n        \"source\": \"yongshun\",\n        \"source_ipa\": \"in2\",\n        \"sense\": \"\",\n        \"historical_tone\": null,\n        \"source_category\": \"2\",\n        \"ipa\": \"ĩ²¹\",\n        \"romanization\": \"yǐn\",\n        \"tone\": \"21\",\n        \"changes\": [\n          \"→\",\n          \"in→ĩ\"\n        ],\n        \"method\": \"proposed-loan-mapping\",\n        \"senses\": []\n      }\n    },\n    {\n      \"position\": 1,\n      \"character\": \"河\",\n      \"status\": \"resolved\",\n      \"reading\": {\n        \"source\": \"yongshun\",\n        \"source_ipa\": \"xuo2\",\n        \"sense\": \"\",\n        \"historical_tone\": null,\n        \"source_category\": \"2\",\n        \"ipa\": \"xuɔ²¹\",\n        \"romanization\": \"hǒ\",\n        \"tone\": \"21\",\n        \"changes\": [\n          \"x→x\",\n          \"uo→uɔ\"\n        ],\n        \"method\": \"proposed-loan-mapping\",\n        \"senses\": []\n      }\n    }\n  ]\n}\n",
+  "stderr": "",
+  "returncode": 0
+}

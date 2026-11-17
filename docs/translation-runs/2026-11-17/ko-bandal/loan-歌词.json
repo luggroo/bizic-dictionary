@@ -1,0 +1,12 @@
+{
+  "command": [
+    "python",
+    "scripts/lookup-loan.py",
+    "歌词",
+    "--target",
+    "north"
+  ],
+  "stdout": "{\n  \"word\": \"歌词\",\n  \"target\": \"north\",\n  \"ipa\": \"kuɔ⁵⁵ tsʰɿ²¹\",\n  \"romanization\": \"gō cǐ\",\n  \"display\": \"gō cǐ\",\n  \"method\": \"proposed-loan-mapping\",\n  \"status\": \"resolved\",\n  \"characters\": [\n    {\n      \"position\": 0,\n      \"character\": \"歌\",\n      \"status\": \"resolved\",\n      \"reading\": {\n        \"source\": \"yongshun\",\n        \"source_ipa\": \"kuo1\",\n        \"sense\": \"\",\n        \"historical_tone\": null,\n        \"source_category\": \"1\",\n        \"ipa\": \"kuɔ⁵⁵\",\n        \"romanization\": \"gō\",\n        \"tone\": \"55\",\n        \"changes\": [\n          \"k→k\",\n          \"uo→uɔ\"\n        ],\n        \"method\": \"proposed-loan-mapping\",\n        \"senses\": []\n      }\n    },\n    {\n      \"position\": 1,\n      \"character\": \"词\",\n      \"status\": \"resolved\",\n      \"reading\": {\n        \"source\": \"jishou\",\n        \"source_ipa\": \"dzɿ2\",\n        \"sense\": \"\",\n        \"historical_tone\": null,\n        \"source_category\": \"2\",\n        \"ipa\": \"tsʰɿ²¹\",\n        \"romanization\": \"cǐ\",\n        \"tone\": \"21\",\n        \"changes\": [\n          \"dz→tsʰ\",\n          \"ɿ→ɿ\"\n        ],\n        \"method\": \"proposed-loan-mapping\",\n        \"senses\": []\n      }\n    }\n  ]\n}\n",
+  "stderr": "",
+  "returncode": 0
+}

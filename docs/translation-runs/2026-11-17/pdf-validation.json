@@ -55,7 +55,18 @@
     "no_page_overflow": true
   },
   {
-    "combined_pages": 14,
+    "id": "ko-bandal",
+    "pages": 2,
+    "clauses": 6,
+    "aligned_tables": 9,
+    "three_rows_equal_columns": true,
+    "lexical_sequence_preserved": true,
+    "all_source_and_cell_text_present": true,
+    "black_and_white_unboxed": true,
+    "no_page_overflow": true
+  },
+  {
+    "combined_pages": 16,
     "continuous_source_numbers": [
       1,
       2,
@@ -99,7 +110,13 @@
       40,
       41,
       42,
-      43
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49
     ]
   }
 ]

@@ -1,0 +1,40 @@
+{
+  "start": "2026-11-17 19:50:41 UTC",
+  "end": "2026-11-17T19:54:10.709327+00:00",
+  "first_round_sha256": {
+    "translation.md": "f33c863c57823c8f2e901583ad951c94ef38492b43333125607855dd4e46446d",
+    "translation.json": "b5ea6171786d9c8e65805e83f4532d82569a03c82f4f21685008d8a5657adfdc"
+  },
+  "query_logs": [
+    "queries-01.json",
+    "queries-02.json",
+    "queries-03.json",
+    "queries-04.json"
+  ],
+  "failed_initial_query": "limit_per_query=20 was rejected before retrieval; corrected to 10; full error retained",
+  "grammar_used": [
+    "references/clause-patterns.md",
+    "references/event-linking.md",
+    "references/predicate-economy.md"
+  ],
+  "translation_examples_from_web_or_other_agents": false,
+  "gloss_label_check": {
+    "passed": true,
+    "fixed_labels": 39,
+    "used": [
+      "ADVZ",
+      "ALL",
+      "FOC",
+      "LNK",
+      "NEG"
+    ],
+    "errors": []
+  },
+  "final_integrity": {
+    "translation.md": true,
+    "translation.json": true
+  },
+  "clauses": 6,
+  "target_units": 8,
+  "tokens": 38
+}
