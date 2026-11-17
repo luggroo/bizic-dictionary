@@ -1,0 +1,321 @@
+{
+  "clauses": [
+    {
+      "source": "宋人有耕者，田中有株，兔走触株，折颈而死。",
+      "target_units": [
+        {
+          "translation": "宋 gǒjiā wótū qiě-mā lá hǔ xié。",
+          "tokens": [
+            {
+              "pinyin": "宋",
+              "ipa": null,
+              "gloss": "宋",
+              "source": "本次自主保留国名的最小汉语插入；无词条记音，保留汉字"
+            },
+            {
+              "pinyin": "gǒjiā",
+              "ipa": "kuɔ²¹tɕia⁵⁵",
+              "gloss": "国",
+              "source": "Brassett词库 w810；叶氏配对见证 w8008；IPA w810,w3709,stedt-rn-456282"
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "里面",
+              "source": "Brassett词库 w2395；叶氏配对见证 w6651；IPA w2395,w5458,stedt-rn-458043,stedt-rn-455022"
+            },
+            {
+              "pinyin": "qiě-mā",
+              "ipa": "tɕʰiɛ²¹-ma⁵⁵",
+              "gloss": "耕-NMLZ",
+              "source": "Brassett词库 w1828；叶氏配对见证 w7619；IPA w1828,w4873,stedt-rn-457421,stedt-rn-454119；参考语法north-6 §6.1 ma，Brassett 2006:141–142，能产指人名物化"
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": "参考语法north-3，Brassett 2006:96例31"
+            },
+            {
+              "pinyin": "hǔ",
+              "ipa": "xu²¹",
+              "gloss": "个",
+              "source": "参考语法north-3，Brassett 2006:96例31"
+            },
+            {
+              "pinyin": "xié",
+              "ipa": "ɕiɛ²⁴",
+              "gloss": "有",
+              "source": "Brassett词库 w2487；叶氏配对见证 w7134；IPA w2487,w5587,stedt-rn-458147,stedt-rn-454792"
+            }
+          ]
+        },
+        {
+          "translation": "sěkē wótū kǎtǐmī xié。",
+          "tokens": [
+            {
+              "pinyin": "sěkē",
+              "ipa": "sɤ²¹kʰɤ⁵⁵",
+              "gloss": "田",
+              "source": "Brassett词库 w2022；叶氏配对见证 w5944；IPA w2022,w5081,stedt-rn-457643"
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "里面",
+              "source": "Brassett词库 w2395；叶氏配对见证 w6651；IPA w2395,w5458,stedt-rn-458043,stedt-rn-455022"
+            },
+            {
+              "pinyin": "kǎtǐmī",
+              "ipa": "kʰa²¹tʰi²¹mi⁵⁵",
+              "gloss": "树桩",
+              "source": "Brassett词库 w1120；叶氏配对见证 w8312；IPA w1120,w4048,stedt-rn-456620,stedt-rn-453648"
+            },
+            {
+              "pinyin": "xié",
+              "ipa": "ɕiɛ²⁴",
+              "gloss": "有",
+              "source": "Brassett词库 w2487；叶氏配对见证 w7134；IPA w2487,w5587,stedt-rn-458147,stedt-rn-454792"
+            }
+          ]
+        },
+        {
+          "translation": "mǎotáo xìcǎ-mǒ kǎtǐmī pén-liē。",
+          "tokens": [
+            {
+              "pinyin": "mǎotáo",
+              "ipa": "mau²¹tʰau²⁴",
+              "gloss": "兔子",
+              "source": "Brassett词库 w1486；叶氏配对见证 w6944；IPA w1486,w4464,stedt-rn-457033,stedt-rn-453578"
+            },
+            {
+              "pinyin": "xìcǎ-mǒ",
+              "ipa": "ɕi⁵¹tsʰa²¹-mɔ²¹",
+              "gloss": "跑-ADVZ",
+              "source": "Brassett词库 w2433；叶氏配对见证 w6302；IPA w2433,w5534,stedt-rn-458090,stedt-rn-453829；参考语法north-6 §6.4 动态V mor，Brassett 2006:152–154"
+            },
+            {
+              "pinyin": "kǎtǐmī",
+              "ipa": "kʰa²¹tʰi²¹mi⁵⁵",
+              "gloss": "树桩",
+              "source": "Brassett词库 w1120；叶氏配对见证 w8312；IPA w1120,w4048,stedt-rn-456620,stedt-rn-453648"
+            },
+            {
+              "pinyin": "pén-liē",
+              "ipa": "pʰɜŋ²⁴-lie⁵⁵",
+              "gloss": "碰-PFV",
+              "source": "Brassett词库 w1714；叶氏配对见证 w7923；IPA w1714,w4721,stedt-rn-457285；参考语法north-4 §lie／liao：Brassett 2006:119例76、136例194；事件完整体，拼写按网站形态边界连接"
+            }
+          ]
+        },
+        {
+          "translation": "kōngdī kǒ-liē。",
+          "tokens": [
+            {
+              "pinyin": "kōngdī",
+              "ipa": "kʰɔŋ⁵⁵ti⁵⁵",
+              "gloss": "脖子",
+              "source": "Brassett词库 w1163；叶氏配对见证 w6198；IPA w1163,w4100,stedt-rn-456672,stedt-rn-453724"
+            },
+            {
+              "pinyin": "kǒ-liē",
+              "ipa": "kʰuɔ²¹-lie⁵⁵",
+              "gloss": "断-PFV",
+              "source": "Brassett词库 w1200；叶氏配对见证 w6958；IPA w1200；参考语法north-4 §lie／liao：Brassett 2006:119例76、136例194；事件完整体，拼写按网站形态边界连接"
+            }
+          ]
+        },
+        {
+          "translation": "mǎotáo sé-liē。",
+          "tokens": [
+            {
+              "pinyin": "mǎotáo",
+              "ipa": "mau²¹tʰau²⁴",
+              "gloss": "兔子",
+              "source": "Brassett词库 w1486；叶氏配对见证 w6944；IPA w1486,w4464,stedt-rn-457033,stedt-rn-453578"
+            },
+            {
+              "pinyin": "sé-liē",
+              "ipa": "sɤ²⁴-lie⁵⁵",
+              "gloss": "死-PFV",
+              "source": "Brassett词库 w2008；叶氏配对见证 w6367；IPA w2008,w5065,stedt-rn-457629,stedt-rn-453876；参考语法north-4 §lie／liao：Brassett 2006:119例76、136例194；事件完整体，拼写按网站形态边界连接"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "因释其耒而守株，冀复得到兔。",
+      "target_units": [
+        {
+          "translation": "āimǒ gó sěkē qiě-niě jiāliān pō-liē。",
+          "tokens": [
+            {
+              "pinyin": "āimǒ",
+              "ipa": "ai⁵⁵mɔ²¹",
+              "gloss": "所以",
+              "source": "Brassett词库 w174；叶氏配对见证 w7742；IPA w174,w2998,stedt-rn-455570,stedt-rn-455293"
+            },
+            {
+              "pinyin": "gó",
+              "ipa": "kuɔ²⁴",
+              "gloss": "他",
+              "source": "参考语法north-3 §3.1 /gof/；Brassett 2006:48–49"
+            },
+            {
+              "pinyin": "sěkē",
+              "ipa": "sɤ²¹kʰɤ⁵⁵",
+              "gloss": "田",
+              "source": "Brassett词库 w2022；叶氏配对见证 w5944；IPA w2022,w5081,stedt-rn-457643"
+            },
+            {
+              "pinyin": "qiě-niě",
+              "ipa": "tɕʰiɛ²¹-ɲie²¹",
+              "gloss": "耕-LNK",
+              "source": "Brassett词库 w1828；叶氏配对见证 w7619；IPA w1828,w4873,stedt-rn-457421,stedt-rn-454119；参考语法north-6 §6.3，Brassett 2006:95例24，动词短语＋nier＋名词"
+            },
+            {
+              "pinyin": "jiāliān",
+              "ipa": "tɕia⁵⁵liɛn⁵⁵",
+              "gloss": "工具",
+              "source": "Brassett词库 w993；叶氏配对见证 w5919；IPA w993,w3910,stedt-rn-456485,stedt-rn-454218"
+            },
+            {
+              "pinyin": "pō-liē",
+              "ipa": "pʰɔ⁵⁵-lie⁵⁵",
+              "gloss": "放-PFV",
+              "source": "Brassett词库 w1740；叶氏配对见证 w6399；IPA w1740,w4758,stedt-rn-457316；参考语法north-4 §lie／liao：Brassett 2006:119例76、136例194；事件完整体，拼写按网站形态边界连接"
+            }
+          ]
+        },
+        {
+          "translation": "kǎtǐmī kà-bǒ。",
+          "tokens": [
+            {
+              "pinyin": "kǎtǐmī",
+              "ipa": "kʰa²¹tʰi²¹mi⁵⁵",
+              "gloss": "树桩",
+              "source": "Brassett词库 w1120；叶氏配对见证 w8312；IPA w1120,w4048,stedt-rn-456620,stedt-rn-453648"
+            },
+            {
+              "pinyin": "kà-bǒ",
+              "ipa": "kʰa⁵¹-pɔ²¹",
+              "gloss": "守-STAT",
+              "source": "Brassett词库 w1080；叶氏配对见证 w7337；IPA w1080,w4053,stedt-rn-456576；参考语法north-4 V bor状态结构；north-6 §6.4，Brassett 2006:119、152–154"
+            }
+          ]
+        },
+        {
+          "translation": "mǎotáo zái tǐ-cá。",
+          "tokens": [
+            {
+              "pinyin": "mǎotáo",
+              "ipa": "mau²¹tʰau²⁴",
+              "gloss": "兔子",
+              "source": "Brassett词库 w1486；叶氏配对见证 w6944；IPA w1486,w4464,stedt-rn-457033,stedt-rn-453578"
+            },
+            {
+              "pinyin": "zái",
+              "ipa": "tsai²⁴",
+              "gloss": "再",
+              "source": "Brassett词库 w2626；叶氏配对见证 w7713；IPA w2626,w5731,stedt-rn-458293"
+            },
+            {
+              "pinyin": "tǐ-cá",
+              "ipa": "tʰi²¹-tsʰa²⁴",
+              "gloss": "得到-想",
+              "source": "Brassett词库 w2255；叶氏配对见证 w7363；IPA stedt-rn-289082,w2255,w5332,stedt-rn-457896；w12/w8363；参考语法north-4 §4.6意愿，Brassett 2006:126–131，V ca"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "兔不可复得，而身为宋国笑。",
+      "target_units": [
+        {
+          "translation": "gó mǎotáo zái tǐ-tā-tī。",
+          "tokens": [
+            {
+              "pinyin": "gó",
+              "ipa": "kuɔ²⁴",
+              "gloss": "他",
+              "source": "参考语法north-3 §3.1 /gof/；Brassett 2006:48–49"
+            },
+            {
+              "pinyin": "mǎotáo",
+              "ipa": "mau²¹tʰau²⁴",
+              "gloss": "兔子",
+              "source": "Brassett词库 w1486；叶氏配对见证 w6944；IPA w1486,w4464,stedt-rn-457033,stedt-rn-453578"
+            },
+            {
+              "pinyin": "zái",
+              "ipa": "tsai²⁴",
+              "gloss": "再",
+              "source": "Brassett词库 w2626；叶氏配对见证 w7713；IPA w2626,w5731,stedt-rn-458293"
+            },
+            {
+              "pinyin": "tǐ-tā-tī",
+              "ipa": "tʰi²¹-tʰa⁵⁵-tʰi⁵⁵",
+              "gloss": "得到-NEG-能",
+              "source": "Brassett词库 w2255；叶氏配对见证 w7363；IPA stedt-rn-289082,w2255,w5332,stedt-rn-457896；w68/w6541；参考语法north-4 §能力否定，Brassett 2006，不能：一般条件不允许"
+            }
+          ]
+        },
+        {
+          "translation": "宋 gǒjiā lò gó 嘲笑-liē。",
+          "tokens": [
+            {
+              "pinyin": "宋",
+              "ipa": null,
+              "gloss": "宋",
+              "source": "本次自主保留国名的最小汉语插入；无词条记音，保留汉字"
+            },
+            {
+              "pinyin": "gǒjiā",
+              "ipa": "kuɔ²¹tɕia⁵⁵",
+              "gloss": "国",
+              "source": "Brassett词库 w810；叶氏配对见证 w8008；IPA w810,w3709,stedt-rn-456282"
+            },
+            {
+              "pinyin": "lò",
+              "ipa": "luɔ⁵¹",
+              "gloss": "人",
+              "source": "Brassett词库 w1421；叶氏配对见证 w6528；IPA w1421,w4417,stedt-rn-456963,stedt-rn-453974"
+            },
+            {
+              "pinyin": "gó",
+              "ipa": "kuɔ²⁴",
+              "gloss": "他",
+              "source": "参考语法north-3 §3.1 /gof/；Brassett 2006:48–49"
+            },
+            {
+              "pinyin": "嘲笑-liē",
+              "ipa": null,
+              "gloss": "嘲笑-PFV",
+              "source": "本次自主最小汉语插入；词库嘲笑/讥/mock/ridicule/laugh at均无项；汉语插入无词条记音，保留汉字；-liē为有据的土家语后缀，整词IPA留空；参考语法north-4 §lie／liao：Brassett 2006:119例76、136例194；事件完整体，拼写按网站形态边界连接"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "北部龙山初步试译，词汇以Brassett词库及其叶氏配对形式为基础；检索模式：Skill-based。IPA保留所选词库/参考语法基记，连读实现未核。",
+    "“耕者”按能产“耕-mā”表达耕作的人；“耒”改写为“耕田的工具”，保留用途但没有保留古农具的具体形制。",
+    "“兔走触株”采用“跑-mǒ＋树桩＋碰-liē”，将跑作为碰撞时的动态方式；“折颈”单列脖子断裂，随后显写兔子为死的主语。",
+    "“其”在同一农夫话题下省略；“守株”的农夫主语及后接“想得到”的主语继续省略。",
+    "“冀”以V-cá表达想得到/愿望，未另表达对成功的推测确信；“不可复得”用条件性能力否定，保留“不能再得到”。",
+    "国名“宋”及动词“嘲笑”是本次自主汉语插入，无词条记音，保留汉字，不标读音；“嘲笑-liē”保留已有土家语后缀，整词IPA留空；末句用“宋国人嘲笑他”的主动句表达原文被动意义。普通笑词w1624只有laugh/smile义，未将其直接当作已证实的嘲笑动词。",
+    "事件liē、状态bǒ、名物化mā、修饰连接niě、意愿cá及否定能力tā-tī均按词内形态链用连字符连接。每一独立断言另组；原文三句顺序完整覆盖。",
+    "新组合的耕作工具用途短语、跑着碰撞和借入动词的形态组合尚未经龙山母语者审校；词库检索不能据此确认全文自然度。"
+  ],
+  "abbreviations": {
+    "ADVZ": "adverbializer",
+    "LNK": "linker",
+    "NEG": "negation",
+    "NMLZ": "nominalizer",
+    "PFV": "perfective",
+    "STAT": "stative"
+  }
+}

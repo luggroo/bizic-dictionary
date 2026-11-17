@@ -1,0 +1,1845 @@
+{
+  "clauses": [
+    {
+      "source": "笠地蔵",
+      "target_units": [
+        {
+          "translation": "dēnpǒng 地藏像",
+          "tokens": [
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "斗笠",
+              "source": "w572; brassett-2004; 词条 572; accent witness w6004; IPA [{'text': 'tɜŋ⁵⁵pʰɔŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w572', 'w3436', 'stedt-rn-456007', 'stedt-rn-454578'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "地藏像",
+              "ipa": null,
+              "gloss": "地藏像",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；地藏未命中；菩萨命中龙山lómōng但不能保持地藏专名"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "むかし、山のふもとの小さな村に、おじいさんとおばあさんが住んでいました。",
+      "target_units": [
+        {
+          "translation": "dīgǎ kūzà jǐ bǎtǐ lōyōu bíkuī pǒpā niē āmā pá-bǒ",
+          "tokens": [
+            {
+              "pinyin": "dīgǎ",
+              "ipa": "ti⁵⁵ka²¹",
+              "gloss": "从前",
+              "source": "w586; brassett-2004; 词条 586; accent witness w8372; IPA [{'text': 'ti⁵⁵ka²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w586', 'w3444', 'stedt-rn-456022'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "kūzà",
+              "ipa": "kʰu⁵⁵tsa⁵¹",
+              "gloss": "山",
+              "source": "w1183; brassett-2004; 词条 1183; accent witness w6382; IPA [{'text': 'kʰu⁵⁵tsa⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1183', 'w4111', 'stedt-rn-456694'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "jǐ",
+              "ipa": "tɕi²¹",
+              "gloss": "脚",
+              "source": "w957; brassett-2004; 词条 957; accent witness w7797; IPA [{'text': 'tɕi²¹', 'method': 'source', 'profile': 'stedt-24cc5bbb03', 'attestationIds': ['stedt-rn-127228', 'stedt-rn-43389', 'stedt-rn-350336', 'stedt-rn-193416', 'w957', 'w3884', 'stedt-rn-456447'], 'sourceProfiles': ['stedt-24cc5bbb03', 'brassett-phonetic'], 'sourceMethods': ['source', 'derived'], 'originalTexts': []}]"
+            },
+            {
+              "pinyin": "bǎtǐ",
+              "ipa": "pa²¹tʰi²¹",
+              "gloss": "下面",
+              "source": "w212; brassett-2004; 词条 212; accent witness w6349; IPA [{'text': 'pa²¹tʰi²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w212', 'w3045', 'stedt-rn-455612', 'stedt-rn-454999'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "lōyōu",
+              "ipa": "luɔ⁵⁵jou⁵⁵",
+              "gloss": "寨子",
+              "source": "w1452; brassett-2004; 词条 1452; accent witness w7831; IPA [{'text': 'luɔ⁵⁵jou⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1452', 'w4393', 'stedt-rn-456997', 'stedt-rn-454664'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bíkuī",
+              "ipa": "pi²⁴kʰuei⁵⁵",
+              "gloss": "小的",
+              "source": "参考语法转引：Brassett等2006 p101例70；north-3"
+            },
+            {
+              "pinyin": "pǒpā",
+              "ipa": "pʰɔ²¹pʰa⁵⁵",
+              "gloss": "老爷爷",
+              "source": "w4767; brassett-2004; Sheet1!A1997:C1997; accent witness w4767,stedt-rn-457324; IPA [{'text': 'pʰɔ²¹pʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w4767', 'stedt-rn-457324'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "和",
+              "source": "w1618; brassett-2004; 词条 1618; accent witness w8254; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1618', 'w4613', 'stedt-rn-457174', 'stedt-rn-455298'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "āmā",
+              "ipa": "a⁵⁵ma⁵⁵",
+              "gloss": "老奶奶",
+              "source": "w132; brassett-2004; 词条 132; accent witness w7439; IPA [{'text': 'a⁵⁵ma⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w132', 'w2896', 'stedt-rn-455500'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pá-bǒ",
+              "ipa": "pʰa²⁴-pɔ²¹",
+              "gloss": "住-STAT",
+              "source": "yubao-60757-v-2581 中国语保龙山；site-conversion p á，原IPA pʰa²⁴；参考语法转引：Brassett等2006 p90例110；north-5；north-6方式例31、32"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "二人は貧しく、お正月を迎えるためのお米もありませんでした。",
+      "target_units": [
+        {
+          "translation": "gēzē niē hǔ qiǒng",
+          "tokens": [
+            {
+              "pinyin": "gēzē",
+              "ipa": "kɤ⁵⁵tsɤ⁵⁵",
+              "gloss": "他们",
+              "source": "参考语法转引：Brassett等2006 p49例4；north-3代词"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "二",
+              "source": "w1619; brassett-2004; 词条 1619; accent witness w7070; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1619', 'w4612', 'stedt-rn-457175', 'stedt-rn-455094'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǔ",
+              "ipa": "xu²¹",
+              "gloss": "个",
+              "source": "参考语法转引：Brassett等2006 p96例31；north-3"
+            },
+            {
+              "pinyin": "qiǒng",
+              "ipa": "tɕʰiɔŋ²¹",
+              "gloss": "穷",
+              "source": "w1870; brassett-2004; 词条 1870; accent witness w7279; IPA [{'text': 'tɕʰiɔŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1870'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            }
+          ],
+          "relation": "independent"
+        },
+        {
+          "translation": "gēzē niē hǔ lǒngkā-niě zǐhxě bài tái",
+          "tokens": [
+            {
+              "pinyin": "gēzē",
+              "ipa": "kɤ⁵⁵tsɤ⁵⁵",
+              "gloss": "他们",
+              "source": "参考语法转引：Brassett等2006 p49例4；north-3代词"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "二",
+              "source": "w1619; brassett-2004; 词条 1619; accent witness w7070; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1619', 'w4612', 'stedt-rn-457175', 'stedt-rn-455094'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǔ",
+              "ipa": "xu²¹",
+              "gloss": "个",
+              "source": "参考语法转引：Brassett等2006 p96例31；north-3"
+            },
+            {
+              "pinyin": "lǒngkā-niě",
+              "ipa": "lɔŋ²¹kʰa⁵⁵-ɲie²¹",
+              "gloss": "过年-LNK",
+              "source": "w1400; brassett-2004; 词条 1400; accent witness w7666; IPA [{'text': 'lɔŋ²¹kʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1400', 'w4376', 'stedt-rn-456942'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p95例24；north-6 动词短语＋nier＋中心名词"
+            },
+            {
+              "pinyin": "zǐhxě",
+              "ipa": "tsɨ²¹ɣɤ²¹",
+              "gloss": "米",
+              "source": "w2706; brassett-2004; 词条 2706; accent witness w6474; IPA [{'text': 'tsɨ²¹ɣɤ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2706', 'w5822', 'stedt-rn-458383', 'stedt-rn-454518'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bài",
+              "ipa": "pai⁵¹",
+              "gloss": "也",
+              "source": "w3057; brassett-2004; Sheet1!A287:C287; accent witness w3057,stedt-rn-455651; IPA [{'text': 'pai⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w3057', 'stedt-rn-455651'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "tái",
+              "ipa": "tʰai²⁴",
+              "gloss": "没有",
+              "source": "w2224; brassett-2004; 词条 2224; accent witness w7056; IPA [{'text': 'tʰai²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2224', 'w5291'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "大みそかの朝、おじいさんは、自分で作った五つの笠を町へ売りに行きました。",
+      "target_units": [
+        {
+          "translation": "除夕 zàogūdiē pǒpā cěn bō gódǒ rī-niě dēnpǒng ōng bú lǔ-xí zǎo",
+          "tokens": [
+            {
+              "pinyin": "除夕",
+              "ipa": null,
+              "gloss": "除夕",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；除夕仅查得保靖语保记录；不跨点套用"
+            },
+            {
+              "pinyin": "zàogūdiē",
+              "ipa": "tsau⁵¹ku⁵⁵tiɛ⁵⁵",
+              "gloss": "早晨",
+              "source": "w2643; brassett-2004; 词条 2643; accent witness w8583; IPA [{'text': 'tsau⁵¹ku⁵⁵tiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2643', 'w5752', 'stedt-rn-458311', 'stedt-rn-454998'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pǒpā",
+              "ipa": "pʰɔ²¹pʰa⁵⁵",
+              "gloss": "老爷爷",
+              "source": "w4767; brassett-2004; Sheet1!A1997:C1997; accent witness w4767,stedt-rn-457324; IPA [{'text': 'pʰɔ²¹pʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w4767', 'stedt-rn-457324'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "cěn",
+              "ipa": "tsʰɜŋ²¹",
+              "gloss": "城镇",
+              "source": "w430; brassett-2004; 词条 430; accent witness w7266; IPA [{'text': 'tsʰɜŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w430', 'w3286', 'stedt-rn-455851'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bō",
+              "ipa": "pɔ⁵⁵",
+              "gloss": "DIR",
+              "source": "参考语法转引：Brassett等2006 north-3关系词表：方向/目标"
+            },
+            {
+              "pinyin": "gódǒ",
+              "ipa": "kuɔ²⁴tuɔ²¹",
+              "gloss": "自己",
+              "source": "参考语法转引：Brassett等2006 p48、49；north-3 gofdor"
+            },
+            {
+              "pinyin": "rī-niě",
+              "ipa": "zɨ⁵⁵-ɲie²¹",
+              "gloss": "做-LNK",
+              "source": "w1932; brassett-2004; 词条 1932; accent witness w6212; IPA [{'text': 'zɨ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1932', 'w4974', 'stedt-rn-457542'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p95例24；north-6 动词短语＋nier＋中心名词"
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "斗笠",
+              "source": "w572; brassett-2004; 词条 572; accent witness w6004; IPA [{'text': 'tɜŋ⁵⁵pʰɔŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w572', 'w3436', 'stedt-rn-456007', 'stedt-rn-454578'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "ōng",
+              "ipa": "ɔŋ⁵⁵",
+              "gloss": "五",
+              "source": "w1653; brassett-2004; 词条 1653; accent witness w7924; IPA [{'text': 'ɔŋ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1653', 'w4647', 'stedt-rn-457219', 'stedt-rn-455097'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "顶",
+              "source": "w317; brassett-2004; 词条 317; accent witness w8143; IPA [{'text': 'pu²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w317', 'w3180', 'stedt-rn-455728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "lǔ-xí",
+              "ipa": "lu²¹-ɕi²⁴",
+              "gloss": "卖-NMLZ",
+              "source": "w1411; brassett-2004; 词条 1411; accent witness w7144; IPA [{'text': 'lu²¹', 'method': 'source', 'profile': 'stedt-cb523fc3dc:north', 'attestationIds': ['stedt-rn-289022', 'stedt-rn-420284', 'stedt-rn-211470', 'w1411', 'w4385', 'stedt-rn-456953', 'stedt-rn-454673'], 'sourceProfiles': ['stedt-cb523fc3dc:north', 'brassett-phonetic'], 'sourceMethods': ['source', 'derived'], 'originalTexts': []}]；参考语法转引：鲁曼等2021 p431例40；north-6 目的xi小句；声调依Brassett xif，跨材料构式组合待核"
+            },
+            {
+              "pinyin": "zǎo",
+              "ipa": "tsau²¹",
+              "gloss": "去.PFV",
+              "source": "参考语法north-4常见不规则形式；Brassett词表rn458308等；完成配对来自未刊补充材料"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "けれども、町では誰も笠を買ってくれません。",
+      "target_units": [
+        {
+          "translation": "dángsí cěn pǒpā bǒ dēnpǒng pū-niě lò tái",
+          "tokens": [
+            {
+              "pinyin": "dángsí",
+              "ipa": "taŋ²⁴sɨ²⁴",
+              "gloss": "但是",
+              "source": "w558; brassett-2004; 词条 558; accent witness w7418; IPA [{'text': 'taŋ²⁴sɨ²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w558', 'w3421', 'stedt-rn-455993'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "cěn",
+              "ipa": "tsʰɜŋ²¹",
+              "gloss": "城镇",
+              "source": "w430; brassett-2004; 词条 430; accent witness w7266; IPA [{'text': 'tsʰɜŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w430', 'w3286', 'stedt-rn-455851'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pǒpā",
+              "ipa": "pʰɔ²¹pʰa⁵⁵",
+              "gloss": "老爷爷",
+              "source": "w4767; brassett-2004; Sheet1!A1997:C1997; accent witness w4767,stedt-rn-457324; IPA [{'text': 'pʰɔ²¹pʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w4767', 'stedt-rn-457324'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bǒ",
+              "ipa": "pɔ²¹",
+              "gloss": "BEN",
+              "source": "参考语法转引：Brassett等2006 north-3接受者/受益者/交谈对象标记"
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "斗笠",
+              "source": "w572; brassett-2004; 词条 572; accent witness w6004; IPA [{'text': 'tɜŋ⁵⁵pʰɔŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w572', 'w3436', 'stedt-rn-456007', 'stedt-rn-454578'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pū-niě",
+              "ipa": "pʰu⁵⁵-ɲie²¹",
+              "gloss": "买-LNK",
+              "source": "w1754; brassett-2004; 词条 1754; accent witness w6582; IPA [{'text': 'pʰu⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1754', 'w4777', 'stedt-rn-457336'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p95例24；north-6 动词短语＋nier＋中心名词"
+            },
+            {
+              "pinyin": "lò",
+              "ipa": "luɔ⁵¹",
+              "gloss": "人",
+              "source": "w1421; brassett-2004; 词条 1421; accent witness w6528; IPA [{'text': 'luɔ⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1421', 'w4417', 'stedt-rn-456963', 'stedt-rn-453974'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "tái",
+              "ipa": "tʰai²⁴",
+              "gloss": "没有",
+              "source": "w2224; brassett-2004; 词条 2224; accent witness w7056; IPA [{'text': 'tʰai²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2224', 'w5291'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "夕方になり、おじいさんは五つの笠を持ったまま、家へ帰ることにしました。",
+      "target_units": [
+        {
+          "translation": "cā'ǐzǒ pǒpā dēnpǒng ōng bú hǒ-bǒ mǒ sōngkō-xí 决定-liē",
+          "tokens": [
+            {
+              "pinyin": "cā'ǐzǒ",
+              "ipa": "tsʰa⁵⁵i²¹tsuo²²",
+              "gloss": "傍晚",
+              "source": "yubao-60757-v-0094; yubao-60757; 词汇 0094; accent witness yubao-60757-v-0094; IPA [{'text': 'tsʰa⁵⁵i²¹tsuo²²', 'profile': 'yubao-60757', 'method': 'source', 'attestationIds': ['yubao-60757-v-0094']}]"
+            },
+            {
+              "pinyin": "pǒpā",
+              "ipa": "pʰɔ²¹pʰa⁵⁵",
+              "gloss": "老爷爷",
+              "source": "w4767; brassett-2004; Sheet1!A1997:C1997; accent witness w4767,stedt-rn-457324; IPA [{'text': 'pʰɔ²¹pʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w4767', 'stedt-rn-457324'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "斗笠",
+              "source": "w572; brassett-2004; 词条 572; accent witness w6004; IPA [{'text': 'tɜŋ⁵⁵pʰɔŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w572', 'w3436', 'stedt-rn-456007', 'stedt-rn-454578'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "ōng",
+              "ipa": "ɔŋ⁵⁵",
+              "gloss": "五",
+              "source": "w1653; brassett-2004; 词条 1653; accent witness w7924; IPA [{'text': 'ɔŋ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1653', 'w4647', 'stedt-rn-457219', 'stedt-rn-455097'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "顶",
+              "source": "w317; brassett-2004; 词条 317; accent witness w8143; IPA [{'text': 'pu²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w317', 'w3180', 'stedt-rn-455728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǒ-bǒ",
+              "ipa": "fuɔ²¹-pɔ²¹",
+              "gloss": "拿-STAT",
+              "source": "w926; brassett-2004; 词条 926; accent witness w7202; IPA [{'text': 'fuɔ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w926', 'w3859', 'stedt-rn-456412'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p90例110；north-5；north-6方式例31、32"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "参考语法转引：Brassett等2006 pp152–154例31、32；north-6"
+            },
+            {
+              "pinyin": "sōngkō-xí",
+              "ipa": "sɔŋ⁵⁵kʰuɔ⁵⁵-ɕi²⁴",
+              "gloss": "回家-NMLZ",
+              "source": "w2144; brassett-2004; 词条 2144; accent witness w7148; IPA [{'text': 'sɔŋ⁵⁵kʰuɔ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2144', 'w5198', 'stedt-rn-457777'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p143例10；north-6 xi"
+            },
+            {
+              "pinyin": "决定-liē",
+              "ipa": null,
+              "gloss": "决定-PFV",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；决定未命中；保持有意识决定的意义；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "帰り道、雪が降り始めました。",
+      "target_units": [
+        {
+          "translation": "sōngkō-niě là súsū zí-lā-hǔ",
+          "tokens": [
+            {
+              "pinyin": "sōngkō-niě",
+              "ipa": "sɔŋ⁵⁵kʰuɔ⁵⁵-ɲie²¹",
+              "gloss": "回家-LNK",
+              "source": "w2144; brassett-2004; 词条 2144; accent witness w7148; IPA [{'text': 'sɔŋ⁵⁵kʰuɔ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2144', 'w5198', 'stedt-rn-457777'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p95例24；north-6 动词短语＋nier＋中心名词"
+            },
+            {
+              "pinyin": "là",
+              "ipa": "la⁵¹",
+              "gloss": "路",
+              "source": "w1224; brassett-2004; 词条 1224; accent witness w8250; IPA [{'text': 'la⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1224', 'w4217', 'stedt-rn-456738', 'stedt-rn-454662'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "súsū",
+              "ipa": "su²⁴su⁵⁵",
+              "gloss": "雪",
+              "source": "w2166; brassett-2004; 词条 2166; accent witness w8591; IPA [{'text': 'su²⁴su⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2166', 'w5224', 'stedt-rn-457799', 'stedt-rn-453486'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "zí-lā-hǔ",
+              "ipa": "tsɨ²⁴-la⁵⁵-xu²¹",
+              "gloss": "下-PROG-INCH",
+              "source": "w2168 Brassett2004 词条2168：súsū zí，下雪；按词界拆分；参考语法转引：Brassett等2006 pp112–117；north-4动作阶段例；参考语法转引：Brassett等2006 pp137–139例213–217；north-4进行体＋起始体：动作开始发生"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "道ばたには、六体のお地蔵様が並んで立っていました。",
+      "target_units": [
+        {
+          "translation": "là sétā 地藏像 wǒ bú 排列 mǒ zūzù-bǒ",
+          "tokens": [
+            {
+              "pinyin": "là",
+              "ipa": "la⁵¹",
+              "gloss": "路",
+              "source": "w1224; brassett-2004; 词条 1224; accent witness w8250; IPA [{'text': 'la⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1224', 'w4217', 'stedt-rn-456738', 'stedt-rn-454662'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "sétā",
+              "ipa": "sɤ²⁴tʰa⁵⁵",
+              "gloss": "旁边",
+              "source": "w2030; brassett-2004; 词条 2030; accent witness w7001; IPA [{'text': 'sɤ²⁴tʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2030', 'w5071', 'stedt-rn-457653', 'stedt-rn-455018'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "地藏像",
+              "ipa": null,
+              "gloss": "地藏像",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；地藏未命中；菩萨命中龙山lómōng但不能保持地藏专名"
+            },
+            {
+              "pinyin": "wǒ",
+              "ipa": "wɔ²¹",
+              "gloss": "六",
+              "source": "w2377; brassett-2004; 词条 2377; accent witness w6724; IPA [{'text': 'wɔ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2377', 'w5462', 'stedt-rn-458023', 'stedt-rn-455105'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "顶",
+              "source": "w317; brassett-2004; 词条 317; accent witness w8143; IPA [{'text': 'pu²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w317', 'w3180', 'stedt-rn-455728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "排列",
+              "ipa": null,
+              "gloss": "排列",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；排列/排成未取得可靠动词构式；不把排量词直接当排列动词"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "参考语法转引：Brassett等2006 pp152–154例31、32；north-6"
+            },
+            {
+              "pinyin": "zūzù-bǒ",
+              "ipa": "tsu⁵⁵tsu⁵¹-pɔ²¹",
+              "gloss": "站-STAT",
+              "source": "w2747; brassett-2004; 词条 2747; accent witness w8190; IPA [{'text': 'tsu⁵⁵tsu⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2747', 'w5854', 'stedt-rn-458425', 'stedt-rn-453842'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p90例110；north-5；north-6方式例31、32"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "頭にも肩にも、白い雪が積もっています。",
+      "target_units": [
+        {
+          "translation": "kōbā gǎ bài pétīkē gǎ bài súsū ǎsǐkūlī mā-bǒ",
+          "tokens": [
+            {
+              "pinyin": "kōbā",
+              "ipa": "kʰuɔ⁵⁵pa⁵⁵",
+              "gloss": "头",
+              "source": "w1201; brassett-2004; 词条 1201; accent witness w6053; IPA [{'text': 'kʰuɔ⁵⁵pa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1201', 'w4143', 'stedt-rn-456714', 'stedt-rn-453728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "上面",
+              "source": "w686; brassett-2004; 词条 686; accent witness w8128; IPA [{'text': 'ka²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w686', 'w3575', 'stedt-rn-456140'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bài",
+              "ipa": "pai⁵¹",
+              "gloss": "也",
+              "source": "w3057; brassett-2004; Sheet1!A287:C287; accent witness w3057,stedt-rn-455651; IPA [{'text': 'pai⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w3057', 'stedt-rn-455651'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pétīkē",
+              "ipa": "pʰɤ²⁴tʰi⁵⁵kʰɤ⁵⁵",
+              "gloss": "肩膀",
+              "source": "w1712; brassett-2004; 词条 1712; accent witness w6750; IPA [{'text': 'pʰɤ²⁴tʰi⁵⁵kʰɤ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1712', 'w4715', 'stedt-rn-457283', 'stedt-rn-453753'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "上面",
+              "source": "w686; brassett-2004; 词条 686; accent witness w8128; IPA [{'text': 'ka²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w686', 'w3575', 'stedt-rn-456140'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bài",
+              "ipa": "pai⁵¹",
+              "gloss": "也",
+              "source": "w3057; brassett-2004; Sheet1!A287:C287; accent witness w3057,stedt-rn-455651; IPA [{'text': 'pai⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w3057', 'stedt-rn-455651'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "súsū",
+              "ipa": "su²⁴su⁵⁵",
+              "gloss": "雪",
+              "source": "w2166; brassett-2004; 词条 2166; accent witness w8591; IPA [{'text': 'su²⁴su⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2166', 'w5224', 'stedt-rn-457799', 'stedt-rn-453486'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "ǎsǐkūlī",
+              "ipa": "a²¹sɨ²¹kʰu⁵⁵li⁵⁵",
+              "gloss": "白的",
+              "source": "w2971; brassett-2004; Sheet1!A201:C201; accent witness w2971,stedt-rn-455524; IPA [{'text': 'a²¹sɨ²¹kʰu⁵⁵li⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2971', 'stedt-rn-455524'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "mā-bǒ",
+              "ipa": "ma⁵⁵-pɔ²¹",
+              "gloss": "堆-STAT",
+              "source": "w1456; brassett-2004; 词条 1456; accent witness w7505; IPA [{'text': 'ma⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1456', 'w4434', 'stedt-rn-457001', 'stedt-rn-454354'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p90例110；north-5；north-6方式例31、32"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "「こんなに雪をかぶって、さぞ寒いだろう。」",
+      "target_units": [
+        {
+          "translation": "gěhò hēndō súsū kōbā gǎ mā-bǒ",
+          "tokens": [
+            {
+              "pinyin": "gěhò",
+              "ipa": "kɤ²¹fuɔ⁵¹",
+              "gloss": "这么",
+              "source": "w741; brassett-2004; 词条 741; accent witness w6260; IPA [{'text': 'kɤ²¹fuɔ⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w741', 'w3627', 'stedt-rn-456205'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hēndō",
+              "ipa": "xɜŋ⁵⁵tuɔ⁵⁵",
+              "gloss": "很多",
+              "source": "w862; brassett-2004; 词条 862; accent witness w6568; IPA [{'text': 'xɜŋ⁵⁵tuɔ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w862', 'w3762', 'stedt-rn-456346'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "súsū",
+              "ipa": "su²⁴su⁵⁵",
+              "gloss": "雪",
+              "source": "w2166; brassett-2004; 词条 2166; accent witness w8591; IPA [{'text': 'su²⁴su⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2166', 'w5224', 'stedt-rn-457799', 'stedt-rn-453486'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "kōbā",
+              "ipa": "kʰuɔ⁵⁵pa⁵⁵",
+              "gloss": "头",
+              "source": "w1201; brassett-2004; 词条 1201; accent witness w6053; IPA [{'text': 'kʰuɔ⁵⁵pa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1201', 'w4143', 'stedt-rn-456714', 'stedt-rn-453728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "上面",
+              "source": "w686; brassett-2004; 词条 686; accent witness w8128; IPA [{'text': 'ka²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w686', 'w3575', 'stedt-rn-456140'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "mā-bǒ",
+              "ipa": "ma⁵⁵-pɔ²¹",
+              "gloss": "堆-STAT",
+              "source": "w1456; brassett-2004; 词条 1456; accent witness w7505; IPA [{'text': 'ma⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1456', 'w4434', 'stedt-rn-457001', 'stedt-rn-454354'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p90例110；north-5；north-6方式例31、32"
+            }
+          ],
+          "relation": "independent"
+        },
+        {
+          "translation": "想必 sà-xí tái",
+          "tokens": [
+            {
+              "pinyin": "想必",
+              "ipa": null,
+              "gloss": "想必",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；一定仅见异点词；冷的推测构式带担心义，不泛化到喜悦推测"
+            },
+            {
+              "pinyin": "sà-xí",
+              "ipa": "sa⁵¹-ɕi²⁴",
+              "gloss": "冷-NMLZ",
+              "source": "w1964; brassett-2004; 词条 1964; accent witness w6372; IPA [{'text': 'sa⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1964'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p143例10；north-6 xi"
+            },
+            {
+              "pinyin": "tái",
+              "ipa": "tʰai²⁴",
+              "gloss": "没有",
+              "source": "w2224; brassett-2004; 词条 2224; accent witness w7056; IPA [{'text': 'tʰai²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2224', 'w5291'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "おじいさんは、お地蔵様の頭の雪を手で払って、一体ずつ笠をかぶせてあげました。",
+      "target_units": [
+        {
+          "translation": "pǒpā jié hǒliě 地藏像 niě kōbā gǎ niě súsū hxǐ-liē",
+          "tokens": [
+            {
+              "pinyin": "pǒpā",
+              "ipa": "pʰɔ²¹pʰa⁵⁵",
+              "gloss": "老爷爷",
+              "source": "w4767; brassett-2004; Sheet1!A1997:C1997; accent witness w4767,stedt-rn-457324; IPA [{'text': 'pʰɔ²¹pʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w4767', 'stedt-rn-457324'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "jié",
+              "ipa": "tɕiɛ²⁴",
+              "gloss": "手",
+              "source": "w1019; brassett-2004; 词条 1019; accent witness w7970; IPA [{'text': 'tɕiɛ²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1019', 'w3942', 'stedt-rn-456513'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǒliě",
+              "ipa": "fuɔ²¹liɛ²¹",
+              "gloss": "用",
+              "source": "w930; brassett-2004; 词条 930; accent witness w7172; IPA [{'text': 'fuɔ²¹liɛ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w930', 'w3860', 'stedt-rn-456417', 'stedt-rn-454328'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "地藏像",
+              "ipa": null,
+              "gloss": "地藏像",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；地藏未命中；菩萨命中龙山lómōng但不能保持地藏专名"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": "参考语法转引：Brassett等2006 p93例9；north-3 领属关系"
+            },
+            {
+              "pinyin": "kōbā",
+              "ipa": "kʰuɔ⁵⁵pa⁵⁵",
+              "gloss": "头",
+              "source": "w1201; brassett-2004; 词条 1201; accent witness w6053; IPA [{'text': 'kʰuɔ⁵⁵pa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1201', 'w4143', 'stedt-rn-456714', 'stedt-rn-453728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "上面",
+              "source": "w686; brassett-2004; 词条 686; accent witness w8128; IPA [{'text': 'ka²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w686', 'w3575', 'stedt-rn-456140'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": "参考语法转引：Brassett等2006 p93例9；north-3 领属关系"
+            },
+            {
+              "pinyin": "súsū",
+              "ipa": "su²⁴su⁵⁵",
+              "gloss": "雪",
+              "source": "w2166; brassett-2004; 词条 2166; accent witness w8591; IPA [{'text': 'su²⁴su⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2166', 'w5224', 'stedt-rn-457799', 'stedt-rn-453486'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hxǐ-liē",
+              "ipa": "ɣɨ²¹-lie⁵⁵",
+              "gloss": "扫-PFV",
+              "source": "w952; brassett-2004; 词条 952; accent witness w7026; IPA [{'text': 'ɣɨ²¹', 'method': 'source', 'profile': 'stedt-cb523fc3dc:north', 'attestationIds': ['stedt-rn-289064', 'w952', 'w3781', 'stedt-rn-456441', 'stedt-rn-454320'], 'sourceProfiles': ['stedt-cb523fc3dc:north', 'brassett-phonetic'], 'sourceMethods': ['source', 'derived'], 'originalTexts': []}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "sequential-background"
+        },
+        {
+          "translation": "lá bú lá bú mǒ 地藏像 dǒ dēnpǒng diè-liē",
+          "tokens": [
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": "w1216; brassett-2004; 词条 1216; accent witness w7950; IPA [{'text': 'la²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1216', 'w4181', 'stedt-rn-456730', 'stedt-rn-455088'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "顶",
+              "source": "w317; brassett-2004; 词条 317; accent witness w8143; IPA [{'text': 'pu²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w317', 'w3180', 'stedt-rn-455728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": "w1216; brassett-2004; 词条 1216; accent witness w7950; IPA [{'text': 'la²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1216', 'w4181', 'stedt-rn-456730', 'stedt-rn-455088'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "顶",
+              "source": "w317; brassett-2004; 词条 317; accent witness w8143; IPA [{'text': 'pu²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w317', 'w3180', 'stedt-rn-455728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "参考语法转引：Brassett等2006 pp152–154例31、32；north-6"
+            },
+            {
+              "pinyin": "地藏像",
+              "ipa": null,
+              "gloss": "地藏像",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；地藏未命中；菩萨命中龙山lómōng但不能保持地藏专名"
+            },
+            {
+              "pinyin": "dǒ",
+              "ipa": "tuɔ²¹",
+              "gloss": "CAUS",
+              "source": "参考语法转引：Brassett等2006 p156例47；north-4使让构式"
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "斗笠",
+              "source": "w572; brassett-2004; 词条 572; accent witness w6004; IPA [{'text': 'tɜŋ⁵⁵pʰɔŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w572', 'w3436', 'stedt-rn-456007', 'stedt-rn-454578'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "diè-liē",
+              "ipa": "tiɛ⁵¹-lie⁵⁵",
+              "gloss": "戴-PFV",
+              "source": "w615; brassett-2004; 词条 615; accent witness w8196; IPA [{'text': 'tiɛ⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w615', 'w3485', 'stedt-rn-456053', 'stedt-rn-454579'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "ところが、笠は五つしかありません。",
+      "target_units": [
+        {
+          "translation": "dángsí dēnpǒng zíyōu ōng bú xié",
+          "tokens": [
+            {
+              "pinyin": "dángsí",
+              "ipa": "taŋ²⁴sɨ²⁴",
+              "gloss": "但是",
+              "source": "w558; brassett-2004; 词条 558; accent witness w7418; IPA [{'text': 'taŋ²⁴sɨ²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w558', 'w3421', 'stedt-rn-455993'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "斗笠",
+              "source": "w572; brassett-2004; 词条 572; accent witness w6004; IPA [{'text': 'tɜŋ⁵⁵pʰɔŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w572', 'w3436', 'stedt-rn-456007', 'stedt-rn-454578'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "zíyōu",
+              "ipa": "tsɨ²⁴jou⁵⁵",
+              "gloss": "只有",
+              "source": "w2719; brassett-2004; 词条 2719; accent witness w7183; IPA [{'text': 'tsɨ²⁴jou⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2719', 'w5813', 'stedt-rn-458397'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "ōng",
+              "ipa": "ɔŋ⁵⁵",
+              "gloss": "五",
+              "source": "w1653; brassett-2004; 词条 1653; accent witness w7924; IPA [{'text': 'ɔŋ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1653', 'w4647', 'stedt-rn-457219', 'stedt-rn-455097'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "顶",
+              "source": "w317; brassett-2004; 词条 317; accent witness w8143; IPA [{'text': 'pu²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w317', 'w3180', 'stedt-rn-455728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "xié",
+              "ipa": "ɕie²⁴",
+              "gloss": "有",
+              "source": "参考语法转引：Brassett等2006 p84例62；north-2存在句"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "六体目のお地蔵様には、おじいさんが自分の手ぬぐいを外して、頭に巻いてあげました。",
+      "target_units": [
+        {
+          "translation": "pǒpā gódǒ niě jiézū hí-liē",
+          "tokens": [
+            {
+              "pinyin": "pǒpā",
+              "ipa": "pʰɔ²¹pʰa⁵⁵",
+              "gloss": "老爷爷",
+              "source": "w4767; brassett-2004; Sheet1!A1997:C1997; accent witness w4767,stedt-rn-457324; IPA [{'text': 'pʰɔ²¹pʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w4767', 'stedt-rn-457324'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "gódǒ",
+              "ipa": "kuɔ²⁴tuɔ²¹",
+              "gloss": "自己",
+              "source": "参考语法转引：Brassett等2006 p48、49；north-3 gofdor"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": "参考语法转引：Brassett等2006 p93例9；north-3 领属关系"
+            },
+            {
+              "pinyin": "jiézū",
+              "ipa": "tɕiɛ²⁴tsu⁵⁵",
+              "gloss": "手巾",
+              "source": "w1044; brassett-2004; 词条 1044; accent witness w8306; IPA [{'text': 'tɕiɛ²⁴tsu⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1044', 'w3958', 'stedt-rn-456540'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hí-liē",
+              "ipa": "xɯ²⁴-lie⁵⁵",
+              "gloss": "脱-PFV",
+              "source": "yubao-60757-v-0365 中国语保龙山；保留该来源拼音hí与IPA xɯ²⁴；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "sequential-background"
+        },
+        {
+          "translation": "第六 地藏像 bǒ jiézū hǒliě kōbā pē-liē",
+          "tokens": [
+            {
+              "pinyin": "第六",
+              "ipa": null,
+              "gloss": "第六",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；第六未命中；保留序数而不误用基数六"
+            },
+            {
+              "pinyin": "地藏像",
+              "ipa": null,
+              "gloss": "地藏像",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；地藏未命中；菩萨命中龙山lómōng但不能保持地藏专名"
+            },
+            {
+              "pinyin": "bǒ",
+              "ipa": "pɔ²¹",
+              "gloss": "BEN",
+              "source": "参考语法转引：Brassett等2006 north-3接受者/受益者/交谈对象标记"
+            },
+            {
+              "pinyin": "jiézū",
+              "ipa": "tɕiɛ²⁴tsu⁵⁵",
+              "gloss": "手巾",
+              "source": "w1044; brassett-2004; 词条 1044; accent witness w8306; IPA [{'text': 'tɕiɛ²⁴tsu⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1044', 'w3958', 'stedt-rn-456540'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǒliě",
+              "ipa": "fuɔ²¹liɛ²¹",
+              "gloss": "用",
+              "source": "w930; brassett-2004; 词条 930; accent witness w7172; IPA [{'text': 'fuɔ²¹liɛ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w930', 'w3860', 'stedt-rn-456417', 'stedt-rn-454328'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "kōbā",
+              "ipa": "kʰuɔ⁵⁵pa⁵⁵",
+              "gloss": "头",
+              "source": "w1201; brassett-2004; 词条 1201; accent witness w6053; IPA [{'text': 'kʰuɔ⁵⁵pa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1201', 'w4143', 'stedt-rn-456714', 'stedt-rn-453728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pē-liē",
+              "ipa": "pʰɤ⁵⁵-lie⁵⁵",
+              "gloss": "包裹-PFV",
+              "source": "w1703; brassett-2004; 词条 1703; accent witness w6866; IPA [{'text': 'pʰɤ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1703', 'w4710', 'stedt-rn-457273', 'stedt-rn-454371'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "家に帰ると、おばあさんが尋ねました。",
+      "target_units": [
+        {
+          "translation": "pǒpā sōngkō zú āmā sīliě-liē",
+          "tokens": [
+            {
+              "pinyin": "pǒpā",
+              "ipa": "pʰɔ²¹pʰa⁵⁵",
+              "gloss": "老爷爷",
+              "source": "w4767; brassett-2004; Sheet1!A1997:C1997; accent witness w4767,stedt-rn-457324; IPA [{'text': 'pʰɔ²¹pʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w4767', 'stedt-rn-457324'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "sōngkō",
+              "ipa": "sɔŋ⁵⁵kʰuɔ⁵⁵",
+              "gloss": "回家",
+              "source": "w2144; brassett-2004; 词条 2144; accent witness w7148; IPA [{'text': 'sɔŋ⁵⁵kʰuɔ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2144', 'w5198', 'stedt-rn-457777'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "zú",
+              "ipa": "tsu²⁴",
+              "gloss": "CONN",
+              "source": "参考语法转引：Brassett等2006 p151例14；north-6时间小句"
+            },
+            {
+              "pinyin": "āmā",
+              "ipa": "a⁵⁵ma⁵⁵",
+              "gloss": "老奶奶",
+              "source": "w132; brassett-2004; 词条 132; accent witness w7439; IPA [{'text': 'a⁵⁵ma⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w132', 'w2896', 'stedt-rn-455500'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "sīliě-liē",
+              "ipa": "sɨ⁵⁵liɛ²¹-lie⁵⁵",
+              "gloss": "问-PFV",
+              "source": "w2106; brassett-2004; 词条 2106; accent witness w7833; IPA [{'text': 'sɨ⁵⁵liɛ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2106', 'w5127', 'stedt-rn-457734', 'stedt-rn-454396'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "「笠は売れましたか。」",
+      "target_units": [
+        {
+          "translation": "dēnpǒng lǔ-liē ma",
+          "tokens": [
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "斗笠",
+              "source": "w572; brassett-2004; 词条 572; accent witness w6004; IPA [{'text': 'tɜŋ⁵⁵pʰɔŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w572', 'w3436', 'stedt-rn-456007', 'stedt-rn-454578'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "lǔ-liē",
+              "ipa": "lu²¹-lie⁵⁵",
+              "gloss": "卖-PFV",
+              "source": "w1411; brassett-2004; 词条 1411; accent witness w7144; IPA [{'text': 'lu²¹', 'method': 'source', 'profile': 'stedt-cb523fc3dc:north', 'attestationIds': ['stedt-rn-289022', 'stedt-rn-420284', 'stedt-rn-211470', 'w1411', 'w4385', 'stedt-rn-456953', 'stedt-rn-454673'], 'sourceProfiles': ['stedt-cb523fc3dc:north', 'brassett-phonetic'], 'sourceMethods': ['source', 'derived'], 'originalTexts': []}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            },
+            {
+              "pinyin": "ma",
+              "ipa": "ma",
+              "gloss": "Q",
+              "source": "参考语法转引：Brassett等2006 p87例92；north-5"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "おじいさんは、お米を買えなかったことと、笠をお地蔵様にあげたことを話しました。",
+      "target_units": [
+        {
+          "translation": "pǒpā zǐhxě pū-tā-tī-xí niē 地藏像 bǒ dēnpǒng lié-liē-xí lǐ-liē",
+          "tokens": [
+            {
+              "pinyin": "pǒpā",
+              "ipa": "pʰɔ²¹pʰa⁵⁵",
+              "gloss": "老爷爷",
+              "source": "w4767; brassett-2004; Sheet1!A1997:C1997; accent witness w4767,stedt-rn-457324; IPA [{'text': 'pʰɔ²¹pʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w4767', 'stedt-rn-457324'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "zǐhxě",
+              "ipa": "tsɨ²¹ɣɤ²¹",
+              "gloss": "米",
+              "source": "w2706; brassett-2004; 词条 2706; accent witness w6474; IPA [{'text': 'tsɨ²¹ɣɤ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2706', 'w5822', 'stedt-rn-458383', 'stedt-rn-454518'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pū-tā-tī-xí",
+              "ipa": "pʰu⁵⁵-tʰa⁵⁵-tʰi⁵⁵-ɕi²⁴",
+              "gloss": "买-NEG-能-NMLZ",
+              "source": "w1754; brassett-2004; 词条 1754; accent witness w6582; IPA [{'text': 'pʰu⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1754', 'w4777', 'stedt-rn-457336'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 pp126–131；north-4能力否定一般可行性；参考语法转引：Brassett等2006 p143例10；north-6 xi"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "和",
+              "source": "w1618; brassett-2004; 词条 1618; accent witness w8254; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1618', 'w4613', 'stedt-rn-457174', 'stedt-rn-455298'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "地藏像",
+              "ipa": null,
+              "gloss": "地藏像",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；地藏未命中；菩萨命中龙山lómōng但不能保持地藏专名"
+            },
+            {
+              "pinyin": "bǒ",
+              "ipa": "pɔ²¹",
+              "gloss": "DAT",
+              "source": "参考语法转引：Brassett等2006 p34例8；north-3间接宾语"
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "斗笠",
+              "source": "w572; brassett-2004; 词条 572; accent witness w6004; IPA [{'text': 'tɜŋ⁵⁵pʰɔŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w572', 'w3436', 'stedt-rn-456007', 'stedt-rn-454578'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "lié-liē-xí",
+              "ipa": "liɛ²⁴-lie⁵⁵-ɕi²⁴",
+              "gloss": "给-PFV-NMLZ",
+              "source": "w1372; brassett-2004; 词条 1372; accent witness w6605; IPA [{'text': 'liɛ²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1372', 'w4340', 'stedt-rn-456911', 'stedt-rn-454349'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作；参考语法转引：Brassett等2006 p143例10；north-6 xi"
+            },
+            {
+              "pinyin": "lǐ-liē",
+              "ipa": "li²¹-lie⁵⁵",
+              "gloss": "说-PFV",
+              "source": "w1332; brassett-2004; 词条 1332; accent witness w6642; IPA [{'text': 'li²¹', 'method': 'source', 'profile': 'stedt-cb523fc3dc:north', 'attestationIds': ['stedt-rn-43454', 'w1332', 'w4314', 'stedt-rn-456867'], 'sourceProfiles': ['stedt-cb523fc3dc:north', 'brassett-phonetic'], 'sourceMethods': ['source', 'derived'], 'originalTexts': []}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "おばあさんは怒らずに言いました。",
+      "target_units": [
+        {
+          "translation": "āmā mǎotái-dá mǒ lǐ-liē",
+          "tokens": [
+            {
+              "pinyin": "āmā",
+              "ipa": "a⁵⁵ma⁵⁵",
+              "gloss": "老奶奶",
+              "source": "w132; brassett-2004; 词条 132; accent witness w7439; IPA [{'text': 'a⁵⁵ma⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w132', 'w2896', 'stedt-rn-455500'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "mǎotái-dá",
+              "ipa": "mau²¹tʰai²⁴-ta²⁴",
+              "gloss": "生气-NEG",
+              "source": "w1484; brassett-2004; 词条 1484; accent witness w7860; IPA [{'text': 'mau²¹tʰai²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1484'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p90例116；north-4事实否定"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "参考语法转引：Brassett等2006 pp152–154例31、32；north-6"
+            },
+            {
+              "pinyin": "lǐ-liē",
+              "ipa": "li²¹-lie⁵⁵",
+              "gloss": "说-PFV",
+              "source": "w1332; brassett-2004; 词条 1332; accent witness w6642; IPA [{'text': 'li²¹', 'method': 'source', 'profile': 'stedt-cb523fc3dc:north', 'attestationIds': ['stedt-rn-43454', 'w1332', 'w4314', 'stedt-rn-456867'], 'sourceProfiles': ['stedt-cb523fc3dc:north', 'brassett-phonetic'], 'sourceMethods': ['source', 'derived'], 'originalTexts': []}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "「それはよいことをしましたね。",
+      "target_units": [
+        {
+          "translation": "ní yě cái rī-liāo",
+          "tokens": [
+            {
+              "pinyin": "ní",
+              "ipa": "ɲi²⁴",
+              "gloss": "你",
+              "source": "参考语法转引：Brassett等2006 p87例92；north-5"
+            },
+            {
+              "pinyin": "yě",
+              "ipa": "je²¹",
+              "gloss": "事情",
+              "source": "w2546; brassett-2004; 词条 2546; accent witness w7359; IPA [{'text': 'je²¹', 'method': 'source', 'profile': 'stedt-cb523fc3dc:north', 'attestationIds': ['stedt-rn-288909'], 'sourceProfiles': ['stedt-cb523fc3dc:north'], 'sourceMethods': ['source']}, {'text': 'jɤ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2546', 'w5654', 'stedt-rn-458209'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "cái",
+              "ipa": "tsʰai²⁴",
+              "gloss": "好的",
+              "source": "参考语法转引：Brassett等2006 p101例69；north-4修饰、指称形式"
+            },
+            {
+              "pinyin": "rī-liāo",
+              "ipa": "zɨ⁵⁵-liau⁵⁵",
+              "gloss": "做-PRF",
+              "source": "w1932; brassett-2004; 词条 1932; accent witness w6212; IPA [{'text': 'zɨ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1932', 'w4974', 'stedt-rn-457542'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p136例195；north-4 lie/liao流程"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "お地蔵様も喜んでいるでしょう。」",
+      "target_units": [
+        {
+          "translation": "想必 地藏像 bài huānxì-bǒ",
+          "tokens": [
+            {
+              "pinyin": "想必",
+              "ipa": null,
+              "gloss": "想必",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；一定仅见异点词；冷的推测构式带担心义，不泛化到喜悦推测"
+            },
+            {
+              "pinyin": "地藏像",
+              "ipa": null,
+              "gloss": "地藏像",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；地藏未命中；菩萨命中龙山lómōng但不能保持地藏专名"
+            },
+            {
+              "pinyin": "bài",
+              "ipa": "pai⁵¹",
+              "gloss": "也",
+              "source": "w3057; brassett-2004; Sheet1!A287:C287; accent witness w3057,stedt-rn-455651; IPA [{'text': 'pai⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w3057', 'stedt-rn-455651'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "huānxì-bǒ",
+              "ipa": "fuɛn⁵⁵ɕi⁵¹-pɔ²¹",
+              "gloss": "欢喜-STAT",
+              "source": "w909; brassett-2004; 词条 909; accent witness w5955; IPA [{'text': 'fuɛn⁵⁵ɕi⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w909', 'w3828', 'stedt-rn-456394'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p90例110；north-5；north-6方式例31、32"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "二人は残っていた少しのおかゆを分けて食べ、早く寝ました。",
+      "target_units": [
+        {
+          "translation": "gēzē niē hǔ 剩-niě kābiēliē diánkuī pǐ mǒ gá-liē",
+          "tokens": [
+            {
+              "pinyin": "gēzē",
+              "ipa": "kɤ⁵⁵tsɤ⁵⁵",
+              "gloss": "他们",
+              "source": "参考语法转引：Brassett等2006 p49例4；north-3代词"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "二",
+              "source": "w1619; brassett-2004; 词条 1619; accent witness w7070; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1619', 'w4612', 'stedt-rn-457175', 'stedt-rn-455094'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǔ",
+              "ipa": "xu²¹",
+              "gloss": "个",
+              "source": "参考语法转引：Brassett等2006 p96例31；north-3"
+            },
+            {
+              "pinyin": "剩-niě",
+              "ipa": null,
+              "gloss": "剩-LNK",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；剩/剩下只见剩饭，不能用于粥的剩余状态；参考语法转引：Brassett等2006 p95例24；north-6 动词短语＋nier＋中心名词"
+            },
+            {
+              "pinyin": "kābiēliē",
+              "ipa": "kʰa⁵⁵piɛ⁵⁵liɛ⁵⁵",
+              "gloss": "粥",
+              "source": "w1087; brassett-2004; 词条 1087; accent witness w8452; IPA [{'text': 'kʰa⁵⁵piɛ⁵⁵liɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1087', 'w4003', 'stedt-rn-456583'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "diánkuī",
+              "ipa": "tiɛn²⁴kʰuei⁵⁵",
+              "gloss": "一点",
+              "source": "w603; brassett-2004; 词条 603; accent witness w7286; IPA [{'text': 'tiɛn²⁴kʰuei⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w603', 'w3473', 'stedt-rn-456040', 'stedt-rn-455222'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pǐ",
+              "ipa": "pʰi²¹",
+              "gloss": "分",
+              "source": "w1720; brassett-2004; 词条 1720; accent witness w8597; IPA [{'text': 'pʰi²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1720', 'w4733', 'stedt-rn-457292'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "参考语法转引：Brassett等2006 pp152–154例31、32；north-6"
+            },
+            {
+              "pinyin": "gá-liē",
+              "ipa": "ka²⁴-lie⁵⁵",
+              "gloss": "吃-PFV",
+              "source": "参考语法转引：Brassett等2006 p87例86；north-5；词条stedt-rn-454305；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "sequential-background"
+        },
+        {
+          "translation": "zào nié-liē",
+          "tokens": [
+            {
+              "pinyin": "zào",
+              "ipa": "tsau⁵¹",
+              "gloss": "早",
+              "source": "w2641; brassett-2004; 词条 2641; accent witness w6802; IPA [{'text': 'tsau⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2641'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "nié-liē",
+              "ipa": "ȵiɛ²⁴-lie⁵⁵",
+              "gloss": "睡-PFV",
+              "source": "w1621; brassett-2004; 词条 1621; accent witness w5986; IPA [{'text': 'ȵiɛ²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1621', 'w4621', 'stedt-rn-457177'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "その夜、遠くから、何人ものかけ声と、重い物を引く音が聞こえてきました。",
+      "target_units": [
+        {
+          "translation": "āidī pē gēzē hxě-xí liē lò hēndō jiě-niě árē niē zóng-niě-xí yě cīcǐ-niě árē rǔ-liē",
+          "tokens": [
+            {
+              "pinyin": "āidī",
+              "ipa": "ai⁵⁵ti⁵⁵",
+              "gloss": "那",
+              "source": "w168; brassett-2004; 词条 168; accent witness w7466; IPA [{'text': 'ai⁵⁵ti⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w168', 'w2991', 'stedt-rn-455554', 'stedt-rn-455164'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pē",
+              "ipa": "pʰɤ⁵⁵",
+              "gloss": "夜",
+              "source": "w1704; brassett-2004; 词条 1704; accent witness w8051; IPA [{'text': 'pʰɤ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1704', 'w4709', 'stedt-rn-457274', 'stedt-rn-454988'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "gēzē",
+              "ipa": "kɤ⁵⁵tsɤ⁵⁵",
+              "gloss": "他们",
+              "source": "参考语法转引：Brassett等2006 p49例4；north-3代词"
+            },
+            {
+              "pinyin": "hxě-xí",
+              "ipa": "ɣɤ²¹-ɕi²⁴",
+              "gloss": "远-NMLZ",
+              "source": "w938; brassett-2004; 词条 938; accent witness w6836; IPA [{'text': 'ɣɤ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w938'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p143例10；north-6 xi"
+            },
+            {
+              "pinyin": "liē",
+              "ipa": "lie⁵⁵",
+              "gloss": "ABL",
+              "source": "参考语法转引：Brassett等2006 north-3关系词表：来源"
+            },
+            {
+              "pinyin": "lò",
+              "ipa": "luɔ⁵¹",
+              "gloss": "人",
+              "source": "w1421; brassett-2004; 词条 1421; accent witness w6528; IPA [{'text': 'luɔ⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1421', 'w4417', 'stedt-rn-456963', 'stedt-rn-453974'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hēndō",
+              "ipa": "xɜŋ⁵⁵tuɔ⁵⁵",
+              "gloss": "很多",
+              "source": "w862; brassett-2004; 词条 862; accent witness w6568; IPA [{'text': 'xɜŋ⁵⁵tuɔ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w862', 'w3762', 'stedt-rn-456346'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "jiě-niě",
+              "ipa": "tɕiɛ²¹-ɲie²¹",
+              "gloss": "喊-LNK",
+              "source": "w1020; brassett-2004; 词条 1020; accent witness w8420; IPA [{'text': 'tɕiɛ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1020', 'w3961', 'stedt-rn-456514'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p95例24；north-6 动词短语＋nier＋中心名词"
+            },
+            {
+              "pinyin": "árē",
+              "ipa": "a²⁴zɤ⁵⁵",
+              "gloss": "声音",
+              "source": "w143; brassett-2004; 词条 143; accent witness w7826; IPA [{'text': 'a²⁴zɤ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w143', 'w2929', 'stedt-rn-455515', 'stedt-rn-454748'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "和",
+              "source": "w1618; brassett-2004; 词条 1618; accent witness w8254; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1618', 'w4613', 'stedt-rn-457174', 'stedt-rn-455298'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "zóng-niě-xí",
+              "ipa": "tsɔŋ²⁴-ɲie²¹-ɕi²⁴",
+              "gloss": "重-LNK-NMLZ",
+              "source": "w2727; brassett-2004; 词条 2727; accent witness w7443; IPA [{'text': 'tsɔŋ²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2727'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p95例24；north-6 动词短语＋nier＋中心名词；参考语法转引：Brassett等2006 p143例10；north-6 xi"
+            },
+            {
+              "pinyin": "yě",
+              "ipa": "je²¹",
+              "gloss": "东西",
+              "source": "w2546; brassett-2004; 词条 2546; accent witness w7359; IPA [{'text': 'je²¹', 'method': 'source', 'profile': 'stedt-cb523fc3dc:north', 'attestationIds': ['stedt-rn-288909'], 'sourceProfiles': ['stedt-cb523fc3dc:north'], 'sourceMethods': ['source']}, {'text': 'jɤ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2546', 'w5654', 'stedt-rn-458209'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "cīcǐ-niě",
+              "ipa": "tsʰɨ⁵⁵tsʰɨ²¹-ɲie²¹",
+              "gloss": "拉-LNK",
+              "source": "w449; brassett-2004; 词条 449; accent witness w6114; IPA [{'text': 'tsʰɨ⁵⁵tsʰɨ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w449', 'w3296', 'stedt-rn-455873', 'stedt-rn-454287'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p95例24；north-6 动词短语＋nier＋中心名词"
+            },
+            {
+              "pinyin": "árē",
+              "ipa": "a²⁴zɤ⁵⁵",
+              "gloss": "声音",
+              "source": "w143; brassett-2004; 词条 143; accent witness w7826; IPA [{'text': 'a²⁴zɤ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w143', 'w2929', 'stedt-rn-455515', 'stedt-rn-454748'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "rǔ-liē",
+              "ipa": "zu²¹-lie⁵⁵",
+              "gloss": "听见-PFV",
+              "source": "w1943; brassett-2004; 词条 1943; accent witness w8086; IPA [{'text': 'zu²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1943', 'w4986', 'stedt-rn-457554'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "音はだんだん近づき、二人の家の前で止まりました。",
+      "target_units": [
+        {
+          "translation": "árē 渐渐 zòng-liāo",
+          "tokens": [
+            {
+              "pinyin": "árē",
+              "ipa": "a²⁴zɤ⁵⁵",
+              "gloss": "声音",
+              "source": "w143; brassett-2004; 词条 143; accent witness w7826; IPA [{'text': 'a²⁴zɤ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w143', 'w2929', 'stedt-rn-455515', 'stedt-rn-454748'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "渐渐",
+              "ipa": null,
+              "gloss": "渐渐",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；渐渐/逐渐未命中"
+            },
+            {
+              "pinyin": "zòng-liāo",
+              "ipa": "tsɔŋ⁵¹-liau⁵⁵",
+              "gloss": "近-PRF",
+              "source": "w2728; brassett-2004; 词条 2728; accent witness w7287; IPA [{'text': 'tsɔŋ⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p136例195；north-4 lie/liao流程"
+            }
+          ],
+          "relation": "independent"
+        },
+        {
+          "translation": "gēzē niē hǔ niě cò zīgē těn-liē",
+          "tokens": [
+            {
+              "pinyin": "gēzē",
+              "ipa": "kɤ⁵⁵tsɤ⁵⁵",
+              "gloss": "他们",
+              "source": "参考语法转引：Brassett等2006 p49例4；north-3代词"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "二",
+              "source": "w1619; brassett-2004; 词条 1619; accent witness w7070; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1619', 'w4612', 'stedt-rn-457175', 'stedt-rn-455094'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǔ",
+              "ipa": "xu²¹",
+              "gloss": "个",
+              "source": "参考语法转引：Brassett等2006 p96例31；north-3"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": "参考语法转引：Brassett等2006 p93例9；north-3 领属关系"
+            },
+            {
+              "pinyin": "cò",
+              "ipa": "tsʰuɔ⁵¹",
+              "gloss": "家",
+              "source": "参考语法转引：Brassett等2006 p84例62；north-2存在句"
+            },
+            {
+              "pinyin": "zīgē",
+              "ipa": "tsɨ⁵⁵kɤ⁵⁵",
+              "gloss": "前面",
+              "source": "w5794; brassett-2004; Sheet1!A3024:C3024; accent witness w5794,stedt-rn-458380; IPA [{'text': 'tsɨ⁵⁵kɤ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w5794', 'stedt-rn-458380'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "těn-liē",
+              "ipa": "tʰɜŋ²¹-lie⁵⁵",
+              "gloss": "停-PFV",
+              "source": "w2247; brassett-2004; 词条 2247; accent witness w6178; IPA [{'text': 'tʰɜŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2247', 'w5315', 'stedt-rn-457888'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "おじいさんが戸を開けると、そこには大きな袋に入ったお米と、お餅と、野菜が置いてありました。",
+      "target_units": [
+        {
+          "translation": "pǒpā lāměn tóng-liē zú āidū lótiē cībā wótū zǐhxě pō-bǒ",
+          "tokens": [
+            {
+              "pinyin": "pǒpā",
+              "ipa": "pʰɔ²¹pʰa⁵⁵",
+              "gloss": "老爷爷",
+              "source": "w4767; brassett-2004; Sheet1!A1997:C1997; accent witness w4767,stedt-rn-457324; IPA [{'text': 'pʰɔ²¹pʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w4767', 'stedt-rn-457324'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "lāměn",
+              "ipa": "la⁵⁵mɜŋ²¹",
+              "gloss": "门",
+              "source": "w1247; brassett-2004; 词条 1247; accent witness w7618; IPA [{'text': 'la⁵⁵mɜŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1247', 'w4167', 'stedt-rn-456762'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "tóng-liē",
+              "ipa": "tʰɔ̃²⁴-lie⁵⁵",
+              "gloss": "开-PFV",
+              "source": "参考语法转引：Brassett等2006 p90例112；north-5；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            },
+            {
+              "pinyin": "zú",
+              "ipa": "tsu²⁴",
+              "gloss": "CONN",
+              "source": "参考语法转引：Brassett等2006 p151例14；north-6时间小句"
+            },
+            {
+              "pinyin": "āidū",
+              "ipa": "ai⁵⁵tu⁵⁵",
+              "gloss": "那里",
+              "source": "w169; brassett-2004; 词条 169; accent witness w7760; IPA [{'text': 'ai⁵⁵tu⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w169', 'w2992', 'stedt-rn-455559', 'stedt-rn-455207'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "lótiē",
+              "ipa": "luɔ²⁴tʰiɛ⁵⁵",
+              "gloss": "袋子",
+              "source": "w1451; brassett-2004; 词条 1451; accent witness w7169; IPA [{'text': 'luɔ²⁴tʰiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1451', 'w4407', 'stedt-rn-456996', 'stedt-rn-454234'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "cībā",
+              "ipa": "tsʰɿ⁵⁵pa⁵⁵",
+              "gloss": "大的",
+              "source": "参考语法转引：Brassett等2006 p100表6.1；north-4"
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "里面",
+              "source": "w2395; brassett-2004; 词条 2395; accent witness w6651; IPA [{'text': 'wɔ²⁴tʰu⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2395', 'w5458', 'stedt-rn-458043', 'stedt-rn-455022'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "zǐhxě",
+              "ipa": "tsɨ²¹ɣɤ²¹",
+              "gloss": "米",
+              "source": "w2706; brassett-2004; 词条 2706; accent witness w6474; IPA [{'text': 'tsɨ²¹ɣɤ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2706', 'w5822', 'stedt-rn-458383', 'stedt-rn-454518'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pō-bǒ",
+              "ipa": "pʰɔ⁵⁵-pɔ²¹",
+              "gloss": "放-STAT",
+              "source": "w1740; brassett-2004; 词条 1740; accent witness w6399; IPA [{'text': 'pʰɔ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1740', 'w4758', 'stedt-rn-457316'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p90例110；north-5；north-6方式例31、32"
+            }
+          ],
+          "relation": "independent"
+        },
+        {
+          "translation": "āidū bābā niē hācē bài pō-bǒ",
+          "tokens": [
+            {
+              "pinyin": "āidū",
+              "ipa": "ai⁵⁵tu⁵⁵",
+              "gloss": "那里",
+              "source": "w169; brassett-2004; 词条 169; accent witness w7760; IPA [{'text': 'ai⁵⁵tu⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w169', 'w2992', 'stedt-rn-455559', 'stedt-rn-455207'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bābā",
+              "ipa": "pa⁵⁵pa⁵⁵",
+              "gloss": "年糕",
+              "source": "w204; brassett-2004; 词条 204; accent witness w7007; IPA [{'text': 'pa⁵⁵pa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w204', 'w3032', 'stedt-rn-455604', 'stedt-rn-454447'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "和",
+              "source": "w1618; brassett-2004; 词条 1618; accent witness w8254; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1618', 'w4613', 'stedt-rn-457174', 'stedt-rn-455298'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hācē",
+              "ipa": "xa⁵⁵tsʰɤ⁵⁵",
+              "gloss": "蔬菜",
+              "source": "w822; brassett-2004; 词条 822; accent witness w6460; IPA [{'text': 'xa⁵⁵tsʰɤ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w822', 'stedt-rn-456296', 'stedt-rn-454456'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bài",
+              "ipa": "pai⁵¹",
+              "gloss": "也",
+              "source": "w3057; brassett-2004; Sheet1!A287:C287; accent witness w3057,stedt-rn-455651; IPA [{'text': 'pai⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w3057', 'stedt-rn-455651'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pō-bǒ",
+              "ipa": "pʰɔ⁵⁵-pɔ²¹",
+              "gloss": "放-STAT",
+              "source": "w1740; brassett-2004; 词条 1740; accent witness w6399; IPA [{'text': 'pʰɔ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1740', 'w4758', 'stedt-rn-457316'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p90例110；north-5；north-6方式例31、32"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "雪道の向こうには、五つの笠と一枚の手ぬぐいをかぶった六体のお地蔵様が帰っていく姿が見えました。",
+      "target_units": [
+        {
+          "translation": "súsū là gǔlābī dēnpǒng ōng bú niē jiézū lá pī diè-bǒ mǒ sōngkō-lā-niě 地藏像 wǒ bú niě 背影 yǐ-liē",
+          "tokens": [
+            {
+              "pinyin": "súsū",
+              "ipa": "su²⁴su⁵⁵",
+              "gloss": "雪",
+              "source": "w2166; brassett-2004; 词条 2166; accent witness w8591; IPA [{'text': 'su²⁴su⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2166', 'w5224', 'stedt-rn-457799', 'stedt-rn-453486'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "là",
+              "ipa": "la⁵¹",
+              "gloss": "路",
+              "source": "w1224; brassett-2004; 词条 1224; accent witness w8250; IPA [{'text': 'la⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1224', 'w4217', 'stedt-rn-456738', 'stedt-rn-454662'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "gǔlābī",
+              "ipa": "ku²¹la⁵⁵pi⁵⁵",
+              "gloss": "那边",
+              "source": "w782; brassett-2004; 词条 782; accent witness w7733; IPA [{'text': 'ku²¹la⁵⁵pi⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w782', 'w3676', 'stedt-rn-456251', 'stedt-rn-455235'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "dēnpǒng",
+              "ipa": "tɜŋ⁵⁵pʰɔŋ²¹",
+              "gloss": "斗笠",
+              "source": "w572; brassett-2004; 词条 572; accent witness w6004; IPA [{'text': 'tɜŋ⁵⁵pʰɔŋ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w572', 'w3436', 'stedt-rn-456007', 'stedt-rn-454578'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "ōng",
+              "ipa": "ɔŋ⁵⁵",
+              "gloss": "五",
+              "source": "w1653; brassett-2004; 词条 1653; accent witness w7924; IPA [{'text': 'ɔŋ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1653', 'w4647', 'stedt-rn-457219', 'stedt-rn-455097'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "顶",
+              "source": "w317; brassett-2004; 词条 317; accent witness w8143; IPA [{'text': 'pu²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w317', 'w3180', 'stedt-rn-455728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "和",
+              "source": "w1618; brassett-2004; 词条 1618; accent witness w8254; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1618', 'w4613', 'stedt-rn-457174', 'stedt-rn-455298'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "jiézū",
+              "ipa": "tɕiɛ²⁴tsu⁵⁵",
+              "gloss": "手巾",
+              "source": "w1044; brassett-2004; 词条 1044; accent witness w8306; IPA [{'text': 'tɕiɛ²⁴tsu⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1044', 'w3958', 'stedt-rn-456540'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": "w1216; brassett-2004; 词条 1216; accent witness w7950; IPA [{'text': 'la²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1216', 'w4181', 'stedt-rn-456730', 'stedt-rn-455088'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "pī",
+              "ipa": "pʰi⁵⁵",
+              "gloss": "件",
+              "source": "参考语法转引：Brassett等2006 p96例32；north-3；头巾依衣物类量词推用"
+            },
+            {
+              "pinyin": "diè-bǒ",
+              "ipa": "tiɛ⁵¹-pɔ²¹",
+              "gloss": "戴-STAT",
+              "source": "w615; brassett-2004; 词条 615; accent witness w8196; IPA [{'text': 'tiɛ⁵¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w615', 'w3485', 'stedt-rn-456053', 'stedt-rn-454579'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p90例110；north-5；north-6方式例31、32"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "参考语法转引：Brassett等2006 pp152–154例31、32；north-6"
+            },
+            {
+              "pinyin": "sōngkō-lā-niě",
+              "ipa": "sɔŋ⁵⁵kʰuɔ⁵⁵-la⁵⁵-ɲie²¹",
+              "gloss": "回家-PROG-LNK",
+              "source": "w2144; brassett-2004; 词条 2144; accent witness w7148; IPA [{'text': 'sɔŋ⁵⁵kʰuɔ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2144', 'w5198', 'stedt-rn-457777'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 pp112–117；north-4动作阶段例；参考语法转引：Brassett等2006 p95例24；north-6 动词短语＋nier＋中心名词"
+            },
+            {
+              "pinyin": "地藏像",
+              "ipa": null,
+              "gloss": "地藏像",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；地藏未命中；菩萨命中龙山lómōng但不能保持地藏专名"
+            },
+            {
+              "pinyin": "wǒ",
+              "ipa": "wɔ²¹",
+              "gloss": "六",
+              "source": "w2377; brassett-2004; 词条 2377; accent witness w6724; IPA [{'text': 'wɔ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2377', 'w5462', 'stedt-rn-458023', 'stedt-rn-455105'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "顶",
+              "source": "w317; brassett-2004; 词条 317; accent witness w8143; IPA [{'text': 'pu²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w317', 'w3180', 'stedt-rn-455728'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": "参考语法转引：Brassett等2006 p93例9；north-3 领属关系"
+            },
+            {
+              "pinyin": "背影",
+              "ipa": null,
+              "gloss": "背影",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；背影未命中；与后面tāniē区分"
+            },
+            {
+              "pinyin": "yǐ-liē",
+              "ipa": "ji²¹-lie⁵⁵",
+              "gloss": "看见-PFV",
+              "source": "w2576; brassett-2004; 词条 2576; accent witness w6461; IPA [{'text': 'ji²¹', 'method': 'source', 'profile': 'stedt-cb523fc3dc:north', 'attestationIds': ['stedt-rn-43437', 'stedt-rn-418094', 'stedt-rn-206982', 'w2576', 'w5690', 'stedt-rn-458239', 'stedt-rn-453835'], 'sourceProfiles': ['stedt-cb523fc3dc:north', 'brassett-phonetic'], 'sourceMethods': ['source', 'derived'], 'originalTexts': []}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "「おばあさん、お地蔵様がお米を持ってきてくださったよ。」",
+      "target_units": [
+        {
+          "translation": "āmā 地藏像 zǐhxě hǒ-diú",
+          "tokens": [
+            {
+              "pinyin": "āmā",
+              "ipa": "a⁵⁵ma⁵⁵",
+              "gloss": "老奶奶",
+              "source": "w132; brassett-2004; 词条 132; accent witness w7439; IPA [{'text': 'a⁵⁵ma⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w132', 'w2896', 'stedt-rn-455500'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "地藏像",
+              "ipa": null,
+              "gloss": "地藏像",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；地藏未命中；菩萨命中龙山lómōng但不能保持地藏专名"
+            },
+            {
+              "pinyin": "zǐhxě",
+              "ipa": "tsɨ²¹ɣɤ²¹",
+              "gloss": "米",
+              "source": "w2706; brassett-2004; 词条 2706; accent witness w6474; IPA [{'text': 'tsɨ²¹ɣɤ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2706', 'w5822', 'stedt-rn-458383', 'stedt-rn-454518'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǒ-diú",
+              "ipa": "fuɔ²¹-tiu²⁴",
+              "gloss": "拿-DIR.VEN",
+              "source": "w926; brassett-2004; 词条 926; accent witness w7202; IPA [{'text': 'fuɔ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w926', 'w3859', 'stedt-rn-456412'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p122–123；north-4；拿来完成向心"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "二人はお地蔵様の後ろ姿に何度も頭を下げました。",
+      "target_units": [
+        {
+          "translation": "gēzē niē hǔ 地藏像 niě 背影 bō hēndō cí 鞠躬-liē",
+          "tokens": [
+            {
+              "pinyin": "gēzē",
+              "ipa": "kɤ⁵⁵tsɤ⁵⁵",
+              "gloss": "他们",
+              "source": "参考语法转引：Brassett等2006 p49例4；north-3代词"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "二",
+              "source": "w1619; brassett-2004; 词条 1619; accent witness w7070; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1619', 'w4612', 'stedt-rn-457175', 'stedt-rn-455094'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǔ",
+              "ipa": "xu²¹",
+              "gloss": "个",
+              "source": "参考语法转引：Brassett等2006 p96例31；north-3"
+            },
+            {
+              "pinyin": "地藏像",
+              "ipa": null,
+              "gloss": "地藏像",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；地藏未命中；菩萨命中龙山lómōng但不能保持地藏专名"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": "参考语法转引：Brassett等2006 p93例9；north-3 领属关系"
+            },
+            {
+              "pinyin": "背影",
+              "ipa": null,
+              "gloss": "背影",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；背影未命中；与后面tāniē区分"
+            },
+            {
+              "pinyin": "bō",
+              "ipa": "pɔ⁵⁵",
+              "gloss": "DIR",
+              "source": "参考语法转引：Brassett等2006 north-3关系词表：方向/目标"
+            },
+            {
+              "pinyin": "hēndō",
+              "ipa": "xɜŋ⁵⁵tuɔ⁵⁵",
+              "gloss": "很多",
+              "source": "w862; brassett-2004; 词条 862; accent witness w6568; IPA [{'text': 'xɜŋ⁵⁵tuɔ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w862', 'w3762', 'stedt-rn-456346'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "cí",
+              "ipa": "tsʰɨ²⁴",
+              "gloss": "次",
+              "source": "w437; brassett-2004; 词条 437; accent witness w8365; IPA [{'text': 'tsʰɨ²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w437', 'w3306', 'stedt-rn-455858'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "鞠躬-liē",
+              "ipa": null,
+              "gloss": "鞠躬-PFV",
+              "source": "最小汉语插入；汉字原样，IPA为null，不标普通话读音；鞠躬未命中；低头语保词可见，但礼敬义和组合未核，保留动作；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    },
+    {
+      "source": "そして、いただいたお米とお餅で、うれしいお正月を迎えました。",
+      "target_units": [
+        {
+          "translation": "āiliē gēzē niē hǔ tǐ-niě zǐhxě niē bābā hǒliě nièlīniègá mǒ lǒngkā-liē",
+          "tokens": [
+            {
+              "pinyin": "āiliē",
+              "ipa": "ai⁵⁵liɛ⁵⁵",
+              "gloss": "然后",
+              "source": "w172; brassett-2004; 词条 172; accent witness w6250; IPA [{'text': 'ai⁵⁵liɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w172', 'w2996', 'stedt-rn-455567', 'stedt-rn-455291'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "gēzē",
+              "ipa": "kɤ⁵⁵tsɤ⁵⁵",
+              "gloss": "他们",
+              "source": "参考语法转引：Brassett等2006 p49例4；north-3代词"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "二",
+              "source": "w1619; brassett-2004; 词条 1619; accent witness w7070; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1619', 'w4612', 'stedt-rn-457175', 'stedt-rn-455094'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǔ",
+              "ipa": "xu²¹",
+              "gloss": "个",
+              "source": "参考语法转引：Brassett等2006 p96例31；north-3"
+            },
+            {
+              "pinyin": "tǐ-niě",
+              "ipa": "tʰi²¹-ɲie²¹",
+              "gloss": "得到-LNK",
+              "source": "w2255; brassett-2004; 词条 2255; accent witness w7363; IPA [{'text': 'tʰi²¹', 'method': 'source', 'profile': 'stedt-cb523fc3dc:north', 'attestationIds': ['stedt-rn-289082', 'w2255', 'w5332', 'stedt-rn-457896'], 'originalTexts': ['thi²¹'], 'sourceProfiles': ['stedt-cb523fc3dc:north', 'brassett-phonetic'], 'sourceMethods': ['source', 'derived']}]；参考语法转引：Brassett等2006 p95例24；north-6 动词短语＋nier＋中心名词"
+            },
+            {
+              "pinyin": "zǐhxě",
+              "ipa": "tsɨ²¹ɣɤ²¹",
+              "gloss": "米",
+              "source": "w2706; brassett-2004; 词条 2706; accent witness w6474; IPA [{'text': 'tsɨ²¹ɣɤ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w2706', 'w5822', 'stedt-rn-458383', 'stedt-rn-454518'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "niē",
+              "ipa": "ȵiɛ⁵⁵",
+              "gloss": "和",
+              "source": "w1618; brassett-2004; 词条 1618; accent witness w8254; IPA [{'text': 'ȵiɛ⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1618', 'w4613', 'stedt-rn-457174', 'stedt-rn-455298'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "bābā",
+              "ipa": "pa⁵⁵pa⁵⁵",
+              "gloss": "年糕",
+              "source": "w204; brassett-2004; 词条 204; accent witness w7007; IPA [{'text': 'pa⁵⁵pa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w204', 'w3032', 'stedt-rn-455604', 'stedt-rn-454447'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "hǒliě",
+              "ipa": "fuɔ²¹liɛ²¹",
+              "gloss": "用",
+              "source": "w930; brassett-2004; 词条 930; accent witness w7172; IPA [{'text': 'fuɔ²¹liɛ²¹', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w930', 'w3860', 'stedt-rn-456417', 'stedt-rn-454328'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "nièlīniègá",
+              "ipa": "ȵiɛ⁵¹li⁵⁵ȵiɛ⁵¹ka²⁴",
+              "gloss": "高高兴兴",
+              "source": "w1637; brassett-2004; 词条 1637; accent witness w7677; IPA [{'text': 'ȵiɛ⁵¹li⁵⁵ȵiɛ⁵¹ka²⁴', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1637'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "参考语法转引：Brassett等2006 pp152–154例31、32；north-6"
+            },
+            {
+              "pinyin": "lǒngkā-liē",
+              "ipa": "lɔŋ²¹kʰa⁵⁵-lie⁵⁵",
+              "gloss": "过年-PFV",
+              "source": "w1400; brassett-2004; 词条 1400; accent witness w7666; IPA [{'text': 'lɔŋ²¹kʰa⁵⁵', 'method': 'derived', 'profile': 'brassett-phonetic', 'attestationIds': ['w1400', 'w4376', 'stedt-rn-456942'], 'sourceProfiles': ['brassett-phonetic'], 'sourceMethods': ['derived']}]；参考语法转引：Brassett等2006 p119例76、p136例194；north-4 lie/l i a o流程；north-6先后动作"
+            }
+          ],
+          "relation": "independent"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "北部龙山材料为基础；检索模式Skill-based。正文为初步试译与证据核对，未有母语者审校、未听音频。",
+    "汉语插入为地藏像、除夕、决定、排列、想必、第六、剩、渐渐、背影、鞠躬；保留汉字，IPA为null。与土家语后缀组成一词时仍以连字符标边界，整词IPA为null，已知后缀音值记录在来源中。地藏像保留具体佛教对象，不用泛称菩萨替代。",
+    "老爷爷用pǒpā老人，老奶奶用āmā祖母作故事称谓；并未主张两人是叙事者的祖父母。村子用寨子，手ぬぐい用jiézū手巾/头巾，餅用bābā年糕，不细分日式糯米饼制作法。",
+    "傍晚采用中国语保龙山60757的cā’ǐzǒ /tsʰa⁵⁵i²¹tsuo²²/；住pá、脱hí亦采用该点，保留原来源调值及音段。其余词汇主要采用Brassett龙山词表。原文中的傍晚成为时间背景，未另添天黑事件。",
+    "数词、量词在名词后；六尊地藏像按一般物量词bú试用，头巾按衣物量词pī试用，二者与佛像/手巾的搭配未有直接例句。",
+    "第3句采用sell-xí目的小句，构式由鲁曼等目的xi例转引，记音沿用Brassett xif，跨材料组合待核。第15句能力否定用pū-tā-tī-xí，保留买不成的含义。",
+    "第10句将给地藏戴笠组织为使让构式：一尊一尊地使地藏戴斗笠；扫雪与戴笠为先后事件。第12句以手巾为工具包裹头部。第25句鞠躬保留礼敬动作，不把点头当同义词。",
+    "第9句采用程度构式冷-NMLZ没有表达很冷；想必保留推测。第23句以归去的地藏背影为看见的对象；lǔ完成离心在本句未强加，归去由语境及那边定位，趋向细差待母语核查。",
+    "lie标事件PFV，liao用于已形成的状态PRF，bo标STAT；方式mo为独立词。各独立断言另分target_units，同一源句下保持原顺序。IPA是来源基记和所列转换，不声称是连读实录。",
+    "仅使用当前日语原文、指定技能、附带词库与参考语法；没有读取其他任务或旧译稿。未做全词库重复篇章扫描，不能保证参考语法之外全无同故事语料。"
+  ],
+  "abbreviations": {
+    "ABL": "ablative",
+    "ADVZ": "adverbializer",
+    "BEN": "benefactive",
+    "CAUS": "causative",
+    "CONN": "connective",
+    "DAT": "dative",
+    "DIR": "directional",
+    "DIR.VEN": "directional.venitive",
+    "GEN": "genitive",
+    "INCH": "inchoative",
+    "LNK": "linker",
+    "NEG": "negation",
+    "NMLZ": "nominalizer",
+    "PFV": "perfective",
+    "PRF": "perfect",
+    "PROG": "progressive",
+    "Q": "question",
+    "STAT": "stative"
+  }
+}

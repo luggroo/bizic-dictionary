@@ -1,0 +1,348 @@
+{
+  "clauses": [
+    {
+      "source": "A thirsty crow found a pitcher with a little water in it.",
+      "target_units": [
+        {
+          "translation": "zégǎ niě gǎ guán péndō-liē.",
+          "tokens": [
+            {
+              "pinyin": "zégǎ",
+              "ipa": "tsɤ²⁴ka²¹",
+              "gloss": "渴",
+              "source": "brassett-2004，w2656；拼音见证w8045；IPA brassett-phonetic，见证w2656"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "LNK",
+              "source": "本地参考语法转引：north-6.md#north-25-1，Brassett等2006:95例24，谓语＋nier＋中心名词"
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "乌鸦",
+              "source": "brassett-2004，w688；拼音见证w8221；IPA stedt-cb523fc3dc:north，见证stedt-rn-288566,stedt-rn-362672,stedt-rn-187398,w688,w3573,stedt-rn-456142,stedt-rn-453559"
+            },
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "罐",
+              "source": "brassett-2004，w791；拼音见证w7184；IPA brassett-phonetic，见证w791,w3689,stedt-rn-456261"
+            },
+            {
+              "pinyin": "péndō-liē",
+              "ipa": "pʰɜŋ²⁴tuɔ⁵⁵-lie⁵⁵",
+              "gloss": "碰到-PFV",
+              "source": "brassett-2004，w1715；拼音见证w7188；IPA brassett-phonetic，见证w1715,w4723,stedt-rn-457287；本地参考语法转引：north-4.md#lie-liao-choice，Brassett等2006:118–119、136；事件完整体liē /lie⁵⁵/"
+            }
+          ],
+          "meaning": "口渴的乌鸦碰到了一个罐。",
+          "relation": "主句；简短性质定语仍修饰乌鸦"
+        },
+        {
+          "translation": "guán wótū cě diánkuī xié.",
+          "tokens": [
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "罐",
+              "source": "brassett-2004，w791；拼音见证w7184；IPA brassett-phonetic，见证w791,w3689,stedt-rn-456261"
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "里面",
+              "source": "brassett-2004，w2395；拼音见证w6651；IPA brassett-phonetic，见证w2395,w5458,stedt-rn-458043,stedt-rn-455022"
+            },
+            {
+              "pinyin": "cě",
+              "ipa": "tsʰɤ²¹",
+              "gloss": "水",
+              "source": "brassett-2004，w395；拼音见证w6543；IPA brassett-phonetic，见证w395,w3253,stedt-rn-455814,stedt-rn-453517"
+            },
+            {
+              "pinyin": "diánkuī",
+              "ipa": "tiɛn²⁴kʰuei⁵⁵",
+              "gloss": "一点",
+              "source": "brassett-2004，w603；拼音见证w7286；IPA brassett-phonetic，见证w603,w3473,stedt-rn-456040,stedt-rn-455222"
+            },
+            {
+              "pinyin": "xié",
+              "ipa": "ɕiɛ²⁴",
+              "gloss": "有",
+              "source": "brassett-2004，w2487；拼音见证w7134；IPA brassett-phonetic，见证w2487,w5587,stedt-rn-458147,stedt-rn-454792"
+            }
+          ],
+          "meaning": "罐里有一点水。",
+          "relation": "补充罐中内容；与前句共享罐的指称"
+        }
+      ]
+    },
+    {
+      "source": "The water was too low for its beak to reach.",
+      "target_units": [
+        {
+          "translation": "cě dī-xǐtái.",
+          "tokens": [
+            {
+              "pinyin": "cě",
+              "ipa": "tsʰɤ²¹",
+              "gloss": "水",
+              "source": "brassett-2004，w395；拼音见证w6543；IPA brassett-phonetic，见证w395,w3253,stedt-rn-455814,stedt-rn-453517"
+            },
+            {
+              "pinyin": "dī-xǐtái",
+              "ipa": "ti⁵⁵-ɕi²¹tʰai³⁵",
+              "gloss": "低-太",
+              "source": "brassett-2004，w575；拼音见证w7889；IPA brassett-phonetic，见证w575；本地参考语法转引：north-4.md#north-xi-degree，鲁曼等2021:426例15 /ɕi²¹ tʰai³⁵/；按gloss-layout.md整体成分xitai重组"
+            }
+          ],
+          "meaning": "水太低。",
+          "relation": "低水位造成后一小句所述够不到"
+        },
+        {
+          "translation": "záqī cě 够不到.",
+          "tokens": [
+            {
+              "pinyin": "záqī",
+              "ipa": "tsa²⁴tɕʰi⁵⁵",
+              "gloss": "嘴",
+              "source": "brassett-2004，w2621；拼音见证w8002；IPA brassett-phonetic，见证w2621,w5720,stedt-rn-458287,stedt-rn-453769"
+            },
+            {
+              "pinyin": "cě",
+              "ipa": "tsʰɤ²¹",
+              "gloss": "水",
+              "source": "brassett-2004，w395；拼音见证w6543；IPA brassett-phonetic，见证w395,w3253,stedt-rn-455814,stedt-rn-453517"
+            },
+            {
+              "pinyin": "够不到",
+              "ipa": null,
+              "gloss": "够不到",
+              "source": "汉语插入；离线查询“够”“够着”未获伸达义；“碰”是collide，“摸”是feel/touch，不用其冒充reach"
+            }
+          ],
+          "meaning": "嘴够不到水。",
+          "relation": "承接低水位的结果；嘴的领有者为已知乌鸦"
+        }
+      ]
+    },
+    {
+      "source": "It tried to tip the pitcher, but it was too heavy.",
+      "target_units": [
+        {
+          "translation": "gó guán 试推倒.",
+          "tokens": [
+            {
+              "pinyin": "gó",
+              "ipa": "kuɔ²⁴",
+              "gloss": "它",
+              "source": "brassett-2004，w801；拼音见证w6152；IPA brassett-phonetic，见证w801,w3703,stedt-rn-456271"
+            },
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "罐",
+              "source": "brassett-2004，w791；拼音见证w7184；IPA brassett-phonetic，见证w791,w3689,stedt-rn-456261"
+            },
+            {
+              "pinyin": "试推倒",
+              "ipa": null,
+              "gloss": "尝试推倒",
+              "source": "汉语插入；“翻倒”“推倒”零命中，“倒”义项不明，“倾斜”仅source-candidate；试行构式有a pa但新动词的配调和固定表功能标签未获支持，故最小整谓语插入"
+            }
+          ],
+          "meaning": "它试着推倒罐。",
+          "relation": "尝试未承诺推倒成功；叙事时间由上下文给出"
+        },
+        {
+          "translation": "dángsí guán dù-xǐtái.",
+          "tokens": [
+            {
+              "pinyin": "dángsí",
+              "ipa": "taŋ²⁴sɨ²⁴",
+              "gloss": "CONN",
+              "source": "brassett-2004，w558；拼音见证w7418；IPA brassett-phonetic，见证w558,w3421,stedt-rn-455993"
+            },
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "罐",
+              "source": "brassett-2004，w791；拼音见证w7184；IPA brassett-phonetic，见证w791,w3689,stedt-rn-456261"
+            },
+            {
+              "pinyin": "dù-xǐtái",
+              "ipa": "tu⁵¹-ɕi²¹tʰai³⁵",
+              "gloss": "重-太",
+              "source": "brassett-2004，w3512；拼音见证w3512,stedt-rn-456079,stedt-rn-454871；IPA brassett-phonetic，见证w3512,stedt-rn-456079,stedt-rn-454871；本地参考语法转引：north-4.md#north-xi-degree，鲁曼等2021:426例15 /ɕi²¹ tʰai³⁵/；按gloss-layout.md整体成分xitai重组"
+            }
+          ],
+          "meaning": "但是罐太重。",
+          "relation": "显式转折连接；后主句另组"
+        }
+      ]
+    },
+    {
+      "source": "Then the crow dropped small stones into it, one by one.",
+      "target_units": [
+        {
+          "translation": "āiliē gǎ ǎbǎ bíkuī lá bú lá bú mǒ guán wótū bō lá-liē.",
+          "tokens": [
+            {
+              "pinyin": "āiliē",
+              "ipa": "ai⁵⁵lie⁵⁵",
+              "gloss": "CONN",
+              "source": "本地参考语法转引：north-7.md#north-27-2，Brassett等2006:69例86；aixliex接着"
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "乌鸦",
+              "source": "brassett-2004，w688；拼音见证w8221；IPA stedt-cb523fc3dc:north，见证stedt-rn-288566,stedt-rn-362672,stedt-rn-187398,w688,w3573,stedt-rn-456142,stedt-rn-453559"
+            },
+            {
+              "pinyin": "ǎbǎ",
+              "ipa": "a²¹pa²¹",
+              "gloss": "石头",
+              "source": "brassett-2004，w91；拼音见证w6267；IPA brassett-phonetic，见证w91,w2940,stedt-rn-455452,stedt-rn-453497"
+            },
+            {
+              "pinyin": "bíkuī",
+              "ipa": "pi²⁴kʰuei⁵⁵",
+              "gloss": "小的",
+              "source": "brassett-2004，w277；拼音见证w8598；IPA brassett-phonetic，见证w277,w3116,stedt-rn-455682,stedt-rn-454852"
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": "本地参考语法转引：north-3.md#north-8-2-number，Brassett等2006:37例12"
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "个",
+              "source": "brassett-2004，w317；拼音见证w8143；IPA brassett-phonetic，见证w317,w3180,stedt-rn-455728"
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": "本地参考语法转引：north-3.md#north-8-2-number，Brassett等2006:37例12"
+            },
+            {
+              "pinyin": "bú",
+              "ipa": "pu²⁴",
+              "gloss": "个",
+              "source": "brassett-2004，w317；拼音见证w8143；IPA brassett-phonetic，见证w317,w3180,stedt-rn-455728"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "本地参考语法转引：north-3.md#north-8-2-number，数量短语重叠＋mor，Brassett等2006:37例12；north-6.md#north-30-101"
+            },
+            {
+              "pinyin": "guán",
+              "ipa": "kuɛn²⁴",
+              "gloss": "罐",
+              "source": "brassett-2004，w791；拼音见证w7184；IPA brassett-phonetic，见证w791,w3689,stedt-rn-456261"
+            },
+            {
+              "pinyin": "wótū",
+              "ipa": "wɔ²⁴tʰu⁵⁵",
+              "gloss": "里面",
+              "source": "brassett-2004，w2395；拼音见证w6651；IPA brassett-phonetic，见证w2395,w5458,stedt-rn-458043,stedt-rn-455022"
+            },
+            {
+              "pinyin": "bō",
+              "ipa": "pɔ⁵⁵",
+              "gloss": "ALL",
+              "source": "本地参考语法转引：north-3.md#north-14-2，Brassett等2006:100例64；处所后目标标记box"
+            },
+            {
+              "pinyin": "lá-liē",
+              "ipa": "la²⁴-lie⁵⁵",
+              "gloss": "扔-PFV",
+              "source": "brassett-2004，w1217；拼音见证w6766；IPA brassett-phonetic，见证w1217,w4184,stedt-rn-456731,stedt-rn-453801；本地参考语法转引：north-4.md#lie-liao-choice，Brassett等2006:118–119、136；事件完整体liē /lie⁵⁵/"
+            }
+          ],
+          "meaning": "接着乌鸦把小石头一个一个地扔向罐里面。",
+          "relation": "数量重叠＋方式化限定同一投石事件；目标为罐内"
+        }
+      ]
+    },
+    {
+      "source": "The water rose, and at last the crow could drink.",
+      "target_units": [
+        {
+          "translation": "cě óng-liē.",
+          "tokens": [
+            {
+              "pinyin": "cě",
+              "ipa": "tsʰɤ²¹",
+              "gloss": "水",
+              "source": "brassett-2004，w395；拼音见证w6543；IPA brassett-phonetic，见证w395,w3253,stedt-rn-455814,stedt-rn-453517"
+            },
+            {
+              "pinyin": "óng-liē",
+              "ipa": "ɔŋ²⁴-lie⁵⁵",
+              "gloss": "上涨-PFV",
+              "source": "brassett-2006，stedt-rn-454366；拼音见证stedt-rn-454366；IPA brassett-phonetic，见证stedt-rn-454366；本地参考语法转引：north-4.md#lie-liao-choice，Brassett等2006:118–119、136；事件完整体liē /lie⁵⁵/"
+            }
+          ],
+          "meaning": "水上涨了。",
+          "relation": "独立变化事件；按叙事次序承接投石"
+        },
+        {
+          "translation": "zuíhóu gǎ cě hǔ-dēxǐ.",
+          "tokens": [
+            {
+              "pinyin": "zuíhóu",
+              "ipa": "tsuei²⁴xou²⁴",
+              "gloss": "最后",
+              "source": "brassett-2004，w2756；拼音见证w7048；IPA brassett-phonetic，见证w2756,w5868,stedt-rn-458435"
+            },
+            {
+              "pinyin": "gǎ",
+              "ipa": "ka²¹",
+              "gloss": "乌鸦",
+              "source": "brassett-2004，w688；拼音见证w8221；IPA stedt-cb523fc3dc:north，见证stedt-rn-288566,stedt-rn-362672,stedt-rn-187398,w688,w3573,stedt-rn-456142,stedt-rn-453559"
+            },
+            {
+              "pinyin": "cě",
+              "ipa": "tsʰɤ²¹",
+              "gloss": "水",
+              "source": "brassett-2004，w395；拼音见证w6543；IPA brassett-phonetic，见证w395,w3253,stedt-rn-455814,stedt-rn-453517"
+            },
+            {
+              "pinyin": "hǔ-dēxǐ",
+              "ipa": "fu²¹-tɤ⁵⁵ɕi²¹",
+              "gloss": "喝-能",
+              "source": "brassett-2004，w874；拼音见证w7493；IPA brassett-phonetic，见证w874,w3807,stedt-rn-456358；本地参考语法转引：north-4.md#ability-choice，一般条件可行能力；Brassett等2006:126–131；gloss-layout.md按dexi整体词义标注"
+            }
+          ],
+          "meaning": "最后乌鸦能喝水。",
+          "relation": "结果性条件能力；原文could不改为已经喝完"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "北部龙山初步试译；检索模式：Skill-based。词库和参考语法快照commit 3c28f08ab78fc54a719f7f0d660e0fb5717f6fff；未作母语者审校。",
+    "pitcher以词库“罐”概括；found用“碰到／偶遇”；beak以“嘴”概括。保留“口渴”对乌鸦的修饰；“罐里少量水”为另一个完整补充断言。",
+    "精确缺口仅插入“够不到”“试推倒”，保留汉字，IPA为null；未为插入项猜音。尝试小句用裸谓语，不把未成功推倒标为已完成。",
+    "水太低／嘴够不到的原因结果关系采用相邻小句；转折用dángsí。独立断言分别成组，同主语省略不据此合并。",
+    "“一个一个”采用可复用的lá bú lá bú mǒ数量重叠方式构式；bú的量词类别明确含石头。",
+    "PFV liē只标碰到、投石、水上涨等事件；一般条件能力dēxǐ和高程度xǐtái均保持整体。",
+    "记音保留所选词条配对：hǔ的词库IPA为fu²¹；xié为ɕiɛ²⁴。高程度xǐtái保留鲁曼例的ɕi²¹tʰai³⁵；其他词主要采用Brassett龙山来源基记，连读未核。"
+  ],
+  "abbreviations": {
+    "ADVZ": "adverbializer",
+    "ALL": "allative",
+    "CONN": "connective",
+    "LNK": "linker",
+    "PFV": "perfective"
+  }
+}

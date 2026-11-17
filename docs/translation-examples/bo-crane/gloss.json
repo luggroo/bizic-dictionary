@@ -1,0 +1,182 @@
+{
+  "clauses": [
+    {
+      "source": "བྱ་དེ་ཁྲུང་ཁྲུང་དཀར་པོ།།",
+      "target_units": [
+        {
+          "translation": "ǎsǐ-niě 鹤",
+          "tokens": [
+            {
+              "pinyin": "ǎsǐ-niě",
+              "ipa": "a²¹sɨ²¹-ɲie²¹",
+              "gloss": "白-LNK",
+              "source": "w149、w8357；north-4 §形容词作定语（参考语法转引Feng 2025例8白鸡）；有调连接形式参考Brassett 2006:95例24"
+            },
+            {
+              "pinyin": "鹤",
+              "ipa": null,
+              "gloss": "鹤",
+              "source": "最小汉语插入：鹤；无词典词条记音。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ང་ལ་གཤོག་རྩལ་གཡོར་དང་།།",
+      "target_units": [
+        {
+          "translation": "ngá bǒ jiédā niě xiēqī lú gú",
+          "tokens": [
+            {
+              "pinyin": "ngá",
+              "ipa": "ŋa²⁴",
+              "gloss": "我",
+              "source": "Brassett词库 w1585；实际lookup get/word，见retrieval.log"
+            },
+            {
+              "pinyin": "bǒ",
+              "ipa": "pɔ²¹",
+              "gloss": "DAT",
+              "source": "north-3 §接受者、受益者与交谈对象；参考语法转引Brassett 2006:102例75"
+            },
+            {
+              "pinyin": "jiédā",
+              "ipa": "tɕiɛ²⁴ta⁵⁵",
+              "gloss": "翅膀",
+              "source": "Brassett词库 w1024；实际lookup get/word，见retrieval.log"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ɲie²¹",
+              "gloss": "GEN",
+              "source": "north-3 §领属关系；参考语法转引Brassett 2006:93例9"
+            },
+            {
+              "pinyin": "xiēqī",
+              "ipa": "ɕiɛ⁵⁵tɕʰi⁵⁵",
+              "gloss": "力气",
+              "source": "Brassett词库 w2503；实际lookup get/word，见retrieval.log"
+            },
+            {
+              "pinyin": "lú",
+              "ipa": "lu²⁴",
+              "gloss": "借给",
+              "source": "Brassett词库 w1410；实际lookup get/word，见retrieval.log；选一般borrow/lend义，未用限工具的w1654"
+            },
+            {
+              "pinyin": "gú",
+              "ipa": "ku²⁴",
+              "gloss": "DIR.IMM",
+              "source": "north-5 §肯定祈使与状态保持；参考语法转引Brassett 2006:135例191、193；全句IMP"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ཐག་རིང་རྒྱང་ལ་མི་འགྲོ།།",
+      "target_units": [
+        {
+          "translation": "ngá hxě mǒ hxí thā",
+          "tokens": [
+            {
+              "pinyin": "ngá",
+              "ipa": "ŋa²⁴",
+              "gloss": "我",
+              "source": "Brassett词库 w1585；实际lookup get/word，见retrieval.log"
+            },
+            {
+              "pinyin": "hxě",
+              "ipa": "ɣɤ²¹",
+              "gloss": "远",
+              "source": "Brassett词库 w938；实际lookup get/word，见retrieval.log"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mɔ²¹",
+              "gloss": "ADVZ",
+              "source": "north-6 §方式与伴随、§lie/mo判断；参考语法转引Brassett 2006:152–154；性质词方式化为本次组合"
+            },
+            {
+              "pinyin": "hxí",
+              "ipa": "ɣɨ²⁴",
+              "gloss": "去",
+              "source": "Brassett词库 w949；实际lookup get/word，见retrieval.log"
+            },
+            {
+              "pinyin": "thā",
+              "ipa": "tʰa⁵⁵",
+              "gloss": "NEG",
+              "source": "north-4 §事实否定与意愿否定；不去，否定决定／预期；参考语法转引田志慧526页等；Brassett基记词干"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ལི་ཐང་བསྐོར་ནས་སླེབས་ཡོང་།།",
+      "target_units": [
+        {
+          "translation": "理塘 tuǎnjǐn lá qiān zuán-liē sōngkō",
+          "tokens": [
+            {
+              "pinyin": "理塘",
+              "ipa": null,
+              "gloss": "理塘",
+              "source": "藏文ལི་ཐང་所指地名；汉语专名插入：理塘；word理塘未检出，无词典词条记音。"
+            },
+            {
+              "pinyin": "tuǎnjǐn",
+              "ipa": "tʰuan²²tɕin²²",
+              "gloss": "周围",
+              "source": "yubao-60757-v-1374，龙山；保留该调查点22调值，不改成Brassett21"
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la²⁴",
+              "gloss": "一",
+              "source": "Brassett词库 w1216；实际lookup get/word，见retrieval.log"
+            },
+            {
+              "pinyin": "qiān",
+              "ipa": "tɕʰiɛn⁵⁵",
+              "gloss": "圈",
+              "source": "Brassett词库 w1806；实际lookup get/word，见retrieval.log"
+            },
+            {
+              "pinyin": "zuán-liē",
+              "ipa": "tsuɛn²⁴-lie⁵⁵",
+              "gloss": "转-PFV",
+              "source": "Brassett词库 w2751；实际lookup get/word，见retrieval.log；north-6 §完成与先后动作，参考语法转引Brassett 2006:119例76；corpus c3.2田坎上转一下"
+            },
+            {
+              "pinyin": "sōngkō",
+              "ipa": "sɔŋ⁵⁵kʰuɔ⁵⁵",
+              "gloss": "回来",
+              "source": "Brassett词库 w2144；实际lookup get/word，见retrieval.log；north-6步骤构式后谓语可裸用"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "北部龙山基础；检索模式：Skill-based。初步试译与证据核对，未获母语者审校。",
+    "原文四行按“白鹤啊／把翅膀的力量借给我／我不往远处去／绕理塘后回来”理解。首行作为呼语短语，不补判断句；原文“鸟”由鹤的物种义涵盖。",
+    "未查到龙山鹤词，保留汉字“鹤”；ǎsǐ-niě表示“白的”。“理塘”为汉语专名插入；两者无词典词条记音，保留汉字，IPA留空。保靖白鹤词条未采用。",
+    "第二行保留གཤོག་རྩལ“翼力”为翅膀-GEN-力气。领有者由呼语语境恢复，不另增“你的”。gú为即时请求成分，整句IMP；接受者不当作空间方向依据。",
+    "第三行hxě mǒ hxí以“远地去”表远行，mǒ方式化为本次规则组合；尚无直接相同搭配例句，需要母语者核定自然度。thā否定出行打算，不是能力否定。",
+    "末行采用“理塘周围一圈转-PFV、回来”的先后连动；藏文没有明说数字“一”，一圈用于实现环绕。周围采用龙山语保1374的22调值，与Brassett词表来源分开。环绕整式及回来裸式的将来承诺读法仍需母语者复核。",
+    "连读未核；IPA保留所选来源基记，Brassett词项IPA为词库对应转换，不声称新录音实测。"
+  ],
+  "abbreviations": {
+    "ADVZ": "adverbializer",
+    "DAT": "dative",
+    "DIR.IMM": "directional.immediate",
+    "GEN": "genitive",
+    "LNK": "linker",
+    "NEG": "negation",
+    "PFV": "perfective"
+  }
+}

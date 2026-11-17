@@ -1,0 +1,204 @@
+{
+  "clauses": [
+    {
+      "source": "meftaxcer lafdongx ongr xir civ,",
+      "translations": {
+        "zh": "雷响一声，声音很大。",
+        "en": "Thunder sounds once, loudly.",
+        "ja": "雷が一度、大きく鳴る。",
+        "bo": "འབྲུག་སྐད་ཐེངས་གཅིག་ཆེན་པོར་གྲགས།"
+      },
+      "target_units": [
+        {
+          "translation": "métācě lá dōng ǒng-xǐ cì",
+          "tokens": [
+            {
+              "pinyin": "métācě",
+              "ipa": "me³⁵tha⁵⁵tshe²¹",
+              "gloss": "雷",
+              "source": "w1509（w7079叶氏见证）；stedt-rn-288453；输入IPA保留me而非词库mɨe"
+            },
+            {
+              "pinyin": "lá",
+              "ipa": "la³⁵",
+              "gloss": "一",
+              "source": "w1216；north-4 数量限制例/la³⁵tuŋ⁵⁵/"
+            },
+            {
+              "pinyin": "dōng",
+              "ipa": "tuŋ⁵⁵",
+              "gloss": "声",
+              "source": "stedt-rn-392347“下；次（击打次数）”；north-4 数量限制"
+            },
+            {
+              "pinyin": "ǒng-xǐ",
+              "ipa": "uŋ²¹-ɕi²¹",
+              "gloss": "响-NMLZ",
+              "source": "w1659；north-6 评价动作的表现（鲁曼等2021:426 例7，参考语法转引）"
+            },
+            {
+              "pinyin": "cì",
+              "ipa": "tshi⁵³",
+              "gloss": "大",
+              "source": "w442；stedt-rn-394690 /tshi⁵³/“大”"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "hufnix daxjiev mor serkex paf,",
+      "translations": {
+        "zh": "大家赶着耙田。",
+        "en": "Everyone hurries to harrow the fields.",
+        "ja": "みんな急いで田にまぐわをかける。",
+        "bo": "ཚང་མས་བྲེལ་འཚུབ་ངང་ཞིང་ལ་སོ་མང་རྒྱག"
+      },
+      "target_units": [
+        {
+          "translation": "húnī dājiè mǒ sěkē pá",
+          "tokens": [
+            {
+              "pinyin": "húnī",
+              "ipa": "xu³⁵ȵi⁵⁵",
+              "gloss": "大家",
+              "source": "w881；stedt-rn-393347；stedt-rn-394625"
+            },
+            {
+              "pinyin": "dājiè",
+              "ipa": "ta⁵⁵tɕie⁵³",
+              "gloss": "追赶",
+              "source": "yubao-60757-v-0803 /ta⁵⁵tɕiɘ⁵⁵/“追”近似；w1022 /jie4/追赶；高/降调候选，非完全同音词条"
+            },
+            {
+              "pinyin": "mǒ",
+              "ipa": "mo²¹",
+              "gloss": "ADVZ",
+              "source": "w1566；north-6 方式与伴随，Brassett等2006:150–155（参考语法转引）"
+            },
+            {
+              "pinyin": "sěkē",
+              "ipa": "se²¹khe⁵⁵",
+              "gloss": "田",
+              "source": "w2022；stedt-rn-288472 se²¹khɨe⁵⁵，保留输入khe"
+            },
+            {
+              "pinyin": "pá",
+              "ipa": "pha³⁵",
+              "gloss": "耙",
+              "source": "w1670；stedt-rn-288793"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "longrbair nier yerdiex rixhuax xief,",
+      "translations": {
+        "zh": "今年的粮食呢，[rīhuā：此处结构、词义待核]有。",
+        "en": "As for this year’s grain, there is [rīhuā: meaning and structure unresolved].",
+        "ja": "今年の穀物は、［rīhuā：意味・構造未確定］ある。",
+        "bo": "ད་ལོའི་འབྲུ་རིགས་ནི་ [rīhuā: དོན་དང་གྲུབ་ཚུལ་ད་དུང་གསལ་པོ་མེད།] ཡོད།"
+      },
+      "target_units": [
+        {
+          "translation": "lǒngbǎi niě yě diē rīhuā xié",
+          "tokens": [
+            {
+              "pinyin": "lǒngbǎi",
+              "ipa": "luŋ²¹pai²¹",
+              "gloss": "今年",
+              "source": "w1394；stedt-rn-385099 /loŋ²¹pai²¹/，保留输入luŋ"
+            },
+            {
+              "pinyin": "niě",
+              "ipa": "ȵie²¹",
+              "gloss": "GEN",
+              "source": "north-3 领属关系，Brassett等2006:93例9（参考语法转引）"
+            },
+            {
+              "pinyin": "yě",
+              "ipa": "je²¹",
+              "gloss": "粮食",
+              "source": "stedt-rn-365624 /jie²¹/；yubao-60757-v-1488 /ie²¹/；亦有w2548“饭”，本句暂取粮食"
+            },
+            {
+              "pinyin": "diē",
+              "ipa": "tie⁵⁵",
+              "gloss": "FOC",
+              "source": "north-3 /te/提示与强调：李启群等词典/tiɛ⁵⁵/（参考语法转引）；候选分析，未取仅用于人的PL"
+            },
+            {
+              "pinyin": "rīhuā",
+              "ipa": "zi⁵⁵xua⁵⁵",
+              "gloss": "待解",
+              "source": "整词rixhuax、zi⁵⁵xua⁵⁵均零命中；w1932 rix“做”和w890 huax“话”不足以建立本句意义；未强拆"
+            },
+            {
+              "pinyin": "xié",
+              "ipa": "ɕie³⁵",
+              "gloss": "有",
+              "source": "w2487；stedt-rn-431876 /ɕie³⁵/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source": "soxtir xiexqix sixjif heircef.",
+      "translations": {
+        "zh": "身上的力气[用不完？——hěicé尚未核定]。",
+        "en": "The body’s strength [cannot be used up? — hěicé remains unresolved].",
+        "ja": "体の力は［使い切れない？――hěicéは未確定］。",
+        "bo": "ལུས་ཀྱི་ཤུགས་ [སྤྱད་ཀྱང་མི་ཟད་པ་ཡིན་ནམ། — hěicé ད་དུང་གསལ་པོ་མེད།]"
+      },
+      "target_units": [
+        {
+          "translation": "sōtǐ xiēqī sī-jí hěicé",
+          "tokens": [
+            {
+              "pinyin": "sōtǐ",
+              "ipa": "so⁵⁵thi²¹",
+              "gloss": "身体",
+              "source": "stedt-rn-43359 so⁵⁵ tʰi²¹"
+            },
+            {
+              "pinyin": "xiēqī",
+              "ipa": "ɕie⁵⁵tɕhi⁵⁵",
+              "gloss": "力气",
+              "source": "w2503；stedt-rn-206166 含(min²¹tsi²¹)ɕie⁵⁵tɕhi⁵⁵，输入无前部"
+            },
+            {
+              "pinyin": "sī-jí",
+              "ipa": "si⁵⁵-tɕi³⁵",
+              "gloss": "用-COMPL",
+              "source": "stedt-rn-289086 /si⁵⁵/“用”；w39 后缀-ji2；north-4 做了与做完了/成分的组合次序"
+            },
+            {
+              "pinyin": "hěicé",
+              "ipa": "xei²¹tshe³⁵",
+              "gloss": "待解",
+              "source": "heircef、xei²¹整词零命中；w35 -hixcex“不起”仅为语境候选，调值及韵母不全匹配，不作为确定NEG.CAP"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "检索模式：Skill-based。依据北部龙山材料；原文无具体调查点，未将跨点近似当成同音实证。",
+    "原IPA来自source-ipa.json；所有音段和调值原样保留，仅插入分析边界。拼音由输入叶氏拼写以convert.cjs ye-accent转换，不另造普通话IPA。",
+    "第一行la dong取“一下/一声”，不是把“一共”硬译成劳动；ong-xi取动作名词化评价结构。“最”是另一可查候选，当前译文未加最高级。",
+    "第二行da-jie取追赶的近似形式，mo标方式；“赶着”是暂译，未添加人称、时体或命令。",
+    "第三行die暂取提示/强调FOC，未给非人名词直接套用人的PL；rixhuax仍未能可靠识别，完整保留局部缺口，未把“做+话”硬拼成自由译文。",
+    "第四行si-ji取“用-完结”；heircef不能与55/55调的hixcex“不起”直接等同。“用不完”仅为语境候选，并以问号明确保留否定、能力及边界的不确定性。",
+    "未查阅参考译文、旧产物或其他任务；未核音频、未做母语者审校，第三四行不是已核定的完整译文。"
+  ],
+  "abbreviations": {
+    "ADVZ": "adverbializer",
+    "COMPL": "completive",
+    "FOC": "focus",
+    "GEN": "genitive",
+    "NMLZ": "nominalizer"
+  }
+}

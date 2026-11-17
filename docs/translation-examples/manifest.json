@@ -1,0 +1,27 @@
+{
+  "en-crow": {
+    "pdf": "example-en-crow.pdf",
+    "pdf_sha256": "ee449041de4fd7befdf11c3b9b3bb3c2b171cd2975deb65d88e9fe5de4c2f90c",
+    "data_sha256": "22069096c1f8c695b05e940693b7c367d9df87966b86f0a588283427af35ac99"
+  },
+  "zh-rabbit": {
+    "pdf": "example-zh-rabbit.pdf",
+    "pdf_sha256": "179802dfe1c58958931e299d8820186ef7b8fe8ed23b3d0acdd903a18a9368ba",
+    "data_sha256": "1960d85b964379133844c1acd7b36e7e848fab504e2571bc160bc741d3a3849c"
+  },
+  "ja-jizo": {
+    "pdf": "example-ja-jizo.pdf",
+    "pdf_sha256": "a59f2c18e13a279e55ef58f74fcee431255d53d5cd04fc7586b49c193d9d1232",
+    "data_sha256": "d5b635c81978d64bbfddd4cbfd0ce7773e47dd77b48a657dac5545c537ed891f"
+  },
+  "bo-crane": {
+    "pdf": "example-bo-crane.pdf",
+    "pdf_sha256": "e4eea2e417a620b76e31cfa03aee48c8c6271d3a6616a0b6e7cefa45947c24bd",
+    "data_sha256": "467d371260d615af198e6c260afbf7826ba51b3aecfe2c5dd3f7729ce072e3e6"
+  },
+  "reverse-song": {
+    "pdf": "example-reverse-song.pdf",
+    "pdf_sha256": "cfe25fc6dd8568a2009767f765c1aa7901ad3cc50f1084132615b3700f18a1a7",
+    "data_sha256": "3186242d499ba7a4c7cb5671bd81663d7468ca44a562f6d6d0a09190f94d1e64"
+  }
+}
