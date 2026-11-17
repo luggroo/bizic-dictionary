@@ -2359,6 +2359,15 @@
       "en": "minister",
       "reviewedAt": "2026-10-23",
       "reviewEvidence": "汉语借词「部长」；minister 在此对应部长。补译「大臣」扩大了词义。"
+    },
+    "w204": {
+      "zh": "糍粑；年糕",
+      "status": "confirmed",
+      "previousZh": "糍粑",
+      "term": "ba1ba1",
+      "en": "glutinous rice cake",
+      "reviewedAt": "2026-11-16",
+      "reviewEvidence": "糯米制糕类食品，增加汉语对应释义「年糕」；保留原释「糍粑」。"
     }
   }
 }
