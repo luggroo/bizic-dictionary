@@ -31,3 +31,9 @@ The PDFs now use the Skill’s interlinear-gloss format: each full source senten
 `build-publication.py` documents the export. Its inputs are the original blind-run directory and the published-skill rerun directory, both included in the full archive. Execution records belong here in `docs/`; the reader pages contain the actual drafts, necessary meaning notes and links to these records.
 
 The earlier five-example PDF remains at `/translation-runs/five-translations.pdf` as the previous five-example edition. The current combined PDF contains all six examples. Korean records are also included under `korean-bandal-run/` in the archive.
+
+## UI gloss languages
+
+The five translations into Tujia display Chinese lexical gloss in the Chinese UI and English lexical gloss in the English UI. Grammatical labels, Pinyin and IPA are unchanged. `gloss-ui-locales.json` supplies display meanings without editing archived `gloss.json` data. The reverse song retains its original gloss and four translations. All existing PDFs retain their original gloss language and bytes. Use `build-publication.py --html-only` for UI-only updates; a full export renders PDFs directly from the archived gloss data.
+
+UI regression checks: `python docs/translation-runs/2026-11-17/test-gloss-ui.py` compares protected content with `GLOSS_UI_BASE` (default `HEAD`). `NODE_PATH=<temporary Playwright node_modules> node docs/translation-runs/2026-11-17/test-gloss-ui-browser.cjs` exercises live language switches in system Chromium, including reader navigation and PDF links.

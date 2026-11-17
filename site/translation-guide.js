@@ -41,6 +41,7 @@
     language = next;
     document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
     document.querySelectorAll('[data-zh][data-en]').forEach(el => { el.textContent = el.dataset[language]; });
+    document.querySelectorAll('.gloss td[data-gloss-original]').forEach(cell => { cell.lang = language; });
     $('ui-language').value = language;
     $('language-label').textContent = language === 'en' ? 'Interface language' : '界面语言';
     document.querySelector('aside').setAttribute('aria-label',language === 'en' ? 'Site navigation' : '网站导航');
@@ -53,6 +54,13 @@
     document.querySelectorAll('[data-ui-language-link]').forEach(el => {
       const url = new URL(location.href); url.searchParams.set('lang',el.dataset.uiLanguageLink); el.href = url.href;
       if (el.dataset.uiLanguageLink === language) el.setAttribute('aria-current','true'); else el.removeAttribute('aria-current');
+    });
+    document.querySelectorAll('a[href*="translation-runs"]').forEach(link => {
+      const target = new URL(link.href, location.href);
+      if (!/\/translation-runs(?:-en)?\.html$/.test(target.pathname)) return;
+      target.pathname = language === 'en' ? '/translation-runs-en.html' : '/translation-runs.html';
+      target.searchParams.set('lang', language);
+      link.href = target.pathname + target.search + target.hash;
     });
     refreshPrompt();
     titleAndRoute();
