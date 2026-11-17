@@ -3635,3 +3635,5 @@ Object.assign(UI_TRANSLATIONS,{
 });
 
 Object.assign(UI_TRANSLATIONS,{"毕兹学堂":"Bizic Academy","土家语词典、语法与语料":"Tujia Dictionary, Grammar & Texts"});
+
+Object.assign(UI_TRANSLATIONS,{"新借自汉语「寨」。": "A modern loan from Chinese 寨 “village”.", "新借自汉语「寨子」，其中「寨」指村庄。": "A modern loan from Chinese 寨子 “village”; 寨 means “village”.", "新借自汉语「上」。": "A modern loan from Chinese 上 “on; above”."});

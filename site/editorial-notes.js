@@ -6883,7 +6883,7 @@ EDITORIAL_NOTES.push(...[
    "w1994"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话「上」。",
+  "text": "新借自汉语「上」。",
   "donor": "上",
   "donorVariety": "西南官话",
   "scope": "whole",
@@ -9480,7 +9480,7 @@ EDITORIAL_NOTES.push(...[
    "w2629"
   ],
   "kind": "借词来源",
-  "text": "可能借自西南官话「寨子」。",
+  "text": "新借自汉语「寨子」，其中「寨」指村庄。",
   "donor": "寨子",
   "donorVariety": "西南官话",
   "scope": "whole",
@@ -62937,6 +62937,7 @@ EDITORIAL_NOTES.push(
 {"id":"chinese-loan-yubao-60824-v-0523","wordIds":["yubao-60824-v-0523"],"kind":"借词来源","donor":"针","donorVariety":"汉语（方言待核）","scope":"component","text":"「针」部分（第 1 音节）借自汉语，具体方言来源待核。","reviewedForms":[{"ipa":"tsẽ³³bu¹³","span":[1,1]}],"reviewBatch":"named-supplement-2026-10-24"}
 );
 EDITORIAL_NOTES.push({"id":"chinese-loan-yubao-60824-v-2650","wordIds":["yubao-60824-v-2650"],"kind":"借词来源","donor":"状、告","donorVariety":"汉语（方言待核）","scope":"whole","text":"两音节均借自汉语，分别对应「状」「告」；具体方言来源待核。","reviewedForms":[{"ipa":"tsuã¹³kau¹³","span":[1,2]}],"reviewBatch":"named-supplement-2026-10-24"});
+EDITORIAL_NOTES.push({"id": "chinese-loan-w5728", "wordIds": ["w5728"], "kind": "借词来源", "donor": "寨", "donorVariety": "汉语（方言待核）", "scope": "whole", "borrowingPeriod": "modern", "text": "新借自汉语「寨」。", "reviewedForms": [{"ipa": "tsai²⁴", "span": [1, 1]}]},{"id": "chinese-loan-w61", "wordIds": ["w61"], "kind": "借词来源", "donor": "上", "donorVariety": "汉语（方言待核）", "scope": "whole", "borrowingPeriod": "modern", "text": "新借自汉语「上」。", "reviewedForms": [{"ipa": "-saŋ⁵⁵", "span": [1, 1]}]});
 // Index source IDs once; list filtering visits every merged entry.
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){
