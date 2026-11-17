@@ -30,6 +30,9 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  assert.equal(c.modernChineseLoanInfo(get('stedt-rn-289703')).scope,'whole','sock is a reviewed whole-word loan');
  assert(c.editorialNotesFor(get('stedt-rn-289703')).some(n=>n.id==='chinese-loan-stedt-rn-289703'));
  for(const id of ['yubao-60824-v-1665','yubao-60824-v-2618','yubao-60757-v-2618','yubao-60823-v-2618','stedt-rn-430818'])assert.equal(c.modernChineseLoanBadge(get(id)),'',id+' other lexical form');
+ assert.equal(c.modernChineseLoanInfo(get('w1329')).scope,'whole','locative lī is a Chinese loan');
+ assert(c.editorialNotesFor(get('w1329')).some(n=>n.donor==='里'&&n.text.includes('里、里面')));
+ assert(!c.editorialNotesFor(get('w2395')).some(n=>n.donor==='里'),'native inside form does not inherit lī note');
  assert.equal(vm.runInContext("UI_TRANSLATIONS['新借']",c),'Loan');
  assert.equal(vm.runInContext("UI_TRANSLATIONS['半借']",c),'Pt. loan');
  assert(!c.modernChineseLoanBadge(get('stedt-rn-289609')).includes('title='),'loan explanation must not depend on hover');
@@ -214,7 +217,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  for(const id of ['stedt-rn-289453','yubao-60824-v-1339'])assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole',id+' 二月 is fully borrowed');
  for(const id of ['w2480','yubao-60756-v-0718','stedt-rn-289871','yubao-60824-v-0718','yubao-60824-v-0719'])assert(c.editorialNotesFor(get(id)).some(n=>n.donor==='校堂'),id+' 校堂 donor');
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996+2-chiPeriod.reclassifiedModernNoteIds.length+[...rimeFollowup.decisions,...hotcell.decisions,...unFollowup.decisions.filter(d=>d.action==='add-loan-note')].filter(d=>d.note.id.startsWith('chinese-loan-')).length);
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996+3-chiPeriod.reclassifiedModernNoteIds.length+[...rimeFollowup.decisions,...hotcell.decisions,...unFollowup.decisions.filter(d=>d.action==='add-loan-note')].filter(d=>d.note.id.startsWith('chinese-loan-')).length);
  const componentsFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-components-followup-2026-10-23.json'),'utf8'));
  for(const {note} of componentsFollowup.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
@@ -247,7 +250,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  vm.runInContext("state.q='大臣';state.searchLanguage='zh'",c);
  for(const id of ['w351','stedt-rn-289610'])assert.equal(c.wordSearchScore(get(id)),0,'obsolete translation is not searchable');
  vm.runInContext("state.q='';state.searchLanguage=''",c);
- const unspecifiedNorthernDonors=new Set(['w5728','w61','yubao-60756-v-0521','yubao-60756-v-0740','yubao-60756-v-1857','yubao-60823-v-0425',...screening.decisions.filter(d=>d.note.donorVariety==='汉语（方言待核）').flatMap(d=>d.note.wordIds)]);
+ const unspecifiedNorthernDonors=new Set(['w1329','w5728','w61','yubao-60756-v-0521','yubao-60756-v-0740','yubao-60756-v-1857','yubao-60823-v-0425',...screening.decisions.filter(d=>d.note.donorVariety==='汉语（方言待核）').flatMap(d=>d.note.wordIds)]);
  const reviewedDonorVarieties=new Map([...rimeFollowup.decisions,...rimeFollowup.corrections,...hotcell.decisions,...hotcell.corrections,...unFollowup.decisions].filter(d=>d.note.id.startsWith('chinese-loan-')).map(d=>[d.note.id,d.note.donorVariety]));
  for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,reviewedDonorVarieties.get(n.id)||(unspecifiedNorthernDonors.has(id)?'汉语（方言待核）':'西南官话'),id+' northern donor variety');}
  for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
