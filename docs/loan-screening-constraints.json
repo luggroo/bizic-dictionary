@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "scope": "Screening constraints, not a native-word training set. Entry aliases resolve before scoring; rejected donors and component boundaries apply separately. Later linguistic review is required to revise these constraints.",
   "setuScope": "Exclude the five setu-family entries and their merged aliases. The distinct Southern sītī /si⁵⁵tʰi⁵⁵/ is not part of this exclusion.",
   "rules": [
@@ -2360,29 +2360,6 @@
       ]
     },
     {
-      "id": "stedt-rn-454698",
-      "policy": "exclude-component",
-      "family": "chi-undated",
-      "reason": "尺的此声调与西南官话不符，借入时代未定；只有已审 cir 形式保留新借标签。",
-      "origin": "docs/loan-chi-period-review-2026-10-23.json",
-      "reviewedForms": [
-        {
-          "ipa": "tsʰɨ²⁴",
-          "span": [
-            1,
-            1
-          ]
-        },
-        {
-          "ipa": "tsʰi³⁵",
-          "span": [
-            1,
-            1
-          ]
-        }
-      ]
-    },
-    {
       "id": "stedt-rn-390713",
       "policy": "exclude-component",
       "family": "chi-undated",
@@ -2634,6 +2611,96 @@
           ]
         }
       ]
+    },
+    {
+      "id": "stedt-rn-289208",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60756-v-1130",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60757-v-1130",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60757-v-0818",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60823-v-0818",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "w1775",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60756-v-2809",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "w471",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "w1167",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60756-v-0373",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60823-v-0373",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "stedt-rn-289207",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "w726",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60756-v-0946",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60823-v-0946",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入新借词标注。",
+      "origin": "docs/loan-table-review-2026-11-17.json"
     }
   ],
   "phonologicalComparison": {
@@ -2653,5 +2720,31 @@
     "review": "docs/loan-rime-followup-2026-10-23.json",
     "exceptionFamily": "door-lamen-not-modern",
     "scope": "Exclude only reviewed la-men/la-min correspondences; other reviewed 门 components are loans."
-  }
+  },
+  "supersededRules": [
+    {
+      "id": "stedt-rn-454698",
+      "policy": "exclude-component",
+      "family": "chi-undated",
+      "reason": "尺的此声调与西南官话不符，借入时代未定；只有已审 cir 形式保留新借标签。",
+      "origin": "docs/loan-chi-period-review-2026-10-23.json",
+      "reviewedForms": [
+        {
+          "ipa": "tsʰɨ²⁴",
+          "span": [
+            1,
+            1
+          ]
+        },
+        {
+          "ipa": "tsʰi³⁵",
+          "span": [
+            1,
+            1
+          ]
+        }
+      ],
+      "supersededBy": "docs/loan-table-review-2026-11-17.json"
+    }
+  ]
 }

@@ -62739,7 +62739,6 @@ for(const replacement of [{"id":"chinese-loan-yubao-60824-v-0718","wordIds":["yu
 // Tone-specific dating of 尺; source transcriptions remain unchanged.
 for(let i=EDITORIAL_NOTES.length-1;i>=0;i--)if(["chinese-loan-stedt-rn-390713","chinese-loan-stedt-rn-229065","chinese-loan-yubao-60756-v-2955","chinese-loan-yubao-60824-v-2955"].includes(EDITORIAL_NOTES[i].id))EDITORIAL_NOTES.splice(i,1);
 EDITORIAL_NOTES.push(
-{"id":"loan-etymology-stedt-rn-454698","wordIds":["stedt-rn-454698"],"kind":"借词来源","donor":"尺","donorVariety":"汉语（方言待核）","borrowingPeriod":"undetermined","scope":"whole","text":"借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。","reviewedForms":[{"ipa":"tsʰɨ²⁴","span":[1,1]},{"ipa":"tsʰi³⁵","span":[1,1]}],"reviewBatch":"chi-period-2026-10-23"},
 {"id":"loan-etymology-stedt-rn-390713","wordIds":["stedt-rn-390713"],"kind":"借词来源","donor":"尺","donorVariety":"汉语（方言待核）","borrowingPeriod":"undetermined","scope":"whole","text":"借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。","reviewedForms":[{"ipa":"tsʰi³⁵","span":[1,1]}],"reviewBatch":"chi-period-2026-10-23"},
 {"id":"loan-etymology-stedt-rn-229065","wordIds":["stedt-rn-229065"],"kind":"借词来源","donor":"尺","donorVariety":"汉语（方言待核）","borrowingPeriod":"undetermined","scope":"whole","text":"借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。","reviewedForms":[{"ipa":"tsʰi³⁵","span":[1,1]}],"reviewBatch":"chi-period-2026-10-23"},
 {"id":"loan-etymology-yubao-60756-v-1853","wordIds":["yubao-60756-v-1853"],"kind":"借词来源","donor":"尺","donorVariety":"汉语（方言待核）","borrowingPeriod":"undetermined","scope":"whole","text":"借自汉语「尺」，声调与西南官话不符，借入年代未定，可能不是近代借词。","reviewedForms":[{"ipa":"tsʰɿ⁵⁵","span":[1,1]}],"reviewBatch":"chi-period-2026-10-23"},
@@ -62940,6 +62939,6947 @@ EDITORIAL_NOTES.push({"id":"chinese-loan-yubao-60824-v-2650","wordIds":["yubao-6
 EDITORIAL_NOTES.push({"id": "chinese-loan-w5728", "wordIds": ["w5728"], "kind": "借词来源", "donor": "寨", "donorVariety": "汉语（方言待核）", "scope": "whole", "borrowingPeriod": "modern", "text": "新借自汉语「寨」。", "reviewedForms": [{"ipa": "tsai²⁴", "span": [1, 1]}]},{"id": "chinese-loan-w61", "wordIds": ["w61"], "kind": "借词来源", "donor": "上", "donorVariety": "汉语（方言待核）", "scope": "whole", "borrowingPeriod": "modern", "text": "新借自汉语「上」。", "reviewedForms": [{"ipa": "-saŋ⁵⁵", "span": [1, 1]}]});
 // Index source IDs once; list filtering visits every merged entry.
 EDITORIAL_NOTES.push({"id":"chinese-loan-w1329","wordIds":["w1329"],"kind":"借词来源","donor":"里","donorVariety":"汉语（方言待核）","scope":"whole","text":"方位词 lī /li⁵⁵/ 借自汉语「里」，表示「里、里面」。","reviewedForms":[{"ipa":"li⁵⁵","span":[1,1]}]});
+
+// Loan classifications and exact recorded forms.
+EDITORIAL_NOTES.push(...[
+ {
+  "id": "chinese-loan-w1776",
+  "wordIds": [
+   "w1776"
+  ],
+  "kind": "借词来源",
+  "donor": "七",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「七」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2444",
+  "wordIds": [
+   "w2444"
+  ],
+  "kind": "借词来源",
+  "donor": "下",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「下」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕia²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2446",
+  "wordIds": [
+   "w2446"
+  ],
+  "kind": "借词来源",
+  "donor": "下",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「下」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕia²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w321",
+  "wordIds": [
+   "w321"
+  ],
+  "kind": "借词来源",
+  "donor": "不",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「不」。",
+  "reviewedForms": [
+   {
+    "ipa": "pu²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1355",
+  "wordIds": [
+   "w1355"
+  ],
+  "kind": "借词来源",
+  "donor": "两",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「两」。",
+  "reviewedForms": [
+   {
+    "ipa": "liɛn⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w803",
+  "wordIds": [
+   "w803"
+  ],
+  "kind": "借词来源",
+  "donor": "个",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「个」。",
+  "reviewedForms": [
+   {
+    "ipa": "kuɔ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1069",
+  "wordIds": [
+   "w1069"
+  ],
+  "kind": "借词来源",
+  "donor": "九",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「九」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2486",
+  "wordIds": [
+   "w2486"
+  ],
+  "kind": "借词来源",
+  "donor": "些",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「些」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiɛ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1357",
+  "wordIds": [
+   "w1357"
+  ],
+  "kind": "借词来源",
+  "donor": "亮",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「亮」。",
+  "reviewedForms": [
+   {
+    "ipa": "liɛn²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w5613",
+  "wordIds": [
+   "w5613"
+  ],
+  "kind": "借词来源",
+  "donor": "休",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「休」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w575",
+  "wordIds": [
+   "w575"
+  ],
+  "kind": "借词来源",
+  "donor": "低",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「低」。",
+  "reviewedForms": [
+   {
+    "ipa": "ti⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0947",
+  "wordIds": [
+   "yubao-60756-v-0947"
+  ],
+  "kind": "借词来源",
+  "donor": "低",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「低」。",
+  "reviewedForms": [
+   {
+    "ipa": "ti⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2291",
+  "wordIds": [
+   "yubao-60756-v-2291"
+  ],
+  "kind": "借词来源",
+  "donor": "佛",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「佛」。",
+  "reviewedForms": [
+   {
+    "ipa": "xu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2291",
+  "wordIds": [
+   "yubao-60823-v-2291"
+  ],
+  "kind": "借词来源",
+  "donor": "佛",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「佛」。",
+  "reviewedForms": [
+   {
+    "ipa": "xu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60757-v-2713",
+  "wordIds": [
+   "yubao-60757-v-2713"
+  ],
+  "kind": "借词来源",
+  "donor": "使",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「使」。",
+  "reviewedForms": [
+   {
+    "ipa": "sɿ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2713",
+  "wordIds": [
+   "yubao-60823-v-2713"
+  ],
+  "kind": "借词来源",
+  "donor": "使",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「使」。",
+  "reviewedForms": [
+   {
+    "ipa": "sɿ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w762",
+  "wordIds": [
+   "w762"
+  ],
+  "kind": "借词来源",
+  "donor": "供",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「供」。",
+  "reviewedForms": [
+   {
+    "ipa": "kɔŋ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w3080",
+  "wordIds": [
+   "w3080"
+  ],
+  "kind": "借词来源",
+  "donor": "保",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「保」。",
+  "reviewedForms": [
+   {
+    "ipa": "pau⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2874",
+  "wordIds": [
+   "yubao-60756-v-2874"
+  ],
+  "kind": "借词来源",
+  "donor": "倒",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「倒」。",
+  "reviewedForms": [
+   {
+    "ipa": "tau³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-290191",
+  "wordIds": [
+   "stedt-rn-290191"
+  ],
+  "kind": "借词来源",
+  "donor": "假",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「假」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕia⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2247",
+  "wordIds": [
+   "w2247"
+  ],
+  "kind": "借词来源",
+  "donor": "停",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「停」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰɜŋ²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1409",
+  "wordIds": [
+   "w1409"
+  ],
+  "kind": "借词来源",
+  "donor": "六",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「六」。",
+  "reviewedForms": [
+   {
+    "ipa": "lu²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w955",
+  "wordIds": [
+   "w955"
+  ],
+  "kind": "借词来源",
+  "donor": "几",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「几」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1595",
+  "wordIds": [
+   "w1595"
+  ],
+  "kind": "借词来源",
+  "donor": "凹",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「凹」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋau²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-403761",
+  "wordIds": [
+   "stedt-rn-403761"
+  ],
+  "kind": "借词来源",
+  "donor": "刨",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「刨」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰau²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-213204",
+  "wordIds": [
+   "stedt-rn-213204"
+  ],
+  "kind": "借词来源",
+  "donor": "剃",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「剃」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2250",
+  "wordIds": [
+   "w2250"
+  ],
+  "kind": "借词来源",
+  "donor": "剃",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「剃」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2471",
+  "wordIds": [
+   "w2471"
+  ],
+  "kind": "借词来源",
+  "donor": "削",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「削」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-203463",
+  "wordIds": [
+   "stedt-rn-203463"
+  ],
+  "kind": "借词来源",
+  "donor": "剪",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「剪」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕian⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1103",
+  "wordIds": [
+   "yubao-60756-v-1103"
+  ],
+  "kind": "借词来源",
+  "donor": "副",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「副」。",
+  "reviewedForms": [
+   {
+    "ipa": "xu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1103",
+  "wordIds": [
+   "yubao-60823-v-1103"
+  ],
+  "kind": "借词来源",
+  "donor": "副",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「副」。",
+  "reviewedForms": [
+   {
+    "ipa": "xu¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-422145",
+  "wordIds": [
+   "stedt-rn-422145"
+  ],
+  "kind": "借词来源",
+  "donor": "劈",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「劈」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰi²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w760",
+  "wordIds": [
+   "w760"
+  ],
+  "kind": "借词来源",
+  "donor": "功",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「功」。",
+  "reviewedForms": [
+   {
+    "ipa": "kɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2563",
+  "wordIds": [
+   "yubao-60823-v-2563"
+  ],
+  "kind": "借词来源",
+  "donor": "加",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「加」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕia⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-219375",
+  "wordIds": [
+   "stedt-rn-219375"
+  ],
+  "kind": "借词来源",
+  "donor": "化",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「化」。",
+  "reviewedForms": [
+   {
+    "ipa": "xua³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-389636",
+  "wordIds": [
+   "stedt-rn-389636"
+  ],
+  "kind": "借词来源",
+  "donor": "匹",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「匹」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1086",
+  "wordIds": [
+   "yubao-60756-v-1086"
+  ],
+  "kind": "借词来源",
+  "donor": "匹",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「匹」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰi³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2063",
+  "wordIds": [
+   "w2063"
+  ],
+  "kind": "借词来源",
+  "donor": "十",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「十」。",
+  "reviewedForms": [
+   {
+    "ipa": "sɿ²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2498",
+  "wordIds": [
+   "yubao-60756-v-2498"
+  ],
+  "kind": "借词来源",
+  "donor": "午",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「午」。",
+  "reviewedForms": [
+   {
+    "ipa": "u⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2495",
+  "wordIds": [
+   "yubao-60756-v-2495"
+  ],
+  "kind": "借词来源",
+  "donor": "卯",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「卯」。",
+  "reviewedForms": [
+   {
+    "ipa": "mau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w872",
+  "wordIds": [
+   "w872"
+  ],
+  "kind": "借词来源",
+  "donor": "厚",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「厚」。",
+  "reviewedForms": [
+   {
+    "ipa": "xou²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w353",
+  "wordIds": [
+   "w353"
+  ],
+  "kind": "借词来源",
+  "donor": "叉",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「叉」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰa⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-396334",
+  "wordIds": [
+   "stedt-rn-396334"
+  ],
+  "kind": "借词来源",
+  "donor": "反",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「反」。",
+  "reviewedForms": [
+   {
+    "ipa": "xuan⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-215805",
+  "wordIds": [
+   "stedt-rn-215805"
+  ],
+  "kind": "借词来源",
+  "donor": "发",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「发」。",
+  "reviewedForms": [
+   {
+    "ipa": "xua⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289110",
+  "wordIds": [
+   "stedt-rn-289110"
+  ],
+  "kind": "借词来源",
+  "donor": "发",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「发」。",
+  "reviewedForms": [
+   {
+    "ipa": "xua²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2599",
+  "wordIds": [
+   "yubao-60756-v-2599"
+  ],
+  "kind": "借词来源",
+  "donor": "取",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「取」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2686",
+  "wordIds": [
+   "w2686"
+  ],
+  "kind": "借词来源",
+  "donor": "只",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「只」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1013",
+  "wordIds": [
+   "w1013"
+  ],
+  "kind": "借词来源",
+  "donor": "叫",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「叫」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiau²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w3937",
+  "wordIds": [
+   "w3937"
+  ],
+  "kind": "借词来源",
+  "donor": "叫",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「叫」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiau²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2225",
+  "wordIds": [
+   "w2225"
+  ],
+  "kind": "借词来源",
+  "donor": "台",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「台」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰai²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w844",
+  "wordIds": [
+   "w844"
+  ],
+  "kind": "借词来源",
+  "donor": "号",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「号」。",
+  "reviewedForms": [
+   {
+    "ipa": "xau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2542",
+  "wordIds": [
+   "yubao-60756-v-2542"
+  ],
+  "kind": "借词来源",
+  "donor": "号",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「号」。",
+  "reviewedForms": [
+   {
+    "ipa": "xau³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2542",
+  "wordIds": [
+   "yubao-60823-v-2542"
+  ],
+  "kind": "借词来源",
+  "donor": "号",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「号」。",
+  "reviewedForms": [
+   {
+    "ipa": "xau¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2319",
+  "wordIds": [
+   "w2319"
+  ],
+  "kind": "借词来源",
+  "donor": "吐",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「吐」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰu⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w482",
+  "wordIds": [
+   "w482"
+  ],
+  "kind": "借词来源",
+  "donor": "吹",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「吹」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰuei⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2737",
+  "wordIds": [
+   "w2737"
+  ],
+  "kind": "借词来源",
+  "donor": "周",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「周」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsou⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2815",
+  "wordIds": [
+   "yubao-60756-v-2815"
+  ],
+  "kind": "借词来源",
+  "donor": "和",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「和」。",
+  "reviewedForms": [
+   {
+    "ipa": "xɔ³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2058",
+  "wordIds": [
+   "w2058"
+  ],
+  "kind": "借词来源",
+  "donor": "四",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「四」。",
+  "reviewedForms": [
+   {
+    "ipa": "sɿ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0043",
+  "wordIds": [
+   "yubao-60823-v-0043"
+  ],
+  "kind": "借词来源",
+  "donor": "坝",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「坝」。",
+  "reviewedForms": [
+   {
+    "ipa": "pa¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w650",
+  "wordIds": [
+   "w650"
+  ],
+  "kind": "借词来源",
+  "donor": "堆",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「堆」。",
+  "reviewedForms": [
+   {
+    "ipa": "tuei⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w652",
+  "wordIds": [
+   "w652"
+  ],
+  "kind": "借词来源",
+  "donor": "堆",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「堆」。",
+  "reviewedForms": [
+   {
+    "ipa": "tuei⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2711",
+  "wordIds": [
+   "yubao-60756-v-2711"
+  ],
+  "kind": "借词来源",
+  "donor": "填",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「填」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰiaŋ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2445",
+  "wordIds": [
+   "w2445"
+  ],
+  "kind": "借词来源",
+  "donor": "夏",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「夏」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕia²⁴",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "ɕia³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w655",
+  "wordIds": [
+   "w655"
+  ],
+  "kind": "借词来源",
+  "donor": "多",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「多」。",
+  "reviewedForms": [
+   {
+    "ipa": "tuɔ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w513",
+  "wordIds": [
+   "w513"
+  ],
+  "kind": "借词来源",
+  "donor": "大",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「大」。",
+  "reviewedForms": [
+   {
+    "ipa": "ta²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1163",
+  "wordIds": [
+   "yubao-60823-v-1163"
+  ],
+  "kind": "借词来源",
+  "donor": "太",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「太」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰai¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w878",
+  "wordIds": [
+   "w878"
+  ],
+  "kind": "借词来源",
+  "donor": "夫",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「夫」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɸu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2677",
+  "wordIds": [
+   "yubao-60756-v-2677"
+  ],
+  "kind": "借词来源",
+  "donor": "夹",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「夹」。",
+  "reviewedForms": [
+   {
+    "ipa": "ka³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2677",
+  "wordIds": [
+   "yubao-60823-v-2677"
+  ],
+  "kind": "借词来源",
+  "donor": "夹",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「夹」。",
+  "reviewedForms": [
+   {
+    "ipa": "ka¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2241",
+  "wordIds": [
+   "w2241"
+  ],
+  "kind": "借词来源",
+  "donor": "套",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「套」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰau²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w34",
+  "wordIds": [
+   "w34"
+  ],
+  "kind": "借词来源",
+  "donor": "好",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「好」。",
+  "reviewedForms": [
+   {
+    "ipa": "-xau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w847",
+  "wordIds": [
+   "w847"
+  ],
+  "kind": "借词来源",
+  "donor": "好",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「好」。",
+  "reviewedForms": [
+   {
+    "ipa": "xau⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1321",
+  "wordIds": [
+   "w1321"
+  ],
+  "kind": "借词来源",
+  "donor": "嫩",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「嫩」。",
+  "reviewedForms": [
+   {
+    "ipa": "lɜŋ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "lən³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2492",
+  "wordIds": [
+   "yubao-60756-v-2492"
+  ],
+  "kind": "借词来源",
+  "donor": "子",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「子」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2692",
+  "wordIds": [
+   "w2692"
+  ],
+  "kind": "借词来源",
+  "donor": "字",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「字」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2195",
+  "wordIds": [
+   "w2195"
+  ],
+  "kind": "借词来源",
+  "donor": "它",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「它」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰa⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1591",
+  "wordIds": [
+   "w1591"
+  ],
+  "kind": "借词来源",
+  "donor": "安",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「安」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋaŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2837",
+  "wordIds": [
+   "yubao-60823-v-2837"
+  ],
+  "kind": "借词来源",
+  "donor": "害",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「害」。",
+  "reviewedForms": [
+   {
+    "ipa": "xai¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w986",
+  "wordIds": [
+   "w986"
+  ],
+  "kind": "借词来源",
+  "donor": "家",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「家」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕia⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0944",
+  "wordIds": [
+   "yubao-60823-v-0944"
+  ],
+  "kind": "借词来源",
+  "donor": "宽",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「宽」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰuã⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w651",
+  "wordIds": [
+   "w651"
+  ],
+  "kind": "借词来源",
+  "donor": "对",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「对」。",
+  "reviewedForms": [
+   {
+    "ipa": "tuei²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1068",
+  "wordIds": [
+   "w1068"
+  ],
+  "kind": "借词来源",
+  "donor": "就",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「就」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-454698",
+  "wordIds": [
+   "stedt-rn-454698"
+  ],
+  "kind": "借词来源",
+  "donor": "尺",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「尺」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰɿ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-194487",
+  "wordIds": [
+   "stedt-rn-194487"
+  ],
+  "kind": "借词来源",
+  "donor": "屁",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「屁」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰi⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2176",
+  "wordIds": [
+   "w2176"
+  ],
+  "kind": "借词来源",
+  "donor": "岁",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「岁」。",
+  "reviewedForms": [
+   {
+    "ipa": "suei²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1948",
+  "wordIds": [
+   "yubao-60823-v-1948"
+  ],
+  "kind": "借词来源",
+  "donor": "布",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「布」。",
+  "reviewedForms": [
+   {
+    "ipa": "pu¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w545",
+  "wordIds": [
+   "w545"
+  ],
+  "kind": "借词来源",
+  "donor": "带",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「带」。",
+  "reviewedForms": [
+   {
+    "ipa": "tai²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1108",
+  "wordIds": [
+   "yubao-60756-v-1108"
+  ],
+  "kind": "借词来源",
+  "donor": "座",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「座」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɔ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1125",
+  "wordIds": [
+   "w1125"
+  ],
+  "kind": "借词来源",
+  "donor": "开",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「开」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-377714",
+  "wordIds": [
+   "stedt-rn-377714"
+  ],
+  "kind": "借词来源",
+  "donor": "弓",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「弓」。",
+  "reviewedForms": [
+   {
+    "ipa": "koŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2689",
+  "wordIds": [
+   "w2689"
+  ],
+  "kind": "借词来源",
+  "donor": "志",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「志」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2458",
+  "wordIds": [
+   "w2458"
+  ],
+  "kind": "借词来源",
+  "donor": "想",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「想」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiɛn⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2502",
+  "wordIds": [
+   "yubao-60756-v-2502"
+  ],
+  "kind": "借词来源",
+  "donor": "戌",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「戌」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2548",
+  "wordIds": [
+   "yubao-60756-v-2548"
+  ],
+  "kind": "借词来源",
+  "donor": "戏",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「戏」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2548",
+  "wordIds": [
+   "yubao-60823-v-2548"
+  ],
+  "kind": "借词来源",
+  "donor": "戏",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「戏」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1648",
+  "wordIds": [
+   "w1648"
+  ],
+  "kind": "借词来源",
+  "donor": "我",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「我」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋɔ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w4586",
+  "wordIds": [
+   "w4586"
+  ],
+  "kind": "借词来源",
+  "donor": "我",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「我」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋɔ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2605",
+  "wordIds": [
+   "yubao-60756-v-2605"
+  ],
+  "kind": "借词来源",
+  "donor": "扎",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「扎」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsa⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60757-v-2605",
+  "wordIds": [
+   "yubao-60757-v-2605"
+  ],
+  "kind": "借词来源",
+  "donor": "扎",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「扎」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsa²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2805",
+  "wordIds": [
+   "yubao-60756-v-2805"
+  ],
+  "kind": "借词来源",
+  "donor": "扑",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「扑」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-454081",
+  "wordIds": [
+   "stedt-rn-454081"
+  ],
+  "kind": "借词来源",
+  "donor": "打",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「打」。",
+  "reviewedForms": [
+   {
+    "ipa": "ta⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w3798",
+  "wordIds": [
+   "w3798"
+  ],
+  "kind": "借词来源",
+  "donor": "护",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「护」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɸu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w468",
+  "wordIds": [
+   "w468"
+  ],
+  "kind": "借词来源",
+  "donor": "抽",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「抽」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰou⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1802",
+  "wordIds": [
+   "w1802"
+  ],
+  "kind": "借词来源",
+  "donor": "拃",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「拃」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰia²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2946",
+  "wordIds": [
+   "yubao-60823-v-2946"
+  ],
+  "kind": "借词来源",
+  "donor": "拃",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「拃」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰia⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2747",
+  "wordIds": [
+   "yubao-60756-v-2747"
+  ],
+  "kind": "借词来源",
+  "donor": "拄",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「拄」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2747",
+  "wordIds": [
+   "yubao-60823-v-2747"
+  ],
+  "kind": "借词来源",
+  "donor": "拄",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「拄」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2340",
+  "wordIds": [
+   "w2340"
+  ],
+  "kind": "借词来源",
+  "donor": "拖",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「拖」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰuɔ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1390",
+  "wordIds": [
+   "w1390"
+  ],
+  "kind": "借词来源",
+  "donor": "拢",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「拢」。",
+  "reviewedForms": [
+   {
+    "ipa": "lɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1565",
+  "wordIds": [
+   "yubao-60756-v-1565"
+  ],
+  "kind": "借词来源",
+  "donor": "挤",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「挤」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕi⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2290",
+  "wordIds": [
+   "w2290"
+  ],
+  "kind": "借词来源",
+  "donor": "捅",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「捅」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2586",
+  "wordIds": [
+   "yubao-60756-v-2586"
+  ],
+  "kind": "借词来源",
+  "donor": "捉",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「捉」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɔ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-219171",
+  "wordIds": [
+   "stedt-rn-219171"
+  ],
+  "kind": "借词来源",
+  "donor": "捞",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「捞」。",
+  "reviewedForms": [
+   {
+    "ipa": "lau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0850",
+  "wordIds": [
+   "yubao-60756-v-0850"
+  ],
+  "kind": "借词来源",
+  "donor": "捞",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「捞」。",
+  "reviewedForms": [
+   {
+    "ipa": "lau³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2673",
+  "wordIds": [
+   "yubao-60756-v-2673"
+  ],
+  "kind": "借词来源",
+  "donor": "捧",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「捧」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1689",
+  "wordIds": [
+   "w1689"
+  ],
+  "kind": "借词来源",
+  "donor": "排",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「排」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰai²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w356",
+  "wordIds": [
+   "w356"
+  ],
+  "kind": "借词来源",
+  "donor": "插",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「插」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰa²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0821",
+  "wordIds": [
+   "yubao-60756-v-0821"
+  ],
+  "kind": "借词来源",
+  "donor": "插",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「插」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰa³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0821",
+  "wordIds": [
+   "yubao-60823-v-0821"
+  ],
+  "kind": "借词来源",
+  "donor": "插",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「插」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰa³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1017",
+  "wordIds": [
+   "w1017"
+  ],
+  "kind": "借词来源",
+  "donor": "揭",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「揭」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiɛ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2590",
+  "wordIds": [
+   "yubao-60756-v-2590"
+  ],
+  "kind": "借词来源",
+  "donor": "搓",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「搓」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰɔ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w727",
+  "wordIds": [
+   "w727"
+  ],
+  "kind": "借词来源",
+  "donor": "搞",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「搞」。",
+  "reviewedForms": [
+   {
+    "ipa": "kau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1967",
+  "wordIds": [
+   "w1967"
+  ],
+  "kind": "借词来源",
+  "donor": "撒",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「撒」。",
+  "reviewedForms": [
+   {
+    "ipa": "sa⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0829",
+  "wordIds": [
+   "yubao-60756-v-0829"
+  ],
+  "kind": "借词来源",
+  "donor": "擦",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「擦」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰa³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1102",
+  "wordIds": [
+   "yubao-60756-v-1102"
+  ],
+  "kind": "借词来源",
+  "donor": "支",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「支」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60757-v-1102",
+  "wordIds": [
+   "yubao-60757-v-1102"
+  ],
+  "kind": "借词来源",
+  "donor": "支",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「支」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1102",
+  "wordIds": [
+   "yubao-60823-v-1102"
+  ],
+  "kind": "借词来源",
+  "donor": "支",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「支」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-425537",
+  "wordIds": [
+   "stedt-rn-425537"
+  ],
+  "kind": "借词来源",
+  "donor": "收",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「收」。",
+  "reviewedForms": [
+   {
+    "ipa": "sou⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2148",
+  "wordIds": [
+   "w2148"
+  ],
+  "kind": "借词来源",
+  "donor": "收",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「收」。",
+  "reviewedForms": [
+   {
+    "ipa": "sou⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289030",
+  "wordIds": [
+   "stedt-rn-289030"
+  ],
+  "kind": "借词来源",
+  "donor": "改",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「改」。",
+  "reviewedForms": [
+   {
+    "ipa": "kai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w3595",
+  "wordIds": [
+   "w3595"
+  ],
+  "kind": "借词来源",
+  "donor": "改",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「改」。",
+  "reviewedForms": [
+   {
+    "ipa": "kai⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w775",
+  "wordIds": [
+   "w775"
+  ],
+  "kind": "借词来源",
+  "donor": "故",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「故」。",
+  "reviewedForms": [
+   {
+    "ipa": "ku⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1070",
+  "wordIds": [
+   "w1070"
+  ],
+  "kind": "借词来源",
+  "donor": "救",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「救」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiu²⁴",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "tɕiu³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w4699",
+  "wordIds": [
+   "w4699"
+  ],
+  "kind": "借词来源",
+  "donor": "旁",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「旁」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰaŋ²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0452",
+  "wordIds": [
+   "yubao-60823-v-0452"
+  ],
+  "kind": "借词来源",
+  "donor": "旋",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「旋」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289272",
+  "wordIds": [
+   "stedt-rn-289272"
+  ],
+  "kind": "借词来源",
+  "donor": "早",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「早」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2641",
+  "wordIds": [
+   "w2641"
+  ],
+  "kind": "借词来源",
+  "donor": "早",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「早」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsau⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "tsau⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1004",
+  "wordIds": [
+   "yubao-60756-v-1004"
+  ],
+  "kind": "借词来源",
+  "donor": "早",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「早」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1004",
+  "wordIds": [
+   "yubao-60823-v-1004"
+  ],
+  "kind": "借词来源",
+  "donor": "早",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「早」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2066",
+  "wordIds": [
+   "w2066"
+  ],
+  "kind": "借词来源",
+  "donor": "时",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「时」。",
+  "reviewedForms": [
+   {
+    "ipa": "sɿ²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2054",
+  "wordIds": [
+   "w2054"
+  ],
+  "kind": "借词来源",
+  "donor": "是",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「是」。",
+  "reviewedForms": [
+   {
+    "ipa": "sɿ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0900",
+  "wordIds": [
+   "yubao-60823-v-0900"
+  ],
+  "kind": "借词来源",
+  "donor": "是",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「是」。",
+  "reviewedForms": [
+   {
+    "ipa": "sɿ¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1198",
+  "wordIds": [
+   "yubao-60756-v-1198"
+  ],
+  "kind": "借词来源",
+  "donor": "替",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「替」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2754",
+  "wordIds": [
+   "w2754"
+  ],
+  "kind": "借词来源",
+  "donor": "最",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「最」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsuei²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1577",
+  "wordIds": [
+   "w1577"
+  ],
+  "kind": "借词来源",
+  "donor": "木",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「木」。",
+  "reviewedForms": [
+   {
+    "ipa": "mu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-453662",
+  "wordIds": [
+   "stedt-rn-453662"
+  ],
+  "kind": "借词来源",
+  "donor": "杉",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「杉」。",
+  "reviewedForms": [
+   {
+    "ipa": "sa²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1274",
+  "wordIds": [
+   "w1274"
+  ],
+  "kind": "借词来源",
+  "donor": "来",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「来」。",
+  "reviewedForms": [
+   {
+    "ipa": "lai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w40",
+  "wordIds": [
+   "w40"
+  ],
+  "kind": "借词来源",
+  "donor": "极",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「极」。",
+  "reviewedForms": [
+   {
+    "ipa": "-tɕi²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2876",
+  "wordIds": [
+   "yubao-60756-v-2876"
+  ],
+  "kind": "借词来源",
+  "donor": "枯",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「枯」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-454155",
+  "wordIds": [
+   "stedt-rn-454155"
+  ],
+  "kind": "借词来源",
+  "donor": "桐",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「桐」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰɔŋ²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2296",
+  "wordIds": [
+   "w2296"
+  ],
+  "kind": "借词来源",
+  "donor": "桐",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「桐」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰɔŋ²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-371598",
+  "wordIds": [
+   "stedt-rn-371598"
+  ],
+  "kind": "借词来源",
+  "donor": "梁",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「梁」。",
+  "reviewedForms": [
+   {
+    "ipa": "lian²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-378850",
+  "wordIds": [
+   "stedt-rn-378850"
+  ],
+  "kind": "借词来源",
+  "donor": "棋",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「棋」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2571",
+  "wordIds": [
+   "yubao-60756-v-2571"
+  ],
+  "kind": "借词来源",
+  "donor": "棋",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「棋」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2591",
+  "wordIds": [
+   "yubao-60756-v-2591"
+  ],
+  "kind": "借词来源",
+  "donor": "榨",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「榨」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsa⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w437",
+  "wordIds": [
+   "w437"
+  ],
+  "kind": "借词来源",
+  "donor": "次",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「次」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰɿ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w800",
+  "wordIds": [
+   "w800"
+  ],
+  "kind": "借词来源",
+  "donor": "歌",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「歌」。",
+  "reviewedForms": [
+   {
+    "ipa": "kuɔ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-396295",
+  "wordIds": [
+   "stedt-rn-396295"
+  ],
+  "kind": "借词来源",
+  "donor": "正",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「正」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsən³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2959",
+  "wordIds": [
+   "yubao-60756-v-2959"
+  ],
+  "kind": "借词来源",
+  "donor": "步",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「步」。",
+  "reviewedForms": [
+   {
+    "ipa": "pu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w63",
+  "wordIds": [
+   "w63"
+  ],
+  "kind": "借词来源",
+  "donor": "死",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「死」。",
+  "reviewedForms": [
+   {
+    "ipa": "-sɿ²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1777",
+  "wordIds": [
+   "w1777"
+  ],
+  "kind": "借词来源",
+  "donor": "气",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「气」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1226",
+  "wordIds": [
+   "yubao-60823-v-1226"
+  ],
+  "kind": "借词来源",
+  "donor": "汽",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「汽」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-346435",
+  "wordIds": [
+   "stedt-rn-346435"
+  ],
+  "kind": "借词来源",
+  "donor": "洞",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「洞」。",
+  "reviewedForms": [
+   {
+    "ipa": "toŋ³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2855",
+  "wordIds": [
+   "yubao-60756-v-2855"
+  ],
+  "kind": "借词来源",
+  "donor": "活",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「活」。",
+  "reviewedForms": [
+   {
+    "ipa": "xɔ³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1686",
+  "wordIds": [
+   "w1686"
+  ],
+  "kind": "借词来源",
+  "donor": "派",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「派」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰai²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1011",
+  "wordIds": [
+   "w1011"
+  ],
+  "kind": "借词来源",
+  "donor": "浇",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「浇」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-288466",
+  "wordIds": [
+   "stedt-rn-288466"
+  ],
+  "kind": "借词来源",
+  "donor": "海",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「海」。",
+  "reviewedForms": [
+   {
+    "ipa": "xai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w836",
+  "wordIds": [
+   "w836"
+  ],
+  "kind": "借词来源",
+  "donor": "海",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「海」。",
+  "reviewedForms": [
+   {
+    "ipa": "xai⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "xai⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1238",
+  "wordIds": [
+   "yubao-60823-v-1238"
+  ],
+  "kind": "借词来源",
+  "donor": "海",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「海」。",
+  "reviewedForms": [
+   {
+    "ipa": "xai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-223608",
+  "wordIds": [
+   "stedt-rn-223608"
+  ],
+  "kind": "借词来源",
+  "donor": "清",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「清」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰin⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w876",
+  "wordIds": [
+   "w876"
+  ],
+  "kind": "借词来源",
+  "donor": "湖",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「湖」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɸu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w4353",
+  "wordIds": [
+   "w4353"
+  ],
+  "kind": "借词来源",
+  "donor": "溜",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「溜」。",
+  "reviewedForms": [
+   {
+    "ipa": "liu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-224985",
+  "wordIds": [
+   "stedt-rn-224985"
+  ],
+  "kind": "借词来源",
+  "donor": "滑",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「滑」。",
+  "reviewedForms": [
+   {
+    "ipa": "xua²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-392140",
+  "wordIds": [
+   "stedt-rn-392140"
+  ],
+  "kind": "借词来源",
+  "donor": "滴",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「滴」。",
+  "reviewedForms": [
+   {
+    "ipa": "ti²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w574",
+  "wordIds": [
+   "w574"
+  ],
+  "kind": "借词来源",
+  "donor": "滴",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「滴」。",
+  "reviewedForms": [
+   {
+    "ipa": "ti⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2809",
+  "wordIds": [
+   "yubao-60823-v-2809"
+  ],
+  "kind": "借词来源",
+  "donor": "漆",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「漆」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2877",
+  "wordIds": [
+   "yubao-60756-v-2877"
+  ],
+  "kind": "借词来源",
+  "donor": "潮",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「潮」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰau³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0305",
+  "wordIds": [
+   "yubao-60756-v-0305"
+  ],
+  "kind": "借词来源",
+  "donor": "灶",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「灶」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsau³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289035",
+  "wordIds": [
+   "stedt-rn-289035"
+  ],
+  "kind": "借词来源",
+  "donor": "炒",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「炒」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w392",
+  "wordIds": [
+   "w392"
+  ],
+  "kind": "借词来源",
+  "donor": "炒",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「炒」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰau⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "tsʰau⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-201627",
+  "wordIds": [
+   "stedt-rn-201627"
+  ],
+  "kind": "借词来源",
+  "donor": "炮",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「炮」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰau³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-212031",
+  "wordIds": [
+   "stedt-rn-212031"
+  ],
+  "kind": "借词来源",
+  "donor": "炸",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「炸」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsa³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0432",
+  "wordIds": [
+   "yubao-60756-v-0432"
+  ],
+  "kind": "借词来源",
+  "donor": "炸",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「炸」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsa³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-209991",
+  "wordIds": [
+   "stedt-rn-209991"
+  ],
+  "kind": "借词来源",
+  "donor": "炼",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「炼」。",
+  "reviewedForms": [
+   {
+    "ipa": "lian⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-220395",
+  "wordIds": [
+   "stedt-rn-220395"
+  ],
+  "kind": "借词来源",
+  "donor": "烂",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「烂」。",
+  "reviewedForms": [
+   {
+    "ipa": "lan³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2612",
+  "wordIds": [
+   "yubao-60756-v-2612"
+  ],
+  "kind": "借词来源",
+  "donor": "烤",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「烤」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2423",
+  "wordIds": [
+   "w2423"
+  ],
+  "kind": "借词来源",
+  "donor": "熄",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「熄」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2159",
+  "wordIds": [
+   "w2159"
+  ],
+  "kind": "借词来源",
+  "donor": "熟",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「熟」。",
+  "reviewedForms": [
+   {
+    "ipa": "su²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1596",
+  "wordIds": [
+   "w1596"
+  ],
+  "kind": "借词来源",
+  "donor": "熬",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「熬」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋau²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60757-v-2720",
+  "wordIds": [
+   "yubao-60757-v-2720"
+  ],
+  "kind": "借词来源",
+  "donor": "熬",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「熬」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋau²²",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1687",
+  "wordIds": [
+   "w1687"
+  ],
+  "kind": "借词来源",
+  "donor": "牌",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「牌」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰai²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w376",
+  "wordIds": [
+   "w376"
+  ],
+  "kind": "借词来源",
+  "donor": "猜",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「猜」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1551",
+  "wordIds": [
+   "yubao-60823-v-1551"
+  ],
+  "kind": "借词来源",
+  "donor": "獒",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「獒」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋau³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2456",
+  "wordIds": [
+   "w2456"
+  ],
+  "kind": "借词来源",
+  "donor": "现",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「现」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiɛn²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w5556",
+  "wordIds": [
+   "w5556"
+  ],
+  "kind": "借词来源",
+  "donor": "现",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「现」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiɛn²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0053",
+  "wordIds": [
+   "yubao-60756-v-0053"
+  ],
+  "kind": "借词来源",
+  "donor": "瓦",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「瓦」。",
+  "reviewedForms": [
+   {
+    "ipa": "ua⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0516",
+  "wordIds": [
+   "yubao-60823-v-0516"
+  ],
+  "kind": "借词来源",
+  "donor": "癣",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「癣」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2690",
+  "wordIds": [
+   "w2690"
+  ],
+  "kind": "借词来源",
+  "donor": "直",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「直」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0978",
+  "wordIds": [
+   "yubao-60756-v-0978"
+  ],
+  "kind": "借词来源",
+  "donor": "直",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「直」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1060",
+  "wordIds": [
+   "yubao-60756-v-1060"
+  ],
+  "kind": "借词来源",
+  "donor": "直",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「直」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0978",
+  "wordIds": [
+   "yubao-60823-v-0978"
+  ],
+  "kind": "借词来源",
+  "donor": "直",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「直」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0760",
+  "wordIds": [
+   "yubao-60756-v-0760"
+  ],
+  "kind": "借词来源",
+  "donor": "眨",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「眨」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsa³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1589",
+  "wordIds": [
+   "w1589"
+  ],
+  "kind": "借词来源",
+  "donor": "矮",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「矮」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0949",
+  "wordIds": [
+   "yubao-60823-v-0949"
+  ],
+  "kind": "借词来源",
+  "donor": "矮",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「矮」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-210093",
+  "wordIds": [
+   "stedt-rn-210093"
+  ],
+  "kind": "借词来源",
+  "donor": "砌",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「砌」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1567",
+  "wordIds": [
+   "w1567"
+  ],
+  "kind": "借词来源",
+  "donor": "磨",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「磨」。",
+  "reviewedForms": [
+   {
+    "ipa": "mɔ²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2293",
+  "wordIds": [
+   "yubao-60756-v-2293"
+  ],
+  "kind": "借词来源",
+  "donor": "祸",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「祸」。",
+  "reviewedForms": [
+   {
+    "ipa": "xɔ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1873",
+  "wordIds": [
+   "w1873"
+  ],
+  "kind": "借词来源",
+  "donor": "秋",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「秋」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰiu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-398224",
+  "wordIds": [
+   "stedt-rn-398224"
+  ],
+  "kind": "借词来源",
+  "donor": "稀",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「稀」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1161",
+  "wordIds": [
+   "w1161"
+  ],
+  "kind": "借词来源",
+  "donor": "空",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「空」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2861",
+  "wordIds": [
+   "yubao-60756-v-2861"
+  ],
+  "kind": "借词来源",
+  "donor": "空",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「空」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-396670",
+  "wordIds": [
+   "stedt-rn-396670"
+  ],
+  "kind": "借词来源",
+  "donor": "竖",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「竖」。",
+  "reviewedForms": [
+   {
+    "ipa": "su³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w577",
+  "wordIds": [
+   "w577"
+  ],
+  "kind": "借词来源",
+  "donor": "第",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「第」。",
+  "reviewedForms": [
+   {
+    "ipa": "ti²⁴-",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1839",
+  "wordIds": [
+   "yubao-60756-v-1839"
+  ],
+  "kind": "借词来源",
+  "donor": "笼",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「笼」。",
+  "reviewedForms": [
+   {
+    "ipa": "lɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-202647",
+  "wordIds": [
+   "stedt-rn-202647"
+  ],
+  "kind": "借词来源",
+  "donor": "箍",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「箍」。",
+  "reviewedForms": [
+   {
+    "ipa": "ku⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2704",
+  "wordIds": [
+   "yubao-60756-v-2704"
+  ],
+  "kind": "借词来源",
+  "donor": "箍",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「箍」。",
+  "reviewedForms": [
+   {
+    "ipa": "ku³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2704",
+  "wordIds": [
+   "yubao-60823-v-2704"
+  ],
+  "kind": "借词来源",
+  "donor": "箍",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「箍」。",
+  "reviewedForms": [
+   {
+    "ipa": "ku⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1529",
+  "wordIds": [
+   "w1529"
+  ],
+  "kind": "借词来源",
+  "donor": "米",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「米」。",
+  "reviewedForms": [
+   {
+    "ipa": "mi⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-454730",
+  "wordIds": [
+   "stedt-rn-454730"
+  ],
+  "kind": "借词来源",
+  "donor": "纸",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「纸」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2422",
+  "wordIds": [
+   "w2422"
+  ],
+  "kind": "借词来源",
+  "donor": "细",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「细」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi²⁴",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "ɕi³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-222945",
+  "wordIds": [
+   "stedt-rn-222945"
+  ],
+  "kind": "借词来源",
+  "donor": "绿",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「绿」。",
+  "reviewedForms": [
+   {
+    "ipa": "lu³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1824",
+  "wordIds": [
+   "w1824"
+  ],
+  "kind": "借词来源",
+  "donor": "翘",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「翘」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰiau²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-410934",
+  "wordIds": [
+   "stedt-rn-410934"
+  ],
+  "kind": "借词来源",
+  "donor": "翻",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「翻」。",
+  "reviewedForms": [
+   {
+    "ipa": "xuan⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-399383",
+  "wordIds": [
+   "stedt-rn-399383"
+  ],
+  "kind": "借词来源",
+  "donor": "老",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「老」。",
+  "reviewedForms": [
+   {
+    "ipa": "lau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-399478",
+  "wordIds": [
+   "stedt-rn-399478"
+  ],
+  "kind": "借词来源",
+  "donor": "老",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「老」。",
+  "reviewedForms": [
+   {
+    "ipa": "lau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-419149",
+  "wordIds": [
+   "stedt-rn-419149"
+  ],
+  "kind": "借词来源",
+  "donor": "老",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「老」。",
+  "reviewedForms": [
+   {
+    "ipa": "lau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1298",
+  "wordIds": [
+   "w1298"
+  ],
+  "kind": "借词来源",
+  "donor": "老",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「老」。",
+  "reviewedForms": [
+   {
+    "ipa": "lau⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1013",
+  "wordIds": [
+   "yubao-60756-v-1013"
+  ],
+  "kind": "借词来源",
+  "donor": "老",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「老」。",
+  "reviewedForms": [
+   {
+    "ipa": "lau⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1670",
+  "wordIds": [
+   "w1670"
+  ],
+  "kind": "借词来源",
+  "donor": "耙",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「耙」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰa²⁴",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "pʰa³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2437",
+  "wordIds": [
+   "yubao-60756-v-2437"
+  ],
+  "kind": "借词来源",
+  "donor": "耙",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「耙」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰa³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1117",
+  "wordIds": [
+   "yubao-60756-v-1117"
+  ],
+  "kind": "借词来源",
+  "donor": "股",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「股」。",
+  "reviewedForms": [
+   {
+    "ipa": "ku³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-351151",
+  "wordIds": [
+   "stedt-rn-351151"
+  ],
+  "kind": "借词来源",
+  "donor": "胎",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「胎」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2269",
+  "wordIds": [
+   "yubao-60823-v-2269"
+  ],
+  "kind": "借词来源",
+  "donor": "胎",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「胎」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2687",
+  "wordIds": [
+   "w2687"
+  ],
+  "kind": "借词来源",
+  "donor": "自",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「自」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1018",
+  "wordIds": [
+   "w1018"
+  ],
+  "kind": "借词来源",
+  "donor": "节",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「节」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiɛ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1550",
+  "wordIds": [
+   "w1550"
+  ],
+  "kind": "借词来源",
+  "donor": "苗",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「苗」。",
+  "reviewedForms": [
+   {
+    "ipa": "miau²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1169",
+  "wordIds": [
+   "w1169"
+  ],
+  "kind": "借词来源",
+  "donor": "苦",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「苦」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰu⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1037",
+  "wordIds": [
+   "yubao-60823-v-1037"
+  ],
+  "kind": "借词来源",
+  "donor": "苦",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「苦」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2043",
+  "wordIds": [
+   "yubao-60756-v-2043"
+  ],
+  "kind": "借词来源",
+  "donor": "茶",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「茶」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰa³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2043",
+  "wordIds": [
+   "yubao-60823-v-2043"
+  ],
+  "kind": "借词来源",
+  "donor": "茶",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「茶」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰa³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w304",
+  "wordIds": [
+   "w304"
+  ],
+  "kind": "借词来源",
+  "donor": "薄",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「薄」。",
+  "reviewedForms": [
+   {
+    "ipa": "pɔ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w3150",
+  "wordIds": [
+   "w3150"
+  ],
+  "kind": "借词来源",
+  "donor": "薄",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「薄」。",
+  "reviewedForms": [
+   {
+    "ipa": "pɔ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1623",
+  "wordIds": [
+   "yubao-60756-v-1623"
+  ],
+  "kind": "借词来源",
+  "donor": "蜡",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「蜡」。",
+  "reviewedForms": [
+   {
+    "ipa": "la³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0359",
+  "wordIds": [
+   "yubao-60823-v-0359"
+  ],
+  "kind": "借词来源",
+  "donor": "蜡",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「蜡」。",
+  "reviewedForms": [
+   {
+    "ipa": "la¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-454607",
+  "wordIds": [
+   "stedt-rn-454607"
+  ],
+  "kind": "借词来源",
+  "donor": "袍",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「袍」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰau²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2603",
+  "wordIds": [
+   "yubao-60823-v-2603"
+  ],
+  "kind": "借词来源",
+  "donor": "裁",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「裁」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰai³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-381359",
+  "wordIds": [
+   "stedt-rn-381359"
+  ],
+  "kind": "借词来源",
+  "donor": "西",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「西」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1369",
+  "wordIds": [
+   "yubao-60756-v-1369"
+  ],
+  "kind": "借词来源",
+  "donor": "西",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「西」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w728",
+  "wordIds": [
+   "w728"
+  ],
+  "kind": "借词来源",
+  "donor": "觉",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「觉」。",
+  "reviewedForms": [
+   {
+    "ipa": "kau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w998",
+  "wordIds": [
+   "w998"
+  ],
+  "kind": "借词来源",
+  "donor": "讲",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「讲」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiɛn⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w704",
+  "wordIds": [
+   "w704"
+  ],
+  "kind": "借词来源",
+  "donor": "该",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「该」。",
+  "reviewedForms": [
+   {
+    "ipa": "kai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-288548",
+  "wordIds": [
+   "stedt-rn-288548"
+  ],
+  "kind": "借词来源",
+  "donor": "象",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「象」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2453",
+  "wordIds": [
+   "w2453"
+  ],
+  "kind": "借词来源",
+  "donor": "象",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「象」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiɛn²⁴",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "ɕian³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1568",
+  "wordIds": [
+   "yubao-60823-v-1568"
+  ],
+  "kind": "借词来源",
+  "donor": "象",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「象」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1000",
+  "wordIds": [
+   "w1000"
+  ],
+  "kind": "借词来源",
+  "donor": "贱",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「贱」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiɛn²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2282",
+  "wordIds": [
+   "w2282"
+  ],
+  "kind": "借词来源",
+  "donor": "贴",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「贴」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰiɛ²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289276",
+  "wordIds": [
+   "stedt-rn-289276"
+  ],
+  "kind": "借词来源",
+  "donor": "贵",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「贵」。",
+  "reviewedForms": [
+   {
+    "ipa": "kuei³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w799",
+  "wordIds": [
+   "w799"
+  ],
+  "kind": "借词来源",
+  "donor": "贵",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「贵」。",
+  "reviewedForms": [
+   {
+    "ipa": "kuei²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1774",
+  "wordIds": [
+   "w1774"
+  ],
+  "kind": "借词来源",
+  "donor": "起",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「起」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1783",
+  "wordIds": [
+   "w1783"
+  ],
+  "kind": "借词来源",
+  "donor": "起",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「起」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2741",
+  "wordIds": [
+   "w2741"
+  ],
+  "kind": "借词来源",
+  "donor": "足",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「足」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsu²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2857",
+  "wordIds": [
+   "yubao-60756-v-2857"
+  ],
+  "kind": "借词来源",
+  "donor": "足",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「足」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-214887",
+  "wordIds": [
+   "stedt-rn-214887"
+  ],
+  "kind": "借词来源",
+  "donor": "跳",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「跳」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰiau³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2277",
+  "wordIds": [
+   "w2277"
+  ],
+  "kind": "借词来源",
+  "donor": "跳",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「跳」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰiau²⁴",
+    "span": [
+     1,
+     1
+    ]
+   },
+   {
+    "ipa": "tʰiau³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0792",
+  "wordIds": [
+   "yubao-60756-v-0792"
+  ],
+  "kind": "借词来源",
+  "donor": "跳",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「跳」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰiau³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2683",
+  "wordIds": [
+   "yubao-60823-v-2683"
+  ],
+  "kind": "借词来源",
+  "donor": "踢",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「踢」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w761",
+  "wordIds": [
+   "w761"
+  ],
+  "kind": "借词来源",
+  "donor": "躬",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「躬」。",
+  "reviewedForms": [
+   {
+    "ipa": "kɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2156",
+  "wordIds": [
+   "w2156"
+  ],
+  "kind": "借词来源",
+  "donor": "输",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「输」。",
+  "reviewedForms": [
+   {
+    "ipa": "su⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2477",
+  "wordIds": [
+   "yubao-60756-v-2477"
+  ],
+  "kind": "借词来源",
+  "donor": "输",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「输」。",
+  "reviewedForms": [
+   {
+    "ipa": "su⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2477",
+  "wordIds": [
+   "yubao-60823-v-2477"
+  ],
+  "kind": "借词来源",
+  "donor": "输",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「输」。",
+  "reviewedForms": [
+   {
+    "ipa": "su⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1191",
+  "wordIds": [
+   "yubao-60823-v-1191"
+  ],
+  "kind": "借词来源",
+  "donor": "边",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「边」。",
+  "reviewedForms": [
+   {
+    "ipa": "piã⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w3507",
+  "wordIds": [
+   "w3507"
+  ],
+  "kind": "借词来源",
+  "donor": "都",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「都」。",
+  "reviewedForms": [
+   {
+    "ipa": "tu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w470",
+  "wordIds": [
+   "w470"
+  ],
+  "kind": "借词来源",
+  "donor": "醋",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「醋」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0419",
+  "wordIds": [
+   "yubao-60756-v-0419"
+  ],
+  "kind": "借词来源",
+  "donor": "醋",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「醋」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0419",
+  "wordIds": [
+   "yubao-60823-v-0419"
+  ],
+  "kind": "借词来源",
+  "donor": "醋",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「醋」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2958",
+  "wordIds": [
+   "yubao-60756-v-2958"
+  ],
+  "kind": "借词来源",
+  "donor": "里",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「里」。",
+  "reviewedForms": [
+   {
+    "ipa": "li³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2958",
+  "wordIds": [
+   "yubao-60823-v-2958"
+  ],
+  "kind": "借词来源",
+  "donor": "里",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「里」。",
+  "reviewedForms": [
+   {
+    "ipa": "li⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-214275",
+  "wordIds": [
+   "stedt-rn-214275"
+  ],
+  "kind": "借词来源",
+  "donor": "钉",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「钉」。",
+  "reviewedForms": [
+   {
+    "ipa": "tin⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-434283",
+  "wordIds": [
+   "stedt-rn-434283"
+  ],
+  "kind": "借词来源",
+  "donor": "钻",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「钻」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsuan⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-288481",
+  "wordIds": [
+   "stedt-rn-288481"
+  ],
+  "kind": "借词来源",
+  "donor": "铜",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「铜」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰũ²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1295",
+  "wordIds": [
+   "yubao-60823-v-1295"
+  ],
+  "kind": "借词来源",
+  "donor": "铜",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「铜」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰũ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-213459",
+  "wordIds": [
+   "stedt-rn-213459"
+  ],
+  "kind": "借词来源",
+  "donor": "铺",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「铺」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1756",
+  "wordIds": [
+   "w1756"
+  ],
+  "kind": "借词来源",
+  "donor": "铺",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「铺」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1048",
+  "wordIds": [
+   "yubao-60756-v-1048"
+  ],
+  "kind": "借词来源",
+  "donor": "错",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「错」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰɔ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w32",
+  "wordIds": [
+   "w32"
+  ],
+  "kind": "借词来源",
+  "donor": "间",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「间」。",
+  "reviewedForms": [
+   {
+    "ipa": "-kaŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w3521",
+  "wordIds": [
+   "w3521"
+  ],
+  "kind": "借词来源",
+  "donor": "队",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「队」。",
+  "reviewedForms": [
+   {
+    "ipa": "tuei²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2703",
+  "wordIds": [
+   "yubao-60756-v-2703"
+  ],
+  "kind": "借词来源",
+  "donor": "雕",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「雕」。",
+  "reviewedForms": [
+   {
+    "ipa": "tiau³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2703",
+  "wordIds": [
+   "yubao-60823-v-2703"
+  ],
+  "kind": "借词来源",
+  "donor": "雕",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「雕」。",
+  "reviewedForms": [
+   {
+    "ipa": "tiau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0017",
+  "wordIds": [
+   "yubao-60756-v-0017"
+  ],
+  "kind": "借词来源",
+  "donor": "雾",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「雾」。",
+  "reviewedForms": [
+   {
+    "ipa": "u⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1133",
+  "wordIds": [
+   "w1133"
+  ],
+  "kind": "借词来源",
+  "donor": "靠",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「靠」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰau²⁴",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2686",
+  "wordIds": [
+   "yubao-60756-v-2686"
+  ],
+  "kind": "借词来源",
+  "donor": "靠",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「靠」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰau³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-199944",
+  "wordIds": [
+   "stedt-rn-199944"
+  ],
+  "kind": "借词来源",
+  "donor": "面",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「面」。",
+  "reviewedForms": [
+   {
+    "ipa": "mian⁵³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0391",
+  "wordIds": [
+   "yubao-60823-v-0391"
+  ],
+  "kind": "借词来源",
+  "donor": "面",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「面」。",
+  "reviewedForms": [
+   {
+    "ipa": "miã¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1780",
+  "wordIds": [
+   "w1780"
+  ],
+  "kind": "借词来源",
+  "donor": "骑",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「骑」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-127261",
+  "wordIds": [
+   "stedt-rn-127261"
+  ],
+  "kind": "借词来源",
+  "donor": "鳃",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「鳃」。",
+  "reviewedForms": [
+   {
+    "ipa": "sai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1650",
+  "wordIds": [
+   "w1650"
+  ],
+  "kind": "借词来源",
+  "donor": "鹅",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「鹅」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋɔ²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-186582",
+  "wordIds": [
+   "stedt-rn-186582"
+  ],
+  "kind": "借词来源",
+  "donor": "鹿",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「鹿」。",
+  "reviewedForms": [
+   {
+    "ipa": "lu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1554",
+  "wordIds": [
+   "yubao-60823-v-1554"
+  ],
+  "kind": "借词来源",
+  "donor": "鹿",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「鹿」。",
+  "reviewedForms": [
+   {
+    "ipa": "lu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2241",
+  "wordIds": [
+   "yubao-60756-v-2241"
+  ],
+  "kind": "借词来源",
+  "donor": "麻",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「麻」。",
+  "reviewedForms": [
+   {
+    "ipa": "ma³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-2241",
+  "wordIds": [
+   "yubao-60823-v-2241"
+  ],
+  "kind": "借词来源",
+  "donor": "麻",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「麻」。",
+  "reviewedForms": [
+   {
+    "ipa": "ma³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-1676",
+  "wordIds": [
+   "yubao-60823-v-1676"
+  ],
+  "kind": "借词来源",
+  "donor": "黄",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「黄」。",
+  "reviewedForms": [
+   {
+    "ipa": "uã¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w778",
+  "wordIds": [
+   "w778"
+  ],
+  "kind": "借词来源",
+  "donor": "鼓",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「鼓」。",
+  "reviewedForms": [
+   {
+    "ipa": "ku⁵¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60823-v-0741",
+  "wordIds": [
+   "yubao-60823-v-0741"
+  ],
+  "kind": "借词来源",
+  "donor": "鼓",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「鼓」。",
+  "reviewedForms": [
+   {
+    "ipa": "ku⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w11",
+  "wordIds": [
+   "w11"
+  ],
+  "kind": "借词来源",
+  "donor": "不住",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「不住」。",
+  "reviewedForms": [
+   {
+    "ipa": "-pu²⁴tsu²⁴",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w8",
+  "wordIds": [
+   "w8"
+  ],
+  "kind": "借词来源",
+  "donor": "不好",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「不好」。",
+  "reviewedForms": [
+   {
+    "ipa": "-pu⁵⁵xau⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w336",
+  "wordIds": [
+   "w336"
+  ],
+  "kind": "借词来源",
+  "donor": "不得",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「不得」。",
+  "reviewedForms": [
+   {
+    "ipa": "pu²⁴tiɛ⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1327",
+  "wordIds": [
+   "w1327"
+  ],
+  "kind": "借词来源",
+  "donor": "临时",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「临时」。",
+  "reviewedForms": [
+   {
+    "ipa": "lɜŋ²¹sɿ²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2046",
+  "wordIds": [
+   "w2046"
+  ],
+  "kind": "借词来源",
+  "donor": "什么",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「什么」。",
+  "reviewedForms": [
+   {
+    "ipa": "sɜŋ⁵⁵mɔ²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289204",
+  "wordIds": [
+   "stedt-rn-289204"
+  ],
+  "kind": "借词来源",
+  "donor": "侵略",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「侵略」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰĩ³⁵liau²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w766",
+  "wordIds": [
+   "w766"
+  ],
+  "kind": "借词来源",
+  "donor": "公公",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「公公」。",
+  "reviewedForms": [
+   {
+    "ipa": "kɔŋ⁵⁵kɔŋ⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0623",
+  "wordIds": [
+   "yubao-60756-v-0623"
+  ],
+  "kind": "借词来源",
+  "donor": "公公",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「公公」。",
+  "reviewedForms": [
+   {
+    "ipa": "kɔŋ⁵⁵kɔŋ³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1403",
+  "wordIds": [
+   "w1403"
+  ],
+  "kind": "借词来源",
+  "donor": "农业",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「农业」。",
+  "reviewedForms": [
+   {
+    "ipa": "lɔŋ²¹ȵiɛ²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2465",
+  "wordIds": [
+   "w2465"
+  ],
+  "kind": "借词来源",
+  "donor": "响亮",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「响亮」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiɛn⁵⁵liɛn²⁴",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1522",
+  "wordIds": [
+   "w1522"
+  ],
+  "kind": "借词来源",
+  "donor": "妹妹",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「妹妹」。",
+  "reviewedForms": [
+   {
+    "ipa": "mei²¹mei⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0624",
+  "wordIds": [
+   "yubao-60756-v-0624"
+  ],
+  "kind": "借词来源",
+  "donor": "婆婆",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「婆婆」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰɔ³³pʰɔ³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-289194",
+  "wordIds": [
+   "stedt-rn-289194"
+  ],
+  "kind": "借词来源",
+  "donor": "宣传",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「宣传」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã⁵⁵tsʰuã²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w24",
+  "wordIds": [
+   "w24"
+  ],
+  "kind": "借词来源",
+  "donor": "得好",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「得好」。",
+  "reviewedForms": [
+   {
+    "ipa": "-tiɛ²¹xau⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2699",
+  "wordIds": [
+   "w2699"
+  ],
+  "kind": "借词来源",
+  "donor": "支持",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「支持」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsɿ⁵⁵tsʰɿ²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1272",
+  "wordIds": [
+   "yubao-60756-v-1272"
+  ],
+  "kind": "借词来源",
+  "donor": "沙漠",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「沙漠」。",
+  "reviewedForms": [
+   {
+    "ipa": "sa³⁵mɔ⁵³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1520",
+  "wordIds": [
+   "w1520"
+  ],
+  "kind": "借词来源",
+  "donor": "没得",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「没得」。",
+  "reviewedForms": [
+   {
+    "ipa": "mei²⁴tiɛ²¹",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w1016",
+  "wordIds": [
+   "w1016"
+  ],
+  "kind": "借词来源",
+  "donor": "爵主",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「爵主」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiau²⁴tsu⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-w2051",
+  "wordIds": [
+   "w2051"
+  ],
+  "kind": "借词来源",
+  "donor": "盛重",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「盛重」。",
+  "reviewedForms": [
+   {
+    "ipa": "sɜŋ²⁴tsɔŋ²⁴",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-288676",
+  "wordIds": [
+   "stedt-rn-288676"
+  ],
+  "kind": "借词来源",
+  "donor": "群众",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「群众」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰĩ²¹tsũ³⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-stedt-rn-288704",
+  "wordIds": [
+   "stedt-rn-288704"
+  ],
+  "kind": "借词来源",
+  "donor": "舅舅",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「舅舅」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiu³⁵tɕiu³⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-2757",
+  "wordIds": [
+   "yubao-60756-v-2757"
+  ],
+  "kind": "借词来源",
+  "donor": "赤膊",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「赤膊」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰɿ³³pɔ³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-0605",
+  "wordIds": [
+   "yubao-60756-v-0605"
+  ],
+  "kind": "借词来源",
+  "donor": "驼子",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「驼子」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰɔ³³tsɿ³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-yubao-60756-v-1566",
+  "wordIds": [
+   "yubao-60756-v-1566"
+  ],
+  "kind": "借词来源",
+  "donor": "骆驼",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「骆驼」。",
+  "reviewedForms": [
+   {
+    "ipa": "lɔ³³tʰɔ⁵⁵",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "north-loan-review-2026-11-17"
+ }
+]);
 
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){
