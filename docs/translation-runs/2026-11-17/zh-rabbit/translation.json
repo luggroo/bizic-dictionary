@@ -1,0 +1,1610 @@
+{
+  "version": 1,
+  "source_snapshot": {
+    "revision": "5c148a2bfe860969375c16821f22bb25222ab7d8",
+    "manifest_sha256": "911f92e13f44160277c66644dfff786ef55adb3aaf5feecd604a100dd3a3b51a"
+  },
+  "dialect": "north/Longshan",
+  "notation": "site tone-marked spelling; untoned productive linker nie",
+  "sentences": [
+    {
+      "id": "s1a",
+      "source": "宋人有耕者",
+      "translation": "宋国 wótū sígētiē qiě nie lò lá hǔ xié",
+      "backtranslation": "宋国有一个耕田的人",
+      "tokens": [
+        {
+          "surface": "宋国",
+          "status": "proper name retained",
+          "gloss": "宋国"
+        },
+        {
+          "surface": "wótū",
+          "ipa": [
+            "wɔ²⁴tʰu⁵⁵"
+          ],
+          "gloss": "里面",
+          "sense": "inside",
+          "entry_id": "w2395",
+          "attestation_id": "stedt-rn-455022",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455022 · 原文定位 6.5"
+        },
+        {
+          "surface": "sígētiē",
+          "ipa": [
+            "sɨ²⁴kɤ⁵⁵tʰiɛ⁵⁵"
+          ],
+          "gloss": "田",
+          "sense": "field",
+          "entry_id": "w2081",
+          "attestation_id": "stedt-rn-454126",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454126 · 原文定位 3.3"
+        },
+        {
+          "surface": "qiě",
+          "ipa": [
+            "tɕʰiɛ²¹"
+          ],
+          "gloss": "犁",
+          "sense": "plough",
+          "entry_id": "w1828",
+          "attestation_id": "stedt-rn-454119",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454119 · 原文定位 3.3"
+        },
+        {
+          "surface": "nie",
+          "gloss": "LNK",
+          "source_id": "frozen grammar reference",
+          "locator": "clause-patterns.md; B06:95 ex24; Feng2025 ex27b",
+          "status": "productive construction"
+        },
+        {
+          "surface": "lò",
+          "ipa": [
+            "luɔ⁵¹"
+          ],
+          "gloss": "人",
+          "sense": "person",
+          "entry_id": "w1421",
+          "attestation_id": "stedt-rn-453974",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453974 · 原文定位 2.5"
+        },
+        {
+          "surface": "lá",
+          "ipa": [
+            "la²⁴"
+          ],
+          "gloss": "一",
+          "sense": "one",
+          "entry_id": "w1216",
+          "attestation_id": "stedt-rn-455088",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455088 · 原文定位 7.2"
+        },
+        {
+          "surface": "hǔ",
+          "ipa": [
+            "fu²¹"
+          ],
+          "gloss": "个",
+          "sense": "(for people)",
+          "entry_id": "w875",
+          "attestation_id": "stedt-rn-456359",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 456359 · 原文定位 未标明"
+        },
+        {
+          "surface": "xié",
+          "ipa": [
+            "ɕiɛ²⁴"
+          ],
+          "gloss": "有",
+          "sense": "have",
+          "entry_id": "w2487",
+          "attestation_id": "stedt-rn-454792",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454792 · 原文定位 6.1"
+        }
+      ],
+      "roles": {
+        "location": "宋国",
+        "agent": "lò",
+        "action": "sígētiē qiě",
+        "existential": "xié"
+      },
+      "scope": "",
+      "constructions": [
+        "production from sourced lexical items and frozen grammar"
+      ],
+      "open_issues": [],
+      "checked_version": 1
+    },
+    {
+      "id": "s1b",
+      "source": "田中有株",
+      "translation": "sígētiē wótū kǎtǐmī xié",
+      "backtranslation": "田里有树桩",
+      "tokens": [
+        {
+          "surface": "sígētiē",
+          "ipa": [
+            "sɨ²⁴kɤ⁵⁵tʰiɛ⁵⁵"
+          ],
+          "gloss": "田",
+          "sense": "field",
+          "entry_id": "w2081",
+          "attestation_id": "stedt-rn-454126",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454126 · 原文定位 3.3"
+        },
+        {
+          "surface": "wótū",
+          "ipa": [
+            "wɔ²⁴tʰu⁵⁵"
+          ],
+          "gloss": "里面",
+          "sense": "inside",
+          "entry_id": "w2395",
+          "attestation_id": "stedt-rn-455022",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455022 · 原文定位 6.5"
+        },
+        {
+          "surface": "kǎtǐmī",
+          "ipa": [
+            "kʰa²¹tʰi²¹mi⁵⁵"
+          ],
+          "gloss": "树桩",
+          "sense": "tree stump",
+          "entry_id": "w1120",
+          "attestation_id": "stedt-rn-453648",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453648 · 原文定位 1.4"
+        },
+        {
+          "surface": "xié",
+          "ipa": [
+            "ɕiɛ²⁴"
+          ],
+          "gloss": "有",
+          "sense": "have",
+          "entry_id": "w2487",
+          "attestation_id": "stedt-rn-454792",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454792 · 原文定位 6.1"
+        }
+      ],
+      "roles": {
+        "location": "sígētiē wótū",
+        "theme": "kǎtǐmī"
+      },
+      "scope": "",
+      "constructions": [
+        "production from sourced lexical items and frozen grammar"
+      ],
+      "open_issues": [],
+      "checked_version": 1
+    },
+    {
+      "id": "s1c",
+      "source": "兔走触株",
+      "translation": "mǎotáo xìcǎ mǒ kǎtǐmī pén liē",
+      "backtranslation": "兔子跑着撞到树桩",
+      "tokens": [
+        {
+          "surface": "mǎotáo",
+          "ipa": [
+            "mau²¹tʰau²⁴"
+          ],
+          "gloss": "兔子",
+          "sense": "rabbit",
+          "entry_id": "w1486",
+          "attestation_id": "stedt-rn-453578",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453578 · 原文定位 1.3"
+        },
+        {
+          "surface": "xìcǎ",
+          "ipa": [
+            "ɕi⁵¹tsʰa²¹"
+          ],
+          "gloss": "跑",
+          "sense": "run",
+          "entry_id": "w2433",
+          "attestation_id": "stedt-rn-453829",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453829 · 原文定位 2.2"
+        },
+        {
+          "surface": "mǒ",
+          "gloss": "MANNER",
+          "source_id": "frozen grammar reference",
+          "locator": "event-linking.md; B06:37 ex12",
+          "status": "productive construction"
+        },
+        {
+          "surface": "kǎtǐmī",
+          "ipa": [
+            "kʰa²¹tʰi²¹mi⁵⁵"
+          ],
+          "gloss": "树桩",
+          "sense": "tree stump",
+          "entry_id": "w1120",
+          "attestation_id": "stedt-rn-453648",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453648 · 原文定位 1.4"
+        },
+        {
+          "surface": "pén",
+          "ipa": [
+            "pʰɜŋ²⁴"
+          ],
+          "gloss": "碰",
+          "sense": "collide",
+          "entry_id": "w1714",
+          "attestation_id": "stedt-rn-457285",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 457285 · 原文定位 未标明"
+        },
+        {
+          "surface": "liē",
+          "gloss": "PFV",
+          "source_id": "frozen grammar reference",
+          "locator": "event-linking.md; B06:69 ex86; aspect-modality.md table7.1",
+          "status": "productive construction"
+        }
+      ],
+      "roles": {
+        "agent": "mǎotáo",
+        "target": "kǎtǐmī",
+        "manner": "xìcǎ mǒ"
+      },
+      "scope": "",
+      "constructions": [
+        "production from sourced lexical items and frozen grammar"
+      ],
+      "open_issues": [],
+      "checked_version": 1
+    },
+    {
+      "id": "s1d",
+      "source": "折颈而死",
+      "translation": "gó nie kōngdī kǒ liē, gó sé liē",
+      "backtranslation": "它的脖子断了，它死了",
+      "tokens": [
+        {
+          "surface": "gó",
+          "ipa": [
+            "kuɔ²⁴"
+          ],
+          "gloss": "他／她／它（第三人称单数）",
+          "sense": "3sg",
+          "entry_id": "stedt-rn-455181",
+          "attestation_id": "stedt-rn-455181",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455181 · 原文定位 7.4"
+        },
+        {
+          "surface": "nie",
+          "gloss": "LNK",
+          "source_id": "frozen grammar reference",
+          "locator": "clause-patterns.md; B06:95 ex24; Feng2025 ex27b",
+          "status": "productive construction"
+        },
+        {
+          "surface": "kōngdī",
+          "ipa": [
+            "kʰɔŋ⁵⁵ti⁵⁵"
+          ],
+          "gloss": "脖子",
+          "sense": "neck",
+          "entry_id": "w1163",
+          "attestation_id": "stedt-rn-453724",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453724 · 原文定位 2.1"
+        },
+        {
+          "surface": "kǒ",
+          "ipa": [
+            "kʰuɔ²¹"
+          ],
+          "gloss": "断",
+          "sense": "broken",
+          "entry_id": "w4154",
+          "attestation_id": "stedt-rn-454341",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454341 · 原文定位 4.3"
+        },
+        {
+          "surface": "liē",
+          "gloss": "PFV",
+          "source_id": "frozen grammar reference",
+          "locator": "event-linking.md; B06:69 ex86; aspect-modality.md table7.1",
+          "status": "productive construction"
+        },
+        {
+          "surface": "gó",
+          "ipa": [
+            "kuɔ²⁴"
+          ],
+          "gloss": "他／她／它（第三人称单数）",
+          "sense": "3sg",
+          "entry_id": "stedt-rn-455181",
+          "attestation_id": "stedt-rn-455181",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455181 · 原文定位 7.4"
+        },
+        {
+          "surface": "sé",
+          "ipa": [
+            "sɤ²⁴"
+          ],
+          "gloss": "死",
+          "sense": "die",
+          "entry_id": "w2008",
+          "attestation_id": "stedt-rn-453876",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453876 · 原文定位 2.3"
+        },
+        {
+          "surface": "liē",
+          "gloss": "PFV",
+          "source_id": "frozen grammar reference",
+          "locator": "event-linking.md; B06:69 ex86; aspect-modality.md table7.1",
+          "status": "productive construction"
+        }
+      ],
+      "roles": {
+        "possessor": "rabbit",
+        "affected": "kōngdī",
+        "result": "sé"
+      },
+      "scope": "",
+      "constructions": [
+        "production from sourced lexical items and frozen grammar"
+      ],
+      "open_issues": [],
+      "checked_version": 1
+    },
+    {
+      "id": "s2a",
+      "source": "因释其耒",
+      "translation": "āimǒ, sígētiē qiě nie lò gó nie 耒 pō liē",
+      "backtranslation": "因此，耕田的人放下了他的耒",
+      "tokens": [
+        {
+          "surface": "āimǒ",
+          "gloss": "therefore",
+          "source_id": "frozen grammar reference",
+          "locator": "event-linking.md; w174/B06 rn455293",
+          "status": "productive construction"
+        },
+        {
+          "surface": "sígētiē",
+          "ipa": [
+            "sɨ²⁴kɤ⁵⁵tʰiɛ⁵⁵"
+          ],
+          "gloss": "田",
+          "sense": "field",
+          "entry_id": "w2081",
+          "attestation_id": "stedt-rn-454126",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454126 · 原文定位 3.3"
+        },
+        {
+          "surface": "qiě",
+          "ipa": [
+            "tɕʰiɛ²¹"
+          ],
+          "gloss": "犁",
+          "sense": "plough",
+          "entry_id": "w1828",
+          "attestation_id": "stedt-rn-454119",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454119 · 原文定位 3.3"
+        },
+        {
+          "surface": "nie",
+          "gloss": "LNK",
+          "source_id": "frozen grammar reference",
+          "locator": "clause-patterns.md; B06:95 ex24; Feng2025 ex27b",
+          "status": "productive construction"
+        },
+        {
+          "surface": "lò",
+          "ipa": [
+            "luɔ⁵¹"
+          ],
+          "gloss": "人",
+          "sense": "person",
+          "entry_id": "w1421",
+          "attestation_id": "stedt-rn-453974",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453974 · 原文定位 2.5"
+        },
+        {
+          "surface": "gó",
+          "ipa": [
+            "kuɔ²⁴"
+          ],
+          "gloss": "他／她／它（第三人称单数）",
+          "sense": "3sg",
+          "entry_id": "stedt-rn-455181",
+          "attestation_id": "stedt-rn-455181",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455181 · 原文定位 7.4"
+        },
+        {
+          "surface": "nie",
+          "gloss": "LNK",
+          "source_id": "frozen grammar reference",
+          "locator": "clause-patterns.md; B06:95 ex24; Feng2025 ex27b",
+          "status": "productive construction"
+        },
+        {
+          "surface": "耒",
+          "status": "minimal Chinese insertion",
+          "gloss": "耒"
+        },
+        {
+          "surface": "pō",
+          "ipa": [
+            "pʰɔ⁵⁵"
+          ],
+          "gloss": "放；释放",
+          "sense": "put, release",
+          "entry_id": "stedt-rn-454377",
+          "attestation_id": "stedt-rn-454377",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454377 · 原文定位 4.3"
+        },
+        {
+          "surface": "liē",
+          "gloss": "PFV",
+          "source_id": "frozen grammar reference",
+          "locator": "event-linking.md; B06:69 ex86; aspect-modality.md table7.1",
+          "status": "productive construction"
+        }
+      ],
+      "roles": {
+        "agent": "farmer",
+        "object": "gó nie 耒"
+      },
+      "scope": "",
+      "constructions": [
+        "production from sourced lexical items and frozen grammar"
+      ],
+      "open_issues": [
+        "耒: retained historical tool name; hoe/plough not adopted as exact equivalent"
+      ],
+      "checked_version": 1
+    },
+    {
+      "id": "s2b",
+      "source": "而守株",
+      "translation": "kǎtǐmī sétā tì bǒ",
+      "backtranslation": "在树桩旁保持等候",
+      "tokens": [
+        {
+          "surface": "kǎtǐmī",
+          "ipa": [
+            "kʰa²¹tʰi²¹mi⁵⁵"
+          ],
+          "gloss": "树桩",
+          "sense": "tree stump",
+          "entry_id": "w1120",
+          "attestation_id": "stedt-rn-453648",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453648 · 原文定位 1.4"
+        },
+        {
+          "surface": "sétā",
+          "ipa": [
+            "sɤ²⁴tʰa⁵⁵"
+          ],
+          "gloss": "旁边",
+          "sense": "side",
+          "entry_id": "w2030",
+          "attestation_id": "stedt-rn-455018",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455018 · 原文定位 6.5"
+        },
+        {
+          "surface": "tì",
+          "ipa": [
+            "tʰi⁵¹"
+          ],
+          "gloss": "等候",
+          "sense": "wait",
+          "entry_id": "w2257",
+          "attestation_id": "stedt-rn-454411",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454411 · 原文定位 4.3"
+        },
+        {
+          "surface": "bǒ",
+          "gloss": "STAT",
+          "source_id": "frozen grammar reference",
+          "locator": "event-linking.md; B06:90 ex110",
+          "status": "productive construction"
+        }
+      ],
+      "roles": {
+        "agent": "farmer",
+        "location": "kǎtǐmī sétā"
+      },
+      "scope": "",
+      "constructions": [
+        "production from sourced lexical items and frozen grammar"
+      ],
+      "open_issues": [],
+      "checked_version": 1
+    },
+    {
+      "id": "s2c",
+      "source": "冀复得到兔",
+      "translation": "mǎotáo zái tǐ cá",
+      "backtranslation": "想再次得到兔子",
+      "tokens": [
+        {
+          "surface": "mǎotáo",
+          "ipa": [
+            "mau²¹tʰau²⁴"
+          ],
+          "gloss": "兔子",
+          "sense": "rabbit",
+          "entry_id": "w1486",
+          "attestation_id": "stedt-rn-453578",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453578 · 原文定位 1.3"
+        },
+        {
+          "surface": "zái",
+          "ipa": [
+            "tsai²⁴"
+          ],
+          "gloss": "再",
+          "sense": "again",
+          "entry_id": "w2626",
+          "attestation_id": "stedt-rn-458293",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 458293 · 原文定位 未标明"
+        },
+        {
+          "surface": "tǐ",
+          "ipa": [
+            "tʰi²¹"
+          ],
+          "gloss": "获得；得到",
+          "sense": "obtain, get",
+          "entry_id": "stedt-rn-454410",
+          "attestation_id": "stedt-rn-454410",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454410 · 原文定位 4.3"
+        },
+        {
+          "surface": "cá",
+          "gloss": "want to",
+          "source_id": "frozen grammar reference",
+          "locator": "aspect-modality.md; B06:129–130",
+          "status": "productive construction"
+        }
+      ],
+      "roles": {
+        "agent": "farmer",
+        "object": "mǎotáo",
+        "modality": "cá",
+        "repetition": "zái"
+      },
+      "scope": "",
+      "constructions": [
+        "production from sourced lexical items and frozen grammar"
+      ],
+      "open_issues": [],
+      "checked_version": 1
+    },
+    {
+      "id": "s3a",
+      "source": "兔不可复得",
+      "translation": "mǎotáo zái tǐ tā tī",
+      "backtranslation": "兔子不能再得到了",
+      "tokens": [
+        {
+          "surface": "mǎotáo",
+          "ipa": [
+            "mau²¹tʰau²⁴"
+          ],
+          "gloss": "兔子",
+          "sense": "rabbit",
+          "entry_id": "w1486",
+          "attestation_id": "stedt-rn-453578",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453578 · 原文定位 1.3"
+        },
+        {
+          "surface": "zái",
+          "ipa": [
+            "tsai²⁴"
+          ],
+          "gloss": "再",
+          "sense": "again",
+          "entry_id": "w2626",
+          "attestation_id": "stedt-rn-458293",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 458293 · 原文定位 未标明"
+        },
+        {
+          "surface": "tǐ",
+          "ipa": [
+            "tʰi²¹"
+          ],
+          "gloss": "获得；得到",
+          "sense": "obtain, get",
+          "entry_id": "stedt-rn-454410",
+          "attestation_id": "stedt-rn-454410",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454410 · 原文定位 4.3"
+        },
+        {
+          "surface": "tā",
+          "gloss": "NEG.MOD",
+          "source_id": "frozen grammar reference",
+          "locator": "aspect-modality.md; B06:127–128",
+          "status": "productive construction"
+        },
+        {
+          "surface": "tī",
+          "gloss": "ABILITY.NEG",
+          "source_id": "frozen grammar reference",
+          "locator": "aspect-modality.md; B06:127–128",
+          "status": "productive construction"
+        }
+      ],
+      "roles": {
+        "agent": "farmer (implicit)",
+        "object": "mǎotáo",
+        "negation_scope": "ability to obtain rabbit again"
+      },
+      "scope": "ability to obtain rabbit again",
+      "constructions": [
+        "production from sourced lexical items and frozen grammar"
+      ],
+      "open_issues": [],
+      "checked_version": 1
+    },
+    {
+      "id": "s3b",
+      "source": "而身为宋国笑",
+      "translation": "qiè, 宋国 niě lò gó 嘲笑 liē",
+      "backtranslation": "然而，宋国的人嘲笑了他",
+      "tokens": [
+        {
+          "surface": "qiè",
+          "ipa": [
+            "tɕʰiɛ⁵¹"
+          ],
+          "gloss": "然而；但是",
+          "sense": "yet, but",
+          "entry_id": "stedt-rn-455276",
+          "attestation_id": "stedt-rn-455276",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455276 · 原文定位 7.5"
+        },
+        {
+          "surface": "宋国",
+          "status": "proper name retained",
+          "gloss": "宋国"
+        },
+        {
+          "surface": "niě",
+          "gloss": "GEN/association",
+          "source_id": "frozen grammar reference",
+          "locator": "clause-patterns.md; B06:56 §4.3.6",
+          "status": "productive construction"
+        },
+        {
+          "surface": "lò",
+          "ipa": [
+            "luɔ⁵¹"
+          ],
+          "gloss": "人",
+          "sense": "person",
+          "entry_id": "w1421",
+          "attestation_id": "stedt-rn-453974",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453974 · 原文定位 2.5"
+        },
+        {
+          "surface": "gó",
+          "ipa": [
+            "kuɔ²⁴"
+          ],
+          "gloss": "他／她／它（第三人称单数）",
+          "sense": "3sg",
+          "entry_id": "stedt-rn-455181",
+          "attestation_id": "stedt-rn-455181",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455181 · 原文定位 7.4"
+        },
+        {
+          "surface": "嘲笑",
+          "status": "minimal Chinese insertion",
+          "gloss": "嘲笑"
+        },
+        {
+          "surface": "liē",
+          "gloss": "PFV",
+          "source_id": "frozen grammar reference",
+          "locator": "event-linking.md; B06:69 ex86; aspect-modality.md table7.1",
+          "status": "productive construction"
+        }
+      ],
+      "roles": {
+        "agent": "宋国 niě lò",
+        "patient": "farmer; gó"
+      },
+      "scope": "",
+      "constructions": [
+        "production from sourced lexical items and frozen grammar"
+      ],
+      "open_issues": [
+        "嘲笑: no suitable native contextual transitive verb established; Chinese insertion"
+      ],
+      "checked_version": 1
+    }
+  ],
+  "query_ledger": [
+    {
+      "query": "耕",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "w9610"
+      ]
+    },
+    {
+      "query": "种田",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "农民",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-195813",
+        "stedt-rn-288680",
+        "stedt-rn-354192",
+        "stedt-rn-453961",
+        "stedt-rn-456532",
+        "w1036",
+        "w3953",
+        "w6057",
+        "stedt-rn-454008",
+        "stedt-rn-458231",
+        "w2568",
+        "w5663",
+        "w8641",
+        "w8801"
+      ]
+    },
+    {
+      "query": "田",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-457643",
+        "w2022",
+        "w5081",
+        "w5944",
+        "stedt-rn-454126",
+        "stedt-rn-457708",
+        "w2081",
+        "w5147",
+        "w6038",
+        "stedt-rn-457913",
+        "w2272",
+        "w5339",
+        "w7784",
+        "stedt-rn-457644",
+        "w5186",
+        "stedt-rn-457645",
+        "w5187"
+      ]
+    },
+    {
+      "query": "株",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-457328",
+        "w1750",
+        "w4770",
+        "w8256"
+      ]
+    },
+    {
+      "query": "树桩",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-453647",
+        "stedt-rn-454223",
+        "stedt-rn-456618",
+        "w1118",
+        "w4047",
+        "w8480",
+        "stedt-rn-453648",
+        "stedt-rn-456620",
+        "w1120",
+        "w4048",
+        "w8312"
+      ]
+    },
+    {
+      "query": "兔",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "跑",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-288977",
+        "stedt-rn-209226",
+        "stedt-rn-421546",
+        "stedt-rn-453829",
+        "stedt-rn-458090",
+        "w2433",
+        "w5534",
+        "w6302",
+        "stedt-rn-456363",
+        "w3815",
+        "w7356",
+        "w879",
+        "w9722"
+      ]
+    },
+    {
+      "query": "碰撞",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-421815",
+        "w9726"
+      ]
+    },
+    {
+      "query": "脖子",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-127198",
+        "stedt-rn-43377",
+        "stedt-rn-192651",
+        "stedt-rn-349610",
+        "stedt-rn-453724",
+        "stedt-rn-456672",
+        "w1163",
+        "w4100",
+        "w6198",
+        "w8726"
+      ]
+    },
+    {
+      "query": "折断",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-454340",
+        "stedt-rn-456711",
+        "w1198",
+        "w4141",
+        "w6170"
+      ]
+    },
+    {
+      "query": "死",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-127148",
+        "stedt-rn-144716",
+        "stedt-rn-219783",
+        "stedt-rn-426608",
+        "stedt-rn-43473",
+        "stedt-rn-453876",
+        "stedt-rn-457629",
+        "w2008",
+        "w5065",
+        "w6367",
+        "w9789"
+      ]
+    },
+    {
+      "query": "放下",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "耒",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "犁",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-201117",
+        "stedt-rn-210348",
+        "stedt-rn-288792",
+        "stedt-rn-289000",
+        "stedt-rn-376563",
+        "stedt-rn-454119",
+        "stedt-rn-457421",
+        "w1828",
+        "w4873",
+        "w7619",
+        "w9136"
+      ]
+    },
+    {
+      "query": "等待",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-289114",
+        "stedt-rn-216009",
+        "stedt-rn-408885",
+        "w9555"
+      ]
+    },
+    {
+      "query": "希望",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "再",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-231054",
+        "stedt-rn-289381",
+        "stedt-rn-289382",
+        "stedt-rn-455296",
+        "stedt-rn-455562",
+        "w170",
+        "w3005",
+        "w6544",
+        "stedt-rn-458293",
+        "w2626",
+        "w5731",
+        "w7713",
+        "stedt-rn-455563",
+        "w2979",
+        "stedt-rn-455565",
+        "w2985",
+        "stedt-rn-455564",
+        "w3000",
+        "w3715",
+        "stedt-rn-458272",
+        "w5710"
+      ]
+    },
+    {
+      "query": "得到",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-214428",
+        "stedt-rn-408831",
+        "stedt-rn-454410",
+        "stedt-rn-289082",
+        "stedt-rn-457896",
+        "w2255",
+        "w5332",
+        "w7363",
+        "w9554"
+      ]
+    },
+    {
+      "query": "嘲笑",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "兔子",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-288546",
+        "stedt-rn-186174",
+        "stedt-rn-360263",
+        "stedt-rn-457883",
+        "stedt-rn-453578",
+        "stedt-rn-457033",
+        "w1486",
+        "w4464",
+        "w6944",
+        "w2242",
+        "w5309",
+        "w7846",
+        "w8896"
+      ]
+    },
+    {
+      "query": "rabbit",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-288546",
+        "stedt-rn-186174",
+        "stedt-rn-360263",
+        "stedt-rn-457883",
+        "stedt-rn-453578",
+        "stedt-rn-457033",
+        "w1486",
+        "w4464",
+        "w6944",
+        "w2242",
+        "w5309",
+        "w7846",
+        "w8896",
+        "w9224"
+      ]
+    },
+    {
+      "query": "hare",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "碰",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-457285",
+        "w1714",
+        "w4721",
+        "w7923",
+        "stedt-rn-457286",
+        "w4724"
+      ]
+    },
+    {
+      "query": "撞",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-421815"
+      ]
+    },
+    {
+      "query": "断",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-219069",
+        "w1200",
+        "w6958",
+        "stedt-rn-454341",
+        "stedt-rn-456713",
+        "w4154",
+        "stedt-rn-454297",
+        "stedt-rn-456051",
+        "w3484",
+        "w613",
+        "w7120",
+        "stedt-rn-456085",
+        "w3518",
+        "w646",
+        "w7570"
+      ]
+    },
+    {
+      "query": "放",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-213663",
+        "stedt-rn-289067",
+        "stedt-rn-454301",
+        "stedt-rn-454377",
+        "stedt-rn-457316",
+        "w1740",
+        "w4758",
+        "w6399"
+      ]
+    },
+    {
+      "query": "放弃",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "丢",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "等",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-289114",
+        "stedt-rn-216009",
+        "stedt-rn-408885"
+      ]
+    },
+    {
+      "query": "守候",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "想",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-289135",
+        "stedt-rn-217080",
+        "stedt-rn-430135",
+        "stedt-rn-454755",
+        "stedt-rn-455342",
+        "w12",
+        "w2791",
+        "w8363",
+        "stedt-rn-458117",
+        "w2458",
+        "w5563",
+        "w7060",
+        "stedt-rn-455343",
+        "w2875",
+        "stedt-rn-456050",
+        "w3481",
+        "w612",
+        "w8016",
+        "w9834"
+      ]
+    },
+    {
+      "query": "盼",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "hope",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "笑",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-127285",
+        "stedt-rn-43461",
+        "stedt-rn-216570",
+        "stedt-rn-430522",
+        "stedt-rn-453807",
+        "stedt-rn-457180",
+        "w1624",
+        "w4640",
+        "w8579",
+        "w9837"
+      ]
+    },
+    {
+      "query": "ridicule",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "mock",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "里面",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-288496",
+        "stedt-rn-183012",
+        "stedt-rn-381839",
+        "stedt-rn-455022",
+        "stedt-rn-458043",
+        "w2395",
+        "w5458",
+        "w6651",
+        "stedt-rn-458045",
+        "w5384",
+        "stedt-rn-458044",
+        "w5456"
+      ]
+    },
+    {
+      "query": "旁边",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-455018",
+        "stedt-rn-457653",
+        "w2030",
+        "w5071",
+        "w7001",
+        "w9192"
+      ]
+    },
+    {
+      "query": "国家",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-206778",
+        "stedt-rn-288910",
+        "stedt-rn-456283",
+        "w3682",
+        "stedt-rn-456284",
+        "w3695",
+        "stedt-rn-456282",
+        "w3709",
+        "w8008",
+        "w810"
+      ]
+    },
+    {
+      "query": "人",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-194742",
+        "stedt-rn-288655",
+        "stedt-rn-353621",
+        "stedt-rn-353932",
+        "stedt-rn-453975",
+        "stedt-rn-453974",
+        "stedt-rn-456963",
+        "w1421",
+        "w4417",
+        "w6528",
+        "stedt-rn-457536",
+        "w1926",
+        "w4970",
+        "w7604",
+        "stedt-rn-455402",
+        "w2845",
+        "w55",
+        "w5899",
+        "stedt-rn-455411",
+        "w2855",
+        "w5893",
+        "w64",
+        "w8791"
+      ]
+    },
+    {
+      "query": "一",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-289311",
+        "stedt-rn-226464",
+        "stedt-rn-386074",
+        "stedt-rn-455088",
+        "stedt-rn-456730",
+        "w1216",
+        "w4181",
+        "w7950",
+        "stedt-rn-458236",
+        "w2573",
+        "w5678",
+        "w8404",
+        "w9255"
+      ]
+    },
+    {
+      "query": "个",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-456755",
+        "w1240",
+        "w4165",
+        "w7102",
+        "stedt-rn-455728",
+        "w317",
+        "w3180",
+        "w8143",
+        "stedt-rn-455769",
+        "w3201",
+        "w354",
+        "w7339",
+        "stedt-rn-455940",
+        "w3377",
+        "w511",
+        "w7414",
+        "stedt-rn-456273",
+        "w3701",
+        "w6934",
+        "w803",
+        "stedt-rn-456359",
+        "w3806",
+        "w7195",
+        "w875"
+      ]
+    },
+    {
+      "query": "wait",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-289114",
+        "stedt-rn-216009",
+        "stedt-rn-408885",
+        "stedt-rn-454411",
+        "stedt-rn-457898",
+        "w5335",
+        "w9555"
+      ]
+    },
+    {
+      "query": "to wait",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "w2257",
+        "w7705"
+      ]
+    },
+    {
+      "query": "till",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-412580",
+        "w9610"
+      ]
+    },
+    {
+      "query": "to till",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "plough",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-201117",
+        "stedt-rn-210348",
+        "stedt-rn-288792",
+        "stedt-rn-289000",
+        "stedt-rn-412580",
+        "stedt-rn-454119",
+        "stedt-rn-457421",
+        "w4873",
+        "w9136",
+        "w9610"
+      ]
+    },
+    {
+      "query": "to put down",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "耕作",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "农具",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "laugh at",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "to laugh at",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "笑话",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "w9168"
+      ]
+    },
+    {
+      "query": "讥笑",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "看守",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-418001",
+        "stedt-rn-453838",
+        "stedt-rn-454336"
+      ]
+    },
+    {
+      "query": "hope for",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "期望",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "盼望",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "耒耜",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "手犁",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "木犁",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "耕具",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "锄头",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-201015",
+        "stedt-rn-376720",
+        "stedt-rn-454103",
+        "stedt-rn-456877",
+        "w1341",
+        "w4294",
+        "w6064",
+        "stedt-rn-288791",
+        "stedt-rn-454117",
+        "stedt-rn-457351",
+        "w1765",
+        "w4780",
+        "w8391",
+        "stedt-rn-457352",
+        "w4750",
+        "w9139"
+      ]
+    },
+    {
+      "query": "嘲弄",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "讥讽",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "sneer",
+      "status": "zero",
+      "engine": "static-exact",
+      "witness_ids": []
+    },
+    {
+      "query": "有",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-217488",
+        "stedt-rn-289143",
+        "stedt-rn-454792",
+        "stedt-rn-458147",
+        "w2487",
+        "w5587",
+        "w7134",
+        "stedt-rn-458271",
+        "w2606",
+        "w5707",
+        "w8582"
+      ]
+    },
+    {
+      "query": "但是",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-455276",
+        "stedt-rn-455993",
+        "w3421",
+        "w558",
+        "w7418"
+      ]
+    },
+    {
+      "query": "他",
+      "status": "hit",
+      "engine": "static-exact",
+      "witness_ids": [
+        "stedt-rn-229779",
+        "stedt-rn-289358",
+        "stedt-rn-393082",
+        "stedt-rn-455181",
+        "stedt-rn-456271",
+        "w3703",
+        "w6152",
+        "w801",
+        "w9360"
+      ]
+    }
+  ],
+  "artifacts": [
+    "round1.md",
+    "translation.json",
+    "evidence.json",
+    "run-log.md"
+  ],
+  "checks": {
+    "coverage": "all nine clauses; no omitted event/participant/negation/repetition",
+    "source_alignment": "B06 first; B04 pén and zái; B04/06 hǔ",
+    "reference_independence": "Only source and frozen skill/lexicon read; no other translation or evaluations read",
+    "borrowing_reconciliation": "pūkī/līgācǐ (hoe) and kātiē (plough) not exact for 耒; niè laugh does not itself establish ridicule, so 嘲笑 retained",
+    "corpus_availability": "No corpus files bundled in frozen tree. Expected local data paths absent; no external/current data used."
+  }
+}

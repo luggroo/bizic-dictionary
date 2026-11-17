@@ -1,0 +1,30 @@
+[
+  {
+    "id": "en-crow",
+    "pages": 1,
+    "source_and_translation_present": true
+  },
+  {
+    "id": "zh-rabbit",
+    "pages": 1,
+    "source_and_translation_present": true
+  },
+  {
+    "id": "ja-jizo",
+    "pages": 4,
+    "source_and_translation_present": true
+  },
+  {
+    "id": "bo-crane",
+    "pages": 1,
+    "source_and_translation_present": true
+  },
+  {
+    "id": "reverse-song",
+    "pages": 2,
+    "source_and_translation_present": true
+  },
+  {
+    "combined_pages": 10
+  }
+]

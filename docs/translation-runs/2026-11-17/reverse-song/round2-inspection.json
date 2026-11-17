@@ -1,0 +1,530 @@
+[
+  {
+    "entry_id": "w533",
+    "attestation_id": "w7740",
+    "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+    "term": "dàlāzě",
+    "zh": "一起",
+    "en": "together",
+    "pos": "advm.",
+    "dialect": "北部",
+    "locator": "Sheet1!C1858:G1858",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dàlāzě"
+      ]
+    },
+    "source_term": "davlaxzer",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dàlāzě",
+        "method": "source",
+        "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w964",
+    "attestation_id": "stedt-rn-456454",
+    "source": "stedt-07898ef938",
+    "term": "jíhuā",
+    "zh": "计划",
+    "en": "plan",
+    "pos": "n.",
+    "dialect": "北部",
+    "locator": "STEDT rn 456454 · 原文定位 未标明",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "jíhuā"
+      ],
+      "ipa": [
+        "tɕi²⁴fua⁵⁵"
+      ]
+    },
+    "source_term": "ji2hua1",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "jíhuā",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w964",
+    "attestation_id": "w3878",
+    "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+    "term": "jíhuā",
+    "zh": "计划",
+    "en": "plan",
+    "pos": "n.",
+    "dialect": "北部",
+    "locator": "Sheet1!A1108:C1108",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "jíhuā"
+      ],
+      "ipa": [
+        "tɕi²⁴fua⁵⁵"
+      ]
+    },
+    "source_term": "ji4 hua1",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "jíhuā",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w964",
+    "attestation_id": "w7545",
+    "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+    "term": "jíhuā",
+    "zh": "计划",
+    "en": "plan",
+    "pos": "n.",
+    "dialect": "北部",
+    "locator": "Sheet1!C1663:G1663",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "jíhuā"
+      ]
+    },
+    "source_term": "jifhuax",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "jíhuā",
+        "method": "source",
+        "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w964",
+    "attestation_id": "w964",
+    "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+    "term": "jíhuā",
+    "zh": "计划",
+    "en": "plan",
+    "pos": "n.",
+    "dialect": "北部",
+    "locator": "词条 964",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "jíhuā"
+      ],
+      "ipa": [
+        "tɕi²⁴fua⁵⁵"
+      ]
+    },
+    "source_term": "ji2hua1",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "jíhuā",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w528",
+    "attestation_id": "stedt-rn-455960",
+    "source": "stedt-07898ef938",
+    "term": "dàhǎ",
+    "zh": "一起",
+    "en": "all, together",
+    "pos": "advm.",
+    "dialect": "北部",
+    "locator": "STEDT rn 455960 · 原文定位 未标明",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dàhǎ"
+      ],
+      "ipa": [
+        "ta⁵¹xa²¹"
+      ]
+    },
+    "source_term": "da4ha3",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dàhǎ",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w528",
+    "attestation_id": "w3402",
+    "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+    "term": "dàhǎ",
+    "zh": "一起",
+    "en": "all, together",
+    "pos": "advm.",
+    "dialect": "北部",
+    "locator": "Sheet1!A632:C632",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dàhǎ"
+      ],
+      "ipa": [
+        "ta⁵¹xa²¹"
+      ]
+    },
+    "source_term": "da3 ha2",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dàhǎ",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w528",
+    "attestation_id": "w528",
+    "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+    "term": "dàhǎ",
+    "zh": "一起",
+    "en": "all, together",
+    "pos": "advm.",
+    "dialect": "北部",
+    "locator": "词条 528",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dàhǎ"
+      ],
+      "ipa": [
+        "ta⁵¹xa²¹"
+      ]
+    },
+    "source_term": "da4ha3",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dàhǎ",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w528",
+    "attestation_id": "w7176",
+    "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+    "term": "dàhǎ",
+    "zh": "一起",
+    "en": "all, together",
+    "pos": "advm.",
+    "dialect": "北部",
+    "locator": "Sheet1!C1294:G1294",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dàhǎ"
+      ]
+    },
+    "source_term": "davhar",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dàhǎ",
+        "method": "source",
+        "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w533",
+    "attestation_id": "stedt-rn-455217",
+    "source": "stedt-39f4cd9a6b",
+    "term": "dàlāzě",
+    "zh": "一起",
+    "en": "together",
+    "pos": "",
+    "dialect": "北部",
+    "locator": "STEDT rn 455217 · 原文定位 7.5",
+    "source_ref": "7.5",
+    "notations": {
+      "accent": [
+        "dàlāzě"
+      ],
+      "ipa": [
+        "ta⁵¹la⁵⁵tsɤ²¹"
+      ]
+    },
+    "source_term": "da⁴la¹ze³",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dàlāzě",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2006"
+  },
+  {
+    "entry_id": "w533",
+    "attestation_id": "stedt-rn-455966",
+    "source": "stedt-07898ef938",
+    "term": "dàlāzě",
+    "zh": "一起",
+    "en": "together",
+    "pos": "advm.",
+    "dialect": "北部",
+    "locator": "STEDT rn 455966 · 原文定位 未标明",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dàlāzě"
+      ],
+      "ipa": [
+        "ta⁵¹la⁵⁵tsɤ²¹"
+      ]
+    },
+    "source_term": "da4la1ze3",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dàlāzě",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w533",
+    "attestation_id": "w3403",
+    "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+    "term": "dàlāzě",
+    "zh": "一起",
+    "en": "together",
+    "pos": "advm.",
+    "dialect": "北部",
+    "locator": "Sheet1!A633:C633",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dàlāzě"
+      ],
+      "ipa": [
+        "ta⁵¹la⁵⁵tsɤ²¹"
+      ]
+    },
+    "source_term": "da3 la1 ze2",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dàlāzě",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w533",
+    "attestation_id": "w533",
+    "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+    "term": "dàlāzě",
+    "zh": "一起",
+    "en": "together",
+    "pos": "advm.",
+    "dialect": "北部",
+    "locator": "词条 533",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dàlāzě"
+      ],
+      "ipa": [
+        "ta⁵¹la⁵⁵tsɤ²¹"
+      ]
+    },
+    "source_term": "da4la1ze3",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dàlāzě",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "stedt-rn-127366",
+    "attestation_id": "stedt-rn-127366",
+    "source": "stedt-4fdbdbf516",
+    "term": "dàréjjiē",
+    "zh": "右手",
+    "en": "right hand",
+    "pos": "",
+    "dialect": "南部",
+    "locator": "STEDT rn 127366 · 原文定位 6.1.7.4",
+    "source_ref": "6.1.7.4",
+    "notations": {
+      "accent": [
+        "dàréjjiē"
+      ],
+      "ipa": [
+        "ta²¹ ze³⁵ dʑe⁵⁵"
+      ]
+    },
+    "source_term": "ta²¹ ze³⁵ dʑe⁵⁵",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dàréjjiē",
+        "method": "source",
+        "profile": "stedt-4fdbdbf516"
+      }
+    ],
+    "canonical_source": "stedt-4fdbdbf516"
+  },
+  {
+    "entry_id": "w531",
+    "attestation_id": "stedt-rn-455964",
+    "source": "stedt-07898ef938",
+    "term": "dǎjiē",
+    "zh": "大姐",
+    "en": "elder sister",
+    "pos": "n.",
+    "dialect": "北部",
+    "locator": "STEDT rn 455964 · 原文定位 未标明",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dǎjiē"
+      ],
+      "ipa": [
+        "ta²¹tɕiɛ⁵⁵"
+      ]
+    },
+    "source_term": "da3jie1",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dǎjiē",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w531",
+    "attestation_id": "w3395",
+    "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+    "term": "dǎjiē",
+    "zh": "大姐",
+    "en": "elder sister",
+    "pos": "n.",
+    "dialect": "北部",
+    "locator": "Sheet1!A625:C625",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dǎjiē"
+      ],
+      "ipa": [
+        "ta²¹tɕiɛ⁵⁵"
+      ]
+    },
+    "source_term": "da2 jie1",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dǎjiē",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w531",
+    "attestation_id": "w531",
+    "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+    "term": "dǎjiē",
+    "zh": "大姐",
+    "en": "elder sister",
+    "pos": "n.",
+    "dialect": "北部",
+    "locator": "词条 531",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dǎjiē"
+      ],
+      "ipa": [
+        "ta²¹tɕiɛ⁵⁵"
+      ]
+    },
+    "source_term": "da3jie1",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dǎjiē",
+        "method": "derived",
+        "profile": "brassett-to-ye"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  },
+  {
+    "entry_id": "w531",
+    "attestation_id": "w6019",
+    "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+    "term": "dǎjiē",
+    "zh": "大姐",
+    "en": "elder sister",
+    "pos": "n.",
+    "dialect": "北部",
+    "locator": "Sheet1!C137:G137",
+    "source_ref": "",
+    "notations": {
+      "accent": [
+        "dǎjiē"
+      ]
+    },
+    "source_term": "darjiex",
+    "term_notation": "accent",
+    "accent_provenance": [
+      {
+        "text": "dǎjiē",
+        "method": "source",
+        "profile": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF"
+      }
+    ],
+    "canonical_source": "brassett-2004"
+  }
+]

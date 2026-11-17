@@ -1,0 +1,15 @@
+{
+  "start_utc": "2026-11-17T16:11:02+00:00",
+  "end_utc": "2026-11-17T16:14:33.073865+00:00",
+  "elapsed_seconds": 211.073865,
+  "unique_query_keys": 43,
+  "query_execution_count": 43,
+  "queries_file": "queries.json",
+  "method": "NFKC/casefold + FNV-1a top-byte bucket; exact row.k match; raw records retained; dictionary attestation sources inspected in B06/B04 priority.",
+  "initial_recovery": "16:11:32 lookup reader initially treated row.r as list of records; first three zero results printed, then KeyError. Corrected r handling; complete successful batch saved. No failed nonzero lookup results were used.",
+  "source_revision": "f341ec4cef24c68ea9527d6ddbe4dd6b4e068262",
+  "dictionary_revision": "5c148a2bfe860969375c16821f22bb25222ab7d8",
+  "external_web_access": false,
+  "embedding": false,
+  "translation_sha256": "d71232205d89012df639c1d10e5ef79aa43556dcab0c254e58e8db156b8c540e"
+}

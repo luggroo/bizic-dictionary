@@ -1,0 +1,8 @@
+请按这个翻译技能，将以下原文完整译成北部龙山土家语：
+/workspace/bizic-translator/docs/evaluation/blind-five-2026-11-17/frozen/skills/translate-tujia/SKILL.md
+
+A thirsty crow found a pitcher with a little water in it.
+The water was too low for its beak to reach.
+It tried to tip the pitcher, but it was too heavy.
+Then the crow dropped small stones into it, one by one.
+The water rose, and at last the crow could drink.

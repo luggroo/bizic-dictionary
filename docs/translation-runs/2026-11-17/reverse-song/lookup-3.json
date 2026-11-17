@@ -1,0 +1,3706 @@
+{
+  "mode": "Skill-based",
+  "embedding_run": false,
+  "dictionary_revision": "5c148a2bfe860969375c16821f22bb25222ab7d8",
+  "dictionary_sha256": "c4c04aa863ab135285125fb92ea0e6951d6c044f8c7cf7804fe51647b657808d",
+  "results": [
+    {
+      "query": "six",
+      "notation": "ye",
+      "mode": "static_pronunciation_candidates",
+      "embedding_run": false,
+      "max_cost": 2.0,
+      "unsupported_forms": 465,
+      "whole": [
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "sī",
+          "entry_id": "w2055",
+          "attestation_id": "stedt-rn-454603",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "醒",
+          "en": "wake up",
+          "pos": "v",
+          "source_term": "si¹",
+          "notations": {
+            "accent": [
+              "sī"
+            ],
+            "ipa": [
+              "sɨ⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 454603 · 原文定位 4.6",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2055",
+              "attestation_id": "stedt-rn-457679",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "醒",
+              "en": "wake up",
+              "pos": "vi.",
+              "source_term": "si1",
+              "notations": {
+                "accent": [
+                  "sī"
+                ],
+                "ipa": [
+                  "sɨ⁵⁵"
+                ]
+              },
+              "locator": "STEDT rn 457679 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2055",
+              "attestation_id": "w2055",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "醒",
+              "en": "to wake up",
+              "pos": "vi.",
+              "source_term": "si1",
+              "notations": {
+                "accent": [
+                  "sī"
+                ],
+                "ipa": [
+                  "sɨ⁵⁵"
+                ]
+              },
+              "locator": "词条 2055"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2055",
+              "attestation_id": "w5105",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "醒",
+              "en": "wake up",
+              "pos": "vi.",
+              "source_term": "si1",
+              "notations": {
+                "accent": [
+                  "sī"
+                ],
+                "ipa": [
+                  "sɨ⁵⁵"
+                ]
+              },
+              "locator": "Sheet1!A2335:C2335"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2055",
+              "attestation_id": "w7900",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "醒",
+              "en": "to wake up",
+              "pos": "vi.",
+              "source_term": "six",
+              "notations": {
+                "accent": [
+                  "sī"
+                ]
+              },
+              "locator": "Sheet1!C2018:G2018"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "sī",
+          "entry_id": "w2053",
+          "attestation_id": "stedt-rn-454995",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "月",
+          "en": "month",
+          "pos": "",
+          "source_term": "si¹",
+          "notations": {
+            "accent": [
+              "sī"
+            ],
+            "ipa": [
+              "sɨ⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 454995 · 原文定位 6.4",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2053",
+              "attestation_id": "stedt-rn-457677",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "月",
+              "en": "month",
+              "pos": "cl.",
+              "source_term": "si1",
+              "notations": {
+                "accent": [
+                  "sī"
+                ],
+                "ipa": [
+                  "sɨ⁵⁵"
+                ]
+              },
+              "locator": "STEDT rn 457677 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2053",
+              "attestation_id": "w2053",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "月",
+              "en": "month",
+              "pos": "cl.",
+              "source_term": "si1",
+              "notations": {
+                "accent": [
+                  "sī"
+                ],
+                "ipa": [
+                  "sɨ⁵⁵"
+                ]
+              },
+              "locator": "词条 2053"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2053",
+              "attestation_id": "w5107",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "月",
+              "en": "month",
+              "pos": "cl.",
+              "source_term": "si1",
+              "notations": {
+                "accent": [
+                  "sī"
+                ],
+                "ipa": [
+                  "sɨ⁵⁵"
+                ]
+              },
+              "locator": "Sheet1!A2337:C2337"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2053",
+              "attestation_id": "w6263",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "月",
+              "en": "month",
+              "pos": "cl.",
+              "source_term": "six",
+              "notations": {
+                "accent": [
+                  "sī"
+                ]
+              },
+              "locator": "Sheet1!C381:G381"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "sī",
+          "entry_id": "w2054",
+          "attestation_id": "stedt-rn-457678",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "是",
+          "en": "be",
+          "pos": "vc.",
+          "source_term": "si1",
+          "notations": {
+            "accent": [
+              "sī"
+            ],
+            "ipa": [
+              "sɨ⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 457678 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2054",
+              "attestation_id": "w2054",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "是",
+              "en": "to be",
+              "pos": "vc.",
+              "source_term": "si1",
+              "notations": {
+                "accent": [
+                  "sī"
+                ],
+                "ipa": [
+                  "sɨ⁵⁵"
+                ]
+              },
+              "locator": "词条 2054"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2054",
+              "attestation_id": "w5106",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "是",
+              "en": "be",
+              "pos": "vc.",
+              "source_term": "si1",
+              "notations": {
+                "accent": [
+                  "sī"
+                ],
+                "ipa": [
+                  "sɨ⁵⁵"
+                ]
+              },
+              "locator": "Sheet1!A2336:C2336"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "sī",
+              "entry_id": "w2054",
+              "attestation_id": "w7250",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "是",
+              "en": "to be",
+              "pos": "vc.",
+              "source_term": "six",
+              "notations": {
+                "accent": [
+                  "sī"
+                ]
+              },
+              "locator": "Sheet1!C1368:G1368"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "sī",
+          "entry_id": "stedt-rn-288510",
+          "attestation_id": "stedt-rn-288510",
+          "source": "stedt-cb523fc3dc",
+          "canonical_source": "stedt-cb523fc3dc",
+          "zh": "月",
+          "en": "month",
+          "pos": "",
+          "source_term": "si⁵⁵",
+          "notations": {
+            "accent": [
+              "sī"
+            ],
+            "ipa": [
+              "si⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 288510 · 原文定位 未标明"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "sī",
+          "entry_id": "stedt-rn-289018",
+          "attestation_id": "stedt-rn-289018",
+          "source": "stedt-cb523fc3dc",
+          "canonical_source": "stedt-cb523fc3dc",
+          "zh": "牵牲畜",
+          "en": "lead (animal)",
+          "pos": "",
+          "source_term": "si⁵⁵",
+          "notations": {
+            "accent": [
+              "sī"
+            ],
+            "ipa": [
+              "si⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 289018 · 原文定位 未标明"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "sī",
+          "entry_id": "stedt-rn-289086",
+          "attestation_id": "stedt-rn-289086",
+          "source": "stedt-cb523fc3dc",
+          "canonical_source": "stedt-cb523fc3dc",
+          "zh": "用",
+          "en": "use",
+          "pos": "",
+          "source_term": "si⁵⁵",
+          "notations": {
+            "accent": [
+              "sī"
+            ],
+            "ipa": [
+              "si⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 289086 · 原文定位 未标明"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "sī",
+          "entry_id": "stedt-rn-391326",
+          "attestation_id": "stedt-rn-391326",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "月（一个月）",
+          "en": "month's (work)",
+          "pos": "clf",
+          "source_term": "si⁵⁵",
+          "notations": {
+            "accent": [
+              "sī"
+            ],
+            "ipa": [
+              "si⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 391326 · 原文定位 0912.49"
+        },
+        {
+          "cost": 0.25,
+          "changes": [
+            "syllable 1: tone unspecified"
+          ],
+          "matched_form": "si",
+          "entry_id": "w2052",
+          "attestation_id": "stedt-rn-457676",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "(叫风声)",
+          "en": "(sound of whistling for wind)",
+          "pos": "onom.",
+          "source_term": "si",
+          "notations": {
+            "accent": [
+              "si"
+            ],
+            "ipa": [
+              "sɨ"
+            ]
+          },
+          "locator": "STEDT rn 457676 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.25,
+              "changes": [
+                "syllable 1: tone unspecified"
+              ],
+              "matched_form": "si",
+              "entry_id": "w2052",
+              "attestation_id": "w2052",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "(叫风声)",
+              "en": "(sound of whistling for wind)",
+              "pos": "onom.",
+              "source_term": "si",
+              "notations": {
+                "accent": [
+                  "si"
+                ],
+                "ipa": [
+                  "sɨ"
+                ]
+              },
+              "locator": "词条 2052"
+            },
+            {
+              "cost": 0.25,
+              "changes": [
+                "syllable 1: tone unspecified"
+              ],
+              "matched_form": "si",
+              "entry_id": "w2052",
+              "attestation_id": "w5104",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "(叫风声)",
+              "en": "(sound of whistling for wind)",
+              "pos": "onom.",
+              "source_term": "si",
+              "notations": {
+                "accent": [
+                  "si"
+                ],
+                "ipa": [
+                  "sɨ"
+                ]
+              },
+              "locator": "Sheet1!A2334:C2334"
+            },
+            {
+              "cost": 0.25,
+              "changes": [
+                "syllable 1: tone unspecified"
+              ],
+              "matched_form": "si",
+              "entry_id": "w2052",
+              "attestation_id": "w6234",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "(叫风声)",
+              "en": "(sound of whistling for wind)",
+              "pos": "onom.",
+              "source_term": "si",
+              "notations": {
+                "accent": [
+                  "si"
+                ]
+              },
+              "locator": "Sheet1!C352:G352"
+            }
+          ]
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "sì",
+          "entry_id": "w2067",
+          "attestation_id": "stedt-rn-454395",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "用",
+          "en": "use",
+          "pos": "v",
+          "source_term": "si⁴",
+          "notations": {
+            "accent": [
+              "sì"
+            ],
+            "ipa": [
+              "sɨ⁵¹"
+            ]
+          },
+          "locator": "STEDT rn 454395 · 原文定位 4.3",
+          "alternative_witnesses": [
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "sì",
+              "entry_id": "w2067",
+              "attestation_id": "stedt-rn-457692",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "用",
+              "en": "use",
+              "pos": "vt.",
+              "source_term": "si4",
+              "notations": {
+                "accent": [
+                  "sì"
+                ],
+                "ipa": [
+                  "sɨ⁵¹"
+                ]
+              },
+              "locator": "STEDT rn 457692 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "sì",
+              "entry_id": "w2067",
+              "attestation_id": "w2067",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "用",
+              "en": "to use",
+              "pos": "vt.",
+              "source_term": "si4",
+              "notations": {
+                "accent": [
+                  "sì"
+                ],
+                "ipa": [
+                  "sɨ⁵¹"
+                ]
+              },
+              "locator": "词条 2067"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "sì",
+              "entry_id": "w2067",
+              "attestation_id": "w5192",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "用",
+              "en": "use",
+              "pos": "vt.",
+              "source_term": "si3",
+              "notations": {
+                "accent": [
+                  "sì"
+                ],
+                "ipa": [
+                  "sɨ⁵¹"
+                ]
+              },
+              "locator": "Sheet1!A2422:C2422"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "sì",
+              "entry_id": "w2067",
+              "attestation_id": "w6072",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "用",
+              "en": "to use",
+              "pos": "vt.",
+              "source_term": "siv",
+              "notations": {
+                "accent": [
+                  "sì"
+                ]
+              },
+              "locator": "Sheet1!C190:G190"
+            }
+          ]
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "sì",
+          "entry_id": "w5191",
+          "attestation_id": "stedt-rn-458085",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "牵",
+          "en": "lead",
+          "pos": "vt.",
+          "source_term": "si4",
+          "notations": {
+            "accent": [
+              "sì"
+            ],
+            "ipa": [
+              "sɨ⁵¹"
+            ]
+          },
+          "locator": "STEDT rn 458085 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "sì",
+              "entry_id": "w5191",
+              "attestation_id": "w5191",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "牵",
+              "en": "lead",
+              "pos": "vt.",
+              "source_term": "si3",
+              "notations": {
+                "accent": [
+                  "sì"
+                ],
+                "ipa": [
+                  "sɨ⁵¹"
+                ]
+              },
+              "locator": "Sheet1!A2421:C2421"
+            }
+          ]
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "sì",
+          "entry_id": "stedt-rn-211215",
+          "attestation_id": "stedt-rn-211215",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "牵牲畜",
+          "en": "lead (animal)",
+          "pos": "",
+          "source_term": "si⁵³",
+          "notations": {
+            "accent": [
+              "sì"
+            ],
+            "ipa": [
+              "si⁵³"
+            ]
+          },
+          "locator": "STEDT rn 211215 · 原文定位 612.38"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "sì",
+          "entry_id": "stedt-rn-214632",
+          "attestation_id": "stedt-rn-214632",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "用",
+          "en": "use",
+          "pos": "",
+          "source_term": "si⁵³",
+          "notations": {
+            "accent": [
+              "sì"
+            ],
+            "ipa": [
+              "si⁵³"
+            ]
+          },
+          "locator": "STEDT rn 214632 · 原文定位 679.38"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "sì",
+          "entry_id": "stedt-rn-422663",
+          "attestation_id": "stedt-rn-422663",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "牵牛",
+          "en": "pull / lead (a cow) along",
+          "pos": "v.",
+          "source_term": "si⁵³",
+          "notations": {
+            "accent": [
+              "sì"
+            ],
+            "ipa": [
+              "si⁵³"
+            ]
+          },
+          "locator": "STEDT rn 422663 · 原文定位 1568.49"
+        },
+        {
+          "cost": 0.8,
+          "changes": [
+            "syllable 1: attested affix tone candidate"
+          ],
+          "matched_form": "-sǐ",
+          "entry_id": "w63",
+          "attestation_id": "stedt-rn-455410",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "死了",
+          "en": "[dead]",
+          "pos": "vsuff.",
+          "source_term": "-si3",
+          "notations": {
+            "accent": [
+              "-sǐ"
+            ],
+            "ipa": [
+              "-sɨ²¹"
+            ]
+          },
+          "locator": "STEDT rn 455410 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.8,
+              "changes": [
+                "syllable 1: attested affix tone candidate"
+              ],
+              "matched_form": "-sǐ",
+              "entry_id": "w63",
+              "attestation_id": "w2853",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "死了",
+              "en": "[dead]",
+              "pos": "vsuff.",
+              "source_term": "-si2",
+              "notations": {
+                "accent": [
+                  "-sǐ"
+                ],
+                "ipa": [
+                  "-sɨ²¹"
+                ]
+              },
+              "locator": "Sheet1!A83:C83"
+            },
+            {
+              "cost": 0.8,
+              "changes": [
+                "syllable 1: attested affix tone candidate"
+              ],
+              "matched_form": "-sǐ",
+              "entry_id": "w63",
+              "attestation_id": "w63",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "死了",
+              "en": "[dead]",
+              "pos": "vsuff.",
+              "source_term": "-si3",
+              "notations": {
+                "accent": [
+                  "-sǐ"
+                ],
+                "ipa": [
+                  "-sɨ²¹"
+                ]
+              },
+              "locator": "词条 63"
+            }
+          ]
+        },
+        {
+          "cost": 0.8,
+          "changes": [
+            "syllable 1: attested affix tone candidate"
+          ],
+          "matched_form": "-SǏ",
+          "entry_id": "w63",
+          "attestation_id": "w6933",
+          "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+          "canonical_source": "brassett-2004",
+          "zh": "死了",
+          "en": "[dead]",
+          "pos": "vsuff.",
+          "source_term": "-SIr",
+          "notations": {
+            "accent": [
+              "-SǏ"
+            ]
+          },
+          "locator": "Sheet1!C1051:G1051"
+        }
+      ],
+      "segmentations": [],
+      "notice": "候选须结合句法、词义和上下文选择；保留原记音，不自动改写原文。"
+    },
+    {
+      "query": "huax",
+      "notation": "ye",
+      "mode": "static_pronunciation_candidates",
+      "embedding_run": false,
+      "max_cost": 2.0,
+      "unsupported_forms": 465,
+      "whole": [
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "huā",
+          "entry_id": "w890",
+          "attestation_id": "stedt-rn-456375",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "话",
+          "en": "words",
+          "pos": "n.",
+          "source_term": "hua1",
+          "notations": {
+            "accent": [
+              "huā"
+            ],
+            "ipa": [
+              "fua⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 456375 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "huā",
+              "entry_id": "w890",
+              "attestation_id": "w3816",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "话",
+              "en": "words",
+              "pos": "n.",
+              "source_term": "hua1",
+              "notations": {
+                "accent": [
+                  "huā"
+                ],
+                "ipa": [
+                  "fua⁵⁵"
+                ]
+              },
+              "locator": "Sheet1!A1046:C1046"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "huā",
+              "entry_id": "w890",
+              "attestation_id": "w6030",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "话",
+              "en": "words",
+              "pos": "n.",
+              "source_term": "huax",
+              "notations": {
+                "accent": [
+                  "huā"
+                ]
+              },
+              "locator": "Sheet1!C148:G148"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "huā",
+              "entry_id": "w890",
+              "attestation_id": "w890",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "话",
+              "en": "words",
+              "pos": "n.",
+              "source_term": "hua1",
+              "notations": {
+                "accent": [
+                  "huā"
+                ],
+                "ipa": [
+                  "fua⁵⁵"
+                ]
+              },
+              "locator": "词条 890"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "huā",
+          "entry_id": "stedt-rn-215805",
+          "attestation_id": "stedt-rn-215805",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "分发",
+          "en": "give out / distribute",
+          "pos": "",
+          "source_term": "xua⁵⁵",
+          "notations": {
+            "accent": [
+              "huā"
+            ],
+            "ipa": [
+              "xua⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 215805 · 原文定位 702.38"
+        }
+      ],
+      "segmentations": [],
+      "notice": "候选须结合句法、词义和上下文选择；保留原记音，不自动改写原文。"
+    },
+    {
+      "query": "laf",
+      "notation": "ye",
+      "mode": "static_pronunciation_candidates",
+      "embedding_run": false,
+      "max_cost": 2.0,
+      "unsupported_forms": 465,
+      "whole": [
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "w1217",
+          "attestation_id": "stedt-rn-453801",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "扔",
+          "en": "fling",
+          "pos": "v",
+          "source_term": "la²",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la²⁴"
+            ]
+          },
+          "locator": "STEDT rn 453801 · 原文定位 2.2",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1217",
+              "attestation_id": "stedt-rn-456731",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "扔",
+              "en": "fling",
+              "pos": "vt.",
+              "source_term": "la2",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "STEDT rn 456731 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1217",
+              "attestation_id": "w1217",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "扔",
+              "en": "to fling",
+              "pos": "vt.",
+              "source_term": "la2",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "词条 1217"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1217",
+              "attestation_id": "w4184",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "扔",
+              "en": "fling",
+              "pos": "vt.",
+              "source_term": "la4",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "Sheet1!A1414:C1414"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1217",
+              "attestation_id": "w6766",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "扔",
+              "en": "to fling",
+              "pos": "vt.",
+              "source_term": "laf",
+              "notations": {
+                "accent": [
+                  "lá"
+                ]
+              },
+              "locator": "Sheet1!C884:G884"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "w1218",
+          "attestation_id": "stedt-rn-453802",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "舔",
+          "en": "lap, lick",
+          "pos": "v",
+          "source_term": "la²",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la²⁴"
+            ]
+          },
+          "locator": "STEDT rn 453802 · 原文定位 2.2",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1218",
+              "attestation_id": "stedt-rn-456732",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "舔",
+              "en": "lap, lick",
+              "pos": "vt.",
+              "source_term": "la2",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "STEDT rn 456732 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1218",
+              "attestation_id": "w1218",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "舔",
+              "en": "to lap, lick",
+              "pos": "vt.",
+              "source_term": "la2",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "词条 1218"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1218",
+              "attestation_id": "w4183",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "舔",
+              "en": "lap, lick",
+              "pos": "vt.",
+              "source_term": "la4",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "Sheet1!A1413:C1413"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1218",
+              "attestation_id": "w6161",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "舔",
+              "en": "to lap, lick",
+              "pos": "vt.",
+              "source_term": "laf",
+              "notations": {
+                "accent": [
+                  "lá"
+                ]
+              },
+              "locator": "Sheet1!C279:G279"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "w4182",
+          "attestation_id": "stedt-rn-454895",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "厚",
+          "en": "thick",
+          "pos": "be v.",
+          "source_term": "la²",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la²⁴"
+            ]
+          },
+          "locator": "STEDT rn 454895 · 原文定位 6.3",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w4182",
+              "attestation_id": "stedt-rn-456733",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "厚",
+              "en": "thick",
+              "pos": "vi.",
+              "source_term": "la2",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "STEDT rn 456733 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w4182",
+              "attestation_id": "w4182",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "厚",
+              "en": "thick",
+              "pos": "vi.",
+              "source_term": "la4",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "Sheet1!A1412:C1412"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "w1216",
+          "attestation_id": "stedt-rn-455088",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "一",
+          "en": "one",
+          "pos": "",
+          "source_term": "la²",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la²⁴"
+            ]
+          },
+          "locator": "STEDT rn 455088 · 原文定位 7.2",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1216",
+              "attestation_id": "stedt-rn-456730",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "一",
+              "en": "one",
+              "pos": "num.",
+              "source_term": "la2",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "STEDT rn 456730 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1216",
+              "attestation_id": "w1216",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "一",
+              "en": "one",
+              "pos": "num.",
+              "source_term": "la2",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "词条 1216"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1216",
+              "attestation_id": "w4181",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "一",
+              "en": "one",
+              "pos": "num.",
+              "source_term": "la4",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la²⁴"
+                ]
+              },
+              "locator": "Sheet1!A1411:C1411"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1216",
+              "attestation_id": "w7950",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "一",
+              "en": "one",
+              "pos": "num.",
+              "source_term": "laf",
+              "notations": {
+                "accent": [
+                  "lá"
+                ]
+              },
+              "locator": "Sheet1!C2068:G2068"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "stedt-rn-455255",
+          "attestation_id": "stedt-rn-455255",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "一点儿；少量",
+          "en": "a little",
+          "pos": "",
+          "source_term": "la²",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la²⁴"
+            ]
+          },
+          "locator": "STEDT rn 455255 · 原文定位 7.5"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "w1219",
+          "attestation_id": "w1219",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "canonical_source": "brassett-2004",
+          "zh": "厚",
+          "en": "to be thick",
+          "pos": "vi.",
+          "source_term": "la2",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la²⁴"
+            ]
+          },
+          "locator": "词条 1219",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "w1219",
+              "attestation_id": "w7936",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "厚",
+              "en": "to be thick",
+              "pos": "vi.",
+              "source_term": "laf",
+              "notations": {
+                "accent": [
+                  "lá"
+                ]
+              },
+              "locator": "Sheet1!C2054:G2054"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "stedt-rn-127191",
+          "attestation_id": "stedt-rn-127191",
+          "source": "stedt-24cc5bbb03",
+          "canonical_source": "stedt-24cc5bbb03",
+          "zh": "舔",
+          "en": "lick",
+          "pos": "",
+          "source_term": "la³⁵",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la³⁵"
+            ]
+          },
+          "locator": "STEDT rn 127191 · 原文定位 3.8.4",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "stedt-rn-127191",
+              "attestation_id": "stedt-rn-207390",
+              "source": "stedt-7fd6565400",
+              "canonical_source": "stedt-7fd6565400",
+              "zh": "舔",
+              "en": "lick",
+              "pos": "",
+              "source_term": "la³⁵",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la³⁵"
+                ]
+              },
+              "locator": "STEDT rn 207390 · 原文定位 537.38"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "stedt-rn-127191",
+              "attestation_id": "stedt-rn-43445",
+              "source": "stedt-cb523fc3dc",
+              "canonical_source": "stedt-cb523fc3dc",
+              "zh": "舔",
+              "en": "lick",
+              "pos": "",
+              "source_term": "la³⁵",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la³⁵"
+                ]
+              },
+              "locator": "STEDT rn 43445 · 原文定位 未标明"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "stedt-rn-208461",
+          "attestation_id": "stedt-rn-208461",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "扔；抛",
+          "en": "throw",
+          "pos": "",
+          "source_term": "la³⁵",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la³⁵"
+            ]
+          },
+          "locator": "STEDT rn 208461 · 原文定位 558.38"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "stedt-rn-208563",
+          "attestation_id": "stedt-rn-208563",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "东（东方）",
+          "en": "cast",
+          "pos": "",
+          "source_term": "la³⁵",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la³⁵"
+            ]
+          },
+          "locator": "STEDT rn 208563 · 原文定位 560.38"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "stedt-rn-289218",
+          "attestation_id": "stedt-rn-221466",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "厚",
+          "en": "thick",
+          "pos": "",
+          "source_term": "la³⁵",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la³⁵"
+            ]
+          },
+          "locator": "STEDT rn 221466 · 原文定位 813.38",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "stedt-rn-289218",
+              "attestation_id": "stedt-rn-289218",
+              "source": "stedt-cb523fc3dc",
+              "canonical_source": "stedt-cb523fc3dc",
+              "zh": "厚",
+              "en": "thick",
+              "pos": "",
+              "source_term": "la³⁵",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la³⁵"
+                ]
+              },
+              "locator": "STEDT rn 289218 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "stedt-rn-289218",
+              "attestation_id": "stedt-rn-395536",
+              "source": "stedt-610ab69a37",
+              "canonical_source": "stedt-610ab69a37",
+              "zh": "厚",
+              "en": "thick",
+              "pos": "adj",
+              "source_term": "la³⁵",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la³⁵"
+                ]
+              },
+              "locator": "STEDT rn 395536 · 原文定位 0980.49"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "stedt-rn-386074",
+          "attestation_id": "stedt-rn-226464",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "一",
+          "en": "one",
+          "pos": "",
+          "source_term": "la³⁵",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la³⁵"
+            ]
+          },
+          "locator": "STEDT rn 226464 · 原文定位 911.38",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "lá",
+              "entry_id": "stedt-rn-386074",
+              "attestation_id": "stedt-rn-386074",
+              "source": "stedt-610ab69a37",
+              "canonical_source": "stedt-610ab69a37",
+              "zh": "一",
+              "en": "one",
+              "pos": "num",
+              "source_term": "la³⁵",
+              "notations": {
+                "accent": [
+                  "lá"
+                ],
+                "ipa": [
+                  "la³⁵"
+                ]
+              },
+              "locator": "STEDT rn 386074 · 原文定位 0797.49"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "stedt-rn-423736",
+          "attestation_id": "stedt-rn-423736",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "扔；投",
+          "en": "throw / toss",
+          "pos": "v.",
+          "source_term": "la³⁵",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la³⁵"
+            ]
+          },
+          "locator": "STEDT rn 423736 · 原文定位 1591.49"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "lá",
+          "entry_id": "stedt-rn-427705",
+          "attestation_id": "stedt-rn-427705",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "舔；舐",
+          "en": "lick / lap",
+          "pos": "v.",
+          "source_term": "la³⁵",
+          "notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la³⁵"
+            ]
+          },
+          "locator": "STEDT rn 427705 · 原文定位 1674.49"
+        },
+        {
+          "cost": 0.25,
+          "changes": [
+            "syllable 1: tone unspecified"
+          ],
+          "matched_form": "la",
+          "entry_id": "stedt-rn-455050",
+          "attestation_id": "stedt-rn-455050",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "疑问句末助词",
+          "en": "interrogative sentential particle",
+          "pos": "",
+          "source_term": "la",
+          "notations": {
+            "accent": [
+              "la"
+            ],
+            "ipa": [
+              "la"
+            ]
+          },
+          "locator": "STEDT rn 455050 · 原文定位 7.1"
+        },
+        {
+          "cost": 0.25,
+          "changes": [
+            "syllable 1: tone unspecified"
+          ],
+          "matched_form": "la",
+          "entry_id": "w1213",
+          "attestation_id": "stedt-rn-456726",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "(叹词)",
+          "en": "(excl)",
+          "pos": "part.",
+          "source_term": "la",
+          "notations": {
+            "accent": [
+              "la"
+            ],
+            "ipa": [
+              "la"
+            ]
+          },
+          "locator": "STEDT rn 456726 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.25,
+              "changes": [
+                "syllable 1: tone unspecified"
+              ],
+              "matched_form": "la",
+              "entry_id": "w1213",
+              "attestation_id": "w1213",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "(叹词)",
+              "en": "(excl)",
+              "pos": "part.",
+              "source_term": "la",
+              "notations": {
+                "accent": [
+                  "la"
+                ],
+                "ipa": [
+                  "la"
+                ]
+              },
+              "locator": "词条 1213"
+            },
+            {
+              "cost": 0.25,
+              "changes": [
+                "syllable 1: tone unspecified"
+              ],
+              "matched_form": "la",
+              "entry_id": "w1213",
+              "attestation_id": "w4156",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "(叹词)",
+              "en": "(excl)",
+              "pos": "part.",
+              "source_term": "la",
+              "notations": {
+                "accent": [
+                  "la"
+                ],
+                "ipa": [
+                  "la"
+                ]
+              },
+              "locator": "Sheet1!A1386:C1386"
+            },
+            {
+              "cost": 0.25,
+              "changes": [
+                "syllable 1: tone unspecified"
+              ],
+              "matched_form": "la",
+              "entry_id": "w1213",
+              "attestation_id": "w7593",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "(叹词)",
+              "en": "(excl)",
+              "pos": "part.",
+              "source_term": "la",
+              "notations": {
+                "accent": [
+                  "la"
+                ]
+              },
+              "locator": "Sheet1!C1711:G1711"
+            }
+          ]
+        },
+        {
+          "cost": 0.8,
+          "changes": [
+            "syllable 1: attested affix tone candidate"
+          ],
+          "matched_form": "-lā",
+          "entry_id": "w45",
+          "attestation_id": "stedt-rn-455386",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "继续",
+          "en": "[continuous, repetitive]",
+          "pos": "vsuff.",
+          "source_term": "-la1",
+          "notations": {
+            "accent": [
+              "-lā"
+            ],
+            "ipa": [
+              "-la⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 455386 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.8,
+              "changes": [
+                "syllable 1: attested affix tone candidate"
+              ],
+              "matched_form": "-lā",
+              "entry_id": "w45",
+              "attestation_id": "w2831",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "继续",
+              "en": "[continuous, repetitive]",
+              "pos": "vsuff.",
+              "source_term": "-la1",
+              "notations": {
+                "accent": [
+                  "-lā"
+                ],
+                "ipa": [
+                  "-la⁵⁵"
+                ]
+              },
+              "locator": "Sheet1!A61:C61"
+            },
+            {
+              "cost": 0.8,
+              "changes": [
+                "syllable 1: attested affix tone candidate"
+              ],
+              "matched_form": "-lā",
+              "entry_id": "w45",
+              "attestation_id": "w45",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "继续",
+              "en": "[continuous, repetitive]",
+              "pos": "vsuff.",
+              "source_term": "-la1",
+              "notations": {
+                "accent": [
+                  "-lā"
+                ],
+                "ipa": [
+                  "-la⁵⁵"
+                ]
+              },
+              "locator": "词条 45"
+            }
+          ]
+        },
+        {
+          "cost": 0.8,
+          "changes": [
+            "syllable 1: attested affix tone candidate"
+          ],
+          "matched_form": "-LĀ",
+          "entry_id": "w45",
+          "attestation_id": "w7410",
+          "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+          "canonical_source": "brassett-2004",
+          "zh": "继续",
+          "en": "[continuous, repetitive]",
+          "pos": "vsuff.",
+          "source_term": "-LAx",
+          "notations": {
+            "accent": [
+              "-LĀ"
+            ]
+          },
+          "locator": "Sheet1!C1528:G1528"
+        }
+      ],
+      "segmentations": [],
+      "notice": "候选须结合句法、词义和上下文选择；保留原记音，不自动改写原文。"
+    },
+    {
+      "query": "dax",
+      "notation": "ye",
+      "mode": "static_pronunciation_candidates",
+      "embedding_run": false,
+      "max_cost": 2.0,
+      "unsupported_forms": 465,
+      "whole": [
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "dā",
+          "entry_id": "w509",
+          "attestation_id": "stedt-rn-454290",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "滴",
+          "en": "drip",
+          "pos": "v",
+          "source_term": "da¹",
+          "notations": {
+            "accent": [
+              "dā"
+            ],
+            "ipa": [
+              "ta⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 454290 · 原文定位 4.3",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "dā",
+              "entry_id": "w509",
+              "attestation_id": "stedt-rn-455938",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "滴",
+              "en": "drip",
+              "pos": "vi.",
+              "source_term": "da1",
+              "notations": {
+                "accent": [
+                  "dā"
+                ],
+                "ipa": [
+                  "ta⁵⁵"
+                ]
+              },
+              "locator": "STEDT rn 455938 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "dā",
+              "entry_id": "w509",
+              "attestation_id": "w3367",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "滴",
+              "en": "drip",
+              "pos": "vi.",
+              "source_term": "da1",
+              "notations": {
+                "accent": [
+                  "dā"
+                ],
+                "ipa": [
+                  "ta⁵⁵"
+                ]
+              },
+              "locator": "Sheet1!A597:C597"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "dā",
+              "entry_id": "w509",
+              "attestation_id": "w509",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "滴",
+              "en": "to drip",
+              "pos": "vi.",
+              "source_term": "da1",
+              "notations": {
+                "accent": [
+                  "dā"
+                ],
+                "ipa": [
+                  "ta⁵⁵"
+                ]
+              },
+              "locator": "词条 509"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "dā",
+              "entry_id": "w509",
+              "attestation_id": "w7681",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "滴",
+              "en": "to drip",
+              "pos": "vi.",
+              "source_term": "dax",
+              "notations": {
+                "accent": [
+                  "dā"
+                ]
+              },
+              "locator": "Sheet1!C1799:G1799"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "dā",
+              "entry_id": "w509",
+              "attestation_id": "stedt-rn-219273",
+              "source": "stedt-7fd6565400",
+              "canonical_source": "stedt-7fd6565400",
+              "zh": "滴",
+              "en": "drip",
+              "pos": "",
+              "source_term": "ta⁵⁵",
+              "notations": {
+                "accent": [
+                  "dā"
+                ],
+                "ipa": [
+                  "ta⁵⁵"
+                ]
+              },
+              "locator": "STEDT rn 219273 · 原文定位 770.38"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "dā",
+              "entry_id": "w509",
+              "attestation_id": "stedt-rn-289176",
+              "source": "stedt-cb523fc3dc",
+              "canonical_source": "stedt-cb523fc3dc",
+              "zh": "滴",
+              "en": "drip",
+              "pos": "",
+              "source_term": "ta⁵⁵",
+              "notations": {
+                "accent": [
+                  "dā"
+                ],
+                "ipa": [
+                  "ta⁵⁵"
+                ]
+              },
+              "locator": "STEDT rn 289176 · 原文定位 未标明"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "dā",
+          "entry_id": "stedt-rn-228402",
+          "attestation_id": "stedt-rn-228402",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "用于碗等物的量词",
+          "en": "classifier for e.g. bowls",
+          "pos": "",
+          "source_term": "ta⁵⁵",
+          "notations": {
+            "accent": [
+              "dā"
+            ],
+            "ipa": [
+              "ta⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 228402 · 原文定位 949.38"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "dā",
+          "entry_id": "stedt-rn-289112",
+          "attestation_id": "stedt-rn-289112",
+          "source": "stedt-cb523fc3dc",
+          "canonical_source": "stedt-cb523fc3dc",
+          "zh": "欠",
+          "en": "owe",
+          "pos": "",
+          "source_term": "ta⁵⁵",
+          "notations": {
+            "accent": [
+              "dā"
+            ],
+            "ipa": [
+              "ta⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 289112 · 原文定位 未标明"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "dā",
+          "entry_id": "stedt-rn-388062",
+          "attestation_id": "stedt-rn-388062",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "碗的量词",
+          "en": "classifier for bowls",
+          "pos": "clf",
+          "source_term": "ta⁵⁵",
+          "notations": {
+            "accent": [
+              "dā"
+            ],
+            "ipa": [
+              "ta⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 388062 · 原文定位 0836.49"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "dā",
+          "entry_id": "stedt-rn-409110",
+          "attestation_id": "stedt-rn-409110",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "烧；燃烧",
+          "en": "burn",
+          "pos": "v.",
+          "source_term": "ta⁵⁵",
+          "notations": {
+            "accent": [
+              "dā"
+            ],
+            "ipa": [
+              "ta⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 409110 · 原文定位 1269.49"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "dà",
+          "entry_id": "w517",
+          "attestation_id": "stedt-rn-453526",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "燃",
+          "en": "burn",
+          "pos": "v",
+          "source_term": "da⁴",
+          "notations": {
+            "accent": [
+              "dà"
+            ],
+            "ipa": [
+              "ta⁵¹"
+            ]
+          },
+          "locator": "STEDT rn 453526 · 原文定位 1.2",
+          "alternative_witnesses": [
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "dà",
+              "entry_id": "w517",
+              "attestation_id": "stedt-rn-455946",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "燃",
+              "en": "burn",
+              "pos": "vi.",
+              "source_term": "da4",
+              "notations": {
+                "accent": [
+                  "dà"
+                ],
+                "ipa": [
+                  "ta⁵¹"
+                ]
+              },
+              "locator": "STEDT rn 455946 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "dà",
+              "entry_id": "w517",
+              "attestation_id": "w3397",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "燃",
+              "en": "burn",
+              "pos": "vi.",
+              "source_term": "da3",
+              "notations": {
+                "accent": [
+                  "dà"
+                ],
+                "ipa": [
+                  "ta⁵¹"
+                ]
+              },
+              "locator": "Sheet1!A627:C627"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "dà",
+              "entry_id": "w517",
+              "attestation_id": "w517",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "燃",
+              "en": "to burn",
+              "pos": "vi.",
+              "source_term": "da4",
+              "notations": {
+                "accent": [
+                  "dà"
+                ],
+                "ipa": [
+                  "ta⁵¹"
+                ]
+              },
+              "locator": "词条 517"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "dà",
+              "entry_id": "w517",
+              "attestation_id": "w7872",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "燃",
+              "en": "to burn",
+              "pos": "vi.",
+              "source_term": "dav",
+              "notations": {
+                "accent": [
+                  "dà"
+                ]
+              },
+              "locator": "Sheet1!C1990:G1990"
+            }
+          ]
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "dà",
+          "entry_id": "stedt-rn-454081",
+          "attestation_id": "stedt-rn-454081",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "打谷；脱粒",
+          "en": "thresh",
+          "pos": "v",
+          "source_term": "da⁴",
+          "notations": {
+            "accent": [
+              "dà"
+            ],
+            "ipa": [
+              "ta⁵¹"
+            ]
+          },
+          "locator": "STEDT rn 454081 · 原文定位 3.3"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "dà",
+          "entry_id": "w516",
+          "attestation_id": "stedt-rn-454291",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "欠/缺少",
+          "en": "lack",
+          "pos": "v",
+          "source_term": "da⁴",
+          "notations": {
+            "accent": [
+              "dà"
+            ],
+            "ipa": [
+              "ta⁵¹"
+            ]
+          },
+          "locator": "STEDT rn 454291 · 原文定位 4.3",
+          "alternative_witnesses": [
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "dà",
+              "entry_id": "w516",
+              "attestation_id": "stedt-rn-455945",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "欠/缺少",
+              "en": "lack",
+              "pos": "vt.",
+              "source_term": "da4",
+              "notations": {
+                "accent": [
+                  "dà"
+                ],
+                "ipa": [
+                  "ta⁵¹"
+                ]
+              },
+              "locator": "STEDT rn 455945 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "dà",
+              "entry_id": "w516",
+              "attestation_id": "w3399",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "欠/缺少",
+              "en": "lack",
+              "pos": "vt.",
+              "source_term": "da3",
+              "notations": {
+                "accent": [
+                  "dà"
+                ],
+                "ipa": [
+                  "ta⁵¹"
+                ]
+              },
+              "locator": "Sheet1!A629:C629"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "dà",
+              "entry_id": "w516",
+              "attestation_id": "w516",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "欠/缺少",
+              "en": "to lack",
+              "pos": "vt.",
+              "source_term": "da4",
+              "notations": {
+                "accent": [
+                  "dà"
+                ],
+                "ipa": [
+                  "ta⁵¹"
+                ]
+              },
+              "locator": "词条 516"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "dà",
+              "entry_id": "w516",
+              "attestation_id": "w8206",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "欠/缺少",
+              "en": "to lack",
+              "pos": "vt.",
+              "source_term": "dav",
+              "notations": {
+                "accent": [
+                  "dà"
+                ]
+              },
+              "locator": "Sheet1!C2324:G2324"
+            }
+          ]
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "dà",
+          "entry_id": "stedt-rn-455216",
+          "attestation_id": "stedt-rn-455216",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "一起",
+          "en": "together",
+          "pos": "",
+          "source_term": "da⁴",
+          "notations": {
+            "accent": [
+              "dà"
+            ],
+            "ipa": [
+              "ta⁵¹"
+            ]
+          },
+          "locator": "STEDT rn 455216 · 原文定位 7.5"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "dà",
+          "entry_id": "w3398",
+          "attestation_id": "stedt-rn-455961",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "一起",
+          "en": "all, together",
+          "pos": "advm.",
+          "source_term": "da4",
+          "notations": {
+            "accent": [
+              "dà"
+            ],
+            "ipa": [
+              "ta⁵¹"
+            ]
+          },
+          "locator": "STEDT rn 455961 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "dà",
+              "entry_id": "w3398",
+              "attestation_id": "w3398",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "一起",
+              "en": "all, together",
+              "pos": "advm.",
+              "source_term": "da3",
+              "notations": {
+                "accent": [
+                  "dà"
+                ],
+                "ipa": [
+                  "ta⁵¹"
+                ]
+              },
+              "locator": "Sheet1!A628:C628"
+            }
+          ]
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "dà",
+          "entry_id": "stedt-rn-215907",
+          "attestation_id": "stedt-rn-215907",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "欠",
+          "en": "owe",
+          "pos": "",
+          "source_term": "ta⁵³",
+          "notations": {
+            "accent": [
+              "dà"
+            ],
+            "ipa": [
+              "ta⁵³"
+            ]
+          },
+          "locator": "STEDT rn 215907 · 原文定位 704.38"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "dà",
+          "entry_id": "stedt-rn-422711",
+          "attestation_id": "stedt-rn-422711",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "欠钱",
+          "en": "owe (money)",
+          "pos": "v.",
+          "source_term": "ta⁵³",
+          "notations": {
+            "accent": [
+              "dà"
+            ],
+            "ipa": [
+              "ta⁵³"
+            ]
+          },
+          "locator": "STEDT rn 422711 · 原文定位 1569.49"
+        },
+        {
+          "cost": 0.8,
+          "changes": [
+            "syllable 1: attested affix tone candidate"
+          ],
+          "matched_form": "-dá",
+          "entry_id": "w18",
+          "attestation_id": "stedt-rn-455350",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "不",
+          "en": "[not]",
+          "pos": "vsuff.",
+          "source_term": "-da2",
+          "notations": {
+            "accent": [
+              "-dá"
+            ],
+            "ipa": [
+              "-ta²⁴"
+            ]
+          },
+          "locator": "STEDT rn 455350 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.8,
+              "changes": [
+                "syllable 1: attested affix tone candidate"
+              ],
+              "matched_form": "-dá",
+              "entry_id": "w18",
+              "attestation_id": "w18",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "不",
+              "en": "[not]",
+              "pos": "vsuff.",
+              "source_term": "-da2",
+              "notations": {
+                "accent": [
+                  "-dá"
+                ],
+                "ipa": [
+                  "-ta²⁴"
+                ]
+              },
+              "locator": "词条 18"
+            },
+            {
+              "cost": 0.8,
+              "changes": [
+                "syllable 1: attested affix tone candidate"
+              ],
+              "matched_form": "-dá",
+              "entry_id": "w18",
+              "attestation_id": "w2799",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "不",
+              "en": "[not]",
+              "pos": "vsuff.",
+              "source_term": "-da4",
+              "notations": {
+                "accent": [
+                  "-dá"
+                ],
+                "ipa": [
+                  "-ta²⁴"
+                ]
+              },
+              "locator": "Sheet1!A29:C29"
+            }
+          ]
+        },
+        {
+          "cost": 0.8,
+          "changes": [
+            "syllable 1: attested affix tone candidate"
+          ],
+          "matched_form": "-DÁ",
+          "entry_id": "w18",
+          "attestation_id": "w7761",
+          "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+          "canonical_source": "brassett-2004",
+          "zh": "不",
+          "en": "[not]",
+          "pos": "vsuff.",
+          "source_term": "-DAf",
+          "notations": {
+            "accent": [
+              "-DÁ"
+            ]
+          },
+          "locator": "Sheet1!C1879:G1879"
+        }
+      ],
+      "segmentations": [],
+      "notice": "候选须结合句法、词义和上下文选择；保留原记音，不自动改写原文。"
+    },
+    {
+      "query": "jiev",
+      "notation": "ye",
+      "mode": "static_pronunciation_candidates",
+      "embedding_run": false,
+      "max_cost": 2.0,
+      "unsupported_forms": 465,
+      "whole": [
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "jiè",
+          "entry_id": "w1022",
+          "attestation_id": "stedt-rn-454330",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "追/赶",
+          "en": "chase",
+          "pos": "v",
+          "source_term": "jie⁴",
+          "notations": {
+            "accent": [
+              "jiè"
+            ],
+            "ipa": [
+              "tɕiɛ⁵¹"
+            ]
+          },
+          "locator": "STEDT rn 454330 · 原文定位 4.3",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "jiè",
+              "entry_id": "w1022",
+              "attestation_id": "stedt-rn-456516",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "追/赶",
+              "en": "chase",
+              "pos": "vt.",
+              "source_term": "jie4",
+              "notations": {
+                "accent": [
+                  "jiè"
+                ],
+                "ipa": [
+                  "tɕiɛ⁵¹"
+                ]
+              },
+              "locator": "STEDT rn 456516 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "jiè",
+              "entry_id": "w1022",
+              "attestation_id": "w1022",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "追/赶",
+              "en": "to chase",
+              "pos": "vt.",
+              "source_term": "jie4",
+              "notations": {
+                "accent": [
+                  "jiè"
+                ],
+                "ipa": [
+                  "tɕiɛ⁵¹"
+                ]
+              },
+              "locator": "词条 1022"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "jiè",
+              "entry_id": "w1022",
+              "attestation_id": "w3965",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "追/赶",
+              "en": "chase",
+              "pos": "vt.",
+              "source_term": "jie3",
+              "notations": {
+                "accent": [
+                  "jiè"
+                ],
+                "ipa": [
+                  "tɕiɛ⁵¹"
+                ]
+              },
+              "locator": "Sheet1!A1195:C1195"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "jiè",
+              "entry_id": "w1022",
+              "attestation_id": "w6927",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "追/赶",
+              "en": "to chase",
+              "pos": "vt.",
+              "source_term": "jiev",
+              "notations": {
+                "accent": [
+                  "jiè"
+                ]
+              },
+              "locator": "Sheet1!C1045:G1045"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "jiè",
+          "entry_id": "stedt-rn-216315",
+          "attestation_id": "stedt-rn-216315",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "追；追赶",
+          "en": "chase / run after",
+          "pos": "",
+          "source_term": "tɕie⁵³",
+          "notations": {
+            "accent": [
+              "jiè"
+            ],
+            "ipa": [
+              "tɕie⁵³"
+            ]
+          },
+          "locator": "STEDT rn 216315 · 原文定位 712.38"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "jiè",
+          "entry_id": "stedt-rn-216366",
+          "attestation_id": "stedt-rn-216366",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "赶走",
+          "en": "drive away",
+          "pos": "",
+          "source_term": "tɕie⁵³",
+          "notations": {
+            "accent": [
+              "jiè"
+            ],
+            "ipa": [
+              "tɕie⁵³"
+            ]
+          },
+          "locator": "STEDT rn 216366 · 原文定位 713.38"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "jiè",
+          "entry_id": "stedt-rn-423039",
+          "attestation_id": "stedt-rn-423039",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "驱逐；赶走",
+          "en": "drive out / expel",
+          "pos": "v.",
+          "source_term": "tɕie⁵³",
+          "notations": {
+            "accent": [
+              "jiè"
+            ],
+            "ipa": [
+              "tɕie⁵³"
+            ]
+          },
+          "locator": "STEDT rn 423039 · 原文定位 1576.49"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "jiè",
+          "entry_id": "stedt-rn-434046",
+          "attestation_id": "stedt-rn-434046",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "追",
+          "en": "chase after",
+          "pos": "v.",
+          "source_term": "tɕie⁵³",
+          "notations": {
+            "accent": [
+              "jiè"
+            ],
+            "ipa": [
+              "tɕie⁵³"
+            ]
+          },
+          "locator": "STEDT rn 434046 · 原文定位 1811.49"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "jiē",
+          "entry_id": "w1017",
+          "attestation_id": "stedt-rn-456511",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "揭",
+          "en": "uncover",
+          "pos": "vt.",
+          "source_term": "jie1",
+          "notations": {
+            "accent": [
+              "jiē"
+            ],
+            "ipa": [
+              "tɕiɛ⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 456511 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "jiē",
+              "entry_id": "w1017",
+              "attestation_id": "w1017",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "揭",
+              "en": "to uncover",
+              "pos": "vt.",
+              "source_term": "jie1",
+              "notations": {
+                "accent": [
+                  "jiē"
+                ],
+                "ipa": [
+                  "tɕiɛ⁵⁵"
+                ]
+              },
+              "locator": "词条 1017"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "jiē",
+              "entry_id": "w1017",
+              "attestation_id": "w3940",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "揭",
+              "en": "uncover",
+              "pos": "vt.",
+              "source_term": "jie1",
+              "notations": {
+                "accent": [
+                  "jiē"
+                ],
+                "ipa": [
+                  "tɕiɛ⁵⁵"
+                ]
+              },
+              "locator": "Sheet1!A1170:C1170"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "jiē",
+              "entry_id": "w1017",
+              "attestation_id": "w8179",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "揭",
+              "en": "to uncover",
+              "pos": "vt.",
+              "source_term": "jiex",
+              "notations": {
+                "accent": [
+                  "jiē"
+                ]
+              },
+              "locator": "Sheet1!C2297:G2297"
+            }
+          ]
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "jiē",
+          "entry_id": "w1018",
+          "attestation_id": "stedt-rn-456512",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "节",
+          "en": "section of bamboo",
+          "pos": "cl.",
+          "source_term": "jie1",
+          "notations": {
+            "accent": [
+              "jiē"
+            ],
+            "ipa": [
+              "tɕiɛ⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 456512 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "jiē",
+              "entry_id": "w1018",
+              "attestation_id": "w1018",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "节",
+              "en": "section of bamboo",
+              "pos": "cl.",
+              "source_term": "jie1",
+              "notations": {
+                "accent": [
+                  "jiē"
+                ],
+                "ipa": [
+                  "tɕiɛ⁵⁵"
+                ]
+              },
+              "locator": "词条 1018"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "jiē",
+              "entry_id": "w1018",
+              "attestation_id": "w3939",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "节",
+              "en": "section of bamboo",
+              "pos": "cl.",
+              "source_term": "jie1",
+              "notations": {
+                "accent": [
+                  "jiē"
+                ],
+                "ipa": [
+                  "tɕiɛ⁵⁵"
+                ]
+              },
+              "locator": "Sheet1!A1169:C1169"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "jiē",
+              "entry_id": "w1018",
+              "attestation_id": "w7465",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "节",
+              "en": "section of bamboo",
+              "pos": "cl.",
+              "source_term": "jiex",
+              "notations": {
+                "accent": [
+                  "jiē"
+                ]
+              },
+              "locator": "Sheet1!C1583:G1583"
+            }
+          ]
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "jiē",
+          "entry_id": "stedt-rn-213612",
+          "attestation_id": "stedt-rn-213612",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "揭盖",
+          "en": "open (lid)",
+          "pos": "",
+          "source_term": "tɕie⁵⁵",
+          "notations": {
+            "accent": [
+              "jiē"
+            ],
+            "ipa": [
+              "tɕie⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 213612 · 原文定位 659.38"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "jiē",
+          "entry_id": "stedt-rn-289120",
+          "attestation_id": "stedt-rn-289120",
+          "source": "stedt-cb523fc3dc",
+          "canonical_source": "stedt-cb523fc3dc",
+          "zh": "追；追赶",
+          "en": "chase / run after",
+          "pos": "",
+          "source_term": "a⁵⁵tɕe⁵⁵~tɕe⁵⁵",
+          "notations": {
+            "accent": [
+              "ājiē",
+              "jiē"
+            ],
+            "ipa": [
+              "a⁵⁵tɕe⁵⁵~tɕe⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 289120 · 原文定位 未标明"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "jiē",
+          "entry_id": "stedt-rn-289121",
+          "attestation_id": "stedt-rn-289121",
+          "source": "stedt-cb523fc3dc",
+          "canonical_source": "stedt-cb523fc3dc",
+          "zh": "赶走",
+          "en": "drive away",
+          "pos": "",
+          "source_term": "tɕe⁵⁵",
+          "notations": {
+            "accent": [
+              "jiē"
+            ],
+            "ipa": [
+              "tɕe⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 289121 · 原文定位 未标明"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "jiē",
+          "entry_id": "stedt-rn-416623",
+          "attestation_id": "stedt-rn-416623",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "揭（揭盖子）",
+          "en": "lift (the lid)",
+          "pos": "v.",
+          "source_term": "tɕie⁵⁵",
+          "notations": {
+            "accent": [
+              "jiē"
+            ],
+            "ipa": [
+              "tɕie⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 416623 · 原文定位 1438.49"
+        }
+      ],
+      "segmentations": [],
+      "notice": "候选须结合句法、词义和上下文选择；保留原记音，不自动改写原文。"
+    },
+    {
+      "query": "diex",
+      "notation": "ye",
+      "mode": "static_pronunciation_candidates",
+      "embedding_run": false,
+      "max_cost": 2.0,
+      "unsupported_forms": 465,
+      "whole": [
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "diē",
+          "entry_id": "w3479",
+          "attestation_id": "stedt-rn-454806",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "慢",
+          "en": "slow",
+          "pos": "be v.",
+          "source_term": "die¹",
+          "notations": {
+            "accent": [
+              "diē"
+            ],
+            "ipa": [
+              "tiɛ⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 454806 · 原文定位 6.2",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "diē",
+              "entry_id": "w3479",
+              "attestation_id": "stedt-rn-456049",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "慢",
+              "en": "slow",
+              "pos": "vi.",
+              "source_term": "die1",
+              "notations": {
+                "accent": [
+                  "diē"
+                ],
+                "ipa": [
+                  "tiɛ⁵⁵"
+                ]
+              },
+              "locator": "STEDT rn 456049 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "diē",
+              "entry_id": "w3479",
+              "attestation_id": "w3479",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "慢",
+              "en": "slow",
+              "pos": "vi.",
+              "source_term": "die1",
+              "notations": {
+                "accent": [
+                  "diē"
+                ],
+                "ipa": [
+                  "tiɛ⁵⁵"
+                ]
+              },
+              "locator": "Sheet1!A709:C709"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "-diē",
+          "entry_id": "stedt-rn-455322",
+          "attestation_id": "stedt-rn-455322",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "复数后缀",
+          "en": "pluralising suffix",
+          "pos": "",
+          "source_term": "-die¹",
+          "notations": {
+            "accent": [
+              "-diē"
+            ],
+            "ipa": [
+              "-tiɛ⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 455322 · 原文定位 7.8"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "-diē",
+          "entry_id": "w23",
+          "attestation_id": "stedt-rn-455361",
+          "source": "stedt-07898ef938",
+          "canonical_source": "brassett-2004",
+          "zh": "复数",
+          "en": "[plural]",
+          "pos": "nsuff.",
+          "source_term": "-die1",
+          "notations": {
+            "accent": [
+              "-diē"
+            ],
+            "ipa": [
+              "-tiɛ⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 455361 · 原文定位 未标明",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "-diē",
+              "entry_id": "w23",
+              "attestation_id": "w23",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "复数",
+              "en": "[plural]",
+              "pos": "nsuff.",
+              "source_term": "-die1",
+              "notations": {
+                "accent": [
+                  "-diē"
+                ],
+                "ipa": [
+                  "-tiɛ⁵⁵"
+                ]
+              },
+              "locator": "词条 23"
+            },
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "-diē",
+              "entry_id": "w23",
+              "attestation_id": "w2808",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "复数",
+              "en": "[plural]",
+              "pos": "nsuff.",
+              "source_term": "-die1",
+              "notations": {
+                "accent": [
+                  "-diē"
+                ],
+                "ipa": [
+                  "-tiɛ⁵⁵"
+                ]
+              },
+              "locator": "Sheet1!A38:C38"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "diē",
+          "entry_id": "w611",
+          "attestation_id": "w611",
+          "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "canonical_source": "brassett-2004",
+          "zh": "慢/迟",
+          "en": "to be slow",
+          "pos": "vi.",
+          "source_term": "die1",
+          "notations": {
+            "accent": [
+              "diē"
+            ],
+            "ipa": [
+              "tiɛ⁵⁵"
+            ]
+          },
+          "locator": "词条 611",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "diē",
+              "entry_id": "w611",
+              "attestation_id": "w6501",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "慢/迟",
+              "en": "to be slow",
+              "pos": "vi.",
+              "source_term": "diex",
+              "notations": {
+                "accent": [
+                  "diē"
+                ]
+              },
+              "locator": "Sheet1!C619:G619"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "-DIĒ",
+          "entry_id": "w23",
+          "attestation_id": "w6603",
+          "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+          "canonical_source": "brassett-2004",
+          "zh": "复数",
+          "en": "[plural]",
+          "pos": "nsuff.",
+          "source_term": "-DIEx",
+          "notations": {
+            "accent": [
+              "-DIĒ"
+            ]
+          },
+          "locator": "Sheet1!C721:G721"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "diē",
+          "entry_id": "stedt-rn-397431",
+          "attestation_id": "stedt-rn-224016",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "慢",
+          "en": "slow",
+          "pos": "",
+          "source_term": "tie⁵⁵",
+          "notations": {
+            "accent": [
+              "diē"
+            ],
+            "ipa": [
+              "tie⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 224016 · 原文定位 863.38",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "diē",
+              "entry_id": "stedt-rn-397431",
+              "attestation_id": "stedt-rn-397431",
+              "source": "stedt-610ab69a37",
+              "canonical_source": "stedt-610ab69a37",
+              "zh": "慢",
+              "en": "slow",
+              "pos": "",
+              "source_term": "tie⁵⁵",
+              "notations": {
+                "accent": [
+                  "diē"
+                ],
+                "ipa": [
+                  "tie⁵⁵"
+                ]
+              },
+              "locator": "STEDT rn 397431 · 原文定位 1017.49"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "diē",
+          "entry_id": "stedt-rn-397536",
+          "attestation_id": "stedt-rn-224526",
+          "source": "stedt-7fd6565400",
+          "canonical_source": "stedt-7fd6565400",
+          "zh": "迟",
+          "en": "late",
+          "pos": "",
+          "source_term": "tie⁵⁵",
+          "notations": {
+            "accent": [
+              "diē"
+            ],
+            "ipa": [
+              "tie⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 224526 · 原文定位 873.38",
+          "alternative_witnesses": [
+            {
+              "cost": 0.0,
+              "changes": [],
+              "matched_form": "diē",
+              "entry_id": "stedt-rn-397536",
+              "attestation_id": "stedt-rn-397536",
+              "source": "stedt-610ab69a37",
+              "canonical_source": "stedt-610ab69a37",
+              "zh": "迟",
+              "en": "late",
+              "pos": "",
+              "source_term": "tie⁵⁵",
+              "notations": {
+                "accent": [
+                  "diē"
+                ],
+                "ipa": [
+                  "tie⁵⁵"
+                ]
+              },
+              "locator": "STEDT rn 397536 · 原文定位 1019.49"
+            }
+          ]
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "diē",
+          "entry_id": "stedt-rn-289052",
+          "attestation_id": "stedt-rn-289052",
+          "source": "stedt-cb523fc3dc",
+          "canonical_source": "stedt-cb523fc3dc",
+          "zh": "戴帽子",
+          "en": "wear (hat)",
+          "pos": "",
+          "source_term": "te⁵⁵",
+          "notations": {
+            "accent": [
+              "diē"
+            ],
+            "ipa": [
+              "te⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 289052 · 原文定位 未标明"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "diē",
+          "entry_id": "stedt-rn-289263",
+          "attestation_id": "stedt-rn-289263",
+          "source": "stedt-cb523fc3dc",
+          "canonical_source": "stedt-cb523fc3dc",
+          "zh": "慢",
+          "en": "slow",
+          "pos": "",
+          "source_term": "te⁵⁵",
+          "notations": {
+            "accent": [
+              "diē"
+            ],
+            "ipa": [
+              "te⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 289263 · 原文定位 未标明"
+        },
+        {
+          "cost": 0.0,
+          "changes": [],
+          "matched_form": "diē",
+          "entry_id": "stedt-rn-289273",
+          "attestation_id": "stedt-rn-289273",
+          "source": "stedt-cb523fc3dc",
+          "canonical_source": "stedt-cb523fc3dc",
+          "zh": "迟",
+          "en": "late",
+          "pos": "",
+          "source_term": "te⁵⁵",
+          "notations": {
+            "accent": [
+              "diē"
+            ],
+            "ipa": [
+              "te⁵⁵"
+            ]
+          },
+          "locator": "STEDT rn 289273 · 原文定位 未标明"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "diè",
+          "entry_id": "w615",
+          "attestation_id": "stedt-rn-454579",
+          "source": "stedt-39f4cd9a6b",
+          "canonical_source": "brassett-2006",
+          "zh": "戴",
+          "en": "wear (a hat)",
+          "pos": "v",
+          "source_term": "die⁴",
+          "notations": {
+            "accent": [
+              "diè"
+            ],
+            "ipa": [
+              "tiɛ⁵¹"
+            ]
+          },
+          "locator": "STEDT rn 454579 · 原文定位 4.6",
+          "alternative_witnesses": [
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "diè",
+              "entry_id": "w615",
+              "attestation_id": "stedt-rn-456053",
+              "source": "stedt-07898ef938",
+              "canonical_source": "brassett-2004",
+              "zh": "戴",
+              "en": "wear (a hat)",
+              "pos": "vt.",
+              "source_term": "die4",
+              "notations": {
+                "accent": [
+                  "diè"
+                ],
+                "ipa": [
+                  "tiɛ⁵¹"
+                ]
+              },
+              "locator": "STEDT rn 456053 · 原文定位 未标明"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "diè",
+              "entry_id": "w615",
+              "attestation_id": "w3485",
+              "source": "165XnSc-ZLEptpsYT3_gGkCR2lMznvbIO",
+              "canonical_source": "brassett-2004",
+              "zh": "戴",
+              "en": "wear (a hat)",
+              "pos": "vt.",
+              "source_term": "die3",
+              "notations": {
+                "accent": [
+                  "diè"
+                ],
+                "ipa": [
+                  "tiɛ⁵¹"
+                ]
+              },
+              "locator": "Sheet1!A715:C715"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "diè",
+              "entry_id": "w615",
+              "attestation_id": "w615",
+              "source": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+              "canonical_source": "brassett-2004",
+              "zh": "戴",
+              "en": "to wear (a hat)",
+              "pos": "vt.",
+              "source_term": "die4",
+              "notations": {
+                "accent": [
+                  "diè"
+                ],
+                "ipa": [
+                  "tiɛ⁵¹"
+                ]
+              },
+              "locator": "词条 615"
+            },
+            {
+              "cost": 0.5,
+              "changes": [
+                "syllable 1: high/falling tone"
+              ],
+              "matched_form": "diè",
+              "entry_id": "w615",
+              "attestation_id": "w8196",
+              "source": "1w-0oecUhi3MkzPM64qzGNWsm7WSNa_YF",
+              "canonical_source": "brassett-2004",
+              "zh": "戴",
+              "en": "to wear (a hat)",
+              "pos": "vt.",
+              "source_term": "diev",
+              "notations": {
+                "accent": [
+                  "diè"
+                ]
+              },
+              "locator": "Sheet1!C2314:G2314"
+            }
+          ]
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "diè",
+          "entry_id": "stedt-rn-408336",
+          "attestation_id": "stedt-rn-408336",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "戴",
+          "en": "wear (a hat)",
+          "pos": "v.",
+          "source_term": "tie⁵³",
+          "notations": {
+            "accent": [
+              "diè"
+            ],
+            "ipa": [
+              "tie⁵³"
+            ]
+          },
+          "locator": "STEDT rn 408336 · 原文定位 1252.49"
+        },
+        {
+          "cost": 0.5,
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "matched_form": "diè",
+          "entry_id": "stedt-rn-408377",
+          "attestation_id": "stedt-rn-408377",
+          "source": "stedt-610ab69a37",
+          "canonical_source": "stedt-610ab69a37",
+          "zh": "戴头巾",
+          "en": "wear (a turban)",
+          "pos": "v.",
+          "source_term": "tie⁵³",
+          "notations": {
+            "accent": [
+              "diè"
+            ],
+            "ipa": [
+              "tie⁵³"
+            ]
+          },
+          "locator": "STEDT rn 408377 · 原文定位 1253.49"
+        }
+      ],
+      "segmentations": [],
+      "notice": "候选须结合句法、词义和上下文选择；保留原记音，不自动改写原文。"
+    }
+  ]
+}

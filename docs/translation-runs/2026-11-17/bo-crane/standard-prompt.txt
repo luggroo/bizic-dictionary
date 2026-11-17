@@ -1,0 +1,7 @@
+请按这个翻译技能，将以下原文完整译成北部龙山土家语：
+https://github.com/luggroo/bizic-translator/blob/f341ec4cef24c68ea9527d6ddbe4dd6b4e068262/skills/translate-tujia/SKILL.md
+
+བྱ་དེ་ཁྲུང་ཁྲུང་དཀར་པོ།།
+ང་ལ་གཤོག་རྩལ་གཡོར་དང་།།
+ཐག་རིང་རྒྱང་ལ་མི་འགྲོ།།
+ལི་ཐང་བསྐོར་ནས་སླེབས་ཡོང་།།

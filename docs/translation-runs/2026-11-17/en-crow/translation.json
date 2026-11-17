@@ -1,0 +1,2043 @@
+{
+  "version": 1,
+  "source_snapshot": {
+    "revision": "5c148a2bfe860969375c16821f22bb25222ab7d8",
+    "manifest_sha256": "911f92e13f44160277c66644dfff786ef55adb3aaf5feecd604a100dd3a3b51a"
+  },
+  "dialect": "north / Longshan default; Brassett main with named Northern supplement",
+  "start_time_utc": "2026-11-17 15:12:34 UTC",
+  "end_time_utc": "2026-11-17T15:16:58.542794+00:00",
+  "sentences": [
+    {
+      "id": "s1",
+      "source": "A thirsty crow found a pitcher with a little water in it.",
+      "translation": "Gǎ lá lǒng zégǎ, guán lá lǒng nì liē; guán wótū cě lá xié.",
+      "tokens": [
+        {
+          "surface": "Gǎ",
+          "ipa": "ka²¹",
+          "gloss": "crow",
+          "sense": "乌鸦",
+          "entry_id": "w688",
+          "attestation_id": "stedt-rn-453559",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453559 · 原文定位 1.3"
+        },
+        {
+          "surface": "lá",
+          "ipa": "la³⁵",
+          "gloss": "one",
+          "sense": "一",
+          "entry_id": "stedt-rn-386074",
+          "attestation_id": "stedt-rn-226464",
+          "source_id": "stedt-7fd6565400",
+          "locator": "STEDT rn 226464 · 原文定位 911.38"
+        },
+        {
+          "surface": "lǒng",
+          "ipa": "lɔŋ²¹",
+          "gloss": "(for animals, fish, jars, logs, plants)",
+          "sense": "只",
+          "entry_id": "w1391",
+          "attestation_id": "stedt-rn-456932",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 456932 · 原文定位 未标明"
+        },
+        {
+          "surface": "zégǎ",
+          "ipa": "tsɤ²⁴ka²¹",
+          "gloss": "thirsty",
+          "sense": "渴",
+          "entry_id": "w5760",
+          "attestation_id": "stedt-rn-454800",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454800 · 原文定位 6.1"
+        },
+        {
+          "surface": "guán",
+          "ipa": "kuɛn²⁴",
+          "gloss": "jar",
+          "sense": "罐",
+          "entry_id": "w791",
+          "attestation_id": "stedt-rn-456261",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 456261 · 原文定位 未标明"
+        },
+        {
+          "surface": "lá",
+          "ipa": "la³⁵",
+          "gloss": "one",
+          "sense": "一",
+          "entry_id": "stedt-rn-386074",
+          "attestation_id": "stedt-rn-226464",
+          "source_id": "stedt-7fd6565400",
+          "locator": "STEDT rn 226464 · 原文定位 911.38"
+        },
+        {
+          "surface": "lǒng",
+          "ipa": "lɔŋ²¹",
+          "gloss": "(for animals, fish, jars, logs, plants)",
+          "sense": "只",
+          "entry_id": "w1391",
+          "attestation_id": "stedt-rn-456932",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 456932 · 原文定位 未标明"
+        },
+        {
+          "surface": "nì",
+          "ipa": "ȵi⁵³",
+          "gloss": "find / look for",
+          "sense": "寻找；找到",
+          "entry_id": "stedt-rn-430963",
+          "attestation_id": "stedt-rn-430963",
+          "source_id": "stedt-610ab69a37",
+          "locator": "STEDT rn 430963 · 原文定位 1744.49"
+        },
+        {
+          "surface": "liē",
+          "ipa": "liɛ⁵⁵",
+          "gloss": "PFV",
+          "sense": "PFV",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "aspect-modality.md; event-linking.md, B06:69 ex86"
+        },
+        {
+          "surface": "guán",
+          "ipa": "kuɛn²⁴",
+          "gloss": "jar",
+          "sense": "罐",
+          "entry_id": "w791",
+          "attestation_id": "stedt-rn-456261",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 456261 · 原文定位 未标明"
+        },
+        {
+          "surface": "wótū",
+          "ipa": "wɔ²⁴tʰu⁵⁵",
+          "gloss": "inside",
+          "sense": "inside",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "direction-suffixes.md, rn455022"
+        },
+        {
+          "surface": "cě",
+          "ipa": "tsʰɤ²¹",
+          "gloss": "water",
+          "sense": "水",
+          "entry_id": "w395",
+          "attestation_id": "stedt-rn-453517",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453517 · 原文定位 1.2"
+        },
+        {
+          "surface": "lá",
+          "ipa": "la²⁴",
+          "gloss": "a little",
+          "sense": "一点儿；少量",
+          "entry_id": "stedt-rn-455255",
+          "attestation_id": "stedt-rn-455255",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455255 · 原文定位 7.5"
+        },
+        {
+          "surface": "xié",
+          "ipa": "ɕie²⁴",
+          "gloss": "exist",
+          "sense": "exist",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "clause-patterns.md B06:84 ex62"
+        }
+      ],
+      "roles": {
+        "actor": "crow",
+        "theme": "pitcher",
+        "background": "little water inside pitcher"
+      },
+      "scope": {
+        "tense": "past narrative",
+        "negation": false
+      },
+      "constructions": [
+        "SOV; frozen clause-patterns.md",
+        "productive sentence; attested lexical replacements"
+      ],
+      "open_issues": [
+        "nì attested Northern TBL; locality not recorded; differs from Brassett nī look for"
+      ],
+      "checked_version": 1
+    },
+    {
+      "id": "s2",
+      "source": "The water was too low for its beak to reach.",
+      "translation": "Cě dī xǐtái, gó niě záqī hǒliě cě būbǔ tā tī.",
+      "tokens": [
+        {
+          "surface": "Cě",
+          "ipa": "tsʰɤ²¹",
+          "gloss": "water",
+          "sense": "水",
+          "entry_id": "w395",
+          "attestation_id": "stedt-rn-453517",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453517 · 原文定位 1.2"
+        },
+        {
+          "surface": "dī",
+          "ipa": "ti⁵⁵",
+          "gloss": "to be low",
+          "sense": "低",
+          "entry_id": "w575",
+          "attestation_id": "w575",
+          "source_id": "brassett-2004",
+          "locator": "词条 575"
+        },
+        {
+          "surface": "xǐtái",
+          "ipa": "ɕi²¹tʰai²⁴",
+          "gloss": "superlative particle (very)",
+          "sense": "最高程度助词；很、非常",
+          "entry_id": "stedt-rn-455076",
+          "attestation_id": "stedt-rn-455076",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455076 · 原文定位 7.1"
+        },
+        {
+          "surface": "gó",
+          "ipa": "kuɔ²⁴",
+          "gloss": "3SG",
+          "sense": "3SG",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "clause-patterns.md B06:83 ex59"
+        },
+        {
+          "surface": "niě",
+          "ipa": "ɲie²¹",
+          "gloss": "GEN",
+          "sense": "GEN",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "clause-patterns.md B06:56 §4.3.6"
+        },
+        {
+          "surface": "záqī",
+          "ipa": "tsa²⁴tɕʰi⁵⁵",
+          "gloss": "mouth",
+          "sense": "嘴",
+          "entry_id": "w2621",
+          "attestation_id": "stedt-rn-453769",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453769 · 原文定位 2.1"
+        },
+        {
+          "surface": "hǒliě",
+          "ipa": "xuɔ²¹lie²¹",
+          "gloss": "INSTR",
+          "sense": "INSTR",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "clause-patterns.md B06:154 ex37"
+        },
+        {
+          "surface": "cě",
+          "ipa": "tsʰɤ²¹",
+          "gloss": "water",
+          "sense": "水",
+          "entry_id": "w395",
+          "attestation_id": "stedt-rn-453517",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453517 · 原文定位 1.2"
+        },
+        {
+          "surface": "būbǔ",
+          "ipa": "pu⁵⁵pu²¹",
+          "gloss": "feel, touch",
+          "sense": "摸",
+          "entry_id": "w326",
+          "attestation_id": "stedt-rn-453779",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453779 · 原文定位 2.2"
+        },
+        {
+          "surface": "tā",
+          "ipa": "tʰa⁵⁵",
+          "gloss": "NEG",
+          "sense": "NEG",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "aspect-modality.md B06:127–128"
+        },
+        {
+          "surface": "tī",
+          "ipa": "tʰi⁵⁵",
+          "gloss": "can.NEG",
+          "sense": "can.NEG",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "aspect-modality.md B06:127–128"
+        }
+      ],
+      "roles": {
+        "theme": "water",
+        "instrument": "crow beak",
+        "patient": "water",
+        "negated_event": "touch/reach"
+      },
+      "scope": {
+        "tense": "past narrative",
+        "negation": true
+      },
+      "constructions": [
+        "SOV; frozen clause-patterns.md",
+        "productive sentence; attested lexical replacements"
+      ],
+      "open_issues": [
+        "generic mouth for beak; touching paraphrase; xǐtái very rather than separate excess marker"
+      ],
+      "checked_version": 1
+    },
+    {
+      "id": "s3",
+      "source": "It tried to tip the pitcher, but it was too heavy.",
+      "translation": "Gó guán 试着 duán, qiè guán dùzǐ xǐtái; gó guán duán hī cē.",
+      "tokens": [
+        {
+          "surface": "Gó",
+          "ipa": "kuɔ²⁴",
+          "gloss": "3SG",
+          "sense": "3SG",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "clause-patterns.md B06:83 ex59"
+        },
+        {
+          "surface": "guán",
+          "ipa": "kuɛn²⁴",
+          "gloss": "jar",
+          "sense": "罐",
+          "entry_id": "w791",
+          "attestation_id": "stedt-rn-456261",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 456261 · 原文定位 未标明"
+        },
+        {
+          "surface": "试着",
+          "ipa": "",
+          "gloss": "try (Chinese insertion)",
+          "sense": "try (Chinese insertion)",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "paraphrase-and-borrowing.md; not an attested Tujia form"
+        },
+        {
+          "surface": "duán",
+          "ipa": "tuɛn²⁴",
+          "gloss": "turn over",
+          "sense": "翻",
+          "entry_id": "w647",
+          "attestation_id": "stedt-rn-453784",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453784 · 原文定位 2.2"
+        },
+        {
+          "surface": "qiè",
+          "ipa": "tɕʰiɛ⁵¹",
+          "gloss": "yet, but",
+          "sense": "然而；但是",
+          "entry_id": "stedt-rn-455276",
+          "attestation_id": "stedt-rn-455276",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455276 · 原文定位 7.5"
+        },
+        {
+          "surface": "guán",
+          "ipa": "kuɛn²⁴",
+          "gloss": "jar",
+          "sense": "罐",
+          "entry_id": "w791",
+          "attestation_id": "stedt-rn-456261",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 456261 · 原文定位 未标明"
+        },
+        {
+          "surface": "dùzǐ",
+          "ipa": "tu⁵¹tsɨ²¹",
+          "gloss": "heavy",
+          "sense": "重",
+          "entry_id": "stedt-rn-454872",
+          "attestation_id": "stedt-rn-454872",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454872 · 原文定位 6.3"
+        },
+        {
+          "surface": "xǐtái",
+          "ipa": "ɕi²¹tʰai²⁴",
+          "gloss": "superlative particle (very)",
+          "sense": "最高程度助词；很、非常",
+          "entry_id": "stedt-rn-455076",
+          "attestation_id": "stedt-rn-455076",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 455076 · 原文定位 7.1"
+        },
+        {
+          "surface": "gó",
+          "ipa": "kuɔ²⁴",
+          "gloss": "3SG",
+          "sense": "3SG",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "clause-patterns.md B06:83 ex59"
+        },
+        {
+          "surface": "guán",
+          "ipa": "kuɛn²⁴",
+          "gloss": "jar",
+          "sense": "罐",
+          "entry_id": "w791",
+          "attestation_id": "stedt-rn-456261",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 456261 · 原文定位 未标明"
+        },
+        {
+          "surface": "duán",
+          "ipa": "tuɛn²⁴",
+          "gloss": "turn over",
+          "sense": "翻",
+          "entry_id": "w647",
+          "attestation_id": "stedt-rn-453784",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453784 · 原文定位 2.2"
+        },
+        {
+          "surface": "hī",
+          "ipa": "xɨ⁵⁵",
+          "gloss": "NEG.physical",
+          "sense": "NEG.physical",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "aspect-modality.md B06:127–129"
+        },
+        {
+          "surface": "cē",
+          "ipa": "tsʰɤ⁵⁵",
+          "gloss": "physical.ability",
+          "sense": "physical.ability",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "aspect-modality.md B06:127–129"
+        }
+      ],
+      "roles": {
+        "actor": "crow",
+        "theme": "pitcher",
+        "relation": "attempt; contrast; weight prevents tipping"
+      },
+      "scope": {
+        "tense": "past narrative",
+        "negation": true
+      },
+      "constructions": [
+        "SOV; frozen clause-patterns.md",
+        "productive sentence; attested lexical replacements"
+      ],
+      "open_issues": [
+        "Chinese adverb insertion 试着; provisional placement before native verb; explicit inability expands implication"
+      ],
+      "checked_version": 1
+    },
+    {
+      "id": "s4",
+      "source": "Then the crow dropped small stones into it, one by one.",
+      "translation": "Āiliē gǎ ǎbǎ bíkuī lá bú lá bú mǒ guán wótū bō lá liē.",
+      "tokens": [
+        {
+          "surface": "Āiliē",
+          "ipa": "ai⁵⁵lie⁵⁵",
+          "gloss": "then",
+          "sense": "then",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "event-linking.md B06:69 ex86"
+        },
+        {
+          "surface": "gǎ",
+          "ipa": "ka²¹",
+          "gloss": "crow",
+          "sense": "乌鸦",
+          "entry_id": "w688",
+          "attestation_id": "stedt-rn-453559",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453559 · 原文定位 1.3"
+        },
+        {
+          "surface": "ǎbǎ",
+          "ipa": "a²¹pa²¹",
+          "gloss": "stone",
+          "sense": "石头",
+          "entry_id": "w91",
+          "attestation_id": "stedt-rn-453497",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453497 · 原文定位 1.2"
+        },
+        {
+          "surface": "bíkuī",
+          "ipa": "pi²⁴kʰuei⁵⁵",
+          "gloss": "small (one)",
+          "sense": "小的",
+          "entry_id": "w277",
+          "attestation_id": "stedt-rn-454852",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454852 · 原文定位 6.3"
+        },
+        {
+          "surface": "lá",
+          "ipa": "la³⁵",
+          "gloss": "one",
+          "sense": "一",
+          "entry_id": "stedt-rn-386074",
+          "attestation_id": "stedt-rn-226464",
+          "source_id": "stedt-7fd6565400",
+          "locator": "STEDT rn 226464 · 原文定位 911.38"
+        },
+        {
+          "surface": "bú",
+          "ipa": "pu²⁴",
+          "gloss": "(for compact round items such as eggs, stones, millet, firecrackers, and for events of brief duration)",
+          "sense": "个",
+          "entry_id": "w317",
+          "attestation_id": "stedt-rn-455728",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 455728 · 原文定位 未标明"
+        },
+        {
+          "surface": "lá",
+          "ipa": "la³⁵",
+          "gloss": "one",
+          "sense": "一",
+          "entry_id": "stedt-rn-386074",
+          "attestation_id": "stedt-rn-226464",
+          "source_id": "stedt-7fd6565400",
+          "locator": "STEDT rn 226464 · 原文定位 911.38"
+        },
+        {
+          "surface": "bú",
+          "ipa": "pu²⁴",
+          "gloss": "(for compact round items such as eggs, stones, millet, firecrackers, and for events of brief duration)",
+          "sense": "个",
+          "entry_id": "w317",
+          "attestation_id": "stedt-rn-455728",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 455728 · 原文定位 未标明"
+        },
+        {
+          "surface": "mǒ",
+          "ipa": "mɔ²¹",
+          "gloss": "MANNER",
+          "sense": "MANNER",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "event-linking.md B06:37 ex12"
+        },
+        {
+          "surface": "guán",
+          "ipa": "kuɛn²⁴",
+          "gloss": "jar",
+          "sense": "罐",
+          "entry_id": "w791",
+          "attestation_id": "stedt-rn-456261",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 456261 · 原文定位 未标明"
+        },
+        {
+          "surface": "wótū",
+          "ipa": "wɔ²⁴tʰu⁵⁵",
+          "gloss": "inside",
+          "sense": "inside",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "direction-suffixes.md, rn455022"
+        },
+        {
+          "surface": "bō",
+          "ipa": "pɔ⁵⁵",
+          "gloss": "GOAL",
+          "sense": "GOAL",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "clause-patterns.md B06:100 ex64"
+        },
+        {
+          "surface": "lá",
+          "ipa": "la²⁴",
+          "gloss": "fling",
+          "sense": "扔",
+          "entry_id": "w1217",
+          "attestation_id": "stedt-rn-453801",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453801 · 原文定位 2.2"
+        },
+        {
+          "surface": "liē",
+          "ipa": "liɛ⁵⁵",
+          "gloss": "PFV",
+          "sense": "PFV",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "aspect-modality.md; event-linking.md, B06:69 ex86"
+        }
+      ],
+      "roles": {
+        "actor": "crow",
+        "theme": "small stones",
+        "goal": "inside pitcher",
+        "manner": "one by one"
+      },
+      "scope": {
+        "tense": "past narrative",
+        "negation": false
+      },
+      "constructions": [
+        "SOV; frozen clause-patterns.md",
+        "productive sentence; attested lexical replacements"
+      ],
+      "open_issues": [],
+      "checked_version": 1
+    },
+    {
+      "id": "s5",
+      "source": "The water rose, and at last the crow could drink.",
+      "translation": "Cě óng liē, zuíhóu gǎ cě hǔ dē xǐ.",
+      "tokens": [
+        {
+          "surface": "Cě",
+          "ipa": "tsʰɤ²¹",
+          "gloss": "water",
+          "sense": "水",
+          "entry_id": "w395",
+          "attestation_id": "stedt-rn-453517",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453517 · 原文定位 1.2"
+        },
+        {
+          "surface": "óng",
+          "ipa": "ɔŋ²⁴",
+          "gloss": "rise, swell",
+          "sense": "上涨；肿胀",
+          "entry_id": "stedt-rn-454366",
+          "attestation_id": "stedt-rn-454366",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 454366 · 原文定位 4.3"
+        },
+        {
+          "surface": "liē",
+          "ipa": "liɛ⁵⁵",
+          "gloss": "PFV",
+          "sense": "PFV",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "aspect-modality.md; event-linking.md, B06:69 ex86"
+        },
+        {
+          "surface": "zuíhóu",
+          "ipa": "tsuei²⁴xou²⁴",
+          "gloss": "finally",
+          "sense": "最后",
+          "entry_id": "w2756",
+          "attestation_id": "stedt-rn-458435",
+          "source_id": "brassett-2004",
+          "locator": "STEDT rn 458435 · 原文定位 未标明"
+        },
+        {
+          "surface": "gǎ",
+          "ipa": "ka²¹",
+          "gloss": "crow",
+          "sense": "乌鸦",
+          "entry_id": "w688",
+          "attestation_id": "stedt-rn-453559",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453559 · 原文定位 1.3"
+        },
+        {
+          "surface": "cě",
+          "ipa": "tsʰɤ²¹",
+          "gloss": "water",
+          "sense": "水",
+          "entry_id": "w395",
+          "attestation_id": "stedt-rn-453517",
+          "source_id": "brassett-2006",
+          "locator": "STEDT rn 453517 · 原文定位 1.2"
+        },
+        {
+          "surface": "hǔ",
+          "ipa": "xu²¹",
+          "gloss": "drink",
+          "sense": "喝",
+          "entry_id": "stedt-rn-454324",
+          "attestation_id": "stedt-rn-413634",
+          "source_id": "stedt-610ab69a37",
+          "locator": "STEDT rn 413634 · 原文定位 1370.49"
+        },
+        {
+          "surface": "dē",
+          "ipa": "tɤ⁵⁵",
+          "gloss": "can",
+          "sense": "can",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "aspect-modality.md B06:127–128"
+        },
+        {
+          "surface": "xǐ",
+          "ipa": "ɕi²¹",
+          "gloss": "can",
+          "sense": "can",
+          "entry_id": "",
+          "attestation_id": "",
+          "source_id": "frozen-skill-reference",
+          "locator": "aspect-modality.md B06:127–128"
+        }
+      ],
+      "roles": {
+        "theme": "water",
+        "result": "rise",
+        "actor": "crow",
+        "modality": "circumstantial ability to drink"
+      },
+      "scope": {
+        "tense": "past narrative",
+        "negation": false
+      },
+      "constructions": [
+        "SOV; frozen clause-patterns.md",
+        "productive sentence; attested lexical replacements"
+      ],
+      "open_issues": [],
+      "checked_version": 1
+    }
+  ],
+  "query_ledger": [
+    {
+      "query": "口渴",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-418432"
+      ]
+    },
+    {
+      "query": "乌鸦",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-219987",
+        "stedt-rn-187398",
+        "stedt-rn-288566",
+        "stedt-rn-362672",
+        "stedt-rn-453559",
+        "stedt-rn-456142",
+        "w3573",
+        "w688",
+        "w8221"
+      ]
+    },
+    {
+      "query": "水罐",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "水",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-180513",
+        "stedt-rn-210552",
+        "stedt-rn-288458",
+        "stedt-rn-289006",
+        "stedt-rn-347422",
+        "stedt-rn-453517",
+        "stedt-rn-455814",
+        "w3253",
+        "w395",
+        "w6543"
+      ]
+    },
+    {
+      "query": "少",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-221823",
+        "stedt-rn-289225",
+        "stedt-rn-395936",
+        "w1764",
+        "w6390",
+        "stedt-rn-454915",
+        "stedt-rn-457350",
+        "w4779"
+      ]
+    },
+    {
+      "query": "找到",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-430963"
+      ]
+    },
+    {
+      "query": "低",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-220956",
+        "stedt-rn-289208",
+        "stedt-rn-394956",
+        "stedt-rn-456010",
+        "w3439",
+        "w575",
+        "w7889"
+      ]
+    },
+    {
+      "query": "嘴",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-127176",
+        "stedt-rn-192345",
+        "stedt-rn-349349",
+        "stedt-rn-43372",
+        "stedt-rn-453769",
+        "stedt-rn-458287",
+        "w2621",
+        "w5720",
+        "w8002",
+        "stedt-rn-458323",
+        "w2652",
+        "w5758",
+        "w7743"
+      ]
+    },
+    {
+      "query": "够",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-289140"
+      ]
+    },
+    {
+      "query": "倾斜",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-222231",
+        "stedt-rn-396465"
+      ]
+    },
+    {
+      "query": "重",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-222333",
+        "stedt-rn-289235",
+        "stedt-rn-397274",
+        "stedt-rn-454872",
+        "w2727",
+        "w7443",
+        "stedt-rn-454871",
+        "stedt-rn-456079",
+        "w3512",
+        "stedt-rn-458405",
+        "w5842"
+      ]
+    },
+    {
+      "query": "石头",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-182145",
+        "stedt-rn-288485",
+        "stedt-rn-347217",
+        "stedt-rn-453497",
+        "stedt-rn-455452",
+        "w2940",
+        "w6267",
+        "w91"
+      ]
+    },
+    {
+      "query": "小",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-289206",
+        "stedt-rn-221823",
+        "stedt-rn-289225",
+        "stedt-rn-394739",
+        "stedt-rn-220854",
+        "stedt-rn-394744",
+        "w2173",
+        "w8134",
+        "stedt-rn-455385",
+        "w2830",
+        "w44",
+        "w8402",
+        "stedt-rn-454930",
+        "stedt-rn-457807",
+        "w5236"
+      ]
+    },
+    {
+      "query": "逐个",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "上升",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-217896",
+        "stedt-rn-289151"
+      ]
+    },
+    {
+      "query": "喝",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-127180",
+        "stedt-rn-207237",
+        "stedt-rn-413634",
+        "stedt-rn-43441",
+        "stedt-rn-454324",
+        "stedt-rn-456358",
+        "w3807",
+        "w7493",
+        "w874"
+      ]
+    },
+    {
+      "query": "最后",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "w1970",
+        "w8166",
+        "stedt-rn-458435",
+        "w2756",
+        "w5868",
+        "w7048",
+        "stedt-rn-457586",
+        "w5011",
+        "stedt-rn-454992",
+        "stedt-rn-457585",
+        "w5020"
+      ]
+    },
+    {
+      "query": "thirsty",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-127181",
+        "stedt-rn-43485",
+        "stedt-rn-225801",
+        "stedt-rn-418432",
+        "stedt-rn-454800",
+        "stedt-rn-458327",
+        "w5760"
+      ]
+    },
+    {
+      "query": "渴",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-127181",
+        "stedt-rn-43485",
+        "stedt-rn-225801",
+        "w2656",
+        "w8045",
+        "stedt-rn-454800",
+        "stedt-rn-458327",
+        "w5760",
+        "stedt-rn-456141",
+        "w3574",
+        "w687",
+        "w7272"
+      ]
+    },
+    {
+      "query": "罐",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-373621",
+        "stedt-rn-456261",
+        "w3689",
+        "w7184",
+        "w791"
+      ]
+    },
+    {
+      "query": "罐子",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-456262",
+        "w3691",
+        "w6705",
+        "w792"
+      ]
+    },
+    {
+      "query": "壶",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "瓶子",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-288840",
+        "stedt-rn-203004",
+        "stedt-rn-373571"
+      ]
+    },
+    {
+      "query": "pitcher",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "jug",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "找",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-454365",
+        "stedt-rn-457153",
+        "w1598",
+        "w4589",
+        "w6655"
+      ]
+    },
+    {
+      "query": "发现",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "看见",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-127165",
+        "stedt-rn-206982",
+        "stedt-rn-418094",
+        "stedt-rn-43437",
+        "stedt-rn-453835",
+        "stedt-rn-458239",
+        "w2576",
+        "w5690",
+        "w6461",
+        "stedt-rn-458248",
+        "w2584",
+        "w5692",
+        "w8381",
+        "stedt-rn-458240",
+        "w5619"
+      ]
+    },
+    {
+      "query": "鸟嘴",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "喙",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "嘴巴",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "reach",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "碰到",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-457287",
+        "w1715",
+        "w4723",
+        "w7188"
+      ]
+    },
+    {
+      "query": "接触",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "歪",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-221925",
+        "stedt-rn-289227"
+      ]
+    },
+    {
+      "query": "推倒",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "翻倒",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "试",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "尝试",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "扔",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-208461",
+        "stedt-rn-288957",
+        "stedt-rn-423736",
+        "stedt-rn-453803",
+        "stedt-rn-453801",
+        "stedt-rn-456731",
+        "w1217",
+        "w4184",
+        "w6766"
+      ]
+    },
+    {
+      "query": "投",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-423736"
+      ]
+    },
+    {
+      "query": "放",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-213663",
+        "stedt-rn-289067",
+        "stedt-rn-454301",
+        "stedt-rn-454377",
+        "stedt-rn-457316",
+        "w1740",
+        "w4758",
+        "w6399"
+      ]
+    },
+    {
+      "query": "高",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-289207",
+        "stedt-rn-220905",
+        "stedt-rn-394903",
+        "stedt-rn-456185",
+        "w3612",
+        "w7110",
+        "w726"
+      ]
+    },
+    {
+      "query": "升",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-374409",
+        "stedt-rn-455146",
+        "stedt-rn-457689",
+        "w2064",
+        "w5169",
+        "w7409",
+        "stedt-rn-455145",
+        "stedt-rn-457724",
+        "w2097",
+        "w5180",
+        "w6359"
+      ]
+    },
+    {
+      "query": "里面",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-288496",
+        "stedt-rn-183012",
+        "stedt-rn-381839",
+        "stedt-rn-455022",
+        "stedt-rn-458043",
+        "w2395",
+        "w5458",
+        "w6651",
+        "stedt-rn-458045",
+        "w5384",
+        "stedt-rn-458044",
+        "w5456"
+      ]
+    },
+    {
+      "query": "一",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-289311",
+        "stedt-rn-226464",
+        "stedt-rn-386074",
+        "stedt-rn-455088",
+        "stedt-rn-456730",
+        "w1216",
+        "w4181",
+        "w7950",
+        "stedt-rn-458236",
+        "w2573",
+        "w5678",
+        "w8404"
+      ]
+    },
+    {
+      "query": "只",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-456932",
+        "w1391",
+        "w4371",
+        "w5959",
+        "stedt-rn-458362",
+        "w2686",
+        "w5801",
+        "w7221",
+        "stedt-rn-455389",
+        "w2835",
+        "stedt-rn-455859",
+        "w3315",
+        "w438",
+        "w7622",
+        "stedt-rn-455860",
+        "w4815",
+        "stedt-rn-455427",
+        "w2870",
+        "w6670",
+        "w75"
+      ]
+    },
+    {
+      "query": "块",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-456697",
+        "w1185",
+        "w4126",
+        "w7834",
+        "stedt-rn-458074",
+        "w2419",
+        "w5506",
+        "w7436",
+        "stedt-rn-455421",
+        "w2863",
+        "w6211",
+        "w71"
+      ]
+    },
+    {
+      "query": "太",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "beak",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "mouth",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-127176",
+        "stedt-rn-192345",
+        "stedt-rn-349349",
+        "stedt-rn-43372",
+        "stedt-rn-453769",
+        "stedt-rn-458287",
+        "w2621",
+        "w5720",
+        "w8002"
+      ]
+    },
+    {
+      "query": "touch",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-420647",
+        "stedt-rn-455740",
+        "w3173",
+        "stedt-rn-453779",
+        "stedt-rn-455739",
+        "w3161",
+        "w326",
+        "w5935",
+        "stedt-rn-453781",
+        "stedt-rn-455944",
+        "w3390",
+        "w515",
+        "w6121"
+      ]
+    },
+    {
+      "query": "to touch",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "to try",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "try",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "overturn",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-454375",
+        "stedt-rn-457309",
+        "w4745"
+      ]
+    },
+    {
+      "query": "tilt",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "to overturn",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "w1733",
+        "w7730"
+      ]
+    },
+    {
+      "query": "推",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-208716",
+        "stedt-rn-288963",
+        "stedt-rn-428405",
+        "stedt-rn-453816",
+        "stedt-rn-457690",
+        "w2065",
+        "w5167",
+        "w5885",
+        "stedt-rn-454433",
+        "stedt-rn-458132",
+        "w2472",
+        "w5565",
+        "w8314"
+      ]
+    },
+    {
+      "query": "翻",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-454375",
+        "stedt-rn-457309",
+        "w1733",
+        "w4745",
+        "w7730",
+        "stedt-rn-453784",
+        "stedt-rn-456086",
+        "w3517",
+        "w647",
+        "w8220",
+        "stedt-rn-456386",
+        "w3838",
+        "w6517",
+        "w901"
+      ]
+    },
+    {
+      "query": "推翻",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-407684"
+      ]
+    },
+    {
+      "query": "试试",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "高起来",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "升起",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "涨",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-457223",
+        "w1657",
+        "w4653",
+        "w7811"
+      ]
+    },
+    {
+      "query": "一块",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "个",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-456755",
+        "w1240",
+        "w4165",
+        "w7102",
+        "stedt-rn-455728",
+        "w317",
+        "w3180",
+        "w8143",
+        "stedt-rn-455769",
+        "w3201",
+        "w354",
+        "w7339",
+        "stedt-rn-455940",
+        "w3377",
+        "w511",
+        "w7414",
+        "stedt-rn-456273",
+        "w3701",
+        "w6934",
+        "w803",
+        "stedt-rn-456359",
+        "w3806",
+        "w7195",
+        "w875"
+      ]
+    },
+    {
+      "query": "一点",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-456729",
+        "w1215",
+        "w4157",
+        "w7444",
+        "stedt-rn-454916",
+        "stedt-rn-457401",
+        "w1809",
+        "w4844",
+        "w7449",
+        "stedt-rn-455222",
+        "stedt-rn-456040",
+        "w3473",
+        "w603",
+        "w7286"
+      ]
+    },
+    {
+      "query": "很",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-230850",
+        "stedt-rn-289377",
+        "stedt-rn-455076",
+        "stedt-rn-455430",
+        "w2833",
+        "stedt-rn-455431",
+        "w2854",
+        "stedt-rn-455432",
+        "w2869",
+        "stedt-rn-455429",
+        "w2871",
+        "stedt-rn-455428",
+        "w2872",
+        "w76",
+        "w8416"
+      ]
+    },
+    {
+      "query": "有",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-217488",
+        "stedt-rn-289143",
+        "stedt-rn-454792",
+        "stedt-rn-458147",
+        "w2487",
+        "w5587",
+        "w7134",
+        "stedt-rn-458271",
+        "w2606",
+        "w5707",
+        "w8582"
+      ]
+    },
+    {
+      "query": "口",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-458323",
+        "w2652",
+        "w5758",
+        "w7743",
+        "stedt-rn-456060",
+        "w3493",
+        "w622",
+        "w7887"
+      ]
+    },
+    {
+      "query": "bill",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "试验",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "试一试",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "have a try",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "experiment",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "够着",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "达到",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "伸",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-424791",
+        "stedt-rn-453840",
+        "stedt-rn-458400",
+        "w2722",
+        "w5816",
+        "w8203"
+      ]
+    },
+    {
+      "query": "伸长",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-424834"
+      ]
+    },
+    {
+      "query": "倒",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-453786",
+        "stedt-rn-456222",
+        "w3643",
+        "w7255",
+        "w753"
+      ]
+    },
+    {
+      "query": "倾倒",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-408561"
+      ]
+    },
+    {
+      "query": "歪倒",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "to tip",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "make slant",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "to swell",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "w1657",
+        "w7811"
+      ]
+    },
+    {
+      "query": "swell",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-127288",
+        "stedt-rn-421767",
+        "stedt-rn-454366",
+        "stedt-rn-457223",
+        "w4653"
+      ]
+    },
+    {
+      "query": "go up",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-454310",
+        "stedt-rn-456246",
+        "w3675"
+      ]
+    },
+    {
+      "query": "少量",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-455213",
+        "stedt-rn-455254",
+        "stedt-rn-455255",
+        "stedt-rn-455393",
+        "w2837",
+        "stedt-rn-455392",
+        "w2839"
+      ]
+    },
+    {
+      "query": "水壶",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-373730"
+      ]
+    },
+    {
+      "query": "嘴",
+      "engine": "static-substring-gloss",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-403985",
+        "stedt-rn-127260",
+        "stedt-rn-207747",
+        "stedt-rn-432863",
+        "stedt-rn-453769",
+        "stedt-rn-458287",
+        "w2621",
+        "w5720",
+        "stedt-rn-453770",
+        "stedt-rn-458288",
+        "w2622",
+        "w5721",
+        "w7037",
+        "stedt-rn-127192",
+        "stedt-rn-192396",
+        "stedt-rn-349405",
+        "stedt-rn-43373",
+        "stedt-rn-405186",
+        "stedt-rn-127176",
+        "stedt-rn-43372",
+        "stedt-rn-458323",
+        "w2652",
+        "w5758",
+        "w7743",
+        "stedt-rn-192345",
+        "stedt-rn-349349",
+        "w8002",
+        "stedt-rn-127186",
+        "stedt-rn-207441",
+        "stedt-rn-43446"
+      ]
+    },
+    {
+      "query": "mouth",
+      "engine": "static-substring-gloss",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-455115",
+        "stedt-rn-403985",
+        "stedt-rn-127260",
+        "stedt-rn-207747",
+        "stedt-rn-432863",
+        "stedt-rn-456060",
+        "w3493",
+        "w622",
+        "w7887",
+        "stedt-rn-205860",
+        "stedt-rn-453769",
+        "stedt-rn-458287",
+        "w2621",
+        "w5720",
+        "stedt-rn-127176",
+        "stedt-rn-43372",
+        "stedt-rn-455160",
+        "stedt-rn-458323",
+        "w2652",
+        "w5758",
+        "w7743",
+        "stedt-rn-192345",
+        "stedt-rn-349349",
+        "w8002",
+        "stedt-rn-127186",
+        "stedt-rn-207441",
+        "stedt-rn-43446"
+      ]
+    },
+    {
+      "query": "试",
+      "engine": "static-substring-gloss",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "try",
+      "engine": "static-substring-gloss",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-206778",
+        "stedt-rn-288942",
+        "stedt-rn-456239",
+        "w3660",
+        "w6410",
+        "w770",
+        "stedt-rn-454064",
+        "stedt-rn-458113",
+        "w2454",
+        "w5554",
+        "w6769",
+        "w6226",
+        "stedt-rn-288910",
+        "stedt-rn-453508",
+        "stedt-rn-455581",
+        "w183",
+        "w3020",
+        "w6814",
+        "stedt-rn-458111",
+        "w2452",
+        "w5543"
+      ]
+    },
+    {
+      "query": "够",
+      "engine": "static-substring-gloss",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-455891",
+        "w3320",
+        "stedt-rn-412665",
+        "w2741",
+        "w8444",
+        "stedt-rn-289140",
+        "stedt-rn-454802",
+        "stedt-rn-458419",
+        "w5856"
+      ]
+    },
+    {
+      "query": "reach",
+      "engine": "static-substring-gloss",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-455367",
+        "w27",
+        "w2812",
+        "w7629",
+        "stedt-rn-288960",
+        "stedt-rn-208614",
+        "w6245",
+        "stedt-rn-455337",
+        "w2786",
+        "w7"
+      ]
+    },
+    {
+      "query": "倾",
+      "engine": "static-substring-gloss",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-222231",
+        "stedt-rn-408561",
+        "stedt-rn-396465"
+      ]
+    },
+    {
+      "query": "slant",
+      "engine": "static-substring-gloss",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-222231",
+        "stedt-rn-396465",
+        "stedt-rn-289233"
+      ]
+    },
+    {
+      "query": "但是",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-455276",
+        "stedt-rn-455993",
+        "w3421",
+        "w558",
+        "w7418"
+      ]
+    },
+    {
+      "query": "而",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "试图",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "attempt",
+      "engine": "static-exact",
+      "status": "zero",
+      "witness_ids": []
+    },
+    {
+      "query": "find",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-430963"
+      ]
+    },
+    {
+      "query": "鸟",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-288564",
+        "stedt-rn-187245",
+        "stedt-rn-362013",
+        "stedt-rn-453581",
+        "stedt-rn-457182",
+        "w1626",
+        "w4622",
+        "w8644",
+        "stedt-rn-453582",
+        "stedt-rn-457183",
+        "w4595"
+      ]
+    },
+    {
+      "query": "小的",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-454886",
+        "stedt-rn-456541",
+        "w1045",
+        "w3959",
+        "w7351",
+        "stedt-rn-454852",
+        "stedt-rn-455682",
+        "w277",
+        "w3116",
+        "w8598",
+        "stedt-rn-455685",
+        "w3112",
+        "stedt-rn-455683",
+        "w3115",
+        "stedt-rn-455684",
+        "w3123",
+        "stedt-rn-454860",
+        "stedt-rn-455783",
+        "w3205",
+        "w365",
+        "w7710",
+        "stedt-rn-453919",
+        "stedt-rn-456024",
+        "w3445",
+        "w587",
+        "w6883"
+      ]
+    },
+    {
+      "query": "到",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-454436",
+        "stedt-rn-458214",
+        "w2551",
+        "w5666",
+        "w6336",
+        "stedt-rn-455367",
+        "w27",
+        "w2812",
+        "w7629"
+      ]
+    },
+    {
+      "query": "变成",
+      "engine": "static-exact",
+      "status": "hit",
+      "witness_ids": [
+        "stedt-rn-453839",
+        "stedt-rn-458367",
+        "w2691",
+        "w5804",
+        "w8355"
+      ]
+    }
+  ],
+  "artifacts": [
+    "round1.md",
+    "translation.json",
+    "queries.jsonl",
+    "evidence.md"
+  ],
+  "notes": "说明：“水罐”用 guán（罐），“喙”用 záqī（嘴）表达；“试着”保留最小汉语插入。第二句改述为“水很低，它用嘴碰不到水”；第三句明说因太重而翻不动。以上为依据词典和能产句式的拟译。",
+  "deviations": [
+    "Attempt concept used 13 query keys including exact and substring queries, exceeding the per-concept maximum of 12 by one; no embedding used.",
+    "Initial lookup implementation failed before results were saved because it treated a single r as a list of records; corrected and executed the batch. Failed invocation did not produce a scoped inventory conclusion."
+  ]
+}

@@ -1,0 +1,7 @@
+请按这个翻译技能，将以下原文完整译成汉语、英语、日语和藏语：
+/workspace/bizic-translator/docs/evaluation/blind-five-2026-11-17/frozen/skills/translate-tujia/SKILL.md
+
+meftaxcer lafdongx ongr xir civ,
+hufnix daxjiev mor serkex paf,
+longrbair nier yerdiex rixhuax xief,
+soxtir xiexqix sixjif heircef.

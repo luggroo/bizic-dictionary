@@ -1,0 +1,7 @@
+{
+  "source_sha256": "b4cd4ec71d82833c06303cd2b68e058cd3c7035aca8dc7162b499f6992efd40e",
+  "context": "fork_turns=none",
+  "translation_prompt": "standard-prompt.txt",
+  "administration": "Separate harness instructions: store first answer/evidence/timestamps in this directory; no PDF or skill edits; no other answers/site translations/evaluation results. Scripts run from repository root.",
+  "dispatched_before_utc": "2026-11-17T15:13:37.443023+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "start": "2026-11-17T15:13:08Z",
+  "end": "2026-11-17T15:16:57.582622+00:00",
+  "source_sha256": "fd87a01ff2ba5318b8654c637ee3f82a355d94fff6248ceb853969e85a6adfe4",
+  "query_count": 315,
+  "engine": "frozen static exact FNV shards",
+  "network_queries": 0,
+  "blind_constraints": "Only assigned source, frozen skill/reference/lexicon read. No other translations, evaluation results, website examples or PDF.",
+  "queries_file": "evidence.json"
+}

@@ -1,0 +1,411 @@
+{
+  "version": 1,
+  "dialect": "north (source inference)",
+  "source_snapshot": {
+    "revision": "5c148a2bfe860969375c16821f22bb25222ab7d8",
+    "source_sha256": "c4c04aa863ab135285125fb92ea0e6951d6c044f8c7cf7804fe51647b657808d",
+    "manifest_sha256": "911f92e13f44160277c66644dfff786ef55adb3aaf5feecd604a100dd3a3b51a"
+  },
+  "sentences": [
+    {
+      "id": "s1",
+      "source": "meftaxcer lafdongx ongr xir civ,",
+      "translation_zh": "一声雷响，声音真大。",
+      "tokens": [
+        {
+          "surface": "meftaxcer",
+          "sense": "雷",
+          "entry_id": "w1509",
+          "attestation_id": "stedt-rn-453474",
+          "source_id": "stedt-39f4cd9a6b",
+          "locator": "STEDT rn 453474 · 原文定位 1.1",
+          "source_notations": {
+            "accent": [
+              "métācě"
+            ],
+            "ipa": [
+              "mɤ²⁴tʰa⁵⁵tsʰɤ²¹"
+            ]
+          },
+          "changes": [],
+          "segmentation": "meftaxcer"
+        },
+        {
+          "surface": "lafdongx",
+          "sense": "一＋声响／次",
+          "entry_id": "w1216",
+          "attestation_id": "stedt-rn-455088",
+          "source_id": "stedt-39f4cd9a6b",
+          "locator": "STEDT rn 455088 · 原文定位 7.2",
+          "source_notations": {
+            "accent": [
+              "lá"
+            ],
+            "ipa": [
+              "la²⁴"
+            ]
+          },
+          "changes": [],
+          "segmentation": "laf dongx"
+        },
+        {
+          "surface": "ongr",
+          "sense": "响",
+          "entry_id": "w1659",
+          "attestation_id": "stedt-rn-454367",
+          "source_id": "stedt-39f4cd9a6b",
+          "locator": "STEDT rn 454367 · 原文定位 4.3",
+          "source_notations": {
+            "accent": [
+              "ǒng"
+            ],
+            "ipa": [
+              "ɔŋ²¹"
+            ]
+          },
+          "changes": [],
+          "segmentation": "ongr"
+        },
+        {
+          "surface": "xir",
+          "sense": "很，非常",
+          "entry_id": "w2869",
+          "attestation_id": "stedt-rn-455432",
+          "source_id": "stedt-07898ef938",
+          "locator": "STEDT rn 455432 · 原文定位 未标明",
+          "source_notations": {
+            "accent": [
+              "-xǐ"
+            ],
+            "ipa": [
+              "-ɕi²¹"
+            ]
+          },
+          "changes": [],
+          "segmentation": "xir"
+        },
+        {
+          "surface": "civ",
+          "sense": "大",
+          "entry_id": "w442",
+          "attestation_id": "w442",
+          "source_id": "1EkBQ1pph-C7zHYTg9wuraMsM7cgCwnfE",
+          "locator": "词条 442",
+          "source_notations": {
+            "accent": [
+              "cì"
+            ],
+            "ipa": [
+              "tsʰɨ⁵¹"
+            ]
+          },
+          "changes": [],
+          "segmentation": "civ"
+        }
+      ],
+      "roles": "雷为声音事件主体",
+      "scope": {
+        "degree": "s1 很大",
+        "negative_completion": "s4 不能用完"
+      },
+      "open_issues": [],
+      "checked_version": 1
+    },
+    {
+      "id": "s2",
+      "source": "hufnix daxjiev mor serkex paf,",
+      "translation_zh": "大家一齐把田耙。",
+      "tokens": [
+        {
+          "surface": "hufnix",
+          "sense": "大家",
+          "entry_id": "w881",
+          "attestation_id": "stedt-rn-456365",
+          "source_id": "stedt-07898ef938",
+          "locator": "STEDT rn 456365 · 原文定位 未标明",
+          "source_notations": {
+            "accent": [
+              "húnī"
+            ],
+            "ipa": [
+              "fu²⁴ȵi⁵⁵"
+            ]
+          },
+          "changes": [],
+          "segmentation": "hufnix"
+        },
+        {
+          "surface": "daxjiev",
+          "sense": "暂按一起；整词未解",
+          "entry_id": null,
+          "attestation_id": null,
+          "source_id": null,
+          "locator": null,
+          "source_notations": null,
+          "changes": [],
+          "segmentation": "dax jiev (uncertain)"
+        },
+        {
+          "surface": "mor",
+          "sense": "方式标记",
+          "entry_id": "w1566",
+          "attestation_id": "stedt-rn-457119",
+          "source_id": "stedt-07898ef938",
+          "locator": "STEDT rn 457119 · 原文定位 未标明",
+          "source_notations": {
+            "accent": [
+              "mǒ"
+            ],
+            "ipa": [
+              "mɔ²¹"
+            ]
+          },
+          "changes": [],
+          "segmentation": "mor"
+        },
+        {
+          "surface": "serkex",
+          "sense": "田",
+          "entry_id": "w2022",
+          "attestation_id": "stedt-rn-457643",
+          "source_id": "stedt-07898ef938",
+          "locator": "STEDT rn 457643 · 原文定位 未标明",
+          "source_notations": {
+            "accent": [
+              "sěkē"
+            ],
+            "ipa": [
+              "sɤ²¹kʰɤ⁵⁵"
+            ]
+          },
+          "changes": [],
+          "segmentation": "serkex"
+        },
+        {
+          "surface": "paf",
+          "sense": "耙",
+          "entry_id": "w1670",
+          "attestation_id": "stedt-rn-457237",
+          "source_id": "stedt-07898ef938",
+          "locator": "STEDT rn 457237 · 原文定位 未标明",
+          "source_notations": {
+            "accent": [
+              "pá"
+            ],
+            "ipa": [
+              "pʰa²⁴"
+            ]
+          },
+          "changes": [],
+          "segmentation": "paf"
+        }
+      ],
+      "roles": "大家为施事，田为受事",
+      "scope": {
+        "degree": "s1 很大",
+        "negative_completion": "s4 不能用完"
+      },
+      "open_issues": [
+        "daxjiev 整体词义不可靠"
+      ],
+      "checked_version": 1
+    },
+    {
+      "id": "s3",
+      "source": "longrbair nier yerdiex rixhuax xief,",
+      "translation_zh": "今年的粮食，已有安排。",
+      "tokens": [
+        {
+          "surface": "longrbair",
+          "sense": "今年",
+          "entry_id": "w1394",
+          "attestation_id": "stedt-rn-454977",
+          "source_id": "stedt-39f4cd9a6b",
+          "locator": "STEDT rn 454977 · 原文定位 6.4",
+          "source_notations": {
+            "accent": [
+              "lǒngbǎi"
+            ],
+            "ipa": [
+              "lɔŋ²¹pai²¹"
+            ]
+          },
+          "changes": [],
+          "segmentation": "longrbair"
+        },
+        {
+          "surface": "nier",
+          "sense": "的",
+          "entry_id": "w59",
+          "attestation_id": "stedt-rn-455406",
+          "source_id": "stedt-07898ef938",
+          "locator": "STEDT rn 455406 · 原文定位 未标明",
+          "source_notations": {
+            "accent": [
+              "-niě"
+            ],
+            "ipa": [
+              "-ȵiɛ²¹"
+            ]
+          },
+          "changes": [],
+          "segmentation": "nier"
+        },
+        {
+          "surface": "yerdiex",
+          "sense": "食物＋复数",
+          "entry_id": "w2548",
+          "attestation_id": "stedt-rn-458211",
+          "source_id": "stedt-07898ef938",
+          "locator": "STEDT rn 458211 · 原文定位 未标明",
+          "source_notations": {
+            "accent": [
+              "yě"
+            ],
+            "ipa": [
+              "jɤ²¹"
+            ]
+          },
+          "changes": [],
+          "segmentation": "yer -diex"
+        },
+        {
+          "surface": "rixhuax",
+          "sense": "未可靠确定；安排为暂拟",
+          "entry_id": null,
+          "attestation_id": null,
+          "source_id": null,
+          "locator": null,
+          "source_notations": null,
+          "changes": [],
+          "segmentation": "rix huax (uncertain)"
+        },
+        {
+          "surface": "xief",
+          "sense": "有",
+          "entry_id": "w2487",
+          "attestation_id": "stedt-rn-454792",
+          "source_id": "stedt-39f4cd9a6b",
+          "locator": "STEDT rn 454792 · 原文定位 6.1",
+          "source_notations": {
+            "accent": [
+              "xié"
+            ],
+            "ipa": [
+              "ɕiɛ²⁴"
+            ]
+          },
+          "changes": [],
+          "segmentation": "xief"
+        }
+      ],
+      "roles": "今年为时间修饰；食物为暂定中心词",
+      "scope": {
+        "degree": "s1 很大",
+        "negative_completion": "s4 不能用完"
+      },
+      "open_issues": [
+        "rixhuax 未解，第三句仅为上下文暂拟"
+      ],
+      "checked_version": 1
+    },
+    {
+      "id": "s4",
+      "source": "soxtir xiexqix sixjif heircef.",
+      "translation_zh": "身上的力气使不完。",
+      "tokens": [
+        {
+          "surface": "soxtir",
+          "sense": "身体",
+          "entry_id": "w2190",
+          "attestation_id": "stedt-rn-453764",
+          "source_id": "stedt-39f4cd9a6b",
+          "locator": "STEDT rn 453764 · 原文定位 2.1",
+          "source_notations": {
+            "accent": [
+              "sòtǐ"
+            ],
+            "ipa": [
+              "suɔ⁵¹tʰi²¹"
+            ]
+          },
+          "changes": [
+            "syllable 1: high/falling tone"
+          ],
+          "segmentation": "soxtir"
+        },
+        {
+          "surface": "xiexqix",
+          "sense": "力气",
+          "entry_id": "w2503",
+          "attestation_id": "stedt-rn-454794",
+          "source_id": "stedt-39f4cd9a6b",
+          "locator": "STEDT rn 454794 · 原文定位 6.1",
+          "source_notations": {
+            "accent": [
+              "xiēqī"
+            ],
+            "ipa": [
+              "ɕiɛ⁵⁵tɕʰi⁵⁵"
+            ]
+          },
+          "changes": [],
+          "segmentation": "xiexqix"
+        },
+        {
+          "surface": "sixjif",
+          "sense": "用＋完",
+          "entry_id": "w2067",
+          "attestation_id": null,
+          "source_id": null,
+          "locator": null,
+          "source_notations": null,
+          "changes": [],
+          "segmentation": "six -jif"
+        },
+        {
+          "surface": "heircef",
+          "sense": "不起／不能完成",
+          "entry_id": "w35",
+          "attestation_id": "stedt-rn-455376",
+          "source_id": "stedt-07898ef938",
+          "locator": "STEDT rn 455376 · 原文定位 未标明",
+          "source_notations": {
+            "accent": [
+              "-hīcē"
+            ],
+            "ipa": [
+              "-xɨ⁵⁵tsʰɤ⁵⁵"
+            ]
+          },
+          "changes": [
+            "syllable 1: i/ei after velar",
+            "syllable 1: attested affix tone candidate",
+            "syllable 2: attested affix tone candidate"
+          ],
+          "segmentation": "heircef"
+        }
+      ],
+      "roles": "身体为领属范围，力气为用的受事",
+      "scope": {
+        "degree": "s1 很大",
+        "negative_completion": "s4 不能用完"
+      },
+      "open_issues": [],
+      "checked_version": 1
+    }
+  ],
+  "query_ledger_files": [
+    "lookup-1.json",
+    "lookup-3.json",
+    "lookup-4.json",
+    "lookup-5.json",
+    "lookup-6.json",
+    "lookup-7.json"
+  ],
+  "artifacts": [
+    "round1.md"
+  ],
+  "mode": "Skill-based",
+  "embedding_run": false
+}
