@@ -13,7 +13,7 @@ function normalizeIPA(value,options={}){
   .replace(/ɲ̟|ɲ|ɳ/gu,'ȵ')
   .replace(/([szʦʣǳ](?:[͜͡]?ʰ)?)ɨ(?![\p{L}\p{M}])/gu,'$1ɿ')
   .replace(/([ʂʐ](?:ʰ)?)ɨ(?![\p{L}\p{M}])/gu,'$1ʅ');
- if(options.brassett)text=text.replaceAll('f','ɸ');
+ if(options.brassett)text=text.replaceAll('f','ɸ').replace(/x(?=u)/gu,'ɸ');
  return text.replace(/([\p{L}\p{M}\]])([0-9]+)/gu,(_,base,digits)=>base+[...digits].map(d=>IPA_TONE_SUPERSCRIPTS[Number(d)]).join(''));
 }
 function ipaIdentity(value){

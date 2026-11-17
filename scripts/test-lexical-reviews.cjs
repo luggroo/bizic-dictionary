@@ -50,7 +50,8 @@ const run=s=>vm.runInContext(s,ctx);
  for(const [id,forms]of Object.entries(run('LEXICAL_IPA_BOUNDARIES'))){
   const w=get(id);for(const [original,display]of Object.entries(forms)){
    assert.equal(display.replace(/\s/g,''),original,id+' changed phonology');
-   assert(ctx.wordIPA(w).includes(display),id+' missing display IPA');
+   const candidates=[ctx.normalizeIPA(display),...(w.notations?.brassett?.length?[ctx.normalizeIPA(display,{brassett:true})]:[])];
+   assert(candidates.some(form=>ctx.wordIPA(w).includes(form)),id+' missing display IPA');
   }
  }
  ctx.w=get('yubao-60757-v-0273');assert(run('WordClasses.badges(w)').includes('word-class-inferred'));

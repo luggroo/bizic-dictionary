@@ -62955,15 +62955,16 @@ function loanIPAForms(value){
  // Keep tone and nasalization distinctions. Only separators and spaces are removed.
  return normalizeIPA(value).split(/[~～/／;；]/u).map(s=>s.replace(/[\s|｜◦]/gu,'').normalize('NFC')).filter(Boolean);
 }
-// Match an older Brassett /f/ review IPA to its /xu/ successor only when
-// that complete /xu/ IPA is independently derived from this word's Brassett form.
+// Match earlier review symbols only when the entire candidate is independently
+// derived from this word's Brassett spelling. Original review records stay intact.
 function loanIPAReviewedForms(w,value){
  const forms=loanIPAForms(value);
  if(!w.notations?.brassett?.length)return forms;
  const brassett=new Set(w.notations.brassett.flatMap(v=>loanIPAForms(standardBrassettIPA(v.text)||'')));
  return [...new Set(forms.flatMap(form=>{
-  const corrected=form.replace(/(^|[⁰¹²³⁴⁵⁶⁷⁸⁹-])f(?=[aeɛɔ])/gu,'$1xu');
-  return corrected!==form&&brassett.has(corrected)?[form,corrected]:[form];
+  const canonical=normalizeIPA(form,{brassett:true});
+  const candidates=[canonical,canonical.replace(/(^|[⁰¹²³⁴⁵⁶⁷⁸⁹-])ɸ(?=[aeɛɔ])/gu,'$1ɸu'),canonical.replace(/(^|[⁰¹²³⁴⁵⁶⁷⁸⁹-])x(?=u)/gu,'$1ɸ')];
+  return [form,...candidates.filter(candidate=>brassett.has(candidate))];
  }))];
 }
 function modernChineseLoanInfo(w){

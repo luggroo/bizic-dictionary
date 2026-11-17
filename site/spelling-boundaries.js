@@ -70,8 +70,11 @@ function initializeSpellingBoundaries(data){
 }
 function displayReviewedIPA(w,text){
  if(typeof LEXICAL_IPA_BOUNDARIES==='undefined')return text;
- const ids=[w.id,...(w.mergedWordIds||[]),...(w.attestations||[]).map(a=>a.id)],key=text.replace(/\s/g,'');
- for(const id of ids){const form=LEXICAL_IPA_BOUNDARIES[id]?.[key];if(form)return form;}
+ const ids=[w.id,...(w.mergedWordIds||[]),...(w.attestations||[]).map(a=>a.id)],key=normalizeIPA(text).replace(/\s/g,'');
+ for(const id of ids)for(const [original,form] of Object.entries(LEXICAL_IPA_BOUNDARIES[id]||{})){
+  const choices=w.notations?.brassett?.length?[{},{brassett:true}]:[{}];
+  for(const options of choices)if(normalizeIPA(original,options).replace(/\s/g,'')===key)return normalizeIPA(form,options);
+ }
  return text;
 }
 function reviewedSpelling(w,text,mode){

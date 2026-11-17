@@ -46,6 +46,7 @@ assert.equal(normalizeIPA('ɳi55 ɲi21 ɲ̟ie24'),'ȵi⁵⁵ ȵi²¹ ȵie²⁴')
 assert.equal(normalizeIPA('tsɨ55 tshɨ24 dzɨ21 sɨ33 zɨ53 tʂɨ55 tʂhɨ21 ʐɨ33'),'tsɿ⁵⁵ tsʰɿ²⁴ dzɿ²¹ sɿ³³ zɿ⁵³ tʂʅ⁵⁵ tʂʰʅ²¹ ʐʅ³³');
 assert.equal(normalizeIPA('kɨ55 khɨ21 xɨ33 ɣɨ24 tɨ33 dɨ21 sɨe55'),'kɨ⁵⁵ kʰɨ²¹ xɨ³³ ɣɨ²⁴ tɨ³³ dɨ²¹ sɨe⁵⁵');
 assert.equal(normalizeIPA('fu24',{brassett:true}),'ɸu²⁴');
+assert.equal(normalizeIPA('xu21 xa55',{brassett:true}),'ɸu²¹ xa⁵⁵');
 assert.equal(normalizeIPA('fu24'),'fu²⁴');
 const scoped={words:[{attestations:[{id:'b',source:'brassett-2006',term:'fu24'},{id:'c',source:'chen',term:'fu24'}],notations:{ipa:[{text:'fu24',attestationIds:['b']},{text:'fu24',attestationIds:['c']}]}}]};
 normalizeIPAData(scoped);
