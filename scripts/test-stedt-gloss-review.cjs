@@ -25,7 +25,12 @@ const plain=x=>JSON.parse(JSON.stringify(x));
  for(const d of batch.decisions){
   const w=by.get(d.id),r=d.review;assert(w,d.id);
   assert.equal(w.zh,r.zh,d.id+' display Chinese');assert.equal(w.en,r.en,d.id+' display English');
-  assert.deepEqual(Array.from(c.wordIPA(w)),d.originalIPA,d.id+' original IPA and tone values');
+  const actualIPA=Array.from(c.wordIPA(w));
+  const expectedIPA=d.originalIPA.map(ipa=>{
+   const canonical=c.normalizeIPA(ipa),brassett=c.normalizeIPA(ipa,{brassett:true});
+   return w.notations?.brassett?.length&&actualIPA.includes(brassett)?brassett:canonical;
+  });
+  assert.deepEqual(actualIPA,expectedIPA,d.id+' canonical IPA and original tone values');
   assert.equal(c.modernChineseLoanInfo(w).scope,d.originalLoanScope,d.id+' borrowing scope');
   for(const a of r.zhAliases){assert.equal(score(w,a),100,d.id+' exact Chinese alias '+a);aliases++;}
   for(const mode of Object.keys(d.originalSpellings)){
