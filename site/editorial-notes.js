@@ -62939,6 +62939,8 @@ EDITORIAL_NOTES.push(
 EDITORIAL_NOTES.push({"id":"chinese-loan-yubao-60824-v-2650","wordIds":["yubao-60824-v-2650"],"kind":"借词来源","donor":"状、告","donorVariety":"汉语（方言待核）","scope":"whole","text":"两音节均借自汉语，分别对应「状」「告」；具体方言来源待核。","reviewedForms":[{"ipa":"tsuã¹³kau¹³","span":[1,2]}],"reviewBatch":"named-supplement-2026-10-24"});
 EDITORIAL_NOTES.push({"id": "chinese-loan-w5728", "wordIds": ["w5728"], "kind": "借词来源", "donor": "寨", "donorVariety": "汉语（方言待核）", "scope": "whole", "borrowingPeriod": "modern", "text": "新借自汉语「寨」。", "reviewedForms": [{"ipa": "tsai²⁴", "span": [1, 1]}]},{"id": "chinese-loan-w61", "wordIds": ["w61"], "kind": "借词来源", "donor": "上", "donorVariety": "汉语（方言待核）", "scope": "whole", "borrowingPeriod": "modern", "text": "新借自汉语「上」。", "reviewedForms": [{"ipa": "-saŋ⁵⁵", "span": [1, 1]}]});
 // Index source IDs once; list filtering visits every merged entry.
+EDITORIAL_NOTES.push({"id":"chinese-loan-w1329","wordIds":["w1329"],"kind":"借词来源","donor":"里","donorVariety":"汉语（方言待核）","scope":"whole","text":"方位词 lī /li⁵⁵/ 借自汉语「里」，表示「里、里面」。","reviewedForms":[{"ipa":"li⁵⁵","span":[1,1]}]});
+
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){
  if(!editorialNotesByWordId.has(id))editorialNotesByWordId.set(id,[]);

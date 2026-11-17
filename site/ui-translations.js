@@ -3661,3 +3661,5 @@ Object.assign(UI_TRANSLATIONS,{
 });
 
 Object.assign(UI_TRANSLATIONS,{"Brassett f；hu 系列的 x":"Brassett f; x in hu syllables","ɿ、ʅ 沿用汉语语言学常用的舌尖元音记号。Brassett 原书 hu³“喝”记 /xu²¹/，本站记 /ɸu²¹/；ha 仍对应 /xa/。叶式拼音中的调号字母 f 保持原样。":"ɿ and ʅ follow the apical-vowel notation common in Chinese linguistics. Brassett transcribes hu³ ‘drink’ as /xu²¹/; this site uses /ɸu²¹/, while ha remains /xa/. The Ye tone letter f is unchanged."});
+
+Object.assign(UI_TRANSLATIONS,{"方位词 lī /li⁵⁵/ 借自汉语「里」，表示「里、里面」。": "The locative lī /li⁵⁵/, meaning “in; inside”, is borrowed from Chinese 里."});
