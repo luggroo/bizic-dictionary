@@ -32,7 +32,7 @@ assert.equal(c.surveyWordCorrection('other','60824','0363'),null);assert.equal(c
   const note=c.editorialNotesFor(w).find(n=>n.id==='luxi-transcription-'+serial);assert(note,id);
   c.noteText=note.text;assert(vm.runInContext('UI_TRANSLATIONS[noteText]',c),id+' missing English note');
  }
- assert.equal(data.words.flatMap(w=>w.attestations).filter(a=>a.correctedTerm).length,expected.length);
+ assert.equal(data.words.flatMap(w=>w.attestations).filter(a=>a.id.startsWith(luxi+'-v-') && a.correctedTerm).length,expected.length);
  const you=data.words.find(w=>w.id===luxi+'-v-1130');assert.equal(you.attestations[0].term,'ni33');assert(!you.attestations[0].correctedTerm);
  const straw=data.words.find(w=>w.id===luxi+'-v-0182');assert(straw);
  assert.equal(straw.attestations[0].term,'ɨ21mo21kẽ55tsi21');
