@@ -17,865 +17,1057 @@
       {
         "id": "2.1-001",
         "ipa": "pi³⁵tsi⁵⁵kʰa²¹ kʰa⁵⁵lu²¹tsu³⁵ kʰa⁵⁵lu²¹tsu³⁵ a⁵⁵ pĩ³⁵ na⁵⁵ tɕʰe⁵⁵ tʰi²¹ liau⁵³",
-        "zh": "以前土家族人得了一场病。",
+        "zh": "以前土家族人得了一场病，",
         "page": "37",
         "glosses": [
           {
             "ipa": "pi³⁵tsi⁵⁵kʰa²¹",
-            "zh": "土家族"
+            "zh": "土家族",
+            "originalIpa": "pi³⁵tsi⁵⁵kha²¹"
           },
           {
             "ipa": "kʰa⁵⁵lu²¹tsu³⁵",
-            "zh": "以前"
+            "zh": "以前",
+            "originalIpa": "kha⁵⁵lu²¹tsu³⁵"
           },
           {
             "ipa": "kʰa⁵⁵lu²¹tsu³⁵",
-            "zh": "以前"
+            "zh": "以前",
+            "originalIpa": "kha⁵⁵lu²¹tsu³⁵"
           },
           {
             "ipa": "a⁵⁵",
-            "zh": "INJ"
+            "zh": "INJ",
+            "originalIpa": "a⁵⁵"
           },
           {
             "ipa": "pĩ³⁵",
-            "zh": "病"
+            "zh": "病",
+            "originalIpa": "pĩ³⁵"
           },
           {
             "ipa": "na⁵⁵",
-            "zh": "一"
+            "zh": "一",
+            "originalIpa": "na⁵⁵"
           },
           {
             "ipa": "tɕʰe⁵⁵",
-            "zh": "次"
+            "zh": "次",
+            "originalIpa": "tçhe⁵⁵"
           },
           {
             "ipa": "tʰi²¹",
-            "zh": "得"
+            "zh": "得",
+            "originalIpa": "thi²¹"
           },
           {
             "ipa": "liau⁵³",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "liau⁵³"
           }
         ],
-        "originalIpa": "pi³⁵tsi⁵⁵kʰa²¹ kʰa⁵⁵lu²¹tsu³⁵ kʰa⁵⁵lu²¹tsu³⁵ a⁵⁵ pĩ³⁵ na⁵⁵ tɕʰe⁵⁵ tʰi²¹ liau⁵³"
+        "originalIpa": "pi³⁵tsi⁵⁵kha²¹ kha⁵⁵lu²¹tsu³⁵ kha⁵⁵lu²¹tsu³⁵ a⁵⁵ pĩ³⁵ na⁵⁵ tçhe⁵⁵ thi²¹ liau⁵³",
+        "reviewNote": "原书得、ASPP音形在下一排的开头，站点把它们归入本句，与原书句译相符；句末句号改回逗号。"
       },
       {
         "id": "2.1-002",
         "ipa": "ẽ⁵⁵ ti⁵⁵ pĩ³⁵ lie⁵⁵ su²¹ji²¹ ji²¹ tsũ⁵³ wẽ⁵⁵",
-        "zh": "这种病呢，属于一种瘟疫。",
+        "zh": "这种病呢，属于一种瘟疫，",
         "page": "37",
         "glosses": [
           {
             "ipa": "ẽ⁵⁵",
-            "zh": "这"
+            "zh": "这",
+            "originalIpa": "ẽ⁵⁵"
           },
           {
             "ipa": "ti⁵⁵",
-            "zh": "个"
+            "zh": "个",
+            "originalIpa": "ti⁵⁵"
           },
           {
             "ipa": "pĩ³⁵",
-            "zh": "病"
+            "zh": "病",
+            "originalIpa": "pĩ³⁵"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           },
           {
             "ipa": "su²¹ji²¹",
-            "zh": "属于"
+            "zh": "属于",
+            "originalIpa": "su²¹ji²¹"
           },
           {
             "ipa": "ji²¹",
-            "zh": "一"
+            "zh": "一",
+            "originalIpa": "ji²¹"
           },
           {
             "ipa": "tsũ⁵³",
-            "zh": "种"
+            "zh": "种",
+            "originalIpa": "tsũ⁵³"
           },
           {
             "ipa": "wẽ⁵⁵",
-            "zh": "瘟疫"
+            "zh": "瘟疫",
+            "originalIpa": "wẽ⁵⁵"
           }
         ],
-        "originalIpa": "ẽ⁵⁵ ti⁵⁵ pĩ³⁵ lie⁵⁵ su²¹ji²¹ ji²¹ tsũ⁵³ wẽ⁵⁵"
+        "originalIpa": "ẽ⁵⁵ ti⁵⁵ pĩ³⁵ lie⁵⁵ su²¹ji²¹ ji²¹ tsũ⁵³ wẽ⁵⁵",
+        "reviewNote": "音形、原书逐词释义及整句一致；句末句号改回逗号。"
       },
       {
         "id": "2.1-003",
         "ipa": "xi³⁵ tsʰo⁵³ lie⁵⁵ tɕʰi⁵³ma⁵³ tɕiu⁵³ tsʰo⁵³ pa³⁵ tsʰo⁵³ ji⁵³tɕĩ⁵⁵ tsʰo⁵³ ɕe³⁵ si³⁵ no⁵³ tʰau³⁵",
-        "zh": "十家中起码有九家已经没人了。",
+        "zh": "十家中起码有九家已经没人了，",
         "page": "37",
         "glosses": [
           {
             "ipa": "xi³⁵",
-            "zh": "十"
+            "zh": "十",
+            "originalIpa": "xi³⁵"
           },
           {
             "ipa": "tsʰo⁵³",
-            "zh": "家"
+            "zh": "家",
+            "originalIpa": "tsho⁵³"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           },
           {
             "ipa": "tɕʰi⁵³ma⁵³",
-            "zh": "起码"
+            "zh": "起码",
+            "originalIpa": "tçhi⁵³ma⁵³"
           },
           {
             "ipa": "tɕiu⁵³",
-            "zh": "九"
+            "zh": "九",
+            "originalIpa": "tçiu⁵³"
           },
           {
             "ipa": "tsʰo⁵³",
-            "zh": "家"
+            "zh": "家",
+            "originalIpa": "tsho⁵³"
           },
           {
             "ipa": "pa³⁵",
-            "zh": "八"
+            "zh": "八",
+            "originalIpa": "pa³⁵"
           },
           {
             "ipa": "tsʰo⁵³",
-            "zh": "家"
+            "zh": "家",
+            "originalIpa": "tsho⁵³"
           },
           {
             "ipa": "ji⁵³tɕĩ⁵⁵",
-            "zh": "已经"
+            "zh": "已经",
+            "originalIpa": "ji⁵³tçĩ⁵⁵"
           },
           {
             "ipa": "tsʰo⁵³",
-            "zh": "家"
+            "zh": "家",
+            "originalIpa": "tsho⁵³"
           },
           {
             "ipa": "ɕe³⁵",
-            "zh": "有"
+            "zh": "有",
+            "originalIpa": "çe³⁵"
           },
           {
             "ipa": "si³⁵",
-            "zh": "是"
+            "zh": "是",
+            "originalIpa": "si³⁵"
           },
           {
             "ipa": "no⁵³",
-            "zh": "人"
+            "zh": "人",
+            "originalIpa": "no⁵³"
           },
           {
             "ipa": "tʰau³⁵",
-            "zh": "没有"
+            "zh": "没有",
+            "originalIpa": "thau³⁵"
           }
         ],
-        "originalIpa": "xi³⁵ tsʰo⁵³ lie⁵⁵ tɕʰi⁵³ma⁵³ tɕiu⁵³ tsʰo⁵³ pa³⁵ tsʰo⁵³ ji⁵³tɕĩ⁵⁵ tsʰo⁵³ ɕe³⁵ si³⁵ no⁵³ tʰau³⁵"
+        "originalIpa": "xi³⁵ tsho⁵³ lie⁵⁵ tçhi⁵³ma⁵³ tçiu⁵³ tsho⁵³ pa³⁵ tsho⁵³ ji⁵³tçĩ⁵⁵ tsho⁵³ çe³⁵ si³⁵ no⁵³ thau³⁵",
+        "reviewNote": "书中“家”为 tsho⁵³，即 tsʰo⁵³；“已经”为 ji⁵³tçĩ⁵⁵，鼻化保留；句末句号改逗号。"
       },
       {
         "id": "2.1-004",
         "ipa": "wẽ⁵⁵ to²¹ le⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵ xã³⁵ si²¹ tɕia²¹kʰa²¹ na⁵⁵",
-        "zh": "中瘟后，有一姓石人家。",
+        "zh": "中瘟后，有一姓石人家，",
         "page": "37",
         "glosses": [
           {
             "ipa": "wẽ⁵⁵",
-            "zh": "瘟疫"
+            "zh": "瘟疫",
+            "originalIpa": "wẽ⁵⁵"
           },
           {
             "ipa": "to²¹",
-            "zh": "中"
+            "zh": "中",
+            "originalIpa": "to²¹"
           },
           {
             "ipa": "le⁵³",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "le⁵³"
           },
           {
             "ipa": "tsi⁵⁵xiu³⁵",
-            "zh": "之后"
+            "zh": "之后",
+            "originalIpa": "tsi⁵⁵xiu³⁵"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           },
           {
             "ipa": "xã³⁵",
-            "zh": "这样"
+            "zh": "这样",
+            "originalIpa": "xã³⁵"
           },
           {
             "ipa": "si²¹",
-            "zh": "石"
+            "zh": "石",
+            "originalIpa": "si²¹"
           },
           {
             "ipa": "tɕia²¹kʰa²¹",
-            "zh": "姓"
+            "zh": "姓",
+            "originalIpa": "tçia²¹kha²¹"
           },
           {
             "ipa": "na⁵⁵",
-            "zh": "一"
+            "zh": "一",
+            "originalIpa": "na⁵⁵"
           }
         ],
-        "originalIpa": "wẽ⁵⁵ to²¹ le⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵ xã³⁵ si²¹ tɕia²¹kʰa²¹ na⁵⁵"
+        "originalIpa": "wẽ⁵⁵ to²¹ le⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵ xã³⁵ si²¹ tçia²¹kha²¹ na⁵⁵",
+        "reviewNote": "音形、词义及句译一致；句号改回逗号。"
       },
       {
         "id": "2.1-005",
         "ipa": "kie⁵³ tsʰu⁵⁵ piu³⁵ nau⁵³ ɕe³⁵",
-        "zh": "他们家有个女儿。",
+        "zh": "他们家有个女儿，",
         "page": "37",
         "glosses": [
           {
             "ipa": "kie⁵³",
-            "zh": "2PL（原书标注；句译作他们）"
+            "zh": "2pl",
+            "originalIpa": "kie⁵³"
           },
           {
             "ipa": "tsʰu⁵⁵",
-            "zh": "家"
+            "zh": "家",
+            "originalIpa": "tshu⁵⁵"
           },
           {
             "ipa": "piu³⁵",
-            "zh": "女儿"
+            "zh": "女儿",
+            "originalIpa": "piu³⁵"
           },
           {
             "ipa": "nau⁵³",
-            "zh": "一个"
+            "zh": "一个",
+            "originalIpa": "nau⁵³"
           },
           {
             "ipa": "ɕe³⁵",
-            "zh": "有"
+            "zh": "有",
+            "originalIpa": "çe³⁵"
           }
         ],
-        "originalIpa": "kie⁵³ tsʰu⁵⁵ piu³⁵ nau⁵³ ɕe³⁵"
+        "originalIpa": "kie⁵³ tshu⁵⁵ piu³⁵ nau⁵³ çe³⁵",
+        "reviewNote": "原书为 2pl，原网站把解释性括注直接写入gloss；保留 2pl，疑点另注；句号改逗号。"
       },
       {
         "id": "2.1-006",
-        "ipa": "kie⁵³tsie²¹ ne⁵⁵ piu³⁵ lie⁵⁵ ko³⁵ tɕiu⁵⁵ ɕia³⁵tɕe²¹ɕi⁵⁵ la⁵⁵",
-        "zh": "他们的女儿就下决心。",
+        "ipa": "kie⁵³tsie²¹ ne⁵⁵ piu³⁵ lie⁵⁵ ko³⁵ tɕiu⁵⁵ ɕia³⁵tɕe²¹ɕĩ⁵⁵ la⁵⁵",
+        "zh": "她就下决心，",
         "page": "37-38",
         "glosses": [
           {
             "ipa": "kie⁵³tsie²¹",
-            "zh": "3PL"
+            "zh": "3pl",
+            "originalIpa": "kie⁵³tsie²¹"
           },
           {
             "ipa": "ne⁵⁵",
-            "zh": "STRP"
+            "zh": "STRP",
+            "originalIpa": "ne⁵⁵"
           },
           {
             "ipa": "piu³⁵",
-            "zh": "女儿"
+            "zh": "女儿",
+            "originalIpa": "piu³⁵"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           },
           {
             "ipa": "ko³⁵",
-            "zh": "3SG"
+            "zh": "3sg",
+            "originalIpa": "ko³⁵"
           },
           {
             "ipa": "tɕiu⁵⁵",
-            "zh": "就"
+            "zh": "就",
+            "originalIpa": "tçiu⁵⁵"
           },
           {
-            "ipa": "ɕia³⁵tɕe²¹ɕi⁵⁵",
-            "zh": "下决心"
+            "ipa": "ɕia³⁵tɕe²¹ɕĩ⁵⁵",
+            "zh": "下决心",
+            "originalIpa": "çia³⁵tçe²¹çĩ⁵⁵"
           },
           {
             "ipa": "la⁵⁵",
-            "zh": "INJ"
+            "zh": "INJ",
+            "originalIpa": "la⁵⁵"
           }
         ],
-        "originalIpa": "kie⁵³tsie²¹ ne⁵⁵ piu³⁵ lie⁵⁵ ko³⁵ tɕiu⁵⁵ ɕia³⁵tɕe²¹ɕi⁵⁵ la⁵⁵"
+        "originalIpa": "kie⁵³tsie²¹ ne⁵⁵ piu³⁵ lie⁵⁵ ko³⁵ tçiu⁵⁵ çia³⁵tçe²¹çĩ⁵⁵ la⁵⁵",
+        "reviewNote": "源音形及gloss分布于印刷37–38页；高倍原图‘下决心’末音 çĩ⁵⁵ 鼻化，网站误作 ɕi⁵⁵，应改为 ɕĩ⁵⁵。原书句译‘她就下决心，’，网站增添‘他们的女儿’并改句号。"
       },
       {
         "id": "2.1-007",
         "ipa": "ko³⁵ xũ²¹tsai⁵⁵ ẽ⁵⁵ti pi³⁵tsi⁵⁵kʰa²¹ ne⁵⁵ wẽ⁵⁵ tsi³⁵ xau⁵³ tsẽ⁵³ mo²¹ tsʰa³⁵ le⁵³",
-        "zh": "她一定要把土家族的这种瘟治好。",
+        "zh": "她一定要把土家族的这种瘟治好，",
         "page": "38",
         "glosses": [
           {
             "ipa": "ko³⁵",
-            "zh": "3SG"
+            "zh": "3sg",
+            "originalIpa": "ko³⁵"
           },
           {
             "ipa": "xũ²¹tsai⁵⁵",
-            "zh": "反正"
+            "zh": "反正",
+            "originalIpa": "xũ²¹tsai⁵⁵"
           },
           {
             "ipa": "ẽ⁵⁵ti",
-            "zh": "这个"
+            "zh": "这个",
+            "originalIpa": "ẽ⁵⁵ti"
           },
           {
             "ipa": "pi³⁵tsi⁵⁵kʰa²¹",
-            "zh": "土家族"
+            "zh": "土家族",
+            "originalIpa": "pi³⁵tsi⁵⁵kha²¹"
           },
           {
             "ipa": "ne⁵⁵",
-            "zh": "STRP"
+            "zh": "STRP",
+            "originalIpa": "ne⁵⁵"
           },
           {
             "ipa": "wẽ⁵⁵",
-            "zh": "瘟疫"
+            "zh": "瘟疫",
+            "originalIpa": "wẽ⁵⁵"
           },
           {
             "ipa": "tsi³⁵",
-            "zh": "诊治"
+            "zh": "诊治",
+            "originalIpa": "tsi³⁵"
           },
           {
             "ipa": "xau⁵³",
-            "zh": "好"
+            "zh": "好",
+            "originalIpa": "xau⁵³"
           },
           {
             "ipa": "tsẽ⁵³",
-            "zh": "诊治"
+            "zh": "诊治",
+            "originalIpa": "tsẽ⁵³"
           },
           {
             "ipa": "mo²¹",
-            "zh": "STRP"
+            "zh": "STRP",
+            "originalIpa": "mo²¹"
           },
           {
             "ipa": "tsʰa³⁵",
-            "zh": "好"
+            "zh": "好",
+            "originalIpa": "tsha³⁵"
           },
           {
             "ipa": "le⁵³",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "le⁵³"
           }
         ],
-        "originalIpa": "ko³⁵ xũ²¹tsai⁵⁵ ẽ⁵⁵ti pi³⁵tsi⁵⁵kʰa²¹ ne⁵⁵ wẽ⁵⁵ tsi³⁵ xau⁵³ tsẽ⁵³ mo²¹ tsʰa³⁵ le⁵³"
+        "originalIpa": "ko³⁵ xũ²¹tsai⁵⁵ ẽ⁵⁵ti pi³⁵tsi⁵⁵kha²¹ ne⁵⁵ wẽ⁵⁵ tsi³⁵ xau⁵³ tsẽ⁵³ mo²¹ tsha³⁵ le⁵³",
+        "reviewNote": "原书“好”为 tsha³⁵，即 tsʰa³⁵，不是 tɕʰa；“这个”末音原图无调号，不补；句号改逗号。"
       },
       {
         "id": "2.1-008",
-        "ipa": "ko³⁵ tɕiu⁵⁵ kie⁵³tsie²¹ ne⁵⁵ a²¹ne⁵³ a²¹pa⁵³ ta⁵³ li²¹",
-        "zh": "于是她就跟她父母说。",
+        "ipa": "ko³⁵ tɕiu⁵⁵ kie⁵³tsie²¹ ne⁵⁵ a²¹ne⁵³ a²¹pa⁵³ ta⁵³ li²¹ a²¹ne⁵³ a²¹pa⁵³",
+        "zh": "于是她就跟她父母说：“爸爸，妈妈，",
         "page": "38",
         "glosses": [
           {
             "ipa": "ko³⁵",
-            "zh": "3SG"
+            "zh": "3sg",
+            "originalIpa": "ko³⁵"
           },
           {
             "ipa": "tɕiu⁵⁵",
-            "zh": "就"
+            "zh": "就",
+            "originalIpa": "tçiu⁵⁵"
           },
           {
             "ipa": "kie⁵³tsie²¹",
-            "zh": "3PL"
+            "zh": "3pl",
+            "originalIpa": "kie⁵³tsie²¹"
           },
           {
             "ipa": "ne⁵⁵",
-            "zh": "STRP"
+            "zh": "STRP",
+            "originalIpa": "ne⁵⁵"
           },
           {
             "ipa": "a²¹ne⁵³",
-            "zh": "母亲"
+            "zh": "母亲",
+            "originalIpa": "a²¹ne⁵³"
           },
           {
             "ipa": "a²¹pa⁵³",
-            "zh": "父亲"
+            "zh": "父亲",
+            "originalIpa": "a²¹pa⁵³"
           },
           {
             "ipa": "ta⁵³",
-            "zh": "CASP"
+            "zh": "CASP",
+            "originalIpa": "ta⁵³"
           },
           {
             "ipa": "li²¹",
-            "zh": "说"
-          }
-        ],
-        "originalIpa": "ko³⁵ tɕiu⁵⁵ kie⁵³tsie²¹ ne⁵⁵ a²¹ne⁵³ a²¹pa⁵³ ta⁵³ li²¹"
-      },
-      {
-        "id": "2.1-009",
-        "ipa": "a²¹ne⁵³ a²¹pa⁵³ ŋa³⁵ lie⁵⁵ no⁵³te⁵³ po⁵⁵ pĩ³⁵ tsẽ⁵³-i³⁵ jau³⁵ tɕe⁵³ mo²¹ ni⁵⁵-i³⁵",
-        "zh": "爸爸、妈妈，我去给别人治病，去找药。",
-        "page": "38",
-        "glosses": [
+            "zh": "说",
+            "originalIpa": "li²¹"
+          },
           {
             "ipa": "a²¹ne⁵³",
-            "zh": "母亲"
+            "zh": "母亲",
+            "originalIpa": "a²¹ne⁵³"
           },
           {
             "ipa": "a²¹pa⁵³",
-            "zh": "父亲"
-          },
+            "zh": "父亲",
+            "originalIpa": "a²¹pa⁵³"
+          }
+        ],
+        "originalIpa": "ko³⁵ tçiu⁵⁵ kie⁵³tsie²¹ ne⁵⁵ a²¹ne⁵³ a²¹pa⁵³ ta⁵³ li²¹ a²¹ne⁵³ a²¹pa⁵³",
+        "reviewNote": "原书本行末有 a²¹ne⁵³ a²¹pa⁵³ 两词，gloss 母亲、父亲，句译包含“爸爸，妈妈”；网站将两词及称呼放入009，建议移回008。"
+      },
+      {
+        "id": "2.1-009",
+        "ipa": "ŋa³⁵ lie⁵⁵ no⁵³te⁵³ po⁵⁵ pĩ³⁵ tsẽ⁵³-i³⁵ jau³⁵ tɕe⁵³ mo²¹ ni⁵⁵-i³⁵",
+        "zh": "我去给别人治病，去找药，",
+        "page": "38",
+        "glosses": [
           {
             "ipa": "ŋa³⁵",
-            "zh": "1SG"
+            "zh": "1sg",
+            "originalIpa": "ŋa³⁵"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           },
           {
             "ipa": "no⁵³te⁵³",
-            "zh": "别人"
+            "zh": "别人",
+            "originalIpa": "no⁵³te⁵³"
           },
           {
             "ipa": "po⁵⁵",
-            "zh": "CASP"
+            "zh": "CASP",
+            "originalIpa": "po⁵⁵"
           },
           {
             "ipa": "pĩ³⁵",
-            "zh": "病"
+            "zh": "病",
+            "originalIpa": "pĩ³⁵"
           },
           {
             "ipa": "tsẽ⁵³-i³⁵",
-            "zh": "诊治-FUT"
+            "zh": "诊治",
+            "originalIpa": "tsẽ⁵³-i³⁵"
           },
           {
             "ipa": "jau³⁵",
-            "zh": "药"
+            "zh": "药",
+            "originalIpa": "jau³⁵"
           },
           {
             "ipa": "tɕe⁵³",
-            "zh": "赶"
+            "zh": "赶",
+            "originalIpa": "tçe⁵³"
           },
           {
             "ipa": "mo²¹",
-            "zh": "STRP"
+            "zh": "STRP",
+            "originalIpa": "mo²¹"
           },
           {
             "ipa": "ni⁵⁵-i³⁵",
-            "zh": "找-FUT"
+            "zh": "找",
+            "originalIpa": "ni⁵⁵-i³⁵"
           }
         ],
-        "originalIpa": "a²¹ne⁵³ a²¹pa⁵³ ŋa³⁵ lie⁵⁵ no⁵³te⁵³ po⁵⁵ pĩ³⁵ tsẽ⁵³-i³⁵ jau³⁵ tɕe⁵³ mo²¹ ni⁵⁵-i³⁵"
+        "originalIpa": "ŋa³⁵ lie⁵⁵ no⁵³te⁵³ po⁵⁵ pĩ³⁵ tsẽ⁵³-i³⁵ jau³⁵ tçe⁵³ mo²¹ ni⁵⁵-i³⁵",
+        "reviewNote": "原句为“我去给别人治病，去找药，”；原书gloss为“诊治”和“找”，-i³⁵的将行体说明在脚注，网站诊治-FUT、找-FUT为增补分析，不是原始 gloss。将称呼两词移至008。"
       },
       {
         "id": "2.1-010",
         "ipa": "no⁵³ tɕiu³⁵ tʰi⁵⁵ɕi²¹ kʰa⁵⁵lu²¹tsu³⁵ li²¹ no⁵³ nau⁵³ tɕiu³⁵ wa⁵⁵",
-        "zh": "必须救人。以前说，救一个人啊……",
+        "zh": "必须救人，以前说，“救一个啊，",
         "page": "38",
         "glosses": [
           {
             "ipa": "no⁵³",
-            "zh": "人"
+            "zh": "人",
+            "originalIpa": "no⁵³"
           },
           {
             "ipa": "tɕiu³⁵",
-            "zh": "救"
+            "zh": "救",
+            "originalIpa": "tçiu³⁵"
           },
           {
             "ipa": "tʰi⁵⁵ɕi²¹",
-            "zh": "必须"
+            "zh": "必须",
+            "originalIpa": "thi⁵⁵çi²¹"
           },
           {
             "ipa": "kʰa⁵⁵lu²¹tsu³⁵",
-            "zh": "以前"
+            "zh": "以前",
+            "originalIpa": "kha⁵⁵lu²¹tsu³⁵"
           },
           {
             "ipa": "li²¹",
-            "zh": "说"
+            "zh": "说",
+            "originalIpa": "li²¹"
           },
           {
             "ipa": "no⁵³",
-            "zh": "人"
+            "zh": "人",
+            "originalIpa": "no⁵³"
           },
           {
             "ipa": "nau⁵³",
-            "zh": "一个"
+            "zh": "一个",
+            "originalIpa": "nau⁵³"
           },
           {
             "ipa": "tɕiu³⁵",
-            "zh": "救"
+            "zh": "救",
+            "originalIpa": "tçiu³⁵"
           },
           {
             "ipa": "wa⁵⁵",
-            "zh": "INJ"
+            "zh": "INJ",
+            "originalIpa": "wa⁵⁵"
           }
         ],
-        "originalIpa": "no⁵³ tɕiu³⁵ tʰi⁵⁵ɕi²¹ kʰa⁵⁵lu²¹tsu³⁵ li²¹ no⁵³ nau⁵³ tɕiu³⁵ wa⁵⁵"
+        "originalIpa": "no⁵³ tçiu³⁵ thi⁵⁵çi²¹ kha⁵⁵lu²¹tsu³⁵ li²¹ no⁵³ nau⁵³ tçiu³⁵ wa⁵⁵",
+        "reviewNote": "原书为“必须救人，以前说，‘救一个啊，”；网站增补“人”、更改标点和引号，恢复原句译。"
       },
       {
         "id": "2.1-011",
         "ipa": "tẽ⁵⁵ji²¹ ɣɨ³⁵ le⁵³ je²¹ tɕi²¹ ne⁵⁵ pau⁵³tʰa²¹ nau⁵³ ɕiu⁵⁵ wa⁵⁵ tɕʰiã²¹ ne⁵⁵",
-        "zh": "比去庙脚下修一座宝塔还要强。",
+        "zh": "比去庙脚下修一座宝塔还要强。”",
         "page": "38",
         "glosses": [
           {
             "ipa": "tẽ⁵⁵ji²¹",
-            "zh": "等于"
+            "zh": "等于",
+            "originalIpa": "tẽ⁵⁵ji²¹"
           },
           {
             "ipa": "ɣɨ³⁵",
-            "zh": "走"
+            "zh": "走",
+            "originalIpa": "ɣɨ³⁵"
           },
           {
             "ipa": "le⁵³",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "le⁵³"
           },
           {
             "ipa": "je²¹",
-            "zh": "庙"
+            "zh": "庙",
+            "originalIpa": "je²¹"
           },
           {
             "ipa": "tɕi²¹",
-            "zh": "脚"
+            "zh": "脚",
+            "originalIpa": "tçi²¹"
           },
           {
             "ipa": "ne⁵⁵",
-            "zh": "STRP"
+            "zh": "STRP",
+            "originalIpa": "ne⁵⁵"
           },
           {
             "ipa": "pau⁵³tʰa²¹",
-            "zh": "宝塔"
+            "zh": "宝塔",
+            "originalIpa": "pau⁵³tha²¹"
           },
           {
             "ipa": "nau⁵³",
-            "zh": "一个"
+            "zh": "一个",
+            "originalIpa": "nau⁵³"
           },
           {
             "ipa": "ɕiu⁵⁵",
-            "zh": "修建"
+            "zh": "修建",
+            "originalIpa": "çiu⁵⁵"
           },
           {
             "ipa": "wa⁵⁵",
-            "zh": "INJ"
+            "zh": "INJ",
+            "originalIpa": "wa⁵⁵"
           },
           {
             "ipa": "tɕʰiã²¹",
-            "zh": "强"
+            "zh": "强",
+            "originalIpa": "tçhiã²¹"
           },
           {
             "ipa": "ne⁵⁵",
-            "zh": "CMPP"
+            "zh": "CMPP",
+            "originalIpa": "ne⁵⁵"
           }
         ],
-        "originalIpa": "tẽ⁵⁵ji²¹ ɣɨ³⁵ le⁵³ je²¹ tɕi²¹ ne⁵⁵ pau⁵³tʰa²¹ nau⁵³ ɕiu⁵⁵ wa⁵⁵ tɕʰiã²¹ ne⁵⁵"
+        "originalIpa": "tẽ⁵⁵ji²¹ ɣɨ³⁵ le⁵³ je²¹ tçi²¹ ne⁵⁵ pau⁵³tha²¹ nau⁵³ çiu⁵⁵ wa⁵⁵ tçhiã²¹ ne⁵⁵",
+        "reviewNote": "“走”在原图是 ɣɨ³⁵，中央元音横杠必须保留；“强”为 tçhiã²¹，规范化 tɕʰiã²¹；原书句末为引号。"
       },
       {
         "id": "2.1-012",
         "ipa": "a²¹ne⁵³ a²¹pa⁵³ lie⁵⁵ je⁵³ tʰũ²¹ji³⁵ ko³⁵ ne⁵⁵ ɕiã⁵³xua²¹",
-        "zh": "她的父母也很赞同她的想法。",
-        "page": "38",
+        "zh": "她的父母也很赞同她的想法，",
+        "page": "38–39",
         "glosses": [
           {
             "ipa": "a²¹ne⁵³",
-            "zh": "母亲"
+            "zh": "母亲",
+            "originalIpa": "a²¹ne⁵³"
           },
           {
             "ipa": "a²¹pa⁵³",
-            "zh": "父亲"
+            "zh": "父亲",
+            "originalIpa": "a²¹pa⁵³"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           },
           {
             "ipa": "je⁵³",
-            "zh": "也"
+            "zh": "也",
+            "originalIpa": "je⁵³"
           },
           {
             "ipa": "tʰũ²¹ji³⁵",
-            "zh": "同意"
+            "zh": "同意",
+            "originalIpa": "thũ²¹ji³⁵"
           },
           {
             "ipa": "ko³⁵",
-            "zh": "3SG"
+            "zh": "3sg",
+            "originalIpa": "ko³⁵"
           },
           {
             "ipa": "ne⁵⁵",
-            "zh": "STRP"
+            "zh": "STRP",
+            "originalIpa": "ne⁵⁵"
           },
           {
             "ipa": "ɕiã⁵³xua²¹",
-            "zh": "想法"
+            "zh": "想法",
+            "originalIpa": "çiã⁵³xua²¹"
           }
         ],
-        "originalIpa": "a²¹ne⁵³ a²¹pa⁵³ lie⁵⁵ je⁵³ tʰũ²¹ji³⁵ ko³⁵ ne⁵⁵ ɕiã⁵³xua²¹"
+        "originalIpa": "a²¹ne⁵³ a²¹pa⁵³ lie⁵⁵ je⁵³ thũ²¹ji³⁵ ko³⁵ ne⁵⁵ çiã⁵³xua²¹",
+        "reviewNote": "逐词标注印刷38页，整句印刷39页首；站点只记38页，需标38–39；句尾句号改为逗号。"
       },
       {
         "id": "2.1-013",
         "ipa": "ko³⁵ ne⁵⁵ te³⁵ po⁵⁵ ɕi⁵⁵ si²¹wu⁵³ si²¹wu⁵³ kʰa⁵⁵ le⁵³ lie⁵⁵",
-        "zh": "过完正月十五。",
+        "zh": "过完正月十五，",
         "page": "39",
         "glosses": [
           {
             "ipa": "ko³⁵",
-            "zh": "3SG"
+            "zh": "3sg",
+            "originalIpa": "ko³⁵"
           },
           {
             "ipa": "ne⁵⁵",
-            "zh": "STRP"
+            "zh": "STRP",
+            "originalIpa": "ne⁵⁵"
           },
           {
             "ipa": "te³⁵",
-            "zh": "想"
+            "zh": "想",
+            "originalIpa": "te³⁵"
           },
           {
             "ipa": "po⁵⁵",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "po⁵⁵"
           },
           {
             "ipa": "ɕi⁵⁵",
-            "zh": "STRP"
+            "zh": "STRP",
+            "originalIpa": "çi⁵⁵"
           },
           {
             "ipa": "si²¹wu⁵³",
-            "zh": "十五"
+            "zh": "十五",
+            "originalIpa": "si²¹wu⁵³"
           },
           {
             "ipa": "si²¹wu⁵³",
-            "zh": "十五"
+            "zh": "十五",
+            "originalIpa": "si²¹wu⁵³"
           },
           {
             "ipa": "kʰa⁵⁵",
-            "zh": "过"
+            "zh": "过",
+            "originalIpa": "kha⁵⁵"
           },
           {
             "ipa": "le⁵³",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "le⁵³"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           }
         ],
-        "originalIpa": "ko³⁵ ne⁵⁵ te³⁵ po⁵⁵ ɕi⁵⁵ si²¹wu⁵³ si²¹wu⁵³ kʰa⁵⁵ le⁵³ lie⁵⁵"
+        "originalIpa": "ko³⁵ ne⁵⁵ te³⁵ po⁵⁵ çi⁵⁵ si²¹wu⁵³ si²¹wu⁵³ kha⁵⁵ le⁵³ lie⁵⁵",
+        "reviewNote": "逐词音形、gloss及整句相符；原书句尾为逗号。"
       },
       {
         "id": "2.1-014",
         "ipa": "ko³⁵ tɕiu⁵⁵ tsʰo⁵³ tɕi²¹kʰu²¹ ta³⁵ le⁵³ lie⁵⁵ jau³⁵ ni⁵⁵ tiu⁵⁵",
-        "zh": "她就穿着草鞋找药去了。",
+        "zh": "她就穿着草鞋找药去了",
         "page": "39",
         "glosses": [
           {
             "ipa": "ko³⁵",
-            "zh": "3SG"
+            "zh": "3sg",
+            "originalIpa": "ko³⁵"
           },
           {
             "ipa": "tɕiu⁵⁵",
-            "zh": "就"
+            "zh": "就",
+            "originalIpa": "tçiu⁵⁵"
           },
           {
             "ipa": "tsʰo⁵³",
-            "zh": "家"
+            "zh": "家",
+            "originalIpa": "tsho⁵³"
           },
           {
             "ipa": "tɕi²¹kʰu²¹",
-            "zh": "草鞋"
+            "zh": "草鞋",
+            "originalIpa": "tçi²¹khu²¹"
           },
           {
             "ipa": "ta³⁵",
-            "zh": "穿"
+            "zh": "穿",
+            "originalIpa": "ta³⁵"
           },
           {
             "ipa": "le⁵³",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "le⁵³"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           },
           {
             "ipa": "jau³⁵",
-            "zh": "药"
+            "zh": "药",
+            "originalIpa": "jau³⁵"
           },
           {
             "ipa": "ni⁵⁵",
-            "zh": "找"
+            "zh": "找",
+            "originalIpa": "ni⁵⁵"
           },
           {
             "ipa": "tiu⁵⁵",
-            "zh": "DIRP"
+            "zh": "DIRP",
+            "originalIpa": "tiu⁵⁵"
           }
         ],
-        "originalIpa": "ko³⁵ tɕiu⁵⁵ tsʰo⁵³ tɕi²¹kʰu²¹ ta³⁵ le⁵³ lie⁵⁵ jau³⁵ ni⁵⁵ tiu⁵⁵"
+        "originalIpa": "ko³⁵ tçiu⁵⁵ tsho⁵³ tçi²¹khu²¹ ta³⁵ le⁵³ lie⁵⁵ jau³⁵ ni⁵⁵ tiu⁵⁵",
+        "reviewNote": "“家”为 tsho⁵³，规范化 tsʰo⁵³；原书整句句尾未见标点，网站加句号。"
       },
       {
         "id": "2.1-015",
         "ipa": "ko³⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ le⁵³ tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹",
-        "zh": "她走啊走，走到了鸡公里河边。",
+        "zh": "走到了鸡公里河边，",
         "page": "39",
         "glosses": [
           {
             "ipa": "ko³⁵",
-            "zh": "3SG"
+            "zh": "3sg",
+            "originalIpa": "ko³⁵"
           },
           {
             "ipa": "ɣɨ³⁵",
-            "zh": "走"
+            "zh": "走",
+            "originalIpa": "ɣɨ³⁵"
           },
           {
             "ipa": "a⁵⁵",
-            "zh": "INJ"
+            "zh": "INJ",
+            "originalIpa": "a⁵⁵"
           },
           {
             "ipa": "ɣɨ³⁵",
-            "zh": "走"
+            "zh": "走",
+            "originalIpa": "ɣɨ³⁵"
           },
           {
             "ipa": "a⁵⁵",
-            "zh": "INJ"
+            "zh": "INJ",
+            "originalIpa": "a⁵⁵"
           },
           {
             "ipa": "ɣɨ³⁵",
-            "zh": "走"
+            "zh": "走",
+            "originalIpa": "ɣɨ³⁵"
           },
           {
             "ipa": "le⁵³",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "le⁵³"
           },
           {
             "ipa": "tɕi⁵⁵kũ⁵⁵li⁵³",
-            "zh": "鸡公里"
+            "zh": "鸡公里",
+            "originalIpa": "tçi⁵⁵kũ⁵⁵li⁵³"
           },
           {
             "ipa": "xu²¹pʰa²¹",
-            "zh": "河"
+            "zh": "河",
+            "originalIpa": "xu²¹pha²¹"
           }
         ],
-        "originalIpa": "ko³⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ le⁵³ tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹"
+        "originalIpa": "ko³⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ le⁵³ tçi⁵⁵kũ⁵⁵li⁵³ xu²¹pha²¹",
+        "reviewNote": "原书句译“走到了鸡公里河边，”，网站增补“她走啊走，”；原书保留三次“走”及两次INJ的逐词层。"
       },
       {
         "id": "2.1-016",
         "ipa": "tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ je⁵³ liau⁵³ lie⁵⁵",
-        "zh": "到鸡公里河之后。",
+        "zh": "到鸡公里河之后，",
         "page": "39",
         "glosses": [
           {
             "ipa": "tɕi⁵⁵kũ⁵⁵li⁵³",
-            "zh": "鸡公里"
+            "zh": "鸡公里",
+            "originalIpa": "tçi⁵⁵kũ⁵⁵li⁵³"
           },
           {
             "ipa": "xu²¹pʰa²¹",
-            "zh": "河"
+            "zh": "河",
+            "originalIpa": "xu²¹pha²¹"
           },
           {
             "ipa": "je⁵³",
-            "zh": "到"
+            "zh": "到",
+            "originalIpa": "je⁵³"
           },
           {
             "ipa": "liau⁵³",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "liau⁵³"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           }
         ],
-        "originalIpa": "tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ je⁵³ liau⁵³ lie⁵⁵"
+        "originalIpa": "tçi⁵⁵kũ⁵⁵li⁵³ xu²¹pha²¹ je⁵³ liau⁵³ lie⁵⁵",
+        "reviewNote": "源音形及gloss一致；原书句尾为逗号。"
       },
       {
         "id": "2.1-017",
         "ipa": "tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ tʰu³⁵ lie⁵⁵ wo⁵³ kei⁵³ti²¹",
-        "zh": "鸡公里河里好多蛇。",
+        "zh": "鸡公里河里好多蛇呀，",
         "page": "39",
         "glosses": [
           {
             "ipa": "tɕi⁵⁵kũ⁵⁵li⁵³",
-            "zh": "鸡公里"
+            "zh": "鸡公里",
+            "originalIpa": "tçi⁵⁵kũ⁵⁵li⁵³"
           },
           {
             "ipa": "xu²¹pʰa²¹",
-            "zh": "河"
+            "zh": "河",
+            "originalIpa": "xu²¹pha²¹"
           },
           {
             "ipa": "tʰu³⁵",
-            "zh": "里"
+            "zh": "里",
+            "originalIpa": "thu³⁵"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           },
           {
             "ipa": "wo⁵³",
-            "zh": "蛇"
+            "zh": "蛇",
+            "originalIpa": "wo⁵³"
           },
           {
             "ipa": "kei⁵³ti²¹",
-            "zh": "很多"
+            "zh": "很多",
+            "originalIpa": "kei⁵³ti²¹"
           }
         ],
-        "originalIpa": "tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ tʰu³⁵ lie⁵⁵ wo⁵³ kei⁵³ti²¹"
+        "originalIpa": "tçi⁵⁵kũ⁵⁵li⁵³ xu²¹pha²¹ thu³⁵ lie⁵⁵ wo⁵³ kei⁵³ti²¹",
+        "reviewNote": "原书整句“鸡公里河里好多蛇呀，”，网站漏“呀”并改句号。"
       },
       {
         "id": "2.1-018",
         "ipa": "wo⁵³ lau⁵³ka⁵⁵ na⁵⁵ tsi⁵⁵ pʰie²¹ po⁵⁵ mo²¹ pu³⁵kã⁵³ ɣɨ³⁵",
-        "zh": "有一条大蛇趴在那里，她不敢走了。",
+        "zh": "有一条大蛇趴在那里，她不敢走了，",
         "page": "39",
         "glosses": [
           {
             "ipa": "wo⁵³",
-            "zh": "蛇"
+            "zh": "蛇",
+            "originalIpa": "wo⁵³"
           },
           {
             "ipa": "lau⁵³ka⁵⁵",
-            "zh": "大"
+            "zh": "大",
+            "originalIpa": "lau⁵³ka⁵⁵"
           },
           {
             "ipa": "na⁵⁵",
-            "zh": "一"
+            "zh": "一",
+            "originalIpa": "na⁵⁵"
           },
           {
             "ipa": "tsi⁵⁵",
-            "zh": "条"
+            "zh": "条",
+            "originalIpa": "tsi⁵⁵"
           },
           {
             "ipa": "pʰie²¹",
-            "zh": "趴"
+            "zh": "趴",
+            "originalIpa": "phie²¹"
           },
           {
             "ipa": "po⁵⁵",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "po⁵⁵"
           },
           {
             "ipa": "mo²¹",
-            "zh": "STRP"
+            "zh": "STRP",
+            "originalIpa": "mo²¹"
           },
           {
             "ipa": "pu³⁵kã⁵³",
-            "zh": "不敢"
+            "zh": "不敢",
+            "originalIpa": "pu³⁵kã⁵³"
           },
           {
             "ipa": "ɣɨ³⁵",
-            "zh": "走"
+            "zh": "走",
+            "originalIpa": "ɣɨ³⁵"
           }
         ],
-        "originalIpa": "wo⁵³ lau⁵³ka⁵⁵ na⁵⁵ tsi⁵⁵ pʰie²¹ po⁵⁵ mo²¹ pu³⁵kã⁵³ ɣɨ³⁵"
+        "originalIpa": "wo⁵³ lau⁵³ka⁵⁵ na⁵⁵ tsi⁵⁵ phie²¹ po⁵⁵ mo²¹ pu³⁵kã⁵³ ɣɨ³⁵",
+        "reviewNote": "音形、逐词gloss与句译相符；原书句尾为逗号。"
       },
       {
         "id": "2.1-019",
         "ipa": "pu³⁵kã⁵³ ɣɨ³⁵ lie⁵⁵ ko³⁵ jiu³⁵ a²¹tsʰa²¹ ku²¹ zau⁵³ wa⁵⁵le⁵³ ɣɨ³⁵",
-        "zh": "不敢走了，她又爬上悬崖绕了过去。",
+        "zh": "不敢走了呢，她又爬上悬崖绕了过去，",
         "page": "39",
         "glosses": [
           {
             "ipa": "pu³⁵kã⁵³",
-            "zh": "不敢"
+            "zh": "不敢",
+            "originalIpa": "pu³⁵kã⁵³"
           },
           {
             "ipa": "ɣɨ³⁵",
-            "zh": "走"
+            "zh": "走",
+            "originalIpa": "ɣɨ³⁵"
           },
           {
             "ipa": "lie⁵⁵",
-            "zh": "TOP"
+            "zh": "TOP",
+            "originalIpa": "lie⁵⁵"
           },
           {
             "ipa": "ko³⁵",
-            "zh": "3SG"
+            "zh": "3sg",
+            "originalIpa": "ko³⁵"
           },
           {
             "ipa": "jiu³⁵",
-            "zh": "又"
+            "zh": "又",
+            "originalIpa": "jiu³⁵"
           },
           {
             "ipa": "a²¹tsʰa²¹",
-            "zh": "悬崖"
+            "zh": "悬崖",
+            "originalIpa": "a²¹tsha²¹"
           },
           {
             "ipa": "ku²¹",
-            "zh": "上"
+            "zh": "上",
+            "originalIpa": "ku²¹"
           },
           {
             "ipa": "zau⁵³",
-            "zh": "绕"
+            "zh": "绕",
+            "originalIpa": "zau⁵³"
           },
           {
             "ipa": "wa⁵⁵le⁵³",
-            "zh": "ASPP"
+            "zh": "ASPP",
+            "originalIpa": "wa⁵⁵le⁵³"
           },
           {
             "ipa": "ɣɨ³⁵",
-            "zh": "走"
+            "zh": "走",
+            "originalIpa": "ɣɨ³⁵"
           }
         ],
-        "originalIpa": "pu³⁵kã⁵³ ɣɨ³⁵ lie⁵⁵ ko³⁵ jiu³⁵ a²¹tsʰa²¹ ku²¹ zau⁵³ wa⁵⁵le⁵³ ɣɨ³⁵"
+        "originalIpa": "pu³⁵kã⁵³ ɣɨ³⁵ lie⁵⁵ ko³⁵ jiu³⁵ a²¹tsha²¹ ku²¹ zau⁵³ wa⁵⁵le⁵³ ɣɨ³⁵",
+        "reviewNote": "“悬崖”为 a²¹tsha²¹，规范化 a²¹tsʰa²¹，不是 tɕʰa；原书整句“ 不敢走了呢，她又爬上悬崖绕了过去，”网站漏“呢”并改标点。"
       }
     ],
     "text": "pi³⁵tsi⁵⁵kʰa²¹ kʰa⁵⁵lu²¹tsu³⁵ kʰa⁵⁵lu²¹tsu³⁵ a⁵⁵ pĩ³⁵ na⁵⁵ tɕʰe⁵⁵ tʰi²¹ liau⁵³ 以前土家族人得了一场病。 土家族 以前 以前 INJ 病 一 次 得 ASPP\nẽ⁵⁵ ti⁵⁵ pĩ³⁵ lie⁵⁵ su²¹ji²¹ ji²¹ tsũ⁵³ wẽ⁵⁵ 这种病呢，属于一种瘟疫。 这 个 病 TOP 属于 一 种 瘟疫\nxi³⁵ tsʰo⁵³ lie⁵⁵ tɕʰi⁵³ma⁵³ tɕiu⁵³ tsʰo⁵³ pa³⁵ tsʰo⁵³ ji⁵³tɕĩ⁵⁵ tsʰo⁵³ ɕe³⁵ si³⁵ no⁵³ tʰau³⁵ 十家中起码有九家已经没人了。 十 家 TOP 起码 九 家 八 家 已经 家 有 是 人 没有\nwẽ⁵⁵ to²¹ le⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵ xã³⁵ si²¹ tɕia²¹kʰa²¹ na⁵⁵ 中瘟后，有一姓石人家。 瘟疫 中 ASPP 之后 TOP 这样 石 姓 一\nkie⁵³ tsʰu⁵⁵ piu³⁵ nau⁵³ ɕe³⁵ 他们家有个女儿。 2PL（原书标注；句译作他们） 家 女儿 一个 有\nkie⁵³tsie²¹ ne⁵⁵ piu³⁵ lie⁵⁵ ko³⁵ tɕiu⁵⁵ ɕia³⁵tɕe²¹ɕi⁵⁵ la⁵⁵ 他们的女儿就下决心。 3PL STRP 女儿 TOP 3SG 就 下决心 INJ\nko³⁵ xũ²¹tsai⁵⁵ ẽ⁵⁵ti pi³⁵tsi⁵⁵kʰa²¹ ne⁵⁵ wẽ⁵⁵ tsi³⁵ xau⁵³ tsẽ⁵³ mo²¹ tsʰa³⁵ le⁵³ 她一定要把土家族的这种瘟治好。 3SG 反正 这个 土家族 STRP 瘟疫 诊治 好 诊治 STRP 好 ASPP\nko³⁵ tɕiu⁵⁵ kie⁵³tsie²¹ ne⁵⁵ a²¹ne⁵³ a²¹pa⁵³ ta⁵³ li²¹ 于是她就跟她父母说。 3SG 就 3PL STRP 母亲 父亲 CASP 说\na²¹ne⁵³ a²¹pa⁵³ ŋa³⁵ lie⁵⁵ no⁵³te⁵³ po⁵⁵ pĩ³⁵ tsẽ⁵³-i³⁵ jau³⁵ tɕe⁵³ mo²¹ ni⁵⁵-i³⁵ 爸爸、妈妈，我去给别人治病，去找药。 母亲 父亲 1SG TOP 别人 CASP 病 诊治-FUT 药 赶 STRP 找-FUT\nno⁵³ tɕiu³⁵ tʰi⁵⁵ɕi²¹ kʰa⁵⁵lu²¹tsu³⁵ li²¹ no⁵³ nau⁵³ tɕiu³⁵ wa⁵⁵ 必须救人。以前说，救一个人啊…… 人 救 必须 以前 说 人 一个 救 INJ\ntẽ⁵⁵ji²¹ ɣɨ³⁵ le⁵³ je²¹ tɕi²¹ ne⁵⁵ pau⁵³tʰa²¹ nau⁵³ ɕiu⁵⁵ wa⁵⁵ tɕʰiã²¹ ne⁵⁵ 比去庙脚下修一座宝塔还要强。 等于 走 ASPP 庙 脚 STRP 宝塔 一个 修建 INJ 强 CMPP\na²¹ne⁵³ a²¹pa⁵³ lie⁵⁵ je⁵³ tʰũ²¹ji³⁵ ko³⁵ ne⁵⁵ ɕiã⁵³xua²¹ 她的父母也很赞同她的想法。 母亲 父亲 TOP 也 同意 3SG STRP 想法\nko³⁵ ne⁵⁵ te³⁵ po⁵⁵ ɕi⁵⁵ si²¹wu⁵³ si²¹wu⁵³ kʰa⁵⁵ le⁵³ lie⁵⁵ 过完正月十五。 3SG STRP 想 ASPP STRP 十五 十五 过 ASPP TOP\nko³⁵ tɕiu⁵⁵ tsʰo⁵³ tɕi²¹kʰu²¹ ta³⁵ le⁵³ lie⁵⁵ jau³⁵ ni⁵⁵ tiu⁵⁵ 她就穿着草鞋找药去了。 3SG 就 家 草鞋 穿 ASPP TOP 药 找 DIRP\nko³⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ le⁵³ tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ 她走啊走，走到了鸡公里河边。 3SG 走 INJ 走 INJ 走 ASPP 鸡公里 河\ntɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ je⁵³ liau⁵³ lie⁵⁵ 到鸡公里河之后。 鸡公里 河 到 ASPP TOP\ntɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ tʰu³⁵ lie⁵⁵ wo⁵³ kei⁵³ti²¹ 鸡公里河里好多蛇。 鸡公里 河 里 TOP 蛇 很多\nwo⁵³ lau⁵³ka⁵⁵ na⁵⁵ tsi⁵⁵ pʰie²¹ po⁵⁵ mo²¹ pu³⁵kã⁵³ ɣɨ³⁵ 有一条大蛇趴在那里，她不敢走了。 蛇 大 一 条 趴 ASPP STRP 不敢 走\npu³⁵kã⁵³ ɣɨ³⁵ lie⁵⁵ ko³⁵ jiu³⁵ a²¹tsʰa²¹ ku²¹ zau⁵³ wa⁵⁵le⁵³ ɣɨ³⁵ 不敢走了，她又爬上悬崖绕了过去。 不敢 走 TOP 3SG 又 悬崖 上 绕 ASPP 走"
