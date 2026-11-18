@@ -1,9 +1,10 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),zlib=require('node:zlib'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
 const root=path.resolve(process.argv[2]||path.join(__dirname,'../site'));
 const tableReview=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-table-review-2026-11-17.json'),'utf8'));
+const componentReview=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-south-vo-review-2026-11-17.json'),'utf8'));
 const supplementalReviews=['un-wen-sun','rime-supplement','named-supplement'].map(name=>JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-'+name+'-2026-10-24.json'),'utf8')));
 const supplementalDecisions=supplementalReviews.flatMap(review=>review.decisions);
-const acceptedLater=new Set([...supplementalDecisions.flatMap(d=>d.note.wordIds),...tableReview.decisions.filter(d=>d.decision==='loan').map(d=>d.id)]);
+const acceptedLater=new Set([...supplementalDecisions.flatMap(d=>d.note.wordIds),...tableReview.decisions.filter(d=>d.decision==='loan').map(d=>d.id),...componentReview.decisions.filter(d=>d.decision==='loan').flatMap(d=>[d.id,...d.aliases])]);
 const c=vm.createContext({console,URLSearchParams,window:{addEventListener(){}},localStorage:{getItem:()=>null},document:{addEventListener(){}},fetch:async f=>({ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,f),'utf8'))})});
 for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','yubao.js','semantic-categories.js','word-merge-groups.js','word-merge.js','spelling-boundaries.js','lexical-reviews.js','word-classes.js','editorial-notes.js','ui-translations.js'])vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),c,{filename:f});
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.slice(0,app.indexOf('document.addEventListener(')),c);
@@ -21,7 +22,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
   assert(!(w.senses||[]).some(s=>s.zh.includes(wrong)),id+' obsolete translation in merged senses');
  }
 
- for(const decision of tableReview.decisions){
+ for(const decision of [...tableReview.decisions,...componentReview.decisions]){
   const w=get(decision.id),notes=c.editorialNotesFor(w).filter(n=>n.id.startsWith('chinese-loan-'));
   if(decision.decision==='not-loan'){
    assert.equal(notes.length,0,decision.id+' explicitly excluded');
@@ -235,7 +236,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  for(const id of ['stedt-rn-289453','yubao-60824-v-1339'])assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole',id+' 二月 is fully borrowed');
  for(const id of ['w2480','yubao-60756-v-0718','stedt-rn-289871','yubao-60824-v-0718','yubao-60824-v-0719'])assert(c.editorialNotesFor(get(id)).some(n=>n.donor==='校堂'),id+' 校堂 donor');
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996+3+tableReview.summary.newNotes-chiPeriod.reclassifiedModernNoteIds.length+[...rimeFollowup.decisions,...hotcell.decisions,...unFollowup.decisions.filter(d=>d.action==='add-loan-note')].filter(d=>d.note.id.startsWith('chinese-loan-')).length);
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996+3+tableReview.summary.newNotes+componentReview.summary.newNotes-chiPeriod.reclassifiedModernNoteIds.length+[...rimeFollowup.decisions,...hotcell.decisions,...unFollowup.decisions.filter(d=>d.action==='add-loan-note')].filter(d=>d.note.id.startsWith('chinese-loan-')).length);
  const componentsFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-components-followup-2026-10-23.json'),'utf8'));
  for(const {note} of componentsFollowup.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);
@@ -269,7 +270,7 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  for(const id of ['w351','stedt-rn-289610'])assert.equal(c.wordSearchScore(get(id)),0,'obsolete translation is not searchable');
  vm.runInContext("state.q='';state.searchLanguage=''",c);
  const unspecifiedNorthernDonors=new Set(['w1329','w5728','w61','yubao-60756-v-0521','yubao-60756-v-0740','yubao-60756-v-1857','yubao-60823-v-0425',...screening.decisions.filter(d=>d.note.donorVariety==='汉语（方言待核）').flatMap(d=>d.note.wordIds)]);
- const reviewedDonorVarieties=new Map([...rimeFollowup.decisions,...rimeFollowup.corrections,...hotcell.decisions,...hotcell.corrections,...unFollowup.decisions,...tableReview.decisions.filter(d=>d.note)].filter(d=>d.note.id.startsWith('chinese-loan-')).map(d=>[d.note.id,d.note.donorVariety]));
+ const reviewedDonorVarieties=new Map([...rimeFollowup.decisions,...rimeFollowup.corrections,...hotcell.decisions,...hotcell.corrections,...unFollowup.decisions,...tableReview.decisions.filter(d=>d.note),...componentReview.decisions.filter(d=>d.note)].filter(d=>d.note.id.startsWith('chinese-loan-')).map(d=>[d.note.id,d.note.donorVariety]));
  for(const n of allNotes){c.note=n.text;assert(vm.runInContext('UI_TRANSLATIONS[note]',c),'English translation missing: '+n.id);assert(n.wordIds.every(id=>get(id)),n.id+' dangling word');for(const id of n.wordIds)if(c.wordVarietyInfo(get(id)).kind!=='south')assert.equal(n.donorVariety,reviewedDonorVarieties.get(n.id)||(unspecifiedNorthernDonors.has(id)?'汉语（方言待核）':'西南官话'),id+' northern donor variety');}
  for(const id of ['yubao-60824-v-2438','yubao-60824-v-0200','stedt-rn-289703'])assert(c.editorialNotesFor(get(id)).some(n=>n.donorVariety==='湘语'),id+' Xiang donor');
  // Exact Southern forms and source aliases receive the accepted donor; native

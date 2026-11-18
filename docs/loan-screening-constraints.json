@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "scope": "Screening constraints, not a native-word training set. Entry aliases resolve before scoring; rejected donors and component boundaries apply separately. Later linguistic review is required to revise these constraints.",
   "setuScope": "Exclude the five setu-family entries and their merged aliases. The distinct Southern sītī /si⁵⁵tʰi⁵⁵/ is not part of this exclusion.",
   "rules": [
@@ -2701,6 +2701,30 @@
       "policy": "exclude-entry",
       "reason": "本轮复核不列入新借词标注。",
       "origin": "docs/loan-table-review-2026-11-17.json"
+    },
+    {
+      "id": "stedt-rn-290269",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入借词标注。",
+      "origin": "docs/loan-south-vo-review-2026-11-17.json"
+    },
+    {
+      "id": "stedt-rn-414332",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入借词标注。",
+      "origin": "docs/loan-south-vo-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60823-v-2472",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入借词标注。",
+      "origin": "docs/loan-south-vo-review-2026-11-17.json"
+    },
+    {
+      "id": "yubao-60823-v-2473",
+      "policy": "exclude-entry",
+      "reason": "本轮复核不列入借词标注。",
+      "origin": "docs/loan-south-vo-review-2026-11-17.json"
     }
   ],
   "phonologicalComparison": {

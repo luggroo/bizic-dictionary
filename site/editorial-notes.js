@@ -69881,6 +69881,3686 @@ EDITORIAL_NOTES.push(...[
  }
 ]);
 
+// Classified Southern and Northern component loans.
+EDITORIAL_NOTES.push(...[
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0842",
+  "wordIds": [
+   "yubao-60824-v-0842"
+  ],
+  "kind": "借词来源",
+  "donor": "举",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「举」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕy⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290044",
+  "wordIds": [
+   "stedt-rn-290044"
+  ],
+  "kind": "借词来源",
+  "donor": "信",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「信」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕĩ¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2867",
+  "wordIds": [
+   "yubao-60824-v-2867"
+  ],
+  "kind": "借词来源",
+  "donor": "假",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「假」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕia⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290297",
+  "wordIds": [
+   "stedt-rn-290297"
+  ],
+  "kind": "借词来源",
+  "donor": "再",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「再」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsai¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2749",
+  "wordIds": [
+   "yubao-60824-v-2749"
+  ],
+  "kind": "借词来源",
+  "donor": "划",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「划」。",
+  "reviewedForms": [
+   {
+    "ipa": "xua¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289058--south",
+  "wordIds": [
+   "stedt-rn-289058--south"
+  ],
+  "kind": "借词来源",
+  "donor": "剃",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「剃」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0825",
+  "wordIds": [
+   "yubao-60824-v-0825"
+  ],
+  "kind": "借词来源",
+  "donor": "削",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「削」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕio²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1103",
+  "wordIds": [
+   "yubao-60824-v-1103"
+  ],
+  "kind": "借词来源",
+  "donor": "副",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「副」。",
+  "reviewedForms": [
+   {
+    "ipa": "fu¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2563",
+  "wordIds": [
+   "yubao-60824-v-2563"
+  ],
+  "kind": "借词来源",
+  "donor": "加",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「加」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕia³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1370",
+  "wordIds": [
+   "yubao-60824-v-1370"
+  ],
+  "kind": "借词来源",
+  "donor": "北",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「北」。",
+  "reviewedForms": [
+   {
+    "ipa": "pe²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2542",
+  "wordIds": [
+   "yubao-60824-v-2542"
+  ],
+  "kind": "借词来源",
+  "donor": "号",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「号」。",
+  "reviewedForms": [
+   {
+    "ipa": "xau¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-127335",
+  "wordIds": [
+   "stedt-rn-127335"
+  ],
+  "kind": "借词来源",
+  "donor": "含",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「含」。",
+  "reviewedForms": [
+   {
+    "ipa": "xã²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-127320",
+  "wordIds": [
+   "stedt-rn-127320"
+  ],
+  "kind": "借词来源",
+  "donor": "嗅",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「嗅」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiõ¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0043",
+  "wordIds": [
+   "yubao-60824-v-0043"
+  ],
+  "kind": "借词来源",
+  "donor": "坝",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「坝」。",
+  "reviewedForms": [
+   {
+    "ipa": "pa¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1236",
+  "wordIds": [
+   "yubao-60824-v-1236"
+  ],
+  "kind": "借词来源",
+  "donor": "坝",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「坝」。",
+  "reviewedForms": [
+   {
+    "ipa": "pa¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289680",
+  "wordIds": [
+   "stedt-rn-289680"
+  ],
+  "kind": "借词来源",
+  "donor": "城",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「城」。",
+  "reviewedForms": [
+   {
+    "ipa": "dzẽ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2688",
+  "wordIds": [
+   "yubao-60824-v-2688"
+  ],
+  "kind": "借词来源",
+  "donor": "堆",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「堆」。",
+  "reviewedForms": [
+   {
+    "ipa": "tuei⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289448",
+  "wordIds": [
+   "stedt-rn-289448"
+  ],
+  "kind": "借词来源",
+  "donor": "夏",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「夏」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕia¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1163",
+  "wordIds": [
+   "yubao-60824-v-1163"
+  ],
+  "kind": "借词来源",
+  "donor": "太",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「太」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰai¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2837",
+  "wordIds": [
+   "yubao-60824-v-2837"
+  ],
+  "kind": "借词来源",
+  "donor": "害",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「害」。",
+  "reviewedForms": [
+   {
+    "ipa": "xai²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290127",
+  "wordIds": [
+   "stedt-rn-290127"
+  ],
+  "kind": "借词来源",
+  "donor": "尖",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「尖」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕiã³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289748",
+  "wordIds": [
+   "stedt-rn-289748"
+  ],
+  "kind": "借词来源",
+  "donor": "弓",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「弓」。",
+  "reviewedForms": [
+   {
+    "ipa": "kõ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2879",
+  "wordIds": [
+   "yubao-60824-v-2879"
+  ],
+  "kind": "借词来源",
+  "donor": "弱",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「弱」。",
+  "reviewedForms": [
+   {
+    "ipa": "zo²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2465",
+  "wordIds": [
+   "yubao-60824-v-2465"
+  ],
+  "kind": "借词来源",
+  "donor": "息",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「息」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2898",
+  "wordIds": [
+   "yubao-60824-v-2898"
+  ],
+  "kind": "借词来源",
+  "donor": "慌",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「慌」。",
+  "reviewedForms": [
+   {
+    "ipa": "xuã³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2548",
+  "wordIds": [
+   "yubao-60824-v-2548"
+  ],
+  "kind": "借词来源",
+  "donor": "戏",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「戏」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1759",
+  "wordIds": [
+   "yubao-60824-v-1759"
+  ],
+  "kind": "借词来源",
+  "donor": "房",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「房」。",
+  "reviewedForms": [
+   {
+    "ipa": "fã²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1171",
+  "wordIds": [
+   "yubao-60824-v-1171"
+  ],
+  "kind": "借词来源",
+  "donor": "才",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「才」。",
+  "reviewedForms": [
+   {
+    "ipa": "dzai¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289963",
+  "wordIds": [
+   "stedt-rn-289963"
+  ],
+  "kind": "借词来源",
+  "donor": "扎",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「扎」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsa²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2805",
+  "wordIds": [
+   "yubao-60824-v-2805"
+  ],
+  "kind": "借词来源",
+  "donor": "扑",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「扑」。",
+  "reviewedForms": [
+   {
+    "ipa": "bu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2678",
+  "wordIds": [
+   "yubao-60824-v-2678"
+  ],
+  "kind": "借词来源",
+  "donor": "抓",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「抓」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsua³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2592",
+  "wordIds": [
+   "yubao-60824-v-2592"
+  ],
+  "kind": "借词来源",
+  "donor": "抹",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「抹」。",
+  "reviewedForms": [
+   {
+    "ipa": "ma²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2741",
+  "wordIds": [
+   "yubao-60824-v-2741"
+  ],
+  "kind": "借词来源",
+  "donor": "拍",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「拍」。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰe²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1565",
+  "wordIds": [
+   "yubao-60824-v-1565"
+  ],
+  "kind": "借词来源",
+  "donor": "挤",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「挤」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕi⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0434",
+  "wordIds": [
+   "yubao-60824-v-0434"
+  ],
+  "kind": "借词来源",
+  "donor": "揉",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「揉」。",
+  "reviewedForms": [
+   {
+    "ipa": "zua²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0821",
+  "wordIds": [
+   "yubao-60824-v-0821"
+  ],
+  "kind": "借词来源",
+  "donor": "插",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「插」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰa²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289984",
+  "wordIds": [
+   "stedt-rn-289984"
+  ],
+  "kind": "借词来源",
+  "donor": "揭",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「揭」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕe⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2559",
+  "wordIds": [
+   "yubao-60824-v-2559"
+  ],
+  "kind": "借词来源",
+  "donor": "改",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「改」。",
+  "reviewedForms": [
+   {
+    "ipa": "kai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2852",
+  "wordIds": [
+   "yubao-60824-v-2852"
+  ],
+  "kind": "借词来源",
+  "donor": "斜",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「斜」。",
+  "reviewedForms": [
+   {
+    "ipa": "dʑia²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290188",
+  "wordIds": [
+   "stedt-rn-290188"
+  ],
+  "kind": "借词来源",
+  "donor": "早",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「早」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsau⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1198",
+  "wordIds": [
+   "yubao-60824-v-1198"
+  ],
+  "kind": "借词来源",
+  "donor": "替",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「替」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290098",
+  "wordIds": [
+   "stedt-rn-290098"
+  ],
+  "kind": "借词来源",
+  "donor": "枯",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「枯」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰu³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2876",
+  "wordIds": [
+   "yubao-60824-v-2876"
+  ],
+  "kind": "借词来源",
+  "donor": "枯",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「枯」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰu³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289768",
+  "wordIds": [
+   "stedt-rn-289768"
+  ],
+  "kind": "借词来源",
+  "donor": "桶",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「桶」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰõ⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1179",
+  "wordIds": [
+   "yubao-60824-v-1179"
+  ],
+  "kind": "借词来源",
+  "donor": "没",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「没」。",
+  "reviewedForms": [
+   {
+    "ipa": "mi³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1275",
+  "wordIds": [
+   "yubao-60824-v-1275"
+  ],
+  "kind": "借词来源",
+  "donor": "洞",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「洞」。",
+  "reviewedForms": [
+   {
+    "ipa": "tõ¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290080",
+  "wordIds": [
+   "stedt-rn-290080"
+  ],
+  "kind": "借词来源",
+  "donor": "浮",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「浮」。",
+  "reviewedForms": [
+   {
+    "ipa": "fu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1238",
+  "wordIds": [
+   "yubao-60824-v-1238"
+  ],
+  "kind": "借词来源",
+  "donor": "海",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「海」。",
+  "reviewedForms": [
+   {
+    "ipa": "xai⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289408",
+  "wordIds": [
+   "stedt-rn-289408"
+  ],
+  "kind": "借词来源",
+  "donor": "湖",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「湖」。",
+  "reviewedForms": [
+   {
+    "ipa": "fu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289793",
+  "wordIds": [
+   "stedt-rn-289793"
+  ],
+  "kind": "借词来源",
+  "donor": "漆",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「漆」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1324",
+  "wordIds": [
+   "yubao-60824-v-1324"
+  ],
+  "kind": "借词来源",
+  "donor": "漆",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「漆」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰi²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2877",
+  "wordIds": [
+   "yubao-60824-v-2877"
+  ],
+  "kind": "借词来源",
+  "donor": "潮",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「潮」。",
+  "reviewedForms": [
+   {
+    "ipa": "dzau³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0973",
+  "wordIds": [
+   "yubao-60824-v-0973"
+  ],
+  "kind": "借词来源",
+  "donor": "灰",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「灰」。",
+  "reviewedForms": [
+   {
+    "ipa": "xuei³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0432",
+  "wordIds": [
+   "yubao-60824-v-0432"
+  ],
+  "kind": "借词来源",
+  "donor": "炸",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「炸」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsa¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2610",
+  "wordIds": [
+   "yubao-60824-v-2610"
+  ],
+  "kind": "借词来源",
+  "donor": "焖",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「焖」。",
+  "reviewedForms": [
+   {
+    "ipa": "mẽ¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289910",
+  "wordIds": [
+   "stedt-rn-289910"
+  ],
+  "kind": "借词来源",
+  "donor": "爬",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「爬」。",
+  "reviewedForms": [
+   {
+    "ipa": "ba³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290048",
+  "wordIds": [
+   "stedt-rn-290048"
+  ],
+  "kind": "借词来源",
+  "donor": "猜",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「猜」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰai³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289564",
+  "wordIds": [
+   "stedt-rn-289564"
+  ],
+  "kind": "借词来源",
+  "donor": "瓜",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「瓜」。",
+  "reviewedForms": [
+   {
+    "ipa": "kua³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289565",
+  "wordIds": [
+   "stedt-rn-289565"
+  ],
+  "kind": "借词来源",
+  "donor": "瓜",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「瓜」。",
+  "reviewedForms": [
+   {
+    "ipa": "kua³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289938",
+  "wordIds": [
+   "stedt-rn-289938"
+  ],
+  "kind": "借词来源",
+  "donor": "畜",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「畜」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2873",
+  "wordIds": [
+   "yubao-60824-v-2873"
+  ],
+  "kind": "借词来源",
+  "donor": "瘪",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「瘪」。",
+  "reviewedForms": [
+   {
+    "ipa": "pia⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2264",
+  "wordIds": [
+   "yubao-60824-v-2264"
+  ],
+  "kind": "借词来源",
+  "donor": "瘫",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「瘫」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰã³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289965",
+  "wordIds": [
+   "stedt-rn-289965"
+  ],
+  "kind": "借词来源",
+  "donor": "磨",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「磨」。",
+  "reviewedForms": [
+   {
+    "ipa": "mo²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289966",
+  "wordIds": [
+   "stedt-rn-289966"
+  ],
+  "kind": "借词来源",
+  "donor": "磨",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「磨」。",
+  "reviewedForms": [
+   {
+    "ipa": "mo²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0682",
+  "wordIds": [
+   "yubao-60824-v-0682"
+  ],
+  "kind": "借词来源",
+  "donor": "磨",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「磨」。",
+  "reviewedForms": [
+   {
+    "ipa": "mo⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2861",
+  "wordIds": [
+   "yubao-60824-v-2861"
+  ],
+  "kind": "借词来源",
+  "donor": "空",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「空」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰõ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290015",
+  "wordIds": [
+   "stedt-rn-290015"
+  ],
+  "kind": "借词来源",
+  "donor": "答",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「答」。",
+  "reviewedForms": [
+   {
+    "ipa": "ta²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2704",
+  "wordIds": [
+   "yubao-60824-v-2704"
+  ],
+  "kind": "借词来源",
+  "donor": "箍",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「箍」。",
+  "reviewedForms": [
+   {
+    "ipa": "ku³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1481",
+  "wordIds": [
+   "yubao-60824-v-1481"
+  ],
+  "kind": "借词来源",
+  "donor": "篾",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「篾」。",
+  "reviewedForms": [
+   {
+    "ipa": "mie²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290132",
+  "wordIds": [
+   "stedt-rn-290132"
+  ],
+  "kind": "借词来源",
+  "donor": "粗",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「粗」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290133",
+  "wordIds": [
+   "stedt-rn-290133"
+  ],
+  "kind": "借词来源",
+  "donor": "细",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「细」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2297",
+  "wordIds": [
+   "yubao-60824-v-2297"
+  ],
+  "kind": "借词来源",
+  "donor": "经",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「经」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕĩ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290163",
+  "wordIds": [
+   "stedt-rn-290163"
+  ],
+  "kind": "借词来源",
+  "donor": "绿",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「绿」。",
+  "reviewedForms": [
+   {
+    "ipa": "lu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0795",
+  "wordIds": [
+   "yubao-60824-v-0795"
+  ],
+  "kind": "借词来源",
+  "donor": "翘",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「翘」。",
+  "reviewedForms": [
+   {
+    "ipa": "tɕʰiau¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289732",
+  "wordIds": [
+   "stedt-rn-289732"
+  ],
+  "kind": "借词来源",
+  "donor": "耙",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「耙」。",
+  "reviewedForms": [
+   {
+    "ipa": "ba²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-127404",
+  "wordIds": [
+   "stedt-rn-127404"
+  ],
+  "kind": "借词来源",
+  "donor": "肺",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「肺」。",
+  "reviewedForms": [
+   {
+    "ipa": "fei¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2269",
+  "wordIds": [
+   "yubao-60824-v-2269"
+  ],
+  "kind": "借词来源",
+  "donor": "胎",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「胎」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰai³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2814",
+  "wordIds": [
+   "yubao-60824-v-2814"
+  ],
+  "kind": "借词来源",
+  "donor": "胡",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「胡」。",
+  "reviewedForms": [
+   {
+    "ipa": "fu²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2887",
+  "wordIds": [
+   "yubao-60824-v-2887"
+  ],
+  "kind": "借词来源",
+  "donor": "脆",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「脆」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰuei¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2098",
+  "wordIds": [
+   "yubao-60824-v-2098"
+  ],
+  "kind": "借词来源",
+  "donor": "脉",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「脉」。",
+  "reviewedForms": [
+   {
+    "ipa": "me²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289590",
+  "wordIds": [
+   "stedt-rn-289590"
+  ],
+  "kind": "借词来源",
+  "donor": "芽",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「芽」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋa²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1482",
+  "wordIds": [
+   "yubao-60824-v-1482"
+  ],
+  "kind": "借词来源",
+  "donor": "芽",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「芽」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋa²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2813",
+  "wordIds": [
+   "yubao-60824-v-2813"
+  ],
+  "kind": "借词来源",
+  "donor": "蒙",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「蒙」。",
+  "reviewedForms": [
+   {
+    "ipa": "mõ³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0298",
+  "wordIds": [
+   "yubao-60824-v-0298"
+  ],
+  "kind": "借词来源",
+  "donor": "街",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「街」。",
+  "reviewedForms": [
+   {
+    "ipa": "kai³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289978",
+  "wordIds": [
+   "stedt-rn-289978"
+  ],
+  "kind": "借词来源",
+  "donor": "补",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「补」。",
+  "reviewedForms": [
+   {
+    "ipa": "pu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2603",
+  "wordIds": [
+   "yubao-60824-v-2603"
+  ],
+  "kind": "借词来源",
+  "donor": "裁",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「裁」。",
+  "reviewedForms": [
+   {
+    "ipa": "dzai³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0373",
+  "wordIds": [
+   "yubao-60824-v-0373"
+  ],
+  "kind": "借词来源",
+  "donor": "裤",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「裤」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰu⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1369",
+  "wordIds": [
+   "yubao-60824-v-1369"
+  ],
+  "kind": "借词来源",
+  "donor": "西",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「西」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289489",
+  "wordIds": [
+   "stedt-rn-289489"
+  ],
+  "kind": "借词来源",
+  "donor": "象",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「象」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2682",
+  "wordIds": [
+   "yubao-60824-v-2682"
+  ],
+  "kind": "借词来源",
+  "donor": "跪",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「跪」。",
+  "reviewedForms": [
+   {
+    "ipa": "kuei¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289899",
+  "wordIds": [
+   "stedt-rn-289899"
+  ],
+  "kind": "借词来源",
+  "donor": "跳",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「跳」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰiau¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290007",
+  "wordIds": [
+   "stedt-rn-290007"
+  ],
+  "kind": "借词来源",
+  "donor": "输",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「输」。",
+  "reviewedForms": [
+   {
+    "ipa": "su³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290071",
+  "wordIds": [
+   "stedt-rn-290071"
+  ],
+  "kind": "借词来源",
+  "donor": "退",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「退」。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰuei¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0419",
+  "wordIds": [
+   "yubao-60824-v-0419"
+  ],
+  "kind": "借词来源",
+  "donor": "醋",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「醋」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰu¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2958",
+  "wordIds": [
+   "yubao-60824-v-2958"
+  ],
+  "kind": "借词来源",
+  "donor": "里",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「里」。",
+  "reviewedForms": [
+   {
+    "ipa": "li⁵⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-1048",
+  "wordIds": [
+   "yubao-60824-v-1048"
+  ],
+  "kind": "借词来源",
+  "donor": "错",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「错」。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰo³⁵",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2885",
+  "wordIds": [
+   "yubao-60824-v-2885"
+  ],
+  "kind": "借词来源",
+  "donor": "闲",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「闲」。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiã²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0789",
+  "wordIds": [
+   "yubao-60824-v-0789"
+  ],
+  "kind": "借词来源",
+  "donor": "靠",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「靠」。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰau¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-0391",
+  "wordIds": [
+   "yubao-60824-v-0391"
+  ],
+  "kind": "借词来源",
+  "donor": "面",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「面」。",
+  "reviewedForms": [
+   {
+    "ipa": "miã¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2893",
+  "wordIds": [
+   "yubao-60824-v-2893"
+  ],
+  "kind": "借词来源",
+  "donor": "顺",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「顺」。",
+  "reviewedForms": [
+   {
+    "ipa": "suẽ¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289902",
+  "wordIds": [
+   "stedt-rn-289902"
+  ],
+  "kind": "借词来源",
+  "donor": "骑",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「骑」。",
+  "reviewedForms": [
+   {
+    "ipa": "dʑi¹³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-290123",
+  "wordIds": [
+   "stedt-rn-290123"
+  ],
+  "kind": "借词来源",
+  "donor": "高",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「高」。",
+  "reviewedForms": [
+   {
+    "ipa": "kau³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2305",
+  "wordIds": [
+   "yubao-60824-v-2305"
+  ],
+  "kind": "借词来源",
+  "donor": "高",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「高」。",
+  "reviewedForms": [
+   {
+    "ipa": "kau³³",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-288561--south",
+  "wordIds": [
+   "stedt-rn-288561--south"
+  ],
+  "kind": "借词来源",
+  "donor": "鹅",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「鹅」。",
+  "reviewedForms": [
+   {
+    "ipa": "ŋo²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289562",
+  "wordIds": [
+   "stedt-rn-289562"
+  ],
+  "kind": "借词来源",
+  "donor": "麻",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「麻」。",
+  "reviewedForms": [
+   {
+    "ipa": "ma²¹",
+    "span": [
+     1,
+     1
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60824-v-2908",
+  "wordIds": [
+   "yubao-60824-v-2908"
+  ],
+  "kind": "借词来源",
+  "donor": "齐心",
+  "donorVariety": "汉语",
+  "scope": "whole",
+  "text": "借自汉语「齐心」。",
+  "reviewedForms": [
+   {
+    "ipa": "dʑi¹³sẽ³³",
+    "span": [
+     1,
+     2
+    ]
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w3362",
+  "wordIds": [
+   "w3362"
+  ],
+  "kind": "借词来源",
+  "donor": "修",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中修（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰuɔ⁵¹ ɕiu⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "修"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w1265",
+  "wordIds": [
+   "w1265"
+  ],
+  "kind": "借词来源",
+  "donor": "修",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中修（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "la⁵¹ ɕiu⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "修"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w1266",
+  "wordIds": [
+   "w1266"
+  ],
+  "kind": "借词来源",
+  "donor": "修",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中修（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "la⁵¹ɕiu⁵⁵ma⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "修"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2470",
+  "wordIds": [
+   "yubao-60823-v-2470"
+  ],
+  "kind": "借词来源",
+  "donor": "铜钱",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中铜钱（第1—2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰũ³¹tɕʰiã³¹tsʰũ¹³",
+    "span": [
+     1,
+     2
+    ],
+    "donor": "铜钱"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w2268",
+  "wordIds": [
+   "w2268"
+  ],
+  "kind": "借词来源",
+  "donor": "剃",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中剃（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi⁵¹tʰi²¹",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "剃"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60757-v-1919",
+  "wordIds": [
+   "yubao-60757-v-1919"
+  ],
+  "kind": "借词来源",
+  "donor": "剃",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中剃（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰi⁵⁵tʰi²²",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "剃"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-1919",
+  "wordIds": [
+   "yubao-60823-v-1919"
+  ],
+  "kind": "借词来源",
+  "donor": "剃",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中剃（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "kʰo⁵³pa³¹tʰi⁵⁵tsʰɿ⁵⁵",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "剃"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-1920",
+  "wordIds": [
+   "yubao-60823-v-1920"
+  ],
+  "kind": "借词来源",
+  "donor": "剃",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中剃（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "la⁵⁵pʰa⁵⁵tʰi⁵⁵tsʰɿ⁵⁵",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "剃"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-2279",
+  "wordIds": [
+   "yubao-60756-v-2279"
+  ],
+  "kind": "借词来源",
+  "donor": "唱、歌",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中唱（第3音节）、歌（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕau³³kɔ³³tsʰaŋ³³",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "唱"
+   },
+   {
+    "ipa": "ɕau³³kɔ³³tsʰaŋ³³",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "歌"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2279",
+  "wordIds": [
+   "yubao-60823-v-2279"
+  ],
+  "kind": "借词来源",
+  "donor": "唱",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中唱（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiau¹³ko⁵⁵tsʰã³³",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "唱"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-2570",
+  "wordIds": [
+   "yubao-60756-v-2570"
+  ],
+  "kind": "借词来源",
+  "donor": "唱",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中唱（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "saŋ³⁵kɔ⁵³ tsʰaŋ³³",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "唱"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2570",
+  "wordIds": [
+   "yubao-60823-v-2570"
+  ],
+  "kind": "借词来源",
+  "donor": "唱",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中唱（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "sã⁵⁵ko³³ tsʰã¹³",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "唱"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w805",
+  "wordIds": [
+   "w805"
+  ],
+  "kind": "借词来源",
+  "donor": "唱、歌",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中唱（第2音节）、歌（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "kuɔ⁵⁵ tsʰaŋ²⁴",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "唱"
+   },
+   {
+    "ipa": "kuɔ⁵⁵ tsʰaŋ²⁴",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "歌"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-0739",
+  "wordIds": [
+   "yubao-60823-v-0739"
+  ],
+  "kind": "借词来源",
+  "donor": "唱",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中唱（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ko⁵⁵tsʰã¹³",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "唱"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w918",
+  "wordIds": [
+   "w918"
+  ],
+  "kind": "借词来源",
+  "donor": "开",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中开（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ɸuei²⁴ kʰai⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "开"
+   },
+   {
+    "ipa": "xui³⁵ kʰai⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "开"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2196",
+  "wordIds": [
+   "yubao-60823-v-2196"
+  ],
+  "kind": "借词来源",
+  "donor": "开",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中开（第4音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ʑiau³³tã⁵⁵tsɿ³³kʰai⁵⁵",
+    "span": [
+     4,
+     4
+    ],
+    "donor": "开"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-289117",
+  "wordIds": [
+   "stedt-rn-289117"
+  ],
+  "kind": "借词来源",
+  "donor": "打",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中打（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ta⁵⁵xa²¹",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "打"
+   },
+   {
+    "ipa": "ta⁵⁵xa²²",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "打"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-0863",
+  "wordIds": [
+   "yubao-60756-v-0863"
+  ],
+  "kind": "借词来源",
+  "donor": "打",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中打（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ta⁵⁵xa⁵⁵",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "打"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-0863",
+  "wordIds": [
+   "yubao-60823-v-0863"
+  ],
+  "kind": "借词来源",
+  "donor": "打",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中打（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ta⁵⁵xa⁵⁵",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "打"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w529",
+  "wordIds": [
+   "w529"
+  ],
+  "kind": "借词来源",
+  "donor": "打",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中打（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ta⁵¹xa²¹",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "打"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60757-v-2273",
+  "wordIds": [
+   "yubao-60757-v-2273"
+  ],
+  "kind": "借词来源",
+  "donor": "胎",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中胎（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰai³³xa²¹",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "胎"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-454082",
+  "wordIds": [
+   "stedt-rn-454082"
+  ],
+  "kind": "借词来源",
+  "donor": "打",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中打（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ta⁵¹tɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "打"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w523",
+  "wordIds": [
+   "w523"
+  ],
+  "kind": "借词来源",
+  "donor": "打",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中打（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ta⁵⁵tɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "打"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-2830",
+  "wordIds": [
+   "yubao-60756-v-2830"
+  ],
+  "kind": "借词来源",
+  "donor": "心",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中心（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰau⁵⁵ɕiŋ³³",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "心"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2830",
+  "wordIds": [
+   "yubao-60823-v-2830"
+  ],
+  "kind": "借词来源",
+  "donor": "心",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中心（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕĩ⁵⁵tɕiau³³",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "心"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-2422",
+  "wordIds": [
+   "yubao-60756-v-2422"
+  ],
+  "kind": "借词来源",
+  "donor": "米",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中米（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ʑi³³mi³³ kʰɔ³³",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "米"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-0927",
+  "wordIds": [
+   "yubao-60756-v-0927"
+  ],
+  "kind": "借词来源",
+  "donor": "撒",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中撒（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ta⁵³sa³³",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "撒"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-2763",
+  "wordIds": [
+   "yubao-60756-v-2763"
+  ],
+  "kind": "借词来源",
+  "donor": "夹",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中夹（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ka³³tsɿ⁵⁵tʰɔŋ³³",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "夹"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2763",
+  "wordIds": [
+   "yubao-60823-v-2763"
+  ],
+  "kind": "借词来源",
+  "donor": "夹",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中夹（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ka³³tsɿ⁵⁵pʰo⁵⁵",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "夹"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-0429",
+  "wordIds": [
+   "yubao-60756-v-0429"
+  ],
+  "kind": "借词来源",
+  "donor": "炒",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中炒（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "xa⁵³tsʰə³³tsʰau³³",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "炒"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60757-v-2768",
+  "wordIds": [
+   "yubao-60757-v-2768"
+  ],
+  "kind": "借词来源",
+  "donor": "砖",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中砖（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsuan³³u²⁴",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "砖"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2768",
+  "wordIds": [
+   "yubao-60823-v-2768"
+  ],
+  "kind": "借词来源",
+  "donor": "砖",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中砖（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsuã⁵⁵u¹³",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "砖"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w504",
+  "wordIds": [
+   "w504"
+  ],
+  "kind": "借词来源",
+  "donor": "修",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中修（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰuɔ⁵¹ ɕiu⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "修"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-0520",
+  "wordIds": [
+   "yubao-60823-v-0520"
+  ],
+  "kind": "借词来源",
+  "donor": "病",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中病（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "pĩ¹³pa⁵⁵",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "病"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-1832",
+  "wordIds": [
+   "yubao-60756-v-1832"
+  ],
+  "kind": "借词来源",
+  "donor": "磨",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中磨（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "mɔ³³ŋɛ⁵⁵",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "磨"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w386",
+  "wordIds": [
+   "w386"
+  ],
+  "kind": "借词来源",
+  "donor": "赶、场",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中赶（第2音节）、场（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰaŋ²¹ kaŋ⁵¹",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "赶"
+   },
+   {
+    "ipa": "tsʰaŋ²¹ kaŋ⁵¹",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "场"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-0734",
+  "wordIds": [
+   "yubao-60823-v-0734"
+  ],
+  "kind": "借词来源",
+  "donor": "跳",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中跳（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ɣɤe¹³la⁵⁵tʰiau⁵⁵",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "跳"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2534",
+  "wordIds": [
+   "yubao-60823-v-2534"
+  ],
+  "kind": "借词来源",
+  "donor": "跳、舞",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中跳（第2音节）、舞（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "u⁵⁵tʰiau¹³",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "跳"
+   },
+   {
+    "ipa": "u⁵⁵tʰiau¹³",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "舞"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-454728",
+  "wordIds": [
+   "stedt-rn-454728"
+  ],
+  "kind": "借词来源",
+  "donor": "跳",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中跳（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "wu⁵¹tʰiau²⁴",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "跳"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w2416",
+  "wordIds": [
+   "w2416"
+  ],
+  "kind": "借词来源",
+  "donor": "跳",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中跳（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "wu⁵⁵tʰiau²⁴",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "跳"
+   },
+   {
+    "ipa": "wu⁵⁵tʰiau³⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "跳"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2471",
+  "wordIds": [
+   "yubao-60823-v-2471"
+  ],
+  "kind": "借词来源",
+  "donor": "铜钱",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中铜钱（第1—2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tʰũ³¹tɕʰiã³¹tʰo⁵⁵",
+    "span": [
+     1,
+     2
+    ],
+    "donor": "铜钱"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-2574",
+  "wordIds": [
+   "yubao-60756-v-2574"
+  ],
+  "kind": "借词来源",
+  "donor": "骑",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中骑（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ma⁵⁵ tɕʰi⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "骑"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-1910",
+  "wordIds": [
+   "yubao-60756-v-1910"
+  ],
+  "kind": "借词来源",
+  "donor": "刨",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中刨（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "pau³⁵ʑe⁵³tsɿ³³",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "刨"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-1910",
+  "wordIds": [
+   "yubao-60823-v-1910"
+  ],
+  "kind": "借词来源",
+  "donor": "刨",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中刨（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "pau¹³ʑie³³tsɿ³³",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "刨"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-0438",
+  "wordIds": [
+   "yubao-60823-v-0438"
+  ],
+  "kind": "借词来源",
+  "donor": "饭",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中饭（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ʑie¹³xuã⁵⁵ ka¹³",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "饭"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-1799",
+  "wordIds": [
+   "yubao-60756-v-1799"
+  ],
+  "kind": "借词来源",
+  "donor": "筒",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中筒（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰɿ⁵⁵kʰɔ⁵⁵tʰɔŋ⁵⁵",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "筒"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-2653",
+  "wordIds": [
+   "yubao-60756-v-2653"
+  ],
+  "kind": "借词来源",
+  "donor": "牢",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中牢（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "lau³³xuaŋ³³tɔŋ⁵⁵",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "牢"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w362",
+  "wordIds": [
+   "w362"
+  ],
+  "kind": "借词来源",
+  "donor": "裤",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中裤（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰa⁵⁵tsʰa⁵⁵kʰu²¹",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "裤"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-0536",
+  "wordIds": [
+   "yubao-60756-v-0536"
+  ],
+  "kind": "借词来源",
+  "donor": "堂",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中堂（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "pɛ⁵⁵tʰaŋ⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "堂"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-2290",
+  "wordIds": [
+   "yubao-60756-v-2290"
+  ],
+  "kind": "借词来源",
+  "donor": "菩萨",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中菩萨（第1—2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰu³³sa³³pɛ³⁵",
+    "span": [
+     1,
+     2
+    ],
+    "donor": "菩萨"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2290",
+  "wordIds": [
+   "yubao-60823-v-2290"
+  ],
+  "kind": "借词来源",
+  "donor": "菩萨",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中菩萨（第1—2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "pʰu³³sa³³ tʰi⁵⁵",
+    "span": [
+     1,
+     2
+    ],
+    "donor": "菩萨"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-w2481",
+  "wordIds": [
+   "w2481"
+  ],
+  "kind": "借词来源",
+  "donor": "挑",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中挑（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕiau²⁴tʰiau⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "挑"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2631",
+  "wordIds": [
+   "yubao-60823-v-2631"
+  ],
+  "kind": "借词来源",
+  "donor": "晒",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中晒（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "mɤe³³la⁵⁵ sai¹³",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "晒"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2440",
+  "wordIds": [
+   "yubao-60823-v-2440"
+  ],
+  "kind": "借词来源",
+  "donor": "谷",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中谷（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ku³³tsɿ⁵⁵na³³na¹³",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "谷"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-1771",
+  "wordIds": [
+   "yubao-60823-v-1771"
+  ],
+  "kind": "借词来源",
+  "donor": "洗",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中洗（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "ɕi⁵³pa³¹kʰɤe³³tsɤ³³tsʰɿ⁵⁵",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "洗"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-1881",
+  "wordIds": [
+   "yubao-60756-v-1881"
+  ],
+  "kind": "借词来源",
+  "donor": "缝、机",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中缝（第2音节）、机（第3音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰɛ³³xɔŋ³³tɕi⁵⁵tsɿ³³",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "缝"
+   },
+   {
+    "ipa": "tsʰɛ³³xɔŋ³³tɕi⁵⁵tsɿ³³",
+    "span": [
+     3,
+     3
+    ],
+    "donor": "机"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2825",
+  "wordIds": [
+   "yubao-60823-v-2825"
+  ],
+  "kind": "借词来源",
+  "donor": "喜",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中喜（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "xuã⁵⁵ɕi³³",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "喜"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-stedt-rn-411980",
+  "wordIds": [
+   "stedt-rn-411980"
+  ],
+  "kind": "借词来源",
+  "donor": "赶",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中赶（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰan²¹kan⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "赶"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-0715",
+  "wordIds": [
+   "yubao-60823-v-0715"
+  ],
+  "kind": "借词来源",
+  "donor": "赶",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中赶（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "tsʰã³³kã³³",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "赶"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-2649",
+  "wordIds": [
+   "yubao-60756-v-2649"
+  ],
+  "kind": "借词来源",
+  "donor": "礼",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中礼（第1音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "li⁵³sɿ³³",
+    "span": [
+     1,
+     1
+    ],
+    "donor": "礼"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60756-v-2575",
+  "wordIds": [
+   "yubao-60756-v-2575"
+  ],
+  "kind": "借词来源",
+  "donor": "钓",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中钓（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "sɔŋ⁵⁵ tiau⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "钓"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-2575",
+  "wordIds": [
+   "yubao-60823-v-2575"
+  ],
+  "kind": "借词来源",
+  "donor": "钓",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中钓（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "sũ¹³ tiau⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "钓"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ },
+ {
+  "id": "chinese-loan-reviewed-yubao-60823-v-1664",
+  "wordIds": [
+   "yubao-60823-v-1664"
+  ],
+  "kind": "借词来源",
+  "donor": "钓",
+  "donorVariety": "汉语",
+  "scope": "component",
+  "text": "其中钓（第2音节）借自汉语。",
+  "reviewedForms": [
+   {
+    "ipa": "sũ¹³tiau³³tsʰɿ⁵⁵",
+    "span": [
+     2,
+     2
+    ],
+    "donor": "钓"
+   }
+  ],
+  "reviewBatch": "south-vo-loan-review-2026-11-17"
+ }
+]);
+
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){
  if(!editorialNotesByWordId.has(id))editorialNotesByWordId.set(id,[]);
