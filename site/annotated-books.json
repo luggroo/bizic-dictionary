@@ -18348,7 +18348,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "bi³⁵zi⁵⁵ka²¹ wo³⁵tu⁵⁵ loe⁵⁵ han³⁵ na⁵⁵ ma⁵⁵ xe³⁵"
       },
       {
         "id": "2.5-002",
@@ -18380,7 +18381,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "上行跨页：拼音在93页，记音、gloss及句译在94页。"
+        "reviewNote": "上行跨页：拼音在93页，记音、gloss及句译在94页。",
+        "originalPinyin": "goe⁵³ cu⁵⁵ bai⁵³de⁵³ po⁵⁵la²¹"
       },
       {
         "id": "2.5-003",
@@ -18457,7 +18459,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "原图舌面形字母按本书音系暂录ɣɨ，须放大复核。"
+        "reviewNote": "原图舌面形字母按本书音系暂录ɣɨ，须放大复核。",
+        "originalPinyin": "biu³⁵ do⁵⁵ roe⁵³ hhii⁵⁵ on⁵³ hhii⁵⁵ no⁵³bi²¹ boe⁵⁵ cai²¹ mo⁵⁵ ga⁵³ hhii⁵⁵ xe³⁵"
       },
       {
         "id": "2.5-004",
@@ -18509,7 +18512,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ne²¹ba²¹ ne⁵⁵ hhii⁵⁵ loe⁵⁵ ci⁵⁵ci⁵⁵ dian³⁵ do⁵⁵ ha⁵³tai³⁵"
       },
       {
         "id": "2.5-005",
@@ -18561,7 +18565,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ si²¹te²¹ poe³⁵ti⁵⁵ tu³⁵ ri⁵⁵"
       },
       {
         "id": "2.5-006",
@@ -18603,7 +18608,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ye²¹ moe⁵⁵ ri⁵⁵ le⁵³ cu⁵⁵ ha³⁵su⁵⁵tai³⁵"
       },
       {
         "id": "2.5-007",
@@ -18635,7 +18641,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "原页后续“这里 走 那里 走”置于下一句译之前，保留在下一条。"
+        "reviewNote": "原页后续“这里 走 那里 走”置于下一句译之前，保留在下一条。",
+        "originalPinyin": "bai⁵³de⁵³ loe⁵⁵ jin³⁵kii⁵⁵ qi³⁵qi⁵⁵ta⁵⁵pi²¹"
       },
       {
         "id": "2.5-008",
@@ -18702,7 +18709,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "goe²¹ hhii³⁵ en⁵⁵goe⁵⁵ hhii³⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ wo⁵³ta²¹ li⁵⁵si⁵³ le⁵³"
       },
       {
         "id": "2.5-009",
@@ -18764,7 +18772,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ biu³⁵ bi³⁵kuei⁵⁵ loe⁵⁵ go³⁵ jiu⁵⁵ goe⁵³ da⁵³ da⁵³zoe²¹ da⁵⁵"
       },
       {
         "id": "2.5-010",
@@ -18811,7 +18820,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ na⁵⁵ hu²¹ ye²¹ ri⁵⁵ hen⁵³ xi⁵⁵tai³⁵"
       },
       {
         "id": "2.5-011",
@@ -18868,7 +18878,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ kei³⁵ bo⁵⁵ ya⁵⁵ hhii³⁵ ta⁵³"
       },
       {
         "id": "2.5-012",
@@ -18915,7 +18926,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ ne²¹ba²¹ loe⁵⁵ si²¹sa²¹ qian³⁵ do⁵⁵ ha⁵³tai³⁵"
       },
       {
         "id": "2.5-013",
@@ -18967,7 +18979,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ biu³⁵ han³⁵ moe³⁵di⁵⁵ li²¹ biu³⁵ do²¹ la⁵³tai³⁵"
       },
       {
         "id": "2.5-014",
@@ -19039,7 +19052,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ cu⁵⁵ tu²¹ bo⁵⁵ kei³⁵ bo⁵⁵ do⁵⁵ hhii³⁵ ti⁵⁵"
       },
       {
         "id": "2.5-015",
@@ -19111,7 +19125,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；原书释义存疑",
-        "reviewNote": "跨页：95页末三词，96页首仅印出“烧 看”两项，do⁵⁵下无gloss；原书可能错标“烧”，待进一步核查。"
+        "reviewNote": "跨页：95页末三词，96页首仅印出“烧 看”两项，do⁵⁵下无gloss；原书可能错标“烧”，待进一步核查。",
+        "originalPinyin": "ai⁵⁵le⁵³ ne²¹ba²¹ loe⁵⁵ jiu⁵⁵ go³⁵ pa²¹qe³⁵ le⁵³ xe³⁵ma⁵³ka²¹ bo⁵⁵ wu³⁵ ka⁵³-i³⁵ do⁵⁵"
       },
       {
         "id": "2.5-016",
@@ -19148,7 +19163,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ biu³⁵ loe⁵⁵ ngen³⁵ ta⁵⁵coe²¹"
       },
       {
         "id": "2.5-017",
@@ -19190,7 +19206,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ loe⁵⁵ yiu³⁵ ne²¹ba²¹ ngao³⁵ ta⁵³"
       },
       {
         "id": "2.5-018",
@@ -19237,7 +19254,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ jiu⁵⁵ xe³⁵ma⁵³ka²¹ bo⁵⁵ wu³⁵ka⁵³ la⁵⁵"
       },
       {
         "id": "2.5-019",
@@ -19269,7 +19287,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ xe³⁵ma⁵³ka²¹ loe⁵⁵ no⁵³de³⁵ka⁵⁵la⁵⁵"
       },
       {
         "id": "2.5-020",
@@ -19311,7 +19330,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ biu³⁵ de⁵⁵ hai⁵⁵ kuei³⁵ ya⁵⁵"
       },
       {
         "id": "2.5-021",
@@ -19383,7 +19403,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "goe⁵³ ai⁵⁵do⁵⁵ go³⁵ do⁵⁵ wu³⁵ka⁵³ le⁵³ ka²¹ ne⁵⁵ wo⁵⁵ wo⁵³ do⁵⁵ ne⁵⁵"
       },
       {
         "id": "2.5-022",
@@ -19440,7 +19461,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "cu⁵⁵ ye⁵³ liao⁵³ ai⁵⁵do⁵⁵ zi⁵³si²¹ ga⁵³ ron⁵⁵ wu⁵³ do⁵⁵"
       },
       {
         "id": "2.5-023",
@@ -19482,7 +19504,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "wu⁵³ le⁵³ wo⁵⁵ wo⁵⁵ le⁵³ do⁵³"
       },
       {
         "id": "2.5-024",
@@ -19539,7 +19562,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵do⁵⁵ san⁵⁵mei⁵⁵zai⁵⁵ go³⁵ bo⁵⁵ ye²¹ le³⁵ mo²¹ ga³⁵ ta⁵³"
       },
       {
         "id": "2.5-025",
@@ -19591,7 +19615,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ kan²¹ku⁵⁵ on²¹ bo⁵⁵ mo²¹"
       },
       {
         "id": "2.5-026",
@@ -19643,7 +19668,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "moe²¹gu²¹ tu³⁵ le⁵⁵ yiu³⁵ a²¹ gen⁵⁵koe⁵³ la⁵⁵ da⁵³zoe²¹"
       },
       {
         "id": "2.5-027",
@@ -19700,7 +19726,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "gii²¹zu³⁵ loe⁵⁵ ai⁵⁵do⁵⁵ yiu³⁵ zoe³⁵ga²¹ yiu³⁵ gii²¹ yiu³⁵ lao²¹ta³⁵"
       },
       {
         "id": "2.5-028",
@@ -19752,7 +19779,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "on⁵⁵ga²¹ga³⁵cai⁵⁵ ye⁵³ liao⁵³ de⁵⁵ ye⁵³zo²¹ do⁵⁵ tai³⁵ ya⁵⁵"
       },
       {
         "id": "2.5-029",
@@ -19824,7 +19852,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "“走 不能”原拼音97页末，原记音与gloss在98页首。"
+        "reviewNote": "“走 不能”原拼音97页末，原记音与gloss在98页首。",
+        "originalPinyin": "sa⁵³zu³⁵ loe⁵⁵ yiu³⁵ sa⁵³ su³⁵su⁵⁵ zi³⁵ zu⁵⁵ de⁵⁵ la⁵³ ya⁵⁵ hhii³⁵ ti⁵⁵"
       },
       {
         "id": "2.5-030",
@@ -19861,7 +19890,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "拼音97页末；记音及gloss在98页首。"
+        "reviewNote": "拼音97页末；记音及gloss在98页首。",
+        "originalPinyin": "gai⁵³ gen⁵⁵koe⁵³ bo⁵⁵ da⁵⁵ moe⁵⁵"
       },
       {
         "id": "2.5-031",
@@ -19918,7 +19948,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "首词拼音ai⁵³，记音ai⁵⁵，按原书保留差异。"
+        "reviewNote": "首词拼音ai⁵³，记音ai⁵⁵，按原书保留差异。",
+        "originalPinyin": "ai⁵³do⁵⁵ xe³⁵ma⁵³ka²¹ bo⁵⁵ ka²¹ wo⁵³ do⁵⁵ ne⁵⁵ ai⁵⁵ xe³⁵ma⁵³ka²¹"
       },
       {
         "id": "2.5-032",
@@ -20015,7 +20046,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ mi⁵³ da²¹bi³⁵ on²¹ bo⁵⁵ mo²¹ go³⁵ ne⁵⁵ ka²¹ wo⁵³ bo⁵⁵ xi⁵⁵ wu³⁵ le⁵³"
       },
       {
         "id": "2.5-033",
@@ -20052,7 +20084,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ moe⁵⁵ nao⁵⁵ho⁵³ mo²¹ soe³⁵-i³⁵"
       },
       {
         "id": "2.5-034",
@@ -20104,7 +20137,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ na⁵⁵ ne⁵³ go³⁵ goe²¹ ba⁵³ en⁵⁵goe⁵⁵ ba⁵³"
       },
       {
         "id": "2.5-035",
@@ -20161,7 +20195,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ go³⁵ kan²¹ku⁵⁵ ne⁵⁵ ka²¹ do⁵⁵ ta⁵³ ji⁵³ liao⁵³"
       },
       {
         "id": "2.5-036",
@@ -20218,7 +20253,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ai⁵⁵ a²¹ca²¹ ga²¹ ka²¹mon²¹ te³⁵ba⁵⁵ ga⁵³ mon⁵⁵ xe³⁵"
       },
       {
         "id": "2.5-037",
@@ -20255,7 +20291,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ en⁵⁵goe⁵⁵ ta⁵³ lu⁵³"
       },
       {
         "id": "2.5-038",
@@ -20297,7 +20334,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ a²¹ca²¹ gai⁵³ du⁵³ yiu³⁵ bi⁵⁵lian⁵⁵kuei²¹"
       },
       {
         "id": "2.5-039",
@@ -20354,7 +20392,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "soe³⁵ta⁵⁵pa²¹ je³⁵ do⁵⁵ za⁵³zo²¹ tai³⁵ go³⁵ loe⁵⁵ han³⁵ de³⁵"
       },
       {
         "id": "2.5-040",
@@ -20391,7 +20430,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "soe³⁵ men⁵⁵ go³⁵ do²¹ soe³⁵"
       },
       {
         "id": "2.5-041",
@@ -20433,7 +20473,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "gai³⁵ da⁵³zoe²¹ on²¹ bo⁵⁵ boe⁵⁵ la⁵³tai³⁵"
       },
       {
         "id": "2.5-042",
@@ -20485,7 +20526,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "no⁵³te⁵³ moe⁵⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ goe²¹ci³⁵ le⁵³"
       },
       {
         "id": "2.5-043",
@@ -20542,7 +20584,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ moe⁵⁵ moe³⁵zoe²¹ ka²¹ wo⁵³ do⁵⁵ nao²¹ci²¹ ka²¹ wo⁵³"
       },
       {
         "id": "2.5-044",
@@ -20599,7 +20642,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "首词“要”接前句；原书句译置于本页末。"
+        "reviewNote": "首词“要”接前句；原书句译置于本页末。",
+        "originalPinyin": "do⁵⁵ su³⁵su⁵⁵ zi³⁵ ka²¹ wo⁵³ do⁵⁵ qe⁵³ gao⁵³ci²¹ tai³⁵"
       },
       {
         "id": "2.5-045",
@@ -20671,7 +20715,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ jiu⁵⁵ su⁵⁵ku⁵⁵ na⁵⁵ pa⁵⁵ ho²¹ bo⁵⁵ mo²¹ a²¹ca²¹ gu²¹ lu⁵³"
       },
       {
         "id": "2.5-046",
@@ -20723,7 +20768,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "a²¹ca²¹ ba²¹ti²¹ loe⁵⁵ yiu³⁵ coe²¹pu²¹ lao⁵³ga⁵⁵ nao⁵³ xe³⁵"
       },
       {
         "id": "2.5-047",
@@ -20775,7 +20821,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ jiu⁵⁵ a²¹ca²¹ ga²¹ ka²¹ ta⁵³ la⁵⁵"
       },
       {
         "id": "2.5-048",
@@ -20817,7 +20864,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ka²¹mon²¹ yiu³⁵ ci⁵³ su⁵⁵ku⁵⁵ yiu³⁵ ta³⁵xi⁵⁵"
       },
       {
         "id": "2.5-049",
@@ -20859,7 +20907,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "cai²¹ mo⁵⁵ na³⁵xe⁵⁵ ta⁵³ liao⁵³ wa⁵⁵"
       },
       {
         "id": "2.5-050",
@@ -20896,7 +20945,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵do⁵⁵ ta⁵³ mo²¹ de²¹ da⁵⁵"
       },
       {
         "id": "2.5-051",
@@ -20928,7 +20978,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ xe⁵⁵qi⁵⁵ yiu³⁵ tai³⁵"
       },
       {
         "id": "2.5-052",
@@ -20970,7 +21021,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ jiu⁵⁵ ka²¹mon²¹ gu²¹ lu⁵³"
       },
       {
         "id": "2.5-053",
@@ -21022,7 +21074,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "su⁵⁵ku⁵⁵ je³⁵da⁵⁵ji²¹ ka²¹ bo⁵⁵ mo²¹ ka²¹mon²¹ gu²¹ lu⁵³"
       },
       {
         "id": "2.5-054",
@@ -21064,7 +21117,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ngan²¹ho⁵⁵ gu²¹ mo²¹ ca³⁵ la⁵⁵ hu⁵³"
       },
       {
         "id": "2.5-055",
@@ -21116,7 +21170,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ su⁵⁵ku⁵⁵ yiu³⁵ pa²¹tai²¹de²¹ ba²¹ti²¹ bo⁵⁵ be⁵³ lu⁵³"
       },
       {
         "id": "2.5-056",
@@ -21148,7 +21203,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ qin⁵³mo²¹ gao⁵³-i³⁵ yo⁵⁵"
       },
       {
         "id": "2.5-057",
@@ -21200,7 +21256,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "su⁵⁵ku⁵⁵ ya⁵⁵ be⁵³ lu⁵³ ka²¹ ya⁵⁵ wo⁵³ tiu⁵⁵"
       },
       {
         "id": "2.5-058",
@@ -21232,7 +21289,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "跨页；书中原gloss作 INT，前一重复句作 INJ。"
+        "reviewNote": "跨页；书中原gloss作 INT，前一重复句作 INJ。",
+        "originalPinyin": "ai⁵⁵le⁵³ qin⁵³mo²¹ gao⁵³-i³⁵ yo⁵⁵"
       },
       {
         "id": "2.5-059",
@@ -21269,7 +21327,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ do²¹ ha²¹ si⁵³-i³⁵"
       },
       {
         "id": "2.5-060",
@@ -21306,7 +21365,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "ne原拼音53、记音55，保留差异。"
+        "reviewNote": "ne原拼音53、记音55，保留差异。",
+        "originalPinyin": "ai⁵⁵le⁵³ ne⁵³ do²¹ ka⁵⁵ ta⁵⁵tiu⁵⁵"
       },
       {
         "id": "2.5-061",
@@ -21358,7 +21418,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ jiu⁵⁵ ka²¹kei⁵⁵de²¹ cu⁵⁵ bo⁵⁵ son⁵⁵ko⁵⁵ lu⁵³"
       },
       {
         "id": "2.5-062",
@@ -21400,7 +21461,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "wu³⁵ ya⁵⁵ je⁵³ xi⁵⁵ si⁵⁵ma²¹ liao⁵³"
       },
       {
         "id": "2.5-063",
@@ -21467,7 +21529,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "原书到一词记音为ye⁵³，保留以待复核。"
+        "reviewNote": "原书到一词记音为ye⁵³，保留以待复核。",
+        "originalPinyin": "cu⁵⁵ ye⁵³ liao⁵³ loe⁵⁵ go³⁵ do²¹ ka²¹kii⁵⁵de²¹ cu⁵⁵ ne³⁵ bo⁵⁵ la⁵⁵"
       },
       {
         "id": "2.5-064",
@@ -21504,7 +21567,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ne³⁵ le⁵³ la²¹ye²¹ liao⁵³ wa⁵⁵"
       },
       {
         "id": "2.5-065",
@@ -21556,7 +21620,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ xe³⁵ma⁵³ka²¹ do⁵⁵ goe²¹ci³⁵ le⁵³ son⁵⁵ko⁵⁵ ji⁵³ diu⁵⁵"
       },
       {
         "id": "2.5-066",
@@ -21603,7 +21668,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "qin⁵³mo²¹ wu³⁵ ka⁵³ma⁵³ lai⁵³ ai⁵⁵do⁵⁵ son⁵⁵ko⁵⁵ da⁵⁵"
       },
       {
         "id": "2.5-067",
@@ -21665,7 +21731,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ne⁵³hoe⁵³le²¹ cu⁵⁵ ye⁵³ liao⁵³ lai⁵³ qin⁵³mo²¹ ai⁵⁵do⁵⁵ son⁵⁵ko⁵⁵ da⁵⁵ ya⁵⁵"
       },
       {
         "id": "2.5-068",
@@ -21717,7 +21784,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "goe⁵³ ai⁵⁵le⁵³ wu³⁵kii⁵⁵coe⁵⁵ tu³⁵ na⁵⁵ don⁵⁵ ba⁵³ le⁵³"
       },
       {
         "id": "2.5-069",
@@ -21759,7 +21827,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "boe⁵⁵ qin⁵³mo²¹ wu³⁵ ya⁵⁵ yi²¹ da⁵⁵"
       },
       {
         "id": "2.5-070",
@@ -21811,7 +21880,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ jiu⁵⁵ goe⁵³zoe²¹ ai⁵⁵le⁵³ qin⁵³mo²¹ gao⁵³-i³⁵ yo⁵⁵"
       },
       {
         "id": "2.5-071",
@@ -21898,7 +21968,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "103页末原音行跨至104页首gloss。"
+        "reviewNote": "103页末原音行跨至104页首gloss。",
+        "originalPinyin": "wu³⁵ ya⁵⁵ yi²¹ da⁵⁵ go³⁵ go³⁵ xe³⁵xe⁵⁵ je⁵³ le⁵³ ye⁵³ lu⁵³ ho⁵⁵ qin⁵³mo²¹ ne⁵⁵ han⁵⁵"
       },
       {
         "id": "2.5-072",
@@ -21975,7 +22046,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ jiu⁵⁵ na⁵⁵ co⁵³ da⁵³ te⁵³te²¹ ho²¹ bo⁵⁵ kan²¹ku⁵⁵ wu³⁵ ni⁵⁵ lu⁵³"
       },
       {
         "id": "2.5-073",
@@ -22067,7 +22139,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni⁵⁵ ya⁵⁵ ni⁵⁵ ya⁵⁵ ngen³⁵ yi²¹ da⁵⁵ no⁵³ ya⁵⁵ yi²¹ da⁵⁵ wu³⁵ ya⁵⁵ yi²¹ da⁵⁵ ai⁵⁵le⁵³"
       },
       {
         "id": "2.5-074",
@@ -22114,7 +22187,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "qin⁵³mo²¹ ta³⁵qi⁵⁵la⁵⁵koe⁵⁵ wu³⁵lon⁵⁵ku⁵⁵li⁵⁵ na⁵⁵ don⁵⁵ on²¹ la⁵⁵"
       },
       {
         "id": "2.5-075",
@@ -22176,7 +22250,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "moe³⁵ wu³⁵ go³⁵ si⁵⁵li⁵⁵ na⁵⁵ koe²¹ ga³⁵ ji⁵³ liao⁵³ o⁵⁵"
       },
       {
         "id": "2.5-076",
@@ -22238,7 +22313,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "104页末拼音，105页首记音与gloss。"
+        "reviewNote": "104页末拼音，105页首记音与gloss。",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ soe³⁵-i³⁵ go³⁵ do²¹ wu³⁵ cai²¹ mo⁵⁵ ka⁵³ bo⁵⁵"
       },
       {
         "id": "2.5-077",
@@ -22310,7 +22386,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ go³⁵ wu³⁵ po⁵⁵ bo⁵⁵ mo²¹ no⁵³te⁵³ ne⁵⁵ si⁵⁵li⁵⁵ ga³⁵ ji⁵³ liao⁵³"
       },
       {
         "id": "2.5-078",
@@ -22367,7 +22444,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ jiu⁵⁵ wu³⁵ je⁵³ le⁵³ cu⁵⁵ bo⁵⁵ zao²¹"
       },
       {
         "id": "2.5-079",
@@ -22434,7 +22512,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "cu⁵⁵ ye⁵³ le⁵³ wu³⁵ la²¹ le⁵³ qin⁵³mo²¹ ai⁵⁵do⁵⁵ go³⁵ yi²¹ da⁵⁵"
       },
       {
         "id": "2.5-080",
@@ -22476,7 +22555,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ boe⁵⁵ go³⁵ ni⁵⁵ dao⁵⁵"
       },
       {
         "id": "2.5-081",
@@ -22523,7 +22603,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "goe⁵³ ye²¹ ban³⁵ le⁵³ ga³⁵ la⁵⁵ hu⁵³"
       },
       {
         "id": "2.5-082",
@@ -22575,7 +22656,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "li³⁵hha⁵³ le⁵³ ni³⁵ na⁵⁵ su⁵⁵ go³⁵ na⁵⁵ su⁵⁵"
       },
       {
         "id": "2.5-083",
@@ -22622,7 +22704,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "拼音、记音、gloss 在105页末，句译在106页首。"
+        "reviewNote": "拼音、记音、gloss 在105页末，句译在106页首。",
+        "originalPinyin": "da⁵³ha²¹ ga³⁵ le⁵³ qe²¹bi³⁵ do⁵⁵ po⁵⁵ dao⁵⁵"
       },
       {
         "id": "2.5-084",
@@ -22674,7 +22757,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "“怎么”在105页末。"
+        "reviewNote": "“怎么”在105页末。",
+        "originalPinyin": "qin⁵³mo²¹ ta³⁵qi⁵⁵la⁵⁵koe⁵⁵ huan²¹lon²¹ tan²¹le²¹ na⁵⁵ don⁵⁵ xi⁵³ la⁵⁵"
       },
       {
         "id": "2.5-085",
@@ -22721,7 +22805,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ ne³⁵ liao⁵³ o⁵⁵ ai⁵⁵moe⁵⁵ go³⁵ soe³⁵-i³⁵"
       },
       {
         "id": "2.5-086",
@@ -22773,7 +22858,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ jiu⁵⁵ ta⁵⁵ne⁵⁵ ne⁵⁵ la⁵⁵men²¹ xian²¹ liao⁵³"
       },
       {
         "id": "2.5-087",
@@ -22815,7 +22901,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "zi⁵⁵goe⁵⁵ ne⁵⁵ la⁵⁵men²¹ boe⁵⁵ xian²¹ liao⁵³"
       },
       {
         "id": "2.5-088",
@@ -22882,7 +22969,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ jiu⁵⁵ ka²¹zu²¹ te³⁵ba⁵⁵ na⁵⁵ zi⁵⁵ ho²¹le²¹ ne³⁵zo⁵⁵ lu⁵⁵lo⁵³ la⁵⁵"
       },
       {
         "id": "2.5-089",
@@ -22934,7 +23022,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "goe⁵³ biu³⁵ jiu⁵⁵ su⁵⁵ku⁵⁵ ho²¹le²¹ go³⁵ ga⁵³ la⁵⁵"
       },
       {
         "id": "2.5-090",
@@ -22981,7 +23070,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": "拼音行在106页末，记音、释义在107页。"
+        "reviewNote": "拼音行在106页末，记音、释义在107页。",
+        "originalPinyin": "ga⁵³don²¹le²¹ jiu⁵⁵ goe⁵³ go³⁵ ha²¹ si⁵³ liao⁵³"
       },
       {
         "id": "2.5-091",
@@ -23043,7 +23133,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ don⁵⁵ le⁵³ qin⁵³mo²¹ go³⁵ yiu³⁵ no⁵³soe³⁵tu⁵⁵ yi²¹ dao⁵⁵ wa⁵⁵"
       },
       {
         "id": "2.5-092",
@@ -23095,7 +23186,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ko⁵⁵ba⁵⁵ ga²¹ yiu³⁵ ne³⁵bi³⁵ nao⁵³ ji⁵⁵je⁵³ la⁵⁵"
       },
       {
         "id": "2.5-093",
@@ -23142,7 +23234,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ yiu³⁵ ji⁵⁵je⁵³ le⁵³ ka²¹mon²¹ ga²¹"
       },
       {
         "id": "2.5-094",
@@ -23179,7 +23272,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "mo³⁵hu⁵⁵ le⁵³ ga²¹li⁵⁵zao⁵⁵zao⁵⁵ da⁵³lo²¹ sa⁵⁵dao⁵⁵"
       },
       {
         "id": "2.5-095",
@@ -23221,7 +23315,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ han³⁵ mo³⁵hu⁵⁵"
       },
       {
         "id": "2.5-096",
@@ -23263,7 +23358,8 @@
           }
         ],
         "reviewStatus": "第二遍原图复核；仍需音节和词库核查",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "mu³⁵nan⁵⁵ do⁵⁵ han³⁵ mo³⁵hu⁵⁵ la⁵⁵ ne⁵⁵"
       }
     ],
     "reviewNote": "96条经第二遍逐图复核；2.5-015原书gloss可疑且末词无可见gloss，音节表和词库未全部逐项复核。",
@@ -23341,7 +23437,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ si²¹je²¹ an³⁵ goe²¹ han³⁵ na⁵⁵ co⁵³ xe³⁵"
       },
       {
         "id": "2.6-002",
@@ -23383,7 +23480,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "原页接有爹娘 ne²¹ba²¹，但其后“又死”跨至109页，归入下一条。"
+        "reviewNote": "原页接有爹娘 ne²¹ba²¹，但其后“又死”跨至109页，归入下一条。",
+        "originalPinyin": "goe⁵³ cu⁵⁵ loe⁵⁵ ne⁵³ka⁵⁵ ca³⁵ xi⁵⁵tai³⁵"
       },
       {
         "id": "2.6-003",
@@ -23450,7 +23548,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "爹娘二字位于108页末，后续109页。 原书逐词含“爹娘、又、死”，此句的原书整句译文只写“给他们留下了很多东西”；保留原书，不补译。"
+        "reviewNote": "爹娘二字位于108页末，后续109页。 原书逐词含“爹娘、又、死”，此句的原书整句译文只写“给他们留下了很多东西”；保留原书，不补译。",
+        "originalPinyin": "ne²¹ba²¹ yiu³⁵ soe³⁵ liao⁵³ ai⁵⁵le⁵³ goe⁵³ bo⁵⁵ ye²¹ na³⁵be⁵⁵ a²¹ liao⁵³"
       },
       {
         "id": "2.6-004",
@@ -23502,7 +23601,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ a²¹ko⁵³ jiu⁵⁵ an⁵⁵ngai⁵³ bo⁵⁵ li²¹ la⁵⁵"
       },
       {
         "id": "2.6-005",
@@ -23569,7 +23669,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "an⁵⁵ngai⁵³ an³⁵ da⁵³ da⁵³pi²¹ o⁵⁵ nga³⁵ boe⁵⁵ ai⁵⁵le⁵³ hoe³⁵ba²¹ liao⁵³ wa⁵⁵"
       },
       {
         "id": "2.6-006",
@@ -23616,7 +23717,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ bo⁵⁵ go³⁵guei⁵⁵ nao⁵³ si⁵⁵le²¹ do⁵⁵ man⁵⁵"
       },
       {
         "id": "2.6-007",
@@ -23668,7 +23770,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ bo⁵⁵ moe⁵⁵ jiu⁵⁵ poe³⁵ti⁵⁵ qian³⁵ pi²¹"
       },
       {
         "id": "2.6-008",
@@ -23695,7 +23798,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ha⁵³le²¹bi³⁵ nao⁵³ le³⁵"
       },
       {
         "id": "2.6-009",
@@ -23737,7 +23841,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "109页末拼音、记音，110页首gloss和句译。"
+        "reviewNote": "109页末拼音、记音，110页首gloss和句译。",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ an⁵⁵ngai⁵³ moe⁵⁵ han³⁵ de³⁵"
       },
       {
         "id": "2.6-010",
@@ -23814,7 +23919,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "han³⁵ pi²¹ moe⁵⁵ han³⁵ pi²¹ nga³⁵ huan³⁵ ri⁵⁵ le⁵³ ni³⁵ ye²¹ a³⁵ci⁵⁵ ta⁵³"
       },
       {
         "id": "2.6-011",
@@ -23856,7 +23962,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "PDF 127 原页 qe⁵³ 下的记音为 tçhe⁵³，原稿漏记送气 h，已改并保留此记录。"
+        "reviewNote": "PDF 127 原页 qe⁵³ 下的记音为 tçhe⁵³，原稿漏记送气 h，已改并保留此记录。",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ loe⁵⁵ qe⁵³ do⁵⁵ tai³⁵"
       },
       {
         "id": "2.6-012",
@@ -23933,7 +24040,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ ha⁵³le²¹bi³⁵ nao⁵³ co⁵³ bo⁵⁵ mo²¹ goe²¹ hhii³⁵ en⁵⁵goe⁵⁵ hhii³⁵"
       },
       {
         "id": "2.6-013",
@@ -23980,7 +24088,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "li³⁵hha⁵³ le⁵³ jiu⁵⁵ bu³⁵li⁵⁵ te³⁵ bo⁵⁵ ga³⁵"
       },
       {
         "id": "2.6-014",
@@ -24042,7 +24151,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ ha⁵³le²¹bi³⁵ co⁵³ bo⁵⁵ li⁵³ ga⁵³"
       },
       {
         "id": "2.6-015",
@@ -24089,7 +24199,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "110页末拼音，111页首记音、gloss及句译。"
+        "reviewNote": "110页末拼音，111页首记音、gloss及句译。",
+        "originalPinyin": "ga⁵³ le⁵³ yiu³⁵ ha⁵³le²¹bi³⁵ ho²¹le²¹ coe²¹ ye⁵³"
       },
       {
         "id": "2.6-016",
@@ -24156,7 +24267,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ si⁵⁵ ga⁵³ le⁵³ han³⁵ne²¹ ne⁵⁵ si⁵⁵ ga⁵³ le⁵³ boe⁵⁵ han³⁵ne²¹"
       },
       {
         "id": "2.6-017",
@@ -24213,7 +24325,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "so⁵⁵ si⁵⁵ ka⁵⁵ le⁵³ ai⁵⁵le⁵³ go³⁵ ga⁵³ ji⁵³ liao⁵³"
       },
       {
         "id": "2.6-018",
@@ -24265,7 +24378,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ yiu³⁵ no⁵³ da⁵³xi⁵³ mo²¹ hu²¹ ri⁵⁵"
       },
       {
         "id": "2.6-019",
@@ -24327,7 +24441,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "hu²¹ ri⁵⁵ no⁵³te⁵³ go³⁵ la³⁵tu⁵⁵ ne⁵⁵lan⁵⁵ ga⁵³ bu⁵⁵ le³⁵ la⁵⁵"
       },
       {
         "id": "2.6-020",
@@ -24404,7 +24519,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "le³⁵ le⁵³ go³⁵ jiu⁵⁵ ai⁵⁵ poe³⁵ti⁵⁵ dian³⁵kuei⁵⁵ tu³⁵ la³⁵tu⁵⁵ ne⁵⁵lan⁵⁵ dian⁵³ bo⁵⁵ la⁵⁵"
       },
       {
         "id": "2.6-021",
@@ -24476,7 +24592,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "111页末始，112页首续。"
+        "reviewNote": "111页末始，112页首续。",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ jiu⁵⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ han³⁵ ha⁵³le²¹bi³⁵ ho²¹le²¹ coe²¹ wo⁵³"
       },
       {
         "id": "2.6-022",
@@ -24523,7 +24640,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "coe²¹ wo⁵³ le⁵³ ai⁵⁵ la³⁵tu⁵⁵ bo⁵⁵ tu³⁵"
       },
       {
         "id": "2.6-023",
@@ -24585,7 +24703,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ga⁵³ ne⁵³ lan⁵⁵ ai⁵⁵ la³⁵tu⁵⁵ jiu⁵⁵ go³⁵ do²¹ on³⁵ diu⁵⁵"
       },
       {
         "id": "2.6-024",
@@ -24627,7 +24746,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "on³⁵ le⁵³ gai⁵³ ba²¹ liao⁵³ o⁵⁵"
       },
       {
         "id": "2.6-025",
@@ -24659,7 +24779,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ huan⁵⁵xi⁵³ le⁵³"
       },
       {
         "id": "2.6-026",
@@ -24701,7 +24822,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "la³⁵tu⁵⁵ nao⁵³ bo⁵⁵ je²¹xi³⁵ nao⁵³ a²¹"
       },
       {
         "id": "2.6-027",
@@ -24748,7 +24870,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "PDF 原图确认 qe 下原音 tçhe，修正初稿漏写 h。"
+        "reviewNote": "PDF 原图确认 qe 下原音 tçhe，修正初稿漏写 h。",
+        "originalPinyin": "na⁵⁵ ne⁵³ do⁵⁵ ga⁵³ qe⁵⁵ hii⁵³ la⁵⁵"
       },
       {
         "id": "2.6-028",
@@ -24805,7 +24928,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "112页末上两行，113页首gloss及句译。"
+        "reviewNote": "112页末上两行，113页首gloss及句译。",
+        "originalPinyin": "ai⁵⁵ la³⁵tu⁵⁵de⁵³ na⁵⁵ ne⁵³ ho⁵⁵ na⁵⁵ ne⁵³ ci⁵³ ne⁵⁵"
       },
       {
         "id": "2.6-029",
@@ -24867,7 +24991,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ go³⁵ ne⁵⁵ a²¹ko⁵³ loe⁵⁵ jiu⁵⁵ no²¹ga²¹ni⁵⁵ ya⁵⁵ si⁵⁵le²¹ da⁵⁵"
       },
       {
         "id": "2.6-030",
@@ -24914,7 +25039,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ cu⁵⁵ goe²¹ci³⁵ le⁵³"
       },
       {
         "id": "2.6-031",
@@ -24971,7 +25097,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ye²¹ moe⁵⁵ ga³⁵ le⁵³ ha²¹ ga³⁵ le⁵³ yiu³⁵ ha²¹"
       },
       {
         "id": "2.6-032",
@@ -25038,7 +25165,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "PDF 原图确认 qe 下原音 tçhe，修正初稿漏写 h。"
+        "reviewNote": "PDF 原图确认 qe 下原音 tçhe，修正初稿漏写 h。",
+        "originalPinyin": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ ne³⁵ bo⁵⁵ mo²¹ qe⁵³ do⁵⁵ ri⁵⁵ da⁵⁵"
       },
       {
         "id": "2.6-033",
@@ -25080,7 +25208,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ye²¹ boe⁵⁵ han³⁵ po⁵⁵la²¹ dao⁵⁵"
       },
       {
         "id": "2.6-034",
@@ -25147,7 +25276,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "goe⁵³ an⁵⁵ngai⁵³ loe⁵⁵ na⁵⁵ poe⁵⁵ na⁵⁵ poe⁵⁵ ai⁵⁵ la³⁵tu⁵⁵ ka⁵³ bo⁵⁵"
       },
       {
         "id": "2.6-035",
@@ -25214,7 +25344,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "南瓜末音拼音53、记音55；保留。 原拼音 la³⁵tu⁵³ 与记音 la³⁵thu⁵⁵ 第二音节声调不同；均照原值。"
+        "reviewNote": "南瓜末音拼音53、记音55；保留。 原拼音 la³⁵tu⁵³ 与记音 la³⁵thu⁵⁵ 第二音节声调不同；均照原值。",
+        "originalPinyin": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ ai⁵⁵ la³⁵tu⁵³ ai⁵⁵ na⁵⁵ ne⁵³ hii⁵³ la⁵⁵"
       },
       {
         "id": "2.6-036",
@@ -25276,7 +25407,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "hii⁵³ le⁵³ qin⁵³mo²¹ na⁵⁵ don⁵⁵ hii⁵³ ya⁵⁵ na⁵⁵ bu⁵⁵ da⁵³"
       },
       {
         "id": "2.6-037",
@@ -25328,7 +25460,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "PDF 原图确认 qe 下原音 tçhe，修正初稿漏写 h。"
+        "reviewNote": "PDF 原图确认 qe 下原音 tçhe，修正初稿漏写 h。",
+        "originalPinyin": "ne⁵⁵ qe⁵⁵ hii⁵³ ya⁵⁵ na⁵⁵ bu⁵⁵ da⁵³ ai⁵⁵le⁵³"
       },
       {
         "id": "2.6-038",
@@ -25390,7 +25523,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ zi³⁵ le⁵³ qin⁵³mo²¹ nga³⁵ ne⁵⁵ la³⁵tu⁵⁵ hhoe³⁵ do⁵⁵ han⁵⁵"
       },
       {
         "id": "2.6-039",
@@ -25437,7 +25571,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ do²¹ do⁵⁵ lao²¹gu⁵⁵le⁵⁵ ga⁵³ bu⁵⁵ lan⁵⁵"
       },
       {
         "id": "2.6-040",
@@ -25509,7 +25644,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "PDF 原图确认 qe 下原音 tçhe，修正初稿漏写 h。"
+        "reviewNote": "PDF 原图确认 qe 下原音 tçhe，修正初稿漏写 h。",
+        "originalPinyin": "nga³⁵ ye²¹ ya⁵⁵ tai³⁵ qe⁵³ do⁵⁵ tai³⁵ qin⁵³mo²¹ han³⁵ ri⁵⁵ do⁵⁵ han⁵⁵"
       },
       {
         "id": "2.6-041",
@@ -25571,7 +25707,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ai⁵⁵ na⁵⁵ poe⁵⁵ go³⁵ jiu⁵⁵ ao⁵⁵cai²¹ ka⁵³ bo⁵⁵ la⁵⁵"
       },
       {
         "id": "2.6-042",
@@ -25623,7 +25760,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "PDF 原图确认 qe 下原音 tçhe，修正初稿漏写 h。"
+        "reviewNote": "PDF 原图确认 qe 下原音 tçhe，修正初稿漏写 h。",
+        "originalPinyin": "ka⁵³ ya⁵⁵ ka⁵³ qin⁵³mo²¹ qe⁵³ do⁵⁵ yi²¹ da⁵⁵"
       },
       {
         "id": "2.6-043",
@@ -25670,7 +25808,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ la³⁵tu⁵⁵ lao⁵³ga⁵⁵ nao⁵³ ni⁵⁵ le⁵³"
       },
       {
         "id": "2.6-044",
@@ -25732,7 +25871,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ don²¹ga²¹ ton⁵⁵ le⁵³ jiu⁵⁵ ai⁵⁵ wo³⁵tu⁵⁵ ye⁵³ bo⁵⁵ la⁵⁵"
       },
       {
         "id": "2.6-045",
@@ -25789,7 +25929,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ne³⁵be⁵³ la⁵⁵ hu⁵³ ai⁵⁵le⁵³ qin⁵³mo²¹ hhoe⁵³ ga⁵³ non⁵⁵ en²¹zi²¹"
       },
       {
         "id": "2.6-046",
@@ -25861,7 +26002,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ jiu⁵⁵ ni⁵⁵ la⁵⁵ go³⁵ men⁵⁵ gai³⁵ na⁵⁵ bu⁵⁵ ca³⁵ ne⁵⁵"
       },
       {
         "id": "2.6-047",
@@ -25908,7 +26050,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ moe⁵⁵ ai⁵⁵ na⁵⁵ bu⁵⁵ ca³⁵ ne⁵⁵"
       },
       {
         "id": "2.6-048",
@@ -25960,7 +26103,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "好：拼音调55，记音21，原样保留。 原拼音 cai⁵⁵ 与原记音 tshai²¹ 声调不同，均保留。"
+        "reviewNote": "好：拼音调55，记音21，原样保留。 原拼音 cai⁵⁵ 与原记音 tshai²¹ 声调不同，均保留。",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ cai⁵⁵ mo⁵⁵ na⁵⁵ don⁵⁵ ba⁵³ le⁵³"
       },
       {
         "id": "2.6-049",
@@ -26022,7 +26166,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "jiu⁵⁵ go³⁵ on²¹ bo⁵⁵ ne⁵⁵ ai⁵⁵ na⁵⁵ bu⁵⁵ boe⁵³ lu⁵³"
       },
       {
         "id": "2.6-050",
@@ -26069,7 +26214,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "boe⁵³ le⁵³ hu²¹pa²¹ ta²¹ ye⁵³ liao⁵³ ai⁵⁵le⁵³"
       },
       {
         "id": "2.6-051",
@@ -26131,7 +26277,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "jiu⁵⁵ goe⁵³ go³⁵ ai⁵⁵ la³⁵tu⁵⁵ hu²¹pa²¹ tu³⁵ bo⁵⁵ po⁵⁵ lu⁵³"
       },
       {
         "id": "2.6-052",
@@ -26203,7 +26350,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "原书标2pl，句译“他们”，保留原gloss。 原 gloss 为 2pl；句译说“他们”，原值保留，可能是原书误标。 原书 gloss 为 2pl，整句译文为“他们”，可能为原书误标，保留原值。"
+        "reviewNote": "原书标2pl，句译“他们”，保留原gloss。 原 gloss 为 2pl；句译说“他们”，原值保留，可能是原书误标。 原书 gloss 为 2pl，整句译文为“他们”，可能为原书误标，保留原值。",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ do²¹ jiu⁵⁵ to²¹to²¹ a²¹ lu⁵³ ai⁵⁵le⁵³ la³⁵tu⁵⁵ sa⁵⁵ do⁵⁵ han⁵⁵"
       },
       {
         "id": "2.6-053",
@@ -26295,7 +26443,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ loe⁵⁵ jiu⁵⁵ la³⁵tu⁵⁵ tu³⁵ le⁵⁵ zu³⁵ diu⁵⁵ ai⁵⁵le⁵³ a²¹ ta⁵⁵ne⁵⁵ ye⁵³ bo⁵⁵ zi⁵⁵ bo⁵⁵ la⁵⁵"
       },
       {
         "id": "2.6-054",
@@ -26367,7 +26516,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ hhoe⁵³ loe⁵⁵ goe⁵³ do²¹ to²¹to²¹ a²¹ le⁵³ la³⁵tu⁵⁵ sa⁵⁵ xi⁵⁵ sa⁵⁵"
       },
       {
         "id": "2.6-055",
@@ -26424,7 +26574,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ye²¹ ban³⁵ xi⁵⁵ ban³⁵ ga⁵³don²¹le²¹ jiu⁵⁵ ye²¹ ga³⁵ do⁵⁵hu⁵⁵"
       },
       {
         "id": "2.6-056",
@@ -26496,7 +26647,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ai⁵⁵ hhoe⁵³ te³⁵ba⁵⁵ loe⁵⁵ go³⁵ jiu⁵⁵ hoe²¹ te³⁵ba⁵⁵ nao⁵³ ho²¹ diu⁵⁵"
       },
       {
         "id": "2.6-057",
@@ -26553,7 +26705,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ hoe²¹ na⁵⁵ don⁵⁵ ha²¹ le⁵³ je²¹ la⁵⁵"
       },
       {
         "id": "2.6-058",
@@ -26615,7 +26768,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "dan²¹ dan²¹ dan²¹ nga³⁵ ne⁵⁵ si²¹ nga³⁵ bo⁵⁵ ho²¹ xe⁵⁵"
       },
       {
         "id": "2.6-059",
@@ -26662,7 +26816,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ roe³⁵ nga³⁵ bo⁵⁵ le³⁵ xe⁵⁵"
       },
       {
         "id": "2.6-060",
@@ -26724,7 +26879,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ roe³⁵ si²¹ jiu⁵⁵ ai⁵⁵ don²¹ga²¹ tu³⁵ le⁵⁵ ji⁵⁵je⁵³ diu⁵⁵"
       },
       {
         "id": "2.6-061",
@@ -26766,7 +26922,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ai⁵⁵ hhoe⁵³de⁵³ jiu⁵⁵ ne⁵³ le⁵³"
       },
       {
         "id": "2.6-062",
@@ -26808,7 +26965,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ne⁵³ le⁵³ yiu³⁵ je²¹ la²¹ye³⁵ zu⁵⁵"
       },
       {
         "id": "2.6-063",
@@ -26860,7 +27018,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "goe⁵³ do²¹ jin³⁵kii⁵⁵ roe³⁵ hu²¹ mo²¹ je²¹ liao⁵³"
       },
       {
         "id": "2.6-064",
@@ -26917,7 +27076,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ do²¹ jiu⁵⁵ ka²¹mon²¹ ji²¹ ne³⁵ bo⁵⁵ la⁵⁵"
       },
       {
         "id": "2.6-065",
@@ -26974,7 +27134,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ hoe²¹ loe⁵⁵ jiu⁵⁵ ka²¹mon²¹ ga²¹ kii³⁵kii⁵⁵ bo⁵⁵ la⁵⁵"
       },
       {
         "id": "2.6-066",
@@ -27031,7 +27192,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ ka²¹kei⁵⁵dai²¹ hhii³⁵ le⁵³ ai⁵⁵ hoe²¹ a²¹ lu⁵³"
       },
       {
         "id": "2.6-067",
@@ -27098,7 +27260,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "na⁵⁵ don⁵⁵ za³⁵ le⁵³ xian²¹tian⁵⁵ ai⁵⁵ hhoe⁵³ lao⁵³ga⁵⁵ za³⁵ do⁵⁵ liao⁵³"
       },
       {
         "id": "2.6-068",
@@ -27165,7 +27328,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ ka²¹mon²¹ gu²¹ le⁵³ ai⁵⁵le⁵³ go³⁵ go³⁵ ai⁵⁵ hoe²¹ a²¹ diu⁵⁵"
       },
       {
         "id": "2.6-069",
@@ -27227,7 +27391,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ho²¹ le⁵³ cu⁵⁵ cu⁵⁵ ye⁵³ le⁵³ go³⁵ jiu⁵⁵ je²¹ la⁵⁵"
       },
       {
         "id": "2.6-070",
@@ -27284,7 +27449,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "PDF 136 书中 tçhe 有送气 h，改正初稿。"
+        "reviewNote": "PDF 136 书中 tçhe 有送气 h，改正初稿。",
+        "originalPinyin": "dan²¹ dan²¹ dan²¹ nga³⁵ bo⁵⁵ co⁵³ na⁵⁵ co⁵³ en²¹qe³⁵"
       },
       {
         "id": "2.6-071",
@@ -27326,7 +27492,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ co⁵³ jiu⁵⁵ na⁵⁵ co⁵³ en²¹zi²¹"
       },
       {
         "id": "2.6-072",
@@ -27368,7 +27535,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ yiu³⁵ wu³⁵ nao⁵³ je²¹"
       },
       {
         "id": "2.6-073",
@@ -27415,7 +27583,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "je²¹ le⁵³ yiu³⁵ cu⁵⁵ ai⁵⁵ na⁵⁵ ne⁵³"
       },
       {
         "id": "2.6-074",
@@ -27467,7 +27636,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "PDF 136 书中 tçhe 有送气 h，改正初稿。"
+        "reviewNote": "PDF 136 书中 tçhe 有送气 h，改正初稿。",
+        "originalPinyin": "go³⁵ li⁵³ qe²¹ la⁵⁵ li⁵³ qe²¹ le⁵³ loe⁵⁵"
       },
       {
         "id": "2.6-075",
@@ -27514,7 +27684,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "goe⁵³ a²¹ko⁵³ jiu⁵⁵ xe⁵⁵huei⁵⁵ mo²¹ ba⁵³ la⁵⁵"
       },
       {
         "id": "2.6-076",
@@ -27586,7 +27757,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ zoe³⁵zi⁵³ le⁵³ ni³⁵ qin⁵³mo²¹ nga³⁵ ne⁵⁵ wu³⁵ hhoe³⁵ mo²¹ si⁵³ o⁵⁵"
       },
       {
         "id": "2.6-077",
@@ -27653,7 +27825,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "a²¹ko⁵³ ni³⁵ ne⁵⁵ wu³⁵ sou³⁵ da⁵⁵ nga³⁵ do²¹ pii⁵⁵ bo⁵⁵ xi⁵⁵"
       },
       {
         "id": "2.6-078",
@@ -27700,7 +27873,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³ a²¹ko⁵³ jiu⁵⁵ han³⁵ de³⁵ la⁵⁵"
       },
       {
         "id": "2.6-079",
@@ -27762,7 +27936,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ qin⁵³mo²¹ wu³⁵ pii⁵⁵ la⁵⁵ loe⁵⁵ tuan²¹ do⁵⁵ tai³⁵ ai⁵⁵le⁵³"
       },
       {
         "id": "2.6-080",
@@ -27844,7 +28019,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ jiu⁵⁵ roe³⁵ na³⁵be⁵⁵ ha²¹ le⁵³ go³⁵ ne⁵⁵ an⁵⁵ngai⁵³ bo⁵⁵ le³⁵ mo²¹ ga³⁵ la⁵⁵"
       },
       {
         "id": "2.6-081",
@@ -27901,7 +28077,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "goe⁵³ an⁵⁵ngai⁵³ loe⁵⁵ ai⁵⁵le⁵³ roe³⁵ hu²¹ mo²¹ je²¹ liao⁵³"
       },
       {
         "id": "2.6-082",
@@ -27963,7 +28140,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "原图 qe⁵³ 下记音 tçhe⁵³，初稿漏记送气 h，现修正。"
+        "reviewNote": "原图 qe⁵³ 下记音 tçhe⁵³，初稿漏记送气 h，现修正。",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ go³⁵ qe⁵³ do⁵⁵ goe⁵³ a²¹ko⁵³ bo⁵⁵ ze³⁵ liao⁵³"
       },
       {
         "id": "2.6-083",
@@ -28020,7 +28198,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "goe⁵³ a²¹ko⁵³ ai⁵⁵le⁵³ go³⁵ go³⁵ ai⁵⁵ hoe²¹ a²¹ diu⁵⁵"
       },
       {
         "id": "2.6-084",
@@ -28072,7 +28251,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ je²¹ la⁵⁵ ko⁵³ nga³⁵ bo⁵⁵ ho²¹ xe⁵⁵"
       },
       {
         "id": "2.6-085",
@@ -28139,7 +28319,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": "thau⁵³在原书附脚注①：thau⁵³是tha⁵³“不、别”的完成体形式。下同。 原图注①：thau⁵³ 是 tha⁵³ “不、别”的完成体形式，下同。"
+        "reviewNote": "thau⁵³在原书附脚注①：thau⁵³是tha⁵³“不、别”的完成体形式。下同。 原图注①：thau⁵³ 是 tha⁵³ “不、别”的完成体形式，下同。",
+        "originalPinyin": "je²¹ le⁵³ po⁵⁵ tao⁵³ ai⁵⁵le⁵³ go³⁵ do²¹ jiu⁵⁵ han³⁵ soe³⁵ liao⁵³"
       },
       {
         "id": "2.6-086",
@@ -28181,7 +28362,8 @@
           }
         ],
         "reviewStatus": "已第二遍原图对读；个别疑点见注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ko⁵³ go³⁵ ya³⁵ mo²¹ soe³⁵ liao⁵³"
       }
     ],
     "pdfPages": "125–139",
@@ -49422,7 +49604,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ni⁵⁵ hu³⁵ni⁵⁵ bi³⁵zi⁵⁵ka²¹ o⁵⁵"
       },
       {
         "id": "2.13-002",
@@ -49459,7 +49642,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "san⁵⁵go⁵⁵ can³⁵ de⁵⁵ bi³⁵zi⁵⁵sa²¹ o⁵⁵"
       },
       {
         "id": "2.13-003",
@@ -49496,7 +49680,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "bi³⁵zi⁵⁵ san⁵⁵go⁵⁵ na⁵⁵ zoe⁵⁵ can³⁵"
       },
       {
         "id": "2.13-004",
@@ -49548,7 +49733,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "can³⁵ xi⁵⁵ roe⁵³ tai³⁵ go³⁵ ta⁵³ a²¹ loe⁵⁵"
       },
       {
         "id": "2.13-005",
@@ -49580,7 +49766,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ni⁵⁵ hu³⁵ni⁵⁵ bi³⁵zi⁵⁵ka²¹ o⁵⁵"
       },
       {
         "id": "2.13-006",
@@ -49617,7 +49804,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ka²¹ko²¹ qe⁵⁵li²¹ le⁵³ bei³⁵zi⁵⁵ a²¹"
       },
       {
         "id": "2.13-007",
@@ -49664,7 +49852,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": "跨页，音形在190页，gloss和译文在191页。"
+        "reviewNote": "跨页，音形在190页，gloss和译文在191页。",
+        "originalPinyin": "bei³⁵zi⁵⁵ a²¹ moe⁵⁵ ni³⁵ do²¹ a²¹ o⁵⁵"
       },
       {
         "id": "2.13-008",
@@ -49701,7 +49890,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "bei³⁵zi⁵⁵ ka²¹mon²¹ ni³⁵ ta⁵³ ta⁵³"
       },
       {
         "id": "2.13-009",
@@ -49743,7 +49933,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ pu³⁵ta⁵⁵ te³⁵ le⁵³ pu³⁵ta⁵⁵ me³⁵"
       },
       {
         "id": "2.13-010",
@@ -49785,7 +49976,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "pu³⁵ta⁵⁵ me³⁵ mo²¹ qin⁵⁵ren²¹ je²¹ o⁵⁵"
       },
       {
         "id": "2.13-011",
@@ -49817,7 +50009,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "qin⁵⁵ren²¹ go³⁵ jiu⁵⁵ mao²¹zu⁵³xi²¹"
       },
       {
         "id": "2.13-012",
@@ -49859,7 +50052,8 @@
           }
         ],
         "reviewStatus": "原图第二遍对读，个别细微字形待专项复核",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ xiao³⁵ bi³⁵zi⁵⁵ka²¹ ne⁵³ cai³⁵ ka⁵⁵"
       }
     ],
     "independentTranslation": [
@@ -49943,7 +50137,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "biu³⁵ zi³⁵ nga³⁵ ne⁵⁵ a²¹ne⁵³ ni³⁵ ta⁵³ bu³⁵hu⁵⁵"
       },
       {
         "id": "2.14-002",
@@ -50015,7 +50210,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ go³⁵ no⁵³ lon⁵³ ci⁵⁵hhoe⁵⁵ loe⁵⁵ biu³⁵ nao⁵³ lon⁵³ liao⁵³ wo⁵⁵ a²¹ne⁵³"
       },
       {
         "id": "2.14-003",
@@ -50107,7 +50303,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": "原书拼音 ho³⁵ 与记音 xo²¹ 调值不一致，暂保留原值。"
+        "reviewNote": "原书拼音 ho³⁵ 与记音 xo²¹ 调值不一致，暂保留原值。",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ ne⁵⁵ a²¹ne⁵³ ni³⁵ go³⁵ no⁵³ ho²¹ ci⁵⁵hhoe⁵⁵ loe⁵⁵ moe⁵⁵ biu³⁵ nao⁵³ ho³⁵ liao⁵³ moe⁵⁵"
       },
       {
         "id": "2.14-004",
@@ -50174,7 +50371,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ la²¹te³⁵ ne⁵⁵ poe³⁵lu⁵³ nga³⁵ a²¹ne⁵³ ne⁵⁵ li⁵⁵ko⁵⁵lo⁵⁵ ri³⁵ri⁵⁵ liao⁵³ wo⁵⁵"
       },
       {
         "id": "2.14-005",
@@ -50206,7 +50404,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ a²¹ne⁵³ la⁵⁵"
       },
       {
         "id": "2.14-006",
@@ -50268,7 +50467,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ ne⁵⁵ a²¹ne⁵³ ni³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ moe⁵⁵ si⁵⁵oe²¹si³⁵si⁵⁵ loe⁵⁵"
       },
       {
         "id": "2.14-007",
@@ -50335,7 +50535,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ qin⁵³mo²¹ ni³⁵ ne⁵⁵ je³⁵ yo⁵⁵ je³⁵ ta²¹ le⁵⁵ a³⁵-i³⁵ yo⁵⁵"
       },
       {
         "id": "2.14-008",
@@ -50367,7 +50568,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ a²¹ne⁵³ la⁵⁵"
       },
       {
         "id": "2.14-009",
@@ -50409,7 +50611,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ si⁵⁵oe²¹si³⁵si⁵⁵ ta⁵⁵de⁵⁵ne²¹ nao⁵³ moe⁵⁵"
       },
       {
         "id": "2.14-010",
@@ -50496,7 +50699,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ go³⁵ si³⁵koe⁵⁵no⁵³hon⁵⁵ bo⁵⁵ zoe³⁵ po⁵⁵ do⁵⁵ tai³⁵ ne⁵⁵ loe⁵⁵ zoe³⁵ po⁵⁵ bo⁵⁵ mo²¹"
       },
       {
         "id": "2.14-011",
@@ -50603,7 +50807,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ go³⁵ si³⁵koe⁵⁵no⁵³hon⁵⁵ bo⁵⁵ sa²¹ po⁵⁵ do⁵⁵ tai³⁵ ne⁵⁵ loe⁵⁵ sa²¹ po⁵⁵ bo⁵⁵ mo²¹ nga³⁵ ne⁵⁵ a²¹ne⁵³ la⁵⁵"
       },
       {
         "id": "2.14-012",
@@ -50630,7 +50835,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ a²¹ne⁵³"
       },
       {
         "id": "2.14-013",
@@ -50697,7 +50903,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ go³⁵ ai⁵⁵di⁵⁵ mei²¹ren²¹ ne⁵⁵ zi⁵³ ko⁵⁵ba⁵⁵ ga³⁵ ca⁵⁵ liao⁵³ loe⁵⁵"
       },
       {
         "id": "2.14-014",
@@ -50749,7 +50956,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": "原书上下行声调不一致，保留各自原值。"
+        "reviewNote": "原书上下行声调不一致，保留各自原值。",
+        "originalPinyin": "ai⁵⁵moe⁵⁵ ni³⁵ go³⁵ ni³⁵ ne⁵⁵ ta⁵⁵de³⁵ne²¹ moe⁵⁵ si⁵⁵oe²¹si³⁵si⁵⁵"
       },
       {
         "id": "2.14-015",
@@ -50811,7 +51019,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ go³⁵ si³⁵koe⁵⁵no⁵³hon⁵⁵ bo⁵⁵ a²¹ bo⁵⁵ po⁵⁵ bo⁵⁵ mo²¹"
       },
       {
         "id": "2.14-016",
@@ -50873,7 +51082,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ go³⁵ qin⁵³mo²¹ si³⁵koe⁵⁵ ne⁵⁵ a²¹ne⁵³ a²¹ba⁵³ bo⁵⁵ do²¹-i³⁵ yo⁵⁵"
       },
       {
         "id": "2.14-017",
@@ -50920,7 +51130,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ a²¹ne⁵³ la⁵⁵ nga³⁵ ne⁵⁵ a²¹ne⁵³"
       },
       {
         "id": "2.14-018",
@@ -50987,7 +51198,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ go³⁵ qin⁵³mo²¹ si³⁵koe⁵⁵ ne⁵⁵ bi³⁵bi⁵⁵ ci⁵⁵ba⁵⁵de⁵³ bo⁵⁵ do²¹-i³⁵ yo⁵⁵"
       },
       {
         "id": "2.14-019",
@@ -51034,7 +51246,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ ne⁵⁵ si⁵⁵oe²¹si³⁵si⁵⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ moe⁵⁵"
       },
       {
         "id": "2.14-020",
@@ -51086,7 +51299,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³zoe²¹ go³⁵ ai⁵⁵le⁵³ ngan³⁵ le⁵³ ngan³⁵ man⁵⁵"
       },
       {
         "id": "2.14-021",
@@ -51113,7 +51327,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ a²¹ne⁵³"
       },
       {
         "id": "2.14-022",
@@ -51170,7 +51385,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ no⁵³te⁵³ ne⁵⁵ a²¹ne⁵³de⁵³ men⁵⁵ goe⁵³zoe²¹ ni³⁵ ho²¹le²¹ ho²¹le²¹"
       },
       {
         "id": "2.14-023",
@@ -51232,7 +51448,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ hon⁵³ bo⁵⁵ ne⁵⁵ xi⁵⁵ o⁵⁵ nga³⁵ ne⁵⁵ a²¹ne⁵³ la⁵⁵"
       },
       {
         "id": "2.14-024",
@@ -51269,7 +51486,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ ne⁵⁵ ta⁵⁵te⁵⁵ne²¹ moe⁵⁵"
       },
       {
         "id": "2.14-025",
@@ -51331,7 +51549,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "go³⁵ go³⁵ qin⁵³mo²¹ no⁵³ cu⁵⁵ on²¹ doe²¹ guan³⁵ o⁵⁵ a²¹ne⁵³"
       },
       {
         "id": "2.14-026",
@@ -51383,7 +51602,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ a²¹ne⁵³ ni³⁵ ta⁵⁵de⁵⁵ne²¹ go³⁵ soe⁵⁵oe²¹si³⁵si⁵⁵ mo²¹"
       },
       {
         "id": "2.14-027",
@@ -51445,7 +51665,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ go³⁵ qin⁵³mo²¹ no⁵³ cu⁵⁵ on²¹-i³⁵ yo⁵⁵ o⁵⁵ a²¹ne⁵³"
       },
       {
         "id": "2.14-028",
@@ -51497,7 +51718,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵ nga³⁵ go³⁵ qin⁵³mo²¹ ne⁵³ ka⁵⁵-i³⁵ yo⁵⁵ a²¹ne⁵³"
       },
       {
         "id": "2.14-029",
@@ -51554,7 +51776,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ ai⁵⁵le⁵³ ta⁵⁵de⁵⁵ne²¹ moe⁵⁵ ni³⁵ do²¹ go³⁵ si⁵⁵le²¹ le⁵³"
       },
       {
         "id": "2.14-030",
@@ -51641,7 +51864,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "lon⁵³ zu⁵⁵ le⁵⁵ ni³⁵ go³⁵ hhoe⁵⁵coe⁵⁵ pa⁵⁵ton⁵⁵ be³⁵ ca³⁵ ne⁵⁵ o⁵⁵ a²¹ne⁵³ ai⁵⁵le⁵³ goe⁵³zoe²¹ go³⁵"
       },
       {
         "id": "2.14-031",
@@ -51713,7 +51937,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ go³⁵ qin⁵³mo²¹ sa²¹ li²¹ cu²¹ le⁵³ goe⁵³zoe²¹ nao⁵³ bo⁵⁵ xi⁵⁵le⁵⁵ yo⁵⁵"
       },
       {
         "id": "2.14-032",
@@ -51785,7 +52010,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ go³⁵ qin⁵³mo²¹ la⁵³hhii³⁵ cu²¹ le⁵³ goe⁵³zoe²¹ nao⁵³ bo⁵⁵ a³⁵lon⁵⁵-i³⁵ yo⁵⁵"
       },
       {
         "id": "2.14-033",
@@ -51867,7 +52093,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ goe⁵³zoe²¹ ne⁵⁵ lao⁵³ di⁵⁵ sao³⁵ di⁵⁵ moe⁵⁵ hu³⁵ni⁵⁵ xin⁵⁵kii⁵³ le⁵³ na⁵⁵ ma⁵⁵ moe⁵⁵"
       },
       {
         "id": "2.14-034",
@@ -51914,7 +52141,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ a²¹ne⁵³ da⁵³zoe²¹ da⁵⁵ man⁵⁵ a²¹ne⁵³"
       },
       {
         "id": "2.14-035",
@@ -52001,7 +52229,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ ne⁵⁵ a²¹ne⁵³ loe⁵⁵ za³⁵qi⁵⁵ cu²¹ moe⁵⁵ xin⁵⁵si⁵⁵ tai³⁵ yo⁵⁵ nga³⁵ ne⁵⁵ a²¹ne⁵³ la⁵⁵"
       },
       {
         "id": "2.14-036",
@@ -52038,7 +52267,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ no⁵³te⁵³ ne⁵⁵ a²¹ne⁵³de⁵³ moe⁵⁵"
       },
       {
         "id": "2.14-037",
@@ -52115,7 +52345,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ go³⁵ go³⁵ ai⁵⁵le⁵³ xin⁵⁵si⁵⁵ ho²¹le²¹ ni³⁵ hen³⁵ man⁵⁵ nga³⁵ ne⁵⁵ a²¹ne⁵³ la⁵⁵"
       },
       {
         "id": "2.14-038",
@@ -52152,7 +52383,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ go³⁵"
       },
       {
         "id": "2.14-039",
@@ -52194,7 +52426,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "qin⁵³mo²¹ si³⁵koe⁵⁵no⁵³hon⁵⁵ bo⁵⁵ zu³⁵ bo⁵⁵-i³⁵ yo⁵⁵"
       },
       {
         "id": "2.14-040",
@@ -52251,7 +52484,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ ta⁵⁵de⁵⁵ne²¹ go³⁵ qin⁵³mo²¹ si³⁵koe⁵⁵no⁵³hon⁵⁵ guan³⁵si⁵⁵-i³⁵ yo⁵⁵ a²¹ne⁵³"
       },
       {
         "id": "2.14-041",
@@ -52333,7 +52567,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ ne⁵⁵ a²¹ne⁵³ la⁵⁵ ai⁵⁵le⁵³ nga³⁵ do²¹ ne⁵⁵ poe⁵⁵ so⁵⁵ ne⁵³ le⁵³ moe⁵⁵"
       },
       {
         "id": "2.14-042",
@@ -52425,7 +52660,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ a²¹ne⁵³ nao⁵³ bo⁵⁵ a³⁵ di⁵⁵ hu⁵³ ai⁵⁵le⁵³ nga³⁵ do²¹ ne⁵⁵ poe⁵⁵ so⁵⁵ ne⁵³ le⁵³ moe⁵⁵"
       },
       {
         "id": "2.14-043",
@@ -52482,7 +52718,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ a²¹ne⁵³ ba⁵³ di⁵⁵ hu⁵³ nga³⁵ ne⁵⁵ a²¹ne⁵³ la⁵⁵"
       },
       {
         "id": "2.14-044",
@@ -52554,7 +52791,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ do²¹ no⁵³ lon⁵³ ci⁵⁵hhoe⁵⁵ men⁵⁵ biu³⁵ nao⁵³ lon⁵³ liao⁵³ loe⁵⁵"
       },
       {
         "id": "2.14-045",
@@ -52611,7 +52849,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ ne⁵⁵ a²¹ne⁵³ men⁵⁵ yi⁵⁵ ku⁵³ liao⁵³ loe⁵⁵"
       },
       {
         "id": "2.14-046",
@@ -52708,7 +52947,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ go³⁵ si⁵⁵ba⁵⁵kii³⁵ ho²¹le²¹ poe⁵⁵ poe⁵⁵ ni³⁵ go³⁵ si³⁵koe⁵⁵no⁵³hon⁵⁵ bo⁵⁵ no⁵³ poe⁵⁵ liao⁵³ wo⁵⁵ a²¹ne⁵³ la⁵⁵"
       },
       {
         "id": "2.14-047",
@@ -52775,7 +53015,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ a²¹ne⁵³ ni³⁵ go³⁵ si³⁵koe⁵⁵no⁵³hon⁵⁵ bo⁵⁵ no⁵³ boe⁵³ liao⁵³ wo⁵⁵"
       },
       {
         "id": "2.14-048",
@@ -52807,7 +53048,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ a²¹ne⁵³ la⁵⁵"
       },
       {
         "id": "2.14-049",
@@ -52869,7 +53111,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": "原书上下行声调不一致，保留各自原值。"
+        "reviewNote": "原书上下行声调不一致，保留各自原值。",
+        "originalPinyin": "ne²¹ ni³⁵ nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ye²¹ ni³⁵ ta⁵³ bu²¹hu³⁵ ta⁵⁵de⁵⁵ne²¹"
       },
       {
         "id": "2.14-050",
@@ -52936,7 +53179,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ye²¹ ni³⁵ nao⁵³ ye⁵³ nao⁵³ lan⁵⁵ bu³⁵ si³⁵"
       },
       {
         "id": "2.14-051",
@@ -52968,7 +53212,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ye²¹"
       },
       {
         "id": "2.14-052",
@@ -53020,7 +53265,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ ne⁵⁵ a²¹ne⁵³ a²¹ba⁵³ ni³⁵ wo²¹ wo⁵³ le⁵³"
       },
       {
         "id": "2.14-053",
@@ -53092,7 +53338,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "boe⁵³ boe⁵³ le⁵³ ai⁵⁵le⁵³ go³⁵ go³⁵ si³⁵koe⁵⁵no⁵³hon⁵⁵ bo⁵⁵ no⁵³ wo⁵³ liao⁵³ wo⁵⁵"
       },
       {
         "id": "2.14-054",
@@ -53154,7 +53401,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ye²¹ ai⁵⁵le⁵³ ni³⁵ do²¹ nga³⁵ ne⁵⁵ si³⁵"
       },
       {
         "id": "2.14-055",
@@ -53206,7 +53454,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ji²¹ti²¹koe⁵⁵ ga²¹ xi⁵⁵ye²¹ le⁵³ xi⁵⁵ye²¹ bo⁵⁵ xi⁵⁵ o⁵⁵"
       },
       {
         "id": "2.14-056",
@@ -53273,7 +53522,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ye²¹ ni³⁵ nga³⁵ a²¹ne⁵³ da⁵³ha²¹ a⁵⁵zi²¹ ta⁵⁵coe²¹ le⁵³"
       },
       {
         "id": "2.14-057",
@@ -53325,7 +53575,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "a⁵⁵zi²¹ le⁵³ do⁵⁵ ya⁵⁵ nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ye²¹"
       },
       {
         "id": "2.14-058",
@@ -53382,7 +53633,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ye²¹ lai⁵³ ye⁵³ le⁵³ nao⁵³ lan⁵⁵"
       },
       {
         "id": "2.14-059",
@@ -53409,7 +53661,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ qin⁵³mo²¹"
       },
       {
         "id": "2.14-060",
@@ -53446,7 +53699,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "si³⁵koe⁵⁵no⁵³hon⁵⁵ bo⁵⁵ no⁵³ po⁵⁵-i³⁵ yo⁵⁵"
       },
       {
         "id": "2.14-061",
@@ -53508,7 +53762,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ a²¹ne⁵³ loe⁵⁵ ni³⁵ bo⁵⁵ na⁵⁵ ye²¹ do⁵⁵ ri⁵⁵ hii⁵⁵coe⁵⁵"
       },
       {
         "id": "2.14-062",
@@ -53530,7 +53785,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ta⁵⁵de⁵⁵ne²¹ ye²¹"
       },
       {
         "id": "2.14-063",
@@ -53567,7 +53823,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ya⁵⁵"
       },
       {
         "id": "2.14-064",
@@ -53609,7 +53866,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ nga³⁵ ne⁵⁵ a²¹ne⁵³ da⁵³ha²¹ moe⁵⁵"
       },
       {
         "id": "2.14-065",
@@ -53661,7 +53919,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "li²¹kai⁵⁵ liao⁵³ moe⁵⁵ ni³⁵ si³⁵koe⁵⁵no⁵³hon⁵⁵ ye⁵³ liao⁵³ moe⁵⁵"
       },
       {
         "id": "2.14-066",
@@ -53733,7 +53992,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ sa²¹ li²¹ cu²¹ le⁵³ ni³⁵ goe⁵³zoe²¹ nao⁵³ bo⁵⁵ xe³⁵ xi⁵⁵ bo⁵⁵"
       },
       {
         "id": "2.14-067",
@@ -53770,7 +54030,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ya⁵⁵"
       },
       {
         "id": "2.14-068",
@@ -53832,7 +54093,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ la⁵³hhii³⁵ cu²¹ le⁵³ goe⁵³zoe²¹ xe³⁵ ye⁵³ bo⁵⁵ do⁵⁵ loe⁵⁵"
       },
       {
         "id": "2.14-069",
@@ -53864,7 +54126,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ya⁵⁵"
       },
       {
         "id": "2.14-070",
@@ -53916,7 +54179,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ go³⁵ goe⁵³ si³⁵koe⁵⁵ ye⁵³ liao⁵³ men⁵⁵ ta⁵⁵de⁵⁵ne²¹"
       },
       {
         "id": "2.14-071",
@@ -53959,7 +54223,8 @@
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
         "reviewNote": "原书记音为 txhi³⁵，上行拼音为 qi³⁵；txh 未见于本书声母表，可能涉及借词或排印，原因及规范 IPA 均待核。",
-        "ipaStatus": "部分记音待规范"
+        "ipaStatus": "部分记音待规范",
+        "originalPinyin": "ni³⁵ hua³⁵hu³⁵qi³⁵tian⁵⁵ mo²¹ ni³⁵ ne⁵³ ka⁵⁵-i³⁵"
       },
       {
         "id": "2.14-072",
@@ -53986,7 +54251,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ hua²¹ta²¹xin⁵⁵wan³⁵ mo²¹"
       },
       {
         "id": "2.14-073",
@@ -54023,7 +54289,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": "原书上下行声调不一致，保留各自原值。"
+        "reviewNote": "原书上下行声调不一致，保留各自原值。",
+        "originalPinyin": "ne⁵³ ka⁵⁵-i³⁵ yo⁵⁵ ta⁵⁵de⁵⁵ne²¹ ye²¹"
       },
       {
         "id": "2.14-074",
@@ -54090,7 +54357,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ye²¹ ni³⁵ ne⁵⁵ a²¹ne⁵³ go³⁵ qin⁵³mo²¹ guan³⁵si⁵⁵-i³⁵ yo⁵⁵"
       },
       {
         "id": "2.14-075",
@@ -54187,7 +54455,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ni³⁵ wo⁵³ wo⁵³ le⁵³ boe⁵³ boe⁵³ le⁵³ la²¹te³⁵poe³⁵lu⁵³ moe⁵⁵ ai⁵⁵le⁵³ ni³⁵ si³⁵koe⁵⁵ ne⁵⁵ no⁵³ zi³⁵ liao⁵³ wo⁵⁵"
       },
       {
         "id": "2.14-076",
@@ -54219,7 +54488,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "nga³⁵ ne⁵⁵ ta⁵⁵de⁵⁵ne²¹ ya⁵⁵"
       },
       {
         "id": "2.14-077",
@@ -54321,7 +54591,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ ne⁵⁵ poe⁵⁵ so⁵⁵ ne⁵³ liao⁵³ moe⁵⁵ ni³⁵ do²¹ ni³⁵ ne⁵⁵ a²¹ne⁵³ bo⁵⁵ za³⁵ di⁵⁵ do⁵⁵ loe⁵⁵"
       },
       {
         "id": "2.14-078",
@@ -54373,7 +54644,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ai⁵⁵le⁵³ ni³⁵ ne⁵⁵ poe⁵⁵ so⁵⁵ ne⁵³ liao⁵³ moe⁵⁵"
       },
       {
         "id": "2.14-079",
@@ -54430,7 +54702,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": "原书上下行声调不一致，保留各自原值。"
+        "reviewNote": "原书上下行声调不一致，保留各自原值。",
+        "originalPinyin": "ni³⁵ go³⁵ ni³⁵ ne⁵⁵ a²¹ne⁵³ nao⁵⁵ ba⁵³ di⁵⁵ do⁵⁵"
       },
       {
         "id": "2.14-080",
@@ -54452,7 +54725,8 @@
           }
         ],
         "reviewStatus": "第二遍逐页对读，存疑项详见备注",
-        "reviewNote": ""
+        "reviewNote": "",
+        "originalPinyin": "ta⁵⁵de⁵⁵ne²¹ ya⁵⁵"
       }
     ],
     "independentTranslation": [
