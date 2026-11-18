@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Charis SIL";
+  src: url("fonts/Charis-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+.ipa, .ipa td {
+  font-family: "Charis SIL", serif;
+}

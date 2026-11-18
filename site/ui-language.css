@@ -28,7 +28,7 @@ html[lang="en"] .filters select{max-width:100%}html[lang="en"] button{overflow-w
 @font-face{font-family:"Charis SIL";src:url("fonts/Charis-Bold.woff2") format("woff2");font-style:normal;font-weight:700;font-display:swap}
 :root{--tujia-font:"Gentium Plus","Charis SIL",Georgia,serif;--ipa-font:"Charis SIL",Charis,"Gentium Plus",serif}
 .tujia-ui,.brand small.tujia-ui,.word,.notation-form,.example-transcription,.lyric-tujia,.survey-spelling,[lang="tji"],[data-script="transliteration"],.external-text-block details>p,.external-glosses>div>span:first-child,textarea[data-notation-field="ye"],textarea[data-notation-field="accent"],textarea[data-notation-field="brassett"]{font-family:var(--tujia-font);letter-spacing:normal;font-kerning:normal}
-.word-ipa,.external-ipa,.survey-ipa,.example .form,.np-cell,[data-script="ipa"],textarea[data-notation-field="ipa"],.survey-spelling+p{font-family:var(--ipa-font);letter-spacing:normal;font-kerning:normal}
+.ipa,.ipa td,.word-ipa,.external-ipa,.survey-ipa,.example .form,.np-cell,[data-script="ipa"],textarea[data-notation-field="ipa"],.survey-spelling+p{font-family:var(--ipa-font);letter-spacing:normal;font-kerning:normal}
 /* An unconverted dictionary headword and legacy inline Georgia declarations
    must not override the semantic notation kind. */
 .word[data-script="ipa"],h1[data-script="ipa"]{font-family:var(--ipa-font)!important}

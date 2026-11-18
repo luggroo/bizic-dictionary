@@ -102,9 +102,10 @@ def body_case(cid,data,en=False,start=1,ui_language=None):
 def document(body,lang,title,canonical=None,ui_language=None):
  meta=''
  if canonical:meta='<link rel="canonical" href="https://tujia.biz/'+canonical+'"><link rel="alternate" hreflang="zh" href="https://tujia.biz/translation-runs.html"><link rel="alternate" hreflang="en" href="https://tujia.biz/translation-runs-en.html">'
+ font_css=('' if canonical else '../')+'gloss-fonts.css'
  ui_script='<script defer src="/translation-runs-language.js"></script>' if ui_language else ''
  ui_attr=' data-ui-gloss-language="'+ui_language+'"' if ui_language else ''
- return '<!doctype html><html lang="'+lang+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+title+' · 毕兹学堂</title>'+meta+'<style>'+CSS+'</style>'+ui_script+'</head><body'+ui_attr+'><main>'+body+'</main></body></html>'
+ return '<!doctype html><html lang="'+lang+'"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+title+' · 毕兹学堂</title>'+meta+'<style>'+CSS+'</style><link rel="stylesheet" href="'+font_css+'">'+ui_script+'</head><body'+ui_attr+'><main>'+body+'</main></body></html>'
 
 def build(only=None,html_only=False):
  if not html_only:from weasyprint import HTML
@@ -115,7 +116,7 @@ def build(only=None,html_only=False):
   page=OUT/(cid+'.html')
   if not (html_only and cid=='reverse-song'):page.write_text(document(body_case(cid,d,ui_language='zh'),'zh',TITLES[cid][0]+' · Gloss',ui_language='zh'))
   pdf=page.with_suffix('.pdf')
-  if not html_only:HTML(string=document(body_case(cid,d),'zh',TITLES[cid][0]+' · Gloss'),base_url=str(ROOT)).write_pdf(str(pdf))
+  if not html_only:HTML(string=document(body_case(cid,d),'zh',TITLES[cid][0]+' · Gloss'),base_url=page.as_uri()).write_pdf(str(pdf))
   manifest.append({'id':cid,'gloss_sha256':hashlib.sha256((RECORDS/cid/'gloss.json').read_bytes()).hexdigest(),'pdf':pdf.name,'pdf_sha256':hashlib.sha256(pdf.read_bytes()).hexdigest(),'clauses':len(d['clauses']),'target_units':sum(len(c['target_units']) for c in d['clauses']),'format':'source + aligned pinyin / IPA / gloss'})
  if only:return manifest
  for en in [False,True]:
