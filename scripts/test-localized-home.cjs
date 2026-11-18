@@ -5,6 +5,11 @@ const {chromium}=require('playwright');
 const root=path.resolve(process.argv[2]||path.join(__dirname,'../site'));
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript','.css':'text/css','.svg':'image/svg+xml','.woff2':'font/woff2'};
 const titles={zh:'土家语词典、语法与语料｜毕兹学堂',en:'Tujia Dictionary, Grammar & Texts | Bizic Academy 毕兹学堂'};
+const grammarLabels={
+ zh:['北部－龙山语法','北部－保靖厦语法','南部－泸溪语法'],
+ en:['Northern — Longshan grammar','Northern — Baojing Xia grammar','Southern — Luxi grammar']
+};
+const homeGrammarLabels=async page=>(await page.locator('#main [data-grammar-dialect]').allInnerTexts()).map(text=>text.trim().replace(/\s*→$/,''));
 const mount='/bizic-dictionary/';
 let server,base=process.env.BASE_URL;
 (async()=>{
@@ -38,7 +43,7 @@ let server,base=process.env.BASE_URL;
    assert.equal(await p.locator('link[hreflang="zh-CN"]').getAttribute('href'),'https://tujia.biz/');
    assert.equal(await p.locator('link[hreflang="x-default"]').getAttribute('href'),'https://tujia.biz/');
    const body=await p.locator('#main').innerText();
-   assert(body.includes(lang==='en'?'Northern Tujia grammar':'北部土家语语法'));
+   assert.deepEqual(await homeGrammarLabels(p),grammarLabels[lang],`all three ${lang} grammar entries appear in order without JavaScript`);
    assert(body.includes(lang==='en'?'Compatible AI tools must be able to run code and read the translation skill, dictionary and grammar materials.':'适用环境：能运行代码，并能读取翻译技能、词典和语法资料的 AI 工具。'));
    assert(await p.locator('.translation-callout').evaluate(e=>e.parentElement.lastElementChild===e));
    assert.equal(await p.locator('nav .nav-repo-link').getAttribute('href'),'/translation.html');
@@ -70,6 +75,7 @@ let server,base=process.env.BASE_URL;
    await p.selectOption('#ui-language',lang);assert.equal(await p.title(),titles[lang]);
    assert((await p.locator('.hero h1').innerText()).includes(lang==='en'?'Tujia Dictionary':'土家语词典'));
    assert.equal(await p.locator('#query').getAttribute('aria-label'),lang==='en'?'Search':'搜索');
+   assert.deepEqual(await homeGrammarLabels(p),grammarLabels[lang],`all three grammar entries update when switching to ${lang}`);
    assert.equal(await p.locator('.translation-requirement').innerText(),lang==='en'?'Compatible AI tools must be able to run code and read the translation skill, dictionary and grammar materials.':'适用环境：能运行代码，并能读取翻译技能、词典和语法资料的 AI 工具。');
    await p.setViewportSize({width:320,height:900});assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
    await screenshot(p,'home-'+lang+'-mobile');await p.setViewportSize({width:1280,height:900});
