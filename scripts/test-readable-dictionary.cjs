@@ -148,6 +148,17 @@ function inspectAllFiles() {
     const html=fs.readFileSync(path.join(root,'text/corpus',c.id+'.html'),'utf8');
     for(const key of ['title','text','ipa','annotation','source'])if(c[key])assert(html.includes(escape(c[key])),c.id+': retain '+key);
   }
+  const books=JSON.parse(fs.readFileSync(path.join(root,'annotated-books.json'),'utf8'));
+  const bookList=fs.readdirSync(path.join(root,'text/annotated')).filter(n=>/^\d+\.html$/.test(n)).map(n=>fs.readFileSync(path.join(root,'text/annotated',n),'utf8')).join('');
+  for(const book of books){
+    const html=fs.readFileSync(path.join(root,'text/annotated',book.id+'.html'),'utf8');
+    assert(bookList.includes(escape(book.id)),book.id+': included in text directory');
+    assert(html.includes(escape(book.blocks[0].id))&&html.includes(escape(book.blocks.at(-1).id)),book.id+': first and last fragments are present');
+    if(book.blocks.some(b=>b.originalPinyin||b.pinyin))assert(html.includes('原书拼音'),book.id+': source spelling shown');
+    if(book.independentTranslation?.length)assert(html.includes('原书全文汉译'),book.id+': complete translation shown');
+  }
+  const eye=fs.readFileSync(path.join(root,'text/annotated/xu-tujia-annotated-2-2-excerpt.html'),'utf8');
+  assert(eye.includes('眼睛')&&eye.includes('鼻子'),'corrected meaning and original error remain visible');
   for(const name of JSON.parse(fs.readFileSync(path.join(root,'yubao-manifest.json'),'utf8'))) {
     if(!/^yubao-(60757|60824)-\d+\.json$/.test(name))continue;
     const part=JSON.parse(fs.readFileSync(path.join(root,name),'utf8'));
