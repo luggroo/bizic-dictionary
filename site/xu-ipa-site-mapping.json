@@ -394,12 +394,22 @@
       "policy": "以原书 IPA 行声调为准",
       "result": "28处现录 IPA 声调均与原图 IPA 行一致，全部保留"
     },
-    "remainingForImageReview": {}
+    "remainingForImageReview": {},
+    "supplement": {
+      "chapters": "2.1–2.4",
+      "imageTranscribedBlocks": 364,
+      "corrections": {
+        "oe_vs_ie": 326,
+        "ou_vs_iu": 10,
+        "ii_vs_i": 7
+      },
+      "totalBlocksWithOriginalPinyin": 1032
+    }
   },
   "restrictions": [
     "转换本书音形，不以其他来源的同义词音形替换。",
     "零声母 /e/ 写 e；辅音后 /e/ 写 ie；/ɨe/ 写 e；辅音后 /e/ 写 ie，/ɨe/ 写 e；IPA 保留原音形。",
     "两行调号不一致时，以原书 IPA 行为准；本站拼音使用相应调类。",
-    "原书拼音仅供复核，不用于上传网站语料。"
+    "原书拼音单独展示；本站拼音由原书 IPA 转换。"
   ]
 }
