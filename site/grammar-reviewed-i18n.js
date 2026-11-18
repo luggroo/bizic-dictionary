@@ -2003,3 +2003,11 @@ Object.assign(UI_TRANSLATIONS,{"即时指令 DIR.IMM":"Immediate directive DIR.I
 
 // Li Qiqun et al. (2021) dictionary citation for ku.
 Object.assign(UI_TRANSLATIONS,{"，北京：商务印书馆，/ku⁵⁵/助词条。":", Beijing: The Commercial Press, entry /ku⁵⁵/ (particle)."});
+
+
+// +i as an andative "go" form in the Northern Tujia predicate overview.
+Object.assign(UI_TRANSLATIONS,{
+  "去向／离心 AND":"Andative / go-direction AND",
+  "表示“去做”；如/kai²⁴/“去吃／要去吃”，也可表达未然、预期意义":"Marks ‘go and do’; for example /kai²⁴/ ‘go eat / be going to eat’; it can also express irrealis or prospective meaning",
+  "/i/可以表示“去做”的离心方向，也可表达未然、预期意义；它常与前一音节的韵部结合，引起韵母变化。":"/i/ can mark the andative meaning ‘go and do’, and can also express irrealis or prospective meaning; it often fuses with the preceding rime and changes the vowel."
+});
