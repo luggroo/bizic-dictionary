@@ -74,7 +74,7 @@ async function main(){
   await page.locator('.grammar-toc [data-chapter="302"]').click();
   await page.waitForFunction(()=>state.grammarDialect==='xiaren'&&state.chapter==='302'&&document.querySelector('.grammar-reading-title'));
   assert.equal(await page.locator('.grammar-toc-wrap').getAttribute('data-mobile-expanded'),'false');
-  await page.locator('.grammar-toc-toggle').click();
+  if(await page.locator('.grammar-toc-wrap').getAttribute('data-mobile-expanded')!=='true')await page.locator('.grammar-toc-toggle').click();
   await page.locator('.grammar-toc-sections a[href="#grammar/xiaren/302/2"]').click();
   await page.waitForFunction(()=>state.grammarDialect==='xiaren'&&state.grammarSection==='302.2');
   assert.equal(await page.locator('.grammar-toc-wrap').getAttribute('data-mobile-expanded'),'false');
@@ -92,10 +92,10 @@ async function main(){
   await page.locator('.display-settings > summary').click();
   // Select a different chapter and its relation-marking section through the
   // mobile menu, then verify the exact URL and persistence on reload.
-  await page.locator('.grammar-toc-toggle').click();
+  if(await page.locator('.grammar-toc-wrap').getAttribute('data-mobile-expanded')!=='true')await page.locator('.grammar-toc-toggle').click();
   await page.locator('.grammar-toc [data-chapter="303"]').click();
   await page.waitForFunction(()=>state.chapter==='303'&&state.grammarDialect==='xiaren');
-  await page.locator('.grammar-toc-toggle').click();
+  if(await page.locator('.grammar-toc-wrap').getAttribute('data-mobile-expanded')!=='true')await page.locator('.grammar-toc-toggle').click();
   await page.locator('.grammar-toc-sections a[href="#grammar/xiaren/303/5"]').click();
   await page.waitForFunction(()=>state.grammarSection==='303.5');
   assert.equal(await page.evaluate(()=>location.hash),'#grammar/xiaren/303/5');
