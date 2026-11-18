@@ -9,7 +9,7 @@ const YUBAO_LUXI_CORRECTIONS={
  '2168':{original:'lɨ21tɕi21',corrected:'li21tɕi21',note:'原记音 lɨ²¹tɕi²¹；据录音，首音节校订为 li²¹。'}
 };
 function surveyWordCorrection(raw,point,serial){
- const correction=point==='60824'?YUBAO_LUXI_CORRECTIONS[serial]:null;
+ const correction=point==='60824'?YUBAO_LUXI_CORRECTIONS[serial]:point==='60757'&&serial==='2355'?{original:'pi24tsɿ33ka21',corrected:'pi24tsɿ33kha21',note:'原记音 pi²⁴tsɿ³³ka²¹；末音节声母校订为送气音 [kʰ]。'}:null;
  return correction&&raw.normalize('NFC')===correction.original.normalize('NFC')?correction:null;
 }
 function surveyIPA(raw,point){
@@ -48,6 +48,16 @@ const YUBAO_PARALLEL_FORMS={
  'yubao-60756-v-0739':['tshaŋ33kɔ33','kɔ35tshaŋ33'],
  'yubao-60756-v-0370':['miaŋ33ʑi33','phau33tsɿ33']
 };
+// Survey prompts name a category; these entries name particular peoples.
+const YUBAO_ETHNONYM_GLOSSES={
+ '60757-2328':['土家族','Tujia ethnic group'],
+ '60756-2328':['土家族','Tujia ethnic group'],
+ '60823-2328':['土家族','Tujia ethnic group'],
+ '60757-2355':['土家族','Tujia ethnic group'],
+ '60756-2355':['苗族','Miao ethnic group'],
+ '60823-2355':['苗族','Miao ethnic group'],
+ '60824-2355':['苗族','Miao ethnic group']
+};
 async function loadYubao(data){
  const read=file=>typeof SiteRequest==='undefined'?fetch(file).then(r=>{if(!r.ok)throw Error('Survey data unavailable');return r.json()}):SiteRequest.json(file);
  const manifest=await read('yubao-manifest.json');
@@ -60,17 +70,20 @@ async function loadYubao(data){
   if(!sources.has(source)){
    data.sources.push({id:source,title:'中国语保 · '+p.location,url:'https://zhongguoyuyan.cn/point/'+p.point,dialect:p.dialect,locations:[p.location],topics:['词汇','例句'],kind:'调查资料',status:'已收录',path:'中国语言资源保护工程',text:'',dialectBasis:p.dialect+'土家语，'+p.location});sources.add(source);
   }
-  for(const [serial,zh,raw,annotation,alias] of p.words){
+  for(const [serial,originalZh,raw,annotation,alias] of p.words){
    const correction=surveyWordCorrection(raw,p.point,serial);
    const id=source+'-v-'+serial,ipa=surveyIPA(correction?.corrected||raw,p.point);
-   const en=english.serialOverrides[serial]||english.glosses[zh]||'';
+   const reviewed=YUBAO_ETHNONYM_GLOSSES[p.point+'-'+serial];
+   const zh=reviewed?.[0]||originalZh;
+   const en=reviewed?.[1]||english.serialOverrides[serial]||english.glosses[zh]||'';
    if(!en)throw Error('Missing survey English gloss: '+serial+' '+zh);
    const enTranslation={method:'editorial-translation',basis:'语保汉语调查词目与提示',evidence:english.evidence[p.point+'-'+serial]||[]};
    const a={id,source,term:raw,zh,en,originalEn:'',enTranslation,pos:'',scheme:'IPA',locator:'词汇 '+serial,alt:alias,notice:annotation,dialect:p.dialect,collection:'中国语保',category:'',language:'土家语'};
-   if(correction)a.correctedTerm=correction.corrected;
+   if(reviewed)a.originalZh=originalZh;
+   if(correction){a.correctedTerm=correction.corrected;if(p.point==='60757')a.notice=[annotation,correction.note].filter(Boolean).join('；')}
    const key=source+'|'+zh+'|'+ipa.replace(/\s/g,'');
    if(seen.has(key)){const w=seen.get(key);w.attestations.push(a);if(!w.glosses.includes(en))w.glosses.push(en);w.notations.ipa[0].attestationIds.push(id);data.wordAliases[id]=w.id;continue}
-   const parallel=YUBAO_PARALLEL_FORMS[id],rawForms=parallel||[raw],ipaForms=parallel?rawForms.map(form=>surveyIPA(form,p.point)):[ipa];
+   const parallel=YUBAO_PARALLEL_FORMS[id],rawForms=parallel||[correction?.corrected||raw],ipaForms=parallel?rawForms.map(form=>surveyIPA(form,p.point)):[ipa];
    const w={...a,term:ipaForms.join(' ~ '),location:p.location,attestations:[a],sourceIds:[source],schemes:['IPA'],dialects:[p.dialect],collections:['中国语保'],positions:[''],categories:[''],forms:parallel?[...new Set([...ipaForms,...rawForms,raw])]:[ipa,raw],glosses:[en],zhVariants:[zh],notations:{ye:[],brassett:[],accent:[],ipa:ipaForms.map(text=>({text,method:'source',profile:source,attestationIds:[id]}))}};
    if(parallel)w.parallelFormReview={method:'editorial-segmentation',parts:[...parallel]};
    if(correction)w.notations.ipa[0].method='editorial-correction';
