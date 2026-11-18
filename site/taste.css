@@ -166,8 +166,7 @@ aside>nav .nav-repo-link{display:flex;align-items:center;min-height:57px;padding
 aside>nav .nav-repo-link:hover{background:#edf1e9;color:#263a2b;text-decoration:none}
 aside>nav .nav-repo-link .nav-icon{width:18px;height:18px;flex:none}
 aside>nav .nav-repo-link .nav-external-icon{width:13px;height:13px;flex:none;margin-left:auto;opacity:.65}
-aside>nav .nav-repo-link .bilingual-label>.ui-secondary{font-size:14px;font-weight:500}
-@media(max-width:720px){aside>nav .nav-repo-link{flex:0 0 auto;white-space:nowrap;gap:5px;padding:9px 10px}aside>nav .nav-repo-link .nav-icon{display:none}aside>nav .nav-repo-link .bilingual-label>.ui-secondary{font-size:13px}aside>nav .nav-repo-link .nav-external-icon{width:11px;height:11px;margin-left:2px}}
+@media(max-width:720px){aside>nav .nav-repo-link{flex:0 0 auto;white-space:nowrap;gap:5px;padding:9px 10px}aside>nav .nav-repo-link .nav-icon{display:none}aside>nav .nav-repo-link .nav-external-icon{width:11px;height:11px;margin-left:2px}}
 
 .site-languages{display:flex;align-items:center;gap:12px}.site-languages [aria-current="true"]{font-weight:600}
 
