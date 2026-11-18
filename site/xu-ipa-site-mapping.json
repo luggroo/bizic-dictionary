@@ -1,0 +1,405 @@
+{
+  "scope": "《土家语语法标注文本》龙山资料；本书 IPA 到本站北部拼音的映射",
+  "source_observation": "PDF 19–22、52（印刷2–5、35）原图；原书使用 ɕ、tɕ、tɕh，先前识别成 ç 错误",
+  "onsets": [
+    {
+      "ipa": "p",
+      "site": "b"
+    },
+    {
+      "ipa": "pʰ",
+      "site": "p"
+    },
+    {
+      "ipa": "t",
+      "site": "d"
+    },
+    {
+      "ipa": "tʰ",
+      "site": "t"
+    },
+    {
+      "ipa": "k",
+      "site": "g"
+    },
+    {
+      "ipa": "kʰ",
+      "site": "k"
+    },
+    {
+      "ipa": "ts",
+      "site": "z"
+    },
+    {
+      "ipa": "tsʰ",
+      "site": "c"
+    },
+    {
+      "ipa": "tɕ",
+      "site": "j"
+    },
+    {
+      "ipa": "tɕʰ",
+      "site": "q"
+    },
+    {
+      "ipa": "m",
+      "site": "m"
+    },
+    {
+      "ipa": "n",
+      "site": "n"
+    },
+    {
+      "ipa": "ŋ",
+      "site": "ng"
+    },
+    {
+      "ipa": "l",
+      "site": "l"
+    },
+    {
+      "ipa": "s",
+      "site": "s"
+    },
+    {
+      "ipa": "z",
+      "site": "r"
+    },
+    {
+      "ipa": "ɕ",
+      "site": "x"
+    },
+    {
+      "ipa": "x",
+      "site": "h"
+    },
+    {
+      "ipa": "ɣ",
+      "site": "hx"
+    },
+    {
+      "ipa": "w",
+      "site": "w"
+    },
+    {
+      "ipa": "j",
+      "site": "y"
+    }
+  ],
+  "tones": [
+    {
+      "book": "55",
+      "ye": "x",
+      "accent_example": "ā",
+      "evidence": "/zi⁵⁵/ 做 → rix（w1932）"
+    },
+    {
+      "book": "53",
+      "ye": "v",
+      "accent_example": "à",
+      "evidence": "/tsi⁵³/ 猪 → ziv（w2694）"
+    },
+    {
+      "book": "35",
+      "ye": "f",
+      "accent_example": "á",
+      "evidence": "/ɣɨ³⁵/ 走 → hxif（w949）"
+    },
+    {
+      "book": "21",
+      "ye": "r",
+      "accent_example": "ǎ",
+      "evidence": "/za²¹/ 鸡 → rar（w1878）"
+    }
+  ],
+  "rimes": [
+    {
+      "ipa": "a",
+      "bookSpelling": "a",
+      "site": "a",
+      "condition": "/ŋa³⁵/ 我 → ngaf（w1585）"
+    },
+    {
+      "ipa": "i",
+      "bookSpelling": "i",
+      "site": "i",
+      "condition": "齿音后读舌尖元音，拼音仍写 i；/zi⁵⁵/ 做 → rix（w1932）"
+    },
+    {
+      "ipa": "u",
+      "bookSpelling": "u",
+      "site": "u",
+      "condition": "/pʰu⁵⁵/ 买 → pux（w1754）"
+    },
+    {
+      "ipa": "ɨ",
+      "bookSpelling": "ii",
+      "site": "i",
+      "condition": "书中 k、kʰ、x、ɣ 后；/ɣɨ³⁵/ 走 → hxif（w949）"
+    },
+    {
+      "ipa": "ai",
+      "bookSpelling": "ai",
+      "site": "ai",
+      "condition": "/tʰai³⁵/ 没有 → taif"
+    },
+    {
+      "ipa": "au",
+      "bookSpelling": "ao",
+      "site": "ao",
+      "condition": "/lau²¹/ 太阳 → laor（w1296）"
+    },
+    {
+      "ipa": "ei",
+      "bookSpelling": "ei",
+      "site": "ei",
+      "condition": "例如 /wei/ 写 wei；具体借词及音变逐词核对"
+    },
+    {
+      "ipa": "ia",
+      "bookSpelling": "ia",
+      "site": "ia",
+      "condition": "按本站基本拼写；j/q/x 等后继续按常用拼写处理"
+    },
+    {
+      "ipa": "iau",
+      "bookSpelling": "iao",
+      "site": "iao",
+      "condition": "例如来源 /tɕiau/ 写 jiao"
+    },
+    {
+      "ipa": "iu",
+      "bookSpelling": "iu",
+      "site": "iu",
+      "condition": "/piu³⁵/ 女儿 → biuf（w302）；零声母要写 y"
+    },
+    {
+      "ipa": "ua",
+      "bookSpelling": "ua",
+      "site": "ua",
+      "condition": "词首写 wa；与 w 声母避免重复"
+    },
+    {
+      "ipa": "uai",
+      "bookSpelling": "uai",
+      "site": "uai",
+      "condition": "词首写 wai"
+    },
+    {
+      "ipa": "uei",
+      "bookSpelling": "uei",
+      "site": "ui",
+      "condition": "词首写 wei；辅音后 ui"
+    },
+    {
+      "ipa": "e",
+      "bookSpelling": "e",
+      "site": "零声母 e；其他位置 ie",
+      "condition": "零声母 /e/ 写 e，与 /ɨe/ 合写；/tɕe³⁵/ 手 → jief；/me³⁵/ 吹 → mief。IPA 保留区别"
+    },
+    {
+      "ipa": "ɨe",
+      "bookSpelling": "oe",
+      "site": "e",
+      "condition": "/mɨe³⁵/ → mef；/tsʰɨe²¹/ → cer；/lɨe⁵⁵/ → lex。词典 liex 反映不同来源的音形"
+    },
+    {
+      "ipa": "o",
+      "bookSpelling": "o",
+      "site": "o",
+      "condition": "/kʰo⁵⁵pa⁵⁵/ 头 → koxbax（w1201）；不同声母及来源的 o / uo 音值需分开"
+    },
+    {
+      "ipa": "ĩ",
+      "bookSpelling": "in",
+      "site": "in",
+      "condition": "本站叶式拼写 ing → in；/pĩ³⁵/ → binf"
+    },
+    {
+      "ipa": "ẽ",
+      "bookSpelling": "en",
+      "site": "en",
+      "condition": "本站叶式拼写 eng → en"
+    },
+    {
+      "ipa": "ã",
+      "bookSpelling": "an",
+      "site": "ang",
+      "condition": "按本站本来源鼻化韵母规则；/xã³⁵/ → hangf"
+    },
+    {
+      "ipa": "ũ",
+      "bookSpelling": "on",
+      "site": "ong",
+      "condition": "/sũ³⁵/ 鱼 → songf（w2139）"
+    },
+    {
+      "ipa": "iã",
+      "bookSpelling": "ian",
+      "site": "ian（候选）",
+      "condition": "与本站北部鼻韵拼法对照；逐词验证"
+    },
+    {
+      "ipa": "uã",
+      "bookSpelling": "uan",
+      "site": "uan（候选）",
+      "condition": "与本站北部鼻韵拼法对照；逐词验证"
+    },
+    {
+      "ipa": "uẽ",
+      "bookSpelling": "uen",
+      "site": "un（候选）",
+      "condition": "与本站北部鼻韵拼法对照；逐词验证"
+    },
+    {
+      "ipa": "iũ",
+      "bookSpelling": "ion",
+      "site": "iong（候选）",
+      "condition": "/jiũ⁵⁵xu²¹/ 拥护 → yongxhur（w2605）；更多词需核"
+    },
+    {
+      "ipa": "ɨu",
+      "bookSpelling": "ou",
+      "site": "ou",
+      "condition": "原书拼音 ou；/sɨu³⁵/「是」→ souf（w2150）"
+    }
+  ],
+  "anchors": [
+    {
+      "ipa": "ɣɨ³⁵",
+      "gloss": "走",
+      "ye": "hxif",
+      "core": "hxi",
+      "dictionary_id": "w949"
+    },
+    {
+      "ipa": "ŋa³⁵",
+      "gloss": "我",
+      "ye": "ngaf",
+      "core": "nga",
+      "dictionary_id": "w1585"
+    },
+    {
+      "ipa": "tsʰa³⁵",
+      "gloss": "好",
+      "ye": "caf",
+      "core": "ca",
+      "dictionary_id": "w355"
+    },
+    {
+      "ipa": "tsi⁵³",
+      "gloss": "猪",
+      "ye": "ziv",
+      "core": "zi",
+      "dictionary_id": "w2694"
+    },
+    {
+      "ipa": "zi⁵⁵",
+      "gloss": "做",
+      "ye": "rix",
+      "core": "ri",
+      "dictionary_id": "w1932"
+    },
+    {
+      "ipa": "za²¹",
+      "gloss": "鸡",
+      "ye": "rar",
+      "core": "ra",
+      "dictionary_id": "w1878"
+    },
+    {
+      "ipa": "sũ³⁵",
+      "gloss": "鱼",
+      "ye": "songf",
+      "core": "song",
+      "dictionary_id": "w2139"
+    },
+    {
+      "ipa": "ɕe⁵³",
+      "gloss": "铁",
+      "ye": "xiev",
+      "core": "xie",
+      "dictionary_id": "w2490"
+    },
+    {
+      "ipa": "tɕe³⁵",
+      "gloss": "手",
+      "ye": "jief",
+      "core": "jie",
+      "dictionary_id": "w1019"
+    },
+    {
+      "ipa": "tʰe³⁵",
+      "gloss": "摘",
+      "ye": "tief",
+      "core": "tie",
+      "dictionary_id": "w2281"
+    },
+    {
+      "ipa": "me³⁵",
+      "gloss": "吹",
+      "ye": "mief",
+      "core": "mie",
+      "dictionary_id": "w1551"
+    },
+    {
+      "ipa": "mɨe³⁵",
+      "gloss": "天",
+      "ye": "mef",
+      "core": "me",
+      "dictionary_id": "w1489"
+    },
+    {
+      "ipa": "tsʰɨe²¹",
+      "gloss": "水",
+      "ye": "cer",
+      "core": "ce",
+      "dictionary_id": "w395"
+    },
+    {
+      "ipa": "ɣɨe⁵³",
+      "gloss": "猴",
+      "ye": "hxev",
+      "core": "hxe",
+      "dictionary_id": "w939"
+    },
+    {
+      "ipa": "piu³⁵",
+      "gloss": "女儿",
+      "ye": "biuf",
+      "core": "biu",
+      "dictionary_id": "w302"
+    },
+    {
+      "ipa": "kʰo⁵⁵pa⁵⁵",
+      "gloss": "头",
+      "ye": "koxbax",
+      "core": "ko ba",
+      "dictionary_id": "w1201"
+    }
+  ],
+  "sourceSpellingAudit": {
+    "scope": "2.5–2.14 中已有原拼音的词位；2.1–2.4 未纳入",
+    "alignedWordPairs": 5583,
+    "alignedSyllables": 7392,
+    "corrected": {
+      "oe_vs_ie": 638,
+      "ii_vs_i": 31,
+      "ii_vs_nasal_i": 4,
+      "ou_vs_iu": 41
+    },
+    "toneReview": {
+      "reviewed": 28,
+      "policy": "以原书 IPA 行声调为准",
+      "result": "28处现录 IPA 声调均与原图 IPA 行一致，全部保留"
+    },
+    "remainingForImageReview": {}
+  },
+  "restrictions": [
+    "转换本书音形，不以其他来源的同义词音形替换。",
+    "零声母 /e/ 写 e；辅音后 /e/ 写 ie；/ɨe/ 写 e；辅音后 /e/ 写 ie，/ɨe/ 写 e；IPA 保留原音形。",
+    "两行调号不一致时，以原书 IPA 行为准；本站拼音使用相应调类。",
+    "原书拼音仅供复核，不用于上传网站语料。"
+  ]
+}
