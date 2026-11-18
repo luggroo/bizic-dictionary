@@ -7,3 +7,6 @@
 .ipa, .ipa td {
   font-family: "Charis SIL", serif;
 }
+
+@font-face{font-family:"Site Tibetan";src:url("fonts/NotoSerifTibetan.woff") format("woff");font-style:normal;font-weight:400;font-display:swap;unicode-range:U+0F00-0FFF,U+200C-200D,U+25CC}
+:lang(bo),.tibetan{font-family:"Site Tibetan","Noto Serif Tibetan",serif}
