@@ -105,6 +105,14 @@ async function main(){
   await page.reload();
   await page.waitForFunction(()=>typeof state!=='undefined'&&state.grammarDialect==='xiaren'&&state.grammarSection==='303.5'&&[...document.querySelectorAll('.grammar-article .grammar-spelling[data-ye="nav"]')].some(x=>x.textContent==='nav'),{timeout:60000});
   assert.equal(await page.locator('.grammar-switch button[data-grammar-dialect="xiaren"]').getAttribute('aria-pressed'),'true');
+  // The generic grammar navigation always opens Longshan, even after visiting Xiaren.
+  // Explicit Xiaren links continue to open their requested section.
+  await page.locator('aside nav [data-view="grammar"]').dispatchEvent('click');
+  await page.waitForFunction(()=>state.grammarDialect==='north'&&state.chapter==='101');
+  assert.equal(await page.locator('.grammar-switch button[data-grammar-dialect="north"]').getAttribute('aria-pressed'),'true');
+  await page.goto(base+'?lang=zh#grammar/xiaren/303/5');
+  await page.waitForFunction(()=>typeof state!=='undefined'&&state.grammarDialect==='xiaren'&&state.grammarSection==='303.5');
+  assert.equal(await page.locator('.grammar-switch button[data-grammar-dialect="xiaren"]').getAttribute('aria-pressed'),'true');
   await page.locator('.grammar-switch button[data-grammar-dialect="south"]').click();
   await page.waitForFunction(()=>state.grammarDialect==='south'&&state.chapter==='201'&&document.querySelector('.grammar-reading-title'));
   assert.equal(await page.locator('.grammar-switch button[data-grammar-dialect="south"]').getAttribute('aria-pressed'),'true');

@@ -204,6 +204,11 @@ const root=path.resolve(__dirname,'../site');
     for(const word of accent.querySelectorAll('figure .grammar-word'))if(!word.querySelector('.grammar-ipa')||!word.querySelector('.grammar-spelling')||!word.querySelector('.grammar-gloss'))failures.push(ch.id+': incomplete interlinear word');
     xiarenFigures+=accent.querySelectorAll('figure').length;xiarenPairs+=a.length;
    }
+   const xiarenInline=document.createElement('div');xiarenInline.innerHTML=xiaren.map(ch=>ch.html).join('');
+   for(const [ipa,accent,ye] of [['ka³³/³¹','gǎ','gar'],['ka⁵⁴/³¹','gà','gav'],['ɕɛ³³/³¹','xiě','xier'],['a³³／³¹so⁵⁵','ǎsō','arsox'],['tɕʰe³⁵ ɕe⁵⁵','qiéxiē','qefxex'],['tɕʰe³⁵','qié','qef']]){
+    const match=[...xiarenInline.querySelectorAll('.grammar-pair-inline')].some(pair=>pair.querySelector('.grammar-ipa')?.textContent==='/'+ipa+'/'&&pair.querySelector('.grammar-spelling')?.dataset.accent===accent&&pair.querySelector('.grammar-spelling')?.dataset.ye===ye);
+    if(!match)failures.push('Xiaren inline word spelling missing: '+ipa);
+   }
    spellingDisplay=previousSpelling;
    if(xiarenFigures!==106||xiarenPairs<700)failures.push('Xiaren examples or spellings missing');
    return {failures,results,pending:[...pending].sort()};

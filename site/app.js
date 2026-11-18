@@ -414,7 +414,7 @@ function render(){
 }
 function setView(v,keep=false,patch={}){
  if(typeof evidenceRequest!=='undefined')evidenceRequest++;
- state={...DEFAULT_STATE,view:v,q:keep?state.q:'',grammarDialect:state.grammarDialect||'north',...patch};
+ state={...DEFAULT_STATE,view:v,q:keep?state.q:'',grammarDialect:v==='grammar'?'north':state.grammarDialect||'north',...patch};
  if($('#detail').open&&viewHash(cleanViewState(state))===location.hash){
   const changedNotation=state.view==='notation'&&JSON.stringify(notationNavigationState())!==JSON.stringify(navigationEntry()?.notation);
   if(!changedNotation){closeDetail();return}
