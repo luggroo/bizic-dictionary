@@ -19,12 +19,12 @@ const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.m
  const eye=books.find(c=>c.code==='2.2').blocks.find(b=>b.id==='2.2-007');
  assert.equal(eye.glosses[0].zh,'眼睛');assert.equal(eye.glosses[0].originalGloss,'鼻子');
  const html=ctx.longshanTextDetail(record);
- for(const piece of ['土家语语法标注文本','复核稿','ɣɨ³⁵','INJ','以前土家族人得了一场病'])assert.ok(html.includes(piece),piece);
- assert.ok(!html.includes('Tujia Language Project'));
+ for(const piece of ['土家语语法标注文本','ɣɨ³⁵','INJ','以前土家族人得了一场病'])assert.ok(html.includes(piece),piece);
+ assert.ok(!html.includes('Tujia Language Project'));assert.ok(!html.includes('复核稿'));assert.ok(!html.includes('原书记音'));assert.ok(html.includes('本站拼音'));
  const withSpelling=ctx.longshanTextDetail({...record,blocks:[{...record.blocks[0],pinyin:'bi³⁵zi⁵⁵ka²¹',reviewNote:'待核读音'}]});
- assert.ok(withSpelling.includes('原书拼音')&&withSpelling.includes('bi³⁵zi⁵⁵ka²¹')&&withSpelling.includes('待核读音'));
+ assert.ok(withSpelling.includes('原书拼音')&&withSpelling.includes('bi³⁵zi⁵⁵ka²¹')&&!withSpelling.includes('待核读音'));
  const unusual=books.find(c=>c.code==='2.14').blocks.find(b=>b.id==='2.14-071');
- assert.equal(unusual.ipaStatus,'部分记音待规范');assert.ok(ctx.longshanTextDetail(books.find(c=>c.code==='2.14')).includes('部分记音待规范'));
+ assert.equal(unusual.ipaStatus,'部分记音待规范');assert.ok(!ctx.longshanTextDetail(books.find(c=>c.code==='2.14')).includes('原书记音'));
  await ctx.loadLongshanTexts(data);assert.equal(data.corpus.filter(c=>c.id===record.id).length,1);
  console.log('PASS: annotated book provenance, grouping, alignment, IPA, rendering and deduplication');
 })().catch(e=>{console.error(e);process.exitCode=1});
