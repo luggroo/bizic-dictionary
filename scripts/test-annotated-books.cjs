@@ -11,6 +11,11 @@ const app=fs.readFileSync(path.join(root,'app.js'),'utf8');vm.runInContext(app.m
  assert.equal(ctx.corpusCollectionKey(data.corpus.find(c=>c.source==='tlp-longshan')),'tlp-longshan');
  assert.equal(record.blocks.length,129);assert.ok(data.sources.find(s=>s.id===record.source));
  assert.ok(record.blocks.every(b=>b.ipa&&b.originalIpa&&b.zh&&b.glosses.every(g=>g.ipa&&g.zh)));
+ const books=data.corpus.filter(c=>c.bookSource);
+ assert.equal(new Set(books.map(c=>c.id)).size,books.length,'book IDs must be unique');
+ for(const code of ['2.2','2.3','2.4'])assert.ok(books.find(c=>c.code===code),code+' is present');
+ const eye=books.find(c=>c.code==='2.2').blocks.find(b=>b.id==='2.2-007');
+ assert.equal(eye.glosses[0].zh,'眼睛');assert.equal(eye.glosses[0].originalGloss,'鼻子');
  const html=ctx.longshanTextDetail(record);
  for(const piece of ['土家语语法标注文本','复核稿','ɣɨ³⁵','INJ','以前土家族人得了一场病'])assert.ok(html.includes(piece),piece);
  assert.ok(!html.includes('Tujia Language Project'));

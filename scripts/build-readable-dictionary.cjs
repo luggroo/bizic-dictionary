@@ -134,6 +134,10 @@ function renderCorpus(record, data, version) {
   const names={originalTranscription:'来源原记音',ipa:'规范化 IPA',annotation:'来源逐词注释',locations:'调查点',dialect:'方言',code:'来源编号',genre:'类型'};
   return page(record.title+' · '+record.id,`<p>Corpus ID: ${escape(record.id)}</p><pre>${escape(record.text || '')}</pre><pre>${escape(Object.entries(fields).map(([k,v])=>`${names[k] || k}: ${text(v)}`).join('\n'))}</pre>${renderSources([record.source],data)}`,version);
 }
+function renderAnnotatedBook(record, version) {
+  const blocks=(record.blocks || []).map(b=>`<section><h2>${escape(b.id || '')} · 原书 ${escape(b.page || '')} 页</h2><p>IPA：${escape(b.ipa || '')}</p>${b.originalIpa && b.originalIpa!==b.ipa?`<p>原书记音：${escape(b.originalIpa)}</p>`:''}<p>${(b.glosses || []).map(g=>`${escape(g.ipa || '')} ${escape(g.zh || '')}`).join('　')}</p><p>${escape(b.zh || '')}</p>${b.notes?`<p>校注：${escape(b.notes)}</p>`:''}</section>`).join('');
+  return page(record.title+' · '+record.id,`<p>来源：《土家语语法标注文本》；原书 ${escape(record.sourcePages || '')} 页。</p>${record.reviewNote?`<p>${escape(record.reviewNote)}</p>`:''}<p><a href="https://drive.google.com/file/d/19fGttb_9n8Z83jCqpOLiEXA5XcAAFA5w/view">查看原书</a></p>${blocks}`,version);
+}
 function buildReadableDictionary({root}) {
   const read = name => JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(root,'prepared',name+'.json.gz'))));
   const data = read('core'), sources = sourceMap(data);
@@ -256,7 +260,14 @@ function buildReadableDictionary({root}) {
     write('text/corpus/'+c.id+'.html',renderCorpus(c,data,version));
   }
   directory('text/corpus','语保例句',corpus.map(c=>({name:'text/corpus/'+c.id+'.html',label:c.title+' · '+c.id})));
-  write('text/index.html',page('土家语词典 · 文本目录',`<p>收录 Brassett 04、06 的词汇见证、龙山语保词汇和例句，以及标注为南部土家语的词汇见证和例句。每条见证保留原记音、义项、来源与已记录的调查点。</p><p>${report.entries} 个词条，${report.witnesses} 条见证，${report.queries} 个汉语义项，${report.corpus} 条例句。目录之外的资料可在交互词典查阅。</p><p>${link('text/all.html','完整词目总表：北部、南部各一页')}</p><p>${link('text/source/index.html','按来源：每个来源一页完整汉语索引')}</p><p>精确查询：<code>${escape(routes.exact_zh)}</code>。首字浏览：<code>${escape(routes.initial_zh)}</code>。将 query 替换为查询词，initial 替换为其首字符，并作 URL 编码。仅已收录的查询词和首字符有对应页面。</p>${queries.has('吃') ? '<p>'+link(queryPath('吃'),'查询示例：吃')+'</p>' : ''}<p>${link('text/browse/initial/index.html','全部首字')}</p><p>${link('text/browse/zh/index.html','全部汉语义项')}</p><p>${link('text/catalog.json','来源与路径清单（JSON）')}</p><p>${link('text/corpus/index.html','语保例句')}</p><p><a href="/#words">交互词典</a>（需 JavaScript）</p>`,version));
+  const bookPath=path.join(root,'annotated-books.json');
+  const books=fs.existsSync(bookPath)?JSON.parse(fs.readFileSync(bookPath,'utf8')):[];
+  for(const book of books){
+    if(!/^[A-Za-z0-9][A-Za-z0-9_.-]*$/.test(book.id))throw Error('Invalid annotated book ID: '+book.id);
+    write('text/annotated/'+book.id+'.html',renderAnnotatedBook(book,version));
+  }
+  directory('text/annotated','书籍标注语料',books.map(c=>({name:'text/annotated/'+c.id+'.html',label:c.title+' · '+c.id})));
+  write('text/index.html',page('土家语词典 · 文本目录',`<p>收录 Brassett 04、06 的词汇见证、龙山语保词汇和例句，以及标注为南部土家语的词汇见证和例句。每条见证保留原记音、义项、来源与已记录的调查点。</p><p>${report.entries} 个词条，${report.witnesses} 条见证，${report.queries} 个汉语义项，${report.corpus} 条例句。目录之外的资料可在交互词典查阅。</p><p>${link('text/all.html','完整词目总表：北部、南部各一页')}</p><p>${link('text/source/index.html','按来源：每个来源一页完整汉语索引')}</p><p>精确查询：<code>${escape(routes.exact_zh)}</code>。首字浏览：<code>${escape(routes.initial_zh)}</code>。将 query 替换为查询词，initial 替换为其首字符，并作 URL 编码。仅已收录的查询词和首字符有对应页面。</p>${queries.has('吃') ? '<p>'+link(queryPath('吃'),'查询示例：吃')+'</p>' : ''}<p>${link('text/browse/initial/index.html','全部首字')}</p><p>${link('text/browse/zh/index.html','全部汉语义项')}</p><p>${link('text/catalog.json','来源与路径清单（JSON）')}</p><p>${link('text/corpus/index.html','语保例句')}</p><p>${link('text/annotated/index.html','书籍标注语料')}</p><p><a href="/#words">交互词典</a>（需 JavaScript）</p>`,version));
   // Emit a versioned machine contract alongside the no-JavaScript text index.
   // Tiny isolated test fixtures do not contain the canonical gzip inputs.
   if(fs.existsSync(path.join(root,'dictionary.json.gz'))&&fs.existsSync(path.join(root,'data.json.gz'))){
