@@ -1430,9 +1430,10 @@ Liu、Ran与Xiang的合著未刊稿将/kʊo²⁴/（变调时为/kʊo⁴⁴/）�
 | /ti/ | 向心 VEN | 朝参照位置来；通常用于陈述句和疑问句。[^north-direction-lu2024] |
 | /ɕie/ | 向心 VEN（祈使） | 表示“来／起来”时只用于祈使句，如“借来！”“站起来！”。[^north-direction-lu2024] |
 | /ɕie/ | 往返 | 表示“去做（并已返回原点）”；用于陈述句和疑问句的肯定式。[^north-direction-lu2024] |
-| /lie/ | 离心 AND | 表示“去／下去”。可用于多种句类；祈使句中可单独出现，陈述句和疑问句通常与/xu/连用。[^north-direction-lu2024] |
-| /tiu/；/a tiu/ | 完成向心 | 向说话人方向移动，同时表示动作已经发生。[^north-direction-lu2024] |
-| /lu/；/a lu/ | 完成离心 | 背离说话人方向移动，同时表示动作已经发生。[^north-direction-lu2024] |
+| /lie/ | 离心 AND | 表示“去／下去”；单独使用时主要见于祈使句，陈述句和疑问句通常与/xu/连用。[^north-direction-lu2024] |
+| /tiu/；/a⁵⁵tiu⁵⁵/ | 完成向心 | 向说话人方向移动，同时表示动作已经发生。[^north-direction-lu2024] |
+| /ɕiau/ | 往返＋已然 | 表示“去做并返回原点”，并强调动作已经发生；用于陈述句和疑问句的肯定式。[^north-direction-lu2024] |
+| /lu²¹/；/a⁵⁵lu²¹/ | 完成离心 | 背离说话人方向移动，同时表示动作已经发生。[^north-direction-lu2024] |
 
 <a id="north-overview-degree"></a>
 
