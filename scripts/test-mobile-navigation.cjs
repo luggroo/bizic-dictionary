@@ -260,6 +260,16 @@ async function main(){
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,lang+' '+view+' overflows at '+width);
     const navClipped=await page.locator('aside nav button, aside nav a.nav-repo-link').evaluateAll(items=>items.some(b=>b.scrollWidth>b.clientWidth+2));
     assert.equal(navClipped,false,lang+' navigation clips at '+width);
+    if(width<=900&&lang==='zh'&&view==='history'){
+     const alignment=await page.locator('aside nav').evaluate(nav=>{
+      const label=selector=>nav.querySelector(selector+' .bilingual-label').getBoundingClientRect();
+      const translation=label('.nav-repo-link'),corpus=label('[data-view="corpus"]');
+      const cell=nav.querySelector('.nav-repo-link').getBoundingClientRect();
+      return {horizontal:Math.abs((translation.left+translation.right-cell.left-cell.right)/2),
+       vertical:Math.abs(translation.top-corpus.top)};
+     });
+     assert(alignment.horizontal<=1&&alignment.vertical<=1,'Translation tab is misaligned at '+width+'px: '+JSON.stringify(alignment));
+    }
     const hiddenFilterLabels=await page.locator('.filters select:visible').evaluateAll(items=>items.flatMap(el=>{
      const text=el.selectedOptions[0]?.label?.trim()||'',css=getComputedStyle(el),canvas=document.createElement('canvas'),context=canvas.getContext('2d');
      context.font=css.font;
