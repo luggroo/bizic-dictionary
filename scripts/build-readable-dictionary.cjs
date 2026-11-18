@@ -134,11 +134,16 @@ function renderCorpus(record, data, version) {
   const names={originalTranscription:'来源原记音',ipa:'规范化 IPA',annotation:'来源逐词注释',locations:'调查点',dialect:'方言',code:'来源编号',genre:'类型'};
   return page(record.title+' · '+record.id,`<p>Corpus ID: ${escape(record.id)}</p><pre>${escape(record.text || '')}</pre><pre>${escape(Object.entries(fields).map(([k,v])=>`${names[k] || k}: ${text(v)}`).join('\n'))}</pre>${renderSources([record.source],data)}`,version);
 }
+let xuSpellingContext;
+function bookSiteSpelling(ipa){
+ if(!xuSpellingContext){xuSpellingContext=vm.createContext({});vm.runInContext(fs.readFileSync(path.resolve(__dirname,'../site/longshan-texts.js'),'utf8'),xuSpellingContext);}
+ return xuSpellingContext.xuSiteSpelling(ipa);
+}
 function renderAnnotatedBook(record, version) {
-  const blocks=(record.blocks || []).map(b=>`<section><h2>${escape(b.id || '')} · 原书 ${escape(b.page || '')} 页</h2>${(b.originalPinyin||b.pinyin)?`<p>原书拼音：${escape(b.originalPinyin||b.pinyin)}</p>`:''}<p>${escape(b.ipaStatus || 'IPA')}：${escape(b.ipa || '')}</p>${b.originalIpa && b.originalIpa!==b.ipa?`<p>原书记音：${escape(b.originalIpa)}</p>`:''}<p>${(b.glosses || []).map(g=>`${escape(g.ipa || '')} ${escape(g.zh || '')}`).join('　')}</p><p>${escape(b.zh || '')}</p>${b.notes?`<p>校注：${escape(b.notes)}</p>`:''}${b.reviewNote?`<p>复核：${escape(b.reviewNote)}</p>`:''}</section>`).join('');
+  const blocks=(record.blocks || []).map(b=>`<section><h2>${escape(b.id || '')} · 原书 ${escape(b.page || '')} 页</h2><p>本站拼音：${escape(bookSiteSpelling(b.ipa || ''))}</p>${(b.originalPinyin||b.pinyin)?`<p>原书拼音：${escape(b.originalPinyin||b.pinyin)}</p>`:''}<p>${(b.glosses || []).map(g=>`${escape(g.ipa || '')} ${escape(g.zh || '')}`).join('　')}</p><p>${escape(b.zh || '')}</p>${b.notes?`<p>校注：${escape(b.notes)}</p>`:''}</section>`).join('');
   const translation=(record.independentTranslation || []).map(t=>`<p>${escape(t.text || '')}</p>`).join('');
   const footnotes=(record.footnotes || []).map(f=>`<p>${escape(f.text || '')}</p>`).join('');
-  return page(record.title+' · '+record.id,`<p>来源：《土家语语法标注文本》；原书 ${escape(record.sourcePages || '')} 页。</p>${record.reviewNote?`<p>${escape(record.reviewNote)}</p>`:''}<p><a href="https://drive.google.com/file/d/19fGttb_9n8Z83jCqpOLiEXA5XcAAFA5w/view">查看原书</a></p>${blocks}${footnotes?`<section><h2>原书注释</h2>${footnotes}</section>`:''}${translation?`<section><h2>原书全文汉译</h2>${translation}</section>`:''}`,version);
+  return page(record.title+' · '+record.id,`<p>来源：《土家语语法标注文本》；原书 ${escape(record.sourcePages || '')} 页。</p><p><a href="https://drive.google.com/file/d/19fGttb_9n8Z83jCqpOLiEXA5XcAAFA5w/view">查看原书</a></p><p><a href="/xu-transcription-notes.md">记音转换与校勘说明</a></p>${blocks}${footnotes?`<section><h2>原书注释</h2>${footnotes}</section>`:''}${translation?`<section><h2>原书全文汉译</h2>${translation}</section>`:''}`,version);
 }
 function buildReadableDictionary({root}) {
   const read = name => JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(root,'prepared',name+'.json.gz'))));
