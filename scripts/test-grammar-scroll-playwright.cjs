@@ -82,12 +82,14 @@ async function main(){
   await mother().waitFor();
   assert.equal(await mother().locator('.grammar-ipa').textContent(),'ne⁵⁴ne³³','The original IPA must survive UI rendering');
   assert.equal(await mother().locator('.grammar-spelling').textContent(),'nièniě');
+  await page.locator('.display-settings > summary').click();
   await page.locator('#spelling-control select[data-spelling-display="north"]').selectOption('ye');
   await page.waitForFunction(()=>document.querySelector('.grammar-article .grammar-spelling[data-ye="nievnier"]')?.textContent==='nievnier');
   assert.equal(await mother().locator('.grammar-ipa').textContent(),'ne⁵⁴ne³³','Changing spelling must not change IPA');
   assert.equal(await page.evaluate(()=>state.grammarSection),'302.2','Changing spelling must retain the reading page');
   await page.locator('#spelling-control select[data-spelling-display="north"]').selectOption('accent');
   await page.waitForFunction(()=>document.querySelector('.grammar-article .grammar-spelling[data-ye="nievnier"]')?.textContent==='nièniě');
+  await page.locator('.display-settings > summary').click();
   // Select a different chapter and its relation-marking section through the
   // mobile menu, then verify the exact URL and persistence on reload.
   await page.locator('.grammar-toc-toggle').click();
@@ -97,6 +99,7 @@ async function main(){
   await page.locator('.grammar-toc-sections a[href="#grammar/xiaren/303/5"]').click();
   await page.waitForFunction(()=>state.grammarSection==='303.5');
   assert.equal(await page.evaluate(()=>location.hash),'#grammar/xiaren/303/5');
+  await page.locator('.display-settings > summary').click();
   await page.locator('#spelling-control select[data-spelling-display="north"]').selectOption('ye');
   await page.waitForFunction(()=>[...document.querySelectorAll('.grammar-article .grammar-spelling[data-ye="nav"]')].some(x=>x.textContent==='nav'));
   await page.reload();
