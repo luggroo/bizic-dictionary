@@ -1,9 +1,10 @@
 /* Reading order, aligned examples and switchable spelling for the reviewed grammar. */
-for(const d of ['north','south']){
+REVIEWED_GRAMMAR.xiaren=window.GRAMMAR_XIAREN;
+for(const d of ['north','south','xiaren']){
  DIALECT_GRAMMARS[d]=REVIEWED_GRAMMAR[d];
- for(const ch of REVIEWED_GRAMMAR[d])for(const sec of ch.sections)grammarBlocks(d)[sec.id]={integratedHtml:ch.html};
+ if(d!=='xiaren')for(const ch of REVIEWED_GRAMMAR[d])for(const sec of ch.sections)grammarBlocks(d)[sec.id]={integratedHtml:ch.html};
 }
-function normalizeGrammarChapter(id,d){return REVIEWED_GRAMMAR[d].some(c=>c.id===id)?id:GRAMMAR_LEGACY_CHAPTERS[d][id]||REVIEWED_GRAMMAR[d][0].id;}
+function normalizeGrammarChapter(id,d){return REVIEWED_GRAMMAR[d].some(c=>c.id===id)?id:GRAMMAR_LEGACY_CHAPTERS[d]?.[id]||REVIEWED_GRAMMAR[d][0].id;}
 const GRAMMAR_JOINED_WORDS=['tɕĩ⁴⁴ xʊa⁴⁴','sa⁴⁴ mi⁴⁴','nie²⁴ pi⁴⁴','pa⁵⁵ pa⁵⁵','ta⁵¹ pʰi²¹','pʰa²¹ pʰu³⁵','tɕʰi³⁵ pu⁵⁵','doŋ²¹ dzian²¹','doŋ²¹ dʑian²¹','ɕi³³ ti²¹','a²¹ pa⁵⁵','a⁵⁵ tiu⁵⁵','a⁵⁵ lu²¹','tɕʰie²¹ pi²⁴'];
 function grammarExampleWords(ipa,gloss){
  let text=ipa;for(const word of GRAMMAR_JOINED_WORDS)text=text.replaceAll(word,word.replaceAll(' ','\u00a0'));
@@ -155,6 +156,11 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  if(grammarRenderedCache.has(cacheKey))return grammarRenderedCache.get(cacheKey);
  const root=document.createElement('div');root.className='reviewed-grammar integrated-grammar';root.dataset.referenceGrammar='';root.dataset.dialect=ch.dialect;root.dataset.chapter=ch.id;root.dataset.uiLanguage=language;root.dataset.uiContent='';root.lang=language==='en'?'en':'zh-CN';root.innerHTML=ch.html;
  let heading=0;for(const h of root.querySelectorAll('h3'))h.id='chapter-'+ch.id+'-'+heading++;
+ // Xiaren's reviewed HTML already contains its own source-specific spelling and IPA.
+ if(ch.dialect==='xiaren'){
+  if(spellingDisplay==='ye')for(const spelling of root.querySelectorAll('.grammar-spelling[data-ye]'))spelling.textContent=spelling.dataset.ye;
+  const html=root.outerHTML;grammarRenderedCache.set(cacheKey,html);return html;
+ }
  for(const table of root.querySelectorAll('table')){
   const headers=[...table.querySelectorAll('thead th')].map(c=>c.textContent.trim());table.dataset.originalHeaders=JSON.stringify(headers);
   if(ch.id==='101'&&headers.includes('他砂词例（IPA）'))table.classList.add('grammar-tone-overview');

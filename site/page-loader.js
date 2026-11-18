@@ -13,7 +13,7 @@ const SitePages=(()=>{
   'word-list':{requires:['notation'],files:['semantic-categories.js','word-classes.js','word-index.js','word-class-ui.js']},
   'word-detail':{requires:['word-list'],files:['word-entry.js']},
   dictionary:{requires:['word-list'],files:['word-merge-groups.js','lexical-reviews.js','word-merge.js','editorial-notes.js','spelling-boundaries.js','ui-translations.js']},
-  grammar:{requires:['grammar-base','notation'],files:['south-zhou-phonology.js','grammar-integrated.js','grammar-evidence.js','grammar-notation.js','grammar-reviewed-data.js','grammar-glosses.js','grammar-reviewed.js','grammar-pages.js'],css:['grammar-integrated.css','grammar-reviewed.css']},
+  grammar:{requires:['grammar-base','notation'],files:['south-zhou-phonology.js','grammar-integrated.js','grammar-evidence.js','grammar-notation.js','grammar-reviewed-data.js','grammar-xiaren-data.js','grammar-glosses.js','grammar-reviewed.js','grammar-pages.js'],css:['grammar-integrated.css','grammar-reviewed.css']},
   corpus:{requires:['notation'],files:['longshan-texts.js','corpus-player.js','corpus-search.js']},
   history:{requires:['catalogue','notation'],files:['comparison-merge.js']}
  };

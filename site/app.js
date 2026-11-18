@@ -214,7 +214,7 @@ function cleanViewState(value){
  if(next.view==='topics')next.view='sources';
  if(next.view==='saved'||!Object.hasOwn(ROUTE_FIELDS,next.view))next.view='home';
  for(const key of Object.keys(next))if(typeof DEFAULT_STATE[key]==='string')next[key]=String(next[key]??'').slice(0,2000);
- next.grammarDialect=next.grammarDialect==='south'?'south':'north';
+ next.grammarDialect=['north','xiaren','south'].includes(next.grammarDialect)?next.grammarDialect:'north';
  next.chapter=typeof normalizeGrammarChapter==='function'?normalizeGrammarChapter(next.chapter,next.grammarDialect):next.chapter;
  if(typeof grammarResolvePage==='function')Object.assign(next,grammarResolvePage(next));
  if(typeof normalizeGrammarSection==='function')next.grammarSection=normalizeGrammarSection(next.chapter,next.grammarDialect,next.grammarSection,next.grammarAnchor);
@@ -239,7 +239,7 @@ function viewHash(value=state){
 }
 function parseViewHash(hash){
  const [path,query='']=hash.replace(/^#/,'').split('?'),next={...DEFAULT_STATE};
- const grammar=path.match(/^grammar\/(north|south)\/(\d+)(?:\/(\d+))?$/);
+ const grammar=path.match(/^grammar\/(north|xiaren|south)\/(\d+)(?:\/(\d+))?$/);
  const oldAnchor=path.match(/^(?:ref|section)-(north|south)-(\d+)[.-]/);
  if(grammar||oldAnchor){const match=grammar||oldAnchor;next.view='grammar';next.grammarDialect=match[1];next.chapter=match[2];if(grammar?.[3])next.grammarSection=next.chapter+'.'+grammar[3]}
  else next.view=path||'home';

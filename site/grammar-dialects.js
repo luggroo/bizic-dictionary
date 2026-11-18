@@ -1,4 +1,4 @@
-const GRAMMAR_LABELS={north:'北部土家语',south:'南部土家语'};
+const GRAMMAR_LABELS={north:'北部－龙山',xiaren:'北部－保靖厦',south:'南部－泸溪'};
 const SOUTH_GRAMMAR={
  '1.3':{text:'本套语法专门整理南部土家语。向亮（2019）的南部材料来自泸溪潭溪镇大陂流村普锄寨、且己村下且己组与潭溪小区婆罗寨。作者所谓“南北过渡区类型”（保靖、永顺、古丈）是在北部土家语内部进一步划分的类型，不等于南部土家语。',source:'1CQW3dzj1d4-7QxbndWYYEGimXIuG-gtK',locator:'第 71 页，引言及脚注①②；仅取南部范围说明'},
  '7.1':{text:'向亮（2011）比较职业与人群称谓时指出，所举南部材料较多使用以“人”为中心的复合形式，例如按“打岩石的人”“缝衣服的人”组织词义。文章将这些称谓与北部的“词根＋名词后缀”形式作比较。',source:'1xKy0DTQTNNtKEfyzDBkyr5wmg0mz5oIi',locator:'第 40 页，“本族复合词的语义偏差”；仅取南部分析'},

@@ -8,7 +8,7 @@ const root=path.resolve(__dirname,'../site');
   const page=await browser.newPage({viewport:{width:390,height:844}});
   await page.setContent('<main></main>');
   await page.addScriptTag({content:`const DIALECT_GRAMMARS={north:[],south:[]},GR_BLOCKS={north:{},south:{}};function grammarBlocks(d){return GR_BLOCKS[d]}let state={grammarDialect:'north',chapter:'101',q:''};const E=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');function grammarView(){} function grammarChapter(){} function pageHeader(){return ''} function grammarSwitch(){return ''} function search(){return ''} function contains(a,b){return a.includes(b)}`});
-  for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','grammar-notation.js','grammar-reviewed-data.js','grammar-glosses.js','ui-translations.js','content-translations.js','grammar-reviewed-i18n.js','grammar-reviewed.js'])await page.addScriptTag({path:path.join(root,f)});
+  for(const f of ['ipa-normalize.js','notation-profiles.js','notation-ui.js','southern-notation.js','grammar-notation.js','grammar-reviewed-data.js','grammar-xiaren-data.js','grammar-glosses.js','ui-translations.js','content-translations.js','grammar-reviewed-i18n.js','grammar-reviewed.js'])await page.addScriptTag({path:path.join(root,f)});
   const audit=await page.evaluate(()=>{
    const failures=[],results=[],pending=new Set();
    for(const [ipa,explicit,ye,accent] of [
@@ -190,6 +190,22 @@ const root=path.resolve(__dirname,'../site');
      }
     }catch(e){failures.push(ch.id+': '+e.message)}
    }
+   // Xiaren keeps reviewed source-specific spellings while both display modes remain switchable.
+   const xiaren=REVIEWED_GRAMMAR.xiaren||[];
+   if(xiaren.length!==7||xiaren.reduce((n,ch)=>n+ch.sections.length,0)!==34)failures.push('Xiaren chapter or section count changed');
+   let xiarenFigures=0,xiarenPairs=0;const previousSpelling=spellingDisplay;
+   for(const ch of xiaren){
+    for(const title of [ch.title,...ch.sections.map(section=>section.title)])if(!UI_TRANSLATIONS[title])failures.push(ch.id+': untranslated Xiaren navigation title '+title);
+    spellingDisplay='accent';const accent=document.createElement('div');accent.innerHTML=grammarRenderHTML(ch,'zh');
+    spellingDisplay='ye';const ye=document.createElement('div');ye.innerHTML=grammarRenderHTML(ch,'zh');
+    const a=[...accent.querySelectorAll('.grammar-spelling')],y=[...ye.querySelectorAll('.grammar-spelling')];
+    if(a.length!==y.length)failures.push(ch.id+': spelling mode changed number of forms');
+    for(let i=0;i<a.length;i++)if(!a[i].dataset.ye||!a[i].dataset.accent||a[i].textContent!==a[i].dataset.accent||y[i]?.textContent!==a[i].dataset.ye)failures.push(ch.id+': Xiaren spelling switch failed');
+    for(const word of accent.querySelectorAll('figure .grammar-word'))if(!word.querySelector('.grammar-ipa')||!word.querySelector('.grammar-spelling')||!word.querySelector('.grammar-gloss'))failures.push(ch.id+': incomplete interlinear word');
+    xiarenFigures+=accent.querySelectorAll('figure').length;xiarenPairs+=a.length;
+   }
+   spellingDisplay=previousSpelling;
+   if(xiarenFigures!==106||xiarenPairs<700)failures.push('Xiaren examples or spellings missing');
    return {failures,results,pending:[...pending].sort()};
   });
   console.log(JSON.stringify(audit,null,2));assert.deepEqual(audit.failures,[]);assert.deepEqual(audit.pending,['iæ̃','yæ̃','æ̃'].sort());
