@@ -2,7 +2,7 @@
   {
     "id": "xu-tujia-annotated-2-1-excerpt",
     "code": "2.1",
-    "title": "灵姑山和灵姑仙（节选）",
+    "title": "灵姑山和灵姑仙（复核稿）",
     "genre": "民间传说",
     "dialect": "北部",
     "locations": [
@@ -12,7 +12,7 @@
     "source": "xu-tujia-annotated-texts",
     "externalText": true,
     "bookSource": true,
-    "sourcePages": "37–39",
+    "sourcePages": "37–56",
     "blocks": [
       {
         "id": "2.1-001",
@@ -1068,8 +1068,5837 @@
         ],
         "originalIpa": "pu³⁵kã⁵³ ɣɨ³⁵ lie⁵⁵ ko³⁵ jiu³⁵ a²¹tsha²¹ ku²¹ zau⁵³ wa⁵⁵le⁵³ ɣɨ³⁵",
         "reviewNote": "“悬崖”为 a²¹tsha²¹，规范化 a²¹tsʰa²¹，不是 tɕʰa；原书整句“ 不敢走了呢，她又爬上悬崖绕了过去，”网站漏“呢”并改标点。"
+      },
+      {
+        "id": "2.1-020",
+        "page": "40",
+        "ipa": "jiu³⁵ ɣɨ³⁵ mo²¹ tsie²¹ko⁵⁵ lẽ²¹ŋau²¹sã⁵⁵ tɕi²¹tʰa²¹ je⁵³",
+        "originalIpa": "jiu³⁵ ɣɨ³⁵ mo²¹ tsie²¹ko⁵⁵ lẽ²¹ŋau²¹sã⁵⁵ tçi²¹tha²¹ je⁵³",
+        "zh": "又走到了灵羔山下，",
+        "glosses": [
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "mo²¹",
+            "originalIpa": "mo²¹",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "tsie²¹ko⁵⁵",
+            "originalIpa": "tsie²¹ko⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "zh": "灵羔山"
+          },
+          {
+            "ipa": "tɕi²¹tʰa²¹",
+            "originalIpa": "tçi²¹tha²¹",
+            "zh": "脚下"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "到"
+          }
+        ]
+      },
+      {
+        "id": "2.1-021",
+        "page": "40",
+        "ipa": "lẽ²¹ŋau²¹sã⁵⁵ tɕi²¹tʰa²¹ lie⁵⁵ au⁵⁵tsʰai²¹ lie⁵⁵ kʰa²¹kʰo²¹ sẽ⁵⁵",
+        "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵ tçi²¹tha²¹ lie⁵⁵ au⁵⁵tshai²¹ lie⁵⁵ kha²¹kho²¹ sẽ⁵⁵",
+        "zh": "灵羔山脚下呢，那儿的树林很深，",
+        "glosses": [
+          {
+            "ipa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "zh": "灵羔山"
+          },
+          {
+            "ipa": "tɕi²¹tʰa²¹",
+            "originalIpa": "tçi²¹tha²¹",
+            "zh": "脚下"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "au⁵⁵tsʰai²¹",
+            "originalIpa": "au⁵⁵tshai²¹",
+            "zh": "那儿"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "kʰa²¹kʰo²¹",
+            "originalIpa": "kha²¹kho²¹",
+            "zh": "树林"
+          },
+          {
+            "ipa": "sẽ⁵⁵",
+            "originalIpa": "sẽ⁵⁵",
+            "zh": "深"
+          }
+        ]
+      },
+      {
+        "id": "2.1-022",
+        "page": "40",
+        "ipa": "ai⁵⁵ tʰu³⁵ lie⁵⁵ li³⁵pa⁵⁵ kei⁵³ti²¹",
+        "originalIpa": "ai⁵⁵ thu³⁵ lie⁵⁵ li³⁵pa⁵⁵ kei⁵³ti²¹",
+        "zh": "里面有很多公老虎，",
+        "glosses": [
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "那"
+          },
+          {
+            "ipa": "tʰu³⁵",
+            "originalIpa": "thu³⁵",
+            "zh": "里"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "li³⁵pa⁵⁵",
+            "originalIpa": "li³⁵pa⁵⁵",
+            "zh": "老虎"
+          },
+          {
+            "ipa": "kei⁵³ti²¹",
+            "originalIpa": "kei⁵³ti²¹",
+            "zh": "很多"
+          }
+        ]
+      },
+      {
+        "id": "2.1-023",
+        "page": "40",
+        "ipa": "li³⁵ nau⁵³ ũ²¹ po⁵⁵ lie⁵⁵ ko³⁵ kie⁵³ si⁵³-i³⁵",
+        "originalIpa": "li³⁵ nau⁵³ ũ²¹ po⁵⁵ lie⁵⁵ ko³⁵ kie⁵³ si⁵³-i³⁵",
+        "zh": "一只老虎蹲在那里，她害怕极了，",
+        "glosses": [
+          {
+            "ipa": "li³⁵",
+            "originalIpa": "li³⁵",
+            "zh": "老虎"
+          },
+          {
+            "ipa": "nau⁵³",
+            "originalIpa": "nau⁵³",
+            "zh": "一个"
+          },
+          {
+            "ipa": "ũ²¹",
+            "originalIpa": "ũ²¹",
+            "zh": "坐"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "kie⁵³",
+            "originalIpa": "kie⁵³",
+            "zh": "怕"
+          },
+          {
+            "ipa": "si⁵³-i³⁵",
+            "originalIpa": "si⁵³-i³⁵",
+            "zh": "死"
+          }
+        ]
+      },
+      {
+        "id": "2.1-024",
+        "page": "40",
+        "ipa": "ɕĩ⁵⁵li⁵³ suei²¹suei²¹ sa³⁵tɕʰi⁵⁵ to⁵⁵ tsʰu²¹tsʰu²¹ liau⁵³",
+        "originalIpa": "çĩ⁵⁵li⁵³ suei²¹suei²¹ sa³⁵tçhi⁵⁵ to⁵⁵ tshu²¹tshu²¹ liau⁵³",
+        "zh": "心都凉了，头发都竖起来了，",
+        "glosses": [
+          {
+            "ipa": "ɕĩ⁵⁵li⁵³",
+            "originalIpa": "çĩ⁵⁵li⁵³",
+            "zh": "心里"
+          },
+          {
+            "ipa": "suei²¹suei²¹",
+            "originalIpa": "suei²¹suei²¹",
+            "zh": "很凉"
+          },
+          {
+            "ipa": "sa³⁵tɕʰi⁵⁵",
+            "originalIpa": "sa³⁵tçhi⁵⁵",
+            "zh": "头发"
+          },
+          {
+            "ipa": "to⁵⁵",
+            "originalIpa": "to⁵⁵",
+            "zh": "都"
+          },
+          {
+            "ipa": "tsʰu²¹tsʰu²¹",
+            "originalIpa": "tshu²¹tshu²¹",
+            "zh": "竖"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-025",
+        "page": "40",
+        "ipa": "ko³⁵ xũ²¹tsai⁵⁵ te³⁵ po⁵⁵ ɕi⁵⁵ no⁵³te⁵³ po⁵⁵ jau³⁵ ni⁵⁵ ja⁵⁵ pĩ³⁵ tsẽ⁵³ to⁵⁵ a⁵⁵",
+        "originalIpa": "ko³⁵ xũ²¹tsai⁵⁵ te³⁵ po⁵⁵ çi⁵⁵ no⁵³te⁵³ po⁵⁵ jau³⁵ ni⁵⁵ ja⁵⁵ pĩ³⁵ tsẽ⁵³ to⁵⁵ a⁵⁵",
+        "zh": "她一直记着，要给别人找药、治病，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "xũ²¹tsai⁵⁵",
+            "originalIpa": "xũ²¹tsai⁵⁵",
+            "zh": "反正"
+          },
+          {
+            "ipa": "te³⁵",
+            "originalIpa": "te³⁵",
+            "zh": "记"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ɕi⁵⁵",
+            "originalIpa": "çi⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "no⁵³te⁵³",
+            "originalIpa": "no⁵³te⁵³",
+            "zh": "别人"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "ni⁵⁵",
+            "originalIpa": "ni⁵⁵",
+            "zh": "找"
+          },
+          {
+            "ipa": "ja⁵⁵",
+            "originalIpa": "ja⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "pĩ³⁵",
+            "originalIpa": "pĩ³⁵",
+            "zh": "病"
+          },
+          {
+            "ipa": "tsẽ⁵³",
+            "originalIpa": "tsẽ⁵³",
+            "zh": "诊治"
+          },
+          {
+            "ipa": "to⁵⁵",
+            "originalIpa": "to⁵⁵",
+            "zh": "要"
+          },
+          {
+            "ipa": "a⁵⁵",
+            "originalIpa": "a⁵⁵",
+            "zh": "INJ"
+          }
+        ]
+      },
+      {
+        "id": "2.1-026",
+        "page": "40–41",
+        "ipa": "ko³⁵ jiu³⁵ zau⁵³ po⁵⁵ ɣɨ³⁵ jiu³⁵ jã²¹kiu²¹ a³⁵ le⁵³",
+        "originalIpa": "ko³⁵ jiu³⁵ zau⁵³ po⁵⁵ ɣɨ³⁵ jiu³⁵ jã²¹kiu²¹ a³⁵ le⁵³",
+        "zh": "她又绕着走，过了一条沟，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "zau⁵³",
+            "originalIpa": "zau⁵³",
+            "zh": "绕"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "jã²¹kiu²¹",
+            "originalIpa": "jã²¹kiu²¹",
+            "zh": "阳沟"
+          },
+          {
+            "ipa": "a³⁵",
+            "originalIpa": "a³⁵",
+            "zh": "过"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-027",
+        "page": "41",
+        "ipa": "tsʰie²¹ tɕʰiu²¹ a⁵⁵le⁵³ jiu³⁵ ẽ⁵⁵kie⁵⁵ na⁵⁵kuei⁵⁵ ku²¹ lu⁵³",
+        "originalIpa": "tshie²¹ tçhiu²¹ a⁵⁵le⁵³ jiu³⁵ ẽ⁵⁵kie⁵⁵ na⁵⁵kuei⁵⁵ ku²¹ lu⁵³",
+        "zh": "游过水，又爬上了另一边。",
+        "glosses": [
+          {
+            "ipa": "tsʰie²¹",
+            "originalIpa": "tshie²¹",
+            "zh": "水"
+          },
+          {
+            "ipa": "tɕʰiu²¹",
+            "originalIpa": "tçhiu²¹",
+            "zh": "泅"
+          },
+          {
+            "ipa": "a⁵⁵le⁵³",
+            "originalIpa": "a⁵⁵le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "ẽ⁵⁵kie⁵⁵",
+            "originalIpa": "ẽ⁵⁵kie⁵⁵",
+            "zh": "那里"
+          },
+          {
+            "ipa": "na⁵⁵kuei⁵⁵",
+            "originalIpa": "na⁵⁵kuei⁵⁵",
+            "zh": "一边"
+          },
+          {
+            "ipa": "ku²¹",
+            "originalIpa": "ku²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "lu⁵³",
+            "originalIpa": "lu⁵³",
+            "zh": "DIRP"
+          }
+        ],
+        "notes": "原书脚注：lu⁵³是趋向助词le⁵³的完成体形式，下同。"
+      },
+      {
+        "id": "2.1-028",
+        "page": "41",
+        "ipa": "na⁵⁵ ne⁵³ ɣɨ³⁵ ja⁵⁵ je⁵³ ta⁵⁵ ne⁵⁵ ne⁵³ ɣɨ³⁵ ja⁵⁵ je⁵³ ta⁵⁵",
+        "originalIpa": "na⁵⁵ ne⁵³ ɣɨ³⁵ ja⁵⁵ je⁵³ ta⁵⁵ ne⁵⁵ ne⁵³ ɣɨ³⁵ ja⁵⁵ je⁵³ ta⁵⁵",
+        "zh": "走了一天没到，走了两天没到，",
+        "glosses": [
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "ja⁵⁵",
+            "originalIpa": "ja⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "到"
+          },
+          {
+            "ipa": "ta⁵⁵",
+            "originalIpa": "ta⁵⁵",
+            "zh": "没"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "两"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "ja⁵⁵",
+            "originalIpa": "ja⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "到"
+          },
+          {
+            "ipa": "ta⁵⁵",
+            "originalIpa": "ta⁵⁵",
+            "zh": "没"
+          }
+        ]
+      },
+      {
+        "id": "2.1-029",
+        "page": "41",
+        "ipa": "ɣɨ³⁵ ja⁵⁵ ɣɨ³⁵ le⁵³ tɕi²¹pʰa²¹ ka²¹ ne⁵⁵ tɕi²¹kʰu²¹ ɣɨ³⁵ mo²¹ te²¹ tɕi⁵³ liau⁵³",
+        "originalIpa": "ɣɨ³⁵ ja⁵⁵ ɣɨ³⁵ le⁵³ tçi²¹pha²¹ ka²¹ ne⁵⁵ tçi²¹khu²¹ ɣɨ³⁵ mo²¹ te²¹ tçi⁵³ liau⁵³",
+        "zh": "脚上的草鞋都烂了，",
+        "glosses": [
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "ja⁵⁵",
+            "originalIpa": "ja⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tɕi²¹pʰa²¹",
+            "originalIpa": "tçi²¹pha²¹",
+            "zh": "脚"
+          },
+          {
+            "ipa": "ka²¹",
+            "originalIpa": "ka²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "tɕi²¹kʰu²¹",
+            "originalIpa": "tçi²¹khu²¹",
+            "zh": "草鞋"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "mo²¹",
+            "originalIpa": "mo²¹",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "te²¹",
+            "originalIpa": "te²¹",
+            "zh": "烂"
+          },
+          {
+            "ipa": "tɕi⁵³",
+            "originalIpa": "tçi⁵³",
+            "zh": "完"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-030",
+        "page": "41",
+        "ipa": "ko³⁵ tɕiu⁵⁵ ɣɨ³⁵ le⁵³ si⁵⁵miã²¹ tʰa³⁵pʰa⁵⁵ je⁵³ le⁵³ tɕi²¹kʰu²¹ ka²¹ tsʰuã²¹ po⁵⁵ tɕi²¹kʰu²¹ zi⁵⁵",
+        "originalIpa": "ko³⁵ tçiu⁵⁵ ɣɨ³⁵ le⁵³ si⁵⁵miã²¹ tha³⁵pha⁵⁵ je⁵³ le⁵³ tçi²¹khu²¹ ka²¹ tshuã²¹ po⁵⁵ tçi²¹khu²¹ zi⁵⁵",
+        "zh": "她就用丝棉树皮做草鞋，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "si⁵⁵miã²¹",
+            "originalIpa": "si⁵⁵miã²¹",
+            "zh": "丝棉"
+          },
+          {
+            "ipa": "tʰa³⁵pʰa⁵⁵",
+            "originalIpa": "tha³⁵pha⁵⁵",
+            "zh": "皮"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "剥"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tɕi²¹kʰu²¹",
+            "originalIpa": "tçi²¹khu²¹",
+            "zh": "草鞋"
+          },
+          {
+            "ipa": "ka²¹",
+            "originalIpa": "ka²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "tsʰuã²¹",
+            "originalIpa": "tshuã²¹",
+            "zh": "绞"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tɕi²¹kʰu²¹",
+            "originalIpa": "tçi²¹khu²¹",
+            "zh": "草鞋"
+          },
+          {
+            "ipa": "zi⁵⁵",
+            "originalIpa": "zi⁵⁵",
+            "zh": "做"
+          }
+        ]
+      },
+      {
+        "id": "2.1-031",
+        "page": "41",
+        "ipa": "si⁵⁵pa⁵⁵ lie⁵⁵ je⁵³ tʰa³⁵sie⁵⁵ ko³⁵ kiu⁵⁵ a⁵⁵le⁵³ te²¹ tɕi⁵³ liau⁵³",
+        "originalIpa": "si⁵⁵pa⁵⁵ lie⁵⁵ je⁵³ tha³⁵sie⁵⁵ ko³⁵ kiu⁵⁵ a⁵⁵le⁵³ te²¹ tçi⁵³ liau⁵³",
+        "zh": "衣服也被刺刮烂了。",
+        "glosses": [
+          {
+            "ipa": "si⁵⁵pa⁵⁵",
+            "originalIpa": "si⁵⁵pa⁵⁵",
+            "zh": "衣服"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "也"
+          },
+          {
+            "ipa": "tʰa³⁵sie⁵⁵",
+            "originalIpa": "tha³⁵sie⁵⁵",
+            "zh": "刺"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "kiu⁵⁵",
+            "originalIpa": "kiu⁵⁵",
+            "zh": "钩"
+          },
+          {
+            "ipa": "a⁵⁵le⁵³",
+            "originalIpa": "a⁵⁵le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "te²¹",
+            "originalIpa": "te²¹",
+            "zh": "烂"
+          },
+          {
+            "ipa": "tɕi⁵³",
+            "originalIpa": "tçi⁵³",
+            "zh": "完"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-032",
+        "page": "42",
+        "ipa": "ko³⁵ tɕiu⁵⁵ ta³⁵je⁵⁵pʰau⁵⁵ ɣie⁵⁵tʰa⁵⁵ xo²¹le²¹ tʰi³⁵ po⁵⁵",
+        "originalIpa": "ko³⁵ tçiu⁵⁵ ta³⁵je⁵⁵phau⁵⁵ ɣie⁵⁵tha⁵⁵ xo²¹le²¹ thi³⁵ po⁵⁵",
+        "zh": "她就用大月苞叶子绑在身上，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ta³⁵je⁵⁵pʰau⁵⁵",
+            "originalIpa": "ta³⁵je⁵⁵phau⁵⁵",
+            "zh": "大月苞"
+          },
+          {
+            "ipa": "ɣie⁵⁵tʰa⁵⁵",
+            "originalIpa": "ɣie⁵⁵tha⁵⁵",
+            "zh": "叶子"
+          },
+          {
+            "ipa": "xo²¹le²¹",
+            "originalIpa": "xo²¹le²¹",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tʰi³⁵",
+            "originalIpa": "thi³⁵",
+            "zh": "捆"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-033",
+        "page": "42",
+        "ipa": "jiu³⁵ kʰa⁵⁵tʰau⁵⁵ po⁵⁵ ɣɨ³⁵ ɣɨ³⁵ le⁵³ pã³⁵zi⁵⁵tsu⁵⁵",
+        "originalIpa": "jiu³⁵ kha⁵⁵thau⁵⁵ po⁵⁵ ɣɨ³⁵ ɣɨ³⁵ le⁵³ pã³⁵zi⁵⁵tsu⁵⁵",
+        "zh": "又往上走，到中午时，",
+        "glosses": [
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "kʰa⁵⁵tʰau⁵⁵",
+            "originalIpa": "kha⁵⁵thau⁵⁵",
+            "zh": "上面"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "pã³⁵zi⁵⁵tsu⁵⁵",
+            "originalIpa": "pã³⁵zi⁵⁵tsu⁵⁵",
+            "zh": "中午"
+          }
+        ]
+      },
+      {
+        "id": "2.1-034",
+        "page": "42",
+        "ipa": "lẽ²¹ŋau²¹sã⁵⁵ ai⁵⁵ti⁵⁵ pa²¹ ku²¹ tɕi⁵³ liau⁵³ wa⁵⁵",
+        "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵ ai⁵⁵ti⁵⁵ pa²¹ ku²¹ tçi⁵³ liau⁵³ wa⁵⁵",
+        "zh": "灵羔山的坡已经爬完了，",
+        "glosses": [
+          {
+            "ipa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "zh": "灵羔山"
+          },
+          {
+            "ipa": "ai⁵⁵ti⁵⁵",
+            "originalIpa": "ai⁵⁵ti⁵⁵",
+            "zh": "那个"
+          },
+          {
+            "ipa": "pa²¹",
+            "originalIpa": "pa²¹",
+            "zh": "坡"
+          },
+          {
+            "ipa": "ku²¹",
+            "originalIpa": "ku²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "tɕi⁵³",
+            "originalIpa": "tçi⁵³",
+            "zh": "完"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "wa⁵⁵",
+            "originalIpa": "wa⁵⁵",
+            "zh": "INJ"
+          }
+        ]
+      },
+      {
+        "id": "2.1-035",
+        "page": "42",
+        "ipa": "ku²¹ le⁵³ kʰu⁵⁵tsa⁵³ tẽ⁵⁵tẽ⁵⁵ je⁵³ le⁵³ na⁵⁵ tũ⁵⁵ pa⁵³ ja⁵⁵",
+        "originalIpa": "ku²¹ le⁵³ khu⁵⁵tsa⁵³ tẽ⁵⁵tẽ⁵⁵ je⁵³ le⁵³ na⁵⁵ tũ⁵⁵ pa⁵³ ja⁵⁵",
+        "zh": "走到了山顶上，一看，",
+        "glosses": [
+          {
+            "ipa": "ku²¹",
+            "originalIpa": "ku²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "kʰu⁵⁵tsa⁵³",
+            "originalIpa": "khu⁵⁵tsa⁵³",
+            "zh": "山"
+          },
+          {
+            "ipa": "tẽ⁵⁵tẽ⁵⁵",
+            "originalIpa": "tẽ⁵⁵tẽ⁵⁵",
+            "zh": "顶部"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "到"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tũ⁵⁵",
+            "originalIpa": "tũ⁵⁵",
+            "zh": "下"
+          },
+          {
+            "ipa": "pa⁵³",
+            "originalIpa": "pa⁵³",
+            "zh": "看"
+          },
+          {
+            "ipa": "ja⁵⁵",
+            "originalIpa": "ja⁵⁵",
+            "zh": "INJ"
+          }
+        ]
+      },
+      {
+        "id": "2.1-036",
+        "page": "42",
+        "ipa": "ji³⁵ au⁵⁵tsʰai²¹ jau³⁵ na⁵⁵ pʰũ⁵⁵ ɕe³⁵",
+        "originalIpa": "ji³⁵ au⁵⁵tshai²¹ jau³⁵ na⁵⁵ phũ⁵⁵ çe³⁵",
+        "zh": "唉，那儿有一株药，",
+        "glosses": [
+          {
+            "ipa": "ji³⁵",
+            "originalIpa": "ji³⁵",
+            "zh": "INTJ"
+          },
+          {
+            "ipa": "au⁵⁵tsʰai²¹",
+            "originalIpa": "au⁵⁵tshai²¹",
+            "zh": "那儿"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "pʰũ⁵⁵",
+            "originalIpa": "phũ⁵⁵",
+            "zh": "株"
+          },
+          {
+            "ipa": "ɕe³⁵",
+            "originalIpa": "çe³⁵",
+            "zh": "有"
+          }
+        ]
+      },
+      {
+        "id": "2.1-037",
+        "page": "42",
+        "ipa": "ai⁵⁵ jau³⁵ na⁵⁵ pʰũ⁵⁵ lie⁵⁵ tɕiu⁵⁵si⁵⁵",
+        "originalIpa": "ai⁵⁵ jau³⁵ na⁵⁵ phũ⁵⁵ lie⁵⁵ tçiu⁵⁵si⁵⁵",
+        "zh": "就是那株药，",
+        "glosses": [
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "那"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "pʰũ⁵⁵",
+            "originalIpa": "phũ⁵⁵",
+            "zh": "株"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵si⁵⁵",
+            "originalIpa": "tçiu⁵⁵si⁵⁵",
+            "zh": "就是"
+          }
+        ]
+      },
+      {
+        "id": "2.1-038",
+        "page": "42",
+        "ipa": "ko³⁵ ko³⁵ tɕiu⁵⁵ ẽ⁵⁵ti⁵⁵ pĩ³⁵ tsẽ⁵³ tie⁵⁵ɕi²¹",
+        "originalIpa": "ko³⁵ ko³⁵ tçiu⁵⁵ ẽ⁵⁵ti⁵⁵ pĩ³⁵ tsẽ⁵³ tie⁵⁵çi²¹",
+        "zh": "它可以治这种病。",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "pĩ³⁵",
+            "originalIpa": "pĩ³⁵",
+            "zh": "病"
+          },
+          {
+            "ipa": "tsẽ⁵³",
+            "originalIpa": "tsẽ⁵³",
+            "zh": "诊治"
+          },
+          {
+            "ipa": "tie⁵⁵ɕi²¹",
+            "originalIpa": "tie⁵⁵çi²¹",
+            "zh": "可以"
+          }
+        ]
+      },
+      {
+        "id": "2.1-039",
+        "page": "42–43",
+        "ipa": "ai⁵⁵ jau³⁵ na⁵⁵ pʰũ⁵⁵ pʰã²¹piã⁵⁵ lie⁵⁵ sie³⁵tʰa⁵⁵ la⁵⁵ wo⁵³ zie⁵³ tsi⁵⁵ a²¹si²¹ kie²¹ na⁵⁵kuei⁵⁵ jiu³⁵ si³⁵",
+        "originalIpa": "ai⁵⁵ jau³⁵ na⁵⁵ phũ⁵⁵ phã²¹piã⁵⁵ lie⁵⁵ sie³⁵tha⁵⁵ la⁵⁵ wo⁵³ zie⁵³ tsi⁵⁵ a²¹si²¹ kie²¹ na⁵⁵kuei⁵⁵ jiu³⁵ si³⁵",
+        "zh": "那药旁边呢，有四条白蛇，",
+        "glosses": [
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "那"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "pʰũ⁵⁵",
+            "originalIpa": "phũ⁵⁵",
+            "zh": "株"
+          },
+          {
+            "ipa": "pʰã²¹piã⁵⁵",
+            "originalIpa": "phã²¹piã⁵⁵",
+            "zh": "旁边"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "sie³⁵tʰa⁵⁵",
+            "originalIpa": "sie³⁵tha⁵⁵",
+            "zh": "旁边"
+          },
+          {
+            "ipa": "la⁵⁵",
+            "originalIpa": "la⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "wo⁵³",
+            "originalIpa": "wo⁵³",
+            "zh": "蛇"
+          },
+          {
+            "ipa": "zie⁵³",
+            "originalIpa": "zie⁵³",
+            "zh": "四"
+          },
+          {
+            "ipa": "tsi⁵⁵",
+            "originalIpa": "tsi⁵⁵",
+            "zh": "条"
+          },
+          {
+            "ipa": "a²¹si²¹",
+            "originalIpa": "a²¹si²¹",
+            "zh": "白"
+          },
+          {
+            "ipa": "kie²¹",
+            "originalIpa": "kie²¹",
+            "zh": "这里"
+          },
+          {
+            "ipa": "na⁵⁵kuei⁵⁵",
+            "originalIpa": "na⁵⁵kuei⁵⁵",
+            "zh": "一边"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "si³⁵",
+            "originalIpa": "si³⁵",
+            "zh": "是"
+          }
+        ]
+      },
+      {
+        "id": "2.1-040",
+        "page": "43",
+        "ipa": "wo⁵³ ũ⁵³ tsi⁵⁵ ɕĩ³⁵ka⁵⁵te²¹ ji³⁵xa⁵⁵ lie⁵⁵ tɕiu⁵⁵si⁵⁵ tɕiu⁵³ kẽ⁵⁵",
+        "originalIpa": "wo⁵³ ũ⁵³ tsi⁵⁵ çĩ³⁵ka⁵⁵te²¹ ji³⁵xa⁵⁵ lie⁵⁵ tçiu⁵⁵si⁵⁵ tçiu⁵³ kẽ⁵⁵",
+        "zh": "这边又有五条蓝色的蛇，一共九条，",
+        "glosses": [
+          {
+            "ipa": "wo⁵³",
+            "originalIpa": "wo⁵³",
+            "zh": "蛇"
+          },
+          {
+            "ipa": "ũ⁵³",
+            "originalIpa": "ũ⁵³",
+            "zh": "五"
+          },
+          {
+            "ipa": "tsi⁵⁵",
+            "originalIpa": "tsi⁵⁵",
+            "zh": "根"
+          },
+          {
+            "ipa": "ɕĩ³⁵ka⁵⁵te²¹",
+            "originalIpa": "çĩ³⁵ka⁵⁵te²¹",
+            "zh": "蓝色的"
+          },
+          {
+            "ipa": "ji³⁵xa⁵⁵",
+            "originalIpa": "ji³⁵xa⁵⁵",
+            "zh": "一共"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵si⁵⁵",
+            "originalIpa": "tçiu⁵⁵si⁵⁵",
+            "zh": "就是"
+          },
+          {
+            "ipa": "tɕiu⁵³",
+            "originalIpa": "tçiu⁵³",
+            "zh": "九"
+          },
+          {
+            "ipa": "kẽ⁵⁵",
+            "originalIpa": "kẽ⁵⁵",
+            "zh": "根"
+          }
+        ]
+      },
+      {
+        "id": "2.1-041",
+        "page": "43",
+        "ipa": "kie⁵³tsie²¹ tsuã⁵⁵mẽ²¹ tɕiu⁵⁵ ẽ⁵⁵ti⁵⁵ jau³⁵ kʰa⁵³ po⁵⁵ ɕi⁵⁵",
+        "originalIpa": "kie⁵³tsie²¹ tsuã⁵⁵mẽ²¹ tçiu⁵⁵ ẽ⁵⁵ti⁵⁵ jau³⁵ kha⁵³ po⁵⁵ çi⁵⁵",
+        "zh": "它们专门看守这株药，",
+        "glosses": [
+          {
+            "ipa": "kie⁵³tsie²¹",
+            "originalIpa": "kie⁵³tsie²¹",
+            "zh": "3pl"
+          },
+          {
+            "ipa": "tsuã⁵⁵mẽ²¹",
+            "originalIpa": "tsuã⁵⁵mẽ²¹",
+            "zh": "专门"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "kʰa⁵³",
+            "originalIpa": "kha⁵³",
+            "zh": "看守"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ɕi⁵⁵",
+            "originalIpa": "çi⁵⁵",
+            "zh": "STRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-042",
+        "page": "43",
+        "ipa": "si²¹si²¹kʰie²¹kʰie²¹ tɕʰe⁵³ si²¹tɕe²¹ to⁵⁵ jau³⁵ pa⁵³ po⁵⁵ ɕi⁵⁵",
+        "originalIpa": "si²¹si²¹khie²¹khie²¹ tçhe⁵³ si²¹tçe²¹ to⁵⁵ jau³⁵ pa⁵³ po⁵⁵ çi⁵⁵",
+        "zh": "时时刻刻，什么时候都守着。",
+        "glosses": [
+          {
+            "ipa": "si²¹si²¹kʰie²¹kʰie²¹",
+            "originalIpa": "si²¹si²¹khie²¹khie²¹",
+            "zh": "时时刻刻"
+          },
+          {
+            "ipa": "tɕʰe⁵³",
+            "originalIpa": "tçhe⁵³",
+            "zh": "什么"
+          },
+          {
+            "ipa": "si²¹tɕe²¹",
+            "originalIpa": "si²¹tçe²¹",
+            "zh": "时候"
+          },
+          {
+            "ipa": "to⁵⁵",
+            "originalIpa": "to⁵⁵",
+            "zh": "都"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "pa⁵³",
+            "originalIpa": "pa⁵³",
+            "zh": "看"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ɕi⁵⁵",
+            "originalIpa": "çi⁵⁵",
+            "zh": "STRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-043",
+        "page": "43",
+        "ipa": "a⁵³sie²¹ to⁵⁵ ko³⁵ ẽ⁵⁵ti⁵⁵ jau³⁵ pu³⁵tsuẽ⁵³ tʰe³⁵",
+        "originalIpa": "a⁵³sie²¹ to⁵⁵ ko³⁵ ẽ⁵⁵ti⁵⁵ jau³⁵ pu³⁵tsuẽ⁵³ the³⁵",
+        "zh": "谁都不可以摘这株药，",
+        "glosses": [
+          {
+            "ipa": "a⁵³sie²¹",
+            "originalIpa": "a⁵³sie²¹",
+            "zh": "谁"
+          },
+          {
+            "ipa": "to⁵⁵",
+            "originalIpa": "to⁵⁵",
+            "zh": "都"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "pu³⁵tsuẽ⁵³",
+            "originalIpa": "pu³⁵tsuẽ⁵³",
+            "zh": "不准"
+          },
+          {
+            "ipa": "tʰe³⁵",
+            "originalIpa": "the³⁵",
+            "zh": "摘"
+          }
+        ]
+      },
+      {
+        "id": "2.1-044",
+        "page": "43",
+        "ipa": "ẽ⁵⁵ti⁵⁵ jau³⁵ tʰe³⁵ le⁵³ kie⁵³tsie²¹ tɕiu⁵⁵ wo⁵³ tɕiu⁵⁵ no⁵³ ka³⁵-i³⁵",
+        "originalIpa": "ẽ⁵⁵ti⁵⁵ jau³⁵ the³⁵ le⁵³ kie⁵³tsie²¹ tçiu⁵⁵ wo⁵³ tçiu⁵⁵ no⁵³ ka³⁵-i³⁵",
+        "zh": "谁摘这株药的话，它们就会咬谁，",
+        "glosses": [
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "tʰe³⁵",
+            "originalIpa": "the³⁵",
+            "zh": "摘"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "kie⁵³tsie²¹",
+            "originalIpa": "kie⁵³tsie²¹",
+            "zh": "3pl"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "wo⁵³",
+            "originalIpa": "wo⁵³",
+            "zh": "蛇"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "no⁵³",
+            "originalIpa": "no⁵³",
+            "zh": "人"
+          },
+          {
+            "ipa": "ka³⁵-i³⁵",
+            "originalIpa": "ka³⁵-i³⁵",
+            "zh": "咬"
+          }
+        ]
+      },
+      {
+        "id": "2.1-045",
+        "page": "43",
+        "ipa": "ko³⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ ko³⁵ au⁵⁵ pa⁵³ po⁵⁵ kau⁵³tsʰi²¹ tʰai³⁵",
+        "originalIpa": "ko³⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ ko³⁵ au⁵⁵ pa⁵³ po⁵⁵ kau⁵³tshi²¹ thai³⁵",
+        "zh": "她一天一天在那儿看着，没办法，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "au⁵⁵",
+            "originalIpa": "au⁵⁵",
+            "zh": "那里"
+          },
+          {
+            "ipa": "pa⁵³",
+            "originalIpa": "pa⁵³",
+            "zh": "看"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "kau⁵³tsʰi²¹",
+            "originalIpa": "kau⁵³tshi²¹",
+            "zh": "搞的"
+          },
+          {
+            "ipa": "tʰai³⁵",
+            "originalIpa": "thai³⁵",
+            "zh": "没有"
+          }
+        ]
+      },
+      {
+        "id": "2.1-046",
+        "page": "44",
+        "ipa": "ai⁵⁵ na⁵⁵ ne⁵³ lie⁵⁵ ko³⁵ au⁵⁵ pa⁵³ to⁵⁵ liau⁵³ ko³⁵ mie³⁵su²¹ si²¹tɕe²¹ nau²¹tsʰi²¹ tsu³⁵ tiu⁵⁵",
+        "originalIpa": "ai⁵⁵ na⁵⁵ ne⁵³ lie⁵⁵ ko³⁵ au⁵⁵ pa⁵³ to⁵⁵ liau⁵³ ko³⁵ mie³⁵su²¹ si²¹tçe²¹ nau²¹tshi²¹ tsu³⁵ tiu⁵⁵",
+        "zh": "一天，她看到天亮时分，太阳出来了，",
+        "glosses": [
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "那"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "au⁵⁵",
+            "originalIpa": "au⁵⁵",
+            "zh": "那里"
+          },
+          {
+            "ipa": "pa⁵³",
+            "originalIpa": "pa⁵³",
+            "zh": "看"
+          },
+          {
+            "ipa": "to⁵⁵",
+            "originalIpa": "to⁵⁵",
+            "zh": "到"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "mie³⁵su²¹",
+            "originalIpa": "mie³⁵su²¹",
+            "zh": "天亮"
+          },
+          {
+            "ipa": "si²¹tɕe²¹",
+            "originalIpa": "si²¹tçe²¹",
+            "zh": "时候"
+          },
+          {
+            "ipa": "nau²¹tsʰi²¹",
+            "originalIpa": "nau²¹tshi²¹",
+            "zh": "太阳"
+          },
+          {
+            "ipa": "tsu³⁵",
+            "originalIpa": "tsu³⁵",
+            "zh": "出"
+          },
+          {
+            "ipa": "tiu⁵⁵",
+            "originalIpa": "tiu⁵⁵",
+            "zh": "DIRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-047",
+        "page": "44",
+        "ipa": "nau²¹tsʰi²¹ tsu³⁵ le⁵³ mie³⁵ ne⁵⁵ li⁵³ ta⁵³ li²¹kʰai⁵⁵ ne⁵⁵ si²¹tɕe²¹ lie⁵⁵",
+        "originalIpa": "nau²¹tshi²¹ tsu³⁵ le⁵³ mie³⁵ ne⁵⁵ li⁵³ ta⁵³ li²¹khai⁵⁵ ne⁵⁵ si²¹tçe²¹ lie⁵⁵",
+        "zh": "太阳出来后，天跟地分开的时候，",
+        "glosses": [
+          {
+            "ipa": "nau²¹tsʰi²¹",
+            "originalIpa": "nau²¹tshi²¹",
+            "zh": "太阳"
+          },
+          {
+            "ipa": "tsu³⁵",
+            "originalIpa": "tsu³⁵",
+            "zh": "出"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "mie³⁵",
+            "originalIpa": "mie³⁵",
+            "zh": "天"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "COOC"
+          },
+          {
+            "ipa": "li⁵³",
+            "originalIpa": "li⁵³",
+            "zh": "地"
+          },
+          {
+            "ipa": "ta⁵³",
+            "originalIpa": "ta⁵³",
+            "zh": "一起"
+          },
+          {
+            "ipa": "li²¹kʰai⁵⁵",
+            "originalIpa": "li²¹khai⁵⁵",
+            "zh": "离开"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "si²¹tɕe²¹",
+            "originalIpa": "si²¹tçe²¹",
+            "zh": "时候"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-048",
+        "page": "44",
+        "ipa": "ẽ⁵⁵ti⁵⁵ wo⁵³ lie⁵⁵ tɕiu⁵⁵ lo³⁵pu⁵⁵ na⁵⁵ tũ⁵⁵ tɕʰĩ⁵⁵tɕʰĩ²¹",
+        "originalIpa": "ẽ⁵⁵ti⁵⁵ wo⁵³ lie⁵⁵ tçiu⁵⁵ lo³⁵pu⁵⁵ na⁵⁵ tũ⁵⁵ tçhĩ⁵⁵tçhĩ²¹",
+        "zh": "这些蛇就闭了一下眼睛。",
+        "glosses": [
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "wo⁵³",
+            "originalIpa": "wo⁵³",
+            "zh": "蛇"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "lo³⁵pu⁵⁵",
+            "originalIpa": "lo³⁵pu⁵⁵",
+            "zh": "眼睛"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tũ⁵⁵",
+            "originalIpa": "tũ⁵⁵",
+            "zh": "下"
+          },
+          {
+            "ipa": "tɕʰĩ⁵⁵tɕʰĩ²¹",
+            "originalIpa": "tçhĩ⁵⁵tçhĩ²¹",
+            "zh": "闭"
+          }
+        ]
+      },
+      {
+        "id": "2.1-049",
+        "page": "44",
+        "ipa": "o⁵⁵ ko³⁵ xau⁵³ziu²¹ ko³⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ tʰi⁵³ po⁵⁵",
+        "originalIpa": "o⁵⁵ ko³⁵ xau⁵³ziu²¹ ko³⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ thi⁵³ po⁵⁵",
+        "zh": "她知道了，她整天在那儿等，",
+        "glosses": [
+          {
+            "ipa": "o⁵⁵",
+            "originalIpa": "o⁵⁵",
+            "zh": "INTJ"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "xau⁵³ziu²¹",
+            "originalIpa": "xau⁵³ziu²¹",
+            "zh": "知道"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "tʰi⁵³",
+            "originalIpa": "thi⁵³",
+            "zh": "等"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          }
+        ],
+        "notes": "原书注：xau⁵³ziu²¹是xau⁵³zi²¹“知道”的完成体形式，下同。"
+      },
+      {
+        "id": "2.1-050",
+        "page": "44",
+        "ipa": "o⁵⁵ ne³⁵pe⁵³tsie³⁵ liau⁵³ ko³⁵ tɕiu⁵⁵ kʰa²¹ nau⁵³ kʰo⁵⁵ le⁵³ lo³⁵pu⁵⁵ tsʰẽ³⁵ po⁵⁵",
+        "originalIpa": "o⁵⁵ ne³⁵pe⁵³tsie³⁵ liau⁵³ ko³⁵ tçiu⁵⁵ kha²¹ nau⁵³ kho⁵⁵ le⁵³ lo³⁵pu⁵⁵ tshẽ³⁵ po⁵⁵",
+        "zh": "想睡觉了，她就折断一根木棍把眼睛撑起来，",
+        "glosses": [
+          {
+            "ipa": "o⁵⁵",
+            "originalIpa": "o⁵⁵",
+            "zh": "INTJ"
+          },
+          {
+            "ipa": "ne³⁵pe⁵³tsie³⁵",
+            "originalIpa": "ne³⁵pe⁵³tsie³⁵",
+            "zh": "想打瞌睡"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "kʰa²¹",
+            "originalIpa": "kha²¹",
+            "zh": "柴"
+          },
+          {
+            "ipa": "nau⁵³",
+            "originalIpa": "nau⁵³",
+            "zh": "一根"
+          },
+          {
+            "ipa": "kʰo⁵⁵",
+            "originalIpa": "kho⁵⁵",
+            "zh": "折"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "lo³⁵pu⁵⁵",
+            "originalIpa": "lo³⁵pu⁵⁵",
+            "zh": "眼睛"
+          },
+          {
+            "ipa": "tsʰẽ³⁵",
+            "originalIpa": "tshẽ³⁵",
+            "zh": "撑"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-051",
+        "page": "44–45",
+        "ipa": "sa⁵³ liau⁵³ ko³⁵ tɕiu⁵⁵ kʰa²¹ pʰu³⁵tʰa⁵⁵ tʰe³⁵ le⁵³ tuei⁵³ po⁵⁵ ko³⁵ tɕiu⁵⁵",
+        "originalIpa": "sa⁵³ liau⁵³ ko³⁵ tçiu⁵⁵ kha²¹ phu³⁵tha⁵⁵ the³⁵ le⁵³ tuei⁵³ po⁵⁵ ko³⁵ tçiu⁵⁵",
+        "zh": "冷了，她就摘树叶堆在一起取暖，",
+        "glosses": [
+          {
+            "ipa": "sa⁵³",
+            "originalIpa": "sa⁵³",
+            "zh": "冷"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "kʰa²¹",
+            "originalIpa": "kha²¹",
+            "zh": "树"
+          },
+          {
+            "ipa": "pʰu³⁵tʰa⁵⁵",
+            "originalIpa": "phu³⁵tha⁵⁵",
+            "zh": "叶"
+          },
+          {
+            "ipa": "tʰe³⁵",
+            "originalIpa": "the³⁵",
+            "zh": "摘"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tuei⁵³",
+            "originalIpa": "tuei⁵³",
+            "zh": "堆"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          }
+        ]
+      },
+      {
+        "id": "2.1-052",
+        "page": "45",
+        "ipa": "nau²¹tsʰi²¹ tsu³⁵ ɕi⁵⁵ pa⁵³ po⁵⁵ nau²¹tsʰi²¹ tsu³⁵ tiu⁵⁵ lie⁵⁵",
+        "originalIpa": "nau²¹tshi²¹ tsu³⁵ çi⁵⁵ pa⁵³ po⁵⁵ nau²¹tshi²¹ tsu³⁵ tiu⁵⁵ lie⁵⁵",
+        "zh": "她就这样盼着太阳出来，太阳出来后，",
+        "glosses": [
+          {
+            "ipa": "nau²¹tsʰi²¹",
+            "originalIpa": "nau²¹tshi²¹",
+            "zh": "太阳"
+          },
+          {
+            "ipa": "tsu³⁵",
+            "originalIpa": "tsu³⁵",
+            "zh": "出"
+          },
+          {
+            "ipa": "ɕi⁵⁵",
+            "originalIpa": "çi⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "pa⁵³",
+            "originalIpa": "pa⁵³",
+            "zh": "看"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "nau²¹tsʰi²¹",
+            "originalIpa": "nau²¹tshi²¹",
+            "zh": "太阳"
+          },
+          {
+            "ipa": "tsu³⁵",
+            "originalIpa": "tsu³⁵",
+            "zh": "出"
+          },
+          {
+            "ipa": "tiu⁵⁵",
+            "originalIpa": "tiu⁵⁵",
+            "zh": "DIRP"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-053",
+        "page": "45",
+        "ipa": "ko³⁵ tɕiu⁵⁵ tsuẽ⁵³pei²¹ xo²¹le²¹ tɕʰĩ⁵⁵tʰẽ²¹ ɣie³⁵la³⁵ miã²¹tʰẽ²¹ ɣie³⁵la³⁵ ko³⁵ sẽ⁵⁵tsi⁵⁵ ka²¹ tʰi³⁵ po⁵⁵ ɕi⁵⁵",
+        "originalIpa": "ko³⁵ tçiu⁵⁵ tsuẽ⁵³pei²¹ xo²¹le²¹ tçhĩ⁵⁵thẽ²¹ ɣie³⁵la³⁵ miã²¹thẽ²¹ ɣie³⁵la³⁵ ko³⁵ sẽ⁵⁵tsi⁵⁵ ka²¹ thi³⁵ po⁵⁵ çi⁵⁵",
+        "zh": "她就准备用青藤缠在她身上，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "tsuẽ⁵³pei²¹",
+            "originalIpa": "tsuẽ⁵³pei²¹",
+            "zh": "准备"
+          },
+          {
+            "ipa": "xo²¹le²¹",
+            "originalIpa": "xo²¹le²¹",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tɕʰĩ⁵⁵tʰẽ²¹",
+            "originalIpa": "tçhĩ⁵⁵thẽ²¹",
+            "zh": "青藤"
+          },
+          {
+            "ipa": "ɣie³⁵la³⁵",
+            "originalIpa": "ɣie³⁵la³⁵",
+            "zh": "绳子"
+          },
+          {
+            "ipa": "miã²¹tʰẽ²¹",
+            "originalIpa": "miã²¹thẽ²¹",
+            "zh": "棉藤"
+          },
+          {
+            "ipa": "ɣie³⁵la³⁵",
+            "originalIpa": "ɣie³⁵la³⁵",
+            "zh": "绳子"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "sẽ⁵⁵tsi⁵⁵",
+            "originalIpa": "sẽ⁵⁵tsi⁵⁵",
+            "zh": "身子"
+          },
+          {
+            "ipa": "ka²¹",
+            "originalIpa": "ka²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "tʰi³⁵",
+            "originalIpa": "thi³⁵",
+            "zh": "捆"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ɕi⁵⁵",
+            "originalIpa": "çi⁵⁵",
+            "zh": "STRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-054",
+        "page": "45",
+        "ipa": "ai⁵⁵le⁵³ kʰa²¹mũ²¹ ka²¹ tʰi³⁵ po⁵⁵ ɕi⁵⁵ kʰie⁵³ ɕi²¹ ɕi⁵⁵ ta⁵³tsie²¹",
+        "originalIpa": "ai⁵⁵le⁵³ kha²¹mũ²¹ ka²¹ thi³⁵ po⁵⁵ çi⁵⁵ khie⁵³ çi²¹ çi⁵⁵ ta⁵³tsie²¹",
+        "zh": "然后绑在树上，像荡秋千一样，",
+        "glosses": [
+          {
+            "ipa": "ai⁵⁵le⁵³",
+            "originalIpa": "ai⁵⁵le⁵³",
+            "zh": "TRAC"
+          },
+          {
+            "ipa": "kʰa²¹mũ²¹",
+            "originalIpa": "kha²¹mũ²¹",
+            "zh": "树"
+          },
+          {
+            "ipa": "ka²¹",
+            "originalIpa": "ka²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "tʰi³⁵",
+            "originalIpa": "thi³⁵",
+            "zh": "捆"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ɕi⁵⁵",
+            "originalIpa": "çi⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "kʰie⁵³",
+            "originalIpa": "khie⁵³",
+            "zh": "秋千"
+          },
+          {
+            "ipa": "ɕi²¹",
+            "originalIpa": "çi²¹",
+            "zh": "荡"
+          },
+          {
+            "ipa": "ɕi⁵⁵",
+            "originalIpa": "çi⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "ta⁵³tsie²¹",
+            "originalIpa": "ta⁵³tsie²¹",
+            "zh": "像"
+          }
+        ]
+      },
+      {
+        "id": "2.1-055",
+        "page": "45",
+        "ipa": "ko³⁵ tsi³⁵jau⁵⁵ nau²¹tsʰi²¹ li⁵³ ka²¹xa³⁵ na³⁵tũ⁵⁵ tsu³⁵ tiu⁵⁵",
+        "originalIpa": "ko³⁵ tsi³⁵jau⁵⁵ nau²¹tshi²¹ li⁵³ ka²¹xa³⁵ na³⁵tũ⁵⁵ tsu³⁵ tiu⁵⁵",
+        "zh": "只要太阳一出来，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tsi³⁵jau⁵⁵",
+            "originalIpa": "tsi³⁵jau⁵⁵",
+            "zh": "只要"
+          },
+          {
+            "ipa": "nau²¹tsʰi²¹",
+            "originalIpa": "nau²¹tshi²¹",
+            "zh": "太阳"
+          },
+          {
+            "ipa": "li⁵³",
+            "originalIpa": "li⁵³",
+            "zh": "地"
+          },
+          {
+            "ipa": "ka²¹xa³⁵",
+            "originalIpa": "ka²¹xa³⁵",
+            "zh": "上面"
+          },
+          {
+            "ipa": "na³⁵tũ⁵⁵",
+            "originalIpa": "na³⁵tũ⁵⁵",
+            "zh": "一下"
+          },
+          {
+            "ipa": "tsu³⁵",
+            "originalIpa": "tsu³⁵",
+            "zh": "出"
+          },
+          {
+            "ipa": "tiu⁵⁵",
+            "originalIpa": "tiu⁵⁵",
+            "zh": "DIRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-056",
+        "page": "45",
+        "ipa": "ko³⁵ tɕiu⁵⁵ kʰie⁵³ ɕi²¹ ɕi⁵⁵ ta⁵³tsie²¹ xu²¹ te²¹ jau³⁵ tsʰi⁵⁵tsʰa⁵³-i³⁵",
+        "originalIpa": "ko³⁵ tçiu⁵⁵ khie⁵³ çi²¹ çi⁵⁵ ta⁵³tsie²¹ xu²¹ te²¹ jau³⁵ tshi⁵⁵tsha⁵³-i³⁵",
+        "zh": "她就像荡秋千一样去扯药，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "kʰie⁵³",
+            "originalIpa": "khie⁵³",
+            "zh": "秋千"
+          },
+          {
+            "ipa": "ɕi²¹",
+            "originalIpa": "çi²¹",
+            "zh": "荡"
+          },
+          {
+            "ipa": "ɕi⁵⁵",
+            "originalIpa": "çi⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "ta⁵³tsie²¹",
+            "originalIpa": "ta⁵³tsie²¹",
+            "zh": "像"
+          },
+          {
+            "ipa": "xu²¹",
+            "originalIpa": "xu²¹",
+            "zh": "呼"
+          },
+          {
+            "ipa": "te²¹",
+            "originalIpa": "te²¹",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "tsʰi⁵⁵tsʰa⁵³-i³⁵",
+            "originalIpa": "tshi⁵⁵tsha⁵³-i³⁵",
+            "zh": "扯"
+          }
+        ]
+      },
+      {
+        "id": "2.1-057",
+        "page": "45",
+        "ipa": "xã³⁵ ŋã²¹ po⁵⁵ ɕi⁵⁵ tsẽ³⁵tsai⁵⁵ mie³⁵su²¹ tiu⁵⁵ wa⁵⁵",
+        "originalIpa": "xã³⁵ ŋã²¹ po⁵⁵ çi⁵⁵ tsẽ³⁵tsai⁵⁵ mie³⁵su²¹ tiu⁵⁵ wa⁵⁵",
+        "zh": "她这样想。天快亮时，",
+        "glosses": [
+          {
+            "ipa": "xã³⁵",
+            "originalIpa": "xã³⁵",
+            "zh": "这样"
+          },
+          {
+            "ipa": "ŋã²¹",
+            "originalIpa": "ŋã²¹",
+            "zh": "想"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ɕi⁵⁵",
+            "originalIpa": "çi⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "tsẽ³⁵tsai⁵⁵",
+            "originalIpa": "tsẽ³⁵tsai⁵⁵",
+            "zh": "正在"
+          },
+          {
+            "ipa": "mie³⁵su²¹",
+            "originalIpa": "mie³⁵su²¹",
+            "zh": "天亮"
+          },
+          {
+            "ipa": "tiu⁵⁵",
+            "originalIpa": "tiu⁵⁵",
+            "zh": "DIRP"
+          },
+          {
+            "ipa": "wa⁵⁵",
+            "originalIpa": "wa⁵⁵",
+            "zh": "INJ"
+          }
+        ]
+      },
+      {
+        "id": "2.1-058",
+        "page": "45–46",
+        "ipa": "nau²¹tsʰi²¹ li⁵³ ka²¹ le⁵⁵ tsu³⁵ tiu⁵⁵ wa⁵⁵",
+        "originalIpa": "nau²¹tshi²¹ li⁵³ ka²¹ le⁵⁵ tsu³⁵ tiu⁵⁵ wa⁵⁵",
+        "zh": "太阳升起来了，",
+        "glosses": [
+          {
+            "ipa": "nau²¹tsʰi²¹",
+            "originalIpa": "nau²¹tshi²¹",
+            "zh": "太阳"
+          },
+          {
+            "ipa": "li⁵³",
+            "originalIpa": "li⁵³",
+            "zh": "地"
+          },
+          {
+            "ipa": "ka²¹",
+            "originalIpa": "ka²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "le⁵⁵",
+            "originalIpa": "le⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tsu³⁵",
+            "originalIpa": "tsu³⁵",
+            "zh": "出"
+          },
+          {
+            "ipa": "tiu⁵⁵",
+            "originalIpa": "tiu⁵⁵",
+            "zh": "DIRP"
+          },
+          {
+            "ipa": "wa⁵⁵",
+            "originalIpa": "wa⁵⁵",
+            "zh": "INJ"
+          }
+        ]
+      },
+      {
+        "id": "2.1-059",
+        "page": "46",
+        "ipa": "ko³⁵ pu⁵⁵mu²¹ le⁵³ ko³⁵ tɕiu⁵⁵ kʰie⁵³ ɕi²¹ la⁵⁵ xu⁵³",
+        "originalIpa": "ko³⁵ pu⁵⁵mu²¹ le⁵³ ko³⁵ tçiu⁵⁵ khie⁵³ çi²¹ la⁵⁵ xu⁵³",
+        "zh": "她开始荡秋千了，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "pu⁵⁵mu²¹",
+            "originalIpa": "pu⁵⁵mu²¹",
+            "zh": "摸"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "kʰie⁵³",
+            "originalIpa": "khie⁵³",
+            "zh": "秋千"
+          },
+          {
+            "ipa": "ɕi²¹",
+            "originalIpa": "çi²¹",
+            "zh": "荡"
+          },
+          {
+            "ipa": "la⁵⁵",
+            "originalIpa": "la⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "xu⁵³",
+            "originalIpa": "xu⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-060",
+        "page": "46",
+        "ipa": "kʰie⁵³ ɕi²¹ le⁵³ tɕe³⁵ ji³⁵ tsʰẽ⁵⁵",
+        "originalIpa": "khie⁵³ çi²¹ le⁵³ tçe³⁵ ji³⁵ tshẽ⁵⁵",
+        "zh": "荡秋千时手一伸，",
+        "glosses": [
+          {
+            "ipa": "kʰie⁵³",
+            "originalIpa": "khie⁵³",
+            "zh": "秋千"
+          },
+          {
+            "ipa": "ɕi²¹",
+            "originalIpa": "çi²¹",
+            "zh": "荡"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tɕe³⁵",
+            "originalIpa": "tçe³⁵",
+            "zh": "手"
+          },
+          {
+            "ipa": "ji³⁵",
+            "originalIpa": "ji³⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tsʰẽ⁵⁵",
+            "originalIpa": "tshẽ⁵⁵",
+            "zh": "伸"
+          }
+        ]
+      },
+      {
+        "id": "2.1-061",
+        "page": "46",
+        "ipa": "ji³⁵ tsʰẽ⁵⁵ le⁵³ tɕiu⁵⁵ jau³⁵ ɣie⁵⁵tʰa⁵⁵ na⁵⁵ ɣɨ⁵⁵ tʰe³⁵ tʰi²¹",
+        "originalIpa": "ji³⁵ tshẽ⁵⁵ le⁵³ tçiu⁵⁵ jau³⁵ ɣie⁵⁵tha⁵⁵ na⁵⁵ ɣɨ⁵⁵ the³⁵ thi²¹",
+        "zh": "就摘到了一张药叶子，",
+        "glosses": [
+          {
+            "ipa": "ji³⁵",
+            "originalIpa": "ji³⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tsʰẽ⁵⁵",
+            "originalIpa": "tshẽ⁵⁵",
+            "zh": "伸"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "ɣie⁵⁵tʰa⁵⁵",
+            "originalIpa": "ɣie⁵⁵tha⁵⁵",
+            "zh": "叶子"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ɣɨ⁵⁵",
+            "originalIpa": "ɣɨ⁵⁵",
+            "zh": "张"
+          },
+          {
+            "ipa": "tʰe³⁵",
+            "originalIpa": "the³⁵",
+            "zh": "摘"
+          },
+          {
+            "ipa": "tʰi²¹",
+            "originalIpa": "thi²¹",
+            "zh": "得"
+          }
+        ]
+      },
+      {
+        "id": "2.1-062",
+        "page": "46",
+        "ipa": "ɣie⁵⁵tʰa⁵⁵ na⁵⁵ ɣɨ⁵⁵ tʰe³⁵ le⁵³",
+        "originalIpa": "ɣie⁵⁵tha⁵⁵ na⁵⁵ ɣɨ⁵⁵ the³⁵ le⁵³",
+        "zh": "摘到一张药叶子之后，",
+        "glosses": [
+          {
+            "ipa": "ɣie⁵⁵tʰa⁵⁵",
+            "originalIpa": "ɣie⁵⁵tha⁵⁵",
+            "zh": "叶子"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ɣɨ⁵⁵",
+            "originalIpa": "ɣɨ⁵⁵",
+            "zh": "张"
+          },
+          {
+            "ipa": "tʰe³⁵",
+            "originalIpa": "the³⁵",
+            "zh": "摘"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-063",
+        "page": "46",
+        "ipa": "ti³⁵ ai³⁵ xau⁵⁵ na⁵⁵ tũ⁵⁵ tsʰẽ⁵⁵ le⁵³ tʰe³⁵ le⁵³",
+        "originalIpa": "ti³⁵ ai³⁵ xau⁵⁵ na⁵⁵ tũ⁵⁵ tshẽ⁵⁵ le⁵³ the³⁵ le⁵³",
+        "zh": "第二次，她又一伸去摘，",
+        "glosses": [
+          {
+            "ipa": "ti³⁵",
+            "originalIpa": "ti³⁵",
+            "zh": "第"
+          },
+          {
+            "ipa": "ai³⁵",
+            "originalIpa": "ai³⁵",
+            "zh": "二"
+          },
+          {
+            "ipa": "xau⁵⁵",
+            "originalIpa": "xau⁵⁵",
+            "zh": "次"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tũ⁵⁵",
+            "originalIpa": "tũ⁵⁵",
+            "zh": "下"
+          },
+          {
+            "ipa": "tsʰẽ⁵⁵",
+            "originalIpa": "tshẽ⁵⁵",
+            "zh": "伸"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tʰe³⁵",
+            "originalIpa": "the³⁵",
+            "zh": "摘"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-064",
+        "page": "46",
+        "ipa": "ko³⁵ lo³⁵pu⁵⁵ tʰũ³⁵ tiu⁵⁵",
+        "originalIpa": "ko³⁵ lo³⁵pu⁵⁵ thũ³⁵ tiu⁵⁵",
+        "zh": "蛇眼睛睁开了，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "lo³⁵pu⁵⁵",
+            "originalIpa": "lo³⁵pu⁵⁵",
+            "zh": "眼睛"
+          },
+          {
+            "ipa": "tʰũ³⁵",
+            "originalIpa": "thũ³⁵",
+            "zh": "睁开"
+          },
+          {
+            "ipa": "tiu⁵⁵",
+            "originalIpa": "tiu⁵⁵",
+            "zh": "DIRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-065",
+        "page": "46–47",
+        "ipa": "xu²¹ te²¹ kʰo⁵⁵pa⁵⁵ pi³⁵ tsʰẽ⁵⁵ le⁵³ ko³⁵ ko³⁵ ka³⁵-i³⁵",
+        "originalIpa": "xu²¹ te²¹ kho⁵⁵pa⁵⁵ pi³⁵ tshẽ⁵⁵ le⁵³ ko³⁵ ko³⁵ ka³⁵-i³⁵",
+        "zh": "头一伸要咬她，",
+        "glosses": [
+          {
+            "ipa": "xu²¹",
+            "originalIpa": "xu²¹",
+            "zh": "呼"
+          },
+          {
+            "ipa": "te²¹",
+            "originalIpa": "te²¹",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "kʰo⁵⁵pa⁵⁵",
+            "originalIpa": "kho⁵⁵pa⁵⁵",
+            "zh": "头"
+          },
+          {
+            "ipa": "pi³⁵",
+            "originalIpa": "pi³⁵",
+            "zh": "小"
+          },
+          {
+            "ipa": "tsʰẽ⁵⁵",
+            "originalIpa": "tshẽ⁵⁵",
+            "zh": "伸"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "ka³⁵-i³⁵",
+            "originalIpa": "ka³⁵-i³⁵",
+            "zh": "咬"
+          }
+        ]
+      },
+      {
+        "id": "2.1-066",
+        "page": "47",
+        "ipa": "ko³⁵ kʰuai³⁵tiã⁵⁵ tɕiu⁵⁵ sũ⁵⁵kʰo⁵⁵ tiu⁵⁵",
+        "originalIpa": "ko³⁵ khuai³⁵tiã⁵⁵ tçiu⁵⁵ sũ⁵⁵kho⁵⁵ tiu⁵⁵",
+        "zh": "她很快就回来了，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "kʰuai³⁵tiã⁵⁵",
+            "originalIpa": "khuai³⁵tiã⁵⁵",
+            "zh": "很快"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "sũ⁵⁵kʰo⁵⁵",
+            "originalIpa": "sũ⁵⁵kho⁵⁵",
+            "zh": "回"
+          },
+          {
+            "ipa": "tiu⁵⁵",
+            "originalIpa": "tiu⁵⁵",
+            "zh": "DIRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-067",
+        "page": "47",
+        "ipa": "sũ⁵⁵kʰo⁵⁵ le⁵³ ko³⁵ tɕiu⁵⁵ ai⁵⁵ jau³⁵ pi³⁵lã⁵⁵ xo²¹le²¹ tɕiu⁵⁵ pa²¹tʰi²¹ tsai³⁵tsi⁵⁵ sã²¹ a⁵⁵ no⁵³te⁵³ po⁵⁵ tsʰie²¹ xua³⁵",
+        "originalIpa": "sũ⁵⁵kho⁵⁵ le⁵³ ko³⁵ tçiu⁵⁵ ai⁵⁵ jau³⁵ pi³⁵lã⁵⁵ xo²¹le²¹ tçiu⁵⁵ pa²¹thi²¹ tsai³⁵tsi⁵⁵ sã²¹ a⁵⁵ no⁵³te⁵³ po⁵⁵ tshie²¹ xua³⁵",
+        "zh": "她拿着那点药回到了寨子里，给人发水，",
+        "glosses": [
+          {
+            "ipa": "sũ⁵⁵kʰo⁵⁵",
+            "originalIpa": "sũ⁵⁵kho⁵⁵",
+            "zh": "回"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "那"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "pi³⁵lã⁵⁵",
+            "originalIpa": "pi³⁵lã⁵⁵",
+            "zh": "一点"
+          },
+          {
+            "ipa": "xo²¹le²¹",
+            "originalIpa": "xo²¹le²¹",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "pa²¹tʰi²¹",
+            "originalIpa": "pa²¹thi²¹",
+            "zh": "下面"
+          },
+          {
+            "ipa": "tsai³⁵tsi⁵⁵",
+            "originalIpa": "tsai³⁵tsi⁵⁵",
+            "zh": "寨子"
+          },
+          {
+            "ipa": "sã²¹",
+            "originalIpa": "sã²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "a⁵⁵",
+            "originalIpa": "a⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "no⁵³te⁵³",
+            "originalIpa": "no⁵³te⁵³",
+            "zh": "别人"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tsʰie²¹",
+            "originalIpa": "tshie²¹",
+            "zh": "水"
+          },
+          {
+            "ipa": "xua³⁵",
+            "originalIpa": "xua³⁵",
+            "zh": "发"
+          }
+        ]
+      },
+      {
+        "id": "2.1-068",
+        "page": "47",
+        "ipa": "tsʰie²¹ na⁵⁵ su⁵⁵ tʰu³⁵ le⁵³ jau³⁵ pi³⁵lã⁵⁵ la³⁵",
+        "originalIpa": "tshie²¹ na⁵⁵ su⁵⁵ thu³⁵ le⁵³ jau³⁵ pi³⁵lã⁵⁵ la³⁵",
+        "zh": "倒了一碗水，往里面放点药，",
+        "glosses": [
+          {
+            "ipa": "tsʰie²¹",
+            "originalIpa": "tshie²¹",
+            "zh": "水"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "su⁵⁵",
+            "originalIpa": "su⁵⁵",
+            "zh": "碗"
+          },
+          {
+            "ipa": "tʰu³⁵",
+            "originalIpa": "thu³⁵",
+            "zh": "倒"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "pi³⁵lã⁵⁵",
+            "originalIpa": "pi³⁵lã⁵⁵",
+            "zh": "一点"
+          },
+          {
+            "ipa": "la³⁵",
+            "originalIpa": "la³⁵",
+            "zh": "放"
+          }
+        ]
+      },
+      {
+        "id": "2.1-069",
+        "page": "47",
+        "ipa": "jau³⁵ pi³⁵lã⁵⁵ la³⁵ le⁵³ no⁵³te⁵³ no⁵³ ai⁵⁵ti⁵⁵ jau³⁵ xu²¹ le⁵³ tsʰa³⁵ liau⁵³",
+        "originalIpa": "jau³⁵ pi³⁵lã⁵⁵ la³⁵ le⁵³ no⁵³te⁵³ no⁵³ ai⁵⁵ti⁵⁵ jau³⁵ xu²¹ le⁵³ tsha³⁵ liau⁵³",
+        "zh": "放点药后，别人一喝那药就好。",
+        "glosses": [
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "pi³⁵lã⁵⁵",
+            "originalIpa": "pi³⁵lã⁵⁵",
+            "zh": "一点"
+          },
+          {
+            "ipa": "la³⁵",
+            "originalIpa": "la³⁵",
+            "zh": "放"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "no⁵³te⁵³",
+            "originalIpa": "no⁵³te⁵³",
+            "zh": "别人"
+          },
+          {
+            "ipa": "no⁵³",
+            "originalIpa": "no⁵³",
+            "zh": "人"
+          },
+          {
+            "ipa": "ai⁵⁵ti⁵⁵",
+            "originalIpa": "ai⁵⁵ti⁵⁵",
+            "zh": "那个"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "xu²¹",
+            "originalIpa": "xu²¹",
+            "zh": "喝"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tsʰa³⁵",
+            "originalIpa": "tsha³⁵",
+            "zh": "好"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-070",
+        "page": "47",
+        "ipa": "ni³⁵ na⁵⁵ tsie⁵⁵ xu²¹ ko³⁵ na⁵⁵ tsie⁵⁵ xu²¹",
+        "originalIpa": "ni³⁵ na⁵⁵ tsie⁵⁵ xu²¹ ko³⁵ na⁵⁵ tsie⁵⁵ xu²¹",
+        "zh": "你一口，他一口，",
+        "glosses": [
+          {
+            "ipa": "ni³⁵",
+            "originalIpa": "ni³⁵",
+            "zh": "2sg"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tsie⁵⁵",
+            "originalIpa": "tsie⁵⁵",
+            "zh": "口"
+          },
+          {
+            "ipa": "xu²¹",
+            "originalIpa": "xu²¹",
+            "zh": "喝"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tsie⁵⁵",
+            "originalIpa": "tsie⁵⁵",
+            "zh": "口"
+          },
+          {
+            "ipa": "xu²¹",
+            "originalIpa": "xu²¹",
+            "zh": "喝"
+          }
+        ]
+      },
+      {
+        "id": "2.1-071",
+        "page": "47–48",
+        "ipa": "xu²¹ma²¹te⁵³ lie⁵⁵ tɕe²¹ɕi³⁵ tsʰa³⁵ liau⁵³ tsʰa³⁵ liau⁵³ lie⁵⁵",
+        "originalIpa": "xu²¹ma²¹te⁵³ lie⁵⁵ tçe²¹çi³⁵ tsha³⁵ liau⁵³ tsha³⁵ liau⁵³ lie⁵⁵",
+        "zh": "喝过的人全好了。",
+        "glosses": [
+          {
+            "ipa": "xu²¹ma²¹te⁵³",
+            "originalIpa": "xu²¹ma²¹te⁵³",
+            "zh": "喝的人"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "tɕe²¹ɕi³⁵",
+            "originalIpa": "tçe²¹çi³⁵",
+            "zh": "全部"
+          },
+          {
+            "ipa": "tsʰa³⁵",
+            "originalIpa": "tsha³⁵",
+            "zh": "好"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tsʰa³⁵",
+            "originalIpa": "tsha³⁵",
+            "zh": "好"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-072",
+        "page": "48",
+        "ipa": "ko³⁵ jiu³⁵ ai⁵⁵le⁵³ lẽ²¹ŋau²¹sã⁵⁵ po⁵⁵ xu⁵³tsʰa²¹ le⁵³ jiu³⁵ ɣie³⁵la⁵⁵ tʰe³⁵ po⁵⁵ mo²¹",
+        "originalIpa": "ko³⁵ jiu³⁵ ai⁵⁵le⁵³ lẽ²¹ŋau²¹sã⁵⁵ po⁵⁵ xu⁵³tsha²¹ le⁵³ jiu³⁵ ɣie³⁵la⁵⁵ the³⁵ po⁵⁵ mo²¹",
+        "zh": "然后她又跑到灵羔山上去摘药叶子，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "ai⁵⁵le⁵³",
+            "originalIpa": "ai⁵⁵le⁵³",
+            "zh": "TRAC"
+          },
+          {
+            "ipa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "zh": "灵羔山"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "xu⁵³tsʰa²¹",
+            "originalIpa": "xu⁵³tsha²¹",
+            "zh": "跑"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "ɣie³⁵la⁵⁵",
+            "originalIpa": "ɣie³⁵la⁵⁵",
+            "zh": "绳子"
+          },
+          {
+            "ipa": "tʰe³⁵",
+            "originalIpa": "the³⁵",
+            "zh": "摘"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "mo²¹",
+            "originalIpa": "mo²¹",
+            "zh": "STRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-073",
+        "page": "48",
+        "ipa": "kʰie⁵³ ɕi²¹ ta⁵³tsie²¹ jiu³⁵ xã³⁵ tʰi⁵³",
+        "originalIpa": "khie⁵³ çi²¹ ta⁵³tsie²¹ jiu³⁵ xã³⁵ thi⁵³",
+        "zh": "像荡秋千一样，又这样等，",
+        "glosses": [
+          {
+            "ipa": "kʰie⁵³",
+            "originalIpa": "khie⁵³",
+            "zh": "秋千"
+          },
+          {
+            "ipa": "ɕi²¹",
+            "originalIpa": "çi²¹",
+            "zh": "荡"
+          },
+          {
+            "ipa": "ta⁵³tsie²¹",
+            "originalIpa": "ta⁵³tsie²¹",
+            "zh": "像"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "xã³⁵",
+            "originalIpa": "xã³⁵",
+            "zh": "这样"
+          },
+          {
+            "ipa": "tʰi⁵³",
+            "originalIpa": "thi⁵³",
+            "zh": "等"
+          }
+        ]
+      },
+      {
+        "id": "2.1-074",
+        "page": "48",
+        "ipa": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ tʰi⁵³ tʰi⁵³ le⁵³ mie³⁵su²¹ je⁵³ le⁵³",
+        "originalIpa": "na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ thi⁵³ thi⁵³ le⁵³ mie³⁵su²¹ je⁵³ le⁵³",
+        "zh": "整天整天等，天亮时，",
+        "glosses": [
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "tʰi⁵³",
+            "originalIpa": "thi⁵³",
+            "zh": "等"
+          },
+          {
+            "ipa": "tʰi⁵³",
+            "originalIpa": "thi⁵³",
+            "zh": "等"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "mie³⁵su²¹",
+            "originalIpa": "mie³⁵su²¹",
+            "zh": "天亮"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "到"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-075",
+        "page": "48",
+        "ipa": "kʰie⁵³ ɕi²¹ ta⁵³tsie²¹ ji³⁵ ɕi²¹ le⁵³ jiu³⁵ ɣie⁵⁵tʰa⁵⁵ na⁵⁵ ɣɨ⁵⁵ tʰi²¹",
+        "originalIpa": "khie⁵³ çi²¹ ta⁵³tsie²¹ ji³⁵ çi²¹ le⁵³ jiu³⁵ ɣie⁵⁵tha⁵⁵ na⁵⁵ ɣɨ⁵⁵ thi²¹",
+        "zh": "又像荡秋千一样摘到了一张药叶子。",
+        "glosses": [
+          {
+            "ipa": "kʰie⁵³",
+            "originalIpa": "khie⁵³",
+            "zh": "秋千"
+          },
+          {
+            "ipa": "ɕi²¹",
+            "originalIpa": "çi²¹",
+            "zh": "荡"
+          },
+          {
+            "ipa": "ta⁵³tsie²¹",
+            "originalIpa": "ta⁵³tsie²¹",
+            "zh": "像"
+          },
+          {
+            "ipa": "ji³⁵",
+            "originalIpa": "ji³⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ɕi²¹",
+            "originalIpa": "çi²¹",
+            "zh": "荡"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "ɣie⁵⁵tʰa⁵⁵",
+            "originalIpa": "ɣie⁵⁵tha⁵⁵",
+            "zh": "叶子"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ɣɨ⁵⁵",
+            "originalIpa": "ɣɨ⁵⁵",
+            "zh": "张"
+          },
+          {
+            "ipa": "tʰi²¹",
+            "originalIpa": "thi²¹",
+            "zh": "得"
+          }
+        ]
+      },
+      {
+        "id": "2.1-076",
+        "page": "48",
+        "ipa": "ɣie⁵⁵tʰa⁵⁵ tʰi²¹ le⁵³ jiu³⁵ pa²¹tʰi²¹",
+        "originalIpa": "ɣie⁵⁵tha⁵⁵ thi²¹ le⁵³ jiu³⁵ pa²¹thi²¹",
+        "zh": "摘到药叶子后又回到了寨子里头。",
+        "glosses": [
+          {
+            "ipa": "ɣie⁵⁵tʰa⁵⁵",
+            "originalIpa": "ɣie⁵⁵tha⁵⁵",
+            "zh": "叶子"
+          },
+          {
+            "ipa": "tʰi²¹",
+            "originalIpa": "thi²¹",
+            "zh": "得"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "pa²¹tʰi²¹",
+            "originalIpa": "pa²¹thi²¹",
+            "zh": "下面"
+          }
+        ]
+      },
+      {
+        "id": "2.1-077",
+        "page": "48",
+        "ipa": "ɕiau⁵⁵ kai⁵³ ne⁵⁵ nũ²¹ la⁵³kʰa⁵⁵ lu⁵³ ko³⁵ lie⁵⁵ xai²¹si³⁵ xã³⁵ jã³⁵tsi⁵⁵",
+        "originalIpa": "çiau⁵⁵ kai⁵³ ne⁵⁵ nũ²¹ la⁵³kha⁵⁵ lu⁵³ ko³⁵ lie⁵⁵ xai²¹si³⁵ xã³⁵ jã³⁵tsi⁵⁵",
+        "zh": "很多年过去了，她还是这样子，",
+        "glosses": [
+          {
+            "ipa": "ɕiau⁵⁵",
+            "originalIpa": "çiau⁵⁵",
+            "zh": "晓得"
+          },
+          {
+            "ipa": "kai⁵³",
+            "originalIpa": "kai⁵³",
+            "zh": "很多"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "nũ²¹",
+            "originalIpa": "nũ²¹",
+            "zh": "年"
+          },
+          {
+            "ipa": "la⁵³kʰa⁵⁵",
+            "originalIpa": "la⁵³kha⁵⁵",
+            "zh": "过去"
+          },
+          {
+            "ipa": "lu⁵³",
+            "originalIpa": "lu⁵³",
+            "zh": "DIRP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "xai²¹si³⁵",
+            "originalIpa": "xai²¹si³⁵",
+            "zh": "还是"
+          },
+          {
+            "ipa": "xã³⁵",
+            "originalIpa": "xã³⁵",
+            "zh": "这"
+          },
+          {
+            "ipa": "jã³⁵tsi⁵⁵",
+            "originalIpa": "jã³⁵tsi⁵⁵",
+            "zh": "样子"
+          }
+        ]
+      },
+      {
+        "id": "2.1-078",
+        "page": "48–49",
+        "ipa": "a²¹si²¹tɕʰĩ²¹tɕʰĩ²¹ mo²¹ no⁵³te⁵³ tsʰu⁵⁵ ne⁵⁵ no⁵³ ja⁵⁵ xau⁵³tɕʰiã³⁵ tʰai³⁵",
+        "originalIpa": "a²¹si²¹tçhĩ²¹tçhĩ²¹ mo²¹ no⁵³te⁵³ tshu⁵⁵ ne⁵⁵ no⁵³ ja⁵⁵ xau⁵³tçhiã³⁵ thai³⁵",
+        "zh": "（头发）都白了，也没嫁人。",
+        "glosses": [
+          {
+            "ipa": "a²¹si²¹tɕʰĩ²¹tɕʰĩ²¹",
+            "originalIpa": "a²¹si²¹tçhĩ²¹tçhĩ²¹",
+            "zh": "白白的"
+          },
+          {
+            "ipa": "mo²¹",
+            "originalIpa": "mo²¹",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "no⁵³te⁵³",
+            "originalIpa": "no⁵³te⁵³",
+            "zh": "别人"
+          },
+          {
+            "ipa": "tsʰu⁵⁵",
+            "originalIpa": "tshu⁵⁵",
+            "zh": "家"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "no⁵³",
+            "originalIpa": "no⁵³",
+            "zh": "人"
+          },
+          {
+            "ipa": "ja⁵⁵",
+            "originalIpa": "ja⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "xau⁵³tɕʰiã³⁵",
+            "originalIpa": "xau⁵³tçhiã³⁵",
+            "zh": "好像"
+          },
+          {
+            "ipa": "tʰai³⁵",
+            "originalIpa": "thai³⁵",
+            "zh": "没有"
+          }
+        ]
+      },
+      {
+        "id": "2.1-079",
+        "page": "49",
+        "ipa": "xũ²¹tsai⁵⁵ no⁵³te⁵³ po⁵⁵ pĩ³⁵ tsi³⁵ no⁵³te⁵³ pĩ³⁵ tʰi²¹ liau⁵³ tɕiu⁵⁵ ko³⁵ ɕiã⁵³ li⁵⁵liã⁵⁵ti²¹",
+        "originalIpa": "xũ²¹tsai⁵⁵ no⁵³te⁵³ po⁵⁵ pĩ³⁵ tsi³⁵ no⁵³te⁵³ pĩ³⁵ thi²¹ liau⁵³ tçiu⁵⁵ ko³⁵ çiã⁵³ li⁵⁵liã⁵⁵ti²¹",
+        "zh": "一直给别人治病，别人生病了只要想她一下，",
+        "glosses": [
+          {
+            "ipa": "xũ²¹tsai⁵⁵",
+            "originalIpa": "xũ²¹tsai⁵⁵",
+            "zh": "反正"
+          },
+          {
+            "ipa": "no⁵³te⁵³",
+            "originalIpa": "no⁵³te⁵³",
+            "zh": "别人"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "pĩ³⁵",
+            "originalIpa": "pĩ³⁵",
+            "zh": "病"
+          },
+          {
+            "ipa": "tsi³⁵",
+            "originalIpa": "tsi³⁵",
+            "zh": "诊治"
+          },
+          {
+            "ipa": "no⁵³te⁵³",
+            "originalIpa": "no⁵³te⁵³",
+            "zh": "别人"
+          },
+          {
+            "ipa": "pĩ³⁵",
+            "originalIpa": "pĩ³⁵",
+            "zh": "病"
+          },
+          {
+            "ipa": "tʰi²¹",
+            "originalIpa": "thi²¹",
+            "zh": "得"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ɕiã⁵³",
+            "originalIpa": "çiã⁵³",
+            "zh": "想"
+          },
+          {
+            "ipa": "li⁵⁵liã⁵⁵ti²¹",
+            "originalIpa": "li⁵⁵liã⁵⁵ti²¹",
+            "zh": "一下"
+          }
+        ]
+      },
+      {
+        "id": "2.1-080",
+        "page": "49",
+        "ipa": "ko³⁵ tɕiu⁵⁵ ẽ²¹tsi²¹ xu⁵³ ko³⁵ tɕiu⁵⁵ no⁵³ xã³⁵ tsẽ⁵³",
+        "originalIpa": "ko³⁵ tçiu⁵⁵ ẽ²¹tsi²¹ xu⁵³ ko³⁵ tçiu⁵⁵ no⁵³ xã³⁵ tsẽ⁵³",
+        "zh": "她就会马上赶到，她就这样为别人治病，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ẽ²¹tsi²¹",
+            "originalIpa": "ẽ²¹tsi²¹",
+            "zh": "来"
+          },
+          {
+            "ipa": "xu⁵³",
+            "originalIpa": "xu⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "no⁵³",
+            "originalIpa": "no⁵³",
+            "zh": "人"
+          },
+          {
+            "ipa": "xã³⁵",
+            "originalIpa": "xã³⁵",
+            "zh": "这样"
+          },
+          {
+            "ipa": "tsẽ⁵³",
+            "originalIpa": "tsẽ⁵³",
+            "zh": "诊治"
+          }
+        ]
+      },
+      {
+        "id": "2.1-081",
+        "page": "49",
+        "ipa": "xie³⁵lã²¹ ne⁵⁵ si²¹tɕiã⁵⁵ la⁵³kʰa⁵⁵ lu⁵³",
+        "originalIpa": "xie³⁵lã²¹ ne⁵⁵ si²¹tçiã⁵⁵ la⁵³kha⁵⁵ lu⁵³",
+        "zh": "很长时间过去了，",
+        "glosses": [
+          {
+            "ipa": "xie³⁵lã²¹",
+            "originalIpa": "xie³⁵lã²¹",
+            "zh": "这么久"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "si²¹tɕiã⁵⁵",
+            "originalIpa": "si²¹tçiã⁵⁵",
+            "zh": "时间"
+          },
+          {
+            "ipa": "la⁵³kʰa⁵⁵",
+            "originalIpa": "la⁵³kha⁵⁵",
+            "zh": "过去"
+          },
+          {
+            "ipa": "lu⁵³",
+            "originalIpa": "lu⁵³",
+            "zh": "DIRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-082",
+        "page": "49",
+        "ipa": "ɕiau⁵⁵te⁵⁵ ka⁵³ nũ⁵⁵ wo²¹ si²¹ no⁵³te⁵³ ko³⁵ ai⁵⁵ te³⁵ po⁵⁵ tʰa⁵⁵tʰi⁵⁵",
+        "originalIpa": "çiau⁵⁵te⁵⁵ ka⁵³ nũ⁵⁵ wo²¹ si²¹ no⁵³te⁵³ ko³⁵ ai⁵⁵ te³⁵ po⁵⁵ tha⁵⁵thi⁵⁵",
+        "zh": "不知道过了多少年，别人都记不起来了，",
+        "glosses": [
+          {
+            "ipa": "ɕiau⁵⁵te⁵⁵",
+            "originalIpa": "çiau⁵⁵te⁵⁵",
+            "zh": "晓得"
+          },
+          {
+            "ipa": "ka⁵³",
+            "originalIpa": "ka⁵³",
+            "zh": "几"
+          },
+          {
+            "ipa": "nũ⁵⁵",
+            "originalIpa": "nũ⁵⁵",
+            "zh": "年"
+          },
+          {
+            "ipa": "wo²¹",
+            "originalIpa": "wo²¹",
+            "zh": "六"
+          },
+          {
+            "ipa": "si²¹",
+            "originalIpa": "si²¹",
+            "zh": "个月"
+          },
+          {
+            "ipa": "no⁵³te⁵³",
+            "originalIpa": "no⁵³te⁵³",
+            "zh": "别人"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "那"
+          },
+          {
+            "ipa": "te³⁵",
+            "originalIpa": "te³⁵",
+            "zh": "记"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tʰa⁵⁵tʰi⁵⁵",
+            "originalIpa": "tha⁵⁵thi⁵⁵",
+            "zh": "不能"
+          }
+        ]
+      },
+      {
+        "id": "2.1-083",
+        "page": "49",
+        "ipa": "tʰa⁵⁵ne⁵⁵ lie⁵⁵ ko³⁵ kʰei²¹ po⁵⁵ tsau²¹ je⁵³ tsẽ⁵³",
+        "originalIpa": "tha⁵⁵ne⁵⁵ lie⁵⁵ ko³⁵ khei²¹ po⁵⁵ tsau²¹ je⁵³ tsẽ⁵³",
+        "zh": "她走乡串寨为别人治病，",
+        "glosses": [
+          {
+            "ipa": "tʰa⁵⁵ne⁵⁵",
+            "originalIpa": "tha⁵⁵ne⁵⁵",
+            "zh": "后面"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "kʰei²¹",
+            "originalIpa": "khei²¹",
+            "zh": "哪里"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tsau²¹",
+            "originalIpa": "tsau²¹",
+            "zh": "去"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "也"
+          },
+          {
+            "ipa": "tsẽ⁵³",
+            "originalIpa": "tsẽ⁵³",
+            "zh": "诊治"
+          }
+        ]
+      },
+      {
+        "id": "2.1-084",
+        "page": "49–50",
+        "ipa": "na⁵⁵ ne⁵³ xo⁵⁵ na⁵⁵ ne⁵³ ta⁵³tsie²¹",
+        "originalIpa": "na⁵⁵ ne⁵³ xo⁵⁵ na⁵⁵ ne⁵³ ta⁵³tsie²¹",
+        "zh": "天天如此，",
+        "glosses": [
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "xo⁵⁵",
+            "originalIpa": "xo⁵⁵",
+            "zh": "SENFP"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "ta⁵³tsie²¹",
+            "originalIpa": "ta⁵³tsie²¹",
+            "zh": "一样"
+          }
+        ]
+      },
+      {
+        "id": "2.1-085",
+        "page": "50",
+        "ipa": "na⁵⁵ ne⁵³ xo⁵⁵ na⁵⁵ ne⁵³ xã³⁵ kau⁵³",
+        "originalIpa": "na⁵⁵ ne⁵³ xo⁵⁵ na⁵⁵ ne⁵³ xã³⁵ kau⁵³",
+        "zh": "整天整天这样做，",
+        "glosses": [
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "xo⁵⁵",
+            "originalIpa": "xo⁵⁵",
+            "zh": "SENFP"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "xã³⁵",
+            "originalIpa": "xã³⁵",
+            "zh": "这样"
+          },
+          {
+            "ipa": "kau⁵³",
+            "originalIpa": "kau⁵³",
+            "zh": "搞"
+          }
+        ]
+      },
+      {
+        "id": "2.1-086",
+        "page": "50",
+        "ipa": "ko³⁵ ne⁵⁵ sa³⁵tɕʰi⁵⁵ lie⁵⁵ tɕiu⁵⁵ na⁵⁵ ne⁵³ xo⁵⁵ na⁵⁵ ne⁵³ a²¹si²¹",
+        "originalIpa": "ko³⁵ ne⁵⁵ sa³⁵tçhi⁵⁵ lie⁵⁵ tçiu⁵⁵ na⁵⁵ ne⁵³ xo⁵⁵ na⁵⁵ ne⁵³ a²¹si²¹",
+        "zh": "她的头发一天比一天白了。",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "sa³⁵tɕʰi⁵⁵",
+            "originalIpa": "sa³⁵tçhi⁵⁵",
+            "zh": "头发"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "xo⁵⁵",
+            "originalIpa": "xo⁵⁵",
+            "zh": "SENFP"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "a²¹si²¹",
+            "originalIpa": "a²¹si²¹",
+            "zh": "白"
+          }
+        ]
+      },
+      {
+        "id": "2.1-087",
+        "page": "50",
+        "ipa": "ko³⁵ ko³⁵ jau³⁵ wa⁵⁵ tsʰi⁵⁵tsʰa⁵³ mo²¹ ja³⁵xau⁵³ liau⁵³",
+        "originalIpa": "ko³⁵ ko³⁵ jau³⁵ wa⁵⁵ tshi⁵⁵tsha⁵³ mo²¹ ja³⁵xau⁵³ liau⁵³",
+        "zh": "她的药也快扯光了，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "wa⁵⁵",
+            "originalIpa": "wa⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "tsʰi⁵⁵tsʰa⁵³",
+            "originalIpa": "tshi⁵⁵tsha⁵³",
+            "zh": "扯"
+          },
+          {
+            "ipa": "mo²¹",
+            "originalIpa": "mo²¹",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "ja³⁵xau⁵³",
+            "originalIpa": "ja³⁵xau⁵³",
+            "zh": "比较多"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-088",
+        "page": "50",
+        "ipa": "pa²¹tʰi²¹ ne⁵⁵ pĩ³⁵ a⁵⁵ tsẽ⁵³ mo²¹ tsʰa³⁵ tɕi⁵³ liau⁵³",
+        "originalIpa": "pa²¹thi²¹ ne⁵⁵ pĩ³⁵ a⁵⁵ tsẽ⁵³ mo²¹ tsha³⁵ tçi⁵³ liau⁵³",
+        "zh": "下面寨子里人的病也全好了，",
+        "glosses": [
+          {
+            "ipa": "pa²¹tʰi²¹",
+            "originalIpa": "pa²¹thi²¹",
+            "zh": "下面"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "pĩ³⁵",
+            "originalIpa": "pĩ³⁵",
+            "zh": "病"
+          },
+          {
+            "ipa": "a⁵⁵",
+            "originalIpa": "a⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "tsẽ⁵³",
+            "originalIpa": "tsẽ⁵³",
+            "zh": "诊治"
+          },
+          {
+            "ipa": "mo²¹",
+            "originalIpa": "mo²¹",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "tsʰa³⁵",
+            "originalIpa": "tsha³⁵",
+            "zh": "好"
+          },
+          {
+            "ipa": "tɕi⁵³",
+            "originalIpa": "tçi⁵³",
+            "zh": "完"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-089",
+        "page": "50",
+        "ipa": "ko³⁵ to²¹ ko³⁵ ne⁵⁵ sa³⁵tɕʰi⁵⁵ lie⁵⁵ je⁵³ tɕiu⁵⁵ a²¹si²¹ tsi³⁵ liau⁵³",
+        "originalIpa": "ko³⁵ to²¹ ko³⁵ ne⁵⁵ sa³⁵tçhi⁵⁵ lie⁵⁵ je⁵³ tçiu⁵⁵ a²¹si²¹ tsi³⁵ liau⁵³",
+        "zh": "她自己的头发也变白了。",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "to²¹",
+            "originalIpa": "to²¹",
+            "zh": "自己"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "sa³⁵tɕʰi⁵⁵",
+            "originalIpa": "sa³⁵tçhi⁵⁵",
+            "zh": "头发"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "也"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "a²¹si²¹",
+            "originalIpa": "a²¹si²¹",
+            "zh": "白"
+          },
+          {
+            "ipa": "tsi³⁵",
+            "originalIpa": "tsi³⁵",
+            "zh": "成"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-090",
+        "page": "50",
+        "ipa": "pĩ³⁵ tsʰa³⁵ tɕi⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵",
+        "originalIpa": "pĩ³⁵ tsha³⁵ tçi⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵",
+        "zh": "治好病后，",
+        "glosses": [
+          {
+            "ipa": "pĩ³⁵",
+            "originalIpa": "pĩ³⁵",
+            "zh": "病"
+          },
+          {
+            "ipa": "tsʰa³⁵",
+            "originalIpa": "tsha³⁵",
+            "zh": "好"
+          },
+          {
+            "ipa": "tɕi⁵³",
+            "originalIpa": "tçi⁵³",
+            "zh": "完"
+          },
+          {
+            "ipa": "tsi⁵⁵xiu³⁵",
+            "originalIpa": "tsi⁵⁵xiu³⁵",
+            "zh": "之后"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-091",
+        "page": "50",
+        "ipa": "ko³⁵ tɕiu⁵⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ tsai³⁵tsi⁵⁵ sã²¹ po⁵⁵ ɣɨ³⁵",
+        "originalIpa": "ko³⁵ tçiu⁵⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ tsai³⁵tsi⁵⁵ sã²¹ po⁵⁵ ɣɨ³⁵",
+        "zh": "她整天在寨子里走来走去，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "ne⁵³",
+            "originalIpa": "ne⁵³",
+            "zh": "天"
+          },
+          {
+            "ipa": "tsai³⁵tsi⁵⁵",
+            "originalIpa": "tsai³⁵tsi⁵⁵",
+            "zh": "寨子"
+          },
+          {
+            "ipa": "sã²¹",
+            "originalIpa": "sã²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          }
+        ]
+      },
+      {
+        "id": "2.1-092",
+        "page": "51",
+        "ipa": "po⁵⁵li²¹te⁵³ po⁵⁵ ũ⁵⁵pie⁵⁵la⁵⁵zie⁵⁵ ɕe³⁵ ko³⁵ ko³⁵ je⁵³ tsi³⁵ li⁵⁵liã⁵⁵ti²¹",
+        "originalIpa": "po⁵⁵li²¹te⁵³ po⁵⁵ ũ⁵⁵pie⁵⁵la⁵⁵zie⁵⁵ çe³⁵ ko³⁵ ko³⁵ je⁵³ tsi³⁵ li⁵⁵liã⁵⁵ti²¹",
+        "zh": "小孩发烧了，她一治就好。",
+        "glosses": [
+          {
+            "ipa": "po⁵⁵li²¹te⁵³",
+            "originalIpa": "po⁵⁵li²¹te⁵³",
+            "zh": "小孩"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "ũ⁵⁵pie⁵⁵la⁵⁵zie⁵⁵",
+            "originalIpa": "ũ⁵⁵pie⁵⁵la⁵⁵zie⁵⁵",
+            "zh": "发烧"
+          },
+          {
+            "ipa": "ɕe³⁵",
+            "originalIpa": "çe³⁵",
+            "zh": "有"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "也"
+          },
+          {
+            "ipa": "tsi³⁵",
+            "originalIpa": "tsi³⁵",
+            "zh": "治"
+          },
+          {
+            "ipa": "li⁵⁵liã⁵⁵ti²¹",
+            "originalIpa": "li⁵⁵liã⁵⁵ti²¹",
+            "zh": "一下"
+          }
+        ]
+      },
+      {
+        "id": "2.1-093",
+        "page": "51",
+        "ipa": "xa⁵³tʰau³⁵ kʰei²¹ po⁵⁵ tsau²¹ je⁵³ xa⁵³tʰau³⁵ tsi⁵⁵xiu³⁵ lie⁵⁵",
+        "originalIpa": "xa⁵³thau³⁵ khei²¹ po⁵⁵ tsau²¹ je⁵³ xa⁵³thau³⁵ tsi⁵⁵xiu³⁵ lie⁵⁵",
+        "zh": "后来，不知道她去哪里了，",
+        "glosses": [
+          {
+            "ipa": "xa⁵³tʰau³⁵",
+            "originalIpa": "xa⁵³thau³⁵",
+            "zh": "不知道"
+          },
+          {
+            "ipa": "kʰei²¹",
+            "originalIpa": "khei²¹",
+            "zh": "哪里"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tsau²¹",
+            "originalIpa": "tsau²¹",
+            "zh": "去"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "也"
+          },
+          {
+            "ipa": "xa⁵³tʰau³⁵",
+            "originalIpa": "xa⁵³thau³⁵",
+            "zh": "不知道"
+          },
+          {
+            "ipa": "tsi⁵⁵xiu³⁵",
+            "originalIpa": "tsi⁵⁵xiu³⁵",
+            "zh": "之后"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          }
+        ],
+        "notes": "原书注：xa⁵³tʰau³⁵是xa⁵³tʰai³⁵“不知道”的完成体形式，下同。"
+      },
+      {
+        "id": "2.1-094",
+        "page": "51",
+        "ipa": "no⁵³te⁵³ pĩ³⁵ tʰi²¹ liau⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵",
+        "originalIpa": "no⁵³te⁵³ pĩ³⁵ thi²¹ liau⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵",
+        "zh": "大家生病了，",
+        "glosses": [
+          {
+            "ipa": "no⁵³te⁵³",
+            "originalIpa": "no⁵³te⁵³",
+            "zh": "别人"
+          },
+          {
+            "ipa": "pĩ³⁵",
+            "originalIpa": "pĩ³⁵",
+            "zh": "病"
+          },
+          {
+            "ipa": "tʰi²¹",
+            "originalIpa": "thi²¹",
+            "zh": "得"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tsi⁵⁵xiu³⁵",
+            "originalIpa": "tsi⁵⁵xiu³⁵",
+            "zh": "之后"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-095",
+        "page": "51",
+        "ipa": "tɕiu⁵⁵ ko³⁵ po⁵⁵ ɣɨ³⁵ le⁵³ tuei³⁵ po⁵⁵ mo²¹ ai⁵⁵ti⁵⁵ kʰu⁵⁵ pi³⁵ ka²¹ ka²¹ po⁵⁵ tɕĩ³⁵ ɕiã⁵⁵ wu³⁵",
+        "originalIpa": "tçiu⁵⁵ ko³⁵ po⁵⁵ ɣɨ³⁵ le⁵³ tuei³⁵ po⁵⁵ mo²¹ ai⁵⁵ti⁵⁵ khu⁵⁵ pi³⁵ ka²¹ ka²¹ po⁵⁵ tçĩ³⁵ çiã⁵⁵ wu³⁵",
+        "zh": "只要走过去对着她那座小山敬一下，",
+        "glosses": [
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tuei³⁵",
+            "originalIpa": "tuei³⁵",
+            "zh": "朝"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "mo²¹",
+            "originalIpa": "mo²¹",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "ai⁵⁵ti⁵⁵",
+            "originalIpa": "ai⁵⁵ti⁵⁵",
+            "zh": "那个"
+          },
+          {
+            "ipa": "kʰu⁵⁵",
+            "originalIpa": "khu⁵⁵",
+            "zh": "山"
+          },
+          {
+            "ipa": "pi³⁵",
+            "originalIpa": "pi³⁵",
+            "zh": "小"
+          },
+          {
+            "ipa": "ka²¹",
+            "originalIpa": "ka²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "ka²¹",
+            "originalIpa": "ka²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tɕĩ³⁵",
+            "originalIpa": "tçĩ³⁵",
+            "zh": "敬"
+          },
+          {
+            "ipa": "ɕiã⁵⁵",
+            "originalIpa": "çiã⁵⁵",
+            "zh": "香"
+          },
+          {
+            "ipa": "wu³⁵",
+            "originalIpa": "wu³⁵",
+            "zh": "烧"
+          }
+        ]
+      },
+      {
+        "id": "2.1-096",
+        "page": "51",
+        "ipa": "tsʰi⁵⁵kʰi⁵⁵tʰa⁵⁵ wu³⁵ ai⁵⁵le⁵³ pĩ³⁵ jiu³⁵ tsʰa³⁵ le⁵³ xu⁵³",
+        "originalIpa": "tshi⁵⁵khi⁵⁵tha⁵⁵ wu³⁵ ai⁵⁵le⁵³ pĩ³⁵ jiu³⁵ tsha³⁵ le⁵³ xu⁵³",
+        "zh": "烧点香，病就好。",
+        "glosses": [
+          {
+            "ipa": "tsʰi⁵⁵kʰi⁵⁵tʰa⁵⁵",
+            "originalIpa": "tshi⁵⁵khi⁵⁵tha⁵⁵",
+            "zh": "纸"
+          },
+          {
+            "ipa": "wu³⁵",
+            "originalIpa": "wu³⁵",
+            "zh": "烧"
+          },
+          {
+            "ipa": "ai⁵⁵le⁵³",
+            "originalIpa": "ai⁵⁵le⁵³",
+            "zh": "TRAC"
+          },
+          {
+            "ipa": "pĩ³⁵",
+            "originalIpa": "pĩ³⁵",
+            "zh": "病"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "tsʰa³⁵",
+            "originalIpa": "tsha³⁵",
+            "zh": "好"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "xu⁵³",
+            "originalIpa": "xu⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-097",
+        "page": "51",
+        "ipa": "ai⁵⁵le⁵³ lau⁵³pie²¹ɕi⁵⁵te⁵³ tɕiu⁵⁵ ɕiã⁵³ a⁵⁵ ẽ⁵⁵ti⁵⁵ pĩ³⁵",
+        "originalIpa": "ai⁵⁵le⁵³ lau⁵³pie²¹çi⁵⁵te⁵³ tçiu⁵⁵ çiã⁵³ a⁵⁵ ẽ⁵⁵ti⁵⁵ pĩ³⁵",
+        "zh": "于是老百姓就想啊，这种病啊，",
+        "glosses": [
+          {
+            "ipa": "ai⁵⁵le⁵³",
+            "originalIpa": "ai⁵⁵le⁵³",
+            "zh": "TRAC"
+          },
+          {
+            "ipa": "lau⁵³pie²¹ɕi⁵⁵te⁵³",
+            "originalIpa": "lau⁵³pie²¹çi⁵⁵te⁵³",
+            "zh": "老百姓"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ɕiã⁵³",
+            "originalIpa": "çiã⁵³",
+            "zh": "想"
+          },
+          {
+            "ipa": "a⁵⁵",
+            "originalIpa": "a⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "pĩ³⁵",
+            "originalIpa": "pĩ³⁵",
+            "zh": "病"
+          }
+        ]
+      },
+      {
+        "id": "2.1-098",
+        "page": "51–52",
+        "ipa": "ko³⁵ xã³⁵ lẽ²¹ a⁵⁵ ko³⁵ ne⁵⁵ ɕĩ³⁵ to⁵⁵ ã³⁵ni⁵⁵ ko³⁵ xa⁵³tʰai³⁵ ja⁵⁵",
+        "originalIpa": "ko³⁵ xã³⁵ lẽ²¹ a⁵⁵ ko³⁵ ne⁵⁵ çĩ³⁵ to⁵⁵ ã³⁵ni⁵⁵ ko³⁵ xa⁵³thai³⁵ ja⁵⁵",
+        "zh": "她这样灵呀，我们连她的姓都不知道，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "xã³⁵",
+            "originalIpa": "xã³⁵",
+            "zh": "这样"
+          },
+          {
+            "ipa": "lẽ²¹",
+            "originalIpa": "lẽ²¹",
+            "zh": "灵"
+          },
+          {
+            "ipa": "a⁵⁵",
+            "originalIpa": "a⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "ɕĩ³⁵",
+            "originalIpa": "çĩ³⁵",
+            "zh": "姓氏"
+          },
+          {
+            "ipa": "to⁵⁵",
+            "originalIpa": "to⁵⁵",
+            "zh": "都"
+          },
+          {
+            "ipa": "ã³⁵ni⁵⁵",
+            "originalIpa": "ã³⁵ni⁵⁵",
+            "zh": "1pl"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "xa⁵³tʰai³⁵",
+            "originalIpa": "xa⁵³thai³⁵",
+            "zh": "不知道"
+          },
+          {
+            "ipa": "ja⁵⁵",
+            "originalIpa": "ja⁵⁵",
+            "zh": "INJ"
+          }
+        ]
+      },
+      {
+        "id": "2.1-099",
+        "page": "52",
+        "ipa": "mĩ²¹tsi³⁵ lai⁵⁵ tɕe²¹ la⁵⁵ to⁵⁵ xa⁵³tʰai³⁵ ja⁵⁵",
+        "originalIpa": "mĩ²¹tsi³⁵ lai⁵⁵ tçe²¹ la⁵⁵ to⁵⁵ xa⁵³thai³⁵ ja⁵⁵",
+        "zh": "也不知道她叫什么名字，",
+        "glosses": [
+          {
+            "ipa": "mĩ²¹tsi³⁵",
+            "originalIpa": "mĩ²¹tsi³⁵",
+            "zh": "名字"
+          },
+          {
+            "ipa": "lai⁵⁵",
+            "originalIpa": "lai⁵⁵",
+            "zh": "什么"
+          },
+          {
+            "ipa": "tɕe²¹",
+            "originalIpa": "tçe²¹",
+            "zh": "叫"
+          },
+          {
+            "ipa": "la⁵⁵",
+            "originalIpa": "la⁵⁵",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "to⁵⁵",
+            "originalIpa": "to⁵⁵",
+            "zh": "都"
+          },
+          {
+            "ipa": "xa⁵³tʰai³⁵",
+            "originalIpa": "xa⁵³thai³⁵",
+            "zh": "不知道"
+          },
+          {
+            "ipa": "ja⁵⁵",
+            "originalIpa": "ja⁵⁵",
+            "zh": "INJ"
+          }
+        ]
+      },
+      {
+        "id": "2.1-100",
+        "page": "52",
+        "ipa": "ai⁵⁵mie⁵⁵ tɕiu⁵⁵ ko³⁵ ne⁵⁵ jau³⁵ xã³⁵ lẽ²¹ pĩ³⁵ tsi³⁵ jiu³⁵ xã³⁵ lẽ²¹",
+        "originalIpa": "ai⁵⁵mie⁵⁵ tçiu⁵⁵ ko³⁵ ne⁵⁵ jau³⁵ xã³⁵ lẽ²¹ pĩ³⁵ tsi³⁵ jiu³⁵ xã³⁵ lẽ²¹",
+        "zh": "她的药这么灵，",
+        "glosses": [
+          {
+            "ipa": "ai⁵⁵mie⁵⁵",
+            "originalIpa": "ai⁵⁵mie⁵⁵",
+            "zh": "TRAC"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "xã³⁵",
+            "originalIpa": "xã³⁵",
+            "zh": "这样"
+          },
+          {
+            "ipa": "lẽ²¹",
+            "originalIpa": "lẽ²¹",
+            "zh": "灵"
+          },
+          {
+            "ipa": "pĩ³⁵",
+            "originalIpa": "pĩ³⁵",
+            "zh": "病"
+          },
+          {
+            "ipa": "tsi³⁵",
+            "originalIpa": "tsi³⁵",
+            "zh": "治"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "xã³⁵",
+            "originalIpa": "xã³⁵",
+            "zh": "这样"
+          },
+          {
+            "ipa": "lẽ²¹",
+            "originalIpa": "lẽ²¹",
+            "zh": "灵"
+          }
+        ]
+      },
+      {
+        "id": "2.1-101",
+        "page": "52",
+        "ipa": "ko³⁵ po⁵⁵ tɕiu⁵⁵si⁵⁵ lẽ²¹ku⁵⁵liã⁵⁵ nau⁵³ tɕe²¹ po⁵⁵",
+        "originalIpa": "ko³⁵ po⁵⁵ tçiu⁵⁵si⁵⁵ lẽ²¹ku⁵⁵liã⁵⁵ nau⁵³ tçe²¹ po⁵⁵",
+        "zh": "就叫她灵姑娘吧，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵si⁵⁵",
+            "originalIpa": "tçiu⁵⁵si⁵⁵",
+            "zh": "就是"
+          },
+          {
+            "ipa": "lẽ²¹ku⁵⁵liã⁵⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵liã⁵⁵",
+            "zh": "灵姑娘"
+          },
+          {
+            "ipa": "nau⁵³",
+            "originalIpa": "nau⁵³",
+            "zh": "一个"
+          },
+          {
+            "ipa": "tɕe²¹",
+            "originalIpa": "tçe²¹",
+            "zh": "叫"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-102",
+        "page": "52",
+        "ipa": "lẽ²¹ku⁵⁵liã⁵⁵ nau⁵³ tɕe²¹ po⁵⁵",
+        "originalIpa": "lẽ²¹ku⁵⁵liã⁵⁵ nau⁵³ tçe²¹ po⁵⁵",
+        "zh": "就叫她灵姑娘，",
+        "glosses": [
+          {
+            "ipa": "lẽ²¹ku⁵⁵liã⁵⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵liã⁵⁵",
+            "zh": "灵姑娘"
+          },
+          {
+            "ipa": "nau⁵³",
+            "originalIpa": "nau⁵³",
+            "zh": "一个"
+          },
+          {
+            "ipa": "tɕe²¹",
+            "originalIpa": "tçe²¹",
+            "zh": "叫"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-103",
+        "page": "52",
+        "ipa": "lẽ²¹ku⁵⁵liã⁵⁵ ko³⁵ ne⁵⁵ jau³⁵ xã³⁵ lẽ²¹",
+        "originalIpa": "lẽ²¹ku⁵⁵liã⁵⁵ ko³⁵ ne⁵⁵ jau³⁵ xã³⁵ lẽ²¹",
+        "zh": "她的药这么灵，",
+        "glosses": [
+          {
+            "ipa": "lẽ²¹ku⁵⁵liã⁵⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵liã⁵⁵",
+            "zh": "灵姑娘"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "jau³⁵",
+            "originalIpa": "jau³⁵",
+            "zh": "药"
+          },
+          {
+            "ipa": "xã³⁵",
+            "originalIpa": "xã³⁵",
+            "zh": "这样"
+          },
+          {
+            "ipa": "lẽ²¹",
+            "originalIpa": "lẽ²¹",
+            "zh": "灵"
+          }
+        ]
+      },
+      {
+        "id": "2.1-104",
+        "page": "52",
+        "ipa": "ko³⁵ ɕiã⁵³ le⁵³ pʰu²¹sa²¹ tɕĩ³⁵ a⁵⁵le⁵³ lẽ²¹ a⁵⁵",
+        "originalIpa": "ko³⁵ çiã⁵³ le⁵³ phu²¹sa²¹ tçĩ³⁵ a⁵⁵le⁵³ lẽ²¹ a⁵⁵",
+        "zh": "一想她一敬菩萨就灵，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ɕiã⁵³",
+            "originalIpa": "çiã⁵³",
+            "zh": "想"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "pʰu²¹sa²¹",
+            "originalIpa": "phu²¹sa²¹",
+            "zh": "菩萨"
+          },
+          {
+            "ipa": "tɕĩ³⁵",
+            "originalIpa": "tçĩ³⁵",
+            "zh": "敬"
+          },
+          {
+            "ipa": "a⁵⁵le⁵³",
+            "originalIpa": "a⁵⁵le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "lẽ²¹",
+            "originalIpa": "lẽ²¹",
+            "zh": "灵"
+          },
+          {
+            "ipa": "a⁵⁵",
+            "originalIpa": "a⁵⁵",
+            "zh": "INJ"
+          }
+        ]
+      },
+      {
+        "id": "2.1-105",
+        "page": "52",
+        "ipa": "ai⁵⁵ xai²¹si³⁵ ko³⁵ po⁵⁵ tsʰo⁵³ na⁵⁵ tsʰo⁵³ su³⁵ tʰi⁵⁵ɕi²¹",
+        "originalIpa": "ai⁵⁵ xai²¹si³⁵ ko³⁵ po⁵⁵ tsho⁵³ na⁵⁵ tsho⁵³ su³⁵ thi⁵⁵çi²¹",
+        "zh": "那还是为她修一栋房子吧，",
+        "glosses": [
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "TRAC"
+          },
+          {
+            "ipa": "xai²¹si³⁵",
+            "originalIpa": "xai²¹si³⁵",
+            "zh": "还是"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tsʰo⁵³",
+            "originalIpa": "tsho⁵³",
+            "zh": "屋"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tsʰo⁵³",
+            "originalIpa": "tsho⁵³",
+            "zh": "家"
+          },
+          {
+            "ipa": "su³⁵",
+            "originalIpa": "su³⁵",
+            "zh": "修"
+          },
+          {
+            "ipa": "tʰi⁵⁵ɕi²¹",
+            "originalIpa": "thi⁵⁵çi²¹",
+            "zh": "必须"
+          }
+        ]
+      },
+      {
+        "id": "2.1-106",
+        "page": "53",
+        "ipa": "ai⁵⁵ na⁵⁵ tsʰo⁵³ na⁵⁵ tsʰo⁵³ ta⁵³ sã⁵⁵liã²¹",
+        "originalIpa": "ai⁵⁵ na⁵⁵ tsho⁵³ na⁵⁵ tsho⁵³ ta⁵³ sã⁵⁵liã²¹",
+        "zh": "于是大家一起商量，",
+        "glosses": [
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "TRAC"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tsʰo⁵³",
+            "originalIpa": "tsho⁵³",
+            "zh": "家"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tsʰo⁵³",
+            "originalIpa": "tsho⁵³",
+            "zh": "家"
+          },
+          {
+            "ipa": "ta⁵³",
+            "originalIpa": "ta⁵³",
+            "zh": "一起"
+          },
+          {
+            "ipa": "sã⁵⁵liã²¹",
+            "originalIpa": "sã⁵⁵liã²¹",
+            "zh": "商量"
+          }
+        ]
+      },
+      {
+        "id": "2.1-107",
+        "page": "53",
+        "ipa": "na⁵⁵ tsʰo⁵³ na⁵⁵ tsʰo⁵³ ta⁵³ tu³⁵ tʰũ²¹tɕʰiã²¹ tu³⁵",
+        "originalIpa": "na⁵⁵ tsho⁵³ na⁵⁵ tsho⁵³ ta⁵³ tu³⁵ thũ²¹tçhiã²¹ tu³⁵",
+        "zh": "大家一起出钱，",
+        "glosses": [
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tsʰo⁵³",
+            "originalIpa": "tsho⁵³",
+            "zh": "家"
+          },
+          {
+            "ipa": "na⁵⁵",
+            "originalIpa": "na⁵⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tsʰo⁵³",
+            "originalIpa": "tsho⁵³",
+            "zh": "家"
+          },
+          {
+            "ipa": "ta⁵³",
+            "originalIpa": "ta⁵³",
+            "zh": "一起"
+          },
+          {
+            "ipa": "tu³⁵",
+            "originalIpa": "tu³⁵",
+            "zh": "出"
+          },
+          {
+            "ipa": "tʰũ²¹tɕʰiã²¹",
+            "originalIpa": "thũ²¹tçhiã²¹",
+            "zh": "钱"
+          },
+          {
+            "ipa": "tu³⁵",
+            "originalIpa": "tu³⁵",
+            "zh": "出"
+          }
+        ]
+      },
+      {
+        "id": "2.1-108",
+        "page": "53",
+        "ipa": "tʰũ²¹tɕʰiã²¹ tʰai³⁵ma⁵³ lie⁵⁵ ɕe⁵⁵tɕʰi⁵⁵ tu³⁵",
+        "originalIpa": "thũ²¹tçhiã²¹ thai³⁵ma⁵³ lie⁵⁵ çe⁵⁵tçhi⁵⁵ tu³⁵",
+        "zh": "没钱的就出力，",
+        "glosses": [
+          {
+            "ipa": "tʰũ²¹tɕʰiã²¹",
+            "originalIpa": "thũ²¹tçhiã²¹",
+            "zh": "钱"
+          },
+          {
+            "ipa": "tʰai³⁵ma⁵³",
+            "originalIpa": "thai³⁵ma⁵³",
+            "zh": "没有的人"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "ɕe⁵⁵tɕʰi⁵⁵",
+            "originalIpa": "çe⁵⁵tçhi⁵⁵",
+            "zh": "力气"
+          },
+          {
+            "ipa": "tu³⁵",
+            "originalIpa": "tu³⁵",
+            "zh": "出"
+          }
+        ]
+      },
+      {
+        "id": "2.1-109",
+        "page": "53",
+        "ipa": "a²¹ pie⁵³ma⁵³ a²¹ pie⁵³ kʰa²¹mũ²¹ tʰa⁵³ma⁵³ kʰa²¹mũ²¹ tʰa⁵³",
+        "originalIpa": "a²¹ pie⁵³ma⁵³ a²¹ pie⁵³ kha²¹mũ²¹ tha⁵³ma⁵³ kha²¹mũ²¹ tha⁵³",
+        "zh": "搬石头的搬石头，砍树的砍树，",
+        "glosses": [
+          {
+            "ipa": "a²¹",
+            "originalIpa": "a²¹",
+            "zh": "石头"
+          },
+          {
+            "ipa": "pie⁵³ma⁵³",
+            "originalIpa": "pie⁵³ma⁵³",
+            "zh": "搬的人"
+          },
+          {
+            "ipa": "a²¹",
+            "originalIpa": "a²¹",
+            "zh": "石头"
+          },
+          {
+            "ipa": "pie⁵³",
+            "originalIpa": "pie⁵³",
+            "zh": "搬"
+          },
+          {
+            "ipa": "kʰa²¹mũ²¹",
+            "originalIpa": "kha²¹mũ²¹",
+            "zh": "树"
+          },
+          {
+            "ipa": "tʰa⁵³ma⁵³",
+            "originalIpa": "tha⁵³ma⁵³",
+            "zh": "砍的人"
+          },
+          {
+            "ipa": "kʰa²¹mũ²¹",
+            "originalIpa": "kha²¹mũ²¹",
+            "zh": "树"
+          },
+          {
+            "ipa": "tʰa⁵³",
+            "originalIpa": "tha⁵³",
+            "zh": "砍"
+          }
+        ]
+      },
+      {
+        "id": "2.1-110",
+        "page": "53",
+        "ipa": "ai⁵⁵ lẽ²¹ŋau²¹sã⁵⁵ kʰu⁵⁵ pi³⁵ tẽ⁵⁵tẽ⁵⁵ ka²¹ le⁵⁵ tɕiu⁵⁵si⁵⁵ tsʰo⁵³ ji³⁵ tsʰũ²¹ su³⁵",
+        "originalIpa": "ai⁵⁵ lẽ²¹ŋau²¹sã⁵⁵ khu⁵⁵ pi³⁵ tẽ⁵⁵tẽ⁵⁵ ka²¹ le⁵⁵ tçiu⁵⁵si⁵⁵ tsho⁵³ ji³⁵ tshũ²¹ su³⁵",
+        "zh": "就在灵羔山山顶上修了一栋房子，",
+        "glosses": [
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "那"
+          },
+          {
+            "ipa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "zh": "灵羔山"
+          },
+          {
+            "ipa": "kʰu⁵⁵",
+            "originalIpa": "khu⁵⁵",
+            "zh": "山"
+          },
+          {
+            "ipa": "pi³⁵",
+            "originalIpa": "pi³⁵",
+            "zh": "小"
+          },
+          {
+            "ipa": "tẽ⁵⁵tẽ⁵⁵",
+            "originalIpa": "tẽ⁵⁵tẽ⁵⁵",
+            "zh": "顶部"
+          },
+          {
+            "ipa": "ka²¹",
+            "originalIpa": "ka²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "le⁵⁵",
+            "originalIpa": "le⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵si⁵⁵",
+            "originalIpa": "tçiu⁵⁵si⁵⁵",
+            "zh": "就是"
+          },
+          {
+            "ipa": "tsʰo⁵³",
+            "originalIpa": "tsho⁵³",
+            "zh": "屋"
+          },
+          {
+            "ipa": "ji³⁵",
+            "originalIpa": "ji³⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tsʰũ²¹",
+            "originalIpa": "tshũ²¹",
+            "zh": "栋"
+          },
+          {
+            "ipa": "su³⁵",
+            "originalIpa": "su³⁵",
+            "zh": "修"
+          }
+        ]
+      },
+      {
+        "id": "2.1-111",
+        "page": "53",
+        "ipa": "la⁵⁵sa⁵⁵te⁵³ ko³⁵ tɕiu⁵⁵ tsʰo⁵³ po⁵⁵ mĩ²¹tsi³⁵ nau⁵³ a²¹",
+        "originalIpa": "la⁵⁵sa⁵⁵te⁵³ ko³⁵ tçiu⁵⁵ tsho⁵³ po⁵⁵ mĩ²¹tsi³⁵ nau⁵³ a²¹",
+        "zh": "有人就给它取了一个名字，",
+        "glosses": [
+          {
+            "ipa": "la⁵⁵sa⁵⁵te⁵³",
+            "originalIpa": "la⁵⁵sa⁵⁵te⁵³",
+            "zh": "有的人"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "tsʰo⁵³",
+            "originalIpa": "tsho⁵³",
+            "zh": "屋"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "mĩ²¹tsi³⁵",
+            "originalIpa": "mĩ²¹tsi³⁵",
+            "zh": "名字"
+          },
+          {
+            "ipa": "nau⁵³",
+            "originalIpa": "nau⁵³",
+            "zh": "一个"
+          },
+          {
+            "ipa": "a²¹",
+            "originalIpa": "a²¹",
+            "zh": "取"
+          }
+        ]
+      },
+      {
+        "id": "2.1-112",
+        "page": "53–54",
+        "ipa": "tɕiau³⁵ lẽ²¹ku⁵⁵miau³⁵",
+        "originalIpa": "tçiau³⁵ lẽ²¹ku⁵⁵miau³⁵",
+        "zh": "叫灵姑庙，",
+        "glosses": [
+          {
+            "ipa": "tɕiau³⁵",
+            "originalIpa": "tçiau³⁵",
+            "zh": "叫"
+          },
+          {
+            "ipa": "lẽ²¹ku⁵⁵miau³⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵miau³⁵",
+            "zh": "灵姑庙"
+          }
+        ]
+      },
+      {
+        "id": "2.1-113",
+        "page": "54",
+        "ipa": "lẽ²¹ku⁵⁵miau³⁵ ai⁵⁵ wo³⁵tʰu⁵⁵ xo²¹sã³⁵ ka⁵³ na⁵⁵xu²¹ ɕe³⁵",
+        "originalIpa": "lẽ²¹ku⁵⁵miau³⁵ ai⁵⁵ wo³⁵thu⁵⁵ xo²¹sã³⁵ ka⁵³ na⁵⁵xu²¹ çe³⁵",
+        "zh": "灵姑庙里面有几个和尚，",
+        "glosses": [
+          {
+            "ipa": "lẽ²¹ku⁵⁵miau³⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵miau³⁵",
+            "zh": "灵姑庙"
+          },
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "那"
+          },
+          {
+            "ipa": "wo³⁵tʰu⁵⁵",
+            "originalIpa": "wo³⁵thu⁵⁵",
+            "zh": "里面"
+          },
+          {
+            "ipa": "xo²¹sã³⁵",
+            "originalIpa": "xo²¹sã³⁵",
+            "zh": "和尚"
+          },
+          {
+            "ipa": "ka⁵³",
+            "originalIpa": "ka⁵³",
+            "zh": "几"
+          },
+          {
+            "ipa": "na⁵⁵xu²¹",
+            "originalIpa": "na⁵⁵xu²¹",
+            "zh": "个"
+          },
+          {
+            "ipa": "ɕe³⁵",
+            "originalIpa": "çe³⁵",
+            "zh": "有"
+          }
+        ]
+      },
+      {
+        "id": "2.1-114",
+        "page": "54",
+        "ipa": "tɕĩ⁵⁵tsʰã²¹ ko³⁵ po⁵⁵ tɕĩ³⁵ ɕiã⁵⁵ a⁵⁵ xã³⁵ kau⁵³ wa⁵⁵le⁵³ lie⁵⁵ ko³⁵ jiu³⁵ lẽ²¹",
+        "originalIpa": "tçĩ⁵⁵tshã²¹ ko³⁵ po⁵⁵ tçĩ³⁵ çiã⁵⁵ a⁵⁵ xã³⁵ kau⁵³ wa⁵⁵le⁵³ lie⁵⁵ ko³⁵ jiu³⁵ lẽ²¹",
+        "zh": "给她烧香，这样她又灵了。",
+        "glosses": [
+          {
+            "ipa": "tɕĩ⁵⁵tsʰã²¹",
+            "originalIpa": "tçĩ⁵⁵tshã²¹",
+            "zh": "经常"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tɕĩ³⁵",
+            "originalIpa": "tçĩ³⁵",
+            "zh": "敬"
+          },
+          {
+            "ipa": "ɕiã⁵⁵",
+            "originalIpa": "çiã⁵⁵",
+            "zh": "香"
+          },
+          {
+            "ipa": "a⁵⁵",
+            "originalIpa": "a⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "xã³⁵",
+            "originalIpa": "xã³⁵",
+            "zh": "这样"
+          },
+          {
+            "ipa": "kau⁵³",
+            "originalIpa": "kau⁵³",
+            "zh": "搞"
+          },
+          {
+            "ipa": "wa⁵⁵le⁵³",
+            "originalIpa": "wa⁵⁵le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "lẽ²¹",
+            "originalIpa": "lẽ²¹",
+            "zh": "灵"
+          }
+        ]
+      },
+      {
+        "id": "2.1-115",
+        "page": "54",
+        "ipa": "ɕiã⁵⁵ wu³⁵",
+        "originalIpa": "çiã⁵⁵ wu³⁵",
+        "zh": "四面八方的人来给她烧香，",
+        "glosses": [
+          {
+            "ipa": "ɕiã⁵⁵",
+            "originalIpa": "çiã⁵⁵",
+            "zh": "香"
+          },
+          {
+            "ipa": "wu³⁵",
+            "originalIpa": "wu³⁵",
+            "zh": "烧"
+          }
+        ]
+      },
+      {
+        "id": "2.1-116",
+        "page": "54",
+        "ipa": "ã³⁵ni⁵⁵ ẽ⁵⁵ti⁵⁵ tʰuã²¹tɕĩ³⁵ ne⁵⁵ li⁵³je²¹ pau⁵³tɕĩ²¹ a⁵⁵ jũ⁵³suẽ²¹ la⁵⁵ ji³⁵kʰi⁵⁵ ɣɨ³⁵ le⁵³ ko³⁵ po⁵⁵ ɣɨ³⁵ le⁵³ ɕiã⁵⁵ wu³⁵ ɕiã⁵⁵ wu³⁵ ɕiã⁵⁵ wu³⁵",
+        "originalIpa": "ã³⁵ni⁵⁵ ẽ⁵⁵ti⁵⁵ thuã²¹tçĩ³⁵ ne⁵⁵ li⁵³je²¹ pau⁵³tçĩ²¹ a⁵⁵ jũ⁵³suẽ²¹ la⁵⁵ ji³⁵khi⁵⁵ ɣɨ³⁵ le⁵³ ko³⁵ po⁵⁵ ɣɨ³⁵ le⁵³ çiã⁵⁵ wu³⁵ çiã⁵⁵ wu³⁵ çiã⁵⁵ wu³⁵",
+        "zh": "我们这个附近，里耶、保靖、永顺都来给她烧香",
+        "glosses": [
+          {
+            "ipa": "ã³⁵ni⁵⁵",
+            "originalIpa": "ã³⁵ni⁵⁵",
+            "zh": "1pl"
+          },
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "tʰuã²¹tɕĩ³⁵",
+            "originalIpa": "thuã²¹tçĩ³⁵",
+            "zh": "附近"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "li⁵³je²¹",
+            "originalIpa": "li⁵³je²¹",
+            "zh": "里耶"
+          },
+          {
+            "ipa": "pau⁵³tɕĩ²¹",
+            "originalIpa": "pau⁵³tçĩ²¹",
+            "zh": "保靖"
+          },
+          {
+            "ipa": "a⁵⁵",
+            "originalIpa": "a⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "jũ⁵³suẽ²¹",
+            "originalIpa": "jũ⁵³suẽ²¹",
+            "zh": "永顺"
+          },
+          {
+            "ipa": "la⁵⁵",
+            "originalIpa": "la⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "ji³⁵kʰi⁵⁵",
+            "originalIpa": "ji³⁵khi⁵⁵",
+            "zh": "全部"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "ɣɨ³⁵",
+            "originalIpa": "ɣɨ³⁵",
+            "zh": "走"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "ɕiã⁵⁵",
+            "originalIpa": "çiã⁵⁵",
+            "zh": "香"
+          },
+          {
+            "ipa": "wu³⁵",
+            "originalIpa": "wu³⁵",
+            "zh": "烧"
+          },
+          {
+            "ipa": "ɕiã⁵⁵",
+            "originalIpa": "çiã⁵⁵",
+            "zh": "香"
+          },
+          {
+            "ipa": "wu³⁵",
+            "originalIpa": "wu³⁵",
+            "zh": "烧"
+          },
+          {
+            "ipa": "ɕiã⁵⁵",
+            "originalIpa": "çiã⁵⁵",
+            "zh": "香"
+          },
+          {
+            "ipa": "wu³⁵",
+            "originalIpa": "wu³⁵",
+            "zh": "烧"
+          }
+        ]
+      },
+      {
+        "id": "2.1-117",
+        "page": "54",
+        "ipa": "ẽ⁵⁵ti⁵⁵ miau³⁵ lie⁵⁵ mĩ²¹ji³⁵ tsu³⁵ lu⁵³",
+        "originalIpa": "ẽ⁵⁵ti⁵⁵ miau³⁵ lie⁵⁵ mĩ²¹ji³⁵ tsu³⁵ lu⁵³",
+        "zh": "这个庙也就出名了。",
+        "glosses": [
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "miau³⁵",
+            "originalIpa": "miau³⁵",
+            "zh": "庙"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "mĩ²¹ji³⁵",
+            "originalIpa": "mĩ²¹ji³⁵",
+            "zh": "名誉"
+          },
+          {
+            "ipa": "tsu³⁵",
+            "originalIpa": "tsu³⁵",
+            "zh": "出"
+          },
+          {
+            "ipa": "lu⁵³",
+            "originalIpa": "lu⁵³",
+            "zh": "DIRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-118",
+        "page": "55",
+        "ipa": "lẽ²¹ŋau²¹sã⁵⁵ lie⁵⁵ pẽ⁵³sẽ⁵⁵ tɕiu⁵⁵si⁵⁵ lẽ²¹ŋau²¹sã⁵⁵ tɕe²¹ ɕi⁵⁵",
+        "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵ lie⁵⁵ pẽ⁵³sẽ⁵⁵ tçiu⁵⁵si⁵⁵ lẽ²¹ŋau²¹sã⁵⁵ tçe²¹ çi⁵⁵",
+        "zh": "这山本身就是灵羔山",
+        "glosses": [
+          {
+            "ipa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "zh": "灵羔山"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "pẽ⁵³sẽ⁵⁵",
+            "originalIpa": "pẽ⁵³sẽ⁵⁵",
+            "zh": "本身"
+          },
+          {
+            "ipa": "tɕiu⁵⁵si⁵⁵",
+            "originalIpa": "tçiu⁵⁵si⁵⁵",
+            "zh": "就是"
+          },
+          {
+            "ipa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "zh": "灵羔山"
+          },
+          {
+            "ipa": "tɕe²¹",
+            "originalIpa": "tçe²¹",
+            "zh": "叫"
+          },
+          {
+            "ipa": "ɕi⁵⁵",
+            "originalIpa": "çi⁵⁵",
+            "zh": "STRP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-119",
+        "page": "55",
+        "ipa": "jiu³⁵ lẽ²¹ku⁵⁵miau³⁵ wa⁵⁵ ẽ⁵⁵ti⁵⁵ lẽ²¹ku⁵⁵liã⁵⁵ a⁵⁵",
+        "originalIpa": "jiu³⁵ lẽ²¹ku⁵⁵miau³⁵ wa⁵⁵ ẽ⁵⁵ti⁵⁵ lẽ²¹ku⁵⁵liã⁵⁵ a⁵⁵",
+        "zh": "这个灵姑娘啊，",
+        "glosses": [
+          {
+            "ipa": "jiu³⁵",
+            "originalIpa": "jiu³⁵",
+            "zh": "又"
+          },
+          {
+            "ipa": "lẽ²¹ku⁵⁵miau³⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵miau³⁵",
+            "zh": "灵姑庙"
+          },
+          {
+            "ipa": "wa⁵⁵",
+            "originalIpa": "wa⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "lẽ²¹ku⁵⁵liã⁵⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵liã⁵⁵",
+            "zh": "灵姑娘"
+          },
+          {
+            "ipa": "a⁵⁵",
+            "originalIpa": "a⁵⁵",
+            "zh": "INJ"
+          }
+        ]
+      },
+      {
+        "id": "2.1-120",
+        "page": "55",
+        "ipa": "ko³⁵ ai⁵⁵ ka²¹ le⁵⁵ ɕiã⁵⁵ lẽ²¹ liau⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵",
+        "originalIpa": "ko³⁵ ai⁵⁵ ka²¹ le⁵⁵ çiã⁵⁵ lẽ²¹ liau⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵",
+        "zh": "在她那上面烧香灵了之后呢，",
+        "glosses": [
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ai⁵⁵",
+            "originalIpa": "ai⁵⁵",
+            "zh": "那"
+          },
+          {
+            "ipa": "ka²¹",
+            "originalIpa": "ka²¹",
+            "zh": "上"
+          },
+          {
+            "ipa": "le⁵⁵",
+            "originalIpa": "le⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "ɕiã⁵⁵",
+            "originalIpa": "çiã⁵⁵",
+            "zh": "香"
+          },
+          {
+            "ipa": "lẽ²¹",
+            "originalIpa": "lẽ²¹",
+            "zh": "灵"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "tsi⁵⁵xiu³⁵",
+            "originalIpa": "tsi⁵⁵xiu³⁵",
+            "zh": "之后"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-121",
+        "page": "55",
+        "ipa": "lẽ²¹ŋau²¹sã⁵⁵ lie⁵⁵ je⁵³ tɕiu⁵⁵ kai⁵³tsʰẽ²¹ liau⁵³ lẽ²¹ku⁵⁵sã⁵⁵",
+        "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵ lie⁵⁵ je⁵³ tçiu⁵⁵ kai⁵³tshẽ²¹ liau⁵³ lẽ²¹ku⁵⁵sã⁵⁵",
+        "zh": "也就改成了灵姑山，",
+        "glosses": [
+          {
+            "ipa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "originalIpa": "lẽ²¹ŋau²¹sã⁵⁵",
+            "zh": "灵羔山"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "也"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "kai⁵³tsʰẽ²¹",
+            "originalIpa": "kai⁵³tshẽ²¹",
+            "zh": "改成"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "lẽ²¹ku⁵⁵sã⁵⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵sã⁵⁵",
+            "zh": "灵姑山"
+          }
+        ]
+      },
+      {
+        "id": "2.1-122",
+        "page": "55",
+        "ipa": "pa⁵⁵ lẽ²¹ku⁵⁵liã⁵⁵ lie⁵⁵ kʰẽ⁵³tẽ³⁵ tɕiu⁵⁵si⁵⁵ sẽ²¹ɕiã²¹ piã³⁵ liau⁵³",
+        "originalIpa": "pa⁵⁵ lẽ²¹ku⁵⁵liã⁵⁵ lie⁵⁵ khẽ⁵³tẽ³⁵ tçiu⁵⁵si⁵⁵ sẽ²¹çiã²¹ piã³⁵ liau⁵³",
+        "zh": "灵姑娘肯定变成了神仙，",
+        "glosses": [
+          {
+            "ipa": "pa⁵⁵",
+            "originalIpa": "pa⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "lẽ²¹ku⁵⁵liã⁵⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵liã⁵⁵",
+            "zh": "灵姑娘"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "kʰẽ⁵³tẽ³⁵",
+            "originalIpa": "khẽ⁵³tẽ³⁵",
+            "zh": "肯定"
+          },
+          {
+            "ipa": "tɕiu⁵⁵si⁵⁵",
+            "originalIpa": "tçiu⁵⁵si⁵⁵",
+            "zh": "就是"
+          },
+          {
+            "ipa": "sẽ²¹ɕiã²¹",
+            "originalIpa": "sẽ²¹çiã²¹",
+            "zh": "神仙"
+          },
+          {
+            "ipa": "piã³⁵",
+            "originalIpa": "piã³⁵",
+            "zh": "变"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-123",
+        "page": "55",
+        "ipa": "ɕiã⁵⁵zẽ²¹ tsi³⁵ liau⁵³ je⁵³ tɕiu⁵⁵ kei⁵³ tʰa⁵⁵ xã⁵³ tsʰẽ²¹",
+        "originalIpa": "çiã⁵⁵zẽ²¹ tsi³⁵ liau⁵³ je⁵³ tçiu⁵⁵ kei⁵³ tha⁵⁵ xã⁵³ tshẽ²¹",
+        "zh": "也就给她喊成了灵姑仙，",
+        "glosses": [
+          {
+            "ipa": "ɕiã⁵⁵zẽ²¹",
+            "originalIpa": "çiã⁵⁵zẽ²¹",
+            "zh": "仙人"
+          },
+          {
+            "ipa": "tsi³⁵",
+            "originalIpa": "tsi³⁵",
+            "zh": "成"
+          },
+          {
+            "ipa": "liau⁵³",
+            "originalIpa": "liau⁵³",
+            "zh": "ASPP"
+          },
+          {
+            "ipa": "je⁵³",
+            "originalIpa": "je⁵³",
+            "zh": "也"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "kei⁵³",
+            "originalIpa": "kei⁵³",
+            "zh": "给"
+          },
+          {
+            "ipa": "tʰa⁵⁵",
+            "originalIpa": "tha⁵⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "xã⁵³",
+            "originalIpa": "xã⁵³",
+            "zh": "喊"
+          },
+          {
+            "ipa": "tsʰẽ²¹",
+            "originalIpa": "tshẽ²¹",
+            "zh": "成"
+          }
+        ]
+      },
+      {
+        "id": "2.1-124",
+        "page": "55",
+        "ipa": "lẽ²¹ku⁵⁵ɕiã⁵⁵ mu³⁵nã⁵⁵ ẽ⁵⁵ti⁵⁵ kʰu⁵⁵ pi³⁵ la⁵⁵ ni³⁵ la⁵⁵ɣie²¹tsʰu⁵⁵",
+        "originalIpa": "lẽ²¹ku⁵⁵çiã⁵⁵ mu³⁵nã⁵⁵ ẽ⁵⁵ti⁵⁵ khu⁵⁵ pi³⁵ la⁵⁵ ni³⁵ la⁵⁵ɣie²¹tshu⁵⁵",
+        "zh": "现在这座山呀，你从远处一看，",
+        "glosses": [
+          {
+            "ipa": "lẽ²¹ku⁵⁵ɕiã⁵⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵çiã⁵⁵",
+            "zh": "灵姑仙"
+          },
+          {
+            "ipa": "mu³⁵nã⁵⁵",
+            "originalIpa": "mu³⁵nã⁵⁵",
+            "zh": "现在"
+          },
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "kʰu⁵⁵",
+            "originalIpa": "khu⁵⁵",
+            "zh": "山"
+          },
+          {
+            "ipa": "pi³⁵",
+            "originalIpa": "pi³⁵",
+            "zh": "小"
+          },
+          {
+            "ipa": "la⁵⁵",
+            "originalIpa": "la⁵⁵",
+            "zh": "INJ"
+          },
+          {
+            "ipa": "ni³⁵",
+            "originalIpa": "ni³⁵",
+            "zh": "2sg"
+          },
+          {
+            "ipa": "la⁵⁵ɣie²¹tsʰu⁵⁵",
+            "originalIpa": "la⁵⁵ɣie²¹tshu⁵⁵",
+            "zh": "远处"
+          }
+        ]
+      },
+      {
+        "id": "2.1-125",
+        "page": "55–56",
+        "ipa": "le⁵⁵ pa⁵³ ko³⁵ xau⁵³tɕʰiã³⁵ lie⁵⁵ tɕiu⁵⁵ ẽ⁵⁵ti⁵⁵ lẽ²¹ku⁵⁵ɕiã⁵⁵ ne⁵⁵ kʰo⁵⁵pa⁵⁵ ta⁵³tsie²¹ zie⁵³ le⁵³ zie⁵³ so⁵³ji⁵³",
+        "originalIpa": "le⁵⁵ pa⁵³ ko³⁵ xau⁵³tçhiã³⁵ lie⁵⁵ tçiu⁵⁵ ẽ⁵⁵ti⁵⁵ lẽ²¹ku⁵⁵çiã⁵⁵ ne⁵⁵ kho⁵⁵pa⁵⁵ ta⁵³tsie²¹ zie⁵³ le⁵³ zie⁵³ so⁵³ji⁵³",
+        "zh": "它就像灵姑仙的头，非常漂亮，",
+        "glosses": [
+          {
+            "ipa": "le⁵⁵",
+            "originalIpa": "le⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "pa⁵³",
+            "originalIpa": "pa⁵³",
+            "zh": "看"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "xau⁵³tɕʰiã³⁵",
+            "originalIpa": "xau⁵³tçhiã³⁵",
+            "zh": "好像"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "lẽ²¹ku⁵⁵ɕiã⁵⁵",
+            "originalIpa": "lẽ²¹ku⁵⁵çiã⁵⁵",
+            "zh": "灵姑仙"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "kʰo⁵⁵pa⁵⁵",
+            "originalIpa": "kho⁵⁵pa⁵⁵",
+            "zh": "头"
+          },
+          {
+            "ipa": "ta⁵³tsie²¹",
+            "originalIpa": "ta⁵³tsie²¹",
+            "zh": "一样"
+          },
+          {
+            "ipa": "zie⁵³",
+            "originalIpa": "zie⁵³",
+            "zh": "漂亮"
+          },
+          {
+            "ipa": "le⁵³",
+            "originalIpa": "le⁵³",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "zie⁵³",
+            "originalIpa": "zie⁵³",
+            "zh": "漂亮"
+          },
+          {
+            "ipa": "so⁵³ji⁵³",
+            "originalIpa": "so⁵³ji⁵³",
+            "zh": "CAUC"
+          }
+        ]
+      },
+      {
+        "id": "2.1-126",
+        "page": "56",
+        "ipa": "lau⁵³pie²¹ɕĩ⁵⁵ mu³⁵nã⁵⁵ tuei³⁵ ko³⁵ ne⁵⁵ ẽ⁵⁵ti⁵⁵ tsʰuã²¹so²¹ lie⁵⁵",
+        "originalIpa": "lau⁵³pie²¹çĩ⁵⁵ mu³⁵nã⁵⁵ tuei³⁵ ko³⁵ ne⁵⁵ ẽ⁵⁵ti⁵⁵ tshuã²¹so²¹ lie⁵⁵",
+        "zh": "所以现在老百姓对她的传说就一代一代往下传，",
+        "glosses": [
+          {
+            "ipa": "lau⁵³pie²¹ɕĩ⁵⁵",
+            "originalIpa": "lau⁵³pie²¹çĩ⁵⁵",
+            "zh": "老百姓"
+          },
+          {
+            "ipa": "mu³⁵nã⁵⁵",
+            "originalIpa": "mu³⁵nã⁵⁵",
+            "zh": "现在"
+          },
+          {
+            "ipa": "tuei³⁵",
+            "originalIpa": "tuei³⁵",
+            "zh": "对"
+          },
+          {
+            "ipa": "ko³⁵",
+            "originalIpa": "ko³⁵",
+            "zh": "3sg"
+          },
+          {
+            "ipa": "ne⁵⁵",
+            "originalIpa": "ne⁵⁵",
+            "zh": "STRP"
+          },
+          {
+            "ipa": "ẽ⁵⁵ti⁵⁵",
+            "originalIpa": "ẽ⁵⁵ti⁵⁵",
+            "zh": "这个"
+          },
+          {
+            "ipa": "tsʰuã²¹so²¹",
+            "originalIpa": "tshuã²¹so²¹",
+            "zh": "传说"
+          },
+          {
+            "ipa": "lie⁵⁵",
+            "originalIpa": "lie⁵⁵",
+            "zh": "TOP"
+          }
+        ]
+      },
+      {
+        "id": "2.1-127",
+        "page": "56",
+        "ipa": "ji²¹tsi²¹ tɕiu⁵⁵ ã³⁵ pʰo⁵⁵tɕiau⁵⁵ ji³⁵tai⁵⁵ ja⁵⁵",
+        "originalIpa": "ji²¹tsi²¹ tçiu⁵⁵ ã³⁵ pho⁵⁵tçiau⁵⁵ ji³⁵tai⁵⁵ ja⁵⁵",
+        "zh": "在我们坡脚一带，",
+        "glosses": [
+          {
+            "ipa": "ji²¹tsi²¹",
+            "originalIpa": "ji²¹tsi²¹",
+            "zh": "一直"
+          },
+          {
+            "ipa": "tɕiu⁵⁵",
+            "originalIpa": "tçiu⁵⁵",
+            "zh": "就"
+          },
+          {
+            "ipa": "ã³⁵",
+            "originalIpa": "ã³⁵",
+            "zh": "1pl"
+          },
+          {
+            "ipa": "pʰo⁵⁵tɕiau⁵⁵",
+            "originalIpa": "pho⁵⁵tçiau⁵⁵",
+            "zh": "坡脚"
+          },
+          {
+            "ipa": "ji³⁵tai⁵⁵",
+            "originalIpa": "ji³⁵tai⁵⁵",
+            "zh": "一带"
+          },
+          {
+            "ipa": "ja⁵⁵",
+            "originalIpa": "ja⁵⁵",
+            "zh": "INJ"
+          }
+        ]
+      },
+      {
+        "id": "2.1-128",
+        "page": "56",
+        "ipa": "ji³⁵ tai⁵⁵ xo⁵⁵ ji³⁵ tai⁵⁵",
+        "originalIpa": "ji³⁵ tai⁵⁵ xo⁵⁵ ji³⁵ tai⁵⁵",
+        "zh": "一代一代往下传，",
+        "glosses": [
+          {
+            "ipa": "ji³⁵",
+            "originalIpa": "ji³⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tai⁵⁵",
+            "originalIpa": "tai⁵⁵",
+            "zh": "代"
+          },
+          {
+            "ipa": "xo⁵⁵",
+            "originalIpa": "xo⁵⁵",
+            "zh": "SENFP"
+          },
+          {
+            "ipa": "ji³⁵",
+            "originalIpa": "ji³⁵",
+            "zh": "一"
+          },
+          {
+            "ipa": "tai⁵⁵",
+            "originalIpa": "tai⁵⁵",
+            "zh": "代"
+          }
+        ]
+      },
+      {
+        "id": "2.1-129",
+        "page": "56",
+        "ipa": "pa²¹tʰi²¹ po⁵⁵ tsie³⁵ pa²¹tʰi²¹ po⁵⁵ li²¹",
+        "originalIpa": "pa²¹thi²¹ po⁵⁵ tsie³⁵ pa²¹thi²¹ po⁵⁵ li²¹",
+        "zh": "往下传，往下传。",
+        "glosses": [
+          {
+            "ipa": "pa²¹tʰi²¹",
+            "originalIpa": "pa²¹thi²¹",
+            "zh": "下面"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "tsie³⁵",
+            "originalIpa": "tsie³⁵",
+            "zh": "告诉"
+          },
+          {
+            "ipa": "pa²¹tʰi²¹",
+            "originalIpa": "pa²¹thi²¹",
+            "zh": "下面"
+          },
+          {
+            "ipa": "po⁵⁵",
+            "originalIpa": "po⁵⁵",
+            "zh": "CASP"
+          },
+          {
+            "ipa": "li²¹",
+            "originalIpa": "li²¹",
+            "zh": "说"
+          }
+        ]
       }
     ],
-    "text": "pi³⁵tsi⁵⁵kʰa²¹ kʰa⁵⁵lu²¹tsu³⁵ kʰa⁵⁵lu²¹tsu³⁵ a⁵⁵ pĩ³⁵ na⁵⁵ tɕʰe⁵⁵ tʰi²¹ liau⁵³ 以前土家族人得了一场病。 土家族 以前 以前 INJ 病 一 次 得 ASPP\nẽ⁵⁵ ti⁵⁵ pĩ³⁵ lie⁵⁵ su²¹ji²¹ ji²¹ tsũ⁵³ wẽ⁵⁵ 这种病呢，属于一种瘟疫。 这 个 病 TOP 属于 一 种 瘟疫\nxi³⁵ tsʰo⁵³ lie⁵⁵ tɕʰi⁵³ma⁵³ tɕiu⁵³ tsʰo⁵³ pa³⁵ tsʰo⁵³ ji⁵³tɕĩ⁵⁵ tsʰo⁵³ ɕe³⁵ si³⁵ no⁵³ tʰau³⁵ 十家中起码有九家已经没人了。 十 家 TOP 起码 九 家 八 家 已经 家 有 是 人 没有\nwẽ⁵⁵ to²¹ le⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵ xã³⁵ si²¹ tɕia²¹kʰa²¹ na⁵⁵ 中瘟后，有一姓石人家。 瘟疫 中 ASPP 之后 TOP 这样 石 姓 一\nkie⁵³ tsʰu⁵⁵ piu³⁵ nau⁵³ ɕe³⁵ 他们家有个女儿。 2PL（原书标注；句译作他们） 家 女儿 一个 有\nkie⁵³tsie²¹ ne⁵⁵ piu³⁵ lie⁵⁵ ko³⁵ tɕiu⁵⁵ ɕia³⁵tɕe²¹ɕi⁵⁵ la⁵⁵ 他们的女儿就下决心。 3PL STRP 女儿 TOP 3SG 就 下决心 INJ\nko³⁵ xũ²¹tsai⁵⁵ ẽ⁵⁵ti pi³⁵tsi⁵⁵kʰa²¹ ne⁵⁵ wẽ⁵⁵ tsi³⁵ xau⁵³ tsẽ⁵³ mo²¹ tsʰa³⁵ le⁵³ 她一定要把土家族的这种瘟治好。 3SG 反正 这个 土家族 STRP 瘟疫 诊治 好 诊治 STRP 好 ASPP\nko³⁵ tɕiu⁵⁵ kie⁵³tsie²¹ ne⁵⁵ a²¹ne⁵³ a²¹pa⁵³ ta⁵³ li²¹ 于是她就跟她父母说。 3SG 就 3PL STRP 母亲 父亲 CASP 说\na²¹ne⁵³ a²¹pa⁵³ ŋa³⁵ lie⁵⁵ no⁵³te⁵³ po⁵⁵ pĩ³⁵ tsẽ⁵³-i³⁵ jau³⁵ tɕe⁵³ mo²¹ ni⁵⁵-i³⁵ 爸爸、妈妈，我去给别人治病，去找药。 母亲 父亲 1SG TOP 别人 CASP 病 诊治-FUT 药 赶 STRP 找-FUT\nno⁵³ tɕiu³⁵ tʰi⁵⁵ɕi²¹ kʰa⁵⁵lu²¹tsu³⁵ li²¹ no⁵³ nau⁵³ tɕiu³⁵ wa⁵⁵ 必须救人。以前说，救一个人啊…… 人 救 必须 以前 说 人 一个 救 INJ\ntẽ⁵⁵ji²¹ ɣɨ³⁵ le⁵³ je²¹ tɕi²¹ ne⁵⁵ pau⁵³tʰa²¹ nau⁵³ ɕiu⁵⁵ wa⁵⁵ tɕʰiã²¹ ne⁵⁵ 比去庙脚下修一座宝塔还要强。 等于 走 ASPP 庙 脚 STRP 宝塔 一个 修建 INJ 强 CMPP\na²¹ne⁵³ a²¹pa⁵³ lie⁵⁵ je⁵³ tʰũ²¹ji³⁵ ko³⁵ ne⁵⁵ ɕiã⁵³xua²¹ 她的父母也很赞同她的想法。 母亲 父亲 TOP 也 同意 3SG STRP 想法\nko³⁵ ne⁵⁵ te³⁵ po⁵⁵ ɕi⁵⁵ si²¹wu⁵³ si²¹wu⁵³ kʰa⁵⁵ le⁵³ lie⁵⁵ 过完正月十五。 3SG STRP 想 ASPP STRP 十五 十五 过 ASPP TOP\nko³⁵ tɕiu⁵⁵ tsʰo⁵³ tɕi²¹kʰu²¹ ta³⁵ le⁵³ lie⁵⁵ jau³⁵ ni⁵⁵ tiu⁵⁵ 她就穿着草鞋找药去了。 3SG 就 家 草鞋 穿 ASPP TOP 药 找 DIRP\nko³⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ le⁵³ tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ 她走啊走，走到了鸡公里河边。 3SG 走 INJ 走 INJ 走 ASPP 鸡公里 河\ntɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ je⁵³ liau⁵³ lie⁵⁵ 到鸡公里河之后。 鸡公里 河 到 ASPP TOP\ntɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ tʰu³⁵ lie⁵⁵ wo⁵³ kei⁵³ti²¹ 鸡公里河里好多蛇。 鸡公里 河 里 TOP 蛇 很多\nwo⁵³ lau⁵³ka⁵⁵ na⁵⁵ tsi⁵⁵ pʰie²¹ po⁵⁵ mo²¹ pu³⁵kã⁵³ ɣɨ³⁵ 有一条大蛇趴在那里，她不敢走了。 蛇 大 一 条 趴 ASPP STRP 不敢 走\npu³⁵kã⁵³ ɣɨ³⁵ lie⁵⁵ ko³⁵ jiu³⁵ a²¹tsʰa²¹ ku²¹ zau⁵³ wa⁵⁵le⁵³ ɣɨ³⁵ 不敢走了，她又爬上悬崖绕了过去。 不敢 走 TOP 3SG 又 悬崖 上 绕 ASPP 走"
+    "text": "pi³⁵tsi⁵⁵kʰa²¹ kʰa⁵⁵lu²¹tsu³⁵ kʰa⁵⁵lu²¹tsu³⁵ a⁵⁵ pĩ³⁵ na⁵⁵ tɕʰe⁵⁵ tʰi²¹ liau⁵³ 以前土家族人得了一场病， 土家族 以前 以前 INJ 病 一 次 得 ASPP ẽ⁵⁵ ti⁵⁵ pĩ³⁵ lie⁵⁵ su²¹ji²¹ ji²¹ tsũ⁵³ wẽ⁵⁵ 这种病呢，属于一种瘟疫， 这 个 病 TOP 属于 一 种 瘟疫 xi³⁵ tsʰo⁵³ lie⁵⁵ tɕʰi⁵³ma⁵³ tɕiu⁵³ tsʰo⁵³ pa³⁵ tsʰo⁵³ ji⁵³tɕĩ⁵⁵ tsʰo⁵³ ɕe³⁵ si³⁵ no⁵³ tʰau³⁵ 十家中起码有九家已经没人了， 十 家 TOP 起码 九 家 八 家 已经 家 有 是 人 没有 wẽ⁵⁵ to²¹ le⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵ xã³⁵ si²¹ tɕia²¹kʰa²¹ na⁵⁵ 中瘟后，有一姓石人家， 瘟疫 中 ASPP 之后 TOP 这样 石 姓 一 kie⁵³ tsʰu⁵⁵ piu³⁵ nau⁵³ ɕe³⁵ 他们家有个女儿， 2pl 家 女儿 一个 有 kie⁵³tsie²¹ ne⁵⁵ piu³⁵ lie⁵⁵ ko³⁵ tɕiu⁵⁵ ɕia³⁵tɕe²¹ɕĩ⁵⁵ la⁵⁵ 她就下决心， 3pl STRP 女儿 TOP 3sg 就 下决心 INJ ko³⁵ xũ²¹tsai⁵⁵ ẽ⁵⁵ti pi³⁵tsi⁵⁵kʰa²¹ ne⁵⁵ wẽ⁵⁵ tsi³⁵ xau⁵³ tsẽ⁵³ mo²¹ tsʰa³⁵ le⁵³ 她一定要把土家族的这种瘟治好， 3sg 反正 这个 土家族 STRP 瘟疫 诊治 好 诊治 STRP 好 ASPP ko³⁵ tɕiu⁵⁵ kie⁵³tsie²¹ ne⁵⁵ a²¹ne⁵³ a²¹pa⁵³ ta⁵³ li²¹ a²¹ne⁵³ a²¹pa⁵³ 于是她就跟她父母说：“爸爸，妈妈， 3sg 就 3pl STRP 母亲 父亲 CASP 说 母亲 父亲 ŋa³⁵ lie⁵⁵ no⁵³te⁵³ po⁵⁵ pĩ³⁵ tsẽ⁵³-i³⁵ jau³⁵ tɕe⁵³ mo²¹ ni⁵⁵-i³⁵ 我去给别人治病，去找药， 1sg TOP 别人 CASP 病 诊治 药 赶 STRP 找 no⁵³ tɕiu³⁵ tʰi⁵⁵ɕi²¹ kʰa⁵⁵lu²¹tsu³⁵ li²¹ no⁵³ nau⁵³ tɕiu³⁵ wa⁵⁵ 必须救人，以前说，“救一个啊， 人 救 必须 以前 说 人 一个 救 INJ tẽ⁵⁵ji²¹ ɣɨ³⁵ le⁵³ je²¹ tɕi²¹ ne⁵⁵ pau⁵³tʰa²¹ nau⁵³ ɕiu⁵⁵ wa⁵⁵ tɕʰiã²¹ ne⁵⁵ 比去庙脚下修一座宝塔还要强。” 等于 走 ASPP 庙 脚 STRP 宝塔 一个 修建 INJ 强 CMPP a²¹ne⁵³ a²¹pa⁵³ lie⁵⁵ je⁵³ tʰũ²¹ji³⁵ ko³⁵ ne⁵⁵ ɕiã⁵³xua²¹ 她的父母也很赞同她的想法， 母亲 父亲 TOP 也 同意 3sg STRP 想法 ko³⁵ ne⁵⁵ te³⁵ po⁵⁵ ɕi⁵⁵ si²¹wu⁵³ si²¹wu⁵³ kʰa⁵⁵ le⁵³ lie⁵⁵ 过完正月十五， 3sg STRP 想 ASPP STRP 十五 十五 过 ASPP TOP ko³⁵ tɕiu⁵⁵ tsʰo⁵³ tɕi²¹kʰu²¹ ta³⁵ le⁵³ lie⁵⁵ jau³⁵ ni⁵⁵ tiu⁵⁵ 她就穿着草鞋找药去了 3sg 就 家 草鞋 穿 ASPP TOP 药 找 DIRP ko³⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ a⁵⁵ ɣɨ³⁵ le⁵³ tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ 走到了鸡公里河边， 3sg 走 INJ 走 INJ 走 ASPP 鸡公里 河 tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ je⁵³ liau⁵³ lie⁵⁵ 到鸡公里河之后， 鸡公里 河 到 ASPP TOP tɕi⁵⁵kũ⁵⁵li⁵³ xu²¹pʰa²¹ tʰu³⁵ lie⁵⁵ wo⁵³ kei⁵³ti²¹ 鸡公里河里好多蛇呀， 鸡公里 河 里 TOP 蛇 很多 wo⁵³ lau⁵³ka⁵⁵ na⁵⁵ tsi⁵⁵ pʰie²¹ po⁵⁵ mo²¹ pu³⁵kã⁵³ ɣɨ³⁵ 有一条大蛇趴在那里，她不敢走了， 蛇 大 一 条 趴 ASPP STRP 不敢 走 pu³⁵kã⁵³ ɣɨ³⁵ lie⁵⁵ ko³⁵ jiu³⁵ a²¹tsʰa²¹ ku²¹ zau⁵³ wa⁵⁵le⁵³ ɣɨ³⁵ 不敢走了呢，她又爬上悬崖绕了过去， 不敢 走 TOP 3sg 又 悬崖 上 绕 ASPP 走 jiu³⁵ ɣɨ³⁵ mo²¹ tsie²¹ko⁵⁵ lẽ²¹ŋau²¹sã⁵⁵ tɕi²¹tʰa²¹ je⁵³ 又走到了灵羔山下， 又 走 STRP 这个 灵羔山 脚下 到 lẽ²¹ŋau²¹sã⁵⁵ tɕi²¹tʰa²¹ lie⁵⁵ au⁵⁵tsʰai²¹ lie⁵⁵ kʰa²¹kʰo²¹ sẽ⁵⁵ 灵羔山脚下呢，那儿的树林很深， 灵羔山 脚下 TOP 那儿 TOP 树林 深 ai⁵⁵ tʰu³⁵ lie⁵⁵ li³⁵pa⁵⁵ kei⁵³ti²¹ 里面有很多公老虎， 那 里 TOP 老虎 很多 li³⁵ nau⁵³ ũ²¹ po⁵⁵ lie⁵⁵ ko³⁵ kie⁵³ si⁵³-i³⁵ 一只老虎蹲在那里，她害怕极了， 老虎 一个 坐 ASPP TOP 3sg 怕 死 ɕĩ⁵⁵li⁵³ suei²¹suei²¹ sa³⁵tɕʰi⁵⁵ to⁵⁵ tsʰu²¹tsʰu²¹ liau⁵³ 心都凉了，头发都竖起来了， 心里 很凉 头发 都 竖 ASPP ko³⁵ xũ²¹tsai⁵⁵ te³⁵ po⁵⁵ ɕi⁵⁵ no⁵³te⁵³ po⁵⁵ jau³⁵ ni⁵⁵ ja⁵⁵ pĩ³⁵ tsẽ⁵³ to⁵⁵ a⁵⁵ 她一直记着，要给别人找药、治病， 3sg 反正 记 ASPP STRP 别人 CASP 药 找 INJ 病 诊治 要 INJ ko³⁵ jiu³⁵ zau⁵³ po⁵⁵ ɣɨ³⁵ jiu³⁵ jã²¹kiu²¹ a³⁵ le⁵³ 她又绕着走，过了一条沟， 3sg 又 绕 ASPP 走 又 阳沟 过 ASPP tsʰie²¹ tɕʰiu²¹ a⁵⁵le⁵³ jiu³⁵ ẽ⁵⁵kie⁵⁵ na⁵⁵kuei⁵⁵ ku²¹ lu⁵³ 游过水，又爬上了另一边。 水 泅 ASPP 又 那里 一边 上 DIRP na⁵⁵ ne⁵³ ɣɨ³⁵ ja⁵⁵ je⁵³ ta⁵⁵ ne⁵⁵ ne⁵³ ɣɨ³⁵ ja⁵⁵ je⁵³ ta⁵⁵ 走了一天没到，走了两天没到， 一 天 走 INJ 到 没 两 天 走 INJ 到 没 ɣɨ³⁵ ja⁵⁵ ɣɨ³⁵ le⁵³ tɕi²¹pʰa²¹ ka²¹ ne⁵⁵ tɕi²¹kʰu²¹ ɣɨ³⁵ mo²¹ te²¹ tɕi⁵³ liau⁵³ 脚上的草鞋都烂了， 走 INJ 走 ASPP 脚 上 STRP 草鞋 走 STRP 烂 完 ASPP ko³⁵ tɕiu⁵⁵ ɣɨ³⁵ le⁵³ si⁵⁵miã²¹ tʰa³⁵pʰa⁵⁵ je⁵³ le⁵³ tɕi²¹kʰu²¹ ka²¹ tsʰuã²¹ po⁵⁵ tɕi²¹kʰu²¹ zi⁵⁵ 她就用丝棉树皮做草鞋， 3sg 就 走 ASPP 丝棉 皮 剥 ASPP 草鞋 上 绞 ASPP 草鞋 做 si⁵⁵pa⁵⁵ lie⁵⁵ je⁵³ tʰa³⁵sie⁵⁵ ko³⁵ kiu⁵⁵ a⁵⁵le⁵³ te²¹ tɕi⁵³ liau⁵³ 衣服也被刺刮烂了。 衣服 TOP 也 刺 CASP 钩 ASPP 烂 完 ASPP ko³⁵ tɕiu⁵⁵ ta³⁵je⁵⁵pʰau⁵⁵ ɣie⁵⁵tʰa⁵⁵ xo²¹le²¹ tʰi³⁵ po⁵⁵ 她就用大月苞叶子绑在身上， 3sg 就 大月苞 叶子 CASP 捆 ASPP jiu³⁵ kʰa⁵⁵tʰau⁵⁵ po⁵⁵ ɣɨ³⁵ ɣɨ³⁵ le⁵³ pã³⁵zi⁵⁵tsu⁵⁵ 又往上走，到中午时， 又 上面 CASP 走 走 ASPP 中午 lẽ²¹ŋau²¹sã⁵⁵ ai⁵⁵ti⁵⁵ pa²¹ ku²¹ tɕi⁵³ liau⁵³ wa⁵⁵ 灵羔山的坡已经爬完了， 灵羔山 那个 坡 上 完 ASPP INJ ku²¹ le⁵³ kʰu⁵⁵tsa⁵³ tẽ⁵⁵tẽ⁵⁵ je⁵³ le⁵³ na⁵⁵ tũ⁵⁵ pa⁵³ ja⁵⁵ 走到了山顶上，一看， 上 ASPP 山 顶部 到 ASPP 一 下 看 INJ ji³⁵ au⁵⁵tsʰai²¹ jau³⁵ na⁵⁵ pʰũ⁵⁵ ɕe³⁵ 唉，那儿有一株药， INTJ 那儿 药 一 株 有 ai⁵⁵ jau³⁵ na⁵⁵ pʰũ⁵⁵ lie⁵⁵ tɕiu⁵⁵si⁵⁵ 就是那株药， 那 药 一 株 TOP 就是 ko³⁵ ko³⁵ tɕiu⁵⁵ ẽ⁵⁵ti⁵⁵ pĩ³⁵ tsẽ⁵³ tie⁵⁵ɕi²¹ 它可以治这种病。 3sg CASP 就 这个 病 诊治 可以 ai⁵⁵ jau³⁵ na⁵⁵ pʰũ⁵⁵ pʰã²¹piã⁵⁵ lie⁵⁵ sie³⁵tʰa⁵⁵ la⁵⁵ wo⁵³ zie⁵³ tsi⁵⁵ a²¹si²¹ kie²¹ na⁵⁵kuei⁵⁵ jiu³⁵ si³⁵ 那药旁边呢，有四条白蛇， 那 药 一 株 旁边 TOP 旁边 TOP 蛇 四 条 白 这里 一边 又 是 wo⁵³ ũ⁵³ tsi⁵⁵ ɕĩ³⁵ka⁵⁵te²¹ ji³⁵xa⁵⁵ lie⁵⁵ tɕiu⁵⁵si⁵⁵ tɕiu⁵³ kẽ⁵⁵ 这边又有五条蓝色的蛇，一共九条， 蛇 五 根 蓝色的 一共 TOP 就是 九 根 kie⁵³tsie²¹ tsuã⁵⁵mẽ²¹ tɕiu⁵⁵ ẽ⁵⁵ti⁵⁵ jau³⁵ kʰa⁵³ po⁵⁵ ɕi⁵⁵ 它们专门看守这株药， 3pl 专门 就 这个 药 看守 ASPP STRP si²¹si²¹kʰie²¹kʰie²¹ tɕʰe⁵³ si²¹tɕe²¹ to⁵⁵ jau³⁵ pa⁵³ po⁵⁵ ɕi⁵⁵ 时时刻刻，什么时候都守着。 时时刻刻 什么 时候 都 药 看 ASPP STRP a⁵³sie²¹ to⁵⁵ ko³⁵ ẽ⁵⁵ti⁵⁵ jau³⁵ pu³⁵tsuẽ⁵³ tʰe³⁵ 谁都不可以摘这株药， 谁 都 3sg 这个 药 不准 摘 ẽ⁵⁵ti⁵⁵ jau³⁵ tʰe³⁵ le⁵³ kie⁵³tsie²¹ tɕiu⁵⁵ wo⁵³ tɕiu⁵⁵ no⁵³ ka³⁵-i³⁵ 谁摘这株药的话，它们就会咬谁， 这个 药 摘 ASPP 3pl 就 蛇 就 人 咬 ko³⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ ko³⁵ au⁵⁵ pa⁵³ po⁵⁵ kau⁵³tsʰi²¹ tʰai³⁵ 她一天一天在那儿看着，没办法， 3sg 一 天 一 天 3sg 那里 看 ASPP 搞的 没有 ai⁵⁵ na⁵⁵ ne⁵³ lie⁵⁵ ko³⁵ au⁵⁵ pa⁵³ to⁵⁵ liau⁵³ ko³⁵ mie³⁵su²¹ si²¹tɕe²¹ nau²¹tsʰi²¹ tsu³⁵ tiu⁵⁵ 一天，她看到天亮时分，太阳出来了， 那 一 天 TOP 3sg 那里 看 到 ASPP 3sg 天亮 时候 太阳 出 DIRP nau²¹tsʰi²¹ tsu³⁵ le⁵³ mie³⁵ ne⁵⁵ li⁵³ ta⁵³ li²¹kʰai⁵⁵ ne⁵⁵ si²¹tɕe²¹ lie⁵⁵ 太阳出来后，天跟地分开的时候， 太阳 出 ASPP 天 COOC 地 一起 离开 STRP 时候 TOP ẽ⁵⁵ti⁵⁵ wo⁵³ lie⁵⁵ tɕiu⁵⁵ lo³⁵pu⁵⁵ na⁵⁵ tũ⁵⁵ tɕʰĩ⁵⁵tɕʰĩ²¹ 这些蛇就闭了一下眼睛。 这个 蛇 TOP 就 眼睛 一 下 闭 o⁵⁵ ko³⁵ xau⁵³ziu²¹ ko³⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ tʰi⁵³ po⁵⁵ 她知道了，她整天在那儿等， INTJ 3sg 知道 3sg 一 天 一 天 等 ASPP o⁵⁵ ne³⁵pe⁵³tsie³⁵ liau⁵³ ko³⁵ tɕiu⁵⁵ kʰa²¹ nau⁵³ kʰo⁵⁵ le⁵³ lo³⁵pu⁵⁵ tsʰẽ³⁵ po⁵⁵ 想睡觉了，她就折断一根木棍把眼睛撑起来， INTJ 想打瞌睡 ASPP 3sg 就 柴 一根 折 ASPP 眼睛 撑 ASPP sa⁵³ liau⁵³ ko³⁵ tɕiu⁵⁵ kʰa²¹ pʰu³⁵tʰa⁵⁵ tʰe³⁵ le⁵³ tuei⁵³ po⁵⁵ ko³⁵ tɕiu⁵⁵ 冷了，她就摘树叶堆在一起取暖， 冷 ASPP 3sg 就 树 叶 摘 ASPP 堆 ASPP 3sg 就 nau²¹tsʰi²¹ tsu³⁵ ɕi⁵⁵ pa⁵³ po⁵⁵ nau²¹tsʰi²¹ tsu³⁵ tiu⁵⁵ lie⁵⁵ 她就这样盼着太阳出来，太阳出来后， 太阳 出 STRP 看 ASPP 太阳 出 DIRP TOP ko³⁵ tɕiu⁵⁵ tsuẽ⁵³pei²¹ xo²¹le²¹ tɕʰĩ⁵⁵tʰẽ²¹ ɣie³⁵la³⁵ miã²¹tʰẽ²¹ ɣie³⁵la³⁵ ko³⁵ sẽ⁵⁵tsi⁵⁵ ka²¹ tʰi³⁵ po⁵⁵ ɕi⁵⁵ 她就准备用青藤缠在她身上， 3sg 就 准备 CASP 青藤 绳子 棉藤 绳子 3sg 身子 上 捆 ASPP STRP ai⁵⁵le⁵³ kʰa²¹mũ²¹ ka²¹ tʰi³⁵ po⁵⁵ ɕi⁵⁵ kʰie⁵³ ɕi²¹ ɕi⁵⁵ ta⁵³tsie²¹ 然后绑在树上，像荡秋千一样， TRAC 树 上 捆 ASPP STRP 秋千 荡 STRP 像 ko³⁵ tsi³⁵jau⁵⁵ nau²¹tsʰi²¹ li⁵³ ka²¹xa³⁵ na³⁵tũ⁵⁵ tsu³⁵ tiu⁵⁵ 只要太阳一出来， 3sg 只要 太阳 地 上面 一下 出 DIRP ko³⁵ tɕiu⁵⁵ kʰie⁵³ ɕi²¹ ɕi⁵⁵ ta⁵³tsie²¹ xu²¹ te²¹ jau³⁵ tsʰi⁵⁵tsʰa⁵³-i³⁵ 她就像荡秋千一样去扯药， 3sg 就 秋千 荡 STRP 像 呼 STRP 药 扯 xã³⁵ ŋã²¹ po⁵⁵ ɕi⁵⁵ tsẽ³⁵tsai⁵⁵ mie³⁵su²¹ tiu⁵⁵ wa⁵⁵ 她这样想。天快亮时， 这样 想 ASPP STRP 正在 天亮 DIRP INJ nau²¹tsʰi²¹ li⁵³ ka²¹ le⁵⁵ tsu³⁵ tiu⁵⁵ wa⁵⁵ 太阳升起来了， 太阳 地 上 CASP 出 DIRP INJ ko³⁵ pu⁵⁵mu²¹ le⁵³ ko³⁵ tɕiu⁵⁵ kʰie⁵³ ɕi²¹ la⁵⁵ xu⁵³ 她开始荡秋千了， 3sg 摸 ASPP 3sg 就 秋千 荡 ASPP ASPP kʰie⁵³ ɕi²¹ le⁵³ tɕe³⁵ ji³⁵ tsʰẽ⁵⁵ 荡秋千时手一伸， 秋千 荡 ASPP 手 一 伸 ji³⁵ tsʰẽ⁵⁵ le⁵³ tɕiu⁵⁵ jau³⁵ ɣie⁵⁵tʰa⁵⁵ na⁵⁵ ɣɨ⁵⁵ tʰe³⁵ tʰi²¹ 就摘到了一张药叶子， 一 伸 ASPP 就 药 叶子 一 张 摘 得 ɣie⁵⁵tʰa⁵⁵ na⁵⁵ ɣɨ⁵⁵ tʰe³⁵ le⁵³ 摘到一张药叶子之后， 叶子 一 张 摘 ASPP ti³⁵ ai³⁵ xau⁵⁵ na⁵⁵ tũ⁵⁵ tsʰẽ⁵⁵ le⁵³ tʰe³⁵ le⁵³ 第二次，她又一伸去摘， 第 二 次 一 下 伸 ASPP 摘 ASPP ko³⁵ lo³⁵pu⁵⁵ tʰũ³⁵ tiu⁵⁵ 蛇眼睛睁开了， 3sg 眼睛 睁开 DIRP xu²¹ te²¹ kʰo⁵⁵pa⁵⁵ pi³⁵ tsʰẽ⁵⁵ le⁵³ ko³⁵ ko³⁵ ka³⁵-i³⁵ 头一伸要咬她， 呼 STRP 头 小 伸 ASPP 3sg CASP 咬 ko³⁵ kʰuai³⁵tiã⁵⁵ tɕiu⁵⁵ sũ⁵⁵kʰo⁵⁵ tiu⁵⁵ 她很快就回来了， 3sg 很快 就 回 DIRP sũ⁵⁵kʰo⁵⁵ le⁵³ ko³⁵ tɕiu⁵⁵ ai⁵⁵ jau³⁵ pi³⁵lã⁵⁵ xo²¹le²¹ tɕiu⁵⁵ pa²¹tʰi²¹ tsai³⁵tsi⁵⁵ sã²¹ a⁵⁵ no⁵³te⁵³ po⁵⁵ tsʰie²¹ xua³⁵ 她拿着那点药回到了寨子里，给人发水， 回 ASPP 3sg 就 那 药 一点 CASP 就 下面 寨子 上 INJ 别人 CASP 水 发 tsʰie²¹ na⁵⁵ su⁵⁵ tʰu³⁵ le⁵³ jau³⁵ pi³⁵lã⁵⁵ la³⁵ 倒了一碗水，往里面放点药， 水 一 碗 倒 ASPP 药 一点 放 jau³⁵ pi³⁵lã⁵⁵ la³⁵ le⁵³ no⁵³te⁵³ no⁵³ ai⁵⁵ti⁵⁵ jau³⁵ xu²¹ le⁵³ tsʰa³⁵ liau⁵³ 放点药后，别人一喝那药就好。 药 一点 放 ASPP 别人 人 那个 药 喝 ASPP 好 ASPP ni³⁵ na⁵⁵ tsie⁵⁵ xu²¹ ko³⁵ na⁵⁵ tsie⁵⁵ xu²¹ 你一口，他一口， 2sg 一 口 喝 3sg 一 口 喝 xu²¹ma²¹te⁵³ lie⁵⁵ tɕe²¹ɕi³⁵ tsʰa³⁵ liau⁵³ tsʰa³⁵ liau⁵³ lie⁵⁵ 喝过的人全好了。 喝的人 TOP 全部 好 ASPP 好 ASPP TOP ko³⁵ jiu³⁵ ai⁵⁵le⁵³ lẽ²¹ŋau²¹sã⁵⁵ po⁵⁵ xu⁵³tsʰa²¹ le⁵³ jiu³⁵ ɣie³⁵la⁵⁵ tʰe³⁵ po⁵⁵ mo²¹ 然后她又跑到灵羔山上去摘药叶子， 3sg 又 TRAC 灵羔山 CASP 跑 ASPP 又 绳子 摘 ASPP STRP kʰie⁵³ ɕi²¹ ta⁵³tsie²¹ jiu³⁵ xã³⁵ tʰi⁵³ 像荡秋千一样，又这样等， 秋千 荡 像 又 这样 等 na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ tʰi⁵³ tʰi⁵³ le⁵³ mie³⁵su²¹ je⁵³ le⁵³ 整天整天等，天亮时， 一 天 一 天 等 等 ASPP 天亮 到 ASPP kʰie⁵³ ɕi²¹ ta⁵³tsie²¹ ji³⁵ ɕi²¹ le⁵³ jiu³⁵ ɣie⁵⁵tʰa⁵⁵ na⁵⁵ ɣɨ⁵⁵ tʰi²¹ 又像荡秋千一样摘到了一张药叶子。 秋千 荡 像 一 荡 ASPP 又 叶子 一 张 得 ɣie⁵⁵tʰa⁵⁵ tʰi²¹ le⁵³ jiu³⁵ pa²¹tʰi²¹ 摘到药叶子后又回到了寨子里头。 叶子 得 ASPP 又 下面 ɕiau⁵⁵ kai⁵³ ne⁵⁵ nũ²¹ la⁵³kʰa⁵⁵ lu⁵³ ko³⁵ lie⁵⁵ xai²¹si³⁵ xã³⁵ jã³⁵tsi⁵⁵ 很多年过去了，她还是这样子， 晓得 很多 STRP 年 过去 DIRP 3sg TOP 还是 这 样子 a²¹si²¹tɕʰĩ²¹tɕʰĩ²¹ mo²¹ no⁵³te⁵³ tsʰu⁵⁵ ne⁵⁵ no⁵³ ja⁵⁵ xau⁵³tɕʰiã³⁵ tʰai³⁵ （头发）都白了，也没嫁人。 白白的 STRP 别人 家 STRP 人 INJ 好像 没有 xũ²¹tsai⁵⁵ no⁵³te⁵³ po⁵⁵ pĩ³⁵ tsi³⁵ no⁵³te⁵³ pĩ³⁵ tʰi²¹ liau⁵³ tɕiu⁵⁵ ko³⁵ ɕiã⁵³ li⁵⁵liã⁵⁵ti²¹ 一直给别人治病，别人生病了只要想她一下， 反正 别人 CASP 病 诊治 别人 病 得 ASPP 就 3sg 想 一下 ko³⁵ tɕiu⁵⁵ ẽ²¹tsi²¹ xu⁵³ ko³⁵ tɕiu⁵⁵ no⁵³ xã³⁵ tsẽ⁵³ 她就会马上赶到，她就这样为别人治病， 3sg 就 来 ASPP 3sg 就 人 这样 诊治 xie³⁵lã²¹ ne⁵⁵ si²¹tɕiã⁵⁵ la⁵³kʰa⁵⁵ lu⁵³ 很长时间过去了， 这么久 STRP 时间 过去 DIRP ɕiau⁵⁵te⁵⁵ ka⁵³ nũ⁵⁵ wo²¹ si²¹ no⁵³te⁵³ ko³⁵ ai⁵⁵ te³⁵ po⁵⁵ tʰa⁵⁵tʰi⁵⁵ 不知道过了多少年，别人都记不起来了， 晓得 几 年 六 个月 别人 CASP 那 记 ASPP 不能 tʰa⁵⁵ne⁵⁵ lie⁵⁵ ko³⁵ kʰei²¹ po⁵⁵ tsau²¹ je⁵³ tsẽ⁵³ 她走乡串寨为别人治病， 后面 TOP 3sg 哪里 CASP 去 也 诊治 na⁵⁵ ne⁵³ xo⁵⁵ na⁵⁵ ne⁵³ ta⁵³tsie²¹ 天天如此， 一 天 SENFP 一 天 一样 na⁵⁵ ne⁵³ xo⁵⁵ na⁵⁵ ne⁵³ xã³⁵ kau⁵³ 整天整天这样做， 一 天 SENFP 一 天 这样 搞 ko³⁵ ne⁵⁵ sa³⁵tɕʰi⁵⁵ lie⁵⁵ tɕiu⁵⁵ na⁵⁵ ne⁵³ xo⁵⁵ na⁵⁵ ne⁵³ a²¹si²¹ 她的头发一天比一天白了。 3sg STRP 头发 TOP 就 一 天 SENFP 一 天 白 ko³⁵ ko³⁵ jau³⁵ wa⁵⁵ tsʰi⁵⁵tsʰa⁵³ mo²¹ ja³⁵xau⁵³ liau⁵³ 她的药也快扯光了， 3sg CASP 药 TOP 扯 STRP 比较多 ASPP pa²¹tʰi²¹ ne⁵⁵ pĩ³⁵ a⁵⁵ tsẽ⁵³ mo²¹ tsʰa³⁵ tɕi⁵³ liau⁵³ 下面寨子里人的病也全好了， 下面 STRP 病 INJ 诊治 STRP 好 完 ASPP ko³⁵ to²¹ ko³⁵ ne⁵⁵ sa³⁵tɕʰi⁵⁵ lie⁵⁵ je⁵³ tɕiu⁵⁵ a²¹si²¹ tsi³⁵ liau⁵³ 她自己的头发也变白了。 3sg 自己 3sg STRP 头发 TOP 也 就 白 成 ASPP pĩ³⁵ tsʰa³⁵ tɕi⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵ 治好病后， 病 好 完 之后 TOP ko³⁵ tɕiu⁵⁵ na⁵⁵ ne⁵³ na⁵⁵ ne⁵³ tsai³⁵tsi⁵⁵ sã²¹ po⁵⁵ ɣɨ³⁵ 她整天在寨子里走来走去， 3sg 就 一 天 一 天 寨子 上 CASP 走 po⁵⁵li²¹te⁵³ po⁵⁵ ũ⁵⁵pie⁵⁵la⁵⁵zie⁵⁵ ɕe³⁵ ko³⁵ ko³⁵ je⁵³ tsi³⁵ li⁵⁵liã⁵⁵ti²¹ 小孩发烧了，她一治就好。 小孩 CASP 发烧 有 3sg CASP 也 治 一下 xa⁵³tʰau³⁵ kʰei²¹ po⁵⁵ tsau²¹ je⁵³ xa⁵³tʰau³⁵ tsi⁵⁵xiu³⁵ lie⁵⁵ 后来，不知道她去哪里了， 不知道 哪里 CASP 去 也 不知道 之后 TOP no⁵³te⁵³ pĩ³⁵ tʰi²¹ liau⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵ 大家生病了， 别人 病 得 ASPP 之后 TOP tɕiu⁵⁵ ko³⁵ po⁵⁵ ɣɨ³⁵ le⁵³ tuei³⁵ po⁵⁵ mo²¹ ai⁵⁵ti⁵⁵ kʰu⁵⁵ pi³⁵ ka²¹ ka²¹ po⁵⁵ tɕĩ³⁵ ɕiã⁵⁵ wu³⁵ 只要走过去对着她那座小山敬一下， 就 3sg CASP 走 ASPP 朝 ASPP STRP 那个 山 小 上 上 CASP 敬 香 烧 tsʰi⁵⁵kʰi⁵⁵tʰa⁵⁵ wu³⁵ ai⁵⁵le⁵³ pĩ³⁵ jiu³⁵ tsʰa³⁵ le⁵³ xu⁵³ 烧点香，病就好。 纸 烧 TRAC 病 又 好 ASPP ASPP ai⁵⁵le⁵³ lau⁵³pie²¹ɕi⁵⁵te⁵³ tɕiu⁵⁵ ɕiã⁵³ a⁵⁵ ẽ⁵⁵ti⁵⁵ pĩ³⁵ 于是老百姓就想啊，这种病啊， TRAC 老百姓 就 想 INJ 这个 病 ko³⁵ xã³⁵ lẽ²¹ a⁵⁵ ko³⁵ ne⁵⁵ ɕĩ³⁵ to⁵⁵ ã³⁵ni⁵⁵ ko³⁵ xa⁵³tʰai³⁵ ja⁵⁵ 她这样灵呀，我们连她的姓都不知道， 3sg 这样 灵 INJ 3sg STRP 姓氏 都 1pl 3sg 不知道 INJ mĩ²¹tsi³⁵ lai⁵⁵ tɕe²¹ la⁵⁵ to⁵⁵ xa⁵³tʰai³⁵ ja⁵⁵ 也不知道她叫什么名字， 名字 什么 叫 ASPP 都 不知道 INJ ai⁵⁵mie⁵⁵ tɕiu⁵⁵ ko³⁵ ne⁵⁵ jau³⁵ xã³⁵ lẽ²¹ pĩ³⁵ tsi³⁵ jiu³⁵ xã³⁵ lẽ²¹ 她的药这么灵， TRAC 就 3sg STRP 药 这样 灵 病 治 又 这样 灵 ko³⁵ po⁵⁵ tɕiu⁵⁵si⁵⁵ lẽ²¹ku⁵⁵liã⁵⁵ nau⁵³ tɕe²¹ po⁵⁵ 就叫她灵姑娘吧， 3sg CASP 就是 灵姑娘 一个 叫 ASPP lẽ²¹ku⁵⁵liã⁵⁵ nau⁵³ tɕe²¹ po⁵⁵ 就叫她灵姑娘， 灵姑娘 一个 叫 ASPP lẽ²¹ku⁵⁵liã⁵⁵ ko³⁵ ne⁵⁵ jau³⁵ xã³⁵ lẽ²¹ 她的药这么灵， 灵姑娘 3sg STRP 药 这样 灵 ko³⁵ ɕiã⁵³ le⁵³ pʰu²¹sa²¹ tɕĩ³⁵ a⁵⁵le⁵³ lẽ²¹ a⁵⁵ 一想她一敬菩萨就灵， 3sg 想 ASPP 菩萨 敬 ASPP 灵 INJ ai⁵⁵ xai²¹si³⁵ ko³⁵ po⁵⁵ tsʰo⁵³ na⁵⁵ tsʰo⁵³ su³⁵ tʰi⁵⁵ɕi²¹ 那还是为她修一栋房子吧， TRAC 还是 3sg CASP 屋 一 家 修 必须 ai⁵⁵ na⁵⁵ tsʰo⁵³ na⁵⁵ tsʰo⁵³ ta⁵³ sã⁵⁵liã²¹ 于是大家一起商量， TRAC 一 家 一 家 一起 商量 na⁵⁵ tsʰo⁵³ na⁵⁵ tsʰo⁵³ ta⁵³ tu³⁵ tʰũ²¹tɕʰiã²¹ tu³⁵ 大家一起出钱， 一 家 一 家 一起 出 钱 出 tʰũ²¹tɕʰiã²¹ tʰai³⁵ma⁵³ lie⁵⁵ ɕe⁵⁵tɕʰi⁵⁵ tu³⁵ 没钱的就出力， 钱 没有的人 TOP 力气 出 a²¹ pie⁵³ma⁵³ a²¹ pie⁵³ kʰa²¹mũ²¹ tʰa⁵³ma⁵³ kʰa²¹mũ²¹ tʰa⁵³ 搬石头的搬石头，砍树的砍树， 石头 搬的人 石头 搬 树 砍的人 树 砍 ai⁵⁵ lẽ²¹ŋau²¹sã⁵⁵ kʰu⁵⁵ pi³⁵ tẽ⁵⁵tẽ⁵⁵ ka²¹ le⁵⁵ tɕiu⁵⁵si⁵⁵ tsʰo⁵³ ji³⁵ tsʰũ²¹ su³⁵ 就在灵羔山山顶上修了一栋房子， 那 灵羔山 山 小 顶部 上 CASP 就是 屋 一 栋 修 la⁵⁵sa⁵⁵te⁵³ ko³⁵ tɕiu⁵⁵ tsʰo⁵³ po⁵⁵ mĩ²¹tsi³⁵ nau⁵³ a²¹ 有人就给它取了一个名字， 有的人 3sg 就 屋 CASP 名字 一个 取 tɕiau³⁵ lẽ²¹ku⁵⁵miau³⁵ 叫灵姑庙， 叫 灵姑庙 lẽ²¹ku⁵⁵miau³⁵ ai⁵⁵ wo³⁵tʰu⁵⁵ xo²¹sã³⁵ ka⁵³ na⁵⁵xu²¹ ɕe³⁵ 灵姑庙里面有几个和尚， 灵姑庙 那 里面 和尚 几 个 有 tɕĩ⁵⁵tsʰã²¹ ko³⁵ po⁵⁵ tɕĩ³⁵ ɕiã⁵⁵ a⁵⁵ xã³⁵ kau⁵³ wa⁵⁵le⁵³ lie⁵⁵ ko³⁵ jiu³⁵ lẽ²¹ 给她烧香，这样她又灵了。 经常 3sg CASP 敬 香 INJ 这样 搞 ASPP TOP 3sg 又 灵 ɕiã⁵⁵ wu³⁵ 四面八方的人来给她烧香， 香 烧 ã³⁵ni⁵⁵ ẽ⁵⁵ti⁵⁵ tʰuã²¹tɕĩ³⁵ ne⁵⁵ li⁵³je²¹ pau⁵³tɕĩ²¹ a⁵⁵ jũ⁵³suẽ²¹ la⁵⁵ ji³⁵kʰi⁵⁵ ɣɨ³⁵ le⁵³ ko³⁵ po⁵⁵ ɣɨ³⁵ le⁵³ ɕiã⁵⁵ wu³⁵ ɕiã⁵⁵ wu³⁵ ɕiã⁵⁵ wu³⁵ 我们这个附近，里耶、保靖、永顺都来给她烧香 1pl 这个 附近 STRP 里耶 保靖 INJ 永顺 INJ 全部 走 ASPP 3sg CASP 走 ASPP 香 烧 香 烧 香 烧 ẽ⁵⁵ti⁵⁵ miau³⁵ lie⁵⁵ mĩ²¹ji³⁵ tsu³⁵ lu⁵³ 这个庙也就出名了。 这个 庙 TOP 名誉 出 DIRP lẽ²¹ŋau²¹sã⁵⁵ lie⁵⁵ pẽ⁵³sẽ⁵⁵ tɕiu⁵⁵si⁵⁵ lẽ²¹ŋau²¹sã⁵⁵ tɕe²¹ ɕi⁵⁵ 这山本身就是灵羔山 灵羔山 TOP 本身 就是 灵羔山 叫 STRP jiu³⁵ lẽ²¹ku⁵⁵miau³⁵ wa⁵⁵ ẽ⁵⁵ti⁵⁵ lẽ²¹ku⁵⁵liã⁵⁵ a⁵⁵ 这个灵姑娘啊， 又 灵姑庙 INJ 这个 灵姑娘 INJ ko³⁵ ai⁵⁵ ka²¹ le⁵⁵ ɕiã⁵⁵ lẽ²¹ liau⁵³ tsi⁵⁵xiu³⁵ lie⁵⁵ 在她那上面烧香灵了之后呢， 3sg 那 上 CASP 香 灵 ASPP 之后 TOP lẽ²¹ŋau²¹sã⁵⁵ lie⁵⁵ je⁵³ tɕiu⁵⁵ kai⁵³tsʰẽ²¹ liau⁵³ lẽ²¹ku⁵⁵sã⁵⁵ 也就改成了灵姑山， 灵羔山 TOP 也 就 改成 ASPP 灵姑山 pa⁵⁵ lẽ²¹ku⁵⁵liã⁵⁵ lie⁵⁵ kʰẽ⁵³tẽ³⁵ tɕiu⁵⁵si⁵⁵ sẽ²¹ɕiã²¹ piã³⁵ liau⁵³ 灵姑娘肯定变成了神仙， CASP 灵姑娘 TOP 肯定 就是 神仙 变 ASPP ɕiã⁵⁵zẽ²¹ tsi³⁵ liau⁵³ je⁵³ tɕiu⁵⁵ kei⁵³ tʰa⁵⁵ xã⁵³ tsʰẽ²¹ 也就给她喊成了灵姑仙， 仙人 成 ASPP 也 就 给 3sg 喊 成 lẽ²¹ku⁵⁵ɕiã⁵⁵ mu³⁵nã⁵⁵ ẽ⁵⁵ti⁵⁵ kʰu⁵⁵ pi³⁵ la⁵⁵ ni³⁵ la⁵⁵ɣie²¹tsʰu⁵⁵ 现在这座山呀，你从远处一看， 灵姑仙 现在 这个 山 小 INJ 2sg 远处 le⁵⁵ pa⁵³ ko³⁵ xau⁵³tɕʰiã³⁵ lie⁵⁵ tɕiu⁵⁵ ẽ⁵⁵ti⁵⁵ lẽ²¹ku⁵⁵ɕiã⁵⁵ ne⁵⁵ kʰo⁵⁵pa⁵⁵ ta⁵³tsie²¹ zie⁵³ le⁵³ zie⁵³ so⁵³ji⁵³ 它就像灵姑仙的头，非常漂亮， CASP 看 3sg 好像 TOP 就 这个 灵姑仙 STRP 头 一样 漂亮 STRP 漂亮 CAUC lau⁵³pie²¹ɕĩ⁵⁵ mu³⁵nã⁵⁵ tuei³⁵ ko³⁵ ne⁵⁵ ẽ⁵⁵ti⁵⁵ tsʰuã²¹so²¹ lie⁵⁵ 所以现在老百姓对她的传说就一代一代往下传， 老百姓 现在 对 3sg STRP 这个 传说 TOP ji²¹tsi²¹ tɕiu⁵⁵ ã³⁵ pʰo⁵⁵tɕiau⁵⁵ ji³⁵tai⁵⁵ ja⁵⁵ 在我们坡脚一带， 一直 就 1pl 坡脚 一带 INJ ji³⁵ tai⁵⁵ xo⁵⁵ ji³⁵ tai⁵⁵ 一代一代往下传， 一 代 SENFP 一 代 pa²¹tʰi²¹ po⁵⁵ tsie³⁵ pa²¹tʰi²¹ po⁵⁵ li²¹ 往下传，往下传。 下面 CASP 告诉 下面 CASP 说",
+    "reviewNote": "逐词正文已对照原书图像；音系中的声韵组合及词库逐词对照仍在核查。"
   }
 ]
