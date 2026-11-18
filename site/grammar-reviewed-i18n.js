@@ -2005,9 +2005,23 @@ Object.assign(UI_TRANSLATIONS,{"即时指令 DIR.IMM":"Immediate directive DIR.I
 Object.assign(UI_TRANSLATIONS,{"，北京：商务印书馆，/ku⁵⁵/助词条。":", Beijing: The Commercial Press, entry /ku⁵⁵/ (particle)."});
 
 
-// +i as an andative "go" form in the Northern Tujia predicate overview.
+// Directional forms and the grammaticalization of -i in Northern Tujia.
 Object.assign(UI_TRANSLATIONS,{
-  "去向／离心 AND":"Andative / go-direction AND",
-  "表示“去做”；如/kai²⁴/“去吃／要去吃”，也可表达未然、预期意义":"Marks ‘go and do’; for example /kai²⁴/ ‘go eat / be going to eat’; it can also express irrealis or prospective meaning",
-  "/i/可以表示“去做”的离心方向，也可表达未然、预期意义；它常与前一音节的韵部结合，引起韵母变化。":"/i/ can mark the andative meaning ‘go and do’, and can also express irrealis or prospective meaning; it often fuses with the preceding rime and changes the vowel."
+  "去向／位移；将行 PROS":"Andative / displacement; prospective PROS",
+  "可表示单向的“去做／位移”，并进一步语法化出未然、预期／将行用法；如/kai²⁴/“去吃／要去吃”。":"Marks one-way ‘go and do / displacement’ and has further grammaticalized into irrealis and prospective uses; e.g. /kai²⁴/ ‘go eat / be going to eat’.",
+  "朝参照位置来；通常用于陈述句和疑问句。":"Move toward the reference point; normally used in declaratives and interrogatives.",
+  "向心 VEN（祈使）":"Venitive VEN (imperative)",
+  "表示“来／起来”时只用于祈使句，如“借来！”“站起来！”。":"When it means ‘come / move upward toward here’, it is restricted to imperatives, e.g. ‘bring it here!’ and ‘stand up!’.",
+  "往返":"Round-trip",
+  "表示“去做（并已返回原点）”；用于陈述句和疑问句的肯定式。":"Means ‘go and do (and return to the point of origin)’; used in affirmative declaratives and interrogatives.",
+  "表示“去／下去”。可用于多种句类；祈使句中可单独出现，陈述句和疑问句通常与/xu/连用。":"Means ‘go / move downward away’; it occurs in several clause types. In imperatives it can occur alone, while in declaratives and interrogatives it normally combines with /xu/.",
+  "向说话人方向移动，同时表示动作已经发生。":"Movement toward the speaker, while also indicating that the action has occurred.",
+  "背离说话人方向移动，同时表示动作已经发生。":"Movement away from the speaker, while also indicating that the action has occurred.",
+  "/i/的较具体趋向用法表示单向的“去做／位移”；在此基础上又发展出未然、预期／将行用法。徐世璇、鲁美艳（2014）专门讨论了这一标记从趋向结构到体标记的来源和语法化过程。/i/还常与前一音节的韵部结合，引起韵母变化。":"/i/ has a concrete directional use marking one-way ‘go and do / displacement’; from this, irrealis and prospective uses developed. Xu Shixuan and Lu Meiyan (2014) specifically discuss its origin in directional constructions and its grammaticalization into an aspect marker. /i/ also commonly fuses with the preceding rime, changing the vowel.",
+  "逐词：吃｜-i":"Gloss: eat | -i",
+  "译文：去吃／要去吃。":"Translation: Go eat / be going to eat.",
+  "鲁美艳（2024），《土家语趋向词研究》，《广西民族师范学院学报》41（6）：61–67。作者将/ti/、/tiu/、/ɕie/、/ɕiau/、/lie/、/lu/列为趋向词；其中/ɕie/的向心义限于祈使句，另有往返义；/lie/可用于陈述、疑问和祈使句，祈使句中可单独出现，陈述句和疑问句通常与/xu/连用。":"Lu Meiyan (2024), ‘A Study of Directional Words in Tujia’, Journal of Guangxi Normal University for Nationalities 41(6): 61–67. The paper treats /ti/, /tiu/, /ɕie/, /ɕiau/, /lie/, and /lu/ as directional words; venitive /ɕie/ is restricted to imperatives and /ɕie/ also has a round-trip use; /lie/ occurs in declaratives, interrogatives, and imperatives, standing alone in imperatives but normally combining with /xu/ in declaratives and interrogatives.",
+  "徐世璇、鲁美艳（2014），《土家语动词体标记-I的来源和语法化过程》，《民族语文》第6期：18–26。文章从趋向结构讨论/-i/的来源及其向体标记发展的语法化过程。":"Xu Shixuan and Lu Meiyan (2014), ‘The Origin and Grammaticalization of the Tujia Verbal Aspect Marker -i’, Minzu Yuwen 6: 18–26. The article traces /-i/ to directional constructions and discusses its grammaticalization into an aspect marker.",
+  "鲁美艳（2024），《土家语趋向词研究》，《广西民族师范学院学报》41（6）：61–67。作者将/ti/、/tiu/、/ɕie/、/ɕiau/、/lie/、/lu/列为趋向词；其中/ɕie/的向心义限于祈使句，另有往返义；/lie/可用于陈述、疑问和祈使句，祈使句中可单独出现，陈述句和疑问句通常与/xu/连用。原文":"Lu Meiyan (2024), ‘A Study of Directional Words in Tujia’, Journal of Guangxi Normal University for Nationalities 41(6): 61–67. The paper treats /ti/, /tiu/, /ɕie/, /ɕiau/, /lie/, and /lu/ as directional words; venitive /ɕie/ is restricted to imperatives and /ɕie/ also has a round-trip use; /lie/ occurs in declaratives, interrogatives, and imperatives, standing alone in imperatives but normally combining with /xu/ in declaratives and interrogatives. Original article",
+  "徐世璇、鲁美艳（2014），《土家语动词体标记-I的来源和语法化过程》，《民族语文》第6期：18–26。文章从趋向结构讨论/-i/的来源及其向体标记发展的语法化过程。原文":"Xu Shixuan and Lu Meiyan (2014), ‘The Origin and Grammaticalization of the Tujia Verbal Aspect Marker -i’, Minzu Yuwen 6: 18–26. The article traces /-i/ to directional constructions and discusses its grammaticalization into an aspect marker. Original article"
 });
