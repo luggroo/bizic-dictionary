@@ -159,7 +159,8 @@ async function main(){
 
  await nav('corpus');
  const collections=await page.locator('[data-corpus-collection]').evaluateAll(items=>items.map(el=>el.dataset.corpusCollection));
- assert.equal(collections.length,3);
+ assert(collections.includes('xu-tujia-annotated-texts'),'annotated book collection is available');
+ assert(collections.length>=4,'existing corpus collections remain available');
  let delayedCorpusReads=0;
  const delayedCorpus=async route=>{delayedCorpusReads++;await new Promise(resolve=>setTimeout(resolve,250));await route.continue();};
  await page.route('**/prepared/corpus-entries/**',delayedCorpus);
@@ -180,7 +181,7 @@ async function main(){
  }
  await page.unroute('**/prepared/corpus-entries/**',delayedCorpus);
  assert.equal(delayedCorpusReads,collections.length,'each reloaded collection hydrates its selected record after the delayed response');
- pass('All three corpus collections, their readers, collection deep links and Back');
+ pass('All corpus collections, their readers, collection deep links and Back');
 
  await nav('history');
  const comparisonId=await page.locator('#main [data-open]').first().getAttribute('data-open');
