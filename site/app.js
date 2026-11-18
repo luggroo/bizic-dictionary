@@ -174,7 +174,7 @@ function wordView(){
 }
 function empty(){return '<div class="empty">没有匹配的记录。<br><small>试试更短的词、其他拼写，或清除筛选条件。</small></div>'}
 function sourcesView(){const items=D.sources.filter(sourceMatches);if(state.priority)items.sort((a,b)=>a.parsePriority.rank-b.parsePriority.rank);const pg=pager(items.length);return pageHeader('sources')+(state.grammarSourceScope?`<div class="notice">当前仅检索${{north:'北部土家语',south:'南部土家语'}[state.grammarSourceScope]}资料。清除筛选可恢复全部文献。</div>`:'')+`<div class="detail-actions"><button data-recognition-batch="true">扫描文献全文</button></div>`+search('搜索题名、原目录与已提取正文…')+`<div class="filters">${select('topic',D.topics.map(t=>t.name).concat('综合资料'),'全部专题')}${select('kind',D.sources.map(s=>s.kind),'全部资料类型')}${dialectSelector(true)}${select('status',D.sources.map(s=>s.status),'全文收录情况')}<button id="reset">清除筛选</button></div><div class="result-head"><span>${items.length} 份资料</span><button id="export-sources">导出目录 JSON</button></div>`+(items.length?sourceRows(items.slice((state.page-1)*40,state.page*40)):empty())+pg}
-function corpusCollectionKey(c){return c.survey?'yubao':c.externalText?'tlp-longshan':c.source}
+function corpusCollectionKey(c){return c.survey?'yubao':c.source}
 function corpusCollectionTitle(key){return key==='yubao'?'中国语言资源保护工程':key==='tlp-longshan'?'《龙山土家语》':D.corpus.some(c=>c.source===key&&!c.survey&&!c.externalText)?'Liao–Brassett 土家语文库':S[key]?.title||key}
 function corpusView(){
  const collection=state.corpusCollection||'';
