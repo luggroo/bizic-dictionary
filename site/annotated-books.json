@@ -2,7 +2,7 @@
   {
     "id": "xu-tujia-annotated-2-1-excerpt",
     "code": "2.1",
-    "title": "灵姑山和灵姑仙（复核稿）",
+    "title": "灵姑山和灵姑仙",
     "genre": "民间传说",
     "dialect": "北部",
     "locations": [
@@ -6910,7 +6910,7 @@
   {
     "id": "xu-tujia-annotated-2-2-excerpt",
     "code": "2.2",
-    "title": "鲁宝正的故事（复核稿）",
+    "title": "鲁宝正的故事",
     "genre": "民间故事",
     "dialect": "北部",
     "locations": [
@@ -9503,7 +9503,7 @@
   {
     "id": "xu-tujia-annotated-2-3-excerpt",
     "code": "2.3",
-    "title": "虱子和跳蚤（复核稿）",
+    "title": "虱子和跳蚤",
     "genre": "民间故事",
     "dialect": "北部",
     "locations": [
@@ -14652,7 +14652,7 @@
   {
     "id": "xu-tujia-annotated-2-4-partial",
     "code": "2.4",
-    "title": "稻草人（复核稿）",
+    "title": "稻草人",
     "genre": "民间传说",
     "dialect": "北部",
     "locations": [
@@ -18290,7 +18290,7 @@
   {
     "id": "xu-tujia-annotated-2-5-draft",
     "code": "2.5",
-    "title": "鸟的故事（逐图复核稿）",
+    "title": "鸟的故事（逐图）",
     "genre": "民间故事",
     "dialect": "北部",
     "locations": [
@@ -23278,7 +23278,7 @@
   {
     "id": "xu-tujia-annotated-2-6",
     "code": "2.6",
-    "title": "两兄弟（复核稿）",
+    "title": "两兄弟",
     "genre": "民间故事",
     "dialect": "北部",
     "locations": [
@@ -23289,7 +23289,7 @@
     "externalText": true,
     "bookSource": true,
     "sourcePages": "108–122",
-    "status": "复核稿：全部86条第二遍对读，注释疑点保留",
+    "status": "：全部86条第二遍对读，注释疑点保留",
     "blocks": [
       {
         "id": "2.6-001",
@@ -31039,7 +31039,7 @@
   {
     "id": "xu-tujia-annotated-2-8-partial",
     "code": "2.8",
-    "title": "咚咚喹的故事（复核稿）",
+    "title": "咚咚喹的故事",
     "genre": "民间传说",
     "dialect": "北部",
     "locations": [
@@ -35002,7 +35002,7 @@
   {
     "id": "xu-tujia-annotated-2-9",
     "code": "2.9",
-    "title": "怎样做糖糤（复核稿）",
+    "title": "怎样做糖糤",
     "dialect": "北部",
     "locations": [
       "龙山"
@@ -38335,7 +38335,7 @@
   {
     "id": "xu-tujia-annotated-2-10",
     "code": "2.10",
-    "title": "打溜子（复核稿）",
+    "title": "打溜子",
     "dialect": "北部",
     "locations": [
       "龙山"
@@ -40348,7 +40348,7 @@
   {
     "id": "xu-tujia-annotated-2-11-partial",
     "code": "2.11",
-    "title": "过年：逐图复核稿",
+    "title": "过年：逐图",
     "genre": "访谈",
     "dialect": "北部",
     "locations": [
@@ -42109,7 +42109,7 @@
   {
     "id": "xu-tujia-annotated-2-12-partial",
     "code": "2.12",
-    "title": "生活：逐图复核稿",
+    "title": "生活：逐图",
     "genre": "访谈",
     "dialect": "北部",
     "locations": [
@@ -49378,7 +49378,7 @@
   {
     "id": "xu-tujia-annotated-2-13",
     "code": "2.13",
-    "title": "山歌两首（复核稿）",
+    "title": "山歌两首",
     "genre": "山歌",
     "dialect": "北部",
     "locations": [
@@ -49880,7 +49880,7 @@
   {
     "id": "xu-tujia-annotated-2-14",
     "code": "2.14",
-    "title": "哭嫁歌（复核稿）",
+    "title": "哭嫁歌",
     "genre": "歌谣",
     "dialect": "北部",
     "locations": [
