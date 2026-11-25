@@ -3134,6 +3134,7 @@ Object.assign(UI_TRANSLATIONS, {
  "可能借自西南官话「血管」。": "Possibly borrowed from Southwestern Mandarin 血管.",
  "可能借自西南官话「补药」。": "Possibly borrowed from Southwestern Mandarin 补药.",
  "可能借自西南官话「证据」。": "Possibly borrowed from Southwestern Mandarin 证据.",
+ "可能借自西南官话「檩子」。": "Possibly borrowed from Southwestern Mandarin 檩子.",
  "可能借自西南官话「铃子」。": "Possibly borrowed from Southwestern Mandarin 铃子.",
  "可能借自西南官话「青稞」。": "Possibly borrowed from Southwestern Mandarin 青稞.",
  "可能借自西南官话「鹦鹉」。": "Possibly borrowed from Southwestern Mandarin 鹦鹉.",
