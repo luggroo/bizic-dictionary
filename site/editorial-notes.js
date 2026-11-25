@@ -73574,6 +73574,36 @@ EDITORIAL_NOTES.push(...[
   reviewedForms:[{ipa:'leŋ³³tsɿ³³',span:[1,2]}]}
 ]);
 
+// 借词复核：各调查点和异读分别保留原始音调。
+EDITORIAL_NOTES.push(...[
+ {"id":"chinese-loan-w1445","wordIds":["w1445"],"kind":"借词来源","text":"可能借自汉语「箩筐」。","donor":"箩筐","donorVariety":"汉语（方言待核）","scope":"whole","reviewedForms":[{"ipa":"luɔ²¹kʰuɛn²¹","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60823-v-0718","wordIds":["yubao-60823-v-0718"],"kind":"借词来源","text":"可能借自汉语「校堂」。","donor":"校堂","donorVariety":"汉语（方言待核）","scope":"whole","reviewedForms":[{"ipa":"ɕiau³³tʰã⁵⁵","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-w2604","wordIds":["w2604"],"kind":"借词来源","text":"可能借自汉语「勇敢」。","donor":"勇敢","donorVariety":"汉语（方言待核）","scope":"whole","reviewedForms":[{"ipa":"jɔŋ⁵⁵kaŋ⁵⁵","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-w559","wordIds":["w559"],"kind":"借词来源","text":"可能借自汉语「党员」。","donor":"党员","donorVariety":"汉语（方言待核）","scope":"whole","reviewedForms":[{"ipa":"taŋ⁵⁵jɛn²¹","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60824-v-0304","wordIds":["yubao-60824-v-0304"],"kind":"借词来源","text":"可能借自汉语「厨房」。","donor":"厨房","donorVariety":"汉语（方言待核）","scope":"whole","reviewedForms":[{"ipa":"tsʰu¹³fã³³","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60824-v-1546","wordIds":["yubao-60824-v-1546"],"kind":"借词来源","text":"可能借自汉语「熊猫」。","donor":"熊猫","donorVariety":"汉语（方言待核）","scope":"whole","reviewedForms":[{"ipa":"ɕiõ¹³mau³³","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-stedt-rn-410529","wordIds":["stedt-rn-410529"],"kind":"借词来源","text":"可能借自汉语「发展」。","donor":"发展","donorVariety":"汉语（方言待核）","scope":"whole","reviewedForms":[{"ipa":"xua²¹tsan⁵³","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-stedt-rn-289330","wordIds":["stedt-rn-289330"],"kind":"借词来源","text":"其中 /ti³⁵ji³⁵/ 可能借自汉语「第一」。","donor":"第一","donorVariety":"汉语（方言待核）","scope":"whole","reviewedForms":[{"ipa":"ti³⁵ji³⁵","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60823-v-0390","wordIds":["yubao-60823-v-0390"],"kind":"借词来源","text":"「面」部分（第 2 音节）可能借自汉语。","donor":"面","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"xui⁵⁵miã³³","span":[2,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60824-v-0390","wordIds":["yubao-60824-v-0390"],"kind":"借词来源","text":"「面」部分（第 2 音节）可能借自汉语。","donor":"面","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"xuei³³miã¹³","span":[2,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60756-v-2146","wordIds":["yubao-60756-v-2146"],"kind":"借词来源","text":"「头子」部分（第 2—3 音节）可能借自汉语。","donor":"头子","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"maŋ³³tʰəu³³tsɿ⁵⁵","span":[2,3]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60824-v-2144","wordIds":["yubao-60824-v-2144"],"kind":"借词来源","text":"「胡」部分（第 3 音节）可能借自汉语。","donor":"胡","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"liã¹³pĩ³³fu²¹","span":[3,3]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60756-v-1710","wordIds":["yubao-60756-v-1710"],"kind":"借词来源","text":"「黄」部分（第 1 音节）可能借自汉语。","donor":"黄","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"uaŋ³³taŋ³⁵","span":[1,1]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60756-v-2480","wordIds":["yubao-60756-v-2480"],"kind":"借词来源","text":"「盘子」部分（第 2—3 音节）可能借自汉语。","donor":"盘子","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"tɕʰi⁵⁵pʰaŋ⁵⁵tsɿ⁵⁵","span":[2,3]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60824-v-1570","wordIds":["yubao-60824-v-1570"],"kind":"借词来源","text":"「象」部分（第 1 音节）可能借自汉语。","donor":"象","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"ɕiã¹³kʉ¹³tɕi⁵⁵","span":[1,1]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60824-v-1450","wordIds":["yubao-60824-v-1450"],"kind":"借词来源","text":"「桃子」部分（第 1—2 音节）可能借自汉语。","donor":"桃子","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"dau¹³tsi⁵⁵tsu³³pu³⁵","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60824-v-0737","wordIds":["yubao-60824-v-0737"],"kind":"借词来源","text":"「狮子」部分（第 1—2 音节）可能借自汉语。","donor":"狮子","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"si³³tsi³³wu³⁵","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60823-v-0737","wordIds":["yubao-60823-v-0737"],"kind":"借词来源","text":"「狮子」部分（第 1—2 音节）可能借自汉语。","donor":"狮子","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"sɿ⁵⁵tsɿ³³uã³³","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60756-v-0737","wordIds":["yubao-60756-v-0737"],"kind":"借词来源","text":"「狮子」部分（第 1—2 音节）可能借自汉语。","donor":"狮子","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"sɿ⁵³tsɿ³³u³³","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60756-v-1847","wordIds":["yubao-60756-v-1847"],"kind":"借词来源","text":"「锤子」部分（第 2—3 音节）可能借自汉语。","donor":"锤子","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"ɕe⁵³tsʰui⁵⁵tsɿ⁵⁵","span":[2,3]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60756-v-0260","wordIds":["yubao-60756-v-0260"],"kind":"借词来源","text":"「驴子」部分（第 2—3 音节）可能借自汉语。","donor":"驴子","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"mau³³lu³³tsɿ⁵⁵","span":[2,3]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60756-v-2471","wordIds":["yubao-60756-v-2471"],"kind":"借词来源","text":"「铜钱」部分（第 1—2 音节）可能借自汉语。","donor":"铜钱","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"tʰɔŋ³³tɕʰaŋ³³tʰɔ³³","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60823-v-2469","wordIds":["yubao-60823-v-2469"],"kind":"借词来源","text":"「铜钱」部分（第 1—2 音节）可能借自汉语。","donor":"铜钱","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"tʰũ³¹tɕʰiã³¹kai⁵⁵ti⁵⁵","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60823-v-2458","wordIds":["yubao-60823-v-2458"],"kind":"借词来源","text":"「猪槽」部分（第 1—2 音节）可能借自汉语。","donor":"猪槽","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"tsɿ⁵⁵tsʰau⁵⁵pũ³³","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60756-v-1779","wordIds":["yubao-60756-v-1779"],"kind":"借词来源","text":"「灯芯」部分（第 1—2 音节）可能借自汉语。","donor":"灯芯","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"teŋ⁵⁵ɕiŋ⁵⁵mi⁵⁵sɿ⁵⁵","span":[1,2]}],"reviewBatch":"tone-relaxed-2026-11-24"},
+ {"id":"chinese-loan-yubao-60823-v-0740","wordIds":["yubao-60823-v-0740"],"kind":"借词来源","text":"「戏」部分（第 1 音节）可能借自汉语。","donor":"戏","donorVariety":"汉语（方言待核）","scope":"component","reviewedForms":[{"ipa":"ɕi¹³ tsʰã¹³","span":[1,1]}],"reviewBatch":"tone-relaxed-2026-11-24"}
+]);
+
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){
  if(!editorialNotesByWordId.has(id))editorialNotesByWordId.set(id,[]);

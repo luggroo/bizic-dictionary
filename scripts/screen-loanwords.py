@@ -53,17 +53,16 @@ def forms(word):
 
 
 def features(parts):
+    """Score segments without treating a tone mismatch as evidence against a loan."""
     counts = Counter()
     for onset, rime, tone in parts:
-        for key in (f'O:{onset}', f'R:{rime}', f'T:{tone}',
-                    f'OR:{onset}|{rime}', f'RT:{rime}|{tone}',
-                    f'ORT:{onset}|{rime}|{tone}'):
+        for key in (f'O:{onset}', f'R:{rime}', f'OR:{onset}|{rime}'):
             counts[key] += 1
     # Frequencies avoid making word length the principal borrowing signal.
     for key in counts:
         counts[key] /= len(parts)
     for a, b in zip(parts, parts[1:]):
-        counts['PAIR:' + '|'.join(a + b)] += 1 / max(1, len(parts) - 1)
+        counts['PAIR:' + '|'.join(a[:2] + b[:2])] += 1 / max(1, len(parts) - 1)
     return dict(counts)
 
 
@@ -76,8 +75,31 @@ def rules_for(word, registry):
     return [rule for rule in registry['rules'] if rule['id'] in aliases]
 
 
+def load_registry(path):
+    """Carry later explicit review decisions forward without changing them."""
+    registry = json.loads(path.read_text())
+    review_hashes = {}
+    for name in registry.get('reviewFiles', []):
+        review_path = path.parent / name
+        raw = review_path.read_bytes()
+        review_hashes[name] = hashlib.sha256(raw).hexdigest()
+        for decision in json.loads(raw)['decisions']:
+            if decision.get('decision') != 'not-loan':
+                continue
+            ids = set([decision['id'], *decision.get('aliases', [])])
+            for ident in sorted(ids):
+                if decision.get('loanScope') == 'component':
+                    for donor in decision.get('donors', []):
+                        registry['rules'].append({'id': ident, 'policy': 'reject-donor',
+                                                  'donor': donor, 'origin': name})
+                else:
+                    registry['rules'].append({'id': ident, 'policy': 'exclude-entry', 'origin': name})
+    return registry, review_hashes
+
+
 def blocked(word, registry):
-    return any(r['policy'] in ('exclude-entry', 'retain-review') for r in rules_for(word, registry))
+    return (word.get('zh', '').strip() in registry.get('excludedExactGlosses', []) or
+            any(r['policy'] in ('exclude-entry', 'retain-review') for r in rules_for(word, registry)))
 
 
 def rejected_form(word, ipa, registry):
@@ -169,7 +191,7 @@ def reference_bank(words, registry):
             continue
         for note in w['notes']:
             donor = note.get('donor', '')
-            if not donor or any(r['policy'] == 'reject-donor' and r.get('donor') == donor
+            if not donor or donor in registry.get('excludedDonors', []) or any(r['policy'] == 'reject-donor' and r.get('donor') == donor
                                 for r in rules_for(w, registry)):
                 continue
             for form in note.get('reviewedForms', []):
@@ -196,7 +218,7 @@ def reference_bank(words, registry):
 
 def matches(row, bank, registry):
     w, parts = row['word'], row['parts']
-    prohibited = {r['donor'] for r in rules_for(w, registry) if r['policy'] == 'reject-donor'}
+    prohibited = set(registry.get('excludedDonors', [])) | {r['donor'] for r in rules_for(w, registry) if r['policy'] == 'reject-donor'}
     found = []
     for start in range(len(parts)):
         for end in range(start + 1, len(parts) + 1):
@@ -224,8 +246,8 @@ def matches(row, bank, registry):
                               'nlSyllables': [start + 1 + i for i, ((o, _, _), segment) in enumerate(zip(parts[start:end], ref['segments']))
                                               if (o in ('n', 'ɲ', 'ȵ', 'nʲ') and segment.split('|')[0] == 'l')
                                               or (o == 'l' and segment.split('|')[0] in ('n', 'ɲ', 'ȵ', 'nʲ'))]})
-    found.sort(key=lambda x: (bool(x['glossOverlap']), x['matchType'] == 'exact', x['sameTones'], x['sameSource'],
-                              x['candidateSpan'][1] - x['candidateSpan'][0]), reverse=True)
+    found.sort(key=lambda x: (bool(x['glossOverlap']), x['matchType'] == 'exact', x['sameSource'],
+                              x['candidateSpan'][1] - x['candidateSpan'][0], x['sameTones']), reverse=True)
     unique = {}
     for ref in found:
         unique.setdefault((ref['donor'], tuple(ref['candidateSpan']), ref['sameTones']), ref)
@@ -234,7 +256,7 @@ def matches(row, bank, registry):
 
 def run(input_path, constraints_path, output):
     words = json.loads(input_path.read_text())['words']
-    registry = json.loads(constraints_path.read_text())
+    registry, review_hashes = load_registry(constraints_path)
     rows, coverage, native = [], [], []
     for w in words:
         rules = rules_for(w, registry)
@@ -292,10 +314,9 @@ def run(input_path, constraints_path, output):
             continue
         w = r['word']
         refs = matches(r, bank, registry)
-        exact_semantic = any(ref['matchType'] == 'exact' and ref['sameTones'] and ref['glossOverlap'] for ref in refs)
         segmental_semantic = any(ref['matchType'] == 'exact' and ref['glossOverlap'] for ref in refs)
         adapted_semantic = any(ref['matchType'] == 'adaptation' and ref['glossOverlap'] for ref in refs)
-        tier = 'A-exact-reference' if exact_semantic else 'B-segmental-reference' if segmental_semantic else 'C-adaptation-reference' if adapted_semantic else 'D-pattern-only'
+        tier = 'A-segmental-reference' if segmental_semantic else 'B-adaptation-reference' if adapted_semantic else 'C-pattern-only'
         candidates.append({'id': w['id'], 'zh': w['zh'], 'en': w['en'], 'ipa': r['ipa'],
                            'spelling': ' / '.join(v['text'] for v in w['spelling'].get('accent', [])),
                            'location': w['location'] or w['dialect'], 'source': w['source'],
@@ -336,6 +357,8 @@ def run(input_path, constraints_path, output):
                'seed': 20261023, 'bags': 8, 'pythonDependencies': {'numpy': np.__version__, 'sklearn': sklearn.__version__},
                'inputSHA256': hashlib.sha256(input_path.read_bytes()).hexdigest(),
                'constraintsSHA256': hashlib.sha256(constraints_path.read_bytes()).hexdigest(),
+               'reviewSHA256': review_hashes,
+               'tonePolicy': 'Tone is excluded from ranking features and candidate tiers; recorded tones and tone comparison are retained.',
                'phonologicalComparison': registry.get('phonologicalComparison', {}),
                'limitations': ['Unlabeled entries are not certified native negatives.',
                                'Scores are not calibrated borrowing probabilities.',

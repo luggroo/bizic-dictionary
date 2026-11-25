@@ -1,6 +1,12 @@
 {
-  "version": 9,
+  "version": 10,
   "scope": "Screening constraints, not a native-word training set. Entry aliases resolve before scoring; rejected donors and component boundaries apply separately. Later linguistic review is required to revise these constraints.",
+  "reviewFiles": [
+    "loan-table-review-2026-11-17.json",
+    "loan-south-vo-review-2026-11-17.json"
+  ],
+  "excludedDonors": ["毒"],
+  "excludedExactGlosses": ["毒"],
   "setuScope": "Exclude the five setu-family entries and their merged aliases. The distinct Southern sītī /si⁵⁵tʰi⁵⁵/ is not part of this exclusion.",
   "rules": [
     {
