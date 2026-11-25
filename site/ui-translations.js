@@ -4091,3 +4091,28 @@ Object.assign(UI_TRANSLATIONS,{
  "其中礼（第1音节）借自汉语。": "Chinese loan component(s): 礼 (syllable 1-1).",
  "其中钓（第2音节）借自汉语。": "Chinese loan component(s): 钓 (syllable 2-2)."
 });
+
+Object.assign(UI_TRANSLATIONS, {
+  "可能借自汉语「箩筐」。": "Possibly borrowed from Chinese 箩筐.",
+  "可能借自汉语「校堂」。": "Possibly borrowed from Chinese 校堂.",
+  "可能借自汉语「勇敢」。": "Possibly borrowed from Chinese 勇敢.",
+  "可能借自汉语「党员」。": "Possibly borrowed from Chinese 党员.",
+  "可能借自汉语「厨房」。": "Possibly borrowed from Chinese 厨房.",
+  "可能借自汉语「熊猫」。": "Possibly borrowed from Chinese 熊猫.",
+  "可能借自汉语「发展」。": "Possibly borrowed from Chinese 发展.",
+  "其中 /ti³⁵ji³⁵/ 可能借自汉语「第一」。": "The form /ti³⁵ji³⁵/ may be borrowed from Chinese 第一.",
+  "「面」部分（第 2 音节）可能借自汉语。": "The 面 component (syllable 2) may be borrowed from Chinese.",
+  "「头子」部分（第 2—3 音节）可能借自汉语。": "The 头子 component (syllables 2–3) may be borrowed from Chinese.",
+  "「胡」部分（第 3 音节）可能借自汉语。": "The 胡 component (syllable 3) may be borrowed from Chinese.",
+  "「黄」部分（第 1 音节）可能借自汉语。": "The 黄 component (syllable 1) may be borrowed from Chinese.",
+  "「盘子」部分（第 2—3 音节）可能借自汉语。": "The 盘子 component (syllables 2–3) may be borrowed from Chinese.",
+  "「象」部分（第 1 音节）可能借自汉语。": "The 象 component (syllable 1) may be borrowed from Chinese.",
+  "「桃子」部分（第 1—2 音节）可能借自汉语。": "The 桃子 component (syllables 1–2) may be borrowed from Chinese.",
+  "「狮子」部分（第 1—2 音节）可能借自汉语。": "The 狮子 component (syllables 1–2) may be borrowed from Chinese.",
+  "「锤子」部分（第 2—3 音节）可能借自汉语。": "The 锤子 component (syllables 2–3) may be borrowed from Chinese.",
+  "「驴子」部分（第 2—3 音节）可能借自汉语。": "The 驴子 component (syllables 2–3) may be borrowed from Chinese.",
+  "「铜钱」部分（第 1—2 音节）可能借自汉语。": "The 铜钱 component (syllables 1–2) may be borrowed from Chinese.",
+  "「猪槽」部分（第 1—2 音节）可能借自汉语。": "The 猪槽 component (syllables 1–2) may be borrowed from Chinese.",
+  "「灯芯」部分（第 1—2 音节）可能借自汉语。": "The 灯芯 component (syllables 1–2) may be borrowed from Chinese.",
+  "「戏」部分（第 1 音节）可能借自汉语。": "The 戏 component (syllable 1) may be borrowed from Chinese."
+});

@@ -24,6 +24,23 @@ class ScreeningGuards(unittest.TestCase):
         self.assertIsNone(parse('pau⁵⁵wa'))  # no invented tone on final wa
         self.assertIsNone(parse('a'))
 
+    def test_tone_does_not_change_ranking_features(self):
+        self.assertEqual(screen.features(screen.syllables('sa³⁵mɔ⁵³')),
+                         screen.features(screen.syllables('sa⁵⁵mɔ²¹')))
+        self.assertNotEqual(screen.features(screen.syllables('sa³⁵mɔ⁵³')),
+                            screen.features(screen.syllables('sa³⁵mo⁵³')))
+
+    def test_later_human_decisions_are_preserved(self):
+        path = Path(__file__).resolve().parents[1] / 'docs/loan-screening-constraints.json'
+        registry, hashes = screen.load_registry(path)
+        self.assertEqual(len(hashes), 2)
+        for ident in ('w1167', 'stedt-rn-288760', 'yubao-60756-v-2809', 'stedt-rn-290269'):
+            self.assertTrue(screen.blocked({'aliases': [ident]}, registry), ident)
+        self.assertTrue(screen.blocked({'aliases': ['yubao-60756-v-2732'], 'zh': '毒'}, registry))
+        self.assertTrue(screen.blocked({'aliases': ['yubao-60823-v-2472'], 'zh': '讨价'}, registry))
+        self.assertIn('价', {r.get('donor') for r in screen.rules_for(
+            {'aliases': ['yubao-60823-v-2472']}, registry) if r['policy'] == 'reject-donor'})
+
     def test_alias_exclusion_and_scope(self):
         registry = json.loads((Path(__file__).resolve().parents[1] / 'docs/loan-screening-constraints.json').read_text())
         family = [r for r in registry['rules'] if r.get('family') == 'setu-corpse']
