@@ -236,7 +236,8 @@ const dictionary=fs.existsSync(path.join(root,'dictionary.json'))?JSON.parse(fs.
  }
  for(const id of ['stedt-rn-289453','yubao-60824-v-1339'])assert.equal(c.modernChineseLoanInfo(get(id)).scope,'whole',id+' 二月 is fully borrowed');
  for(const id of ['w2480','yubao-60756-v-0718','stedt-rn-289871','yubao-60824-v-0718','yubao-60824-v-0719'])assert(c.editorialNotesFor(get(id)).some(n=>n.donor==='校堂'),id+' 校堂 donor');
- const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996+3+tableReview.summary.newNotes+componentReview.summary.newNotes-chiPeriod.reclassifiedModernNoteIds.length+[...rimeFollowup.decisions,...hotcell.decisions,...unFollowup.decisions.filter(d=>d.action==='add-loan-note')].filter(d=>d.note.id.startsWith('chinese-loan-')).length);
+ for(const [id,donor] of [['yubao-60756-v-0310','檩子'],['yubao-60823-v-0310','檩子'],['yubao-60756-v-1783','铃子'],['yubao-60756-v-1888','铃子']]){const w=get(id),n=c.editorialNotesFor(w).find(n=>n.id==='chinese-loan-'+id);assert(n,id);assert.equal(n.donor,donor);assert.equal(c.modernChineseLoanInfo(w).scope,'whole',id);}
+ const allNotes=vm.runInContext("EDITORIAL_NOTES.filter(n=>n.id.startsWith('chinese-loan-'))",c);assert.equal(allNotes.length,2996+3+3+tableReview.summary.newNotes+componentReview.summary.newNotes-chiPeriod.reclassifiedModernNoteIds.length+[...rimeFollowup.decisions,...hotcell.decisions,...unFollowup.decisions.filter(d=>d.action==='add-loan-note')].filter(d=>d.note.id.startsWith('chinese-loan-')).length);
  const componentsFollowup=JSON.parse(fs.readFileSync(path.join(__dirname,'../docs/loan-components-followup-2026-10-23.json'),'utf8'));
  for(const {note} of componentsFollowup.decisions){
   const w=get(note.wordIds[0]),actual=c.editorialNotesFor(w).find(n=>n.id===note.id);

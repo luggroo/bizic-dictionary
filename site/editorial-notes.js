@@ -73561,6 +73561,19 @@ EDITORIAL_NOTES.push(...[
  }
 ]);
 
+// 保靖语保调查所记的完整借词；不同调查点保留各自音调。
+EDITORIAL_NOTES.push(...[
+ {id:'chinese-loan-yubao-60756-v-0310',wordIds:['yubao-60756-v-0310'],kind:'借词来源',
+  text:'可能借自西南官话「檩子」。',donor:'檩子',donorVariety:'西南官话',scope:'whole',
+  reviewedForms:[{ipa:'leŋ⁵⁵tsɿ³³',span:[1,2]}]},
+ {id:'chinese-loan-yubao-60823-v-0310',wordIds:['yubao-60823-v-0310'],kind:'借词来源',
+  text:'可能借自西南官话「檩子」。',donor:'檩子',donorVariety:'西南官话',scope:'whole',
+  reviewedForms:[{ipa:'lɤ̃⁵⁵tsɿ⁵⁵',span:[1,2]}]},
+ {id:'chinese-loan-yubao-60756-v-1783',wordIds:['yubao-60756-v-1783'],kind:'借词来源',
+  text:'可能借自西南官话「铃子」。',donor:'铃子',donorVariety:'西南官话',scope:'whole',
+  reviewedForms:[{ipa:'leŋ³³tsɿ³³',span:[1,2]}]}
+]);
+
 const editorialNotesByWordId=new Map();
 for(const note of EDITORIAL_NOTES)for(const id of note.wordIds||[]){
  if(!editorialNotesByWordId.has(id))editorialNotesByWordId.set(id,[]);
