@@ -4,6 +4,7 @@ import importlib.util
 import json
 from pathlib import Path
 import sys
+import tempfile
 import unittest
 
 sys.dont_write_bytecode = True
@@ -40,6 +41,23 @@ class ScreeningGuards(unittest.TestCase):
         self.assertTrue(screen.blocked({'aliases': ['yubao-60823-v-2472'], 'zh': '讨价'}, registry))
         self.assertIn('价', {r.get('donor') for r in screen.rules_for(
             {'aliases': ['yubao-60823-v-2472']}, registry) if r['policy'] == 'reject-donor'})
+
+    def test_nl_followup_uses_reviewed_alias_exclusions(self):
+        path = Path(__file__).resolve().parents[1] / 'docs/loan-screening-constraints.json'
+        nl_spec = importlib.util.spec_from_file_location('nl_scan', Path(__file__).with_name('scan-nl-loans.py'))
+        nl_scan = importlib.util.module_from_spec(nl_spec)
+        nl_spec.loader.exec_module(nl_scan)
+        common = {'source': 'fixture', 'dialect': '北部', 'location': '', 'en': 'trousers', 'spelling': {}}
+        reference = {**common, 'id': 'reference', 'aliases': ['reference'], 'zh': '裤',
+                     'ipa': ['lu²¹'], 'scope': 'whole', 'notes': [{'donor': '裤',
+                     'reviewedForms': [{'ipa': 'lu²¹', 'span': [1, 1]}]}]}
+        accepted = {**common, 'id': 'unreviewed', 'aliases': ['unreviewed'], 'zh': '裤',
+                    'ipa': ['nu¹³'], 'scope': '', 'notes': []}
+        excluded = {**accepted, 'id': 'remerged', 'aliases': ['stedt-rn-288760']}
+        with tempfile.TemporaryDirectory() as temporary:
+            input_path = Path(temporary) / 'words.json'
+            input_path.write_text(json.dumps({'words': [reference, accepted, excluded]}, ensure_ascii=False))
+            self.assertEqual([row['id'] for row in nl_scan.scan(input_path, path)], ['unreviewed'])
 
     def test_alias_exclusion_and_scope(self):
         registry = json.loads((Path(__file__).resolve().parents[1] / 'docs/loan-screening-constraints.json').read_text())

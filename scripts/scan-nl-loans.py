@@ -15,7 +15,7 @@ spec.loader.exec_module(screen)
 
 def scan(input_path, constraints_path):
     words = json.loads(input_path.read_text())['words']
-    registry = json.loads(constraints_path.read_text())
+    registry, _ = screen.load_registry(constraints_path)
     before_registry = copy.deepcopy(registry)
     for area in ('north', 'south'):
         before_registry['phonologicalComparison'][area] = [
