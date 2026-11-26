@@ -31,6 +31,27 @@ async function reveal(target) {
   }
 }
 
+async function contrastOn(label, surfaceSelector) {
+  return label.evaluate((element, surface) => {
+    const luminance = color => {
+      const [r, g, b] = color.match(/[\d.]+/g).slice(0, 3).map(n => Number(n) / 255)
+        .map(n => n <= 0.04045 ? n / 12.92 : ((n + 0.055) / 1.055) ** 2.4);
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+    };
+    const foreground = luminance(getComputedStyle(element).color);
+    const background = luminance(getComputedStyle(element.closest(surface)).backgroundColor);
+    return (Math.max(foreground, background) + 0.05) / (Math.min(foreground, background) + 0.05);
+  }, surfaceSelector);
+}
+
+async function checkTujiaLabelContrast(page, theme) {
+  const brand = await contrastOn(page.locator('.brand .bilingual-label > .tujia-ui'), 'aside');
+  const activeTab = await contrastOn(page.locator('aside nav button.active .tujia-ui'), 'button');
+  assert(brand >= 4.5 && activeTab >= 4.5,
+    `Tujia subtitle contrast in ${theme} theme: brand ${brand.toFixed(2)}, active tab ${activeTab.toFixed(2)}`);
+  return {brand, activeTab};
+}
+
 async function exerciseLearningUI(page, {capture = async () => {}, report = console.log} = {}) {
   const visit = async (route, view) => {
     await page.goto(start + route);
@@ -173,9 +194,11 @@ async function exerciseLearningUI(page, {capture = async () => {}, report = cons
   assert.equal(await page.locator('#academy-theme').inputValue(), 'dark');
   const pageColor = () => page.evaluate(() => getComputedStyle(document.body).backgroundColor);
   const darkColor = await pageColor();
+  const dark = await checkTujiaLabelContrast(page, 'dark');
   await capture('english-dark');
   await select('#academy-theme', 'light');
   assert.notEqual(await pageColor(), darkColor);
+  const light = await checkTujiaLabelContrast(page, 'light');
   await select('#academy-theme', 'system');
   await select('#ui-language', 'zh');
   await page.waitForFunction(() => document.documentElement.lang === 'zh-CN');
@@ -197,6 +220,7 @@ async function exerciseLearningUI(page, {capture = async () => {}, report = cons
   await page.waitForFunction(() => document.querySelector('aside [data-view="words"] .ui-secondary').textContent === 'Dictionary');
   assert.deepEqual(await labels(), english);
   report('Chinese and English interface, Tujia diacritic/Ye labels, saved theme and spelling');
+  return {dark, light};
 }
 
 // Every browser request is answered from the exact extracted snapshot with the
@@ -286,17 +310,7 @@ async function checkEnglishFirstPaint(browser, browserOffline, root, log, out) {
     await page.goto(origin + '/en/');
     const labels = await page.locator('aside nav > *').allInnerTexts();
     assert.deepEqual(labels.map(s => s.trim()), ['Dictionary', 'Grammar', 'Corpus', 'Sources', 'Keyboard']);
-    const contrast = await page.locator('#search-form button').evaluate(button => {
-      const caption = button.querySelector('[data-ui-source]') || button;
-      const luminance = css => {
-        const [r, g, b] = css.match(/[\d.]+/g).slice(0, 3).map(n => Number(n) / 255)
-          .map(n => n <= 0.04045 ? n / 12.92 : ((n + 0.055) / 1.055) ** 2.4);
-        return r * 0.2126 + g * 0.7152 + b * 0.0722;
-      };
-      const text = luminance(getComputedStyle(caption).color);
-      const background = luminance(getComputedStyle(button).backgroundColor);
-      return (Math.max(text, background) + 0.05) / (Math.min(text, background) + 0.05);
-    });
+    const contrast = await contrastOn(page.locator('#search-form button [data-ui-source]'), 'button');
     assert(contrast >= 4.5, `English Search caption contrast before JavaScript was ${contrast}`);
     if (out) await page.screenshot({path: path.join(out, 'first-paint-en-320.png')});
     return contrast;
@@ -377,7 +391,7 @@ async function main() {
     const capture = async name => {
       if (out) await page.screenshot({path: path.join(out, name + '.png'), animations: 'disabled'});
     };
-    await exerciseLearningUI(page, {capture, report: name => { checks.push(name); console.log('PASS', name); }});
+    const tujiaLabelContrast = await exerciseLearningUI(page, {capture, report: name => { checks.push(name); console.log('PASS', name); }});
     if (browserOffline) assert.equal(await page.evaluate(() => navigator.onLine), false);
     await page.emulateMedia({colorScheme: 'dark'});
     await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
@@ -391,7 +405,7 @@ async function main() {
     assert.deepEqual(errors, [], 'Unhandled JavaScript exceptions');
     assert.deepEqual(cspErrors, [], 'Content Security Policy violations');
     if (!log.rawPrepared) assert(log.nativeJson.size > 0, 'Native JSON transport was not exercised');
-    const result = {engine, browserVersion: browser.version(), browserOffline, network: 'All HTTPS responses served from snapshot on disk', checks, viewports: sizes, firstPaintContrast, largeTextNavigation,
+    const result = {engine, browserVersion: browser.version(), browserOffline, network: 'All HTTPS responses served from snapshot on disk', checks, viewports: sizes, firstPaintContrast, tujiaLabelContrast, largeTextNavigation,
       distinctLocalResources: log.requests.size, nativeDecodedJsonResources: log.nativeJson.size, externalRequests: [...log.foreign], missingFiles: [...log.missing], errors, cspErrors};
     console.log(JSON.stringify(result, null, 2));
     if (out) await fs.writeFile(path.join(out, 'results.json'), JSON.stringify(result, null, 2) + '\n');
