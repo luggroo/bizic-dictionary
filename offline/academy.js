@@ -23,6 +23,34 @@
     '浅色': 'Light', '深色': 'Dark'
   });
 
+  const sidebar = document.querySelector('body > aside');
+  const topbar = document.createElement('div');
+  topbar.className = 'academy-mobile-bar';
+  topbar.innerHTML = '<button type="button" class="academy-menu-toggle" aria-expanded="false" aria-controls="academy-drawer" aria-label="打开目录">☰</button><strong>毕资学堂</strong>';
+  const backdrop = document.createElement('button');
+  backdrop.className = 'academy-backdrop';
+  backdrop.type = 'button';
+  backdrop.setAttribute('aria-label', '关闭目录');
+  sidebar.id = 'academy-drawer';
+  document.body.insertBefore(topbar, document.body.firstChild);
+  document.body.insertBefore(backdrop, sidebar);
+  const toggle = topbar.querySelector('button');
+  function drawer(open) {
+    document.body.classList.toggle('academy-drawer-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  }
+  toggle.addEventListener('click', () => drawer(!document.body.classList.contains('academy-drawer-open')));
+  backdrop.addEventListener('click', () => drawer(false));
+  sidebar.querySelector('nav').addEventListener('click', event => {
+    if (event.target.closest('button, a')) drawer(false);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && document.body.classList.contains('academy-drawer-open')) {
+      drawer(false);
+      toggle.focus();
+    }
+  });
+
   const menu = more.lastElementChild;
   ['notation', 'history'].forEach(view => {
     const button = menu.querySelector('[data-view="' + view + '"]');

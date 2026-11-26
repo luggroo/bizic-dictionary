@@ -158,3 +158,32 @@ html[data-theme="dark"] .word-card .word-card-title,
 html[data-theme="dark"] .grammar-entry-grid .card-title,
 html[data-theme="dark"] .corpus-card-content .card-title { color:var(--ink); }
 html[data-theme="dark"] .brand-logo { background:#e8efe9; border-radius:3px; }
+
+.academy-mobile-bar, .academy-backdrop { display:none; }
+@media (max-width:900px) {
+  html[data-edition] body > .academy-mobile-bar {
+    display:flex; align-items:center; gap:14px; height:56px; padding:0 12px;
+    background:var(--paper); color:var(--ink); border-bottom:1px solid var(--line);
+    position:sticky; top:0; z-index:90;
+  }
+  .academy-menu-toggle { width:44px; height:44px; border:0; border-radius:8px; background:transparent; color:var(--ink); font-size:24px; cursor:pointer; }
+  html[data-edition] body > aside {
+    position:fixed; z-index:102; top:0; bottom:0; left:0; width:min(300px, 84vw);
+    max-width:84vw; height:100vh; overflow-y:auto; padding:20px 16px;
+    background:var(--paper); box-shadow:0 0 24px #0004;
+    transform:translateX(-105%); transition:transform .2s ease;
+  }
+  html[data-edition] body.academy-drawer-open > aside { transform:translateX(0); }
+  html[data-edition] body > aside > nav { display:flex; flex-direction:column; flex-wrap:nowrap; gap:3px; margin-top:22px; }
+  html[data-edition] body > aside > nav > button, html[data-edition] body > aside > nav > a {
+    width:100%; min-height:52px; justify-content:flex-start; padding:10px 12px;
+  }
+  html[data-edition] aside > nav .bilingual-label { flex-direction:column-reverse; align-items:flex-start; }
+  html[data-edition] aside > nav .ui-secondary, .academy-keyboard > span { font-size:15px; }
+  html[data-edition] aside > nav .tujia-ui { font-size:12px; }
+  .academy-keyboard { flex-direction:row; }
+  html[data-edition] body.academy-drawer-open > .academy-backdrop {
+    display:block; position:fixed; z-index:101; inset:0; width:100%; height:100%;
+    border:0; background:rgba(0,0,0,.48);
+  }
+}
