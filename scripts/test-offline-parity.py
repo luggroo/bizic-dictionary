@@ -28,11 +28,17 @@ def check(site, archive):
             assert not file['path'].endswith(('.pdf', '.mp3', '.mp4', '.onnx')), file['path']
         assert not any(name.startswith(('text/', 'prepared/entries/', 'prepared/corpus-entries/')) for name in paths)
         assert {'data.json.gz', 'dictionary.json.gz', 'prepared/core.json.gz', 'prepared/words-index.json.gz'}.isdisjoint(paths)
+        assert bundle.read('yangque-logo.svg') == (site / 'yangque-logo.svg').read_bytes()
         for homepage in ('index.html', 'en/index.html'):
             html = bundle.read(homepage).decode('utf-8')
-            nav = re.search(r'<aside[\s\S]*?<nav\b[^>]*>([\s\S]*?)</nav>', html)[1]
-            assert re.findall(r'<button data-view="([^"]+)"', nav) == ['words','grammar','corpus','sources']
-            assert nav.count('href="/_app/keyboard"') == 1
+            drawer = re.search(r'<aside\b[^>]*>([\s\S]*?)</aside>', html)[1]
+            home = re.search(r'<main\b[^>]*>([\s\S]*?)</main>', html)[1]
+            assert 'data-view="settings"' in drawer and 'data-view="sources"' not in drawer
+            assert 'id="academy-home"' in home and 'id="academy-home-search"' in home
+            for view in ('words', 'grammar', 'corpus', 'notation', 'history'):
+                assert f'data-view="{view}"' in home, (homepage, view)
+            assert 'data-academy-translation' in home and 'href="/_app/keyboard"' in home
+            assert 'id="academy-ime-status"' in home and home.count('name="academy-scope"') == 2
 
         def mobile(name):
             return json.loads(gzip.decompress(bundle.read('prepared/' + name + '.json.gz')))

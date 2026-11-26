@@ -206,6 +206,7 @@ const ROUTE_FIELDS={
  grammar:['q','grammarAnchor'],
  notation:[]
 };
+if(window.AcademyReader){ROUTE_FIELDS.settings=[];titles.settings='设置';}
 let navigationReady=false,restoringNavigation=false,closingDetail=false,navigationSerial=0,lastNavigationToken='';
 const navigationPositions=new Map();
 function cleanViewState(value){
@@ -315,6 +316,7 @@ function finishNavigation(previous){
  if(!navigationReady||restoringNavigation)return;
  const hash=viewHash(),changed=location.hash!==hash,dialog=$('#detail');
  const entry=changed?newNavigationEntry():{...(previous||newNavigationEntry()),viewState:{...state},detail:dialog.open?currentOverlay:null,notation:notationNavigationState(),scrollY:window.scrollY,openDetails:mainOpenDetails()};
+ if(window.AcademyReader&&changed&&previous)entry.academyParent=true;
  // A link out of a detail replaces the overlay entry; Back returns to its list.
  history[changed&&!previous?.detail?'pushState':'replaceState'](entry,'',navigationURL(entry.detail));
  lastNavigationToken=navigationToken();
@@ -408,6 +410,7 @@ function render(){
  }
  $('#crumb').textContent=titles[state.view]||'知识检索';
  const views={home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:()=>historyView(),grammar:()=>grammarView(),notation:()=>notationView()};
+ if(window.AcademyReader)views.settings=()=>AcademyReader.settingsTitle;
  $('#main').innerHTML=views[state.view]();
  bindMain();if(typeof bindNotationView==='function')bindNotationView();if(window.tasteRefresh)tasteRefresh();if(window.TujiaUI)TujiaUI.refresh();
  finishNavigation(previous);

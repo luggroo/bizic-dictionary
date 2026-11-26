@@ -3,6 +3,7 @@
 import argparse
 import gzip
 import hashlib
+from html import escape
 import json
 from pathlib import Path
 import re
@@ -81,28 +82,74 @@ def category(path):
     return 'other'
 
 
+LABELS = {
+    'brand': ('毕兹学堂', 'Bizic Academy'), 'slogan': ('逻土话，学土话，用土话', 'Find Tujia words, learn Tujia, use Tujia.'),
+    'navigation': ('主导航', 'Navigation'), 'menu': ('目录', 'Menu'), 'back': ('返回', 'Back'),
+    'close': ('关闭目录', 'Close menu'), 'home': ('首页', 'Home'), 'words': ('词典', 'Dictionary'),
+    'grammar': ('语法', 'Grammar'), 'corpus': ('语料', 'Corpus'), 'notation': ('记音', 'Notation'),
+    'history': ('历史比较', 'Historical comparison'), 'translation': ('翻译', 'Translation'),
+    'query': ('词形、汉语或英语', 'Word, Chinese or English'), 'scope': ('搜索范围', 'Search scope'),
+    'search': ('搜索', 'Search'), 'words_search': ('搜词典', 'Dictionary search'), 'global_search': ('搜全站', 'Search all'),
+    'ime': ('土家语输入法', 'Tujia Keyboard'), 'manage': ('管理', 'Manage'), 'keyboard_settings': ('输入法设置', 'Keyboard settings'),
+    'settings': ('设置', 'Settings'), 'language': ('界面语言', 'Interface language'), 'privacy': ('隐私说明', 'Privacy'),
+    'appearance': ('外观', 'Appearance'), 'system': ('跟随系统', 'System'), 'light': ('浅色', 'Light'),
+    'dark': ('深色', 'Dark'), 'spelling': ('拼写与记音', 'Spelling and notation'),
+    'media_links': ('显示原图和录音链接', 'Show image and recording links')
+}
+
+ICON_PATHS = {
+    'keyboard': '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M5 9h2m2 0h2m2 0h2m2 0h2M5 12h2m2 0h2m2 0h2m2 0h2M8 15h8"/>',
+    'settings': '<path d="M4 6h5m4 0h7M4 12h9m4 0h3M4 18h2m4 0h10"/><circle cx="11" cy="6" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="8" cy="18" r="2"/>',
+    'menu': '<path d="M3 6h18M3 12h14M3 18h18"/>', 'back': '<path d="m14 5-7 7 7 7"/>',
+    'next': '<path d="m9 6 6 6-6 6"/>', 'close': '<path d="m6 6 12 12M18 6 6 18"/>',
+    'search': '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>'
+}
+
+
 def app_navigation(html, english):
-    # Put the actual app navigation in the first paint, before the WebView has
-    # parsed fonts or scripts. Reuse the website's buttons, icons and routes.
-    nav = re.search(r'(<nav\b[^>]*>)([\s\S]*?)</nav>', html)
-    buttons = {m[1]:m[0] for m in re.finditer(r'<button data-view="([^"]+)">[\s\S]*?</button>', nav[2])}
-    translation = re.search(r'<a class="nav-repo-link"[\s\S]*?</a>', nav[2])[0]
-    secondary = buttons['notation'] + buttons['history'] + translation
-    primary = []
-    for view, zh, en in [('words','词典','Dictionary'), ('grammar','语法','Grammar'),
-                         ('corpus','语料','Corpus'), ('sources','文献','Sources')]:
-        icon = buttons[view].split('</svg>', 1)[0] + '</svg>'
-        primary.append(icon + f'<span><span data-ui-source="{zh}" data-ui-english="{en}">{en if english else zh}</span></span></button>')
-    keyboard = 'Keyboard' if english else '输入法'
-    primary.append('<a class="nav-repo-link academy-keyboard" href="/_app/keyboard">'
-                   '<svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">'
-                   '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M5 9h2m2 0h2m2 0h2m2 0h2M5 12h2m2 0h2m2 0h2m2 0h2M8 15h8"/></svg>'
-                   f'<span data-ui-source="输入法" data-ui-english="Keyboard">{keyboard}</span></a>')
-    html = html.replace(nav[0], nav[1] + ''.join(primary) + '</nav>', 1)
-    more = 'More' if english else '更多资料'
-    menu = (f'<details class="academy-more"><summary data-ui-source="更多资料">{more}</summary>'
-            f'<div class="academy-more-menu">{secondary}</div></details>')
-    return html.replace('<label class="language-selector">', menu + '<label class="language-selector">', 1)
+    # Website route icons and the actual shared home markup are available before
+    # scripts run. The production renderer captures #main as its home template.
+    nav = re.search(r'<nav\b[^>]*>([\s\S]*?)</nav>', html)[1]
+    icons = {key: '<svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" '
+             'stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + path + '</svg>'
+             for key, path in ICON_PATHS.items()}
+    icons.update({key: svg for key, svg in re.findall(r'<button data-view="([^"]+)">(<svg[\s\S]*?</svg>)', nav)})
+    icons['translation'] = re.search(r'<a class="nav-repo-link"[^>]*>(<svg[\s\S]*?</svg>)', nav)[1]
+
+    def label(key):
+        zh, en = LABELS[key]
+        return f'<span data-ui-source="{escape(zh)}" data-ui-english="{escape(en)}">{escape(en if english else zh)}</span>'
+
+    def link(key, home_tile=False):
+        if key == 'translation':
+            target = 'translation-en.html' if english else 'translation.html'
+            tag, attrs = 'a', f'href="{target}" data-academy-translation'
+        elif key == 'ime':
+            tag, attrs = 'a', 'href="/_app/keyboard"'
+        else:
+            tag, attrs = 'button', f'type="button" data-view="{key}"'
+        icon = icons['keyboard' if key == 'ime' else key]
+        # Shared heading spelling decorates the drawer. Home tiles use short
+        # captions with enough room for the same six routes at large text sizes.
+        icon = f'<i class="academy-tile-icon" aria-hidden="true">{icon}</i>' if home_tile else icon
+        caption = label(key) if home_tile else '<span>' + label(key) + '</span>'
+        return f'<{tag} {attrs} class="academy-link-{key}">{icon}{caption}</{tag}>'
+
+    destinations = ['words', 'grammar', 'corpus', 'notation', 'history', 'translation']
+    tokens = {key: escape(pair[int(english)]) for key, pair in LABELS.items()}
+    tokens.update({'icon_' + key: svg for key, svg in icons.items()})
+    tokens['destinations'] = ''.join(link(key, True) for key in destinations)
+    tokens['drawer_links'] = ''.join(link(key) for key in ['home', *destinations, 'ime', 'settings'])
+
+    def template(name):
+        source = (REPO / 'offline' / (name + '.html')).read_text()
+        source = re.sub(r'\[\[(\w+)\]\]', lambda match: label(match[1]), source)
+        return re.sub(r'\{\{(\w+)\}\}', lambda match: tokens[match[1]], source)
+
+    html = re.sub(r'<aside\b[\s\S]*?</aside>', lambda _: template('navigation'), html, count=1)
+    html = re.sub(r'<main id="main">[\s\S]*?</main>', lambda _: '<main id="main">' + template('home') + '</main>' + template('settings'), html, count=1)
+    html = re.sub(r'<footer class="site-footer">[\s\S]*?</footer>', '', html, count=1)
+    return html.replace('<body ', '<body class="academy-app" data-academy-home="yes" ', 1)
 
 
 def build_reader(root, output):
@@ -122,14 +169,15 @@ def build_reader(root, output):
                   'translation-guide.css', 'vendor/pako-LICENSE.txt', 'vendor/opencc-dictionary-LICENSE.txt']
     for name in set(eager + lazy + data_files):
         copy(name)
+    for name in ('ui-language.js', 'translation-guide.js'):
+        module = output / name
+        module.write_text(module.read_text().replace('毕资学堂', '毕兹学堂'))
     for path in (root / 'fonts').iterdir():
         copy(path.relative_to(root))
     copy('fonts/NotoSerifTibetan-OFL.txt', REPO / 'offline/NotoSerifTibetan-OFL.txt')
     for name in ('academy.css', 'academy.js'):
         copy(name, REPO / 'offline' / name)
     copy('mobile-optional.js', SITE / 'mobile-optional.js')
-    run('node', '-e', "require('./scripts/mobile-optional.cjs').writeCatalog(process.argv[1],process.argv[2])",
-        SITE, output)
 
     for name in ('home', 'catalogue', 'history', 'corpus', 'corpus-search', 'corpus-index'):
         copy('prepared/' + name + '.json.gz')
@@ -163,7 +211,7 @@ def build_reader(root, output):
     optional_script = '<script src="mobile-optional.js" defer></script>'
     for name in ('index.html', 'en/index.html', 'translation.html', 'translation-en.html'):
         html = (root / name).read_text().replace('<html lang=', '<html data-edition="offline" lang=', 1)
-        html = html.replace('毕兹学堂', '毕资学堂').replace('</head>', '<link rel="stylesheet" href="academy.css"></head>')
+        html = html.replace('</head>', '<link rel="stylesheet" href="academy.css"></head>')
         if name.endswith('index.html'):
             html = app_navigation(html, name.startswith('en/'))
             html = re.sub(r'<link rel="manifest"[^>]*>', '', html)
@@ -174,6 +222,16 @@ def build_reader(root, output):
             html = html.replace('<script src="media.js"', optional_script + '<script src="media.js"', 1)
             html = html.replace('<script src="app.js"', '<script src="academy.js" defer></script><script src="app.js"', 1)
         else:
+            english = name == 'translation-en.html'
+            home_url = '/en/#home' if english else '/#home'
+            back = 'Back' if english else '返回'
+            guide_title = 'Translation' if english else '翻译'
+            bar = (f'<header class="academy-guide-bar"><a class="academy-guide-back" href="{home_url}" aria-label="{back}">'
+                   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+                   'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></a>'
+                   f'<strong>{guide_title}</strong></header>')
+            html = re.sub(r'(<body\b[^>]*>)', lambda match: match[1] + bar, html, count=1)
+            html = html.replace('<html data-edition="offline"', '<html data-edition="offline" data-academy-guide')
             # The translation guide uses editorial absolute links for its learning tabs.
             html = html.replace('href="https://tujia.biz/?lang=', 'href="/?lang=')
             html = html.replace('href="translation-runs', 'href="https://tujia.biz/translation-runs')

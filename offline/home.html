@@ -1,0 +1,28 @@
+<section id="academy-home" aria-labelledby="academy-name">
+  <div class="academy-masthead">
+    <div><small class="tujia-ui" data-ui-tujia="brand" lang="tji">bízīsǎ áhxī</small>
+      <h1 id="academy-name">[[brand]]</h1></div>
+  </div>
+  <p class="academy-slogan">[[slogan]]</p>
+  <form id="academy-home-search" role="search">
+    <div class="academy-search-field">
+      <label class="visually-hidden" for="query">[[query]]</label>
+      <input id="query" type="search" autocomplete="off" enterkeyhint="search"
+        data-ui-source-placeholder="词形、汉语或英语" placeholder="{{query}}">
+      <button type="submit" aria-labelledby="academy-submit-label">{{icon_search}}<span id="academy-submit-label" class="visually-hidden">[[search]]</span></button>
+    </div>
+    <fieldset class="academy-search-scope"><legend class="visually-hidden">[[scope]]</legend>
+      <label><input type="radio" name="academy-scope" value="words" checked><span>[[words_search]]</span></label>
+      <label><input type="radio" name="academy-scope" value="home"><span>[[global_search]]</span></label>
+    </fieldset>
+  </form>
+  <div class="academy-destinations">{{destinations}}</div>
+  <section class="academy-ime-card" aria-labelledby="academy-ime-name">
+    <div class="academy-ime-heading"><span class="academy-ime-icon">{{icon_keyboard}}</span>
+      <div><h2 id="academy-ime-name">[[ime]]</h2>
+        <p id="academy-ime-status" aria-live="polite"></p></div>
+      <a href="/_app/keyboard" class="academy-ime-manage">[[manage]]</a>
+    </div>
+    <a id="academy-ime-action" href="/_app/keyboard">[[keyboard_settings]]</a>
+  </section>
+</section>

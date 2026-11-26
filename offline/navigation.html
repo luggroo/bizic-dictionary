@@ -1,0 +1,14 @@
+<header class="academy-toolbar" aria-label="{{navigation}}">
+  <button class="academy-icon-button academy-menu-toggle academy-menu-home" type="button" aria-controls="academy-drawer" aria-expanded="false" aria-labelledby="academy-menu-home-label">{{icon_menu}}<span id="academy-menu-home-label" class="visually-hidden">[[menu]]</span></button>
+  <button class="academy-icon-button academy-back" type="button" aria-labelledby="academy-back-label">{{icon_back}}<span id="academy-back-label" class="visually-hidden">[[back]]</span></button>
+  <img class="academy-toolbar-logo" src="yangque-logo.svg" width="98" height="67" alt="">
+  <span id="academy-title"></span>
+  <button type="button" data-view="settings" class="academy-icon-button academy-settings-shortcut" aria-labelledby="academy-settings-label">{{icon_settings}}<span id="academy-settings-label" class="visually-hidden">[[settings]]</span></button>
+  <button class="academy-icon-button academy-menu-toggle academy-menu-inner" type="button" aria-controls="academy-drawer" aria-expanded="false" aria-labelledby="academy-menu-inner-label">{{icon_menu}}<span id="academy-menu-inner-label" class="visually-hidden">[[menu]]</span></button>
+</header>
+<aside id="academy-drawer" role="dialog" aria-modal="true" aria-labelledby="academy-drawer-title" aria-hidden="true">
+  <div class="academy-drawer-head"><button type="button" class="academy-icon-button academy-drawer-close" aria-labelledby="academy-close-label">{{icon_close}}<span id="academy-close-label" class="visually-hidden">[[close]]</span></button><strong id="academy-drawer-title">[[menu]]</strong></div>
+  <a class="brand" href="#home" data-view="home"><img class="brand-logo" src="yangque-logo.svg" width="62" height="43" alt=""><span><small class="tujia-ui" data-ui-tujia="brand" lang="tji">bízīsǎ áhxī</small>[[brand]]</span></a>
+  <nav aria-label="{{navigation}}">{{drawer_links}}</nav>
+</aside>
+<button type="button" class="academy-backdrop" aria-labelledby="academy-close-label" tabindex="-1" hidden></button>
