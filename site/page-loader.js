@@ -18,6 +18,8 @@ const SitePages=(()=>{
   history:{requires:['catalogue','notation'],files:['comparison-merge.js']}
  };
  const assets=JSON.parse(document.getElementById('site-assets')?.textContent||'{}');
+ const packaged=document.documentElement?.dataset?.edition==='offline';
+ const localAssets=new Map();
  const reads=new Map(),loaded=new Set(),groups=new Map(),readyGroups=new Set(),data=new Map(),readyData=new Set();
  let requestSerial=0,waiting=false,deferred=null;
  const assetURL=name=>name+(assets[name]?'?v='+assets[name]:'');
@@ -37,13 +39,34 @@ const SitePages=(()=>{
   if(failure){reads.delete(name);node.remove();failure.pageReload=true;throw failure;}
   loaded.add(name);
  }
+ // The signed application serves these resources from its own origin. Loading
+ // them as external scripts lets the WebView disallow inline JavaScript.
+ function loadLocalAsset(name){
+  if(!localAssets.has(name)){
+   const node=document.createElement(name.endsWith('.css')?'link':'script');
+   node.dataset.siteAsset=name;
+   if(node.tagName==='LINK'){node.rel='stylesheet';node.href=assetURL(name);}
+   else node.src=assetURL(name);
+   const ready=new Promise((resolve,reject)=>{
+    node.onload=resolve;
+    node.onerror=()=>{node.remove();reject(new Error('Unable to load '+name));};
+    document.head.append(node);
+   });
+   localAssets.set(name,ready.catch(error=>{localAssets.delete(name);throw error;}));
+  }
+  return localAssets.get(name);
+ }
  function group(name){
   if(!groups.has(name))groups.set(name,(async()=>{
    const definition=definitions[name];
    await Promise.all((definition.requires||[]).map(group));
    const names=[...(definition.css||[]),...definition.files];
-   const sources=await Promise.all(names.map(readAsset));
-   names.forEach((name,i)=>execute(name,sources[i]));
+   if(packaged){
+    for(const asset of names)await loadLocalAsset(asset);
+   }else{
+    const sources=await Promise.all(names.map(readAsset));
+    names.forEach((name,i)=>execute(name,sources[i]));
+   }
    readyGroups.add(name);
   })().catch(error=>{groups.delete(name);throw error}));
   return groups.get(name);

@@ -1,0 +1,142 @@
+.academy-more { position:relative; }
+.academy-more summary { display:flex; align-items:center; min-height:40px; cursor:pointer; font-size:13px; color:var(--green); list-style:none; }
+.academy-more summary::-webkit-details-marker { display:none; }
+.academy-more summary::after { content:'⌄'; padding-left:5px; }
+.academy-more[open] summary::after { content:'⌃'; }
+.academy-more-menu { position:absolute; z-index:60; top:100%; right:0; padding:5px; min-width:10rem; background:var(--paper); color:var(--ink); border:1px solid var(--line); border-radius:6px; box-shadow:0 8px 24px #15271d28; }
+.academy-more-menu > * { display:flex; align-items:center; width:100%; gap:10px; padding:8px 10px; min-height:44px; text-align:left; background:transparent; color:var(--ink); border:0; text-decoration:none; }
+.academy-more-menu .tujia-ui { display:block; font-size:.85em; color:var(--muted); }
+.academy-more-menu .nav-icon { flex:none; width:18px; height:18px; }
+.academy-theme { margin-bottom:12px; }
+.academy-keyboard > span { font-size:14px; font-weight:500; }
+@media (max-width:900px) {
+  html[data-edition] body > aside { padding:10px 14px 5px; }
+  html[data-edition] .brand-tagline { display:none !important; }
+  html[data-edition] body > aside > nav { display:flex; flex-wrap:wrap; margin:4px 0 0; gap:2px; }
+  html[data-edition] body > aside > nav > button, html[data-edition] body > aside > nav > a {
+    display:flex; flex:1 0 auto; justify-content:center; min-width:0; width:auto; max-width:100%; padding:5px 2px; min-height:44px;
+  }
+  html[data-edition] aside > nav .bilingual-label { display:flex; flex-direction:column-reverse; gap:2px; }
+  html[data-edition] aside > nav .ui-secondary, .academy-keyboard > span { font-size:13px; line-height:1.3; }
+  html[data-edition] aside > nav .tujia-ui { line-height:1.15; font-size:11px; }
+  .academy-keyboard { flex-direction:column-reverse; }
+  html[data-edition] .shell > header { min-height:44px; height:auto; flex-wrap:wrap; row-gap:0; }
+  .academy-more summary { font-size:12px; }
+}
+@media (max-width:400px) {
+  html[data-edition] body > aside { padding-left:10px; padding-right:10px; }
+  html[data-edition] .shell > header { padding:0 12px; }
+  html[data-edition] .shell > header #crumb { display:none; }
+  html[data-edition] aside > nav .ui-secondary, .academy-keyboard > span { font-size:12px; white-space:nowrap; }
+  html[data-edition] aside > nav .tujia-ui { font-size:10px; }
+  .academy-more { margin-right:auto; }
+  .academy-more-menu { right:auto; left:0; }
+}
+
+html[data-theme="dark"] {
+  color-scheme:dark;
+  --ink:#e1e8e2; --muted:#aebbb1; --paper:#171d1a; --surface:#202923;
+  --green:#a0d3b4; --line:#405044; --gold:#d9bc90;
+}
+html[data-theme="dark"] body { background:var(--paper); color:var(--ink); }
+html[data-theme="dark"] .shell,
+html[data-theme="dark"] main,
+html[data-theme="dark"] dialog,
+html[data-theme="dark"] .dialog-head,
+html[data-theme="dark"] .shell>header,
+html[data-theme="dark"] .display-panel,
+html[data-theme="dark"] .grammar-article,
+html[data-theme="dark"] .grammar-toc,
+html[data-theme="dark"] .word-card,
+html[data-theme="dark"] .source-row,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .grammar-toc-wrap,
+html[data-theme="dark"] .translation-callout {
+  background-color:var(--paper); color:var(--ink); border-color:var(--line);
+}
+html[data-theme="dark"] aside,
+html[data-theme="dark"] .corpus-card,
+html[data-theme="dark"] .filters,
+html[data-theme="dark"] .example,
+html[data-theme="dark"] .notice,
+html[data-theme="dark"] .source-word-record,
+html[data-theme="dark"] .search-languages button,
+html[data-theme="dark"] .grammar-switch button,
+html[data-theme="dark"] .grammar-page-navigation a,
+html[data-theme="dark"] .grammar-toc button.selected,
+html[data-theme="dark"] .grammar-toc-sections a[aria-current],
+html[data-theme="dark"] .word-card-content[aria-pressed=true],
+html[data-theme="dark"] thead,
+html[data-theme="dark"] th,
+html[data-theme="dark"] .filetype,
+html[data-theme="dark"] .detail-actions button,
+html[data-theme="dark"] .pagination button,
+html[data-theme="dark"] .chips button {
+  background-color:var(--surface); color:var(--ink); border-color:var(--line);
+}
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] b,
+html[data-theme="dark"] strong,
+html[data-theme="dark"] p,
+html[data-theme="dark"] summary,
+html[data-theme="dark"] dt,
+html[data-theme="dark"] dd,
+html[data-theme="dark"] button,
+html[data-theme="dark"] .card-title,
+html[data-theme="dark"] .word-card-title,
+html[data-theme="dark"] .grammar-spelling,
+html[data-theme="dark"] .brand .ui-secondary,
+html[data-theme="dark"] .word-detail-english,
+html[data-theme="dark"] .grammar-reading-title { color:var(--ink); }
+html[data-theme="dark"] .tiny,
+html[data-theme="dark"] .sub,
+html[data-theme="dark"] .eyebrow,
+html[data-theme="dark"] .num,
+html[data-theme="dark"] .pill,
+html[data-theme="dark"] .search-scope,
+html[data-theme="dark"] .list-labels,
+html[data-theme="dark"] .grammar-ipa,
+html[data-theme="dark"] .word-ipa,
+html[data-theme="dark"] .grammar-gloss,
+html[data-theme="dark"] .grammar-page-parent,
+html[data-theme="dark"] .grammar-page-target,
+html[data-theme="dark"] .translation-requirement,
+html[data-theme="dark"] #crumb,
+html[data-theme="dark"] .tujia-ui { color:var(--muted); }
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] .searchbar,
+html[data-theme="dark"] #detail-corpus-search input,
+html[data-theme="dark"] #detail-corpus-search button,
+html[data-theme="dark"] .grammar-toc-toggle,
+html[data-theme="dark"] .stack button,
+html[data-theme="dark"] .pill,
+html[data-theme="dark"] .notice.warn { color:var(--ink); background-color:var(--surface); border-color:var(--line); }
+html[data-theme="dark"] button:hover,
+html[data-theme="dark"] a:hover,
+html[data-theme="dark"] .word-card-content:hover { color:#e4f6ea; background-color:#29392f; }
+html[data-theme="dark"] .searchbar button,
+html[data-theme="dark"] .grammar-switch button.primary,
+html[data-theme="dark"] aside>nav button.active { color:#e9faef; background-color:#34523f; }
+html[data-theme="dark"] .searchbar button * { color:inherit; }
+html[data-theme="dark"] a,
+html[data-theme="dark"] .metric b,
+html[data-theme="dark"] .metric span,
+html[data-theme="dark"] .grammar-reading .grammar-page-navigation a,
+html[data-theme="dark"] main a:not(.metric),
+html[data-theme="dark"] #detail-body a,
+html[data-theme="dark"] .site-footer a { color:#9ccfe4; }
+html[data-theme="dark"] .word-card-content,
+html[data-theme="dark"] .academy-more-menu button,
+html[data-theme="dark"] .grammar-toc button { background-color:transparent; }
+html[data-theme="dark"] .grammar-reading .reviewed-grammar h2,
+html[data-theme="dark"] .grammar-reading .reviewed-grammar h3,
+html[data-theme="dark"] .grammar-reading .reviewed-grammar p,
+html[data-theme="dark"] .word-card .word-card-title,
+html[data-theme="dark"] .grammar-entry-grid .card-title,
+html[data-theme="dark"] .corpus-card-content .card-title { color:var(--ink); }
+html[data-theme="dark"] .brand-logo { background:#e8efe9; border-radius:3px; }

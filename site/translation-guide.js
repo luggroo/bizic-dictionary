@@ -4,6 +4,7 @@
   const source = $('translation-source'), dialect = $('translation-dialect');
   const output = $('translation-prompt'), status = $('prompt-status');
   const params = new URLSearchParams(location.search);
+  const bundled = document.documentElement.dataset.edition === 'offline';
   const requested = params.get('lang');
   let saved = null;
   try { saved = localStorage.getItem('tujia-ui-language'); } catch {}
@@ -33,7 +34,7 @@
     $('guide-content').hidden = Boolean(detail);
     document.querySelectorAll('.record').forEach(record => { record.hidden = !detail || record.id !== id; record.style.display = detail && record.id === id ? 'block' : 'none'; });
     const label = detail ? $(id).querySelector('h1').textContent : (language === 'en' ? 'Translation skill' : '翻译技能');
-    document.title = label + (language === 'en' ? ' · Bizic Academy' : ' · 毕兹学堂');
+    document.title = label + (language === 'en' ? ' · Bizic Academy' : bundled ? ' · 毕资学堂' : ' · 毕兹学堂');
     $('crumb').textContent = detail ? (language === 'en' ? 'Translation skill · Examples' : '翻译技能 · 翻译例子') : (language === 'en' ? 'Translation skill · How to use' : '翻译技能 · 使用方法');
     if (scroll) { if (detail) window.scrollTo(0,0); else $(id)?.scrollIntoView(); }
   }
@@ -51,6 +52,9 @@
     document.querySelectorAll('.availability').forEach(el => { el.setAttribute('aria-label',language === 'en' ? (el.classList.contains('yes') ? 'Available' : 'Unavailable') : (el.classList.contains('yes') ? '可以用' : '不能用')); });
     document.querySelector('meta[name="description"]').content = language === 'en' ? 'Translate Northern and Southern Tujia with AI: tool requirements, translation prompts, common questions and actual examples.' : '使用 AI 翻译北部与南部土家语：工具要求、翻译指令、常见问题和实际例子。';
     document.querySelectorAll('a[href^="https://tujia.biz/"]').forEach(el => { const url = new URL(el.href); url.searchParams.set('lang',language); el.href = url.href; });
+    if (bundled) document.querySelectorAll('aside a[href^="/?lang="]').forEach(el => {
+      const url = new URL(el.href); url.searchParams.set('lang',language); el.href = url.pathname + url.search + url.hash;
+    });
     document.querySelectorAll('[data-ui-language-link]').forEach(el => {
       const url = new URL(location.href); url.searchParams.set('lang',el.dataset.uiLanguageLink); el.href = url.href;
       if (el.dataset.uiLanguageLink === language) el.setAttribute('aria-current','true'); else el.removeAttribute('aria-current');
@@ -60,7 +64,7 @@
       if (!/\/translation-runs(?:-en)?\.html$/.test(target.pathname)) return;
       target.pathname = language === 'en' ? '/translation-runs-en.html' : '/translation-runs.html';
       target.searchParams.set('lang', language);
-      link.href = target.pathname + target.search + target.hash;
+      link.href = (bundled ? 'https://tujia.biz' : '') + target.pathname + target.search + target.hash;
     });
     refreshPrompt();
     titleAndRoute();

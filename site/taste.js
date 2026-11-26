@@ -9,7 +9,7 @@
   const panel=settings.querySelector('.display-panel');
   panel.append(document.querySelector('#spelling-control'),document.querySelector('.media-switch'));header.append(settings);
   document.addEventListener('click',e=>{if(!settings.contains(e.target))settings.open=false;});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'){settings.open=false;if(document.querySelector('dialog[open]')&&!document.querySelector('dialog:modal'))closeDetail();}});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){settings.open=false;if(document.querySelector('dialog[open]')&&!document.querySelector('dialog[open][data-presentation="modal"]'))closeDetail();}});
   window.matchMedia('(min-width:1180px)').addEventListener('change',()=>{if(currentDetail&&W[currentDetail]&&document.querySelector('#detail').open)showDetailDialog(currentDetail);});
   window.tasteRefresh=()=>{
     document.body.dataset.view=state.view;

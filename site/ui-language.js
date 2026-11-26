@@ -1,11 +1,14 @@
 /* Localize interface text without rewriting source records or event values. */
 'use strict';
 (() => {
-  let language = 'zh';
-  try { if (localStorage.getItem('tujia-ui-language') === 'en') language = 'en'; } catch {}
+  let language = 'zh', savedLanguage;
+  try { savedLanguage = localStorage.getItem('tujia-ui-language'); if (savedLanguage === 'en') language = 'en'; } catch {}
+  const offline = document.documentElement.dataset.edition === 'offline';
   function urlLanguage() {
     const value = new URLSearchParams(location.search).get('lang');
-    return value === 'en' || value === 'zh' ? value : document.body.dataset.homeLanguage || null;
+    if (value === 'en' || value === 'zh') return value;
+    if (offline && document.body.dataset.homeLanguage === 'zh' && savedLanguage) return savedLanguage;
+    return document.body.dataset.homeLanguage || null;
   }
   language = urlLanguage() || language;
   const script = document.currentScript || document.querySelector('script[src*="ui-language.js"]');
@@ -22,7 +25,8 @@
       if (link.dataset.uiLanguageLink) {
         const url = new URL(location.href);
         url.pathname = siteRoot.pathname + (link.dataset.uiLanguageLink === 'en' ? 'en/' : '');
-        url.searchParams.delete('lang');
+        if (offline) url.searchParams.set('lang',link.dataset.uiLanguageLink);
+        else url.searchParams.delete('lang');
         link.href = url.pathname + url.search + url.hash;
         if (link.dataset.uiLanguageLink === language) link.setAttribute('aria-current', 'true');
         else link.removeAttribute('aria-current');
@@ -213,8 +217,10 @@
     if (select) select.value = language;
     const title = typeof state === 'undefined' ? '知识总览' : titles[state.view] || '知识总览';
     const view = typeof state === 'undefined' ? 'home' : state.view;
-    const homeTitle = translate('土家语词典、语法与语料｜毕兹学堂');
-    const brand = language === 'en' ? ' | Bizic Academy 毕兹学堂' : '｜毕兹学堂';
+    const publishedTitle = translate('土家语词典、语法与语料｜毕兹学堂');
+    const homeTitle = offline ? publishedTitle.replace('毕兹学堂','毕资学堂') : publishedTitle;
+    const name = offline ? '毕资学堂' : '毕兹学堂';
+    const brand = language === 'en' ? ' | Bizic Academy '+name : '｜'+name;
     document.title = document.body.dataset.documentTitle ? translate(document.body.dataset.documentTitle)
       : view === 'home' ? homeTitle
       : (view === 'words' ? (language === 'en' ? 'Tujia Dictionary' : '土家语词典') : translate(title)) + brand;
@@ -250,6 +256,7 @@
       }
     }
     if(serial!==languageRequest)return;
+    savedLanguage=language;
     try { localStorage.setItem('tujia-ui-language',language); } catch {}
     syncLanguageURL();
     const resumed=window.SitePages&&window.fastReady&&SitePages.resumePending();

@@ -1,0 +1,12 @@
+{
+  "name": "bizic-offline-webview-compat",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "7.28.5",
+    "@babel/preset-env": "7.28.5",
+    "abortcontroller-polyfill": "1.7.8",
+    "core-js-bundle": "3.46.0",
+    "dialog-polyfill": "0.5.6"
+  }
+}

@@ -467,8 +467,8 @@ function showDetailDialog(id){
  const docked=!!W[id]&&state.view==='words'&&innerWidth>=1180;
  dialog.classList.toggle('word-detail',docked);
  document.body.classList.toggle('word-detail-open',docked);
- if(dialog.open&&dialog.matches(':modal')===docked)dialog.close();
- if(!dialog.open){if(docked)dialog.show();else dialog.showModal();}
+ if(dialog.open&&(dialog.dataset.presentation==='modal')===docked)dialog.close();
+ if(!dialog.open){dialog.dataset.presentation=docked?'docked':'modal';if(docked)dialog.show();else dialog.showModal();}
  document.querySelectorAll('.word-card-content').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.open===id)));
 }
 function openDetail(id){

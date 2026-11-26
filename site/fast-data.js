@@ -26,8 +26,9 @@ function loadAllSourceTexts(){
 }
 async function loadWordEvidence(word){
  if(word._chunk===undefined)return word;
- const name=word._entry===undefined?'words-'+word._chunk:'entries/'+word._entry;
- const payload=await fastChunk(name),original=word._entry===undefined?(Array.isArray(payload)?payload.find(w=>w.id===word.id):null):payload;
+ const inBatch=word._entry===undefined||document.documentElement?.dataset?.edition==='offline';
+ const name=inBatch?'words-'+word._chunk:'entries/'+word._entry;
+ const payload=await fastChunk(name),original=inBatch?(Array.isArray(payload)?payload.find(w=>w.id===word.id):null):payload;
  if(original?.id!==word.id||!Array.isArray(original.attestations)){fastChunks.delete(name);throw Error('Invalid word '+word.id);}
  Object.assign(UI_TRANSLATIONS,original._translations||{});
  // Keep object identity so history, dialect filters and WeakMap caches remain valid.
@@ -53,7 +54,9 @@ async function loadWordEvidenceForExport(words){
 }
 async function loadCorpusEvidence(c){
  if(!c?._corpusEntry)return c;
- const name='corpus-entries/'+c._corpusEntry,entry=await fastChunk(name);
+ const bundled=document.documentElement?.dataset?.edition==='offline';
+ const name=bundled?'corpus':'corpus-entries/'+c._corpusEntry,payload=await fastChunk(name);
+ const entry=bundled?payload.corpus.find(item=>item.id===c.id):payload;
  if(entry?.id!==c.id){fastChunks.delete(name);throw Error('Mismatched corpus '+c.id);}
  Object.assign(c,entry);delete c._corpusEntry;return c;
 }
