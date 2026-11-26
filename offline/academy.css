@@ -161,6 +161,7 @@ html[data-theme="dark"] .brand-logo { background:#e8efe9; border-radius:3px; }
 
 .academy-mobile-bar, .academy-backdrop { display:none; }
 @media (max-width:900px) {
+  html[data-edition] body { display:block; }
   html[data-edition] body > .academy-mobile-bar {
     display:flex; align-items:center; gap:14px; height:56px; padding:0 12px;
     background:var(--paper); color:var(--ink); border-bottom:1px solid var(--line);
