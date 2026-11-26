@@ -51,6 +51,19 @@ let prev=performance.now();function mark(name){const n=performance.now();marks[n
   _display:Object.fromEntries(Object.entries(w._display).map(([mode,values])=>[mode,values.map(v=>({...v,...(v.ipaForms?{ipaForms:v.ipaForms.map(ipa=>ctx.displayReviewedIPA(data.words[i],ipa))}:{})}))]))
  }));
  const wordIndex=vm.runInContext('WordIndex.pack',ctx)(summaries,core.wordAliases);
+ if(process.argv.includes('--offline-reader')){
+  // An old system WebView can parse prepared records natively. Expand the exact
+  // public search index here, once, retaining reviewed POS and display forms.
+  const reader=vm.runInContext('WordIndex.unpack',ctx)(wordIndex);
+  const classes=vm.runInContext('WordClasses',ctx);
+  reader.classCounts=classes.initialize(reader.words);
+  reader.sourceFilters=[...new Set(reader.words.flatMap(ctx.wordSources))];
+  for(const word of reader.words){
+   word._classIds=classes.ids(word);
+   word._search.englishWords=[...word._search.englishWords];
+  }
+  write('offline-word-search',reader);
+ }
  fs.rmSync(path.join(compiled,'entries'),{recursive:true,force:true});
  fs.mkdirSync(path.join(compiled,'entries'),{recursive:true});
  const translations=canonicalUI;

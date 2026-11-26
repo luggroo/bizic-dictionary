@@ -1,5 +1,5 @@
 .academy-more { position:relative; }
-.academy-more summary { display:flex; align-items:center; min-height:40px; cursor:pointer; font-size:13px; color:var(--green); list-style:none; }
+.academy-more summary { display:block; min-height:40px; line-height:40px; white-space:nowrap; cursor:pointer; font-size:13px; color:var(--green); list-style:none; }
 .academy-more summary::-webkit-details-marker { display:none; }
 .academy-more summary::after { content:'⌄'; padding-left:5px; }
 .academy-more[open] summary::after { content:'⌃'; }
@@ -9,6 +9,14 @@
 .academy-more-menu .nav-icon { flex:none; width:18px; height:18px; }
 .academy-theme { margin-bottom:12px; }
 .academy-keyboard > span { font-size:14px; font-weight:500; }
+html[data-edition] .shell > header > .media-switch { display:none; }
+html[data-edition] .searchbar button [data-ui-source] { color:inherit; }
+/* Early system WebViews support Flexbox but ignore flex gap. Margins keep the
+   overview counts distinct at every text size and through line wrapping. */
+html[data-edition] .metrics { gap:0; }
+html[data-edition] .metrics .metric { margin-right:1em; }
+html[data-edition] .metrics .metric b { margin-right:.3em; }
+html[data-edition] .metrics .metric::after { margin-left:.25em; }
 @media (max-width:900px) {
   html[data-edition] body > aside { padding:10px 14px 5px; }
   html[data-edition] .brand-tagline { display:none !important; }
@@ -31,6 +39,14 @@
   html[data-edition] aside > nav .tujia-ui { font-size:10px; }
   .academy-more { margin-right:auto; }
   .academy-more-menu { right:auto; left:0; }
+}
+@media (max-width:600px) {
+  @supports not (height:100dvh) {
+    html[data-edition] dialog[open] {
+      position:fixed; top:0; right:0; bottom:0; left:0;
+      height:100vh; max-height:100vh; overflow-y:auto;
+    }
+  }
 }
 
 html[data-theme="dark"] {

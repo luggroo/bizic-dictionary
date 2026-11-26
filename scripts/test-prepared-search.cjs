@@ -15,6 +15,26 @@ function context(data,compact=false){
  ctx.initializeSemanticCategories(data.words);return ctx;
 }
 const baseline=context({...core,words:fullWords}),fast=context(core),compact=context({...core,words:[]},true);
+if(process.argv.includes('--check-offline')){
+ const bundled=JSON.parse(zlib.gunzipSync(fs.readFileSync(0)));
+ const classes=vm.runInContext('WordClasses',compact),parents=new Map(),totals=new Map();
+ function walk(nodes,parent){for(const node of nodes){parents.set(node.id,parent);walk(node.children||[],node.id);}}
+ walk(classes.tree,null);
+ assert.equal(bundled.words.length,compact.data.words.length);
+ assert.equal(JSON.stringify(bundled.wordAliases),JSON.stringify(compact.data.wordAliases));
+ assert.equal(JSON.stringify(bundled.sourceFilters),JSON.stringify([...new Set(compact.data.words.flatMap(compact.wordSources))]));
+ bundled.words.forEach(({_classIds,...actual},i)=>{
+  const word=compact.data.words[i],ids=classes.ids(word);
+  const expected={...word,_search:{...word._search,englishWords:[...word._search.englishWords]}};
+  assert.equal(JSON.stringify(actual),JSON.stringify(expected),word.id+' expanded search record');
+  assert.equal(JSON.stringify(_classIds),JSON.stringify(ids),word.id+' class IDs');
+  const ancestors=new Set();
+  for(const id of ids)for(let key=id;key;key=parents.get(key))ancestors.add(key);
+  for(const key of ancestors)totals.set(key,(totals.get(key)||0)+1);
+ });
+ assert.deepEqual(bundled.classCounts,Object.fromEntries(totals));
+ console.log('PASS: every expanded reader search value, reviewed card, lexical ID, POS ID, class count and source filter agrees with the packed website index');
+}
 // Alternatives split for reading, while the attested source string stays intact.
 const husk=fullWords.find(w=>w.id==='stedt-rn-288782');
 const huskCore=core.words.find(w=>w.id===husk.id);

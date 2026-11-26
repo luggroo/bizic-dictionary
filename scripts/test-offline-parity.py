@@ -6,6 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 from zipfile import ZipFile
 
 
@@ -27,15 +28,23 @@ def check(site, archive):
             assert not file['path'].endswith(('.pdf', '.mp3', '.mp4', '.onnx')), file['path']
         assert not any(name.startswith(('text/', 'prepared/entries/', 'prepared/corpus-entries/')) for name in paths)
         assert {'data.json.gz', 'dictionary.json.gz', 'prepared/core.json.gz', 'prepared/words-index.json.gz'}.isdisjoint(paths)
+        for homepage in ('index.html', 'en/index.html'):
+            html = bundle.read(homepage).decode('utf-8')
+            nav = re.search(r'<aside[\s\S]*?<nav\b[^>]*>([\s\S]*?)</nav>', html)[1]
+            assert re.findall(r'<button data-view="([^"]+)"', nav) == ['words','grammar','corpus','sources']
+            assert nav.count('href="/_app/keyboard"') == 1
 
         def mobile(name):
             return json.loads(gzip.decompress(bundle.read('prepared/' + name + '.json.gz')))
 
         # Assert full dataset and field equality, including verbatim attestations,
         # loan scopes, glosses, location data, citations and both language editions' notes.
-        for name in ('home','word-search','history','catalogue','corpus-index','corpus-search','corpus'):
+        for name in ('home','history','catalogue','corpus-index','corpus-search','corpus'):
             assert mobile(name) == production(name), name
-        index = mobile('word-search')
+        search_test = Path(__file__).with_name('test-prepared-search.cjs')
+        subprocess.run(['node', search_test, site.resolve(), '--check-offline'], check=True,
+                       input=bundle.read('prepared/word-search.json.gz'))
+        index = production('word-search')
         columns = dict(zip(index['keys'], index['columns'], strict=True))
         ids = columns['id']
         batches = {}

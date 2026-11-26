@@ -148,7 +148,8 @@
     if (node.parentElement?.closest(protectedContent)) return;
     const previous = textMemory.get(node), current = node.nodeValue;
     const source = previous && current === previous.output ? previous.source : node.parentElement?.dataset.uiSource ?? current;
-    const output = translate(source);
+    const english = node.parentElement?.dataset.uiEnglish;
+    const output = language === 'en' && english !== undefined ? english : translate(source);
     textMemory.set(node, {source,output});
     if (current !== output) node.nodeValue = output;
   }

@@ -162,8 +162,10 @@ function applyPreparedPart(name,payload){
  if(name==='words-index'||name==='word-search'){
   if(typeof WordIndex!=='undefined')payload=WordIndex.unpack(payload);
   D.words=payload.words;D.wordAliases=payload.wordAliases;
-  W=Object.fromEntries(D.words.map(w=>[w.id,w]));
-  for(const [alias,id]of Object.entries(D.wordAliases||{}))W[alias]=W[id];
+  D._classCounts=payload.classCounts;D._wordSourceFilters=payload.sourceFilters;
+  W=Object.create(null);
+  for(let i=0;i<D.words.length;i++){const word=D.words[i];W[word.id]=word;}
+  for(const alias of Object.keys(D.wordAliases||{}))W[alias]=W[D.wordAliases[alias]];
  }else if(name==='catalogue'){
   for(const key of ['sources','sourceVariants','topics','folders'])D[key]=payload[key];
   S=Object.fromEntries([...(D.sourceVariants||[]),...D.sources].map(s=>[s.id,s]));

@@ -48,7 +48,8 @@ def prepare(root, font_archive):
     run(sys.executable, SCRIPTS / 'prepare-webfonts.py', root, *font_args)
     run(sys.executable, SCRIPTS / 'apply-gloss-reviews.py', root)
     for script in ('refresh-brassett-ipa', 'normalize-ipa-data', 'prepare-search-data', 'build-localized-home'):
-        run('node', SCRIPTS / (script + '.cjs'), root)
+        flags = ['--offline-reader'] if script == 'prepare-search-data' else []
+        run('node', SCRIPTS / (script + '.cjs'), root, *flags)
 
 
 def category(path):
@@ -80,6 +81,30 @@ def category(path):
     return 'other'
 
 
+def app_navigation(html, english):
+    # Put the actual app navigation in the first paint, before the WebView has
+    # parsed fonts or scripts. Reuse the website's buttons, icons and routes.
+    nav = re.search(r'(<nav\b[^>]*>)([\s\S]*?)</nav>', html)
+    buttons = {m[1]:m[0] for m in re.finditer(r'<button data-view="([^"]+)">[\s\S]*?</button>', nav[2])}
+    translation = re.search(r'<a class="nav-repo-link"[\s\S]*?</a>', nav[2])[0]
+    secondary = buttons['notation'] + buttons['history'] + translation
+    primary = []
+    for view, zh, en in [('words','词典','Dictionary'), ('grammar','语法','Grammar'),
+                         ('corpus','语料','Corpus'), ('sources','文献','Sources')]:
+        icon = buttons[view].split('</svg>', 1)[0] + '</svg>'
+        primary.append(icon + f'<span><span data-ui-source="{zh}" data-ui-english="{en}">{en if english else zh}</span></span></button>')
+    keyboard = 'Keyboard' if english else '输入法'
+    primary.append('<a class="nav-repo-link academy-keyboard" href="/_app/keyboard">'
+                   '<svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">'
+                   '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M5 9h2m2 0h2m2 0h2m2 0h2M5 12h2m2 0h2m2 0h2m2 0h2M8 15h8"/></svg>'
+                   f'<span data-ui-source="输入法" data-ui-english="Keyboard">{keyboard}</span></a>')
+    html = html.replace(nav[0], nav[1] + ''.join(primary) + '</nav>', 1)
+    more = 'More' if english else '更多资料'
+    menu = (f'<details class="academy-more"><summary data-ui-source="更多资料">{more}</summary>'
+            f'<div class="academy-more-menu">{secondary}</div></details>')
+    return html.replace('<label class="language-selector">', menu + '<label class="language-selector">', 1)
+
+
 def build_reader(root, output):
     def copy(name, source=None):
         dest = output / name
@@ -106,8 +131,9 @@ def build_reader(root, output):
     run('node', '-e', "require('./scripts/mobile-optional.cjs').writeCatalog(process.argv[1],process.argv[2])",
         SITE, output)
 
-    for name in ('home', 'word-search', 'catalogue', 'history', 'corpus', 'corpus-search', 'corpus-index'):
+    for name in ('home', 'catalogue', 'history', 'corpus', 'corpus-search', 'corpus-index'):
         copy('prepared/' + name + '.json.gz')
+    copy('prepared/word-search.json.gz', root / 'prepared/offline-word-search.json.gz')
     for path in (root / 'prepared').glob('source-*.json.gz'):
         copy(path.relative_to(root))
     # Batch the exact production single-entry payloads. The forgiving online loader
@@ -139,6 +165,7 @@ def build_reader(root, output):
         html = (root / name).read_text().replace('<html lang=', '<html data-edition="offline" lang=', 1)
         html = html.replace('毕兹学堂', '毕资学堂').replace('</head>', '<link rel="stylesheet" href="academy.css"></head>')
         if name.endswith('index.html'):
+            html = app_navigation(html, name.startswith('en/'))
             html = re.sub(r'<link rel="manifest"[^>]*>', '', html)
             # Both entrypoints render their localized home immediately. Both use the same bootstrap data.
             html, count = re.subn(r'<script id="site-bootstrap-data"[^>]*>[\s\S]*?</script>', '', html)

@@ -1,11 +1,13 @@
 // node scripts/test-offline-mobile.cjs UNPACKED_SNAPSHOT [SCREENSHOT_DIRECTORY]
 // Requires Playwright. BROWSER=webkit and CHROMIUM_EXECUTABLE / WEBKIT_EXECUTABLE
-// select a browser. exerciseLearningUI also runs on a real WebView Playwright Page.
+// select a browser. RAW_PREPARED=1 exercises clients that serve raw gzip.
+// exerciseLearningUI also runs on a real WebView Playwright Page.
 'use strict';
 
 const assert = require('node:assert/strict');
 const fs = require('node:fs/promises');
 const path = require('node:path');
+const {gunzipSync} = require('node:zlib');
 
 const origin = 'https://appassets.androidplatform.net';
 const start = origin + '/index.html';
@@ -177,6 +179,23 @@ async function exerciseLearningUI(page, {capture = async () => {}, report = cons
   await select('#academy-theme', 'system');
   await select('#ui-language', 'zh');
   await page.waitForFunction(() => document.documentElement.lang === 'zh-CN');
+  // English landing-page HTML has different source captions. Late grammar
+  // translations must preserve the same five labels after a round trip.
+  await page.goto(origin + '/en/');
+  await ready(page, 'home');
+  const labels = () => page.locator('aside nav > *').evaluateAll(items => items.map(item =>
+    (item.querySelector('.ui-secondary') || item.querySelector('[data-ui-source]')).textContent));
+  const english = ['Dictionary', 'Grammar', 'Corpus', 'Sources', 'Keyboard'];
+  assert.deepEqual(await labels(), english);
+  await select('#ui-language', 'zh');
+  await page.waitForFunction(() => document.querySelector('aside [data-view="words"] .ui-secondary').textContent === '词典');
+  assert.deepEqual(await labels(), ['词典', '语法', '语料', '文献', '输入法']);
+  await page.locator('aside nav [data-view="grammar"]').click();
+  await ready(page, 'grammar');
+  await select('#ui-language', 'en');
+  await ready(page, 'grammar');
+  await page.waitForFunction(() => document.querySelector('aside [data-view="words"] .ui-secondary').textContent === 'Dictionary');
+  assert.deepEqual(await labels(), english);
   report('Chinese and English interface, Tujia diacritic/Ye labels, saved theme and spelling');
 }
 
@@ -208,8 +227,15 @@ async function serveSnapshot(context, root, log) {
       return;
     }
     log.requests.add(name);
+    let type = contentTypes[path.extname(name)] || 'application/octet-stream';
+    if (!log.rawPrepared && name.startsWith('prepared/') && name.endsWith('.json.gz')) {
+      // LearningWebClient gives WebView native-inflated JSON at the original URL.
+      type = 'application/json; charset=utf-8';
+      if (req.method() !== 'HEAD') data = gunzipSync(data);
+      log.nativeJson.add(name);
+    }
     await route.fulfill({status: 200, headers: {
-      'Content-Type': contentTypes[path.extname(name)] || 'application/octet-stream',
+      'Content-Type': type,
       'Content-Security-Policy': csp, 'X-Content-Type-Options': 'nosniff'
     }, body: req.method() === 'HEAD' ? Buffer.alloc(0) : data});
   });
@@ -249,6 +275,32 @@ async function checkDisplaySizes(page, engine, capture) {
   }
   if (cdp) await cdp.detach();
   return cases;
+}
+
+async function checkEnglishFirstPaint(browser, browserOffline, root, log, out) {
+  const context = await browser.newContext({viewport: {width: 320, height: 800},
+    isMobile: true, javaScriptEnabled: false, offline: browserOffline, serviceWorkers: 'block'});
+  try {
+    await serveSnapshot(context, root, log);
+    const page = await context.newPage();
+    await page.goto(origin + '/en/');
+    const labels = await page.locator('aside nav > *').allInnerTexts();
+    assert.deepEqual(labels.map(s => s.trim()), ['Dictionary', 'Grammar', 'Corpus', 'Sources', 'Keyboard']);
+    const contrast = await page.locator('#search-form button').evaluate(button => {
+      const caption = button.querySelector('[data-ui-source]') || button;
+      const luminance = css => {
+        const [r, g, b] = css.match(/[\d.]+/g).slice(0, 3).map(n => Number(n) / 255)
+          .map(n => n <= 0.04045 ? n / 12.92 : ((n + 0.055) / 1.055) ** 2.4);
+        return r * 0.2126 + g * 0.7152 + b * 0.0722;
+      };
+      const text = luminance(getComputedStyle(caption).color);
+      const background = luminance(getComputedStyle(button).backgroundColor);
+      return (Math.max(text, background) + 0.05) / (Math.min(text, background) + 0.05);
+    });
+    assert(contrast >= 4.5, `English Search caption contrast before JavaScript was ${contrast}`);
+    if (out) await page.screenshot({path: path.join(out, 'first-paint-en-320.png')});
+    return contrast;
+  } finally { await context.close(); }
 }
 
 async function checkLargeText(chromium, root, out, log) {
@@ -293,7 +345,8 @@ async function main() {
   const browser = await (engine === 'chromium' ? chromium : webkit).launch(engine === 'chromium' ? {
     executablePath: process.env.CHROMIUM_EXECUTABLE || undefined, args: ['--disable-dev-shm-usage']
   } : {executablePath: process.env.WEBKIT_EXECUTABLE || undefined});
-  const log = {requests: new Set(), foreign: new Set(), missing: new Set()};
+  const log = {requests: new Set(), foreign: new Set(), missing: new Set(), nativeJson: new Set(),
+    rawPrepared: process.env.RAW_PREPARED === '1'};
   const checks = [], errors = [], cspErrors = [];
   // In Linux WebKit the offline switch rejects even route.fulfill for the top
   // document. The route handler still answers every HTTPS read from disk.
@@ -306,6 +359,17 @@ async function main() {
     const page = await context.newPage();
     page.setDefaultTimeout(25000);
     page.on('pageerror', e => errors.push(e.message));
+    // Native-inflated responses should be parsed directly, keeping a second
+    // copy of the full search index out of the JavaScript heap on older phones.
+    await page.addInitScript(() => {
+      const original = Response.prototype.arrayBuffer;
+      Response.prototype.arrayBuffer = function (...args) {
+        if (this.url.includes('/prepared/') && this.headers.get('Content-Type')?.startsWith('application/json')) {
+          throw Error('Native-inflated JSON was copied to an ArrayBuffer');
+        }
+        return original.apply(this, args);
+      };
+    });
     await page.exposeBinding('recordCspViolation', (_, directive, url) => cspErrors.push({directive, url}));
     await page.addInitScript(() => document.addEventListener('securitypolicyviolation', event => {
       window.recordCspViolation(event.effectiveDirective, event.blockedURI);
@@ -319,14 +383,16 @@ async function main() {
     await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
     await page.emulateMedia({colorScheme: 'light'});
     await page.waitForFunction(() => document.documentElement.dataset.theme === 'light');
+    const firstPaintContrast = await checkEnglishFirstPaint(browser, browserOffline, root, log, out);
     const sizes = await checkDisplaySizes(page, engine, capture);
     const largeTextNavigation = engine === 'chromium' ? await checkLargeText(chromium, root, out, log) : undefined;
     assert.deepEqual([...log.foreign], [], 'Unexpected external requests');
     assert.deepEqual([...log.missing], [], 'Requests for files outside the base snapshot');
     assert.deepEqual(errors, [], 'Unhandled JavaScript exceptions');
     assert.deepEqual(cspErrors, [], 'Content Security Policy violations');
-    const result = {engine, browserVersion: browser.version(), browserOffline, network: 'All HTTPS responses served from snapshot on disk', checks, viewports: sizes, largeTextNavigation,
-      distinctLocalResources: log.requests.size, externalRequests: [...log.foreign], missingFiles: [...log.missing], errors, cspErrors};
+    if (!log.rawPrepared) assert(log.nativeJson.size > 0, 'Native JSON transport was not exercised');
+    const result = {engine, browserVersion: browser.version(), browserOffline, network: 'All HTTPS responses served from snapshot on disk', checks, viewports: sizes, firstPaintContrast, largeTextNavigation,
+      distinctLocalResources: log.requests.size, nativeDecodedJsonResources: log.nativeJson.size, externalRequests: [...log.foreign], missingFiles: [...log.missing], errors, cspErrors};
     console.log(JSON.stringify(result, null, 2));
     if (out) await fs.writeFile(path.join(out, 'results.json'), JSON.stringify(result, null, 2) + '\n');
   } finally { await browser.close(); }

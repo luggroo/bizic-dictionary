@@ -10,6 +10,12 @@ const bytes=fs.readFileSync(path.join(root,'prepared/core.json.gz')),expected=JS
   const plain=await ctx.preparedJSON(new Response(JSON.stringify({ready:true})));assert.equal(plain.ready,true);
   await assert.rejects(ctx.preparedJSON(new Response('missing',{status:404})));
   await assert.rejects(ctx.preparedJSON(new Response(bytes.subarray(0,100))));
+  ctx.document={documentElement:{dataset:{edition:'offline'}}};
+  const decoded=new Response(JSON.stringify({local:true}),{headers:{'Content-Type':'application/json; charset=UTF-8'}});
+  decoded.arrayBuffer=()=>{throw new Error('Native JSON must be parsed directly.');};
+  assert.equal((await ctx.preparedJSON(decoded)).local,true);
+  const raw=await ctx.preparedJSON(new Response(bytes,{headers:{'Content-Type':'application/gzip'}}));
+  assert.equal(JSON.stringify(raw),JSON.stringify(expected));
  }
- console.log('PASS: native gzip and pako fallback, decoded JSON, missing and truncated data.');
+ console.log('PASS: native gzip and pako fallback, direct native-shell JSON, missing and truncated data.');
 })().catch(e=>{console.error(e);process.exitCode=1});

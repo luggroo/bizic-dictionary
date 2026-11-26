@@ -32,6 +32,22 @@
     if (value) this.setAttribute(name, ''); else this.removeAttribute(name);
     return value;
   };
+  if (!('scrollBehavior' in document.documentElement.style)) {
+    // Early system WebViews accept coordinates only. Preserve the current offset
+    // for omitted axes and let updated WebViews handle smooth scrolling natively.
+    var scrollTo = window.scrollTo;
+    var scrollBy = window.scrollBy;
+    window.scrollTo = function (x, y) {
+      if (x && typeof x === 'object') {
+        scrollTo.call(window, x.left == null ? window.pageXOffset : x.left,
+            x.top == null ? window.pageYOffset : x.top);
+      } else { scrollTo.call(window, x, y); }
+    };
+    window.scrollBy = function (x, y) {
+      if (x && typeof x === 'object') scrollBy.call(window, x.left || 0, x.top || 0);
+      else scrollBy.call(window, x, y);
+    };
+  }
   if (!Element.prototype.scrollTo) Element.prototype.scrollTo = function (x, y) {
     if (x && typeof x === 'object') {
       if (typeof x.left === 'number') this.scrollLeft = x.left;

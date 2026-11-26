@@ -107,7 +107,7 @@ const SitePages=(()=>{
  }
  function isReady(next,id){const n=needs(next,id);return n.modules.every(x=>readyGroups.has(x))&&n.parts.every(x=>readyData.has(x));}
  function initializeReadyData(){
-  if(readyData.has('word-search')&&!window.preparedClassesReady){WordClasses.initialize(D.words);window.preparedClassesReady=true;}
+  if(readyData.has('word-search')&&!window.preparedClassesReady){WordClasses.initialize(D.words,D._classCounts);window.preparedClassesReady=true;}
  }
  async function prepare(next,id){
   const n=needs(next,id);await Promise.all([...n.modules.map(group),...n.parts.map(part)]);

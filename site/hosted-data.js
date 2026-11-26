@@ -1,6 +1,8 @@
 // Decode same-origin prepared data; fall back for browsers without stream decompression.
 async function preparedJSON(response){
  if(!response.ok)throw new Error('Data unavailable: '+response.status);
+ if(typeof document!=='undefined'&&document.documentElement.dataset.edition==='offline'&&
+    /^application\/json(?:\s*;|$)/i.test(response.headers.get('Content-Type')||''))return response.json();
  const bytes=new Uint8Array(await response.arrayBuffer());
  if(bytes[0]!==31||bytes[1]!==139)return new Response(bytes).json();
  if(typeof DecompressionStream==='function'&&typeof Blob.prototype.stream==='function'){
