@@ -175,7 +175,7 @@ def build_reader(root, output):
     for path in (root / 'fonts').iterdir():
         copy(path.relative_to(root))
     copy('fonts/NotoSerifTibetan-OFL.txt', REPO / 'offline/NotoSerifTibetan-OFL.txt')
-    for name in ('academy.css', 'academy.js'):
+    for name in ('academy.css', 'academy.js', 'tujia-keyboard.svg'):
         copy(name, REPO / 'offline' / name)
     copy('mobile-optional.js', SITE / 'mobile-optional.js')
 

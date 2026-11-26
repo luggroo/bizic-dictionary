@@ -163,7 +163,8 @@ html[data-edition] .academy-drawer-open #academy-drawer { visibility:visible; tr
 .academy-drawer-open { overflow:hidden; }
 .academy-drawer-head { display:flex; align-items:center; }
 .academy-drawer-head strong { margin-left:10px; }
-html[data-edition] #academy-drawer .brand { display:flex; align-items:center; margin:9px 8px 14px; color:var(--academy-ink); }
+html[data-edition] #academy-drawer .brand { display:flex; flex-wrap:wrap; align-items:center; gap:0; margin:9px 8px 14px; color:var(--academy-ink); }
+html[data-edition] #academy-drawer .brand > span { flex:1 1 7em; min-width:0; max-width:100%; white-space:normal; overflow-wrap:break-word; }
 html[data-edition] #academy-drawer .brand img { width:59px; height:42px; background:transparent; margin-right:9px; }
 html[data-edition] #academy-drawer .brand .ui-secondary { color:var(--academy-ink); font-size:20px; font-weight:600; }
 html[data-edition] #academy-drawer .brand .tujia-ui { color:var(--academy-muted); }
@@ -188,8 +189,8 @@ html[data-edition] #academy-home .academy-masthead small { color:var(--academy-m
 html[data-edition] #academy-home h1 { margin:0; color:var(--academy-ink); font-size:34px; letter-spacing:.035em; line-height:1.3; font-weight:650; }
 html[data-edition] #academy-home .academy-slogan { margin:5px 0 18px; color:var(--academy-muted); text-align:center; font-size:15px; line-height:1.55; }
 #academy-home-search { margin:0; }
-.academy-search-scope { display:flex; width:auto; padding:0; margin:7px 0 0; border:0; }
-.academy-search-scope label { position:relative; margin-right:5px; cursor:pointer; line-height:1; }
+.academy-search-scope { display:block; width:auto; padding:0; margin:7px 0 0; border:0; }
+.academy-search-scope label { display:inline-block; position:relative; vertical-align:middle; margin-right:5px; cursor:pointer; line-height:1; }
 .academy-search-scope label > span { display:inline-flex; align-items:center; min-height:44px; padding:0 12px; color:var(--academy-muted); border-radius:7px; font-size:14px; }
 .academy-search-scope input { position:absolute; opacity:0; width:1px; height:1px; }
 .academy-search-scope input:checked + span { color:var(--academy-accent); background:var(--academy-soft); font-weight:650; }
@@ -215,8 +216,7 @@ html[data-edition] #academy-home .academy-destinations > * {
 html[data-edition] #academy-home .academy-ime-card { margin:auto 0 0; padding:12px 15px; border:1px solid var(--academy-line); border-radius:13px; background:var(--academy-key); color:#fffaf5; }
 .academy-ime-heading { display:flex; align-items:center; flex-wrap:wrap; }
 .academy-ime-heading > div { flex:1 1 8em; min-width:0; max-width:100%; overflow-wrap:break-word; }
-.academy-ime-icon { display:flex; flex:none; margin-right:11px; }
-.academy-ime-icon svg { width:25px; height:25px; }
+.academy-ime-icon { display:block; flex:none; width:40px; height:40px; margin-right:11px; }
 html[data-edition] #academy-home .academy-ime-heading h2 { margin:0; color:#fffaf5; font-size:17px; line-height:1.4; }
 html[data-edition] #academy-ime-status { margin:1px 0 0; min-height:1.35em; color:#ffe5db; font-size:13px; line-height:1.35; }
 html[data-edition] #academy-home a.academy-ime-manage { display:flex; align-items:center; justify-content:center; margin-left:auto; min-width:44px; min-height:44px; max-width:100%; padding:0 4px; color:#fffaf5; font-size:14px; text-decoration:underline; text-underline-offset:3px; }

@@ -29,6 +29,8 @@ def check(site, archive):
         assert not any(name.startswith(('text/', 'prepared/entries/', 'prepared/corpus-entries/')) for name in paths)
         assert {'data.json.gz', 'dictionary.json.gz', 'prepared/core.json.gz', 'prepared/words-index.json.gz'}.isdisjoint(paths)
         assert bundle.read('yangque-logo.svg') == (site / 'yangque-logo.svg').read_bytes()
+        keyboard_mark = Path(__file__).resolve().parents[1] / 'offline' / 'tujia-keyboard.svg'
+        assert bundle.read(keyboard_mark.name) == keyboard_mark.read_bytes()
         for homepage in ('index.html', 'en/index.html'):
             html = bundle.read(homepage).decode('utf-8')
             drawer = re.search(r'<aside\b[^>]*>([\s\S]*?)</aside>', html)[1]
@@ -39,6 +41,7 @@ def check(site, archive):
                 assert f'data-view="{view}"' in home, (homepage, view)
             assert 'data-academy-translation' in home and 'href="/_app/keyboard"' in home
             assert 'id="academy-ime-status"' in home and home.count('name="academy-scope"') == 2
+            assert re.search(r'<img\b[^>]*class="academy-ime-icon"[^>]*src="tujia-keyboard\.svg"', home)
 
         def mobile(name):
             return json.loads(gzip.decompress(bundle.read('prepared/' + name + '.json.gz')))

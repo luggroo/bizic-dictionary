@@ -101,6 +101,9 @@ async function checkHomeActions(page, {firstPaint = false} = {}) {
   const bird = page.locator('.academy-toolbar-logo');
   assert(await bird.isVisible());
   assert(await bird.evaluate(img => img.complete && img.naturalWidth > 0));
+  const keyboardMark = home.locator('.academy-ime-card img.academy-ime-icon[src="tujia-keyboard.svg"]');
+  assert(await keyboardMark.isVisible());
+  assert(await keyboardMark.evaluate(img => img.complete && img.naturalWidth > 0));
   const actions = await home.locator('.academy-destinations [data-view]').evaluateAll(items => items.map(item => item.dataset.view));
   assert.deepEqual(actions.slice().sort(), ['corpus', 'grammar', 'history', 'notation', 'words']);
   assert(await home.locator('.academy-destinations a[data-academy-translation]').isVisible());
