@@ -351,7 +351,8 @@ def compare(old, new):
             'newWithoutDirectId': sorted(set(b['noDirectId']) - set(a['noDirectId'])),
         }
     return {'changedFiles': changes, 'changedFields': metadata, 'sharedSpellings': spelling,
-            'readerOrImePayloadChanged': old['jointInputVersion'] != new['jointInputVersion'],
+            'threeInputBytesChanged': old['jointInputVersion'] != new['jointInputVersion'],
+            'indexBuildCodeChanged': old['inputs'].get('imeIndexBuild', {}) != new['inputs'].get('imeIndexBuild', {}),
             'distribution': 'signed-apk'}
 
 

@@ -164,7 +164,8 @@ class LocalRelease(unittest.TestCase):
         self.assertNotEqual(before['witnesses']['attestationsSha256'], corrected['witnesses']['attestationsSha256'])
         self.assertEqual(before['witnesses']['notationsSha256'], corrected['witnesses']['notationsSha256'])
         self.assertEqual(before['spellingRulesVersion'], corrected['spellingRulesVersion'])
-        self.assertTrue(lock.compare(before, corrected)['readerOrImePayloadChanged'])
+        self.assertTrue(lock.compare(before, corrected)['threeInputBytesChanged'])
+        self.assertFalse(lock.compare(before, corrected)['indexBuildCodeChanged'])
         original = copy.deepcopy(self.word)
         write(self.dictionary, 'site/notation-ui.js', b'// reviewed algorithm change')
         self.source = commit(self.dictionary, 'Change trusted conversion program')
@@ -193,6 +194,18 @@ class LocalRelease(unittest.TestCase):
         lock.save(q, after)
         self.assertNotEqual(self.cli('compare', p, q, '--review-spellings').returncode, 0)
         self.assertEqual(self.cli('compare', q, p, '--review-spellings').returncode, 0)
+
+    def test_code_only_index_update_uses_same_three_inputs(self):
+        before = self.build()
+        write(self.keyboard, 'tools/ime_dictionary_index.py', b'# revised witness grouping for the same word tables')
+        commit(self.keyboard, 'Update only the index generator')
+        after = self.build()
+        changes = lock.compare(before, after)
+        self.assertFalse(changes['threeInputBytesChanged'])
+        self.assertTrue(changes['indexBuildCodeChanged'])
+        self.assertEqual({'imeIndexBuild': ['tools/ime_dictionary_index.py']}, changes['changedFiles'])
+        self.assertEqual(before['spellingRulesVersion'], after['spellingRulesVersion'])
+        self.assertEqual(before['sharedSpellingAudit'], after['sharedSpellingAudit'])
 
     def test_independent_generation_provenance(self):
         receipt = self.build()

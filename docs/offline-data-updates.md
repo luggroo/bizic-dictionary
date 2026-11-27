@@ -25,7 +25,7 @@
 
 ## 在本地生成并验收
 
-以下变量分别指向词典仓库、键盘仓库、报告目录和已缓存的官方 Gentium Plus 6.200 字体 ZIP。所需 Node 包须已缓存在本机。应从已提交的干净源码导出，固定 Python、Node、pnpm、gzip 及字体版本；既有准备程序从工作树读取文件。
+`DICTIONARY` 指向所选发布提交的干净词典工作副本。`KEYBOARD`、`REPORTS` 和 `FONT_ZIP` 分别指向键盘仓库、报告目录和已缓存的官方 Gentium Plus 6.200 字体 ZIP。所需 Node 包须已缓存在本机。既有准备程序从工作树读取文件，复现发布包时需使用相同的 Python、Node、pnpm、gzip 和字体版本。
 
 ```sh
 set -eu
@@ -41,16 +41,22 @@ sha256sum "$REPORTS/learning.zip"
 审核词典导出及 TSV 差异后，把导出复制至键盘仓库的 `learning-content/learning.zip`，将 64 位 SHA-256 单独一行写入 `learning-content/learning.sha256`，与选定的两份 TSV 和索引生成器一起固定到 Git 提交。随后运行下列命令。生成和核验均检查 ZIP 每个文件的长度及 SHA-256，并核对原始资料、规则和 TSV。两者只读取这两个仓库；输出仅写入指定的报告路径。
 
 ```sh
-cd "$DICTIONARY"
-python3 scripts/offline-update-lock.py create --dictionary "$DICTIONARY" --keyboard "$KEYBOARD" \
-  --dictionary-revision "$(git rev-parse HEAD)" --out "$REPORTS/offline-update-lock.json"
-python3 scripts/offline-update-lock.py verify --keyboard "$KEYBOARD" --lock "$REPORTS/offline-update-lock.json"
-python3 scripts/offline-update-lock.py spellings --lock "$REPORTS/offline-update-lock.json" \
+UPDATE_TOOL="${UPDATE_TOOLS:-$DICTIONARY}/scripts/offline-update-lock.py"
+DICT_REV=$(python3 -c 'import json, sys, zipfile; print(json.loads(zipfile.ZipFile(sys.argv[1]).read("offline-manifest.json"))["sourceRevision"])' "$KEYBOARD/learning-content/learning.zip")
+test "$DICT_REV" = "$(git -C "$DICTIONARY" rev-parse HEAD)"
+python3 "$UPDATE_TOOL" create --dictionary "$DICTIONARY" --keyboard "$KEYBOARD" \
+  --dictionary-revision "$DICT_REV" --out "$REPORTS/offline-update-lock.json"
+python3 "$UPDATE_TOOL" verify --dictionary "$DICTIONARY" --keyboard "$KEYBOARD" --lock "$REPORTS/offline-update-lock.json"
+python3 "$UPDATE_TOOL" spellings --lock "$REPORTS/offline-update-lock.json" \
   --out "$REPORTS/spelling-differences.json"
-python3 scripts/offline-update-lock.py compare "$PREVIOUS_LOCK" "$REPORTS/offline-update-lock.json" --review-spellings
+python3 "$UPDATE_TOOL" compare "$PREVIOUS_LOCK" "$REPORTS/offline-update-lock.json" --review-spellings
 ```
 
 最后一步逐项列出来源、程序、资源和词表变化。它会列出新出现、形式改变、已解决和失去可比性的拼写差异。新增差异、原差异失去对应，或新增无直接 ID 的词形会以非零退出码提示编辑复核。根据来源审校后，可以保留有依据的不同表示并批准新的完整清单。完整 ZIP 含 JavaScript、HTML 和 SVG；本版所有资料和程序都随 APK 更新。
+
+`threeInputBytesChanged` 表示学习 ZIP 或两份键盘 TSV 的字节发生变化。`indexBuildCodeChanged` 表示生成长按资料索引的程序或构建入口发生变化。修订来源判定逻辑时，三个输入即使相同，也可能生成不同的索引。交付的实际索引字节需要再从 APK 逐项核对。
+
+核验既有出货版本时，可把 `UPDATE_TOOLS` 指向较新的维护工具工作副本，同时让 `DICTIONARY` 对应 ZIP 中的发布提交。例如，本次学习 ZIP 固定于 `9a73174350c3daeffa89ff237690b0431a37e4f4`。后续工具和文档的提交只用于生成报告，已签 APK 的词典来源和原清单可继续按原提交核验。
 
 ### 重新生成键盘词表
 
@@ -58,7 +64,6 @@ python3 scripts/offline-update-lock.py compare "$PREVIOUS_LOCK" "$REPORTS/offlin
 
 ```sh
 cd "$KEYBOARD_BUILD_COPY"
-DICT_REV=$(git -C "$DICTIONARY" rev-parse HEAD)
 ASSETS=shared/bundle/Assets
 python3 tools/import_words.py "$DEMO_DIST" --dictionary-site "$DICTIONARY/site" \
   --dictionary-revision "$DICT_REV" --out "$ASSETS" --web "$DEMO_DIST/ranking.js"
