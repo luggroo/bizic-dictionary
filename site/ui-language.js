@@ -266,7 +266,12 @@
   }
   window.TujiaUI = {refresh,translate,spelling,setLanguage,setHeadingSpelling(value){initialSpelling=value==='ye'?'ye':'accent';refresh();},get language(){return language;}};
   document.getElementById('ui-language')?.addEventListener('change', e => setLanguage(e.target.value));
-  window.addEventListener('popstate', () => setLanguage(urlLanguage() || language));
+  window.addEventListener('popstate', () => {
+    // In the app, Settings selects one interface language across reader pages.
+    // A previous page can still carry the language chosen before that change.
+    if (offline) syncLanguageURL();
+    else setLanguage(urlLanguage() || language);
+  });
   // Run after app.js initializes its shared lexical bindings.
   document.addEventListener('DOMContentLoaded', () => {
     observer = new MutationObserver(records => {

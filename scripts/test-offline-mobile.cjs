@@ -95,6 +95,43 @@ async function showPreviousPage(page, view) {
   await ready(page, view);
 }
 
+async function checkLanguageHistory(browser, browserOffline, root, log) {
+  const context = await browser.newContext({offline: browserOffline, serviceWorkers: 'block'});
+  try {
+    await serveSnapshot(context, root, log);
+    const page = await context.newPage();
+    await page.goto(start);
+    await ready(page, 'home');
+    const verify = async (lang, view) => {
+      await ready(page, view);
+      await page.waitForFunction(lang =>
+        document.documentElement.lang === (lang === 'en' ? 'en' : 'zh-CN') &&
+        localStorage.getItem('tujia-ui-language') === lang &&
+        new URL(location.href).searchParams.get('lang') === lang, lang);
+      assert.equal(await page.locator('#ui-language').inputValue(), lang);
+    };
+    for (const [lang, label] of [['en', 'Dictionary lookup'], ['zh', '词典查询']]) {
+      await page.locator('.academy-settings-shortcut').click();
+      await ready(page, 'settings');
+      await page.locator('#ui-language').selectOption(lang);
+      await verify(lang, 'settings');
+      await showPreviousPage(page, 'home');
+      await verify(lang, 'home');
+      assert.equal(await page.locator('.academy-destinations [data-view="words"]').innerText(), label);
+    }
+    await page.goForward();
+    await verify('zh', 'settings');
+    await page.goBack();
+    await verify('zh', 'home');
+    await page.reload();
+    await verify('zh', 'home');
+    await page.goto(start + '?lang=en&id=w684#words');
+    await verify('en', 'words');
+    await page.locator('#detail[open] .word-entry-definition').waitFor();
+    assert.equal(new URL(page.url()).searchParams.get('id'), 'w684');
+  } finally { await context.close(); }
+}
+
 async function checkHomeActions(page, {firstPaint = false} = {}) {
   const home = page.locator('#academy-home');
   await home.waitFor();
@@ -743,6 +780,8 @@ async function main() {
     await showPreviousPage(oldLink, 'grammar');
     await showPreviousPage(oldLink, 'knowledge');
     await oldLink.close();
+    await checkLanguageHistory(browser, browserOffline, root, log);
+    checks.push('Settings language persists across Back, Forward and reload; explicit incoming links select their language');
     if (browserOffline) assert.equal(await page.evaluate(() => navigator.onLine), false);
     await page.emulateMedia({colorScheme: 'dark'});
     await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
