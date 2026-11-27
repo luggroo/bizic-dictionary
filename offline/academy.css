@@ -153,7 +153,8 @@ html[data-edition] .academy-app[data-academy-home="no"] .academy-settings-shortc
 html[data-edition] .academy-app[data-academy-home="yes"] .academy-menu-inner,
 html[data-edition] .academy-app[data-academy-home="yes"] .academy-back,
 html[data-edition] .academy-app[data-academy-home="yes"] #academy-title { display:none; }
-#academy-title { font-size:17px; font-weight:600; text-align:center; }
+html[data-edition] .academy-app[data-academy-home="no"] .academy-toolbar { flex-wrap:nowrap; gap:4px; }
+#academy-title { flex:1; min-width:0; overflow-wrap:break-word; font-size:17px; font-weight:600; text-align:center; }
 html[data-edition] #academy-drawer {
   display:block; visibility:hidden; position:fixed; z-index:102; top:0; right:auto; bottom:0; left:0;
   box-sizing:border-box; width:296px; max-width:86vw; height:100%; padding:8px 14px 22px; margin:0;
@@ -227,6 +228,11 @@ html[data-edition] .academy-knowledge-list button {
 .academy-knowledge-list strong { font-size:17px; line-height:1.35; }
 .academy-knowledge-list small { margin-top:3px; color:var(--academy-muted); font-size:14px; line-height:1.4; }
 .academy-knowledge-list button > svg { flex:none; width:18px; height:18px; margin-left:8px; color:var(--academy-accent); }
+@media (max-width:360px) {
+  html[data-edition] .academy-knowledge-list button { padding:12px 10px; }
+  .academy-knowledge-list .academy-tile-icon { width:25px; margin-right:7px; }
+  .academy-knowledge-list button > svg { width:16px; margin-left:4px; }
+}
 html[data-edition] #academy-home .academy-ime-card { margin:auto 0 0; padding:12px 15px; border:1px solid var(--academy-line); border-radius:13px; background:var(--academy-key); color:#fffaf5; }
 .academy-ime-heading { display:flex; align-items:center; flex-wrap:wrap; }
 .academy-ime-heading > div { flex:1 1 8em; min-width:0; max-width:100%; overflow-wrap:break-word; }

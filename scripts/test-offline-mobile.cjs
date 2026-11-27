@@ -590,6 +590,25 @@ async function checkTextReflow(page, capture) {
       await page.evaluate(() => window.scrollTo(0, 0));
       await capture(`home-${language}-text-${factor * 100}`, true);
       rows.push({language, factor, actual, geometry});
+      if (language === 'en' && factor === 2) {
+        await page.locator('.academy-destinations [data-view="knowledge"]').click();
+        await ready(page, 'knowledge');
+        const wordLines = await page.locator('#academy-knowledge').evaluate(section => {
+          const nodes = [...section.querySelectorAll('*')].filter(el => !(el instanceof SVGElement));
+          const sizes = nodes.map(el => parseFloat(getComputedStyle(el).fontSize));
+          nodes.forEach((el, i) => { el.style.fontSize = sizes[i] * 2 + 'px'; });
+          const text = section.querySelector('[data-view="history"] strong [data-ui-source]').firstChild;
+          const range = document.createRange();
+          range.setStart(text, text.nodeValue.indexOf('comparison'));
+          range.setEnd(text, text.length);
+          return range.getClientRects().length;
+        });
+        const back = await page.locator('.academy-back').boundingBox();
+        const menu = await page.locator('.academy-menu-inner').boundingBox();
+        assert(back && menu && menu.x > 240 && Math.abs(back.y - menu.y) <= 1, 'Back and menu stay on one row');
+        assert.equal(wordLines, 1, 'The word comparison fits within the reference card');
+        await capture('knowledge-en-text-200', true);
+      }
     }
   }
   return rows;
