@@ -209,10 +209,15 @@ function grammarRenderHTML(ch,language=window.TujiaUI?.language||'zh'){
  const nodes=[];let node;while((node=walker.nextNode()))nodes.push(node);
  const letters='a-z'+(ch.dialect==='south'?'E':'')+'ãẽĩõũỹɑɒæɐɔɤɛəɜɪʊɨɯɿʅɲȵŋɣʁɕʑʔʕħʦʨǳʣʥʰüɡ\u0300-\u036f';
  const token='['+letters+']+';
- const enclosed='['+letters+'¹²³⁴⁵0-9 \\t(){},、;*+＝=~～\\-]+';const pattern=new RegExp('(?<!['+letters+'¹²³⁴⁵])/(?<slashIPA>'+enclosed+')/(?!['+letters+'¹²³⁴⁵])|\\[('+enclosed+')\\]|'+token+'[¹²³⁴⁵]+(?:'+token+'[¹²³⁴⁵]+)*|'+token,'gu');
+ const enclosed='['+letters+'¹²³⁴⁵0-9 \\t(){},、;*+＝=~～\\-]+';const adjacent=new RegExp('['+letters+'¹²³⁴⁵]');
+ const pattern=new RegExp('/('+enclosed+')/(?!['+letters+'¹²³⁴⁵])|\\[('+enclosed+')\\]|'+token+'[¹²³⁴⁵]+(?:'+token+'[¹²³⁴⁵]+)*|'+token,'gu');
  for(const n of nodes){
   const raw=n.nodeValue,fr=document.createDocumentFragment();let pos=0,changed=false;
-  for(const m of raw.matchAll(pattern)){
+  // A slash inside a word is punctuation. Resume after it so the tokens inside
+  // can still be matched individually on readers without RegExp lookbehind.
+  let m;
+  while((m=pattern.exec(raw))){
+   if(m[1]&&m.index>0&&adjacent.test(raw[m.index-1])){pattern.lastIndex=m.index+1;continue;}
    const ipa=m[1]||m[2]||m[0],enclosedMatch=m[1]!==undefined||m[2]!==undefined;
    // Bare Latin forms with a single superscript cite source tone classes, not IPA tone contours.
    if(!enclosedMatch&&/^[a-z]+[¹²³⁴⁵]$/.test(ipa)){

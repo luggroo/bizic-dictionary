@@ -1,0 +1,19 @@
+<template id="academy-knowledge-template">
+  <section id="academy-knowledge" aria-labelledby="academy-knowledge-title">
+    <h1 id="academy-knowledge-title" class="visually-hidden">[[knowledge]]</h1>
+    <ul class="academy-knowledge-list">
+      <li><button type="button" data-view="grammar">
+        <i class="academy-tile-icon" aria-hidden="true">{{icon_grammar}}</i>
+        <span><strong>[[grammar]]</strong><small>[[grammar_summary]]</small></span>{{icon_next}}
+      </button></li>
+      <li><button type="button" data-view="notation">
+        <i class="academy-tile-icon" aria-hidden="true">{{icon_notation}}</i>
+        <span><strong>[[notation]]</strong><small>[[notation_summary]]</small></span>{{icon_next}}
+      </button></li>
+      <li><button type="button" data-view="history">
+        <i class="academy-tile-icon" aria-hidden="true">{{icon_history}}</i>
+        <span><strong>[[history]]</strong><small>[[history_summary]]</small></span>{{icon_next}}
+      </button></li>
+    </ul>
+  </section>
+</template>

@@ -135,6 +135,7 @@ const WordClasses=(()=>{
  const cache=new WeakMap();
  function ids(w){
    if(!w||typeof w!=='object')return ['unclassified'];
+   if(w._classIds)return w._classIds;
    if(cache.has(w))return cache.get(w);
    const found=new Set(reviewedIds(w));
    if(!found.size)for(const raw of sourceLabels(w))for(const id of resolve(raw))found.add(id);
@@ -202,12 +203,14 @@ const WordClasses=(()=>{
  }
  function escape(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  let counts=new Map();
- function initialize(words){
+ function initialize(words,preparedCounts){
+   if(preparedCounts){counts=new Map(Object.entries(preparedCounts));return;}
    counts=new Map();
    for(const w of words){
      const keys=new Set(ids(w).flatMap(ancestors));
      for(const key of keys)counts.set(key,(counts.get(key)||0)+1);
    }
+   return Object.fromEntries(counts);
  }
  function selector(selected){
    const chosen=filterId(selected),count=id=>counts.get(id)||0;

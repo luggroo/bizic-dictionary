@@ -19,7 +19,7 @@ async function mediaAvailable(path, kind) {
 }
 function mediaContainers() {
   document.querySelectorAll('[data-media-group]').forEach(group => {
-    group.hidden = ![...group.querySelectorAll('[data-media-src]')].some(el => !el.hidden);
+    group.hidden = ![...group.querySelectorAll('[data-media-src], .optional-resource')].some(el => !el.hidden);
   });
 }
 function hideMedia(el) {
@@ -33,6 +33,7 @@ function hideMedia(el) {
 }
 async function hydrateMedia(el) {
   hideMedia(el);
+  if (window.MobileOptional) return window.MobileOptional.media(el, mediaEnabled);
   if (!mediaEnabled) return;
   const available = await mediaAvailable(el.dataset.mediaSrc, el.dataset.mediaKind || el.tagName.toLowerCase());
   if (!available || !mediaEnabled || !el.isConnected) return;
