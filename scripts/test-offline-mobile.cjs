@@ -104,8 +104,13 @@ async function checkHomeActions(page, {firstPaint = false} = {}) {
   const keyboardMark = home.locator('.academy-ime-card img.academy-ime-icon[src="tujia-keyboard.svg"]');
   assert(await keyboardMark.isVisible());
   assert(await keyboardMark.evaluate(img => img.complete && img.naturalWidth > 0));
-  const actions = await home.locator('.academy-destinations [data-view]').evaluateAll(items => items.map(item => item.dataset.view));
-  assert.deepEqual(actions.slice().sort(), ['corpus', 'grammar', 'history', 'notation', 'words']);
+  const shortcuts = home.locator('.academy-destinations > *');
+  const actions = await shortcuts.evaluateAll(items => items.map(item => item.dataset.view || 'translation'));
+  assert.deepEqual(actions, ['words', 'corpus', 'translation', 'knowledge']);
+  const english = (await page.locator('html').getAttribute('lang')).startsWith('en');
+  assert.deepEqual(await shortcuts.allTextContents(), english
+    ? ['Dictionary lookup', 'Example corpus', 'Translation tools', 'Language reference']
+    : ['词典查询', '例句语料', '翻译工具', '语言知识']);
   assert(await home.locator('.academy-destinations a[data-academy-translation]').isVisible());
   assert(await home.locator('.academy-ime-manage[href="/_app/keyboard"]').isVisible());
   const status = home.locator('#academy-ime-status');
@@ -146,6 +151,9 @@ async function checkEntryJourney(page, capture, report, simulateIme) {
   await capture('home');
   const drawer = await openDrawer(page);
   assert.equal(await drawer.locator('[data-view="sources"]').count(), 0);
+  assert.deepEqual(await drawer.locator('nav > *').evaluateAll(items => items.map(item =>
+    item.dataset.view || (item.hasAttribute('data-academy-translation') ? 'translation' : 'ime'))),
+    ['home', 'words', 'corpus', 'translation', 'knowledge', 'ime', 'settings']);
   assert(await drawer.locator('[data-view="settings"]').isVisible());
   assert.equal(await drawer.getAttribute('aria-hidden'), 'false');
   assert(await drawer.locator('.academy-drawer-close').evaluate(el => el === document.activeElement));
@@ -170,6 +178,21 @@ async function checkEntryJourney(page, capture, report, simulateIme) {
   await page.goBack();
   await page.waitForFunction(() => !document.body.classList.contains('academy-drawer-open'));
   await home.waitFor();
+  await home.locator('[data-view="knowledge"]').click();
+  await ready(page, 'knowledge');
+  const knowledge = page.locator('#academy-knowledge');
+  assert.equal(await knowledge.locator('h1').innerText(), '语言知识');
+  assert.deepEqual(await knowledge.locator('button strong').allTextContents(), ['语法', '记音', '历史比较']);
+  await capture('knowledge');
+  for (const view of ['grammar', 'notation', 'history']) {
+    await knowledge.locator('[data-view="' + view + '"]').click();
+    await ready(page, view);
+    assert.equal(await drawer.locator('[data-view="knowledge"]').getAttribute('aria-current'), 'location');
+    if (view === 'notation') { await page.goBack(); await ready(page, 'knowledge'); }
+    else await showPreviousPage(page, 'knowledge');
+  }
+  await showPreviousPage(page, 'home');
+  report('Language reference, three subject pages and return to the home screen');
   await home.locator('#query').fill('water');
   await home.locator('#academy-home-search button[type="submit"]').click();
   await ready(page, 'words');
@@ -303,7 +326,9 @@ async function exerciseLearningUI(page, {capture = async () => {}, report = cons
   await close();
   report('Bibliography, original publication link and a page-specific grammar citation');
 
-  await navigateFromDrawer(page, 'notation');
+  await navigateFromDrawer(page, 'knowledge');
+  await page.locator('#academy-knowledge [data-view="notation"]').click();
+  await ready(page, 'notation');
   await select('#notation-source', 'zhou-fx');
   await page.locator('#notation-input').fill('kei21');
   await page.locator('#notation-converter button').click();
@@ -368,13 +393,15 @@ async function exerciseLearningUI(page, {capture = async () => {}, report = cons
   await navigateFromDrawer(page, 'settings');
   await select('#ui-language', 'zh');
   await page.waitForFunction(() => document.documentElement.lang === 'zh-CN');
-  await navigateFromDrawer(page, 'grammar');
+  await navigateFromDrawer(page, 'knowledge');
+  await page.locator('#academy-knowledge [data-view="grammar"]').click();
+  await ready(page, 'grammar');
   await navigateFromDrawer(page, 'settings');
   await select('#ui-language', 'en');
   await page.waitForFunction(() => document.documentElement.lang === 'en');
   await navigateFromDrawer(page, 'home');
   assert.match(await wordShortcut.innerText(), /Dictionary/);
-  assert.match(await page.locator('.academy-destinations [data-view="corpus"]').innerText(), /Corpus/);
+  assert.equal(await page.locator('.academy-destinations [data-view="corpus"]').innerText(), 'Example corpus');
   await page.locator('.academy-destinations a[data-academy-translation]').click();
   await page.waitForURL(url => url.pathname.endsWith('/translation-en.html'));
   await page.locator('.academy-guide-back').click();
@@ -503,7 +530,7 @@ async function checkDisplaySizes(page, engine, capture) {
     for (const scale of cdp && width === 320 ? [1, 1.5] : [1]) {
       if (cdp) await cdp.send('Emulation.setEmulatedOSTextScale', {scale});
       for (const language of ['zh', 'en']) {
-        for (const view of ['home', 'words', 'grammar', 'corpus', 'sources', 'notation', 'settings']) {
+        for (const view of ['home', 'knowledge', 'words', 'grammar', 'corpus', 'sources', 'notation', 'settings']) {
           await page.goto(start + '?lang=' + language + '#' + view);
           await ready(page, view);
           const dimensions = await page.evaluate(() => ({
@@ -677,12 +704,26 @@ async function main() {
       report: name => { checks.push(name); console.log('PASS', name); }});
     // First action after opening a section from outside the app has no reader
     // history. The local Back control must still go somewhere useful.
-    const linked = await context.newPage();
-    await linked.goto(start + '#words');
-    await ready(linked, 'words');
-    await showPreviousPage(linked, 'home');
-    await linked.locator('#academy-home').waitFor();
-    await linked.close();
+    for (const [hash, view] of [['#words','words'],['#grammar/north/1','grammar'],['#knowledge','knowledge']]) {
+      const linked = await context.newPage();
+      await linked.goto(start + hash);
+      await ready(linked, view);
+      if (view === 'grammar') assert.equal(new URL(linked.url()).hash, '#grammar/north/101');
+      await showPreviousPage(linked, 'home');
+      await linked.locator('#academy-home').waitFor();
+      await linked.close();
+    }
+    // A legacy fragment link followed inside the reader retains its real parent
+    // after chapter normalization, including after a visit to another section.
+    const oldLink = await context.newPage();
+    await oldLink.goto(start + '#knowledge');
+    await ready(oldLink, 'knowledge');
+    await oldLink.evaluate(() => { location.hash = 'grammar/north/1'; });
+    await ready(oldLink, 'grammar');
+    await navigateFromDrawer(oldLink, 'words');
+    await showPreviousPage(oldLink, 'grammar');
+    await showPreviousPage(oldLink, 'knowledge');
+    await oldLink.close();
     if (browserOffline) assert.equal(await page.evaluate(() => navigator.onLine), false);
     await page.emulateMedia({colorScheme: 'dark'});
     await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark');

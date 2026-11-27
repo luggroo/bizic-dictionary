@@ -205,7 +205,7 @@ html[data-edition] .academy-search-field button { display:flex; align-items:cent
 .academy-destinations { display:flex; flex-wrap:wrap; margin:14px -4px 12px; }
 html[data-edition] #academy-home .academy-destinations > * {
   display:flex; flex-direction:column; align-items:center; justify-content:center; box-sizing:border-box;
-  flex:1 0 calc(33.3333% - 8px); width:calc(33.3333% - 8px); min-width:-webkit-min-content; min-width:min-content; max-width:calc(100% - 8px);
+  flex:1 0 calc(50% - 8px); width:calc(50% - 8px); min-width:-webkit-min-content; min-width:min-content; max-width:calc(100% - 8px);
   min-height:77px; margin:4px; padding:8px 2px; border:1px solid var(--academy-line);
   border-radius:11px; color:var(--academy-ink); background:var(--academy-surface);
   font-family:inherit; font-size:14px; line-height:1.25; font-weight:600; text-align:center; text-decoration:none; overflow-wrap:break-word;
@@ -213,6 +213,20 @@ html[data-edition] #academy-home .academy-destinations > * {
 .academy-destinations > * > span { min-width:0; max-width:100%; word-wrap:break-word; }
 .academy-tile-icon { display:flex; width:31px; height:31px; align-items:center; justify-content:center; margin-bottom:5px; color:var(--academy-accent); }
 .academy-tile-icon svg { display:block; width:25px; height:25px; }
+html[data-edition] .academy-app[data-view="knowledge"] #main { max-width:660px; }
+.academy-knowledge-list { list-style:none; padding:0; margin:0; }
+.academy-knowledge-list li { margin:0 0 11px; padding:0; }
+html[data-edition] .academy-knowledge-list button {
+  display:flex; align-items:center; box-sizing:border-box; width:100%; min-height:76px;
+  padding:13px 14px; border:1px solid var(--academy-line); border-radius:11px; text-align:left;
+  background:var(--academy-surface); color:var(--academy-ink); font-family:inherit;
+}
+.academy-knowledge-list .academy-tile-icon { flex:none; margin:0 12px 0 0; }
+.academy-knowledge-list button > span { flex:1; min-width:0; overflow-wrap:break-word; }
+.academy-knowledge-list strong, .academy-knowledge-list small { display:block; }
+.academy-knowledge-list strong { font-size:17px; line-height:1.35; }
+.academy-knowledge-list small { margin-top:3px; color:var(--academy-muted); font-size:14px; line-height:1.4; }
+.academy-knowledge-list button > svg { flex:none; width:18px; height:18px; margin-left:8px; color:var(--academy-accent); }
 html[data-edition] #academy-home .academy-ime-card { margin:auto 0 0; padding:12px 15px; border:1px solid var(--academy-line); border-radius:13px; background:var(--academy-key); color:#fffaf5; }
 .academy-ime-heading { display:flex; align-items:center; flex-wrap:wrap; }
 .academy-ime-heading > div { flex:1 1 8em; min-width:0; max-width:100%; overflow-wrap:break-word; }
@@ -266,7 +280,7 @@ html[data-academy-guide] .academy-guide-bar strong { margin-left:8px; }
   html[data-edition] #academy-home .academy-slogan { margin:2px 0 6px; font-size:13px; line-height:1.35; }
   .academy-search-scope { margin-top:3px; }
   .academy-destinations { margin:5px -3px; }
-  html[data-edition] #academy-home .academy-destinations > * { flex-basis:calc(33.3333% - 6px); width:calc(33.3333% - 6px); min-height:53px; margin:3px; padding:4px 2px; font-size:13px; }
+  html[data-edition] #academy-home .academy-destinations > * { flex-basis:calc(50% - 6px); width:calc(50% - 6px); min-height:53px; margin:3px; padding:4px 2px; font-size:13px; }
   .academy-tile-icon { width:23px; height:23px; margin-bottom:2px; }
   .academy-tile-icon svg { width:21px; height:21px; }
   html[data-edition] #academy-home .academy-ime-card { padding:6px 12px; }

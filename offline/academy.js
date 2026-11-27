@@ -29,11 +29,11 @@
   const menu = document.getElementById('academy-drawer');
   if (!menu || !main) return;
   const title = document.getElementById('academy-title');
-  const titles = {home:['全站搜索','Search all'], words:['词典','Dictionary'], grammar:['语法','Grammar'],
-    corpus:['语料','Corpus'], notation:['记音','Notation'], history:['历史比较','Historical comparison'],
-    sources:['文献','Sources'], settings:['设置','Settings']};
+  const titles = {home:['全站搜索','Search all'], words:['词典查询','Dictionary lookup'], grammar:['语法','Grammar'],
+    corpus:['例句语料','Example corpus'], notation:['记音','Notation'], history:['历史比较','Historical comparison'],
+    knowledge:['语言知识','Language reference'], sources:['文献','Sources'], settings:['设置','Settings']};
   const settingsTitle = '<h1 id="academy-settings-title"><span data-ui-source="设置" data-ui-english="Settings">设置</span></h1>';
-  window.AcademyReader = {settingsTitle};
+  window.AcademyReader = {settingsTitle, knowledgePage:document.getElementById('academy-knowledge-template').innerHTML};
   for (const node of document.querySelectorAll('[data-ui-source][data-ui-english]')) {
     UI_TRANSLATIONS[node.dataset.uiSource] = node.dataset.uiEnglish;
   }
@@ -169,6 +169,11 @@
     body.dataset.academyHome = home ? 'yes' : 'no';
     const label = titles[view] || titles.home;
     caption(title, home ? '' : label[0], home ? '' : label[1]);
+    if (['grammar','notation','history'].includes(view)) {
+      const knowledgeLink = menu.querySelector('[data-view="knowledge"]');
+      knowledgeLink.classList.add('active');
+      knowledgeLink.setAttribute('aria-current', 'location');
+    }
     const guide = english() ? '/translation-en.html' : '/translation.html';
     document.querySelectorAll('[data-academy-translation]').forEach(link => {
       const href = guide + '?lang=' + (english() ? 'en' : 'zh');

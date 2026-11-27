@@ -206,7 +206,7 @@ const ROUTE_FIELDS={
  grammar:['q','grammarAnchor'],
  notation:[]
 };
-if(window.AcademyReader){ROUTE_FIELDS.settings=[];titles.settings='设置';}
+if(window.AcademyReader){ROUTE_FIELDS.settings=[];ROUTE_FIELDS.knowledge=[];titles.settings='设置';titles.knowledge='语言知识';}
 let navigationReady=false,restoringNavigation=false,closingDetail=false,navigationSerial=0,lastNavigationToken='';
 const navigationPositions=new Map();
 function cleanViewState(value){
@@ -315,10 +315,15 @@ function restoreDetailNavigation(detail){
 function finishNavigation(previous){
  if(!navigationReady||restoringNavigation)return;
  const hash=viewHash(),changed=location.hash!==hash,dialog=$('#detail');
- const entry=changed?newNavigationEntry():{...(previous||newNavigationEntry()),viewState:{...state},detail:dialog.open?currentOverlay:null,notation:notationNavigationState(),scrollY:window.scrollY,openDetails:mainOpenDetails()};
- if(window.AcademyReader&&changed&&previous)entry.academyParent=true;
+ // On first use the grammar module resolves old chapter numbers after loading.
+ // Both numbers describe the same page and share one Back entry in the app.
+ const prior=previous?.viewState;
+ const normalizedChapter=window.AcademyReader&&changed&&state.view==='grammar'&&prior?.view==='grammar'&&viewHash(cleanViewState(prior))===hash;
+ const newRoute=changed&&!normalizedChapter;
+ const entry=newRoute?newNavigationEntry():{...(previous||newNavigationEntry()),viewState:{...state},detail:dialog.open?currentOverlay:null,notation:notationNavigationState(),scrollY:window.scrollY,openDetails:mainOpenDetails()};
+ if(window.AcademyReader&&newRoute&&previous)entry.academyParent=true;
  // A link out of a detail replaces the overlay entry; Back returns to its list.
- history[changed&&!previous?.detail?'pushState':'replaceState'](entry,'',navigationURL(entry.detail));
+ history[newRoute&&!previous?.detail?'pushState':'replaceState'](entry,'',navigationURL(entry.detail));
  lastNavigationToken=navigationToken();
 }
 function revealPageAnchor(id){
@@ -328,13 +333,16 @@ function revealPageAnchor(id){
  target.scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
  return true;
 }
-function restoreNavigation(){
+function restoreNavigation(fromReader){
  if(!navigationReady||navigationToken()===lastNavigationToken)return;
  const parsed=parseViewHash(location.hash),saved=navigationEntry();
+ // A plain fragment link creates a browser entry before the router writes its
+ // state. Remember its local parent while the requested page data is loading.
+ const hasAppParent=window.AcademyReader&&!saved&&(fromReader===true||!!lastNavigationToken);
  const requestedId=new URLSearchParams(location.search).get('id');
  if(window.SitePages){
   if(!SitePages.isReady(parsed.state,requestedId)){state=parsed.state;closeDetailSilently();}
-  if(SitePages.defer(parsed.state,requestedId,()=>{lastNavigationToken='';restoreNavigation();}))return;
+  if(SitePages.defer(parsed.state,requestedId,()=>{lastNavigationToken='';restoreNavigation(hasAppParent);}))return;
  }
  const sharedId=resolveDetailId(requestedId);
  if(!location.hash&&sharedId)parsed.state.view=sharedDetailView(sharedId);
@@ -347,6 +355,7 @@ function restoreNavigation(){
  if(entry?.openDetails){const open=new Set(entry.openDetails);document.querySelectorAll('#main details').forEach((el,i)=>el.open=open.has(i))}
  if(sharedId||entry?.detail)restoreDetailNavigation(sharedId||entry.detail);
  const restored={...(entry||newNavigationEntry()),viewState:{...state},detail:$('#detail').open?currentOverlay:null,notation:notationNavigationState(),scrollY:entry?(navigationPositions.get(entry.key)??entry.scrollY??0):0,openDetails:mainOpenDetails()};
+ if(hasAppParent)restored.academyParent=true;
  history.replaceState(restored,'',navigationURL(restored.detail));
  lastNavigationToken=navigationToken();
  const token=lastNavigationToken;
@@ -410,7 +419,7 @@ function render(){
  }
  $('#crumb').textContent=titles[state.view]||'知识检索';
  const views={home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:()=>historyView(),grammar:()=>grammarView(),notation:()=>notationView()};
- if(window.AcademyReader)views.settings=()=>AcademyReader.settingsTitle;
+ if(window.AcademyReader){views.settings=()=>AcademyReader.settingsTitle;views.knowledge=()=>AcademyReader.knowledgePage;}
  $('#main').innerHTML=views[state.view]();
  bindMain();if(typeof bindNotationView==='function')bindNotationView();if(window.tasteRefresh)tasteRefresh();if(window.TujiaUI)TujiaUI.refresh();
  finishNavigation(previous);

@@ -85,9 +85,13 @@ def category(path):
 LABELS = {
     'brand': ('毕兹学堂', 'Bizic Academy'), 'slogan': ('逻土话，学土话，用土话', 'Find Tujia words, learn Tujia, use Tujia.'),
     'navigation': ('主导航', 'Navigation'), 'menu': ('目录', 'Menu'), 'back': ('返回', 'Back'),
-    'close': ('关闭目录', 'Close menu'), 'home': ('首页', 'Home'), 'words': ('词典', 'Dictionary'),
-    'grammar': ('语法', 'Grammar'), 'corpus': ('语料', 'Corpus'), 'notation': ('记音', 'Notation'),
-    'history': ('历史比较', 'Historical comparison'), 'translation': ('翻译', 'Translation'),
+    'close': ('关闭目录', 'Close menu'), 'home': ('首页', 'Home'), 'words': ('词典查询', 'Dictionary lookup'),
+    'grammar': ('语法', 'Grammar'), 'corpus': ('例句语料', 'Example corpus'), 'notation': ('记音', 'Notation'),
+    'history': ('历史比较', 'Historical comparison'), 'translation': ('翻译工具', 'Translation tools'),
+    'knowledge': ('语言知识', 'Language reference'),
+    'grammar_summary': ('龙山、保靖仙仁与泸溪的参考语法', 'Reference grammars for Longshan, Baojing Xianren and Luxi.'),
+    'notation_summary': ('对照不同资料中的音标与拼写', 'Compare IPA and spelling across sources.'),
+    'history_summary': ('查阅重建词形和各地的读音', 'Explore reconstructed forms and local pronunciations.'),
     'query': ('词形、汉语或英语', 'Word, Chinese or English'), 'scope': ('搜索范围', 'Search scope'),
     'search': ('搜索', 'Search'), 'words_search': ('搜词典', 'Dictionary search'), 'global_search': ('搜全站', 'Search all'),
     'ime': ('土家语输入法', 'Tujia Keyboard'), 'manage': ('管理', 'Manage'), 'keyboard_settings': ('输入法设置', 'Keyboard settings'),
@@ -98,6 +102,7 @@ LABELS = {
 }
 
 ICON_PATHS = {
+    'knowledge': '<rect x="3" y="4" width="4" height="16" rx="1"/><rect x="9" y="4" width="4" height="16" rx="1"/><path d="m15 6 4-1 3 14-4 1z"/>',
     'keyboard': '<rect x="2" y="5" width="20" height="14" rx="2"/><path d="M5 9h2m2 0h2m2 0h2m2 0h2M5 12h2m2 0h2m2 0h2m2 0h2M8 15h8"/>',
     'settings': '<path d="M4 6h5m4 0h7M4 12h9m4 0h3M4 18h2m4 0h10"/><circle cx="11" cy="6" r="2"/><circle cx="15" cy="12" r="2"/><circle cx="8" cy="18" r="2"/>',
     'menu': '<path d="M3 6h18M3 12h14M3 18h18"/>', 'back': '<path d="m14 5-7 7 7 7"/>',
@@ -129,13 +134,11 @@ def app_navigation(html, english):
         else:
             tag, attrs = 'button', f'type="button" data-view="{key}"'
         icon = icons['keyboard' if key == 'ime' else key]
-        # Shared heading spelling decorates the drawer. Home tiles use short
-        # captions with enough room for the same six routes at large text sizes.
         icon = f'<i class="academy-tile-icon" aria-hidden="true">{icon}</i>' if home_tile else icon
         caption = label(key) if home_tile else '<span>' + label(key) + '</span>'
         return f'<{tag} {attrs} class="academy-link-{key}">{icon}{caption}</{tag}>'
 
-    destinations = ['words', 'grammar', 'corpus', 'notation', 'history', 'translation']
+    destinations = ['words', 'corpus', 'translation', 'knowledge']
     tokens = {key: escape(pair[int(english)]) for key, pair in LABELS.items()}
     tokens.update({'icon_' + key: svg for key, svg in icons.items()})
     tokens['destinations'] = ''.join(link(key, True) for key in destinations)
@@ -147,7 +150,7 @@ def app_navigation(html, english):
         return re.sub(r'\{\{(\w+)\}\}', lambda match: tokens[match[1]], source)
 
     html = re.sub(r'<aside\b[\s\S]*?</aside>', lambda _: template('navigation'), html, count=1)
-    html = re.sub(r'<main id="main">[\s\S]*?</main>', lambda _: '<main id="main">' + template('home') + '</main>' + template('settings'), html, count=1)
+    html = re.sub(r'<main id="main">[\s\S]*?</main>', lambda _: '<main id="main">' + template('home') + '</main>' + template('settings') + template('knowledge'), html, count=1)
     html = re.sub(r'<footer class="site-footer">[\s\S]*?</footer>', '', html, count=1)
     return html.replace('<body ', '<body class="academy-app" data-academy-home="yes" ', 1)
 
@@ -225,7 +228,7 @@ def build_reader(root, output):
             english = name == 'translation-en.html'
             home_url = '/en/#home' if english else '/#home'
             back = 'Back' if english else '返回'
-            guide_title = 'Translation' if english else '翻译'
+            guide_title = LABELS['translation'][int(english)]
             bar = (f'<header class="academy-guide-bar"><a class="academy-guide-back" href="{home_url}" aria-label="{back}">'
                    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
                    'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></a>'

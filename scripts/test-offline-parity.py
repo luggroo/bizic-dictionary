@@ -37,8 +37,12 @@ def check(site, archive):
             home = re.search(r'<main\b[^>]*>([\s\S]*?)</main>', html)[1]
             assert 'data-view="settings"' in drawer and 'data-view="sources"' not in drawer
             assert 'id="academy-home"' in home and 'id="academy-home-search"' in home
-            for view in ('words', 'grammar', 'corpus', 'notation', 'history'):
-                assert f'data-view="{view}"' in home, (homepage, view)
+            knowledge = re.search(r'<template id="academy-knowledge-template">([\s\S]*?)</template>', html)[1]
+            for view in ('words', 'corpus', 'knowledge'):
+                assert f'data-view="{view}"' in home and f'data-view="{view}"' in drawer, (homepage, view)
+            for view in ('grammar', 'notation', 'history'):
+                key = f'data-view="{view}"'
+                assert key in knowledge and key not in home and key not in drawer, (homepage, view)
             assert 'data-academy-translation' in home and 'href="/_app/keyboard"' in home
             assert 'id="academy-ime-status"' in home and home.count('name="academy-scope"') == 2
             assert re.search(r'<img\b[^>]*class="academy-ime-icon"[^>]*src="tujia-keyboard\.svg"', home)
