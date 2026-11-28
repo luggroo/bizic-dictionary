@@ -1,10 +1,6 @@
 // Use the Android IPA completion vocabulary with a chart and an ASCII input scheme.
 (() => {
-  const initials = [
-    ['唇音','p pʰ b m ɸ f w'], ['舌尖音','t tʰ d n l'],
-    ['齿龈音','ts tsʰ dz s z'], ['龈腭音','tɕ tɕʰ dʑ ɕ ʑ ȵ j'],
-    ['软腭音','k kʰ ɡ ŋ x ɣ'], ['喉音','h ʔ']
-  ];
+  const initials = 'p pʰ b m ɸ f w t tʰ d n l ts tsʰ dz s z tɕ tɕʰ dʑ ɕ ʑ ȵ j k kʰ ɡ ŋ x ɣ ħ ʕ h ʔ'.split(' ');
   const vowels = [
     ['i',10,13],['y',24,13],['ɨ',49,13],['ɯ',75,13],['u',89,13],
     ['e',20,37],['ə',53,49],['ɤ',75,37],['o',89,37],
@@ -14,7 +10,7 @@
   const vowelPattern=/[iyɨɯueəɤoɛɔæaɑɿ]\p{M}*/gu;
   const codes = Object.assign(Object.create(null), {
     ph:'pʰ',th:'tʰ',kh:'kʰ',tsh:'tsʰ',tjh:'tɕʰ',tj:'tɕ',dj:'dʑ',sj:'ɕ',zj:'ʑ',nj:'ȵ',ng:'ŋ',
-    g:'ɡ',gh:'ɣ',pf:'ɸ',qq:'ʔ',ih:'ɨ',uh:'ɯ',ee:'ɛ',eh:'ə',eo:'ɤ',oo:'ɔ',aa:'ɑ',ae:'æ',ii:'ɿ', '^h':'ʰ',
+    g:'ɡ',gh:'ɣ',hh:'ħ',qh:'ʕ',pf:'ɸ',qq:'ʔ',ih:'ɨ',uh:'ɯ',ee:'ɛ',eh:'ə',eo:'ɤ',oo:'ɔ',aa:'ɑ',ae:'æ',ii:'ɿ', '^h':'ʰ',
     'm:':'m̩','ng:':'ŋ̍'
   });
   const symbolCodes=new Map();
@@ -22,6 +18,16 @@
   const tokens = Object.keys(codes).sort((a,b)=>b.length-a.length);
   const superscript=digits=>digits.replace(/[1-5]/g,digit=>'¹²³⁴⁵'[Number(digit)-1]);
   let lexicon=[],dialects=1,scheme='chart',nasal;
+  const recorded=[new Set(),new Set(['ħ','ʕ'])];
+  const segmentPattern=/tsʰ|tɕʰ|pʰ|tʰ|kʰ|ts|dz|tɕ|dʑ|[¹²³⁴⁵]+|\p{Script=Latin}\p{M}*/gu;
+  let recordsLoaded=false;
+  function markRecorded(){
+    for(const key of area.querySelectorAll('[data-symbol]')){
+      const symbol=key.dataset.symbol.normalize('NFD');
+      const found=recorded.some((sounds,index)=>(dialects&(1<<index))&&sounds.has(symbol));
+      key.classList.toggle('ipa-unattested',recordsLoaded&&Boolean(dialects)&&symbol!=='ʰ'&&!found);
+    }
+  }
   try{
     const saved=localStorage.getItem('tujia-site-ipa-dialects');
     if(saved!==null && /^[0-3]$/.test(saved))dialects=Number(saved);
@@ -103,15 +109,26 @@
   };
   fetch('ipa-completions.tsv').then(r=>{if(!r.ok)throw Error('IPA vocabulary unavailable');return r.text()}).then(text=>{
     lexicon=text.split('\n').filter(s=>s&&!s.startsWith('#')).map(line=>{const [mask,ipa,...rest]=line.split('\t');return {mask:Number(mask),ipa:ipa.replace(/\s/g,''),meaning:rest.join('\t'),normalized:normalize(ipa)}});
+    for(const {mask,normalized} of lexicon){
+      for(const part of normalized.match(segmentPattern)||[]){
+        const sound=part.replaceAll('\u0303','');
+        if(mask&1)recorded[0].add(sound);
+        if(mask&2)recorded[1].add(sound);
+      }
+    }
+    recorded[0].delete('ʔ');
+    recordsLoaded=true;
+    markRecorded();
     window.tujiaIpaEntries=lexicon; if(mode===3)window.ipaCandidates();
   }).catch(()=>{$('ipa-load-status').textContent='音标词库加载失败';});
 
   const area=$('ipaKeys');
-  const toolbar=node('div','','ipa-toolbar'),schemes=node('div','','ipa-schemes');
-  const chartChoice=button('音系图',()=>setScheme('chart'));
-  const asciiChoice=button('组合键',()=>setScheme('ascii'));
-  schemes.append(chartChoice,asciiChoice);
-  const dialectSelect=node('select','');dialectSelect.setAttribute('aria-label','音标补全方言');
+  const toolbar=node('div','','ipa-toolbar');
+  const shortcuts=node('input','');shortcuts.type='checkbox';shortcuts.id='ipa-shortcuts';
+  shortcuts.checked=scheme==='ascii';
+  shortcuts.onchange=()=>setScheme(shortcuts.checked?'ascii':'chart');
+  const shortcutLabel=node('label','');shortcutLabel.append(shortcuts,node('span','显示组合键'));
+  const dialectSelect=node('select','');dialectSelect.setAttribute('aria-label','音标补全词库');
   for(const [mask,name] of [[1,'北部'],[2,'南部'],[3,'南北部'],[0,'关闭补全']]){
     const option=node('option',name);option.value=mask;dialectSelect.append(option);
   }
@@ -119,16 +136,17 @@
   dialectSelect.onchange=()=>{
     dialects=Number(dialectSelect.value);
     try{localStorage.setItem('tujia-site-ipa-dialects',String(dialects))}catch{}
-    rebuild();candidates();
+    markRecorded();candidates();
   };
-  toolbar.append(schemes,dialectSelect);area.append(toolbar);
+  const dictionaryLabel=node('label','');dictionaryLabel.append(node('span','音标补全词库'),dialectSelect);
+  toolbar.append(shortcutLabel,dictionaryLabel,node('small','词库用于补全；灰色为所选方言少见或未见记录的音，仍可输入。','ipa-dictionary-note'));
   const hint=node('p','','ipa-hint');
   for(const [keys,label] of [['zj',' → ʑ'],['eo',' → ɤ'],['kh',' → kʰ'],[':55',' → ⁵⁵'],['~','加鼻化'],['|','分隔组合']]){
     const item=node('span','');item.append(node('kbd',keys),' ',node('span',label));hint.append(item);
   }
   const chart=node('div','','ipa-chart'),tones=node('div','','ipa-tones');
   const status=node('span','','ipa-status');status.id='ipa-load-status';status.setAttribute('role','status');
-  area.append(hint,chart,tones,status);
+  area.append(chart,tones,toolbar,hint,status);
   function setScheme(next){
     if(next===scheme)return;
     if(draft.value)submit(fromDraft(draft.value));
@@ -144,10 +162,7 @@
     if(scheme==='ascii'&&code&&code!==ipa)key.append(node('kbd',code));
     return key;
   }
-  function buildVowelChart(){
-    const group=node('section','','ipa-vowels');
-    const heading=node('div','','vowel-heading');
-    const modifiers=node('div','','vowel-modifiers');
+  function addModifiers(grid){
     const aspiration=soundKey('ʰ','^h');
     aspiration.setAttribute('aria-label','送气');
     nasal=preserveDraft(button('',()=>{
@@ -155,13 +170,16 @@
       if(scheme==='ascii'){editKey('~|');return;}
       const marked=toggleNasal(before);
       draft.setRangeText(marked,0,cursor,'end');change(draft.value);
-    },'key nasal-key'));
+    },'key ipa-sound nasal-key'));
     nasal.id='ipa-nasal';
-    const mark=node('span','◌̃','ipa-glyph');mark.setAttribute('aria-hidden','true');
-    nasal.append(mark,node('span','鼻化'));
+    nasal.setAttribute('aria-label','鼻化');
+    nasal.append(node('span','◌̃','ipa-glyph'));
     if(scheme==='ascii')nasal.append(node('kbd','~'));
-    modifiers.append(aspiration,nasal);
-    heading.append(node('h3','元音图'),modifiers);group.append(heading);
+    grid.append(aspiration,nasal);
+  }
+  function buildVowelChart(){
+    const group=node('section','','ipa-vowels');
+    group.setAttribute('aria-label','元音图');
     const frame=node('div','','vowel-frame'),axis=node('div','','vowel-axis'),plot=node('div','','vowel-plot');
     for(const label of ['前','央','后'])axis.append(node('span',label));
     const ns='http://www.w3.org/2000/svg';
@@ -175,30 +193,28 @@
     }
     frame.append(axis,plot);group.append(frame);
     const extra=node('div','','vowel-extra');
-    extra.append(node('span','舌尖'),soundKey('ɿ',symbolCodes.get('ɿ')),node('span','成节鼻音'),soundKey('m̩','m:'),soundKey('ŋ̍','ng:'));
+    extra.append(soundKey('ɿ',symbolCodes.get('ɿ')),soundKey('m̩','m:'),soundKey('ŋ̍','ng:'));
     group.append(extra);
     return group;
   }
   function rebuild(){
-    chartChoice.setAttribute('aria-pressed',String(scheme==='chart'));
-    asciiChoice.setAttribute('aria-pressed',String(scheme==='ascii'));
     hint.hidden=scheme!=='ascii';
     const initialGroup=node('section','','ipa-initials'),grid=node('div','','initial-grid');
-    initialGroup.append(node('h3','声母'),grid);
-    for(const [caption,list] of initials){
-      const line=node('div','','initial-row');line.append(node('span',caption,'initial-label'));
-      for(const ipa of list.split(' '))line.append(soundKey(ipa,symbolCodes.get(ipa)));
-      grid.append(line);
-    }
+    initialGroup.setAttribute('aria-label','声母');
+    initialGroup.append(grid);
+    for(const ipa of initials)grid.append(soundKey(ipa,symbolCodes.get(ipa)));
+    addModifiers(grid);
     chart.replaceChildren(initialGroup,buildVowelChart());
-    const values=dialects===2?['33','21','55','13']:['55','21','53','35','33','13'];
+    const values=['55','21','53','35','33','13'];
     const toneRow=node('div','','ipa-tone-row');
     for(const digits of values)toneRow.append(soundKey(superscript(digits),':'+digits));
     const utilities=node('div','','ipa-utilities');
     utilities.append(preserveDraft(button('空格',()=>{
       if(draft.value)submit(fromDraft(draft.value));else submit(' ');
     },'key ipa-action')),preserveDraft(button('⌫',()=>editKey('⌫'),'key ipa-action')));
-    tones.replaceChildren(node('h3','声调'),toneRow,utilities);
+    tones.setAttribute('role','group');tones.setAttribute('aria-label','声调');
+    tones.replaceChildren(toneRow,utilities);
+    markRecorded();
     paintNasal();
   }
   $('ipaMode').onclick=()=>{choose(3);rebuild();candidates()};

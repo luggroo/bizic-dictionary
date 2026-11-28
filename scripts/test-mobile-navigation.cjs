@@ -322,15 +322,21 @@ async function main(){
   assert.match(await frame.locator('#result').textContent(),/à$/u);
   await frame.locator('#ipaMode').click();
   assert.equal(await voicePanel.isVisible(),true);
-  await frame.locator('.ipa-schemes button').first().click();
+  await frame.locator('#ipa-shortcuts').setChecked(false);
+  const dictionaries=frame.locator('.ipa-toolbar select');
+  await dictionaries.selectOption('1');
+  await frame.locator('.initial-grid [data-symbol="f"].ipa-unattested').waitFor();
+  await dictionaries.selectOption('2');
+  await frame.locator('.initial-grid [data-symbol="ħ"]:not(.ipa-unattested)').waitFor();
+  assert.equal(await frame.locator('.initial-grid [data-symbol="ʕ"]').count(),1);
   await frame.locator('.ipa-initials [data-symbol="k"]').click();
-  await frame.locator('.vowel-modifiers [data-symbol="ʰ"]').click();
+  await frame.locator('.initial-grid [data-symbol="ʰ"]').click();
   await frame.locator('.vowel-plot [data-symbol="a"]').click();
   await frame.locator('#ipa-nasal').click();
   await frame.locator('.ipa-tone-row [data-symbol="²¹"]').click();
   assert.equal(await frame.locator('.pending-text').textContent(),'kʰã²¹');
   await frame.locator('#draft').press('1');
-  await frame.locator('.ipa-schemes button').last().click();
+  await frame.locator('#ipa-shortcuts').setChecked(true);
   await frame.locator('#draft').pressSequentially('kheo~:55');
   assert.equal(await frame.locator('.pending-text').textContent(),'kʰɤ̃⁵⁵');
   const layout=await frame.locator('#play').evaluate(async panel=>{
@@ -342,14 +348,14 @@ async function main(){
    const toneBoxes=toneKeys.map(el=>el.getBoundingClientRect());
    const toneRows={};
    toneBoxes.forEach((box,index)=>(toneRows[box.top]??=[]).push(toneKeys[index].dataset.symbol));
-   const aspirate=panel.querySelector('.vowel-modifiers [data-symbol="ʰ"]').getBoundingClientRect();
+   const aspirate=panel.querySelector('.initial-grid [data-symbol="ʰ"]').getBoundingClientRect();
    const nasal=panel.querySelector('#ipa-nasal').getBoundingClientRect();
-   const toneLayout=aspirate.right<=nasal.left&&toneBoxes.every(box=>box.width>=44&&box.height>=44);
+   const toneLayout=aspirate.right<=nasal.left&&toneBoxes.every(box=>box.width>=26&&box.height>=32);
    const editor=doc.querySelector('#result').getBoundingClientRect(),draft=doc.querySelector('#preeditPreview').getBoundingClientRect();
    const voice=panel.querySelector('#voicePanel').getBoundingClientRect(),dock=panel.querySelector('#inputDock').getBoundingClientRect();
    return {overlap,toneLayout,toneRows:Object.values(toneRows),voiceBelowKeyboard:voice.height>0&&voice.top>=dock.bottom,overflow:doc.documentElement.scrollWidth>doc.defaultView.innerWidth+1,aligned:editor.left===draft.left&&editor.top===draft.top&&editor.width===draft.width,font:doc.fonts.check('16px "Charis SIL"','kʰɤ̃⁵⁵')};
   });
-  assert.deepEqual(layout,{overlap:false,toneLayout:true,toneRows:[['⁵⁵','²¹','⁵³','³⁵'],['³³','¹³']],voiceBelowKeyboard:true,overflow:false,aligned:true,font:true},'keyboard at '+width+'px');
+  assert.deepEqual(layout,{overlap:false,toneLayout:true,toneRows:[['⁵⁵','²¹','⁵³','³⁵','³³','¹³']],voiceBelowKeyboard:true,overflow:false,aligned:true,font:true},'keyboard at '+width+'px');
   if(width===390){
    const mic=voicePanel.locator('#voiceRecord');
    const held=await mic.evaluate(async element=>{
