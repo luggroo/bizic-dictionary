@@ -294,6 +294,7 @@ async function main(){
   assert.equal(await frame.locator('#voiceMode').count(),0);
   assert.equal(await voicePanel.locator('#voiceRecord').isEnabled(),true);
   await frame.locator('#result').click();
+  const startingNote=await frame.locator('#result').textContent();
   await frame.locator('#keys [data-letter="g"]').click();
   assert.equal(await frame.locator('.pending-text').textContent(),'g');
   const glyphFits=await frame.locator('#keyboardPanel').evaluate(async panel=>{
@@ -323,7 +324,7 @@ async function main(){
   await frame.locator('#draft').press('1');
   assert.match(await frame.locator('#result').textContent(),/à$/u);
   await frame.locator('#noteBackspace').click();
-  assert.equal(await frame.locator('#result').textContent(),'');
+  assert.equal(await frame.locator('#result').textContent(),startingNote);
   await frame.locator('#ipaMode').click();
   assert.equal(await voicePanel.isVisible(),true);
   await frame.locator('#ipa-shortcuts').setChecked(false);
