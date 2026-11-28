@@ -286,6 +286,8 @@ async function main(){
   await page.goto(base+'#keyboard');await page.reload();await ready('keyboard');
   await page.selectOption('#ui-language','zh');
   assert.equal(await page.locator('aside .nav-repo-link + [data-view="keyboard"]').count(),1);
+  const keyboardTitle=await page.locator('.keyboard-view .eyebrow [data-ui-tujia="keyboard"]').textContent();
+  assert.match(keyboardTitle,/^(cīcī hǎ-niěxī|cixcix har-nierxix)$/u);
   const frame=page.frameLocator('.keyboard-frame');
   const voicePanel=frame.locator('#voicePanel');
   await voicePanel.waitFor({state:'visible'});
