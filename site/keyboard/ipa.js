@@ -17,7 +17,7 @@
   for(const [key,value] of Object.entries(codes)) symbolCodes.set(value,key);
   const tokens = Object.keys(codes).sort((a,b)=>b.length-a.length);
   const superscript=digits=>digits.replace(/[1-5]/g,digit=>'¹²³⁴⁵'[Number(digit)-1]);
-  let lexicon=[],dialects=1,scheme='chart',nasal;
+  let lexicon=[],dialects=3,scheme='chart',nasal;
   const recorded=[new Set(),new Set(['ȵ','ħ','ʕ'])];
   const segmentPattern=/tsʰ|tɕʰ|pʰ|tʰ|kʰ|ts|dz|tɕ|dʑ|[¹²³⁴⁵]+|\p{Script=Latin}\p{M}*/gu;
   let recordsLoaded=false;

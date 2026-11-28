@@ -324,6 +324,7 @@ async function main(){
   assert.equal(await voicePanel.isVisible(),true);
   await frame.locator('#ipa-shortcuts').setChecked(false);
   const dictionaries=frame.locator('.ipa-toolbar select');
+  assert.equal(await dictionaries.inputValue(),width===320?'3':'2');
   await dictionaries.selectOption('1');
   const grayKey=frame.locator('.initial-grid [data-symbol="f"].ipa-unattested');
   await grayKey.click();
