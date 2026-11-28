@@ -191,7 +191,7 @@
       grid.append(line);
     }
     chart.replaceChildren(initialGroup,buildVowelChart());
-    const values=dialects===2?['33','21','55','13']:['55','21','53','24','33','13','35','51'];
+    const values=dialects===2?['33','21','55','13']:['55','21','53','35','33','13'];
     const toneRow=node('div','','ipa-tone-row');
     for(const digits of values)toneRow.append(soundKey(superscript(digits),':'+digits));
     const utilities=node('div','','ipa-utilities');

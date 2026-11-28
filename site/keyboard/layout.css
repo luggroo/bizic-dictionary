@@ -148,7 +148,7 @@ body.keyboard-open #play {padding-bottom: 0}
 .vowel-extra {margin-top: 4px}
 #ipaKeys .vowel-extra .key {width: auto; min-width: 30px; padding: 2px 4px}
 .ipa-tones {display: grid; grid-template-columns: max-content minmax(0, 1fr) max-content; align-items: center; gap: 8px; margin-top: 6px; padding-top: 5px; border-top: 1px solid var(--rule)}
-.ipa-tone-row {display: grid; grid-template-columns: repeat(auto-fit, minmax(44px, 1fr)); gap: 4px; max-width: 560px}
+.ipa-tone-row {display: grid; grid-template-columns: repeat(4, minmax(44px, 1fr)); gap: 4px; max-width: 360px}
 #ipaKeys .ipa-tone-row .key {min-height: 44px; padding-inline: 6px}
 .ipa-utilities .key {width: auto; min-width: 27px}
 #ipaKeys .ipa-action {width: auto; padding-inline: 5px; font-size: .75rem}
@@ -168,9 +168,6 @@ body.keyboard-open #play {padding-bottom: 0}
   .candidateBar {height: 54px}
   #keys .key {min-height: 40px}
   #keys .pinyin-tone {min-height: 34px}
-}
-@media (max-width: 450px) {
-  .ipa-tone-row {grid-template-columns: repeat(4, minmax(0, 1fr))}
 }
 @media (max-width: 350px) {
   .kbhead button, .kbhead #kbMore {font-size: .75rem}
