@@ -409,7 +409,7 @@ function render(){
   else if(button.right>box.right)nav.scrollLeft+=button.right-box.right;
  }
  $('#crumb').textContent=titles[state.view]||'知识检索';
- const views={keyboard:()=>`<section class="keyboard-view">${pageHeader('keyboard')}<iframe class="keyboard-frame" title="输入法" src="keyboard/index.html?v=phonology-5"></iframe></section>`,home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:()=>historyView(),grammar:()=>grammarView(),notation:()=>notationView()};
+ const views={keyboard:()=>`<section class="keyboard-view">${pageHeader('keyboard')}<iframe class="keyboard-frame" title="输入法" src="keyboard/index.html?v=phonology-6"></iframe></section>`,home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:()=>historyView(),grammar:()=>grammarView(),notation:()=>notationView()};
  $('#main').innerHTML=views[state.view]();
  bindMain();if(typeof bindNotationView==='function')bindNotationView();if(window.tasteRefresh)tasteRefresh();if(window.TujiaUI)TujiaUI.refresh();
  finishNavigation(previous);

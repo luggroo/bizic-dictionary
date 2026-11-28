@@ -281,6 +281,35 @@ async function main(){
   }
  }
  pass('84 page/language/viewport combinations (320–1280 px) without page overflow or arrow-only filter labels');
+ await page.addInitScript(()=>{
+  if(!location.pathname.endsWith('/keyboard/index.html'))return;
+  Object.defineProperty(navigator,'mediaDevices',{value:{getUserMedia:async()=>({getTracks:()=>[{stop(){}}]})}});
+  window.MediaRecorder=class {
+   static isTypeSupported(type){return type==='audio/webm'}
+   state='inactive';
+   mimeType='audio/webm';
+   start(){this.state='recording'}
+   stop(){
+    this.state='inactive';
+    queueMicrotask(()=>{
+     this.ondataavailable({data:new Blob(['test audio'],{type:this.mimeType})});
+     this.onstop();
+    });
+   }
+  };
+ });
+ let voiceRequests=0;
+ await page.route('https://tujianlp-tujia-asr-demo.ms.show/gradio_api/call/transcribe**',async route=>{
+  const headers={'Access-Control-Allow-Origin':'*','Access-Control-Allow-Methods':'GET, POST, OPTIONS','Access-Control-Allow-Headers':'content-type'};
+  const method=route.request().method();
+  if(method==='OPTIONS'){await route.fulfill({status:204,headers});return}
+  if(method==='POST'){
+   voiceRequests++;
+   await route.fulfill({headers,json:{event_id:'recording-test'}});
+   return;
+  }
+  await route.fulfill({headers,contentType:'text/event-stream',body:'event: complete\ndata: [{"ok":true,"text_sup":"a⁵⁵"}]\n\n'});
+ });
  for(const width of [320,390,1280]){
   await page.setViewportSize({width,height:844});
   await page.goto(base+'#keyboard');await page.reload();await ready('keyboard');
@@ -331,8 +360,23 @@ async function main(){
    return {overlap,toneLayout,toneRows:Object.values(toneRows),voiceBelowKeyboard:voice.height>0&&voice.top>=dock.bottom,overflow:doc.documentElement.scrollWidth>doc.defaultView.innerWidth+1,aligned:editor.left===draft.left&&editor.top===draft.top&&editor.width===draft.width,font:doc.fonts.check('16px "Charis SIL"','kʰɤ̃⁵⁵')};
   });
   assert.deepEqual(layout,{overlap:false,toneLayout:true,toneRows:[['⁵⁵','²¹','⁵³','³⁵'],['³³','¹³']],voiceBelowKeyboard:true,overflow:false,aligned:true,font:true},'keyboard at '+width+'px');
+  if(width===390){
+   const mic=voicePanel.locator('#voiceRecord');
+   await mic.scrollIntoViewIfNeeded();
+   const bounds=await mic.boundingBox();
+   await page.mouse.move(bounds.x+bounds.width/2,bounds.y+bounds.height/2);
+   await page.mouse.down();
+   try{
+    await voicePanel.locator('#voiceRecord[data-state="recording"]').waitFor();
+    assert.equal(voiceRequests,0);
+   }finally{await page.mouse.up()}
+   await voicePanel.locator('#voiceRaw').waitFor({state:'visible'});
+   assert.equal(await voicePanel.locator('#voiceRaw').textContent(),'a⁵⁵');
+   assert.equal(voiceRequests,1);
+   assert.equal(await voicePanel.locator('#voiceRun').isVisible(),false);
+  }
  }
- pass('Tujia keyboard independent tones, IPA nasalization, number selection, fonts, key spacing and permanent voice panel at 320, 390 and 1280 px');
+ pass('Tujia keyboard tones, IPA, number selection, layout and press-to-record with automatic transcription on release');
  assert.deepEqual(errors,[],'Unhandled browser errors');
  assert.deepEqual(badAssets,[],'Required application assets must load');
  console.log(JSON.stringify({engine,checks:checks.length,browserErrors:errors,failedAssets:badAssets},null,2));

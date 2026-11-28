@@ -1,23 +1,125 @@
 (() => {
   const asr='https://tujianlp-tujia-asr-demo.ms.show/gradio_api/call/transcribe';
   const tts='https://tujianlp-tujia-tts-demo.ms.show/gradio_api/call/_fmt';
-  let blob=null,stream=null,recorder=null,chunks=[],timer,preview;
-  const status=$('voiceStatus'),run=$('voiceRun'),record=$('voiceRecord');
+  let pendingAudio=null,preview,capture=null,recognizing=false;
+  const status=$('voiceStatus'),run=$('voiceRun'),record=$('voiceRecord'),upload=$('voiceFile'),recordLabel=$('voiceRecordLabel');
   function tell(message){status.textContent=message}
-  function audioFile(file){blob=file;if(preview)URL.revokeObjectURL(preview);preview=URL.createObjectURL(file);$('voiceAudio').src=preview;$('voiceAudio').hidden=false;run.disabled=false;tell('音频已准备好，可以开始识别。')}
-  function cleanup(){clearTimeout(timer);stream?.getTracks().forEach(t=>t.stop());stream=null;record.textContent='开始录音'}
-  record.onclick=async()=>{
-    if(recorder?.state==='recording'){recorder.stop();return}
+  function showMic(state,label){record.dataset.state=state;recordLabel.textContent=label}
+  function syncActions(){
+    record.disabled=recognizing;
+    upload.disabled=Boolean(capture)||recognizing;
+    run.hidden=!pendingAudio;
+    run.disabled=upload.disabled||!pendingAudio;
+  }
+  function previewAudio(file){
+    if(preview)URL.revokeObjectURL(preview);
+    preview=URL.createObjectURL(file);
+    $('voiceAudio').src=preview;
+    $('voiceAudio').hidden=false;
+  }
+  function stopTracks(stream){stream?.getTracks().forEach(track=>track.stop())}
+  function releaseMic(current){
+    clearTimeout(current.timer);
+    stopTracks(current.stream);
+    current.stream=null;
+  }
+  function clearCapture(current){
+    capture=null;
+    releaseMic(current);
+    showMic('idle','按住说话');
+    syncActions();
+  }
+  function transcribeCapture(current){
+    clearCapture(current);
+    if(!current.file.size){tell('没有录到声音，请重试。');return}
+    previewAudio(current.file);
+    recognize(current.file);
+  }
+  async function beginCapture(control){
+    if(capture||recognizing)return;
     if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder){tell('浏览器无法录音，请上传音频。');return}
-    try{stream=await navigator.mediaDevices.getUserMedia({audio:true});chunks=[];
+    const current={control};
+    capture=current;
+    showMic('waiting','正在打开麦克风');
+    tell(control==='activation'?'麦克风打开后开始录音。':'请保持按住，麦克风打开后开始录音。');
+    syncActions();
+    try{
+      const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+      if(capture!==current){stopTracks(stream);return}
+      current.stream=stream;
       const type=['audio/mp4','audio/webm;codecs=opus','audio/webm','audio/ogg;codecs=opus'].find(t=>MediaRecorder.isTypeSupported(t));
-      recorder=type?new MediaRecorder(stream,{mimeType:type}):new MediaRecorder(stream);
+      const recorder=type?new MediaRecorder(stream,{mimeType:type}):new MediaRecorder(stream);
+      const chunks=[];
+      current.recorder=recorder;
       recorder.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
-      recorder.onstop=()=>{const file=new Blob(chunks,{type:recorder.mimeType||'audio/webm'});cleanup();recorder=null;if(file.size)audioFile(file);else tell('没有录到声音，请重试。')};
-      recorder.start();record.textContent='结束录音';tell('正在录音，最长 30 秒。');timer=setTimeout(()=>{if(recorder?.state==='recording')recorder.stop()},30000);
-    }catch{cleanup();tell('无法访问麦克风，请检查权限或上传音频。')}
+      recorder.onerror=()=>{
+        if(capture!==current)return;
+        clearCapture(current);
+        tell('录音中断，请重试。');
+      };
+      recorder.onstop=()=>{
+        if(capture!==current)return;
+        releaseMic(current);
+        current.file=new Blob(chunks,{type:recorder.mimeType||'audio/webm'});
+        if(current.released){transcribeCapture(current);return}
+        showMic('ready','录音已满 30 秒');
+        tell(control==='activation'?'再按一次麦克风开始识别。':'松开麦克风开始识别。');
+      };
+      recorder.start();
+      showMic('recording','正在录音');
+      tell(control==='activation'?'再按一次麦克风结束录音并识别。':'松手后自动识别。');
+      current.timer=setTimeout(()=>{if(recorder.state==='recording')recorder.stop()},30000);
+    }catch{
+      if(capture!==current)return;
+      clearCapture(current);
+      tell('无法访问麦克风，请检查权限或上传音频。');
+    }
+  }
+  function endCapture(control,discard=false){
+    const current=capture;
+    if(!current||current.control!==control||current.released)return;
+    if(discard||!current.recorder){
+      clearCapture(current);
+      tell(discard?'录音已取消。':'请按住麦克风，等录音开始后再松手。');
+      return;
+    }
+    current.released=true;
+    if(current.file)transcribeCapture(current);
+    else if(current.recorder.state==='recording')current.recorder.stop();
+  }
+  record.addEventListener('pointerdown',event=>{
+    if(!event.isPrimary||event.button!==0)return;
+    event.preventDefault();
+    record.setPointerCapture(event.pointerId);
+    beginCapture(event.pointerId);
+  });
+  record.addEventListener('pointerup',event=>endCapture(event.pointerId));
+  record.addEventListener('pointercancel',event=>endCapture(event.pointerId,true));
+  record.addEventListener('lostpointercapture',event=>endCapture(event.pointerId,true));
+  record.addEventListener('contextmenu',event=>event.preventDefault());
+  record.addEventListener('keydown',event=>{
+    if(event.key!==' '&&event.key!=='Enter')return;
+    event.preventDefault();
+    if(!event.repeat)beginCapture(event.key);
+  });
+  record.addEventListener('keyup',event=>{
+    if(event.key!==' '&&event.key!=='Enter')return;
+    event.preventDefault();
+    endCapture(event.key);
+  });
+  record.addEventListener('blur',()=>{
+    if(capture?.control===' '||capture?.control==='Enter')endCapture(capture.control,true);
+  });
+  record.addEventListener('click',event=>{
+    if(event.detail!==0)return;
+    if(capture?.control==='activation')endCapture('activation');
+    else beginCapture('activation');
+  });
+  upload.onchange=e=>{
+    const file=e.target.files[0];
+    if(file){pendingAudio=file;previewAudio(file);syncActions();tell('音频已准备好，可以开始识别。')}
+    e.target.value='';
   };
-  $('voiceFile').onchange=e=>{const f=e.target.files[0];if(f)audioFile(f);e.target.value=''};
   const dataUrl=file=>new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(Error('无法读取音频'));reader.readAsDataURL(file)});
   async function gradio(endpoint,values){
     const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({data:values})});
@@ -46,10 +148,19 @@
   }
   function insertVoice(value){if(draft.value)submit(draft.value);submit(value)}
   $('voiceInsert').onclick=()=>{if(resultText)insertVoice(resultText)};
-  run.onclick=async()=>{if(!blob)return;if(blob.size>5*1024*1024){tell('音频超过 5 MB，请缩短后重试。');return}run.disabled=true;record.disabled=true;tell('正在联网识别，可能需要几十秒…');
-    try{const data=await gradio(asr,[await dataUrl(blob),0,true,30]);const obj=typeof data[0]==='string'?JSON.parse(data[0]):data[0];if(!obj?.ok)throw Error(obj?.error||'识别失败');if(!obj.text_sup)throw Error('没有识别到音节，请重试');result(obj.text_sup);tell('识别完成，可选择结果输入。')}
-    catch(e){tell(e.message||'识别失败，请检查网络。')}finally{run.disabled=false;record.disabled=false}
-  };
+  async function recognize(file){
+    if(recognizing)return;
+    pendingAudio=null;
+    if(file.size>5*1024*1024){syncActions();tell('音频超过 5 MB，请缩短后重试。');return}
+    recognizing=true;
+    showMic('recognizing','正在识别');
+    syncActions();
+    tell('正在联网识别，可能需要几十秒…');
+    try{const data=await gradio(asr,[await dataUrl(file),0,true,30]);const obj=typeof data[0]==='string'?JSON.parse(data[0]):data[0];if(!obj?.ok)throw Error(obj?.error||'识别失败');if(!obj.text_sup)throw Error('没有识别到音节，请重试');result(obj.text_sup);tell('识别完成，可选择结果输入。')}
+    catch(e){pendingAudio=file;tell(e.message||'识别失败，请检查网络。')}
+    finally{recognizing=false;showMic('idle','按住说话');syncActions()}
+  }
+  run.onclick=()=>{if(pendingAudio)recognize(pendingAudio)};
   $('voiceSpeak').onclick=async()=>{
     const text=output.value.trim(),speak=$('voiceSpeak'),state=$('voiceSpeechStatus');
     if(!text){state.textContent='请先输入要朗读的拼音或音标。';return}
@@ -57,7 +168,8 @@
     try{const data=await gradio(tts,[text,'auto',1.0]);const link=data?.[0]?.url;if(!link||new URL(link).origin!=='https://tujianlp-tujia-tts-demo.ms.show')throw Error('没有生成音频');$('voiceSpeechAudio').src=link;$('voiceSpeechAudio').hidden=false;state.textContent='语音已生成。'}
     catch(e){state.textContent=e.message||'语音生成失败，请重试。'}finally{speak.disabled=false}
   };
-  window.addEventListener('pagehide',cleanup);
+  window.addEventListener('pagehide',()=>{if(capture)clearCapture(capture)});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden&&capture)endCapture(capture.control,true)});
   function resize(){window.parent.postMessage({type:'keyboard-height',height:Math.ceil($('play').getBoundingClientRect().bottom+window.scrollY+12)},location.origin)}
   new ResizeObserver(resize).observe($('play'));window.addEventListener('load',resize);
 })();
