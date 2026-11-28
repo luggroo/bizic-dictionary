@@ -362,14 +362,13 @@ async function main(){
   assert.deepEqual(layout,{overlap:false,toneLayout:true,toneRows:[['⁵⁵','²¹','⁵³','³⁵'],['³³','¹³']],voiceBelowKeyboard:true,overflow:false,aligned:true,font:true},'keyboard at '+width+'px');
   if(width===390){
    const mic=voicePanel.locator('#voiceRecord');
-   await mic.scrollIntoViewIfNeeded();
-   const bounds=await mic.boundingBox();
-   await page.mouse.move(bounds.x+bounds.width/2,bounds.y+bounds.height/2);
-   await page.mouse.down();
+   await mic.evaluate(element=>{element.setPointerCapture=()=>{}});
+   const pointer={pointerId:1,pointerType:'touch',isPrimary:true,button:0};
+   await mic.dispatchEvent('pointerdown',pointer);
    try{
     await voicePanel.locator('#voiceRecord[data-state="recording"]').waitFor();
     assert.equal(voiceRequests,0);
-   }finally{await page.mouse.up()}
+   }finally{await mic.dispatchEvent('pointerup',pointer)}
    await voicePanel.locator('#voiceRaw').waitFor({state:'visible'});
    assert.equal(await voicePanel.locator('#voiceRaw').textContent(),'a⁵⁵');
    assert.equal(voiceRequests,1);
