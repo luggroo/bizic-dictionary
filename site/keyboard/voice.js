@@ -59,6 +59,6 @@
   };
   $('voiceMode').onclick=()=>{const panel=$('voicePanel');panel.hidden=!panel.hidden;$('voiceMode').setAttribute('aria-pressed',String(!panel.hidden));if(!panel.hidden)panel.scrollIntoView({block:'nearest'})};
   window.addEventListener('pagehide',cleanup);
-  function resize(){window.parent.postMessage({type:'keyboard-height',height:Math.max(740,Math.ceil($('play').getBoundingClientRect().bottom+window.scrollY+30))},location.origin)}
+  function resize(){window.parent.postMessage({type:'keyboard-height',height:Math.ceil($('play').getBoundingClientRect().bottom+window.scrollY+12)},location.origin)}
   new ResizeObserver(resize).observe($('play'));window.addEventListener('load',resize);
 })();

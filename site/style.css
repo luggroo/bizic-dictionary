@@ -175,4 +175,4 @@ mark[data-corpus-match]{scroll-margin-block:100px}
 mark.corpus-current-match{outline:2px solid #8c622a;outline-offset:2px;background:#f5dd93}
 @media(max-width:600px){.corpus-within-search button{min-height:44px}.corpus-within-search #within-count{flex-basis:100%}}
 
-.keyboard-view{max-width:850px;margin:0 auto}.keyboard-view h1{margin:0 0 16px}.keyboard-frame{display:block;width:100%;height:740px;border:0;background:transparent}@media(max-width:800px){.keyboard-frame{height:740px}}
+.keyboard-view{max-width:850px;margin:0 auto}.keyboard-view h1{margin:0 0 16px}.keyboard-frame{display:block;width:100%;height:740px;border:0;background:transparent}@media(max-width:800px){.keyboard-frame{height:600px}}

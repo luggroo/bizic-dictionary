@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "Charis SIL";
+  src: url("../fonts/Charis-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Charis SIL";
+  src: url("../fonts/Charis-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gentium Plus";
+  src: url("../fonts/GentiumPlus-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gentium Plus";
+  src: url("../fonts/GentiumPlus-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+:root {
+  --spelling: "Gentium Plus", "Charis SIL", Georgia, serif;
+  --phonetic: "Charis SIL", "Gentium Plus", Georgia, serif;
+  --paper: #fcfdfb;
+  --page: #fcfdfb;
+  --ink: #23382e;
+  --quiet: #53665a;
+  --rule: #d5dfd7;
+  --red: #2b624c;
+  --active: #36765a;
+  --apricot: #f1f6f1;
+  --key-rule: #d5dfd7;
+}
+.workspace {width: 100%; padding: 0}
+body.keyboard-open #play {padding-bottom: 0}
+#play {max-width: none}
+#play .panelhead {margin: 0; padding: 0 10px; border: 1px solid #bdcfc2; border-bottom: 0; border-radius: 10px 10px 0 0; background: #f7faf6}
+.panelhead h2 {font: 700 1rem/1.3 var(--sans)}
+#inputDock {background: transparent}
+#inputDock .paper, body.keyboard-open #inputDock .paper {
+  height: 135px;
+  min-height: 0;
+  flex-basis: auto;
+  padding: 0;
+  border: 1px solid #bdcfc2;
+  border-radius: 0 0 10px 10px;
+}
+.note-body {position: relative; min-height: 0; flex: 1}
+#result, #preeditPreview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 8px 12px 0;
+  overflow: auto;
+  scrollbar-width: none;
+  background: transparent;
+  color: var(--ink);
+  font: 400 1.375rem/1.5 var(--spelling);
+  text-align: start;
+  text-decoration: none;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.ipa-mode #result, .ipa-mode #preeditPreview {font-family: var(--phonetic)}
+#result:focus-visible {outline: none}
+.paper:focus-within {outline: 1px solid #65917b; outline-offset: -1px}
+#result.is-composing {color: transparent; caret-color: transparent}
+#preeditPreview {pointer-events: none}
+.pending-text {color: #24543f; background: #e2eee4; text-decoration: underline; text-underline-offset: .16em}
+.editorFoot {padding: 0 12px 5px}
+
+#inputDock .kb, body.keyboard-open #inputDock .kb {
+  height: auto;
+  overflow: visible;
+  margin-top: 8px;
+  padding: 0 6px 6px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: var(--apricot);
+}
+.kbhead {height: auto; min-height: 43px; padding: 2px 0; gap: 2px}
+.kbhead button {min-height: 38px; padding-inline: 5px; font-size: .875rem}
+.kbhead #kbMore {font-size: .875rem; margin-left: auto}
+.inputModes button[aria-pressed=true] {color: var(--strong, #27503d)}
+.toolbar-icon {font-family: var(--phonetic); margin-right: 2px}
+.liveDraft {margin-inline: 2px; min-width: 0}
+.liveDraft input {font: 700 1.05rem/1.3 var(--spelling); color: var(--red)}
+.ipa-mode .liveDraft input {font-family: var(--phonetic); color: transparent; caret-color: transparent}
+#kbMorePanel {inset: 43px 0 auto; border: 1px solid #b4c8b8; background: #f8fbf7}
+#typing {min-height: 0}
+.candidateBar {min-width: 0; height: 58px}
+#candidates .word strong {font-family: var(--spelling); max-height: 2.62em}
+.ipa-mode #candidates .word strong {font-family: var(--phonetic)}
+#candidates .word small {text-align: center; max-height: 2.24em}
+#keys {display: grid; grid-template-columns: minmax(0, 1fr); justify-content: stretch; gap: 4px; padding-top: 5px}
+#keys .row {gap: 3px; padding: 0 1px}
+#keys .key, #ipaKeys .key {
+  height: auto;
+  min-width: 0;
+  border: 1px solid #b9cabd;
+  background: #fff;
+  color: var(--ink);
+  border-radius: 6px;
+  box-shadow: 0 1px 2px #1b392417;
+}
+#keys .key {min-height: 42px; font-family: var(--spelling)}
+#keys .key:not(.wide):not(.pinyin-tone) {width: min(54px, calc((100% - 27px) / 10))}
+#keys .key:active, #keys .key.lit, #ipaKeys .key:active {background: #d8e9dd; color: #204631; box-shadow: none}
+#keys #toneKeys {position: static; display: flex; justify-content: center; gap: 4px}
+#keys .pinyin-tone {display: inline-flex; gap: 4px; align-items: center; justify-content: center; width: min(55px, 20%); min-height: 35px; line-height: 1}
+.pinyin-tone .tone-sign {font: 400 1.45rem/1 var(--spelling)}
+.pinyin-tone .tone-number {font: .7rem/1 var(--sans); color: var(--quiet)}
+
+#ipaKeys {display: block; padding: 6px 1px 0}
+.ipa-toolbar, .vowel-heading {display: flex; align-items: center; justify-content: space-between; gap: 5px; margin-bottom: 5px}
+.ipa-schemes {display: flex; min-width: 0; gap: 3px}
+.ipa-schemes button, .ipa-toolbar select {min-height: 32px; padding: 3px 7px; font: 600 .8125rem/1.2 var(--sans); border: 1px solid #c6d5c9; border-radius: 6px; background: #fff}
+.ipa-schemes button[aria-pressed=true] {background: #dfeee3; border-color: #87a996}
+.ipa-hint {display: flex; flex-wrap: wrap; gap: 4px 8px; padding: 5px 6px; margin-bottom: 6px; border-radius: 5px; background: #e5efe7; font: .75rem/1.3 var(--sans)}
+.ipa-hint > span {white-space: nowrap}
+.ipa-hint > span > span {font-family: var(--phonetic)}
+.ipa-hint kbd, .ipa-chart kbd, .ipa-tones kbd {font: .625rem/1 ui-monospace, monospace; color: var(--quiet)}
+.ipa-chart {display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 8px 12px}
+#ipaKeys h3 {margin: 0 0 4px; font: 700 .8125rem/1.25 var(--sans); color: var(--quiet)}
+#ipaKeys .vowel-heading h3, #ipaKeys .ipa-tones h3 {margin: 0}
+.initial-row {display: grid; grid-template-columns: minmax(44px, 1.4fr) repeat(7, minmax(0, 1fr)); gap: 3px; margin-bottom: 3px; align-items: center}
+.initial-label, .vowel-extra > span {color: var(--quiet); font: .625rem/1.15 var(--sans); overflow-wrap: anywhere}
+#ipaKeys .ipa-sound, #ipaKeys .nasal-key, #ipaKeys .ipa-action {width: auto; max-width: none; display: grid; justify-items: center; align-content: center; min-height: 34px; gap: 1px; padding: 1px 0}
+#ipaKeys .ipa-glyph, #voiceRaw, #voiceMatches button b {font: 400 1.14rem/1.05 var(--phonetic)}
+#ipaKeys .nasal-key {display: flex; align-items: center; gap: 3px; padding: 2px 6px; white-space: nowrap; font-size: .75rem; font-weight: 700}
+#ipaKeys .nasal-key[aria-pressed=true] {background: #cee4d4; border-color: #80a990}
+.vowel-frame {padding: 3px 4px 0; border: 1px solid #d6e3d7; border-radius: 7px; background: #ebf3ec}
+.vowel-axis {display: flex; justify-content: space-between; padding-inline: 7%; color: var(--quiet); font: .625rem/1.2 var(--sans)}
+.vowel-plot {position: relative; height: 174px; isolation: isolate}
+.vowel-plot svg {position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none}
+.vowel-plot path {fill: none; stroke: #8ea997}
+#ipaKeys .vowel-plot .ipa-sound {position: absolute; left: var(--x); top: var(--y); width: min(13%, 47px); min-height: 29px; transform: translate(-50%, -50%)}
+.vowel-extra, .ipa-tones, .ipa-tone-row, .ipa-utilities {display: flex; flex-wrap: wrap; align-items: center; gap: 3px}
+.vowel-extra {margin-top: 4px}
+#ipaKeys .vowel-extra .key {width: auto; min-width: 30px; padding: 2px 4px}
+.ipa-tones {margin-top: 6px; padding-top: 5px; border-top: 1px solid var(--rule)}
+.ipa-tone-row .key, .ipa-utilities .key {width: auto; min-width: 27px}
+#ipaKeys .ipa-action {width: auto; padding-inline: 5px; font-size: .75rem}
+.ipa-status:empty {display: none}
+
+@media (max-width: 600px) {
+  #inputDock .paper, body.keyboard-open #inputDock .paper {height: 98px}
+  .ipa-chart {grid-template-columns: minmax(0, 1fr); gap: 6px}
+  .initial-grid {display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 3px}
+  .initial-row {display: contents}
+  .initial-label {display: none}
+  #ipaKeys .ipa-sound {min-height: 31px}
+  #ipaKeys .vowel-plot .ipa-sound {min-height: 27px}
+  .vowel-plot {height: 166px}
+  .candidateBar {height: 54px}
+  #keys .key {min-height: 40px}
+  #keys .pinyin-tone {min-height: 34px}
+}
+@media (max-width: 350px) {
+  .kbhead button, .kbhead #kbMore {font-size: .75rem}
+  .kbhead .toolbar-icon {display: none}
+  #ipaKeys .ipa-glyph {font-size: 1rem}
+  .ipa-tone-row .key {min-width: 25px}
+}

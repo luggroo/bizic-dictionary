@@ -1,6 +1,7 @@
 (() => {
  const translations={
   '学习个人词语':'Learn personal words','清除个人词库':'Clear personal dictionary','记事本':'Notepad','输出设置':'Output settings','拼音':'Pinyin','音标':'IPA','语音':'Voice','设置':'Settings',
+  '输入法 · 毕兹学堂':'Keyboard · Bizic Academy','音系图':'Sound chart','组合键':'Key sequences','声母':'Initials','元音图':'Vowel chart','前':'Front','央':'Central','后':'Back','声调':'Tones','舌尖':'Apical vowel','成节鼻音':'Syllabic nasals','鼻化':'Nasalize','分隔组合':'Separate sequences','唇音':'Labial','舌尖音':'Coronal','齿龈音':'Alveolar','龈腭音':'Alveolo-palatal','软腭音':'Velar','喉音':'Glottal',
   '上一页候选':'Previous candidates','下一页候选':'Next candidates','输入草稿':'Composition','记事本正文':'Notepad',
   '用叶氏拼音':'Ye romanization','用带调号拼音':'Tone-marked spelling','用汉字谐音':'Chinese characters',
   '输出形式':'Output form','更多设置':'More settings','返回拼音':'Back to typing','完成':'Done',
@@ -19,7 +20,7 @@
  function apply(){
   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
   while(n=walker.nextNode()){
-   if(n.parentElement.closest('script,style,#result,#candidates,#voiceRaw,#voiceMatches,#draft'))continue;
+   if(n.parentElement.closest('script,style,#result,#candidates,#voiceRaw,#voiceMatches,#draft,#preeditPreview'))continue;
    const current=n.nodeValue,record=originals.get(n),source=record?.output===current?record.source:current;
    const clean=source.trim(),translated=language==='en'&&translations[clean];
    const next=translated?source.replace(clean,translated):source;
@@ -28,6 +29,7 @@
   for(const el of document.querySelectorAll('[aria-label],[data-placeholder]')){
    for(const attr of ['aria-label','data-placeholder']){if(!el.hasAttribute(attr))continue;const key='source'+attr;const current=el.getAttribute(attr);if(!el[key]||!(Object.values(translations).includes(current)||current===el[key]))el[key]=current;const source=el[key],value=language==='en'?(translations[source]||source):source;if(value!==current)el.setAttribute(attr,value)}
   }
+  document.title=language==='en'?'Keyboard · Bizic Academy':'输入法 · 毕兹学堂';
   document.documentElement.lang=language==='en'?'en':'zh-CN';
  }
  let queued=false;new MutationObserver(()=>{if(queued)return;queued=true;queueMicrotask(()=>{queued=false;apply()})}).observe(document.body,{childList:true,subtree:true,characterData:true});

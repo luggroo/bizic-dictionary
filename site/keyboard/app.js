@@ -11,7 +11,7 @@ for(const row of tujiaCoreData.words.split('\n')){
 }
 let orthography='diacritic', demoSpelling=null, tonePlayback=false;
 let handHan=true, handSession=null, handTimer=0, inkRevision=0;
-let mode=0, typingMode=0, drafts=['',''], strokes=[], drawingPointer=null;
+let mode=0, typingMode=0, drafts=['','',''], strokes=[], drawingPointer=null;
 try{
   orthography=localStorage.getItem('tujia-orthography')==='ye'?'ye':'diacritic';
   typingMode=mode=localStorage.getItem('tujia-typing-output')==='han'?1:0;
@@ -70,10 +70,9 @@ window.visualViewport?.addEventListener('scroll',fitVisibleViewport);
 function setMore(open){
   $('kbMorePanel').hidden=!open;
   $('kbMore').setAttribute('aria-expanded',String(open));
-  if(open)closeToneKeys();
 }
 function keyboardOpen(open){
-  if(!open){setMore(false);closeToneKeys();clearTimeout(handTimer);inkRevision++}
+  if(!open){setMore(false);clearTimeout(handTimer);inkRevision++}
   if(open){fitVisibleViewport();sizeDesktopDock();$('formLookup').hidden=true}
   $('keyboardPanel').hidden=!open;
   document.body.classList.toggle('keyboard-open',open);
@@ -84,7 +83,7 @@ output.setAttribute('inputmode','none');
 output.onfocus=output.onclick=()=>{keyboardOpen(true);candidates()};
 $('hideKeyboard').onclick=()=>{takeOver();keyboardOpen(false);output.blur()};
 function choose(i,scroll=false){
-  closeToneKeys();setMore(false);
+  setMore(false);
   if(i!==2){clearTimeout(handTimer);inkRevision++;handSession=null}
   mode=i;
   if(i<2 && !demoActive)typingMode=i;
@@ -164,14 +163,19 @@ function render(){
   markOutput($('orthography'),active);
   markOutput($('typingOutputs'),selected<2?active:null);
   $('keys').hidden=mode===2||mode===3; $('ipaKeys').hidden=mode!==3; $('hand').hidden=mode!==2;
-  for(const [letter,key] of virtualKeys) if(vowelMarks[letter]) key.classList.toggle('tone-enabled', toneEnabled());
-  draft.value=drafts[mode===2?1:0];
+  $('keyboardPanel').classList.toggle('ipa-mode',mode===3);
+  $('menuOutputs').hidden=mode===3;
+  $('raw').hidden=true;
+  $('inputDock').classList.toggle('ipa-mode',mode===3);
+  $('toneKeys').hidden=!(mode===1 || mode===0 && (demoSpelling||orthography)==='diacritic');
+  draft.value=drafts[draftSlot()];
   candidates();
   if(mode===2)paint();
 }
+function draftSlot(){return mode===3?2:mode===2?1:0}
 function change(value){
   if(value && mode===2)handSession=null;
-  draft.value=value;drafts[mode===2?1:0]=value;candidates();
+  draft.value=value;drafts[draftSlot()]=value;candidates();
 }
 function wordButton(form, meaning, action, units){
   const el=button('',action,'word');
@@ -498,15 +502,30 @@ function groupHandMatches(matches,romans,before){
   });
 }
 function paintPreedit(){
-  const preview=$('preeditPreview'),value=draft.value;preview.textContent=value;preview.hidden=!value;if(!value)return;
-  const at=output.selectionStart,walker=document.createTreeWalker(output,NodeFilter.SHOW_TEXT),range=document.createRange();let text,used=0,placed=false;
-  while((text=walker.nextNode())){if(at<=used+text.length){range.setStart(text,at-used);range.collapse(true);placed=true;break}used+=text.length}
-  if(!placed){range.selectNodeContents(output);range.collapse(false)}
-  const rect=range.getBoundingClientRect(),field=output.getBoundingClientRect(),paper=output.closest('.paper').getBoundingClientRect();
-  const left=rect.height?rect.left:field.left,top=rect.height?rect.top:field.top;
-  preview.style.left=Math.max(0,left-paper.left)+'px';preview.style.top=Math.max(0,top-paper.top)+'px';
+  const preview=$('preeditPreview');
+  const value=mode===3?(window.keyboardIPA?.fromDraft(draft.value)??draft.value):draft.value;
+  preview.hidden=!value;
+  output.classList.toggle('is-composing',!!value);
+  if(!value)return;
+
+  const start=output.selectionStart,end=output.selectionEnd;
+  preview.replaceChildren(...Array.from(output.childNodes,child=>child.cloneNode(true)));
+  const range=document.createRange(),walker=document.createTreeWalker(preview,NodeFilter.SHOW_TEXT);
+  range.selectNodeContents(preview);
+  let text,offset=0,started=false;
+  while((text=walker.nextNode())){
+    const next=offset+text.length;
+    if(!started && start<=next){range.setStart(text,start-offset);started=true}
+    if(started && end<=next){range.setEnd(text,end-offset);break}
+    offset=next;
+  }
+  if(!started)range.collapse(false);
+  range.deleteContents();
+  range.insertNode(node('span',value,'pending-text'));
+  preview.scrollTop=output.scrollTop;
 }
-output.addEventListener('scroll',paintPreedit,{passive:true});
+output.addEventListener('scroll',()=>{$('preeditPreview').scrollTop=output.scrollTop},{passive:true});
+document.addEventListener('selectionchange',()=>{if(document.activeElement===output && draft.value)paintPreedit()});
 function candidates(){
   paintPreedit();
   if(mode===3 && window.ipaCandidates){window.ipaCandidates();return;}
@@ -514,6 +533,7 @@ function candidates(){
   const value=draft.value||hand?.raw||'',val=value.trim(),outputMode=compositionMode();
   const style=(demoSpelling||orthography)==='diacritic'?1:0;
   $('draftBar').classList.toggle('has-text',!!draft.value);
+  $('toneKeys').querySelectorAll('button').forEach(key=>{key.disabled=!pinyinVowelRun(draft.value,draft.selectionEnd)});
   // A handwritten glyph is already in the editor. Only pending spelling appears in the toolbar.
   $('raw').disabled=!val;$('raw').hidden=mode===1||!draft.value;
   $('raw').textContent=mode?'用原字':'用原拼写';
@@ -596,6 +616,7 @@ document.addEventListener('keydown',event=>{
   if(event.isComposing||event.ctrlKey||event.metaKey||event.altKey||event.shiftKey||
      !/^[1-4]$/.test(event.key)||$('keyboardPanel').hidden||(!draft.value && event.target===output)||
      !(event.target===draft||event.target===output||$('keyboardPanel').contains(event.target)))return;
+  if(mode===3 && window.keyboardIPA?.readingTone(draft.value,draft.selectionEnd))return;
   const slot=Number(event.key)-1;
   if(slot>=candidatePages[candidatePage].widths.length)return;
   const candidate=candidateItems[candidatePages[candidatePage].start+slot];
@@ -613,7 +634,7 @@ draft.onkeydown=e=>{
 $('raw').onclick=()=>{setMore(false);submit(draft.value)};
 output.addEventListener('keydown',event=>{
   if(event.isComposing||event.ctrlKey||event.metaKey||event.altKey||mode===2)return;
-  if(mode===3 ? !/^[\p{L}\p{M}¹²³⁴⁵'’-]$/u.test(event.key) : !/^[A-Za-z'āáǎàēéěèīíǐìōóǒòūúǔù]$/u.test(event.key))return;
+  if(mode===3 ? !(window.keyboardIPA?.acceptsKey(event.key)||/^[\p{Script=Latin}\p{M}¹²³⁴⁵'’-]$/u.test(event.key)) : !/^[A-Za-z'āáǎàēéěèīíǐìōóǒòūúǔù]$/u.test(event.key))return;
   event.preventDefault();editKey(event.key.toLowerCase());draft.focus({preventScroll:true});
 });
 function editKey(key){
@@ -629,91 +650,53 @@ function editKey(key){
   let a=draft.selectionStart,b=draft.selectionEnd;
   if(key==='⌫' && a===b)a=Math.max(0,a-1);
   draft.setRangeText(key==='⌫'?'':key,a,b,'end');
-  drafts[mode===2?1:0]=draft.value;candidates();
+  drafts[draftSlot()]=draft.value;candidates();
+  draft.focus({preventScroll:true});
 }
-const vowelMarks={a:'āáǎà',e:'ēéěè',i:'īíǐì',o:'ōóǒò',u:'ūúǔù'};
+const pinyinTones=[['ˉ','\u0304'],['ˊ','\u0301'],['ˇ','\u030c'],['ˋ','\u0300']];
+function pinyinVowelRun(value,cursor){
+  const before=value.slice(0,cursor);
+  const syllable=before.match(/[a-z\u00c0-\u024f\p{M}]+$/iu)?.[0];
+  if(!syllable)return null;
+  const pieces=syllable.normalize('NFD').match(/\p{L}\p{M}*/gu)||[];
+  const matches=pieces.map((p,i)=>/^[aeiou]/i.test(p)?i:-1).filter(i=>i>=0);
+  const vowel=matches.at(-1);
+  if(vowel===undefined)return null;
+  let first=vowel;
+  while(first>0 && /^[aeiou]/i.test(pieces[first-1]))first--;
+  const marked=pieces.findIndex((p,i)=>i>=first&&i<=vowel&&/[\u0300\u0301\u0304\u030c]/u.test(p));
+  const run=pieces.slice(first,vowel+1);
+  const priority=['a','e','o'].map(letter=>run.findIndex(v=>v[0].toLowerCase()===letter)).find(i=>i>=0);
+  return {start:before.length-syllable.length,pieces,index:marked>=0?marked:priority===undefined?vowel:first+priority};
+}
+function setPinyinTone(mark){
+  const cursor=draft.selectionEnd,run=pinyinVowelRun(draft.value,cursor);
+  if(!run)return;
+  run.pieces[run.index]=run.pieces[run.index].replace(/[\u0300\u0301\u0304\u030c]/gu,'')+mark;
+  const marked=run.pieces.join('').normalize('NFC');
+  draft.setRangeText(marked,run.start,cursor,'end');
+  change(draft.value);
+  draft.focus({preventScroll:true});
+  const at=run.start+marked.length;
+  draft.setSelectionRange(at,at);
+}
 const virtualKeys=new Map();
-let toneOwner=null, holdTimer=null, toneDirection=null;
-function toneEnabled(){return mode===1 || mode===0 && (demoSpelling||orthography)==='diacritic'}
-function closeToneKeys(){
-  clearTimeout(holdTimer);
-  toneOwner?.setAttribute('aria-expanded','false');toneOwner=null;toneDirection=null;
-  $('toneKeys').hidden=true;
+for(const [index,[sign,mark]] of pinyinTones.entries()){
+  const key=button('',()=>setPinyinTone(mark),'key pinyin-tone');
+  const label=node('span',String(index+1),'tone-number');label.setAttribute('aria-hidden','true');
+  key.setAttribute('aria-label',`声调 ${index+1} ${sign}`);
+  key.append(node('span',sign,'tone-sign'),label);
+  $('toneKeys').append(key);
 }
-function openToneKeys(vowel,focus=false){
-  closeToneKeys();
-  const panel=$('toneKeys'), area=$('keys').getBoundingClientRect();
-  toneOwner=virtualKeys.get(vowel);
-  const rect=toneOwner.getBoundingClientRect(), cell=Math.min(rect.width,48), height=Math.max(rect.height,42);
-  const x=rect.left-area.left+rect.width/2, y=rect.top-area.top+rect.height/2;
-  const edge=x-cell*1.5<0?-1:x+cell*1.5>area.width?1:0;
-  const columns=edge<0?[0,1,0,1]:edge>0?[1,0,1,0]:[1,2,1,0];
-  const rows=edge<0?[0,1,2,0]:edge>0?[0,0,2,1]:[0,1,2,1];
-  const centre=edge<0?0:1, count=edge?2:3;
-  panel.style.gridTemplateColumns=`repeat(${count},1fr)`;
-  panel.style.width=`${cell*count}px`;panel.style.height=`${height*3}px`;
-  panel.style.left=`${Math.max(0,Math.min(area.width-cell*count,x-cell*centre-cell/2))}px`;
-  panel.style.top=`${y-height*1.5}px`;
-  const options=Array.from(vowelMarks[vowel],(symbol,i)=>{
-    const option=button(symbol,()=>{const owner=toneOwner;editKey(symbol);closeToneKeys();owner?.focus({preventScroll:true})},'tone-key');
-    option.style.gridColumn=columns[i]+1;option.style.gridRow=rows[i]+1;return option;
-  });
-  const center=button(vowel,()=>{const owner=toneOwner;editKey(vowel);closeToneKeys();owner?.focus({preventScroll:true})},'tone-key tone-centre');
-  center.style.gridColumn=centre+1;center.style.gridRow=2;
-  panel.replaceChildren(...options,center);panel.hidden=false;
-  toneOwner.setAttribute('aria-expanded','true');toneDirection={edge,options};
-  if(focus)options[0].focus({preventScroll:true});
-}
-$('toneKeys').addEventListener('keydown',e=>{
-  if(e.key==='Escape'){
-    const owner=toneOwner;closeToneKeys();owner?.focus({preventScroll:true});e.preventDefault();return;
-  }
-  if(['ArrowRight','ArrowLeft','ArrowUp','ArrowDown'].includes(e.key)){
-    const keys=[...$('toneKeys').children], step=['ArrowRight','ArrowDown'].includes(e.key)?1:-1;
-    keys[(keys.indexOf(document.activeElement)+step+keys.length)%keys.length].focus();e.preventDefault();
-  }
-});
-document.addEventListener('pointerdown',e=>{
-  if(toneOwner && !e.target.closest('#toneKeys') && e.target!==toneOwner)closeToneKeys();
+draft.addEventListener('select',()=>{
+  const enabled=!!pinyinVowelRun(draft.value,draft.selectionEnd);
+  $('toneKeys').querySelectorAll('button').forEach(key=>{key.disabled=!enabled});
 });
 for(const chars of ['qwertyuiop','asdfghjkl','zxcvbnm']){
   const row=node('div','','row');
   for(const c of chars){
-    let held=false, startX=0, startY=0, selected=-1;
-    const key=button(c,()=>{
-      if(held){held=false;return}
-      closeToneKeys();editKey(c);
-    },'key');
+    const key=button(c,()=>editKey(c),'key');
     key.setAttribute('aria-label',c);virtualKeys.set(c,key);key.dataset.letter=c;row.append(key);
-    if(!vowelMarks[c])continue;
-    for(const [mark,position] of [['ˉ','up'],['ˊ','right'],['ˇ','down'],['ˋ','left']]){
-      const hint=node('span',mark,'tone-hint '+position);hint.setAttribute('aria-hidden','true');key.append(hint);
-    }
-    key.title='长按选择调号';key.setAttribute('aria-keyshortcuts','ArrowDown');
-    key.setAttribute('aria-controls','toneKeys');key.setAttribute('aria-expanded','false');
-    key.addEventListener('contextmenu',e=>e.preventDefault());
-    key.addEventListener('pointerdown',e=>{
-      if(e.button!==0 || !toneEnabled())return;
-      clearTimeout(holdTimer);held=false;selected=-1;startX=e.clientX;startY=e.clientY;
-      key.setPointerCapture?.(e.pointerId);
-      holdTimer=setTimeout(()=>{held=true;openToneKeys(c)},450);
-    });
-    key.addEventListener('pointermove',e=>{
-      if(!held||!toneDirection)return;
-      const dx=e.clientX-startX,dy=e.clientY-startY,threshold=18,edge=toneDirection.edge;
-      selected=Math.max(Math.abs(dx),Math.abs(dy))<threshold?-1:
-        dy < -threshold*.7 && Math.abs(dx)>=threshold*.7 && edge && Math.sign(dx)===-edge ? (edge<0?3:1):
-        Math.abs(dx)>Math.abs(dy)?(dx>0?1:3):(dy<0?0:2);
-      toneDirection.options.forEach((opt,i)=>opt.classList.toggle('selected',i===selected));
-    });
-    key.addEventListener('pointerup',()=>{
-      clearTimeout(holdTimer);
-      if(held && selected>=0 && toneDirection){const symbol=vowelMarks[c][selected];editKey(symbol);closeToneKeys()}
-    });
-    key.addEventListener('pointercancel',()=>{clearTimeout(holdTimer);if(held)closeToneKeys();held=false});
-    key.addEventListener('keydown',e=>{
-      if(e.key==='ArrowDown' && toneEnabled()){e.preventDefault();held=false;openToneKeys(c,true)}
-    });
   }
   $('keys').append(row);
 }
@@ -838,8 +821,7 @@ function mark(el){marked?.classList.remove('lit');marked=el;marked?.classList.ad
 function updateTransport(status,label){
   $('playStatus').textContent=status;$('pause').textContent=label;$('take').hidden=!demoActive;
 }
-function takeOver(keepPalette=false){
-  if(!keepPalette)closeToneKeys();
+function takeOver(){
   demoSpelling=null;
   clearTimeout(timer);playing=false;demoActive=false;mark(null);saved=null;
   updateTransport('自由输入','播放山歌');
@@ -872,32 +854,10 @@ function advance(){
   const {entry,end,paragraph}=noteWords[token];
   const keys=Array.from((tonePlayback?entry.diacritic:entry.plain).normalize('NFC').replace(/[\s-]/g,''));
   $('playStatus').textContent='第 '+paragraph+' / '+noteStory.sections.length+' 行 · '+(token+1)+' / '+noteWords.length+' 词';
-  if(phase==='type'||phase==='toneMenu'||phase==='toneChoice'||phase==='toneInput'){
+  if(phase==='type'){
     const symbol=keys[letter], base=symbol.normalize('NFD')[0];
-    if(phase==='type' && symbol!==base && vowelMarks[base]?.includes(symbol)){
-      $('playStatus').textContent='长按 '+base.toUpperCase()+' 键，选 '+symbol;
-      mark(virtualKeys.get(base));phase='toneMenu';schedule(token<2?1300:220);return;
-    }
-    if(phase==='toneMenu'){
-      $('playStatus').textContent='在四个调号中选 '+symbol;
-      openToneKeys(base);mark(virtualKeys.get(base));
-      phase='toneChoice';schedule(token<2?1400:220);return;
-    }
-    if(phase==='toneChoice'){
-      mark([...$('toneKeys').children].find(key=>key.textContent===symbol));
-      phase='toneInput';schedule(token<2?1400:220);return;
-    }
-    if(tonePlayback){
-      draft.setSelectionRange(draft.value.length,draft.value.length);
-      if(phase==='toneInput'){
-        const option=[...$('toneKeys').children].find(key=>key.textContent===symbol);
-        option.onclick();
-      }else{
-        mark(virtualKeys.get(symbol));editKey(symbol);
-      }
-    }else{
-      mark(virtualKeys.get(symbol));change(draft.value+symbol);
-    }
+    mark(virtualKeys.get(base));
+    change(draft.value+symbol);
     letter++;phase=letter===keys.length?'review':'type';
     schedule(token<2?650:190);
   }else if(phase==='review'){
@@ -928,7 +888,7 @@ $('pause').onclick=()=>{
 $('take').onclick=()=>{takeOver();choose(typingMode);keyboardOpen(true);draft.focus()};
 function handleManual(e){
   if(!demoActive || e.target.closest('.transport,.demo-select,#settingsPanel,#openSettings,#kbSettings'))return;
-  takeOver(!!e.target.closest('#toneKeys'));
+  takeOver();
 }
 document.addEventListener('pointerdown',handleManual,true);
 document.addEventListener('keydown',e=>{if(e.key!=='Tab')handleManual(e)},true);

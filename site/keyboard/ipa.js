@@ -1,15 +1,32 @@
-// IPA layout and completion data follow the Android keyboard's IpaKeyboard.
+// Use the Android IPA completion vocabulary with a chart and an ASCII input scheme.
 (() => {
-  const letters = [
-    [['q'],['w'],['e','ə','ɛ','ẽ'],['r','²¹'],['t','ts','tsʰ','tɕ','tɕʰ','tʰ','ʈ','ʈʰ'],['y','ɤ','ɥ','ỹ'],['u','ɯ','ʊ','ʉ','ũ'],['i','ɪ','ɨ','ɿ','ʅ','ĩ'],['o','ɔ','ø','õ'],['p','ɸ','pʰ']],
-    [['a','ɑ','ʌ','ã'],['s','ʂ','ʃ'],['d','dz','dʑ','ɖ'],['f','³⁵'],['g','ɣ','ɡ','ʁ'],['h','ʰ','ħ','ʕ'],['j','³³'],['k','kʰ'],['l','¹³']],
-    [['z','ʐ','ʒ','ʑ'],['x','⁵⁵'],['c','ɕ'],['v','⁵³'],['b'],['n','ŋ','ȵ','ɲ'],['m','m̩']]
+  const initials = [
+    ['唇音','p pʰ b m ɸ f w'], ['舌尖音','t tʰ d n l'],
+    ['齿龈音','ts tsʰ dz s z'], ['龈腭音','tɕ tɕʰ dʑ ɕ ʑ ȵ j'],
+    ['软腭音','k kʰ ɡ ŋ x ɣ'], ['喉音','h ʔ']
   ];
-  const symbols = [[['¹'],['²'],['³'],['⁴'],['⁵'],['/'],['['],[']'],['('],[')']],
-    [['̃'],['̩'],['͡'],['̥'],['̬'],['-'],['.'],['ʰ'],['ɿ'],['ʅ']],
-    [['ħ'],['ʕ'],['ʁ'],['ɣ'],['ȵ'],['ʉ'],['ɯ'],['ʑ']]];
-  let lexicon = [], symbolMode = false, dialects = 1;
-  try { const saved=Number(localStorage.getItem('tujia-site-ipa-dialects')); if ([0,1,2,3].includes(saved) && localStorage.getItem('tujia-site-ipa-dialects')!==null) dialects=saved; } catch {}
+  const vowels = [
+    ['i',10,13],['y',24,13],['ɨ',49,13],['ɯ',75,13],['u',89,13],
+    ['e',20,37],['ə',53,49],['ɤ',75,37],['o',89,37],
+    ['ɛ',28,62],['ɔ',89,62],['æ',37,84],['a',54,85],['ɑ',89,85]
+  ];
+  const vowelMark='\u0303';
+  const vowelPattern=/[iyɨɯueəɤoɛɔæaɑɿ]\p{M}*/gu;
+  const codes = Object.assign(Object.create(null), {
+    ph:'pʰ',th:'tʰ',kh:'kʰ',tsh:'tsʰ',tjh:'tɕʰ',tj:'tɕ',dj:'dʑ',sj:'ɕ',zj:'ʑ',nj:'ȵ',ng:'ŋ',
+    g:'ɡ',gh:'ɣ',pf:'ɸ',qq:'ʔ',ih:'ɨ',uh:'ɯ',ee:'ɛ',eh:'ə',eo:'ɤ',oo:'ɔ',aa:'ɑ',ae:'æ',ii:'ɿ', '^h':'ʰ',
+    'm:':'m̩','ng:':'ŋ̍'
+  });
+  const symbolCodes=new Map();
+  for(const [key,value] of Object.entries(codes)) symbolCodes.set(value,key);
+  const tokens = Object.keys(codes).sort((a,b)=>b.length-a.length);
+  const superscript=digits=>digits.replace(/[1-5]/g,digit=>'¹²³⁴⁵'[Number(digit)-1]);
+  let lexicon=[],dialects=1,scheme='chart',nasal;
+  try{
+    const saved=localStorage.getItem('tujia-site-ipa-dialects');
+    if(saved!==null && /^[0-3]$/.test(saved))dialects=Number(saved);
+    if(localStorage.getItem('tujia-site-ipa-layout')==='ascii')scheme='ascii';
+  }catch{}
   const normalize=s=>s.toLowerCase().normalize('NFD').replace(/\s/g,'').replaceAll('g','ɡ').replaceAll('’',"'");
   const escape=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
   const sounds=/[\p{Script=Latin}\p{Lm}]/u;
@@ -25,15 +42,54 @@
     }
     return new RegExp(result,'u');
   }
+  function lastVowel(value){
+    const text=value.normalize('NFD');
+    const boundary=text.search(/[\s'’.-][^\s'’.-]*$/u)+1;
+    const match=[...text.slice(boundary).matchAll(vowelPattern)].at(-1);
+    return match&&{text,index:boundary+match.index,form:match[0]};
+  }
+  function toggleNasal(value){
+    const vowel=lastVowel(value);
+    if(!vowel)return value;
+    const {text,index,form}=vowel;
+    const marked=form.includes(vowelMark)?form.replace(vowelMark,''):form+vowelMark;
+    return (text.slice(0,index)+marked+text.slice(index+form.length)).normalize('NFC');
+  }
+  function convert(raw) {
+    let output='';
+    for(let i=0;i<raw.length;){
+      const rest=raw.slice(i);
+      if(rest[0]==='|'){i++;continue;}
+      if(rest[0]==='~'){output=toggleNasal(output);i++;continue;}
+      const tone=rest.match(/^:([1-5]{2})/);
+      if(tone){output+=superscript(tone[1]);i+=tone[0].length;continue;}
+      const token=tokens.find(t=>rest.startsWith(t));
+      if(token){output+=codes[token];i+=token.length;continue;}
+      output+=raw[i++];
+    }
+    return output.normalize('NFC');
+  }
+  function fromDraft(value){return scheme==='ascii'?convert(value):value;}
+  function readingTone(value,cursor=value.length){return scheme==='ascii' && /:([1-5])?$/.test(value.slice(0,cursor));}
+  window.keyboardIPA={fromDraft,readingTone,acceptsKey(key){
+    return scheme==='ascii' && (/^[~:|^]$/.test(key)||(/^[1-5]$/.test(key)&&readingTone(draft.value,draft.selectionEnd)));
+  }};
+  function paintNasal(){
+    if(!nasal)return;
+    const vowel=lastVowel(fromDraft(draft.value.slice(0,draft.selectionEnd)));
+    nasal.disabled=!vowel;
+    nasal.setAttribute('aria-pressed',String(!!vowel?.form.includes(vowelMark)));
+  }
   window.ipaCandidates=()=>{
-    const raw=draft.value, prefix=normalize(raw);
+    const raw=fromDraft(draft.value), prefix=normalize(raw);
+    paintNasal();
     $('draftBar').classList.toggle('has-text',!!raw);
     candidateItems=[];
     if(raw){
       const matching=lexicon.filter(e=>(e.mask&dialects) && e.normalized===prefix);
       const push=(form,meaning)=>candidateItems.push({form,meaning,short:meaning,fullGloss:meaning,source:'ipa',kind:0,consumed:raw.length,commit:()=>submit(form)});
       push(raw,[...new Set(matching.map(e=>e.meaning))].join('；'));
-      candidateItems.push(...learnedChoices(raw).filter(x=>x.form!==raw));
+      candidateItems.push(...learnedChoices(draft.value).filter(x=>x.form!==raw));
       if(prefix.length<=64 && sounds.test(prefix) && dialects){
         const exact=pattern(prefix,false),relaxed=pattern(prefix,true),seen=new Set([prefix]),a=[],b=[];
         for(const entry of lexicon){if(!(entry.mask&dialects)||seen.has(entry.normalized))continue;
@@ -48,39 +104,100 @@
   fetch('ipa-completions.tsv').then(r=>{if(!r.ok)throw Error('IPA vocabulary unavailable');return r.text()}).then(text=>{
     lexicon=text.split('\n').filter(s=>s&&!s.startsWith('#')).map(line=>{const [mask,ipa,...rest]=line.split('\t');return {mask:Number(mask),ipa:ipa.replace(/\s/g,''),meaning:rest.join('\t'),normalized:normalize(ipa)}});
     window.tujiaIpaEntries=lexicon; if(mode===3)window.ipaCandidates();
-  }).catch(()=>{ $('ipaStatus').textContent='音标词库加载失败'; });
-  const settings=node('div','','ipa-settings');settings.id='ipaSettings';settings.hidden=true;
-  settings.append(node('span','音标补全：'));
-  for(const [name,bit] of [['北部',1],['南部',2]]){
-    const label=node('label',''),check=document.createElement('input');check.type='checkbox';check.checked=!!(dialects&bit);
-    check.addEventListener('change',()=>{dialects=check.checked?dialects|bit:dialects&~bit;try{localStorage.setItem('tujia-site-ipa-dialects',String(dialects))}catch{}window.ipaCandidates()});
-    label.append(check,document.createTextNode(name));settings.append(label);
+  }).catch(()=>{$('ipa-load-status').textContent='音标词库加载失败';});
+
+  const area=$('ipaKeys');
+  const toolbar=node('div','','ipa-toolbar'),schemes=node('div','','ipa-schemes');
+  const chartChoice=button('音系图',()=>setScheme('chart'));
+  const asciiChoice=button('组合键',()=>setScheme('ascii'));
+  schemes.append(chartChoice,asciiChoice);
+  const dialectSelect=node('select','');dialectSelect.setAttribute('aria-label','音标补全方言');
+  for(const [mask,name] of [[1,'北部'],[2,'南部'],[3,'南北部'],[0,'关闭补全']]){
+    const option=node('option',name);option.value=mask;dialectSelect.append(option);
   }
-  const status=node('span','','');status.id='ipaStatus';status.setAttribute('role','status');settings.append(status);
-  $('kbMorePanel').append(settings);
-  function rebuild(){
-    const area=$('ipaKeys');area.replaceChildren();
-    for(const row of symbolMode?symbols:letters){const line=node('div','','row');
-      for(const options of row){
-        let held=false,timer;const label=/^\p{M}$/u.test(options[0])?'◌'+options[0]:options[0];
-        const key=button(label,()=>{if(held){held=false;return}editKey(options[0])},'key');
-        if(options.length>1){key.title='长按选择音标';key.setAttribute('aria-label',options[0]+'，长按选择音标');
-          const show=()=>{held=true;area.querySelector('.ipa-popup')?.remove();const pop=node('div','','ipa-popup');
-            for(const value of options){const option=button(value,()=>{editKey(value);pop.remove()},'');pop.append(option)}
-            const close=button('×',()=>pop.remove());close.setAttribute('aria-label','关闭');pop.append(close);area.append(pop)};
-          key.addEventListener('pointerdown',()=>{held=false;timer=setTimeout(show,450)});
-          for(const ev of ['pointerup','pointerleave','pointercancel'])key.addEventListener(ev,()=>clearTimeout(timer));
-          key.addEventListener('contextmenu',e=>{e.preventDefault();show()});
-        }
-        line.append(key);
-      } area.append(line);
+  dialectSelect.value=dialects;
+  dialectSelect.onchange=()=>{
+    dialects=Number(dialectSelect.value);
+    try{localStorage.setItem('tujia-site-ipa-dialects',String(dialects))}catch{}
+    rebuild();candidates();
+  };
+  toolbar.append(schemes,dialectSelect);area.append(toolbar);
+  const hint=node('p','','ipa-hint');
+  for(const [keys,label] of [['zj',' → ʑ'],['eo',' → ɤ'],['kh',' → kʰ'],[':55',' → ⁵⁵'],['~','加鼻化'],['|','分隔组合']]){
+    const item=node('span','');item.append(node('kbd',keys),' ',node('span',label));hint.append(item);
+  }
+  const chart=node('div','','ipa-chart'),tones=node('div','','ipa-tones');
+  const status=node('span','','ipa-status');status.id='ipa-load-status';status.setAttribute('role','status');
+  area.append(hint,chart,tones,status);
+  function setScheme(next){
+    if(next===scheme)return;
+    if(draft.value)submit(fromDraft(draft.value));
+    scheme=next;
+    try{localStorage.setItem('tujia-site-ipa-layout',scheme)}catch{}
+    rebuild();candidates();
+  }
+  function preserveDraft(key){key.addEventListener('pointerdown',event=>event.preventDefault());return key;}
+  function soundKey(ipa,code){
+    const key=preserveDraft(button('',()=>editKey(scheme==='ascii'?(code||ipa)+'|':ipa),'key ipa-sound'));
+    key.dataset.symbol=ipa;key.setAttribute('aria-label',ipa);
+    key.append(node('span',ipa,'ipa-glyph'));
+    if(scheme==='ascii'&&code&&code!==ipa)key.append(node('kbd',code));
+    return key;
+  }
+  function buildVowelChart(){
+    const group=node('section','','ipa-vowels');
+    const heading=node('div','','vowel-heading');
+    nasal=preserveDraft(button('',()=>{
+      const cursor=draft.selectionEnd,before=draft.value.slice(0,cursor);
+      if(scheme==='ascii'){editKey('~|');return;}
+      const marked=toggleNasal(before);
+      draft.setRangeText(marked,0,cursor,'end');change(draft.value);
+    },'key nasal-key'));
+    nasal.id='ipa-nasal';
+    const mark=node('span','◌̃','ipa-glyph');mark.setAttribute('aria-hidden','true');
+    nasal.append(mark,node('span','鼻化'));
+    if(scheme==='ascii')nasal.append(node('kbd','~'));
+    heading.append(node('h3','元音图'),nasal);group.append(heading);
+    const frame=node('div','','vowel-frame'),axis=node('div','','vowel-axis'),plot=node('div','','vowel-plot');
+    for(const label of ['前','央','后'])axis.append(node('span',label));
+    const ns='http://www.w3.org/2000/svg';
+    const svg=document.createElementNS(ns,'svg'),path=document.createElementNS(ns,'path');
+    svg.setAttribute('viewBox','0 0 100 100');svg.setAttribute('preserveAspectRatio','none');svg.setAttribute('aria-hidden','true');
+    path.setAttribute('d','M10 13H89V85H42ZM20 37H89M31 62H89M49 13L60 85');
+    path.setAttribute('vector-effect','non-scaling-stroke');svg.append(path);plot.append(svg);
+    for(const [ipa,x,y] of vowels){
+      const key=soundKey(ipa,symbolCodes.get(ipa));
+      key.style.setProperty('--x',x+'%');key.style.setProperty('--y',y+'%');plot.append(key);
     }
-    const line=node('div','','row');
-    line.append(button(symbolMode?'ABC':'?123',()=>{symbolMode=!symbolMode;rebuild()},'key wide'));
-    for(const tone of ['⁵⁵','²¹','⁵³','²⁴','³³','¹³'])line.append(button(tone,()=>editKey(tone),'key'));
-    line.append(button('空格',()=>draft.value?(firstCommit?firstCommit():submit(draft.value)):submit(' '),'key wide'),button('⌫',()=>editKey('⌫'),'key wide'));
-    area.append(line);
+    frame.append(axis,plot);group.append(frame);
+    const extra=node('div','','vowel-extra');
+    extra.append(node('span','舌尖'),soundKey('ɿ',symbolCodes.get('ɿ')),node('span','成节鼻音'),soundKey('m̩','m:'),soundKey('ŋ̍','ng:'));
+    group.append(extra);
+    return group;
   }
-  $('ipaMode').onclick=()=>{choose(3);$('menuOutputs').hidden=true;settings.hidden=false;rebuild();window.ipaCandidates()};
-  $('typeMode').addEventListener('click',()=>{$('menuOutputs').hidden=false;settings.hidden=true});
+  function rebuild(){
+    chartChoice.setAttribute('aria-pressed',String(scheme==='chart'));
+    asciiChoice.setAttribute('aria-pressed',String(scheme==='ascii'));
+    hint.hidden=scheme!=='ascii';
+    const initialGroup=node('section','','ipa-initials'),grid=node('div','','initial-grid');
+    initialGroup.append(node('h3','声母'),grid);
+    for(const [caption,list] of initials){
+      const line=node('div','','initial-row');line.append(node('span',caption,'initial-label'));
+      for(const ipa of list.split(' '))line.append(soundKey(ipa,symbolCodes.get(ipa)));
+      grid.append(line);
+    }
+    chart.replaceChildren(initialGroup,buildVowelChart());
+    const values=dialects===2?['33','21','55','13']:['55','21','53','24','33','13','35','51'];
+    const toneRow=node('div','','ipa-tone-row');
+    for(const digits of values)toneRow.append(soundKey(superscript(digits),':'+digits));
+    const utilities=node('div','','ipa-utilities');
+    utilities.append(soundKey('ʰ','^h'),preserveDraft(button('空格',()=>{
+      if(draft.value)submit(fromDraft(draft.value));else submit(' ');
+    },'key ipa-action')),preserveDraft(button('⌫',()=>editKey('⌫'),'key ipa-action')));
+    tones.replaceChildren(node('h3','声调'),toneRow,utilities);
+    paintNasal();
+  }
+  $('ipaMode').onclick=()=>{choose(3);rebuild();candidates()};
+  $('voiceMode').addEventListener('click',()=>{if($('voicePanel').hidden)return;setMore(false)});
+  draft.addEventListener('select',paintNasal);
 })();

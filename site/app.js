@@ -7,7 +7,7 @@ const contains=(s,q)=>searchNormalize(s).includes(searchNormalize(q));
 const DEFAULT_STATE={view:'home',q:'',scheme:'',pos:'',topic:'',dialect:'',kind:'',status:'',genre:'',collection:'',category:'',sourceFilter:'',dataset:'',priority:'',batch:'',chapter:'1',grammarAnchor:'',grammarSection:'',grammarDialect:'north',grammarSourceScope:'',page:1,exact:false,hideWholeLoans:false,searchLanguage:'',browseWords:false,corpusCollection:''};
 let state={...DEFAULT_STATE}, currentDetail=null,currentOverlay=null;
 let wordExportPending=false;
-const titles={keyboard:'土家语输入法',notation:'记音对应与补全',home:'知识总览',words:'词汇检索',topics:'语法与专题',corpus:'例句语料',sources:'全部文献',history:'历史比较',grammar:'参考语法'};
+const titles={keyboard:'输入法',notation:'记音对应与补全',home:'知识总览',words:'词汇检索',topics:'语法与专题',corpus:'例句语料',sources:'全部文献',history:'历史比较',grammar:'参考语法'};
 const descriptions={notation:'',words:'',topics:'按主题浏览研究文献。',corpus:'阅读故事、民歌与日常对话。',sources:'',history:'比较各方言的词形与历史重建。',grammar:''};
 function toast(s){$('#toast').textContent=s;$('#toast').style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').style.display='none',2400)}
 function pill(t,w=false){return `<span class="pill${w?' warn':''}">${E(t)}</span>`}
@@ -386,7 +386,7 @@ window.addEventListener('scroll',()=>{
  scrollSaveTimer=setTimeout(saveNavigationPosition,200);
 },{passive:true});
 window.addEventListener('pagehide',saveNavigationPosition);
-window.addEventListener('message',event=>{const frame=document.querySelector('.keyboard-frame');if(event.origin===location.origin && event.source===frame?.contentWindow && event.data?.type==='keyboard-height')frame.style.height=Math.max(740,Math.min(1600,Number(event.data.height)||0))+'px';});
+window.addEventListener('message',event=>{const frame=document.querySelector('.keyboard-frame');if(event.origin===location.origin && event.source===frame?.contentWindow && event.data?.type==='keyboard-height')frame.style.height=Math.max(360,Math.min(2600,Number(event.data.height)||0))+'px';});
 function render(){
  if(window.SitePages){
   saveNavigationPosition();
@@ -409,7 +409,7 @@ function render(){
   else if(button.right>box.right)nav.scrollLeft+=button.right-box.right;
  }
  $('#crumb').textContent=titles[state.view]||'知识检索';
- const views={keyboard:()=>`<section class="keyboard-view"><h1>土家语输入法</h1><iframe class="keyboard-frame" title="土家语输入法" src="keyboard/index.html?v=site-20261128c"></iframe></section>`,home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:()=>historyView(),grammar:()=>grammarView(),notation:()=>notationView()};
+ const views={keyboard:()=>`<section class="keyboard-view"><h1>输入法</h1><iframe class="keyboard-frame" title="输入法" src="keyboard/index.html?v=phonology-1"></iframe></section>`,home:()=>state.q?globalView():overview(),words:wordView,sources:sourcesView,corpus:corpusView,history:()=>historyView(),grammar:()=>grammarView(),notation:()=>notationView()};
  $('#main').innerHTML=views[state.view]();
  bindMain();if(typeof bindNotationView==='function')bindNotationView();if(window.tasteRefresh)tasteRefresh();if(window.TujiaUI)TujiaUI.refresh();
  finishNavigation(previous);

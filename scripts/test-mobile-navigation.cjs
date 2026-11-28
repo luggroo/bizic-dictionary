@@ -281,6 +281,42 @@ async function main(){
   }
  }
  pass('84 page/language/viewport combinations (320–1280 px) without page overflow or arrow-only filter labels');
+ for(const width of [320,390,1280]){
+  await page.setViewportSize({width,height:844});
+  await page.goto(base+'#keyboard');await page.reload();await ready('keyboard');
+  await page.selectOption('#ui-language','zh');
+  assert.equal(await page.locator('aside .nav-repo-link + [data-view="keyboard"]').count(),1);
+  const frame=page.frameLocator('.keyboard-frame');
+  await frame.locator('#result').click();
+  await frame.locator('#keys [data-letter="a"]').click();
+  await frame.locator('#toneKeys button').nth(1).click();
+  assert.equal(await frame.locator('.pending-text').textContent(),'á');
+  await frame.locator('#toneKeys button').nth(3).click();
+  assert.equal(await frame.locator('.pending-text').textContent(),'à');
+  await frame.locator('#draft').press('1');
+  assert.match(await frame.locator('#result').textContent(),/à$/u);
+  await frame.locator('#ipaMode').click();
+  await frame.locator('.ipa-schemes button').first().click();
+  await frame.locator('.ipa-initials [data-symbol="m"]').click();
+  await frame.locator('.vowel-plot [data-symbol="a"]').click();
+  await frame.locator('#ipa-nasal').click();
+  await frame.locator('.ipa-tone-row [data-symbol="²¹"]').click();
+  assert.equal(await frame.locator('.pending-text').textContent(),'mã²¹');
+  await frame.locator('#draft').press('1');
+  await frame.locator('.ipa-schemes button').last().click();
+  await frame.locator('#draft').pressSequentially('kheo~:55');
+  assert.equal(await frame.locator('.pending-text').textContent(),'kʰɤ̃⁵⁵');
+  const layout=await frame.locator('#play').evaluate(async panel=>{
+   const doc=panel.ownerDocument;
+   await doc.fonts.ready;
+   const keys=[...panel.querySelectorAll('.ipa-chart button,.ipa-tones button')].map(el=>el.getBoundingClientRect());
+   const overlap=keys.some((a,i)=>keys.slice(i+1).some(b=>Math.min(a.right,b.right)-Math.max(a.left,b.left)>1 && Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)>1));
+   const editor=doc.querySelector('#result').getBoundingClientRect(),draft=doc.querySelector('#preeditPreview').getBoundingClientRect();
+   return {overlap,overflow:doc.documentElement.scrollWidth>doc.defaultView.innerWidth+1,aligned:editor.left===draft.left&&editor.top===draft.top&&editor.width===draft.width,font:doc.fonts.check('16px "Charis SIL"','kʰɤ̃⁵⁵')};
+  });
+  assert.deepEqual(layout,{overlap:false,overflow:false,aligned:true,font:true},'keyboard at '+width+'px');
+ }
+ pass('Tujia keyboard independent tones, IPA nasalization, number selection, fonts and key spacing at 320, 390 and 1280 px');
  assert.deepEqual(errors,[],'Unhandled browser errors');
  assert.deepEqual(badAssets,[],'Required application assets must load');
  console.log(JSON.stringify({engine,checks:checks.length,browserErrors:errors,failedAssets:badAssets},null,2));
