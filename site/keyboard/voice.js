@@ -41,10 +41,11 @@
   }
   let resultText='';
   function result(text){resultText=text;$('voiceRaw').textContent=text;$('voiceResult').hidden=false;const list=$('voiceMatches');list.replaceChildren();
-    for(const e of matches(text)){const b=button('',()=>submit(e.ipa));b.append(node('b',e.ipa),node('span',e.meaning));list.append(b)}
+    for(const e of matches(text)){const b=button('',()=>insertVoice(e.ipa));b.append(node('b',e.ipa),node('span',e.meaning));list.append(b)}
     if(!list.childNodes.length)list.textContent='没有足够接近的词，可以使用原始结果。';
   }
-  $('voiceInsert').onclick=()=>{if(resultText)submit(resultText)};
+  function insertVoice(value){if(draft.value)submit(draft.value);submit(value)}
+  $('voiceInsert').onclick=()=>{if(resultText)insertVoice(resultText)};
   run.onclick=async()=>{if(!blob)return;if(blob.size>5*1024*1024){tell('音频超过 5 MB，请缩短后重试。');return}run.disabled=true;record.disabled=true;tell('正在联网识别，可能需要几十秒…');
     try{const data=await gradio(asr,[await dataUrl(blob),0,true,30]);const obj=typeof data[0]==='string'?JSON.parse(data[0]):data[0];if(!obj?.ok)throw Error(obj?.error||'识别失败');if(!obj.text_sup)throw Error('没有识别到音节，请重试');result(obj.text_sup);tell('识别完成，可选择结果输入。')}
     catch(e){tell(e.message||'识别失败，请检查网络。')}finally{run.disabled=false;record.disabled=false}
