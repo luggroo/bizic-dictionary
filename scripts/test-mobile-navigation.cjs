@@ -333,6 +333,8 @@ async function main(){
   await frame.locator('.initial-grid [data-symbol="ħ"]:not(.ipa-unattested)').waitFor();
   await frame.locator('.initial-grid [data-symbol="ȵ"]:not(.ipa-unattested)').waitFor();
   assert.equal(await frame.locator('.initial-grid [data-symbol="ʕ"]').count(),1);
+  assert.equal(await frame.locator('.vowel-plot [data-symbol="ʉ"]').count(),1);
+  assert.deepEqual(await frame.locator('.vowel-plot .vowel-extra-key .ipa-glyph').allTextContents(),['ɿ','m̩','ŋ̍']);
   await frame.locator('.ipa-initials [data-symbol="k"]').click();
   await frame.locator('.initial-grid [data-symbol="ʰ"]').click();
   await frame.locator('.vowel-plot [data-symbol="a"]').click();

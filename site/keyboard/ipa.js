@@ -2,15 +2,15 @@
 (() => {
   const initials = 'p pʰ b m ɸ f w t tʰ d n l ts tsʰ dz s z tɕ tɕʰ dʑ ɕ ʑ ȵ j k kʰ ɡ ŋ x ɣ ħ ʕ h ʔ'.split(' ');
   const vowels = [
-    ['i',10,13],['y',24,13],['ɨ',49,13],['ɯ',75,13],['u',89,13],
-    ['e',20,37],['ə',53,49],['ɤ',75,37],['o',89,37],
-    ['ɛ',28,62],['ɔ',89,62],['æ',37,84],['a',54,85],['ɑ',89,85]
+    ['i',10,13],['y',24,13],['ɨ',49,13],['ʉ',62,13],['ɯ',75,13],['u',89,13],
+    ['e',22,37],['ə',56,49],['ɤ',75,37],['o',89,37],
+    ['ɛ',34,62],['ɔ',89,62],['æ',46,85],['a',61,85],['ɑ',89,85]
   ];
   const vowelMark='\u0303';
-  const vowelPattern=/[iyɨɯueəɤoɛɔæaɑɿ]\p{M}*/gu;
+  const vowelPattern=/[iyɨʉɯueəɤoɛɔæaɑɿ]\p{M}*/gu;
   const codes = Object.assign(Object.create(null), {
     ph:'pʰ',th:'tʰ',kh:'kʰ',tsh:'tsʰ',tjh:'tɕʰ',tj:'tɕ',dj:'dʑ',sj:'ɕ',zj:'ʑ',nj:'ȵ',ng:'ŋ',
-    g:'ɡ',gh:'ɣ',hh:'ħ',qh:'ʕ',pf:'ɸ',qq:'ʔ',ih:'ɨ',uh:'ɯ',ee:'ɛ',eh:'ə',eo:'ɤ',oo:'ɔ',aa:'ɑ',ae:'æ',ii:'ɿ', '^h':'ʰ',
+    g:'ɡ',gh:'ɣ',hh:'ħ',qh:'ʕ',pf:'ɸ',qq:'ʔ',ih:'ɨ',uy:'ʉ',uh:'ɯ',ee:'ɛ',eh:'ə',eo:'ɤ',oo:'ɔ',aa:'ɑ',ae:'æ',ii:'ɿ', '^h':'ʰ',
     'm:':'m̩','ng:':'ŋ̍'
   });
   const symbolCodes=new Map();
@@ -185,16 +185,15 @@
     const ns='http://www.w3.org/2000/svg';
     const svg=document.createElementNS(ns,'svg'),path=document.createElementNS(ns,'path');
     svg.setAttribute('viewBox','0 0 100 100');svg.setAttribute('preserveAspectRatio','none');svg.setAttribute('aria-hidden','true');
-    path.setAttribute('d','M10 13H89V85H42ZM20 37H89M31 62H89M49 13L60 85');
+    path.setAttribute('d','M10 13H89V85H46L34 62L22 37ZM22 37H89M34 62H89M49 13L61 85');
     path.setAttribute('vector-effect','non-scaling-stroke');svg.append(path);plot.append(svg);
-    for(const [ipa,x,y] of vowels){
+    const extraVowels=[['ɿ',8,85,true],['m̩',18,85,true],['ŋ̍',28,85,true]];
+    for(const [ipa,x,y,isExtra] of [...vowels,...extraVowels]){
       const key=soundKey(ipa,symbolCodes.get(ipa));
+      if(isExtra)key.classList.add('vowel-extra-key');
       key.style.setProperty('--x',x+'%');key.style.setProperty('--y',y+'%');plot.append(key);
     }
     frame.append(axis,plot);group.append(frame);
-    const extra=node('div','','vowel-extra');
-    extra.append(soundKey('ɿ',symbolCodes.get('ɿ')),soundKey('m̩','m:'),soundKey('ŋ̍','ng:'));
-    group.append(extra);
     return group;
   }
   function rebuild(){

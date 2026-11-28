@@ -144,11 +144,10 @@ body.keyboard-open #play {padding-bottom: 0}
 .vowel-plot path {fill: none; stroke: #8ea997}
 #ipaKeys .vowel-plot .ipa-sound {position: absolute; left: var(--x); top: var(--y); width: min(13%, 47px); min-height: 29px; transform: translate(-50%, -50%)}
 #ipaKeys .vowel-plot .ipa-sound {gap: 0}
+#ipaKeys .vowel-plot .vowel-extra-key {width: 9%; max-width: 34px}
 #ipaKeys .vowel-plot .ipa-glyph {font-size: 1rem}
 #ipaKeys .vowel-plot kbd {font-size: .56rem}
-.vowel-extra, .ipa-utilities {display: flex; flex-wrap: wrap; align-items: center; gap: 3px}
-.vowel-extra {margin-top: 3px}
-#ipaKeys .vowel-extra .key {width: auto; min-width: 30px; padding: 2px 4px}
+.ipa-utilities {display: flex; flex-wrap: wrap; align-items: center; gap: 3px}
 .ipa-tones {display: grid; grid-template-columns: minmax(0, 1fr) max-content; align-items: center; gap: 8px; margin-top: 6px; padding-top: 5px; border-top: 1px solid var(--rule)}
 .ipa-tone-row {display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 3px; max-width: 480px}
 #ipaKeys .ipa-tone-row .key {min-height: 44px; padding-inline: 6px}
