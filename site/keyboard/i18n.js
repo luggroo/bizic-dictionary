@@ -21,7 +21,7 @@
   '识别结果':'Transcription','输入原始结果':'Insert transcription',
   '词库推荐':'Dictionary suggestions','语音合成':'Speech synthesis','朗读记事本':'Read notepad aloud',
   '将记事本中的拼音或音标发送至 TujiaNLP，生成语音。':'Send the notepad’s romanization or IPA to TujiaNLP to generate speech.',
-  '在这里输入土家语…':'Type in Tujia here…','关闭':'Close','复制':'Copy'
+  '在这里输入土家语…':'Type in Tujia here…','关闭':'Close','复制':'Copy','已复制':'Copied','复制失败':'Copy failed'
  };
  const originals=new WeakMap();let language='zh';
  try{language=window.parent.document.documentElement.lang==='en'?'en':'zh'}catch{}

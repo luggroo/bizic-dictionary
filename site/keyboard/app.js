@@ -276,7 +276,27 @@ function count(){$('count').textContent=Array.from(output.value).length+' 字符
 function saveSiteNote(){try{sessionStorage.setItem('tujia-site-note',output.value)}catch{}}
 try{output.value=sessionStorage.getItem('tujia-site-note')||''}catch{}
 count();
-$('copyNote').onclick=async()=>{try{await navigator.clipboard.writeText(output.value);$('copyNote').textContent='已复制';setTimeout(()=>$('copyNote').textContent='复制',1500)}catch{output.focus()}};
+const copyNote=$('copyNote');
+let copyNoteTimer;
+copyNote.onclick=async()=>{
+  const text=output.value;
+  let copied=false;
+  try{await navigator.clipboard.writeText(text);copied=true}catch{
+    const buffer=document.createElement('textarea');
+    buffer.value=text;
+    buffer.readOnly=true;
+    buffer.style.cssText='position:fixed;inset:0 auto auto 0;opacity:0;pointer-events:none';
+    document.body.append(buffer);
+    buffer.select();
+    buffer.setSelectionRange(0,text.length);
+    try{copied=document.execCommand('copy')}catch{}
+    buffer.remove();
+    copyNote.focus({preventScroll:true});
+  }
+  copyNote.textContent=copied?'已复制':'复制失败';
+  clearTimeout(copyNoteTimer);
+  copyNoteTimer=setTimeout(()=>copyNote.textContent='复制',1500);
+};
 output.oninput=()=>{saveSiteNote();editRevision++;committedContext=null;handSession=null;count();candidates()};
 document.addEventListener('selectionchange',()=>{
   if(document.activeElement!==output||!committedContext)return;
@@ -648,7 +668,7 @@ function editKey(key){
     return;
   }
   let a=draft.selectionStart,b=draft.selectionEnd;
-  if(key==='⌫' && a===b)a=Math.max(0,a-1);
+  if(key==='⌫' && a===b)a=(mode===3?window.keyboardIPA?.backspaceStart(draft.value,a):undefined)??Math.max(0,a-1);
   draft.setRangeText(key==='⌫'?'':key,a,b,'end');
   drafts[draftSlot()]=draft.value;candidates();
   draft.focus({preventScroll:true});

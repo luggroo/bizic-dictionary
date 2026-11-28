@@ -339,6 +339,9 @@ async function main(){
   await dictionaries.selectOption('2');
   await frame.locator('.initial-grid [data-symbol="ħ"]:not(.ipa-unattested)').waitFor();
   await frame.locator('.initial-grid [data-symbol="ȵ"]:not(.ipa-unattested)').waitFor();
+  await frame.locator('.initial-grid [data-symbol="ħ"]').click();
+  assert((await frame.locator('#candidates .word strong').allTextContents()).some(form=>form.normalize('NFD').startsWith('h')));
+  await frame.locator('#noteBackspace').click();
   assert.equal(await frame.locator('.initial-grid [data-symbol="ʕ"]').count(),1);
   assert.equal(await frame.locator('.vowel-plot [data-symbol="ʉ"]').count(),1);
   assert.deepEqual(await frame.locator('.vowel-plot .vowel-extra-key .ipa-glyph').allTextContents(),['ɿ','m̩','ŋ̍']);
@@ -351,6 +354,9 @@ async function main(){
   await frame.locator('#draft').press('1');
   await frame.locator('#ipa-shortcuts').setChecked(true);
   await frame.locator('#draft').pressSequentially('kheo~:55');
+  assert.equal(await frame.locator('.pending-text').textContent(),'kʰɤ̃⁵⁵');
+  await frame.locator('.vowel-plot [data-symbol="ʉ"]').click();
+  await frame.locator('#noteBackspace').click();
   assert.equal(await frame.locator('.pending-text').textContent(),'kʰɤ̃⁵⁵');
   const layout=await frame.locator('#play').evaluate(async panel=>{
    const doc=panel.ownerDocument;

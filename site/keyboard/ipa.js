@@ -36,13 +36,13 @@
   const normalize=s=>s.toLowerCase().normalize('NFD').replace(/\s/g,'').replaceAll('g','ɡ').replaceAll('’',"'");
   const escape=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
   const sounds=/[\p{Script=Latin}\p{Lm}]/u;
-  function pattern(prefix,nasal) {
+  function pattern(prefix,nasal,southernH=false) {
     const parts=prefix.match(/[\p{Script=Latin}\p{Lm}]\p{M}*|[¹²³⁴⁵]+|[-']/gu)||[];
     let prev=false, result='^';
     for (const part of parts) {
       const letter=sounds.test(part);
       if(prev&&(letter||part==='-')) result+='[¹²³⁴⁵]*';
-      result+=escape(part);
+      result+=southernH&&part==='ħ'?'(?:ħ|h\\p{M}*)':escape(part);
       if(nasal && part.length===1 && 'aeiouyɑɐəɛɜɤɨɪɔʊʉɯøʌ'.includes(part)) result+='\\u0303?';
       prev=letter;
     }
@@ -77,7 +77,14 @@
   }
   function fromDraft(value){return scheme==='ascii'?convert(value):value;}
   function readingTone(value,cursor=value.length){return scheme==='ascii' && /:([1-5])?$/.test(value.slice(0,cursor));}
-  window.keyboardIPA={fromDraft,readingTone,acceptsKey(key){
+  function backspaceStart(value,cursor){
+    const before=value.slice(0,cursor);
+    if(scheme!=='ascii'||!before.endsWith('|'))return Math.max(0,cursor-1);
+    const segment=before.slice(0,-1).split('|').at(-1);
+    const token=segment.match(/:[1-5]{2}$/)?.[0]||tokens.find(code=>segment.endsWith(code))||Array.from(segment).at(-1)||'';
+    return cursor-1-token.length;
+  }
+  window.keyboardIPA={fromDraft,readingTone,backspaceStart,acceptsKey(key){
     return scheme==='ascii' && (/^[~:|^]$/.test(key)||(/^[1-5]$/.test(key)&&readingTone(draft.value,draft.selectionEnd)));
   }};
   function paintNasal(){
@@ -98,9 +105,12 @@
       candidateItems.push(...learnedChoices(draft.value).filter(x=>x.form!==raw));
       if(prefix.length<=64 && sounds.test(prefix) && dialects){
         const exact=pattern(prefix,false),relaxed=pattern(prefix,true),seen=new Set([prefix]),a=[],b=[];
+        const southernH=prefix.includes('ħ');
+        const southernExact=southernH?pattern(prefix,false,true):exact;
+        const southernRelaxed=southernH?pattern(prefix,true,true):relaxed;
         for(const entry of lexicon){if(!(entry.mask&dialects)||seen.has(entry.normalized))continue;
-          if(exact.test(entry.normalized)){a.push(entry);seen.add(entry.normalized)}
-          else if(relaxed.test(entry.normalized)){b.push(entry);seen.add(entry.normalized)}
+          if((entry.mask&2?southernExact:exact).test(entry.normalized)){a.push(entry);seen.add(entry.normalized)}
+          else if((entry.mask&2?southernRelaxed:relaxed).test(entry.normalized)){b.push(entry);seen.add(entry.normalized)}
         }
         for(const entry of [...a,...b])push(entry.ipa,entry.meaning);
       }
