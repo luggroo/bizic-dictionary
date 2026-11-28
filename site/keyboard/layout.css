@@ -153,6 +153,10 @@ body.keyboard-open #play {padding-bottom: 0}
 .ipa-utilities .key {width: auto; min-width: 27px}
 #ipaKeys .ipa-action {width: auto; padding-inline: 5px; font-size: .75rem}
 .ipa-status:empty {display: none}
+.voice-credits {margin: 14px 0 0; padding-top: 8px; border-top: 1px solid var(--rule); color: var(--quiet); font-size: .85rem; overflow-wrap: anywhere}
+.voice-credits div {display: flex; flex-wrap: wrap; gap: 0 8px}
+.voice-credits dd {margin: 0}
+.voice-credits a {color: var(--red); text-underline-offset: 2px}
 
 @media (max-width: 600px) {
   #inputDock .paper, body.keyboard-open #inputDock .paper {height: 98px}

@@ -7,6 +7,7 @@
   '输出形式':'Output form','更多设置':'More settings','返回拼音':'Back to typing','完成':'Done',
   '点调号键给当前音节加调。':'Tap a tone key to mark the current syllable.','空格':'Space','北部':'Northern','南部':'Southern',
   '音标补全：':'IPA suggestions:','北部土家语语音输入':'Northern Tujia voice input',
+  '语音识别来源':'Speech recognition source','土家语模型项目':'Tujia language model project',
   '录音或上传短音频，识别为国际音标。':'Record or upload a short clip to transcribe it in IPA.',
   '开始识别时，音频会发送至 TujiaNLP 的在线服务。':'Audio is sent to TujiaNLP when you start transcription.',
   '开始录音':'Start recording','结束录音':'Stop recording','上传音频':'Upload audio','开始识别':'Transcribe',
