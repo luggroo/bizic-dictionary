@@ -74,7 +74,9 @@ body.keyboard-open #play {padding-bottom: 0}
 #result.is-composing {color: transparent; caret-color: transparent}
 #preeditPreview {pointer-events: none}
 .pending-text {color: #24543f; background: #e2eee4; text-decoration: underline; text-underline-offset: .16em}
-.editorFoot {padding: 0 12px 5px}
+.editorFoot {align-items: center; padding: 0 6px 3px 12px}
+#noteBackspace {display: grid; place-items: center; min-width: 44px; min-height: 32px; border: 1px solid var(--rule); border-radius: 6px; background: var(--apricot); color: var(--ink)}
+#noteBackspace:active {background: #d8e9dd}
 
 #inputDock .kb, body.keyboard-open #inputDock .kb {
   height: auto;

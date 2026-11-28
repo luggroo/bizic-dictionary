@@ -313,7 +313,7 @@ body{background:transparent} main{padding:0!important}.workspace{display:block!i
 #keys .tone-hint.down{bottom:0}
 #toneKeys .tone-key,.ipa-popup button{border:1px solid #d6bda5}
 @media(max-width:800px){body.keyboard-open #inputDock{position:static!important;inset:auto!important;transform:none!important;width:100%!important;max-height:none!important}.workspace{padding:0!important}.paper{height:190px}.kb{height:340px}}
-</style><link rel="stylesheet" href="layout.css?v=phonology-11"></head>
+</style><link rel="stylesheet" href="layout.css?v=phonology-12"></head>
 <body>
 <header class="mast">
   <a class="brand" href="#play"><span class="brand-mark" aria-hidden="true"></span>土家语输入法</a>
@@ -343,7 +343,7 @@ body{background:transparent} main{padding:0!important}.workspace{display:block!i
     </section>
     <section id="play" aria-labelledby="note-heading">
       <div class="panelhead"><h2 id="note-heading">记事本</h2><button id="copyNote" type="button">复制</button><button id="openSettings" aria-haspopup="dialog">输出设置</button></div>
-      <div id="inputDock"><div class="paper"><span id="notebook-title">输入</span><div class="note-body"><div id="result" role="textbox" contenteditable="true" aria-multiline="true" tabindex="0" aria-label="记事本正文" aria-describedby="notebook-title" data-placeholder="在这里输入土家语…"></div><div id="preeditPreview" aria-hidden="true" hidden></div></div><div class="editorFoot"><small id="count">0 字符</small></div></div><div class="kb" id="keyboardPanel" hidden><div class="kbhead">
+      <div id="inputDock"><div class="paper"><span id="notebook-title">输入</span><div class="note-body"><div id="result" role="textbox" contenteditable="true" aria-multiline="true" tabindex="0" aria-label="记事本正文" aria-describedby="notebook-title" data-placeholder="在这里输入土家语…"></div><div id="preeditPreview" aria-hidden="true" hidden></div></div><div class="editorFoot"><small id="count">0 字符</small><button id="noteBackspace" type="button" aria-label="退格">⌫</button></div></div><div class="kb" id="keyboardPanel" hidden><div class="kbhead">
           <div class="inputModes" role="group" aria-label="输入方式"><button id="typeMode" type="button" aria-label="拼音"><span class="toolbar-icon" aria-hidden="true">Aa</span>拼音</button><button id="handMode" hidden type="button" aria-label="手写"><span class="toolbar-icon" aria-hidden="true">✎</span>手写</button><button id="ipaMode" type="button" aria-label="音标"><span class="toolbar-icon" aria-hidden="true">ɤ³⁵</span>音标</button></div>
           <div class="liveDraft" id="draftBar"><input id="draft" aria-label="输入草稿" autocomplete="off" autocapitalize="off" spellcheck="false" inputmode="none" dir="auto"></div>
           <button id="kbMore" type="button" aria-label="设置" aria-controls="kbMorePanel" aria-expanded="false"><span class="toolbar-icon" aria-hidden="true">⚙</span>设置</button>
@@ -396,4 +396,4 @@ body{background:transparent} main{padding:0!important}.workspace{display:block!i
   <h2 id="readForm"></h2><div id="readMeaning"></div><div id="readEdits"></div>
   <div id="readOutputs" class="outputMenu" role="group" aria-label="将这个词写成" hidden></div>
   <div class="readActions"><button id="readBack" type="button">返回候选</button><button id="readChoose" type="button">输入这个词</button></div>
-</dialog><dialog id="settingsPanel" aria-labelledby="outputTitle"><form method="dialog"><h2 id="outputTitle">输出形式</h2><div id="orthography" class="outputMenu" role="group" aria-labelledby="outputTitle"></div><p class="sub">点调号键给当前音节加调。</p><button id="closeSettings" value="done">完成</button></form></dialog><script src="words.js"></script><script src="story-words.js"></script><script src="engine-data.js"></script><script src="core-runtime.js"></script><script src="notepad.js"></script><script src="app.js?v=phonology-1"></script><script src="ipa.js?v=phonology-8"></script><script src="voice.js?v=phonology-3"></script><script src="i18n.js?v=phonology-8"></script></body></html>
+</dialog><dialog id="settingsPanel" aria-labelledby="outputTitle"><form method="dialog"><h2 id="outputTitle">输出形式</h2><div id="orthography" class="outputMenu" role="group" aria-labelledby="outputTitle"></div><p class="sub">点调号键给当前音节加调。</p><button id="closeSettings" value="done">完成</button></form></dialog><script src="words.js"></script><script src="story-words.js"></script><script src="engine-data.js"></script><script src="core-runtime.js"></script><script src="notepad.js"></script><script src="app.js?v=phonology-2"></script><script src="ipa.js?v=phonology-9"></script><script src="voice.js?v=phonology-3"></script><script src="i18n.js?v=phonology-9"></script></body></html>

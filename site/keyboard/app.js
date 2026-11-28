@@ -653,6 +653,8 @@ function editKey(key){
   drafts[draftSlot()]=draft.value;candidates();
   draft.focus({preventScroll:true});
 }
+$('noteBackspace').addEventListener('pointerdown',event=>event.preventDefault());
+$('noteBackspace').onclick=()=>editKey('⌫');
 const pinyinTones=[['ˉ','\u0304'],['ˊ','\u0301'],['ˇ','\u030c'],['ˋ','\u0300']];
 function pinyinVowelRun(value,cursor){
   const before=value.slice(0,cursor);
@@ -702,7 +704,7 @@ for(const chars of ['qwertyuiop','asdfghjkl','zxcvbnm']){
 }
 const last=node('div','','row');
 const separator=button("'",()=>editKey("'"),'key wide');
-virtualKeys.set("'",separator);last.append(separator,button('。',()=>draft.value?editKey('。'):submit('。'),'key wide'),button('空格',()=>draft.value?(firstCommit?firstCommit():editKey(' ')):submit(' '),'key wide'),button('⌫',()=>editKey('⌫'),'key wide'));$('keys').append(last);
+virtualKeys.set("'",separator);last.append(separator,button('。',()=>draft.value?editKey('。'):submit('。'),'key wide'),button('空格',()=>draft.value?(firstCommit?firstCommit():editKey(' ')):submit(' '),'key wide'));$('keys').append(last);
 const ctx=canvas.getContext('2d');
 function paint(){
   const w=canvas.clientWidth,h=canvas.clientHeight;if(!w||!h)return;

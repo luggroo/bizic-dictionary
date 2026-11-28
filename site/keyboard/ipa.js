@@ -210,7 +210,7 @@
     const utilities=node('div','','ipa-utilities');
     utilities.append(preserveDraft(button('空格',()=>{
       if(draft.value)submit(fromDraft(draft.value));else submit(' ');
-    },'key ipa-action')),preserveDraft(button('⌫',()=>editKey('⌫'),'key ipa-action')));
+    },'key ipa-action')));
     tones.setAttribute('role','group');tones.setAttribute('aria-label','声调');
     tones.replaceChildren(toneRow,utilities);
     markRecorded();
