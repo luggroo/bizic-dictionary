@@ -294,6 +294,25 @@ async function main(){
   assert.equal(await frame.locator('#voiceMode').count(),0);
   assert.equal(await voicePanel.locator('#voiceRecord').isEnabled(),true);
   await frame.locator('#result').click();
+  await frame.locator('#keys [data-letter="g"]').click();
+  assert.equal(await frame.locator('.pending-text').textContent(),'g');
+  const glyphFits=await frame.locator('#keyboardPanel').evaluate(async panel=>{
+   const doc=panel.ownerDocument;
+   await doc.fonts.ready;
+   const key=panel.querySelector('[data-letter="g"]');
+   const label=[...panel.querySelectorAll('#candidates .word strong')].find(el=>el.textContent==='g');
+   const ctx=doc.createElement('canvas').getContext('2d');
+   return [key,label].every(el=>{
+    if(!el)return false;
+    const style=doc.defaultView.getComputedStyle(el);
+    ctx.font=`${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+    const ink=ctx.measureText('g');
+    const height=parseFloat(style.lineHeight);
+    return ink.actualBoundingBoxDescent>0&&height>=ink.actualBoundingBoxAscent+ink.actualBoundingBoxDescent+4&&el.scrollHeight<=el.clientHeight+1;
+   });
+  });
+  assert.equal(glyphFits,true,'g fits its key and candidate label at '+width+'px');
+  await frame.locator('#draft').press('Backspace');
   await frame.locator('#keys [data-letter="a"]').click();
   await frame.locator('#toneKeys button').nth(1).click();
   assert.equal(await frame.locator('.pending-text').textContent(),'á');

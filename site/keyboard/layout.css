@@ -95,8 +95,10 @@ body.keyboard-open #play {padding-bottom: 0}
 .ipa-mode .liveDraft input {font-family: var(--phonetic); color: transparent; caret-color: transparent}
 #kbMorePanel {inset: 43px 0 auto; border: 1px solid #b4c8b8; background: #f8fbf7}
 #typing {min-height: 0}
-.candidateBar {min-width: 0; height: 58px}
-#candidates .word strong {font-family: var(--spelling); max-height: 2.62em}
+.candidateBar {min-width: 0; min-height: 58px; height: auto}
+#candidates {height: auto; align-self: stretch}
+#candidates .word :is(strong, small) {flex-shrink: 0}
+#candidates .word strong {font-family: var(--spelling); line-height: 1.35; max-height: calc(2.7em + 4px); padding-block: 2px}
 .ipa-mode #candidates .word strong {font-family: var(--phonetic)}
 #candidates .word small {text-align: center; max-height: 2.24em}
 #keys {display: grid; grid-template-columns: minmax(0, 1fr); justify-content: stretch; gap: 4px; padding-top: 5px}
@@ -111,6 +113,7 @@ body.keyboard-open #play {padding-bottom: 0}
   box-shadow: 0 1px 2px #1b392417;
 }
 #keys .key {min-height: 42px; font-family: var(--spelling)}
+#keys .key[data-letter] {line-height: 1.4; padding-block: 2px}
 #keys .key:not(.wide):not(.pinyin-tone) {width: min(54px, calc((100% - 27px) / 10))}
 #keys .key:active, #keys .key.lit, #ipaKeys .key:active {background: #d8e9dd; color: #204631; box-shadow: none}
 #keys #toneKeys {position: static; display: flex; justify-content: center; gap: 4px}
@@ -179,7 +182,7 @@ body.keyboard-open #play {padding-bottom: 0}
   .vowel-plot {height: 166px}
   .ipa-tones {grid-template-columns: minmax(0, 1fr) max-content; gap: 6px}
   .ipa-tone-row {grid-area: 2 / 1 / auto / -1; max-width: none}
-  .candidateBar {height: 54px}
+  .candidateBar {min-height: 54px}
   #keys .key {min-height: 40px}
   #keys .pinyin-tone {min-height: 34px}
 }
