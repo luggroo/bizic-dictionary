@@ -1,0 +1,118 @@
+{
+  "apical": {
+    "bases": [
+      "zi",
+      "ci",
+      "si",
+      "ri"
+    ],
+    "source": "本版采用的单字记音约定",
+    "rule": "zi、ci、si、ri 的韵母是舌尖元音。每个音节用一个汉字，在复合词和按词义选字时也保留这一界限。",
+    "ri": {
+      "formerly": [
+        "日衣",
+        "日意",
+        "日",
+        "日以"
+      ],
+      "tones": [
+        "日",
+        "日",
+        "日",
+        "日"
+      ],
+      "reason": "永顺、吉首的「日」均记为 zɿ2，与北部土家语 ri 的声韵相合。四调共用「日」，实际声调由拼写记录。当地汉字读音的调类与土家语低降调相应，其余三调借用同声韵字。",
+      "sources": [
+        {
+          "location": "永顺",
+          "han": "日",
+          "reading": "zɿ2",
+          "path": "data/loan-sources/yongshun.tsv"
+        },
+        {
+          "location": "吉首",
+          "han": "日",
+          "reading": "zɿ2",
+          "path": "data/loan-sources/jishou.tsv"
+        }
+      ],
+      "repository": "luggroo/bizic-translator",
+      "revision": "27bd44320fc4e0d19817b8141ba8ed446573f22a"
+    }
+  },
+  "previousWordForms": {
+    "w233": "棒日衣猜",
+    "w1932": "日衣",
+    "w1035": "借日衣",
+    "w1983": "刹日衣",
+    "ls60-11": "日意沦",
+    "ls60-29": "日以"
+  },
+  "lexemes": {
+    "w233": {
+      "meaning": "中午",
+      "parts": [
+        "bangf",
+        "rix",
+        "caix"
+      ],
+      "hanUnits": [
+        "半",
+        "日",
+        "猜"
+      ],
+      "etymology": [
+        {
+          "type": "loan",
+          "han": "半日",
+          "fromSyllable": 0,
+          "toSyllable": 2
+        },
+        {
+          "type": "tujia",
+          "han": "猜",
+          "fromSyllable": 2,
+          "toSyllable": 3
+        }
+      ],
+      "formNote": "前两个音节借自汉语「半日」，末音节 caix 是土家语成分，记作「猜」。",
+      "source": "词形、词义据毕兹学堂北部词条 w233；成分分析和汉字写法据使用者订正。"
+    },
+    "w440": {
+      "meaning": "梳通",
+      "parts": [
+        "cir"
+      ],
+      "hanUnits": [
+        "尺"
+      ],
+      "etymology": [],
+      "source": "键盘选字经使用者订正。",
+      "formNote": "按词义采用使用者确认的记音字。"
+    },
+    "w954": {
+      "meaning": "打架",
+      "parts": [
+        "jix"
+      ],
+      "hanUnits": [
+        "挤"
+      ],
+      "etymology": [],
+      "source": "键盘选字经使用者订正。",
+      "formNote": "按词义采用使用者确认的记音字。"
+    },
+    "w1334": {
+      "meaning": "穿成串",
+      "parts": [
+        "liv"
+      ],
+      "hanUnits": [
+        "理"
+      ],
+      "etymology": [],
+      "source": "键盘选字经使用者订正。",
+      "formNote": "按词义采用使用者确认的记音字。"
+    }
+  }
+}

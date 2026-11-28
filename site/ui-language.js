@@ -38,13 +38,13 @@
     }
   }
   const labels = Object.freeze({
-    brand: 'bifzixsar afhxix', home: 'ger laix xief', words: 'cixcix nix', grammar: 'sar qifmox lir',
+    keyboard: 'cixcix har-nierxix', brand: 'bifzixsar afhxix', home: 'ger laix xief', words: 'cixcix nix', grammar: 'sar qifmox lir',
     notation: 'sar qifmox af', corpus: 'lafzef lafzef lir', sources: 'cixpux jierxif',
     // Search action wording approved for this interface; not a source quotation.
     searchEn: 'yinxyiv niv-xivsour', searchZh: 'pavsar niv-xivsour', searchTujia: 'bifsar niv-xivsour',
     history: 'nierzuxbarzux niex sar', translation: 'sar dav aflix', search: 'nix'
   });
-  const homeAccents={"brand":"bízīsǎ áhxī","home":"gě lāi xié","words":"cīcī nī","grammar":"sǎ qímō lǐ","notation":"sǎ qímō á","corpus":"lázé lázé lǐ","sources":"cīpū jiěxí","searchEn":"yīnyì nì-xìsǒu","searchZh":"pàsǎ nì-xìsǒu","searchTujia":"bísǎ nì-xìsǒu","history":"niězūbǎzū niē sǎ","translation":"sǎ dà álī","search":"nī"};
+  const homeAccents={"keyboard":"cīcī hǎ-niěxī","brand":"bízīsǎ áhxī","home":"gě lāi xié","words":"cīcī nī","grammar":"sǎ qímō lǐ","notation":"sǎ qímō á","corpus":"lázé lázé lǐ","sources":"cīpū jiěxí","searchEn":"yīnyì nì-xìsǒu","searchZh":"pàsǎ nì-xìsǒu","searchTujia":"bísǎ nì-xìsǒu","history":"niězūbǎzū niē sǎ","translation":"sǎ dà álī","search":"nī"};
   let initialSpelling="accent";try{if(localStorage.getItem("tujia-north-spelling-v2")==="ye")initialSpelling="ye"}catch{}
   const textMemory = new WeakMap(), attributeMemory = new WeakMap(), grammarMemory = new WeakMap();
   const protectedContent = 'script,style,textarea,code,pre,[data-ui-content],[data-ui-tujia],[data-ui-language-link],.word,.word-ipa,.notation-form,.source-word-record p,.text-view,.lyric-tujia,.lyric-translation,.lyric-chinese,.external-ipa,.external-glosses,.external-text-block>p,.example,.grammar-example';
@@ -112,7 +112,7 @@
     if (host.firstChild !== label) host.prepend(label);
   }
   function decorate() {
-    for (const key of ['home','words','grammar','notation','history','corpus','sources']) {
+    for (const key of ['home','words','grammar','keyboard','notation','history','corpus','sources']) {
       const target = document.querySelector('nav [data-view="'+key+'"] > span');
       if (target && !target.querySelector('[data-ui-tujia]')) {
         const small = document.createElement('small');
@@ -209,6 +209,7 @@
     roots.forEach(root => { if (root.isConnected) translateTree(root); });
     window.refreshWordClassLabels?.();
     document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
+    document.querySelector('.keyboard-frame')?.contentWindow?.postMessage({type:'site-language',language},location.origin);
     const select = document.getElementById('ui-language');
     if (select) select.value = language;
     const title = typeof state === 'undefined' ? '知识总览' : titles[state.view] || '知识总览';

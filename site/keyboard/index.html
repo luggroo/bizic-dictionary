@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>土家语输入法 · 试用键盘</title>
+<style>
+:root {
+  color-scheme:light;
+  --paper:#faf8f3; --page:#fffdf8; --ink:#292824; --quiet:#645e55; --rule:#d9d2c5;
+  --red:#aa3824; --active:#bc402a; --apricot:#f3e4d1; --key-rule:#d9c4ac;
+  --serif:"Noto Serif CJK SC","Songti SC","Source Han Serif SC","STSong","SimSun",serif;
+  --sans:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+}
+* {box-sizing:border-box}
+[hidden] {display:none!important}
+html {scroll-padding-top:12px}
+body {margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 var(--sans)}
+h1,h2,h3,p {margin:0}
+a {color:var(--red);text-underline-offset:.21em;text-decoration-thickness:1px}
+button,input,select {font:inherit;color:inherit}
+button {cursor:pointer;border:0;background:transparent;padding:0;text-align:inherit;touch-action:manipulation}
+button:disabled {opacity:.42;cursor:default}
+button:focus-visible,a:focus-visible,summary:focus-visible,select:focus-visible,input:focus-visible,[contenteditable]:focus-visible {outline:2px solid var(--red);outline-offset:2px}
+:where(button,a,summary):hover {color:var(--red)}
+::selection {background:#f6cdac}
+.mast,.workspace,.references,footer {max-width:1132px;margin-inline:auto}
+.mast {min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:20px;border-bottom:1px solid var(--rule)}
+.brand {display:inline-flex;align-items:center;gap:12px;font-family:var(--serif);font-weight:700;font-size:1.4375rem;letter-spacing:.045em;color:var(--ink);text-decoration:none}
+.brand-mark {display:inline-grid;place-items:center;width:24px;height:27px;color:var(--red);position:relative;transform:skew(-14deg)}
+.brand-mark::before,.brand-mark::after {content:"";position:absolute;background:currentColor}
+.brand-mark::before {height:100%;width:4px;box-shadow:8px 0 currentColor;left:4px}
+.brand-mark::after {height:4px;width:22px;top:8px;left:1px;box-shadow:0 8px currentColor}
+.mast nav {display:flex;align-items:center;gap:25px}
+.mast nav :is(a,button) {min-height:44px;display:inline-flex;align-items:center;color:var(--quiet);font-size:0.9375rem;text-decoration:none}
+.mast nav a:hover {color:var(--red);text-decoration:underline}
+.workspace {display:grid;grid-template-columns:minmax(240px,.88fr) minmax(360px,1fr);gap:clamp(48px,8vw,110px);align-items:start;padding:46px 0 54px}
+.intro,#play {min-width:0}
+.intro {padding-top:4px}
+h1 {font:600 clamp(3.3125rem,5.8vw,4.9375rem)/1.22 var(--serif);letter-spacing:-.055em}
+h1 span {display:block;color:var(--red)}
+.lede {max-width:26em;margin-top:21px;color:#504b43;line-height:1.85;text-wrap:pretty}
+.demo-menu {margin-top:34px}
+.kicker {font:600 1.0625rem/1.4 var(--sans);color:var(--quiet)}
+.demo-select {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px;margin:8px 0 14px;border-bottom:1px solid var(--rule)}
+.demo-select button {position:relative;display:flex;align-items:center;gap:.55em;min-height:43px;white-space:nowrap}
+.demo-select button::before {content:"";width:6px;height:6px;border-radius:50%;background:#bcb5a9}
+.demo-select button[aria-pressed="true"] {color:var(--red);font-weight:700}
+.demo-select button[aria-pressed="true"]::before {background:var(--active)}
+.transport {display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+#playStatus {width:100%;min-height:1.6em;color:var(--quiet);font-size:0.9375rem;overflow-wrap:anywhere}
+.transport select {background:none;border:0;border-bottom:1px solid var(--rule);color:var(--quiet);padding:0 2px;min-height:40px;font-size:0.9375rem}
+#pause,#take {min-height:41px;font-size:1rem}
+#pause {color:var(--red);font-weight:660}
+#take {text-decoration:underline;text-underline-offset:.28em}
+#play {width:100%;max-width:498px;justify-self:end;scroll-margin-block:8px}
+.panelhead {min-height:42px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:9px}
+.panelhead h2 {margin-right:auto;font:600 1.5rem/1.4 var(--serif)}
+.panelhead button {font-size:0.9375rem;color:var(--quiet);min-height:40px}
+#inputDock {--visible-height:var(--ime-visible-height,100svh);--keyboard-height:clamp(304px,45svh,355px);display:flex;flex-flow:column;width:100%;background:var(--page)}
+.paper {display:flex;flex-flow:column;flex-shrink:0;height:clamp(202px,28svh,267px);padding:16px 23px 8px;background:var(--page);border-block-start:2px solid #514a40;border-block-end:1px solid var(--rule);min-height:0}
+.paper #notebook-title {color:var(--quiet);font-size:0.9375rem;letter-spacing:.06em;line-height:1.5}
+#result {--line-height:1.57em;display:block;flex:1;min-height:0;width:100%;margin:5px 0 0;padding:0 2px;background:repeating-linear-gradient(transparent 0 calc(var(--line-height) - 1px),#eee9df calc(var(--line-height) - 1px) var(--line-height));border:0;resize:none;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;font:500 1.5625rem/var(--line-height) var(--serif);color:#251f19;caret-color:var(--red);white-space:pre-wrap;overflow-wrap:anywhere;outline-offset:-2px}
+#result:empty::before {content:attr(data-placeholder);color:#757068}
+.editorFoot {display:flex;justify-content:space-between;align-items:end;gap:6px;padding-top:3px;line-height:1.4;color:var(--quiet)}
+#count {font-size:0.8125rem;flex:none;margin-left:auto}
+.kb {height:var(--keyboard-height);min-height:0;flex:none;display:flex;flex-flow:column;background:var(--apricot);padding:0 9px 5px;overflow:hidden;overflow:clip;overscroll-behavior:none;isolation:isolate}
+.kb button {line-height:1.1}
+.kb {position:relative;--tools-height:45px}
+.kbhead,.candidateBar,.row,.tools,#han {display:flex;align-items:center}
+.kbhead {height:var(--tools-height);flex:none;gap:4px;border-bottom:1px solid var(--key-rule)}
+.inputModes {height:100%;display:flex;gap:4px;align-items:stretch}
+.kbhead button {height:100%;white-space:nowrap;min-width:44px;text-align:center;padding-inline:5px;font:560 1rem/1.2 var(--sans)}
+.toolbar-icon {display:inline-block;font-size:.85em;margin-right:3px}
+.inputModes button {position:relative;color:#544437}
+.inputModes button[aria-pressed="true"] {color:#8c301c;font-weight:720}
+.inputModes button[aria-pressed="true"]::after {content:"";position:absolute;bottom:0;left:7px;right:7px;height:3px;border-radius:2px;background:var(--red)}
+.liveDraft {flex:1;min-width:0;margin-inline:4px}
+.liveDraft input {display:block;border:0;width:100%;min-width:0;background:transparent;padding:4px 2px;font:600 1.0625rem/1.3 var(--sans);color:var(--red);caret-color:var(--red)}
+.liveDraft:not(.has-text) input {opacity:0}
+.liveDraft input:focus-visible {outline:0}
+#hideKeyboard .buttonLabel {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+#hideKeyboard::after {margin:0;width:8px;height:8px}
+#kbMore,#hideKeyboard {color:#65564a;font-size:0.9375rem}
+#hideKeyboard::after {content:"";display:inline-block;width:6px;height:6px;border:solid currentColor;border-width:0 1.6px 1.6px 0;transform:translateY(-3px) rotate(45deg);margin-left:5px}
+#kbMore[aria-expanded=true] {color:var(--red)}
+#kbMorePanel {position:absolute;z-index:4;top:var(--tools-height);inset-inline:0;background:#fff8ed;box-shadow:0 9px 18px -14px #482a15;padding:8px 12px;border-bottom:1px solid #c6a58a}
+#kbMorePanel .otherMenu {display:grid;grid-template-columns:1fr 1fr}
+#kbMorePanel .outputMenu {border-bottom:1px solid var(--key-rule)}
+#kbMorePanel button {min-height:45px;text-align:left;padding:3px 10px;font:560 1rem/1.25 var(--sans)}
+.outputMenu {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px}
+.outputMenu .formChoice,#kbMorePanel .formChoice {position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.25em;min-width:0;min-height:3.8em;padding:.35em .06em .55em;text-align:center;font:600 1rem/1.22 var(--sans);color:#392b27;overflow-wrap:anywhere}
+.formChoice {container-type:inline-size}
+.formChoice .sample {font-size:min(.86em,20cqi);font-weight:500;color:#625e5b}
+.formChoice>span {max-width:100%;font-size:min(1em,30cqi)}
+.outputMenu .formChoice[aria-pressed=true] {color:var(--red)}
+.formChoice[aria-pressed=true]::after {content:"";position:absolute;bottom:1px;width:30px;height:3px;background:var(--red);border-radius:2px}
+#raw {color:#7a3623}
+#typing {flex:1;min-height:0;display:flex;flex-direction:column}
+.candidateBar {flex:none;height:62px;gap:3px}
+#previousCandidates,#nextCandidates {align-self:stretch;width:26px;flex:none;text-align:center;font-family:Arial,sans-serif;font-size:1.625rem;color:#663827}
+#candidates {height:100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));flex:1;align-items:stretch;min-width:0}
+#candidates .hint {grid-column:1/-1;align-self:center;text-align:center;font-size:0.9375rem;color:#625347}
+.word {min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2px;overflow:hidden}
+.word small,.word strong {display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.word small {font:500 clamp(0.875rem,4vw,1.0625rem)/1.32 var(--sans);color:#674a39}
+.word small.hand-match-meta {display:flex;flex-direction:column;align-items:center;font-size:clamp(.67rem,2.8vw,.85rem);line-height:1.05}
+.hand-match-meta span {max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#candidates .word small:empty {display:none}
+.word strong {font:650 1.375rem/1.38 var(--sans)}
+#candidates .word:first-child {color:#91311f}
+.word:active,.word.lit {background:var(--active);color:white!important}
+.word:active small,.word.lit small {color:#fff}
+#keys {min-height:0;flex:1;display:flex;flex-direction:column;justify-content:space-evenly;position:relative;padding-top:3px;border-top:1px solid var(--key-rule)}
+.row {justify-content:center;min-height:0;flex:1}
+.key {position:relative;display:inline-grid;place-items:center;height:100%;width:10%;max-width:51px;min-width:0;user-select:none;-webkit-touch-callout:none;font:550 1.4375rem/1 system-ui,sans-serif;border-radius:4px}
+.key.wide {width:17%;max-width:none;font-size:1.0625rem}
+.key.wide:nth-child(3) {width:42%;color:#625347}
+.key.wide:last-child {font-size:1.3125rem}
+.key:active,.key.lit,.key.wide:active,.key.wide.lit,.tone-key:active,.tone-key.lit {background:var(--active);color:#fff;box-shadow:inset 0 -2px 0 #802b1a}
+#toneKeys {position:absolute;z-index:6;display:grid;grid-template-rows:repeat(3,1fr);gap:2px;pointer-events:auto}
+.tone-key {min-width:0;min-height:0;text-align:center;background:#fffaf1;border-radius:5px;box-shadow:0 1px 4px #35241e44;font:600 1.375rem var(--sans);user-select:none}
+.tone-centre,.tone-key.selected {background:var(--red);color:white}
+.tone-hint {display:none;position:absolute;color:#78645d;font:500 1.5rem/1 system-ui,sans-serif;pointer-events:none}
+.tone-enabled .tone-hint {display:block}
+.tone-hint.up {top:3px;left:50%;transform:translateX(-50%)}
+.tone-hint.right {right:3px;top:calc(50% + 9px);transform:translateY(-50%)}
+.tone-hint.down {bottom:-8px;left:50%;transform:translateX(-50%)}
+.tone-hint.left {left:3px;top:calc(50% + 9px);transform:translateY(-50%)}
+.key[data-letter="a"] .tone-hint.left {left:auto;right:3px;top:3px;transform:none}
+#hand {border-top:1px solid var(--key-rule);display:grid;grid-template-columns:minmax(0,1fr) minmax(62px,17%);grid-template-rows:minmax(0,1fr) 36px;min-height:0;flex:1;padding:3px 0 0;touch-action:none}
+.pad {min-height:0;min-width:0;position:relative;background-color:#fcf3e7;background-image:linear-gradient(transparent calc(50% - .5px),#e8d7be 50%,transparent calc(50% + .5px)),linear-gradient(90deg,transparent calc(50% - .5px),#e8d7be 50%,transparent calc(50% + .5px))}
+#canvas {display:block;position:absolute;inset:0;width:100%;height:100%;touch-action:none}
+.tools {flex-flow:column;justify-content:space-around;align-items:stretch}
+.tools button {min-height:24px;flex:1;text-align:center;font-size:0.875rem}
+#han {grid-column:1/-1;justify-content:space-around}
+#han::before {content:"例字";font-size:0.8125rem;color:#635144;padding-inline:3px}
+#han button {flex:1;height:100%;text-align:center;font-size:1.25rem}
+#formLookup>button {min-height:44px;color:var(--red);text-decoration:underline;text-underline-offset:.2em}
+.joined-han {display:inline-block;vertical-align:baseline;width:1.68em;white-space:nowrap;border-bottom:.065em solid currentColor;line-height:1.05}
+.joined-han>span {display:inline-block;transform:scaleX(.84);transform-origin:left center}
+.practice {display:flex;flex-wrap:wrap;gap:22px;margin-top:6px}
+.practice button {min-height:38px;font-size:0.9375rem;color:var(--quiet);text-decoration:underline;text-underline-offset:.25em}
+#formLookup {padding:13px 0}
+#formLookup .candidates {display:grid;grid-template-columns:repeat(auto-fill,minmax(85px,1fr));max-height:300px;overflow:auto}
+#formLookup .word {min-height:55px}
+.references {display:grid;grid-template-columns:minmax(225px,.63fr) minmax(0,1.25fr);column-gap:10%;padding-block:40px 56px;border-top:1px solid var(--rule);align-items:start}
+.references h2 {font:600 1.6875rem/1.4 var(--serif);margin-bottom:12px}
+.reference-links {list-style:none;padding:0;margin:0 0 30px}
+.reference-links a {display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:44px;text-decoration:none;border-bottom:1px solid var(--rule)}
+.reference-links a::after {content:"↗";font:1rem system-ui}
+#choices {margin-top:2px}
+.choice {display:flex;align-items:center;width:100%;padding-block:9px;gap:13px;border-bottom:1px solid var(--rule)}
+.choice strong,.choice small {display:block}
+.choice strong {font-size:1.0625rem}
+.choice small,.hint,.sub {font-size:0.9375rem;color:var(--quiet)}
+.choice .icon {width:30px;text-align:center;color:var(--quiet);font-size:1.125rem}
+.choice .check {color:#81766b;margin-left:auto}
+.choice.active .icon,.choice.active .check,.choice.active strong {color:var(--red)}
+#library,#play {scroll-margin-block:10px}
+#library>label {display:block;margin-top:18px;font-weight:650}
+input[type="search"] {height:45px;border:0;border-bottom:1px solid #77695b;padding:2px 0;background:transparent;width:100%;border-radius:0}
+.lexrow {padding:11px 0;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:10px;border-bottom:1px solid var(--rule)}
+.lexrow>button {overflow-wrap:anywhere;font-size:1.0625rem;min-height:42px}
+.lexrow>button small {display:block;color:var(--quiet);font-size:0.9375rem}
+.lexrow>a {font-size:0.875rem;align-self:center}
+.lookup-evidence {grid-column:1/-1;color:var(--quiet);font-size:0.875rem}
+summary {width:fit-content;cursor:pointer;min-height:32px;padding-block:3px}
+details p {margin-block:8px}
+.pager {display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:12px;font-size:0.9375rem}
+.pager button {min-height:40px;color:var(--red)}
+footer {border-top:1px solid var(--rule);padding:18px 0 35px;font-size:0.9375rem;color:var(--quiet)}
+dialog {width:min(calc(100% - 32px),390px);border:0;border-top:3px solid var(--red);padding:24px;background:var(--page);color:var(--ink)}
+dialog::backdrop {background:#2f28245e}
+dialog h2 {font:600 1.6875rem var(--serif);margin-bottom:17px}
+dialog .outputMenu {margin:8px 0 14px}
+#closeSettings {background:var(--red);color:white;padding:0 21px;min-height:43px;margin-top:19px}
+@media (prefers-reduced-motion:no-preference) {
+  .keyboard-open #keyboardPanel {animation:dock-arrive .16s ease-out}
+  @keyframes dock-arrive {from {opacity:.78;transform:translateY(7px)} to {opacity:1;transform:translateY(0)}}
+}
+@media (max-width:1210px) {
+  .mast,.workspace,.references,footer {margin-inline:clamp(24px,5vw,58px)}
+}
+@media (min-width:801px) {
+  body.keyboard-open .paper {height:clamp(128px,22svh,192px)}
+}
+@media (max-width:800px) {
+  .mast,.workspace,.references,footer {width:min(100% - 32px,560px);margin-inline:auto}
+  .mast {min-height:51px}.brand {font-size:1.25rem;gap:9px}.brand-mark {scale:.85}.mast nav {gap:15px}.mast nav :is(a,button) {font-size:0.875rem}
+  .workspace {display:flex;flex-direction:column;gap:18px;padding:17px 0 24px}
+  .intro,#play {width:100%;max-width:none}.intro {padding:0}
+  h1 {font-size:clamp(1.75rem,6.6vw,2.5rem);letter-spacing:-.045em;line-height:1.25}h1 span {display:inline}
+  .lede {margin-top:5px;line-height:1.45;font-size:0.9375rem;max-width:none}
+  .demo-menu {margin-top:13px}.demo-menu .kicker {font-size:0.9375rem}
+  .demo-select {display:flex;justify-content:space-between;gap:4px;margin:0 0 6px}
+  .demo-select button {font-size:0.875rem;min-height:38px;gap:4px}
+  .demo-select button::before {width:4px;height:4px}
+  .transport {gap:10px;row-gap:0}#playStatus {flex:1;width:auto;min-width:62px;font-size:0.8125rem;line-height:1.3}
+  .transport select,#take,#pause {font-size:0.875rem;min-height:35px}
+  .panelhead {margin-bottom:3px;min-height:36px}.panelhead button {min-height:36px}
+  .panelhead h2 {font-size:1.375rem}
+  #inputDock {--editor-height:clamp(98px,16.4svh,139px);--keyboard-height:clamp(272px,43svh,341px)}
+  .keyboard-open #inputDock {position:fixed;z-index:5;left:50%;transform:translateX(-50%);width:min(100%,560px);bottom:var(--ime-inset,0px);padding-bottom:env(safe-area-inset-bottom,0px);background:var(--apricot)}
+  .keyboard-open #inputDock .paper {height:min(var(--editor-height),26%);min-height:80px;flex-basis:var(--editor-height)}
+  .keyboard-open #inputDock .kb {height:min(var(--keyboard-height),calc(var(--visible-height) - var(--editor-height) - 3px))}
+  .keyboard-open #play {padding-bottom:calc(var(--keyboard-height,clamp(272px,43svh,341px)) + var(--editor-height,clamp(98px,16.4svh,139px)))}
+  .paper {height:174px;padding:7px 15px 4px}
+  #result {font-size:1.375rem;margin-top:2px}
+  .references {grid-template-columns:1fr;gap:34px;padding:25px 0 32px}
+  .reference-tools {display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .reference-links {margin-bottom:0}
+  .references h2 {font-size:1.4375rem}.reference-links a {font-size:0.9375rem;line-height:1.3}
+  .choice {gap:4px}.choice small {font-size:0.8125rem}.choice .icon {width:23px}.choice .check {font-size:0.75rem}
+}
+@media (max-width:400px) {
+  .mast nav {gap:10px}.mast {gap:8px}.demo-select button {font-size:0.8125rem}
+  .reference-tools {grid-template-columns:1fr;gap:24px}
+  .key {font-size:1.3125rem}.word strong {font-size:1.25rem}
+}
+@media (max-height:680px) and (max-width:800px) {
+  .keyboard-open .lede,.keyboard-open .demo-menu .kicker {display:none}
+  .workspace {padding-top:10px}.demo-menu {margin-top:4px}
+  #inputDock {--editor-height:clamp(74px,15svh,100px);--keyboard-height:clamp(242px,46svh,291px)}
+  .keyboard-open #play {padding-bottom:calc(clamp(74px,15svh,100px) + clamp(242px,46svh,291px))}
+  .candidateBar {height:51px}
+  #hand {grid-template-rows:minmax(0,1fr) 30px}.key {font-size:1.25rem}
+}
+@media (max-height:460px) and (orientation:landscape) {
+  #inputDock {--editor-height:64px;--keyboard-height:clamp(164px,58svh,228px)}
+  .keyboard-open #inputDock .paper {min-height:58px}
+  #result {font-size:1.125rem}
+  .candidateBar {height:40px}
+  .word small {font-size:0.75rem}.word strong {font-size:1.0625rem}.key,.key.wide {font-size:1rem}
+}
+
+/* Text follows the browser's base size. A row keeps its touch target at every text size. */
+#inputDock {
+  --tools-height:max(42px,calc(1.5rem + 12px));
+  --candidate-height:max(46px,3.125rem);
+  --key-lines-height:clamp(176px,23svh,192px);
+  --keyboard-height:calc(var(--tools-height) + var(--candidate-height) + var(--key-lines-height) + 9px);
+}
+.kb {--sans:system-ui,sans-serif;--tools-height:inherit;container-type:inline-size;padding-inline:5px;font-family:var(--sans)}
+.kbhead {height:var(--tools-height)}
+.kbhead button,#kbMore,#hideKeyboard {font-size:.9375rem}
+.liveDraft input {font-size:1rem}
+#kbMorePanel button {font-size:1rem;min-height:max(44px,1.8rem)}
+.candidateBar {height:var(--candidate-height)}
+.word small {font-size:.875rem;line-height:1.12}
+.word strong {font-size:1.1875rem;line-height:1.13}
+#candidates .word {container-type:inline-size}
+#candidates .word[data-han-count="2"] strong {font-size:min(1.1875rem,49cqi)}
+#candidates .word[data-han-count="3"] strong {font-size:min(1.1875rem,32cqi)}
+#candidates .word[data-han-count="4"] strong {font-size:min(1.1875rem,24cqi)}
+.key {font-size:1.1875rem;font-weight:500}
+.key.wide,.key.wide:last-child {font-size:1rem}
+.key.wide:last-child {font-size:1.125rem}
+#keys .key[data-letter="w"] {font-size:min(1.1875rem,10vw)}
+.tone-key {font-size:1.1875rem}
+.tools button,#han::before {font-size:.875rem}
+#han button {font-size:1.125rem}
+#result {font-size:1.125rem}
+#count {font-size:.75rem}
+.mast,.mast nav,.demo-select {flex-wrap:wrap}
+#play .panelhead {gap:4px}
+@container (max-width:17rem) {
+  #hideKeyboard .buttonLabel {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  #hideKeyboard::after {margin:0;width:8px;height:8px}
+  .kbhead,.inputModes {gap:1px}
+}
+@media (max-width:800px) and (orientation:portrait) {
+  #inputDock {--editor-height:clamp(104px,calc(4.5rem + 46px),155px)}
+  .keyboard-open #play {padding-bottom:calc(clamp(104px,calc(4.5rem + 46px),155px) + clamp(265px,60svh,380px))}
+}
+@media (max-width:350px) {
+  #previousCandidates,#nextCandidates {width:20px}
+}
+@media (max-height:460px) and (orientation:landscape) {
+  #inputDock {
+    --tools-height:clamp(28px,1.6rem,48px);
+    --candidate-height:clamp(37px,2.7rem,69px);
+    --key-lines-height:clamp(80px,29svh,136px);
+  }
+  .kbhead button,#kbMorePanel button {font-size:.875rem}
+  #kbMorePanel button {min-height:32px}
+  .key {font-size:min(1.1875rem,6.4svh)}
+}
+#candidateReading {font-family:system-ui,sans-serif;overflow-wrap:anywhere}
+#readForm {margin-bottom:.5rem;font:650 1.35rem/1.3 system-ui,sans-serif}
+#readMeaning {font-size:1rem}
+.readActions {display:flex;flex-wrap:wrap;gap:16px;margin-top:1rem}
+.readActions button {min-height:44px;color:var(--red)}
+#readChoose {font-weight:650}
+#candidates .glossPair {display:flex;justify-content:center;flex-wrap:wrap;width:100%;line-height:1.02}
+.glossPair .glossGap {white-space:pre}
+.glossPair.tight .glossGap {display:none}
+#candidates .glossPair.packed {width:max-content;max-width:none;flex-wrap:nowrap;transform:scaleX(var(--gloss-scale))}
+.glossPair span {max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#readMeaning p+p {margin-top:.25rem}
+#readEdits button {display:block;min-height:44px;color:var(--red)}
+#candidates .dictionary-match strong {color:#24683e}
+#candidates .word strong {white-space:normal;overflow-wrap:anywhere;text-overflow:clip}
+
+.mast,.intro,.references,footer,.practice,#handMode,#hideKeyboard,#notebook-title{display:none!important}
+body{background:transparent} main{padding:0!important}.workspace{display:block!important;margin:0!important}
+#play{max-width:760px;justify-self:auto;margin:auto}.panelhead h2{font-size:1.25rem}
+#inputDock{width:100%!important;position:static!important;max-height:none!important}
+.paper{height:220px;position:relative}#preeditPreview{position:absolute;z-index:2;pointer-events:none;white-space:pre;overflow:hidden;max-width:85%;background:#fffdf8;color:#8c301c;text-decoration:underline;font:500 1.5625rem/1.57 var(--serif)}.kb{height:355px}#ipaKeys{min-height:0;flex:1;display:flex;flex-direction:column;justify-content:space-evenly;border-top:1px solid var(--key-rule);position:relative}
+.ipa-settings{display:flex;gap:14px;align-items:center;padding:5px 10px;font-size:.9rem}.ipa-settings label{display:flex;gap:4px;align-items:center}.ipa-popup{position:absolute;z-index:8;bottom:42px;left:2%;right:2%;display:flex;flex-wrap:wrap;padding:5px;background:#fffaf1;box-shadow:0 2px 10px #35241e55}.ipa-popup button{min-width:42px;min-height:42px;font-size:1.2rem;text-align:center}
+.site-learning-controls{display:flex;gap:16px;align-items:center;padding:6px 10px;font-size:.9rem}.site-learning-controls label{display:flex;align-items:center;gap:5px}.site-learning-controls button{font-size:.9rem!important}
+#voicePanel{margin-top:18px;padding:18px;background:#f9f6ef;border:1px solid #ded5c6;border-radius:8px}#voicePanel h2{font-size:1.12rem}#voicePanel h3{font-size:.95rem;margin-top:12px}.voice-notice,#voiceStatus{color:#645e55;font-size:.86rem}.voice-actions,#voiceMatches{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.voice-actions button,.voice-upload,#voiceInsert,#voiceMatches button{border:1px solid #cfbba5;background:white;border-radius:6px;padding:8px 12px}.voice-upload input{position:absolute;width:1px;height:1px;opacity:0}#voiceAudio,#voiceSpeechAudio{width:100%;max-width:400px}#voiceSpeak{border:1px solid #cfbba5;background:white;border-radius:6px;padding:8px 12px}#voiceRaw{font-size:1.2rem;overflow-wrap:anywhere}#voiceMatches button span{display:block;color:#645e55;font-size:.8rem}
+@media(max-width:800px){body.keyboard-open #inputDock{position:static!important;inset:auto!important;transform:none!important;width:100%!important;max-height:none!important}.workspace{padding:0!important}.paper{height:190px}.kb{height:340px}}
+</style></head>
+<body>
+<header class="mast">
+  <a class="brand" href="#play"><span class="brand-mark" aria-hidden="true"></span>土家语输入法</a>
+  <nav aria-label="页面导航"><button id="findWords">查词</button></nav>
+</header>
+<main>
+  <div class="workspace">
+    <section class="intro" aria-labelledby="headline">
+      <h1 id="headline">用土家语<span>写一句话。</span></h1>
+      <p class="lede">输入拼音，或手写熟悉的记音字。<br>看准词上的汉义，再把它写进记事本。</p>
+      <div class="demo-menu">
+        <h2 class="kicker">试一试</h2>
+        <div class="demo-select" role="group" aria-label="选择演示">
+          <button id="tryForms">试写毕兹卡</button>
+          <button id="demoHan" aria-pressed="true">记音写山歌</button>
+          <button id="demoTujia" aria-pressed="false">无调输拼写</button>
+          <button id="demoTone" aria-pressed="false">打调号拼音</button>
+          <button id="demoHand" aria-pressed="false">手写转拼音</button>
+        </div>
+        <div class="transport">
+          <p id="playStatus" role="status"></p>
+          <select id="playSpeed" aria-label="山歌播放速度"><option value="0.5" selected>0.5 倍速</option><option value="1">原速</option><option value="2">2 倍速</option><option value="4">4 倍速</option><option value="12">12 倍速</option></select>
+          <button id="pause">暂停</button><button id="take">自己输入</button>
+        </div>
+      </div>
+      <div id="art" hidden aria-hidden="true"></div>
+    </section>
+    <section id="play" aria-labelledby="note-heading">
+      <div class="panelhead"><h2 id="note-heading">记事本</h2><button id="copyNote" type="button">复制</button><button id="openSettings" aria-haspopup="dialog">输出设置</button></div>
+      <div id="inputDock"><div class="paper"><span id="notebook-title">输入</span><div id="result" role="textbox" contenteditable="true" aria-multiline="true" tabindex="0" aria-label="记事本正文" aria-describedby="notebook-title" data-placeholder="在这里输入土家语…"></div><span id="preeditPreview" aria-hidden="true"></span><div class="editorFoot"><small id="count">0 字符</small></div></div><div class="kb" id="keyboardPanel" hidden><div class="kbhead">
+          <div class="inputModes" role="group" aria-label="输入方式"><button id="typeMode" type="button" aria-label="拼音"><span class="toolbar-icon" aria-hidden="true">Aa</span>拼音</button><button id="handMode" hidden type="button" aria-label="手写"><span class="toolbar-icon" aria-hidden="true">✎</span>手写</button><button id="voiceMode" type="button" aria-label="语音"><span class="toolbar-icon" aria-hidden="true">◉</span>语音</button><button id="ipaMode" type="button" aria-label="音标"><span class="toolbar-icon" aria-hidden="true">ɤ³⁵</span>音标</button></div>
+          <div class="liveDraft" id="draftBar"><input id="draft" aria-label="输入草稿" autocomplete="off" autocapitalize="off" spellcheck="false" inputmode="none" dir="auto"></div>
+          <button id="kbMore" type="button" aria-label="设置" aria-controls="kbMorePanel" aria-expanded="false"><span class="toolbar-icon" aria-hidden="true">⚙</span>设置</button>
+          <button id="hideKeyboard" type="button" aria-label="收起土家语键盘"><span class="buttonLabel">收起</span></button>
+        </div>
+        <div id="kbMorePanel" role="group" aria-label="键盘设置" hidden>
+          <div class="outputMenu" id="menuOutputs" role="group" aria-label="输出形式"></div>
+          <div class="otherMenu"><button id="menuBackToTyping" type="button">返回拼音</button><button id="kbSettings" type="button" aria-haspopup="dialog">更多设置</button></div>
+          <button id="raw" type="button" hidden>用原拼写</button>
+        </div>
+        <div id="typing"><div class="candidateBar"><button id="previousCandidates" aria-label="上一页候选">‹</button><div class="candidates" id="candidates" aria-live="polite"></div><button id="nextCandidates" aria-label="下一页候选">›</button></div><div id="keys"><div id="toneKeys" role="group" aria-label="选择元音调号" hidden></div></div><div id="ipaKeys" hidden></div><div id="hand" hidden><div class="pad"><canvas id="canvas" aria-label="手写区域"></canvas></div><div class="tools"><button id="moreForms">关联词</button><button id="undo">撤一笔</button><button id="reset">重写</button></div><div id="han" class="candidates" role="group" aria-label="选择手写示例字"></div></div></div></div></div>
+      <section id="voicePanel" hidden aria-labelledby="voiceTitle"><h2 id="voiceTitle">北部土家语语音输入</h2><p>录音或上传短音频，识别为国际音标。</p><p class="voice-notice">开始识别时，音频会发送至 TujiaNLP 的在线服务。</p><div class="voice-actions"><button id="voiceRecord" type="button">开始录音</button><label class="voice-upload">上传音频<input id="voiceFile" type="file" accept="audio/*,.m4a,.mp3,.wav,.flac,.ogg,.amr"></label><button id="voiceRun" type="button" disabled>开始识别</button></div><audio id="voiceAudio" controls hidden></audio><p id="voiceStatus" role="status">录音最长 30 秒。</p><div class="voice-speech"><h3>语音合成</h3><p class="voice-notice">将记事本中的拼音或音标发送至 TujiaNLP，生成语音。</p><button id="voiceSpeak" type="button">朗读记事本</button><audio id="voiceSpeechAudio" controls hidden></audio><p id="voiceSpeechStatus" role="status"></p></div><div id="voiceResult" hidden><h3>识别结果</h3><p id="voiceRaw"></p><button id="voiceInsert" type="button">输入原始结果</button><h3>词库推荐</h3><div id="voiceMatches"></div></div></section><div id="formLookup" hidden></div>
+      <div class="practice" role="group" aria-label="试选候选词"><button id="showScene">试输整句</button><button id="tryPrefix">试选前三字</button><button id="tryNext">试点下个音节</button></div>
+    </section>
+  </div>
+  <div class="references">
+    <aside class="reference-tools">
+      <section aria-labelledby="modes-heading"><h2 id="modes-heading">输入方式</h2><div id="typingOutputs" class="outputMenu" role="group" aria-label="拼音输出形式"></div><div class="choices" id="choices"></div></section>
+    </aside>
+    <section id="library" aria-labelledby="library-heading">
+      <h2 id="library-heading">毕兹学堂试用词表</h2>
+      <p class="hint">查找基础词，点选词条即可试输。</p>
+      <label for="wordSearch">查词</label><input type="search" id="wordSearch" placeholder="输入汉义、拼写或记音字">
+      <div id="wordList"></div>
+      <div class="pager"><button id="prevWords">上一页</button><span id="wordCount" aria-live="polite"></span><button id="nextWords">下一页</button></div>
+    </section>
+  </div>
+</main>
+<footer>
+  <details class="guide"><summary>词源与词频</summary>
+    <p>拼写和汉义见毕兹学堂。汉字记音按四调正字表选字，常用词保留各自的写法。词条下的「配字依据」列有音节边界和旧记音字的方言读音。 <a href="https://github.com/luggroo/bizic-translator/tree/27bd44320fc4e0d19817b8141ba8ed446573f22a/data/loan-sources" target="_blank" rel="noopener">字音资料</a></p>
+    <p>词和音节候选可以直接点入记事本。词的排序参考毕兹学堂语料和本次已选的词。音节只有在词库能确认单一含义时才标汉义。普通汉字和汉语词按 wordfreq 汉语词频排列。演示选自龙山《山歌两首》的第一首。 <a href="https://tujia.biz/?id=xu-tujia-annotated-2-13#corpus?corpusCollection=xu-tujia-annotated-texts">读毕兹学堂原文</a></p>
+  </details>
+</footer>
+<dialog id="candidateReading" aria-labelledby="readForm">
+  <h2 id="readForm"></h2><div id="readMeaning"></div><div id="readEdits"></div>
+  <div id="readOutputs" class="outputMenu" role="group" aria-label="将这个词写成" hidden></div>
+  <div class="readActions"><button id="readBack" type="button">返回候选</button><button id="readChoose" type="button">输入这个词</button></div>
+</dialog><dialog id="settingsPanel" aria-labelledby="outputTitle"><form method="dialog"><h2 id="outputTitle">输出形式</h2><div id="orthography" class="outputMenu" role="group" aria-labelledby="outputTitle"></div><p class="sub">长按元音键可选调号。</p><button id="closeSettings" value="done">完成</button></form></dialog><script src="words.js"></script><script src="story-words.js"></script><script src="engine-data.js"></script><script src="core-runtime.js"></script><script src="notepad.js"></script><script src="app.js?v=site-20261128a"></script><script src="ipa.js?v=site-20261128a"></script><script src="voice.js?v=site-20261128a"></script><script src="i18n.js?v=site-20261128a"></script></body></html>

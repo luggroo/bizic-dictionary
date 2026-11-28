@@ -1,0 +1,49 @@
+{
+  "source": "https://github.com/luggroo/bizic-dictionary/tree/b882110a9e86b52536f7b8b4bf8179ae5f70f2f0/site",
+  "method": "Count northern aligned word or word-group annotations with matching tone-marked spelling and Chinese sense; omit unresolved homophones. In the geographically identified northern Brassett transcripts, count exact numeric-tone word spans only when there is one dictionary ID for the spelling. Undetermined sense and unresolved token boundaries are omitted. Counts estimate collection usage; zero means no qualifying observation.",
+  "sourcesSHA256": {
+    "annotated-books.json": "4a13093d96a815fd3453055753a4c93b121ffbd72fefab5cae2eef586a7f8910",
+    "longshan-texts.json": "c5dd1e4ad1382ac63a34462c5ca8c319450e4cbb259e4eada73e78b21eae4cf7",
+    "data.json.gz": "7e380eb315516cb26484e16996fd3fe502bae0ac4531bd4176879e15a62bc2dc",
+    "dictionary.json.gz": "7a090fdd4a77a3921aa818ee5a7ec03d4d87b8b839cf37e00ca32dfc3a4a5156",
+    "longshan-texts.js": "ceabb318e7c4aea8a39794fb50647d4907a2d265ecb2d5c50447bc587cbcefec",
+    "notation-ui.js": "07f670c2d34e3a6be49eaccd00dfd39646b10561e85b84eb3268c3ba89cf7cb8",
+    "notation-profiles.js": "c55a952891410ff74f78253178bf3089a1af2b5a809dbc3555135b2d4cb0872b",
+    "lexical-reviews.js": "4401d7c6dcd96f39ae1c65180bcb4ab5e00d6b4f5d8f2103df256fc4182b76b9",
+    "spelling-boundaries.js": "1e6a513bca1eb2c8b5820e1e0e0b8b1af05e11d382bf921a20fddf8dd54a71e1"
+  },
+  "inputSHA256": {
+    "words.js": "9c17f471f012648c00b5b90363fa6d6ae6814ebada477b72949372a3884d2cff",
+    "story-words.tsv": "4b6f8b859a720a87d794a48d2d768879956d2a780d936b9a60866f9eae7ccd40",
+    "context-words.tsv": "fa24177b8ce3cba8a27a9eabb28bf28a1853a990c132fcd830d0479dee036842",
+    "story-spelling-aliases.tsv": "d19d0980a45257559dddee9ed613ff1a763a9a90527d4d25c843cf7a224e48a0",
+    "plain-han-loans.tsv": "52c865a5cdd2f8365e2b9cb807e012d03537a97795c300047ced1baa153ef23b",
+    "mandarin.tsv": "9794269cba217ffc891fa33689c5ee08220d79bf3958654222c90f07b366f703",
+    "mandarin-reading-aliases.tsv": "c4e97297e76f3c79a97962c9d790eab840518e03f7cdf5834300c76505e57553"
+  },
+  "mandarinReadingSources": {
+    "local": [
+      "https://github.com/osfans/MCPDict/blob/da0bd03ec9417f0edfdf7aeba6c21cf693df43cf/tools/tables/output/吉首.tsv",
+      "https://github.com/osfans/MCPDict/blob/da0bd03ec9417f0edfdf7aeba6c21cf693df43cf/tools/tables/output/重慶.tsv"
+    ],
+    "book": "李启群《吉首方言研究》，民族出版社，2002，第37–40页。ISBN 9787105050574。",
+    "method": "Use modern Jishou and Chongqing local readings, including Li (2002) register examples. Phrase alternatives are based on explicit examples. Mixed keys retain surrounding Mandarin syllables; local-only keys use attested character readings in the same city. A missing single character with distinct colloquial and literary readings in one city receives a Mandarin key from pypinyin 0.55.0 and an unobserved frequency of zero."
+  },
+  "stats": {
+    "annotatedTexts": 14,
+    "annotatedUnits": 8536,
+    "annotatedMatches": 1450,
+    "longshanTexts": 4,
+    "longshanUnits": 1280,
+    "longshanMatches": 421,
+    "brassettTexts": 25,
+    "brassettUnits": 14139,
+    "brassettMatches": 451
+  },
+  "tujiaRows": 526,
+  "referenceRows": 1243,
+  "observedRows": 298,
+  "mandarinRows": 35925,
+  "measuredMandarinRows": 35916,
+  "unrankedRegisterCharacters": 9
+}

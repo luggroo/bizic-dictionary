@@ -77,3 +77,6 @@ site/en/notation.html
 site/en/history.html
 site/en/corpus.html
 site/en/sources.html
+
+# Keyboard engine expands during the Pages build
+site/keyboard/engine-data.js
