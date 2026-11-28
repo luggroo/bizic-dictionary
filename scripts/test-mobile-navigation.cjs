@@ -297,11 +297,12 @@ async function main(){
   assert.match(await frame.locator('#result').textContent(),/à$/u);
   await frame.locator('#ipaMode').click();
   await frame.locator('.ipa-schemes button').first().click();
-  await frame.locator('.ipa-initials [data-symbol="m"]').click();
+  await frame.locator('.ipa-initials [data-symbol="k"]').click();
+  await frame.locator('.vowel-modifiers [data-symbol="ʰ"]').click();
   await frame.locator('.vowel-plot [data-symbol="a"]').click();
   await frame.locator('#ipa-nasal').click();
   await frame.locator('.ipa-tone-row [data-symbol="²¹"]').click();
-  assert.equal(await frame.locator('.pending-text').textContent(),'mã²¹');
+  assert.equal(await frame.locator('.pending-text').textContent(),'kʰã²¹');
   await frame.locator('#draft').press('1');
   await frame.locator('.ipa-schemes button').last().click();
   await frame.locator('#draft').pressSequentially('kheo~:55');
@@ -311,10 +312,14 @@ async function main(){
    await doc.fonts.ready;
    const keys=[...panel.querySelectorAll('.ipa-chart button,.ipa-tones button')].map(el=>el.getBoundingClientRect());
    const overlap=keys.some((a,i)=>keys.slice(i+1).some(b=>Math.min(a.right,b.right)-Math.max(a.left,b.left)>1 && Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top)>1));
+   const toneKeys=[...panel.querySelectorAll('.ipa-tone-row .key')].map(el=>el.getBoundingClientRect());
+   const aspirate=panel.querySelector('.vowel-modifiers [data-symbol="ʰ"]').getBoundingClientRect();
+   const nasal=panel.querySelector('#ipa-nasal').getBoundingClientRect();
+   const toneLayout=aspirate.right<=nasal.left&&toneKeys.every(key=>key.width>=44&&key.height>=44);
    const editor=doc.querySelector('#result').getBoundingClientRect(),draft=doc.querySelector('#preeditPreview').getBoundingClientRect();
-   return {overlap,overflow:doc.documentElement.scrollWidth>doc.defaultView.innerWidth+1,aligned:editor.left===draft.left&&editor.top===draft.top&&editor.width===draft.width,font:doc.fonts.check('16px "Charis SIL"','kʰɤ̃⁵⁵')};
+   return {overlap,toneLayout,overflow:doc.documentElement.scrollWidth>doc.defaultView.innerWidth+1,aligned:editor.left===draft.left&&editor.top===draft.top&&editor.width===draft.width,font:doc.fonts.check('16px "Charis SIL"','kʰɤ̃⁵⁵')};
   });
-  assert.deepEqual(layout,{overlap:false,overflow:false,aligned:true,font:true},'keyboard at '+width+'px');
+  assert.deepEqual(layout,{overlap:false,toneLayout:true,overflow:false,aligned:true,font:true},'keyboard at '+width+'px');
  }
  pass('Tujia keyboard independent tones, IPA nasalization, number selection, fonts and key spacing at 320, 390 and 1280 px');
  assert.deepEqual(errors,[],'Unhandled browser errors');

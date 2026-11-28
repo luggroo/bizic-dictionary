@@ -147,6 +147,9 @@
   function buildVowelChart(){
     const group=node('section','','ipa-vowels');
     const heading=node('div','','vowel-heading');
+    const modifiers=node('div','','vowel-modifiers');
+    const aspiration=soundKey('ʰ','^h');
+    aspiration.setAttribute('aria-label','送气');
     nasal=preserveDraft(button('',()=>{
       const cursor=draft.selectionEnd,before=draft.value.slice(0,cursor);
       if(scheme==='ascii'){editKey('~|');return;}
@@ -157,7 +160,8 @@
     const mark=node('span','◌̃','ipa-glyph');mark.setAttribute('aria-hidden','true');
     nasal.append(mark,node('span','鼻化'));
     if(scheme==='ascii')nasal.append(node('kbd','~'));
-    heading.append(node('h3','元音图'),nasal);group.append(heading);
+    modifiers.append(aspiration,nasal);
+    heading.append(node('h3','元音图'),modifiers);group.append(heading);
     const frame=node('div','','vowel-frame'),axis=node('div','','vowel-axis'),plot=node('div','','vowel-plot');
     for(const label of ['前','央','后'])axis.append(node('span',label));
     const ns='http://www.w3.org/2000/svg';
@@ -191,7 +195,7 @@
     const toneRow=node('div','','ipa-tone-row');
     for(const digits of values)toneRow.append(soundKey(superscript(digits),':'+digits));
     const utilities=node('div','','ipa-utilities');
-    utilities.append(soundKey('ʰ','^h'),preserveDraft(button('空格',()=>{
+    utilities.append(preserveDraft(button('空格',()=>{
       if(draft.value)submit(fromDraft(draft.value));else submit(' ');
     },'key ipa-action')),preserveDraft(button('⌫',()=>editKey('⌫'),'key ipa-action')));
     tones.replaceChildren(node('h3','声调'),toneRow,utilities);
