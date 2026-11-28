@@ -18,7 +18,7 @@
   const tokens = Object.keys(codes).sort((a,b)=>b.length-a.length);
   const superscript=digits=>digits.replace(/[1-5]/g,digit=>'¹²³⁴⁵'[Number(digit)-1]);
   let lexicon=[],dialects=1,scheme='chart',nasal;
-  const recorded=[new Set(),new Set(['ħ','ʕ'])];
+  const recorded=[new Set(),new Set(['ȵ','ħ','ʕ'])];
   const segmentPattern=/tsʰ|tɕʰ|pʰ|tʰ|kʰ|ts|dz|tɕ|dʑ|[¹²³⁴⁵]+|\p{Script=Latin}\p{M}*/gu;
   let recordsLoaded=false;
   function markRecorded(){
@@ -139,7 +139,7 @@
     markRecorded();candidates();
   };
   const dictionaryLabel=node('label','');dictionaryLabel.append(node('span','音标补全词库'),dialectSelect);
-  toolbar.append(shortcutLabel,dictionaryLabel,node('small','词库用于补全；灰色为所选方言少见或未见记录的音，仍可输入。','ipa-dictionary-note'));
+  toolbar.append(shortcutLabel,dictionaryLabel,node('small','词库用于补全。灰字表示所选方言中少见或未见记录的音，仍可输入。','ipa-dictionary-note'));
   const hint=node('p','','ipa-hint');
   for(const [keys,label] of [['zj',' → ʑ'],['eo',' → ɤ'],['kh',' → kʰ'],[':55',' → ⁵⁵'],['~','加鼻化'],['|','分隔组合']]){
     const item=node('span','');item.append(node('kbd',keys),' ',node('span',label));hint.append(item);

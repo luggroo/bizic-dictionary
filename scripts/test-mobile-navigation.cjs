@@ -325,9 +325,13 @@ async function main(){
   await frame.locator('#ipa-shortcuts').setChecked(false);
   const dictionaries=frame.locator('.ipa-toolbar select');
   await dictionaries.selectOption('1');
-  await frame.locator('.initial-grid [data-symbol="f"].ipa-unattested').waitFor();
+  const grayKey=frame.locator('.initial-grid [data-symbol="f"].ipa-unattested');
+  await grayKey.click();
+  assert.equal(await frame.locator('.pending-text').textContent(),'f');
+  await frame.locator('#draft').press('Backspace');
   await dictionaries.selectOption('2');
   await frame.locator('.initial-grid [data-symbol="ħ"]:not(.ipa-unattested)').waitFor();
+  await frame.locator('.initial-grid [data-symbol="ȵ"]:not(.ipa-unattested)').waitFor();
   assert.equal(await frame.locator('.initial-grid [data-symbol="ʕ"]').count(),1);
   await frame.locator('.ipa-initials [data-symbol="k"]').click();
   await frame.locator('.initial-grid [data-symbol="ʰ"]').click();

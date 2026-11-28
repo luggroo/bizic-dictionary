@@ -133,7 +133,7 @@ body.keyboard-open #play {padding-bottom: 0}
 .ipa-hint kbd, .ipa-chart kbd, .ipa-tones kbd {font: .625rem/1 ui-monospace, monospace; color: var(--quiet)}
 .ipa-chart {display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 8px 12px}
 .initial-grid {display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 3px}
-#ipaKeys .key.ipa-unattested {color: #69736d; background: #edf1ee; border-color: #d2d9d4; box-shadow: none}
+#ipaKeys .key.ipa-unattested:not(:active) {color: #69736d}
 #ipaKeys .ipa-sound, #ipaKeys .nasal-key, #ipaKeys .ipa-action {width: auto; max-width: none; display: grid; justify-items: center; align-content: center; min-height: 34px; gap: 1px; padding: 1px 0}
 #ipaKeys .ipa-glyph, #voiceRaw, #voiceMatches button b {font: 400 1.14rem/1.05 var(--phonetic)}
 #ipaKeys .nasal-key[aria-pressed=true] {background: #cee4d4; border-color: #80a990}

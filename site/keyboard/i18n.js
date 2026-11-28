@@ -5,7 +5,7 @@
   '上一页候选':'Previous candidates','下一页候选':'Next candidates','输入草稿':'Composition','记事本正文':'Notepad',
   '用叶氏拼音':'Ye romanization','用带调号拼音':'Tone-marked spelling','用汉字谐音':'Chinese characters',
   '输出形式':'Output form','更多设置':'More settings','返回拼音':'Back to typing','完成':'Done',
-  '点调号键给当前音节加调。':'Tap a tone key to mark the current syllable.','空格':'Space','词库用于补全；灰色为所选方言少见或未见记录的音，仍可输入。':'The dictionary supplies suggestions. Gray keys are rare or unattested in the selected variety and can still be used.','北部':'Northern','南部':'Southern',
+  '点调号键给当前音节加调。':'Tap a tone key to mark the current syllable.','空格':'Space','词库用于补全。灰字表示所选方言中少见或未见记录的音，仍可输入。':'The dictionary supplies suggestions. Gray keys are rare or unattested in the selected variety and can still be used.','北部':'Northern','南部':'Southern',
   '音标补全：':'IPA suggestions:','北部土家语语音输入':'Northern Tujia voice input',
   '语音识别来源':'Speech recognition source','土家语模型项目':'Tujia language model project',
   '录音或上传短音频，识别为国际音标。':'Record or upload a short clip to transcribe it in IPA.',
