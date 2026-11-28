@@ -313,7 +313,8 @@ async function main(){
   });
   assert.equal(glyphFits,true,'g fits its key and candidate label at '+width+'px');
   await frame.locator('#noteBackspace').click();
-  assert.equal(await frame.locator('.pending-text').count(),0);
+  assert.equal(await frame.locator('#draft').inputValue(),'');
+  assert.equal(await frame.locator('#preeditPreview').isVisible(),false);
   await frame.locator('#keys [data-letter="a"]').click();
   await frame.locator('#toneKeys button').nth(1).click();
   assert.equal(await frame.locator('.pending-text').textContent(),'á');
@@ -333,7 +334,8 @@ async function main(){
   await grayKey.click();
   assert.equal(await frame.locator('.pending-text').textContent(),'f');
   await frame.locator('#noteBackspace').click();
-  assert.equal(await frame.locator('.pending-text').count(),0);
+  assert.equal(await frame.locator('#draft').inputValue(),'');
+  assert.equal(await frame.locator('#preeditPreview').isVisible(),false);
   await dictionaries.selectOption('2');
   await frame.locator('.initial-grid [data-symbol="ħ"]:not(.ipa-unattested)').waitFor();
   await frame.locator('.initial-grid [data-symbol="ȵ"]:not(.ipa-unattested)').waitFor();
