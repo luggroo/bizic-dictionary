@@ -287,6 +287,10 @@ async function main(){
   await page.selectOption('#ui-language','zh');
   assert.equal(await page.locator('aside .nav-repo-link + [data-view="keyboard"]').count(),1);
   const frame=page.frameLocator('.keyboard-frame');
+  const voicePanel=frame.locator('#voicePanel');
+  await voicePanel.waitFor({state:'visible'});
+  assert.equal(await frame.locator('#voiceMode').count(),0);
+  assert.equal(await voicePanel.locator('#voiceRecord').isEnabled(),true);
   await frame.locator('#result').click();
   await frame.locator('#keys [data-letter="a"]').click();
   await frame.locator('#toneKeys button').nth(1).click();
@@ -296,6 +300,7 @@ async function main(){
   await frame.locator('#draft').press('1');
   assert.match(await frame.locator('#result').textContent(),/à$/u);
   await frame.locator('#ipaMode').click();
+  assert.equal(await voicePanel.isVisible(),true);
   await frame.locator('.ipa-schemes button').first().click();
   await frame.locator('.ipa-initials [data-symbol="k"]').click();
   await frame.locator('.vowel-modifiers [data-symbol="ʰ"]').click();
@@ -320,11 +325,12 @@ async function main(){
    const nasal=panel.querySelector('#ipa-nasal').getBoundingClientRect();
    const toneLayout=aspirate.right<=nasal.left&&toneBoxes.every(box=>box.width>=44&&box.height>=44);
    const editor=doc.querySelector('#result').getBoundingClientRect(),draft=doc.querySelector('#preeditPreview').getBoundingClientRect();
-   return {overlap,toneLayout,toneRows:Object.values(toneRows),overflow:doc.documentElement.scrollWidth>doc.defaultView.innerWidth+1,aligned:editor.left===draft.left&&editor.top===draft.top&&editor.width===draft.width,font:doc.fonts.check('16px "Charis SIL"','kʰɤ̃⁵⁵')};
+   const voice=panel.querySelector('#voicePanel').getBoundingClientRect(),dock=panel.querySelector('#inputDock').getBoundingClientRect();
+   return {overlap,toneLayout,toneRows:Object.values(toneRows),voiceBelowKeyboard:voice.height>0&&voice.top>=dock.bottom,overflow:doc.documentElement.scrollWidth>doc.defaultView.innerWidth+1,aligned:editor.left===draft.left&&editor.top===draft.top&&editor.width===draft.width,font:doc.fonts.check('16px "Charis SIL"','kʰɤ̃⁵⁵')};
   });
-  assert.deepEqual(layout,{overlap:false,toneLayout:true,toneRows:[['⁵⁵','²¹','⁵³','³⁵'],['³³','¹³']],overflow:false,aligned:true,font:true},'keyboard at '+width+'px');
+  assert.deepEqual(layout,{overlap:false,toneLayout:true,toneRows:[['⁵⁵','²¹','⁵³','³⁵'],['³³','¹³']],voiceBelowKeyboard:true,overflow:false,aligned:true,font:true},'keyboard at '+width+'px');
  }
- pass('Tujia keyboard independent tones, IPA nasalization, number selection, fonts and key spacing at 320, 390 and 1280 px');
+ pass('Tujia keyboard independent tones, IPA nasalization, number selection, fonts, key spacing and permanent voice panel at 320, 390 and 1280 px');
  assert.deepEqual(errors,[],'Unhandled browser errors');
  assert.deepEqual(badAssets,[],'Required application assets must load');
  console.log(JSON.stringify({engine,checks:checks.length,browserErrors:errors,failedAssets:badAssets},null,2));

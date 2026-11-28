@@ -202,6 +202,5 @@
     paintNasal();
   }
   $('ipaMode').onclick=()=>{choose(3);rebuild();candidates()};
-  $('voiceMode').addEventListener('click',()=>{if($('voicePanel').hidden)return;setMore(false)});
   draft.addEventListener('select',paintNasal);
 })();

@@ -57,7 +57,6 @@
     try{const data=await gradio(tts,[text,'auto',1.0]);const link=data?.[0]?.url;if(!link||new URL(link).origin!=='https://tujianlp-tujia-tts-demo.ms.show')throw Error('没有生成音频');$('voiceSpeechAudio').src=link;$('voiceSpeechAudio').hidden=false;state.textContent='语音已生成。'}
     catch(e){state.textContent=e.message||'语音生成失败，请重试。'}finally{speak.disabled=false}
   };
-  $('voiceMode').onclick=()=>{const panel=$('voicePanel');panel.hidden=!panel.hidden;$('voiceMode').setAttribute('aria-pressed',String(!panel.hidden));if(!panel.hidden)panel.scrollIntoView({block:'nearest'})};
   window.addEventListener('pagehide',cleanup);
   function resize(){window.parent.postMessage({type:'keyboard-height',height:Math.ceil($('play').getBoundingClientRect().bottom+window.scrollY+12)},location.origin)}
   new ResizeObserver(resize).observe($('play'));window.addEventListener('load',resize);
