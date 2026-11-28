@@ -342,6 +342,10 @@ async function main(){
   await frame.locator('.initial-grid [data-symbol="ħ"]').click();
   assert((await frame.locator('#candidates .word strong').allTextContents()).some(form=>form.normalize('NFD').startsWith('h')));
   await frame.locator('#noteBackspace').click();
+  await frame.locator('.initial-grid [data-symbol="ʕ"]').click();
+  const southernH=(await frame.locator('#candidates .word strong').allTextContents()).map(form=>form.normalize('NFD')).filter(form=>form.startsWith('h'));
+  assert(southernH.length&&southernH.every(form=>/^h\p{M}*[iyeɪʏøɨʉ]/u.test(form)));
+  await frame.locator('#noteBackspace').click();
   assert.equal(await frame.locator('.initial-grid [data-symbol="ʕ"]').count(),1);
   assert.equal(await frame.locator('.vowel-plot [data-symbol="ʉ"]').count(),1);
   assert.deepEqual(await frame.locator('.vowel-plot .vowel-extra-key .ipa-glyph').allTextContents(),['ɿ','m̩','ŋ̍']);

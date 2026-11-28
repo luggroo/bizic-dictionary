@@ -42,7 +42,9 @@
     for (const part of parts) {
       const letter=sounds.test(part);
       if(prev&&(letter||part==='-')) result+='[¹²³⁴⁵]*';
-      result+=southernH&&part==='ħ'?'(?:ħ|h\\p{M}*)':escape(part);
+      if(southernH&&part==='ħ')result+='(?:ħ|h\\p{M}*)';
+      else if(southernH&&part==='ʕ')result+='(?:ʕ|h\\p{M}*(?=[iyeɪʏøɨʉ]))';
+      else result+=escape(part);
       if(nasal && part.length===1 && 'aeiouyɑɐəɛɜɤɨɪɔʊʉɯøʌ'.includes(part)) result+='\\u0303?';
       prev=letter;
     }
@@ -105,7 +107,7 @@
       candidateItems.push(...learnedChoices(draft.value).filter(x=>x.form!==raw));
       if(prefix.length<=64 && sounds.test(prefix) && dialects){
         const exact=pattern(prefix,false),relaxed=pattern(prefix,true),seen=new Set([prefix]),a=[],b=[];
-        const southernH=prefix.includes('ħ');
+        const southernH=/[ħʕ]/u.test(prefix);
         const southernExact=southernH?pattern(prefix,false,true):exact;
         const southernRelaxed=southernH?pattern(prefix,true,true):relaxed;
         for(const entry of lexicon){if(!(entry.mask&dialects)||seen.has(entry.normalized))continue;
